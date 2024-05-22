@@ -1,3 +1,5 @@
+# Reading list 
+
 Journal club reading list (will be updated as I come across new papers that may be useful; suggestions are welcome!)
 
 # fMRI methods
