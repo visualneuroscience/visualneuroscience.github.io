@@ -24,3 +24,4 @@ For luminance measurement on a certain screen (output screen), two monitors and 
 Two gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts.
 
 
+[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/luminancemeasurement/2024-05-22) 

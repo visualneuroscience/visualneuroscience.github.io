@@ -59,4 +59,4 @@ root_dir
                          └─ sub-S001_ses-Rivalry_run-GG_beh.tsv
 ```
 
-
+[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/behavioral/2024-05-23) 
