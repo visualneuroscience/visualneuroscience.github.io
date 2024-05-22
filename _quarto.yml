@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Visual Neuroscience Lab"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: behavioral.qmd
+        text: Behavioral
+      - href: labmeeting.qmd
+        text: Labmeeting
+      - href: leaving.qmd
+        text: Leaving
+      - href: mri.qmd
+        text: MRI
+      - href: mri_lab.qmd
+        text: MRI lab
+      - href: physiology.qmd
+        text: Physiology
+      - href: students.qmd
+        text: Students
+  page-footer:
+    background: light
+    right:
+      - icon: github
+        href: https://visualneuroscience.github.com/
+format:
+  html:
+    page-layout: full
+    theme:
+      light: main_theme.scss
+    toc: true
+
+editor: visual

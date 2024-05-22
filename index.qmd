@@ -1,0 +1,28 @@
+---
+title: "Visual Neuroscience lab"
+image: images/pr.png
+about: 
+  template: jolla
+  image-width: 14em
+  image-shape: rectangle
+  links:
+    - icon: github 
+      text: GitHub
+      href: https://github.com/adam-coates
+    - icon: globe
+      text: Uni Graz
+      href: https://neurovision.uni-graz.at
+    - icon: calendar
+      text: lab calendar
+      href: https://calendar.online/f52c589d300c960bc789
+    
+---
+
+### About
+
+<p class="topbr">
+
+</p>
+
+------------------------------------------------------------------------
+:::

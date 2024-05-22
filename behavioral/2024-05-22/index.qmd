@@ -1,0 +1,54 @@
+# Vision tests
+
+# Prescreening tests
+
+Before starting any experiment with a subject, confirm that they have "normal vision" since it is a critical exclusion criteria for most of the studies in vision science.
+
+## Visual acuity
+
+According to the World Heath Organization (WHO), "visual acuity is ... a simple, non-invasive measure and critical to determine the presence of vision impairment" [[1](https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/whoeyes#:~:text=Visual%20acuity%20is%20the%20most,acuity%20testing%20is%20a%20challenge.)]. The vision impairment is an eye condition which causes imperfections in the function of visual system [[2](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment)]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.
+
+
+In our lab, we perform [FrACT10](https://michaelbach.de/ot/FrACT10/capp/index.html) to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [[3](https://michaelbach.de/sci/acuity.html)].
+
+## Stereoacuity
+
+Stereopsis is also an important phenomenon for [binocular rivalry](https://www.sciencedirect.com/topics/neuroscience/binocular-rivalry) since it is based on binocular disparity [[4](https://eyewiki.aao.org/Stereopsis_and_Tests_for_Stereopsis)]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [[5](https://www.doi.org/10.1068/p7203)]. We use [Random Dot V test](http://www.neuro-o.se/CritVis/cVis2.html#3DV) with red cyan anaglyph glasses to quantify the stereopsis. 
+
+The difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above.
+
+## Parameters that we use
+
+**FrACT10:** Test when both eyes are open and then, when only one eye open (left and right seperately).
+You may train the subject before testing because it is not so straight-forward for some people.
+
+- acuity_task &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;4-step Landolt-Cs
+
+- unit &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;VAdec (1.0+) & LogMAR(<0)
+
+- lengthOfCalibrationRuler &nbsp; 173.0
+
+- distanceInCm &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 230.0
+
+- maxDecimalAcuity &ensp; &ensp; &ensp; &ensp; 2.41
+
+- contrastWeber &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 100.0
+
+- nTrials &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 24
+
+- rangeLimitStatus &ensp; &ensp; &ensp; &ensp; &ensp; rangeOK
+
+- crowding &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; 0
+
+- threshold &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; logMAR =< 0.4
+
+**Random Dot V:**
+
+The first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level.
+When you move the cursor outside of the test window, the stimulus is regenereted.
+
+The second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.
+
+- distanceInCm &ensp; &nbsp;230.0
+
+- threshold &ensp; &ensp; &ensp; &ensp;hardest level with correct response =< 3

@@ -1,0 +1,44 @@
+[
+  {
+    "listing": "/students.html",
+    "items": [
+      "/students/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/physiology.html",
+    "items": [
+      "/physiology/2023-10-22/index.html"
+    ]
+  },
+  {
+    "listing": "/leaving.html",
+    "items": [
+      "/leaving/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/labmeeting.html",
+    "items": [
+      "/labmeeting/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/mri_lab.html",
+    "items": [
+      "/mri_lab/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/mri.html",
+    "items": [
+      "/mri/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/behavioral.html",
+    "items": [
+      "/behavioral/2024-05-22/index.html"
+    ]
+  }
+]

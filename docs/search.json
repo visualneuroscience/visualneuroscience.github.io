@@ -1,0 +1,219 @@
+[
+  {
+    "objectID": "students.html",
+    "href": "students.html",
+    "title": "Information for students in the lab",
+    "section": "",
+    "text": "Vor/während der Masterarbeit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "students/2024-05-22/index.html",
+    "href": "students/2024-05-22/index.html",
+    "title": "Vor/während der Masterarbeit",
+    "section": "",
+    "text": "Stipends you can apply for"
+  },
+  {
+    "objectID": "students/2024-05-22/index.html#nawi---leistungsstipendium",
+    "href": "students/2024-05-22/index.html#nawi---leistungsstipendium",
+    "title": "Vor/während der Masterarbeit",
+    "section": "NAWI - Leistungsstipendium",
+    "text": "NAWI - Leistungsstipendium\nhttps://nawi.uni-graz.at/de/studieren/informationen-und-formulare-fuer-studierende/stipendien/leistungsstipendium/#c125989"
+  },
+  {
+    "objectID": "students/2024-05-22/index.html#nawi-förderstipendium",
+    "href": "students/2024-05-22/index.html#nawi-förderstipendium",
+    "title": "Vor/während der Masterarbeit",
+    "section": "NAWI-Förderstipendium",
+    "text": "NAWI-Förderstipendium\nhttps://nawi.uni-graz.at/de/studieren/informationen-und-formulare-fuer-studierende/stipendien/foerderungsstipendium/"
+  },
+  {
+    "objectID": "students/2024-05-22/index.html#grazer-universitaetsverbund",
+    "href": "students/2024-05-22/index.html#grazer-universitaetsverbund",
+    "title": "Vor/während der Masterarbeit",
+    "section": "Grazer Universitaetsverbund",
+    "text": "Grazer Universitaetsverbund\nhttps://universitaetsbund.uni-graz.at/de/gub-foerderungen/"
+  },
+  {
+    "objectID": "students/2024-05-22/index.html#initiative-gehirnforschung-steiermark",
+    "href": "students/2024-05-22/index.html#initiative-gehirnforschung-steiermark",
+    "title": "Vor/während der Masterarbeit",
+    "section": "Initiative Gehirnforschung Steiermark",
+    "text": "Initiative Gehirnforschung Steiermark\nForschungspreis Kategorie Masterarbeit/Diplom https://gehirnforschung.at/nachwuchsforderung/forschungspreis/"
+  },
+  {
+    "objectID": "students/2024-05-22/index.html#gesellschaft-für-neuropsychologie-österreich",
+    "href": "students/2024-05-22/index.html#gesellschaft-für-neuropsychologie-österreich",
+    "title": "Vor/während der Masterarbeit",
+    "section": "Gesellschaft für Neuropsychologie Österreich",
+    "text": "Gesellschaft für Neuropsychologie Österreich\n(Ausschreibung x1 im Jahr per Email) https://gnpoe.at/"
+  },
+  {
+    "objectID": "physiology.html",
+    "href": "physiology.html",
+    "title": "Information regarding processing physiology",
+    "section": "",
+    "text": "Creating physiology regressors using the PhysIO toolbox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "leaving.html",
+    "href": "leaving.html",
+    "title": "Information about what to do when leaving the lab",
+    "section": "",
+    "text": "TODO list and guidelines for people who are leaving\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "labmeeting/2024-05-22/index.html",
+    "href": "labmeeting/2024-05-22/index.html",
+    "title": "fMRI methods",
+    "section": "",
+    "text": "Journal club reading list (will be updated as I come across new papers that may be useful; suggestions are welcome!)\n\nfMRI methods\n\nMargulies et al., 2016: Hierarchy of areas based on the resting-state data: https://www.pnas.org/doi/10.1073/pnas.1608282113\nGlasser parcellation of the cortex, which everyone is using now: https://www.nature.com/articles/nature18933\nMultiple comparison correction methods for fMRI (no specific paper yet)\nHCP processing pipeline and CIFTI format (alternative to fmriprep and state-of-the-art for 7 T preprocessing): https://www.sciencedirect.com/science/article/pii/S1053811913005053?via%3Dihub\nResting-state connectivity of subcortical structures (including the claustrum) https://www.jneurosci.org/content/43/39/6609\nNeuroquery https://elifesciences.org/articles/53385\nNeurodesk https://www.nature.com/articles/s41592-023-02145-x\nWhite matter activations https://www.pnas.org/doi/10.1073/pnas.2219666120\n\n\n\nSubjective experience\n\nSelf et al., 2019: ephys signatures of figure-ground segmentation in macaque V1: https://www.sciencedirect.com/science/article/pii/S0960982219301551\nRecent findings from Tsao lab: https://www.pnas.org/doi/10.1073/pnas.2221122120\nDMN and awareness: https://www.nature.com/articles/s41467-022-34410-6\nPerceptography: https://www.biorxiv.org/content/10.1101/2022.10.24.513337v2\nPerceptography in humans using visual illusions: https://www.science.org/doi/full/10.1126/sciadv.adj3906\n\n\n\nGeneral methods\n\nStatistical power (small sample sizes): https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267527/\nStatistical power: https://elifesciences.org/articles/62461\nExperimental methods: https://www.frontiersin.org/articles/10.3389/fnhum.2018.00421/full\nScientific writing: https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf\nRandomization techniques for statistical inference: permutation, bootstrapping, Monte Carlo simulations (no specific paper yet)\n\n\n\nAI\n\nhttps://www.sciencedirect.com/science/article/pii/S2589004222011853?via%3Dihub"
+  },
+  {
+    "objectID": "labmeeting.html",
+    "href": "labmeeting.html",
+    "title": "Information about our lab meeting",
+    "section": "",
+    "text": "fMRI methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "mri_lab.html",
+    "href": "mri_lab.html",
+    "title": "Information about our mri lab setup",
+    "section": "",
+    "text": "MRI LAB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "behavioral/2024-05-22/index.html",
+    "href": "behavioral/2024-05-22/index.html",
+    "title": "Vision tests",
+    "section": "",
+    "text": "Vision tests\n\n\nPrescreening tests\nBefore starting any experiment with a subject, confirm that they have “normal vision” since it is a critical exclusion criteria for most of the studies in vision science. ## Visual acuity According to the World Heath Organization (WHO), “visual acuity is … a simple, non-invasive measure and critical to determine the presence of vision impairment” [1]. The vision impairment is an eye condition which causes imperfections in the function of visual system [2]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.\nIn our lab, we perform FrACT10 to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [3]. ## Stereoacuity Stereopsis is also an important phenomenon for binocular rivalry since it is based on binocular disparity [4]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [5]. We use Random Dot V test with red cyan anaglyph glasses to quantify the stereopsis.\nThe difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above. ## Parameters that we use FrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people. - acuity_task                  4-step Landolt-Cs - unit                          VAdec (1.0+) & LogMAR(&lt;0) - lengthOfCalibrationRuler   173.0 - distanceInCm               230.0 - maxDecimalAcuity         2.41 - contrastWeber             100.0 - nTrials                       24 - rangeLimitStatus           rangeOK - crowding                   0\n\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V: The first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4. - distanceInCm    230.0 - threshold        hardest level with correct response =&lt; 3"
+  },
+  {
+    "objectID": "mri/2024-05-22/index.html",
+    "href": "mri/2024-05-22/index.html",
+    "title": "BIDS",
+    "section": "",
+    "text": "Information about MRI and fMRI, processing and analysis steps.\nTopics:"
+  },
+  {
+    "objectID": "mri/2024-05-22/index.html#validating-bids-dataset",
+    "href": "mri/2024-05-22/index.html#validating-bids-dataset",
+    "title": "BIDS",
+    "section": "Validating BIDS dataset",
+    "text": "Validating BIDS dataset\nWith docker, you can run this line in the terminal:\n$ docker run -ti --rm -v [path_to_your_toplevel_bids_directory]:/data:ro bids/validator /data\nCommon issues:\n\nfiles don’t follow BIDS naming conventions (more info about filenames here)\nevents.tsv files are missing\nparticipants.tsv is missing\nparticipants.json file is missing or does not describe all variables from the tsv file\ndatasset_description is missing or there is no name of the dataset or author names in it.\nreadme file is missing or too short\n…"
+  },
+  {
+    "objectID": "leaving/2024-05-22/index.html",
+    "href": "leaving/2024-05-22/index.html",
+    "title": "TODO list and guidelines for people who are leaving",
+    "section": "",
+    "text": "Make sure that all subject’s private data that is irrelevant for research (e.g. bank account information for reimbursement) is deleted\nMake sure that all incidental findings have been clarified, and once this is the case, delete subjects’ contact information if you kept it\nReturn your key to Chrissy once you don’t need a desk\nAt the top level of your directory on storage, create a text/markdown named file named “projects” containing server paths (/storage/, J:, or external storage in the case of Marilena) as follows\nIt would be nice if you could put a contact email for after your uni-graz email address expires (optional, of course) at the top\n\n\nproject nickname\nFinal version (from the MRI/behavioral lab) of the stimulus script\nRaw data (whichever applies)\n\nbehavioral\neyetracking\nphysiology\n(f)MRI\npdf of the MRI protocol\n\nSubject-level analysis scripts (including preprocessing)\nSubject-level results\nGroup analysis scripts\nGroup results\nLatest version of the submitted manuscript with rebuttal, if applicable\nPosters and submitted conference abstracts related to the study\nLocation of the consent forms (either electronic or paper)"
+  },
+  {
+    "objectID": "leaving/2024-05-22/index.html#fast-and-functionally-specific-cortical-thickness-changes-induced-by-visual-stimulation",
+    "href": "leaving/2024-05-22/index.html#fast-and-functionally-specific-cortical-thickness-changes-induced-by-visual-stimulation",
+    "title": "TODO list and guidelines for people who are leaving",
+    "section": "Fast and functionally specific cortical thickness changes induced by visual stimulation",
+    "text": "Fast and functionally specific cortical thickness changes induced by visual stimulation\n\nproject nickname: hexcite\nstimulus script: #todo\nRaw data\n\nbahavior: /storage/nv_shared/projects/excitex/matfiles/\nMRI: /storage/nv_shared/projects/excitex/bids/\nPDF of the MRI protocol: /storage/nv_shared/projects/excitex/111_NZ03_excite_autoalign.pdf\n\nFirst level analysis scripts (including preprocessing): /storage/natalia/projects/hexcite/analyze_hexcite_struc_R1.sh, /storage/natalia/projects/hexcite/analyze_hexcite_fmri.sh\nSubject-level results /storage/natalia/projects/hexcite/bids/derivatives/\nGroup analysis scripts /storage/natalia/projects/hexcite/bids/code/analyze_hexcite_final.m\nGroup results: /storage/natalia/projects/hexcite/group_lowres/\nLatest version of the submitted manuscript with rebuttal: /storage/natalia/projects/hexcite/manuscript/hexcite_CerCor_R1\nPosters and submitted conference abstracts related to the study /storage/natalia/projects/hexcite/presentations\nPaper - Corner office, rightmost drawer"
+  },
+  {
+    "objectID": "mri.html",
+    "href": "mri.html",
+    "title": "Information about processing mri data",
+    "section": "",
+    "text": "BIDS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "physiology/2023-10-22/index.html",
+    "href": "physiology/2023-10-22/index.html",
+    "title": "Creating physiology regressors using the PhysIO toolbox",
+    "section": "",
+    "text": "October 2023; additional info and further read: https://www.sciencedirect.com/science/article/pii/S016502701630259X?via%3Dihub\n\n\n\n\n\nPress tab + [-&gt; + Entf to enter admin mode\nPMU control\ncontrol-esc\nrun -&gt; cmd\nin the terminal, type ideacmdtool\nDON’T use startLogAll, start puls and ECG separately (if both are started simultaneously, recording will terminate after 5 min.)\nAfter a while there should be a message with “ok” at the end\nData is stored in C:\\ProgramFiles\\Siemens\\Numaris\\ Mars\\log\\ (there is a shortcut “log” in the Explorer )\nStop recording after experiment with stopLogAll, move data to C:\\_Natalia\\STUDYNAME\n\n\n\n\n\n\nJson- files of functional data for each run\nPhysiology log-files, one for all runs (.resp and .puls files)\n\nFigure 1. Puls and resp-file.\n\n\nScript: /storage/nv_shared/PhysIO_excitex/PhysIO_get_regressors.m\n\n\n\n\n\nAlways check if on path: SPM: /usr/local/spm12/ Toolbox-code modified for our scanner model: /storage/nv_shared/software/PhysIO/tapas-master/PhysIO/code\nIndividual parameter settings in the script:\n\nphysio.log_files.vendor = ‘Siemens_xa20’; % specific for our scanner model.\nphysio.log_files.resp_type = ‘spine’; % set to spine or belt, depending on type of physiology correction.\nphysio.model.orthogonalise = ‘RETROICOR’; % select depending on physiology model used, e.g. ‘RETROICOR’, or c, r; to avoid correlations between regressors.\nphysio.model.retroicor.include = true; % select physiology model here: RETROICOR, RVT or HVT.\nphysio.model.retroicor.order.c = 3;\nphysio.model.retroicor.order.r = 4;\nphysio.model.retroicor.order.cr = 1; % select orders for RETROICOR model; here the default option based on Glover et al., 2000 is set.\nphysio.model.rvt.include = false; % select physiology model here.\nphysio.model.hrv.include = false; % select physiology model here.\nphysio.model.other.include = false; % select physiology model here.\nphysio.verbose.level = 3; % 2 or 3, will produce control plots – useful to check quality of data and if synchronization has worked; when analyzing several participants it’s best to set to 0.\n\n\n\n\n\n\nValidation of results - Check the diagnostic plots the toolbox delivers:\n\nCheck the raw time series for artifacts/ detachments (4A)\nCheck distribution of raw physiological data (should be left-skewed, 4B), are there any indications for ceiling effects or temporary detachment (2)?\n\nCheck period used for synchronization, does it fit? (4C)\nCheck filtered time series (are there still severe artifacts?)\nCheck regressor file (3): regressors should have a value for each slice and 18 regressors if you specified RETROICOR (i.e., 6 cardiac phase regressors, 8 respiratory phase regressors, and 4 interaction terms).\nRegressors can then be added to a GLM.\n\n\nFigure 2. Artifacts in raw respiratory signal due to issues during recording with the breathing belt.\n\nFigure 3. Final output (RETROICOR regressors)\n\nFigure 4. Steps from raw data to the final regressors."
+  },
+  {
+    "objectID": "physiology/2023-10-22/index.html#acquistion-of-log-files",
+    "href": "physiology/2023-10-22/index.html#acquistion-of-log-files",
+    "title": "Creating physiology regressors using the PhysIO toolbox",
+    "section": "",
+    "text": "Press tab + [-&gt; + Entf to enter admin mode\nPMU control\ncontrol-esc\nrun -&gt; cmd\nin the terminal, type ideacmdtool\nDON’T use startLogAll, start puls and ECG separately (if both are started simultaneously, recording will terminate after 5 min.)\nAfter a while there should be a message with “ok” at the end\nData is stored in C:\\ProgramFiles\\Siemens\\Numaris\\ Mars\\log\\ (there is a shortcut “log” in the Explorer )\nStop recording after experiment with stopLogAll, move data to C:\\_Natalia\\STUDYNAME"
+  },
+  {
+    "objectID": "physiology/2023-10-22/index.html#required",
+    "href": "physiology/2023-10-22/index.html#required",
+    "title": "Creating physiology regressors using the PhysIO toolbox",
+    "section": "",
+    "text": "Json- files of functional data for each run\nPhysiology log-files, one for all runs (.resp and .puls files)\n\nFigure 1. Puls and resp-file.\n\n\nScript: /storage/nv_shared/PhysIO_excitex/PhysIO_get_regressors.m"
+  },
+  {
+    "objectID": "physiology/2023-10-22/index.html#before-running-the-script",
+    "href": "physiology/2023-10-22/index.html#before-running-the-script",
+    "title": "Creating physiology regressors using the PhysIO toolbox",
+    "section": "",
+    "text": "Always check if on path: SPM: /usr/local/spm12/ Toolbox-code modified for our scanner model: /storage/nv_shared/software/PhysIO/tapas-master/PhysIO/code\nIndividual parameter settings in the script:\n\nphysio.log_files.vendor = ‘Siemens_xa20’; % specific for our scanner model.\nphysio.log_files.resp_type = ‘spine’; % set to spine or belt, depending on type of physiology correction.\nphysio.model.orthogonalise = ‘RETROICOR’; % select depending on physiology model used, e.g. ‘RETROICOR’, or c, r; to avoid correlations between regressors.\nphysio.model.retroicor.include = true; % select physiology model here: RETROICOR, RVT or HVT.\nphysio.model.retroicor.order.c = 3;\nphysio.model.retroicor.order.r = 4;\nphysio.model.retroicor.order.cr = 1; % select orders for RETROICOR model; here the default option based on Glover et al., 2000 is set.\nphysio.model.rvt.include = false; % select physiology model here.\nphysio.model.hrv.include = false; % select physiology model here.\nphysio.model.other.include = false; % select physiology model here.\nphysio.verbose.level = 3; % 2 or 3, will produce control plots – useful to check quality of data and if synchronization has worked; when analyzing several participants it’s best to set to 0."
+  },
+  {
+    "objectID": "physiology/2023-10-22/index.html#after-running-the-script",
+    "href": "physiology/2023-10-22/index.html#after-running-the-script",
+    "title": "Creating physiology regressors using the PhysIO toolbox",
+    "section": "",
+    "text": "Validation of results - Check the diagnostic plots the toolbox delivers:\n\nCheck the raw time series for artifacts/ detachments (4A)\nCheck distribution of raw physiological data (should be left-skewed, 4B), are there any indications for ceiling effects or temporary detachment (2)?\n\nCheck period used for synchronization, does it fit? (4C)\nCheck filtered time series (are there still severe artifacts?)\nCheck regressor file (3): regressors should have a value for each slice and 18 regressors if you specified RETROICOR (i.e., 6 cardiac phase regressors, 8 respiratory phase regressors, and 4 interaction terms).\nRegressors can then be added to a GLM.\n\n\nFigure 2. Artifacts in raw respiratory signal due to issues during recording with the breathing belt.\n\nFigure 3. Final output (RETROICOR regressors)\n\nFigure 4. Steps from raw data to the final regressors."
+  },
+  {
+    "objectID": "behavioral.html",
+    "href": "behavioral.html",
+    "title": "Information about collecting behavioural data",
+    "section": "",
+    "text": "Vision tests\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Visual Neuroscience lab",
+    "section": "",
+    "text": "About\n\n\n\n:::"
+  },
+  {
+    "objectID": "mri_lab/2024-05-22/index.html",
+    "href": "mri_lab/2024-05-22/index.html",
+    "title": "MRI LAB",
+    "section": "",
+    "text": "Information about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nMake sure to switch to the Linux computer (the button number 2 under the monitor)\nLogin with credentials you received\n\n\n\n\nimage\n\n\n\nOnce logged in:\nIf you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)\nCheck if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):\n\n\n\n\nimage\n\n\n\nStart MATLAB / Octave and test the trigger box with the script response_box_check.m\n\n\n\n\nimage\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent.\n\n\n\n\n\nParticipants can fill out the forms in the lobby. You can also instruct them there.\nPaperwork: …\nSnellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!"
+  },
+  {
+    "objectID": "mri_lab/2024-05-22/index.html#general-setup-information",
+    "href": "mri_lab/2024-05-22/index.html#general-setup-information",
+    "title": "MRI LAB",
+    "section": "",
+    "text": "Make sure to switch to the Linux computer (the button number 2 under the monitor)\nLogin with credentials you received\n\n\n\n\nimage\n\n\n\nOnce logged in:\nIf you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)\nCheck if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):\n\n\n\n\nimage\n\n\n\nStart MATLAB / Octave and test the trigger box with the script response_box_check.m\n\n\n\n\nimage\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent."
+  },
+  {
+    "objectID": "mri_lab/2024-05-22/index.html#experimental-protocol",
+    "href": "mri_lab/2024-05-22/index.html#experimental-protocol",
+    "title": "MRI LAB",
+    "section": "",
+    "text": "Participants can fill out the forms in the lobby. You can also instruct them there.\nPaperwork: …\nSnellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!"
+  },
+  {
+    "objectID": "behavioral/2024-05-22/index.html#visual-acuity",
+    "href": "behavioral/2024-05-22/index.html#visual-acuity",
+    "title": "Vision tests",
+    "section": "Visual acuity",
+    "text": "Visual acuity\nAccording to the World Heath Organization (WHO), “visual acuity is … a simple, non-invasive measure and critical to determine the presence of vision impairment” [1]. The vision impairment is an eye condition which causes imperfections in the function of visual system [2]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.\nIn our lab, we perform FrACT10 to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [3]."
+  },
+  {
+    "objectID": "behavioral/2024-05-22/index.html#stereoacuity",
+    "href": "behavioral/2024-05-22/index.html#stereoacuity",
+    "title": "Vision tests",
+    "section": "Stereoacuity",
+    "text": "Stereoacuity\nStereopsis is also an important phenomenon for binocular rivalry since it is based on binocular disparity [4]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [5]. We use Random Dot V test with red cyan anaglyph glasses to quantify the stereopsis.\nThe difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above."
+  },
+  {
+    "objectID": "behavioral/2024-05-22/index.html#parameters-that-we-use",
+    "href": "behavioral/2024-05-22/index.html#parameters-that-we-use",
+    "title": "Vision tests",
+    "section": "Parameters that we use",
+    "text": "Parameters that we use\nFrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people.\n\nacuity_task                  4-step Landolt-Cs\nunit                          VAdec (1.0+) & LogMAR(&lt;0)\nlengthOfCalibrationRuler   173.0\ndistanceInCm               230.0\nmaxDecimalAcuity         2.41\ncontrastWeber             100.0\nnTrials                       24\nrangeLimitStatus           rangeOK\ncrowding                   0\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V:\nThe first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.\n\ndistanceInCm    230.0\nthreshold        hardest level with correct response =&lt; 3"
+  }
+]
