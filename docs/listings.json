@@ -38,7 +38,14 @@
   {
     "listing": "/behavioral.html",
     "items": [
-      "/behavioral/2024-05-22/index.html"
+      "/behavioral/2024-05-22/index.html",
+      "/behavioral/2024-05-23/index.html"
+    ]
+  },
+  {
+    "listing": "/luminancemeasurement.html",
+    "items": [
+      "/luminancemeasurement/2024-05-22/index.html"
     ]
   }
 ]

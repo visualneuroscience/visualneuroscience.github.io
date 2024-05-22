@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Visual Neuroscience Lab - Information about collecting behavioural data</title>
+<title>Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,65 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -137,7 +77,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
   </div>
@@ -148,39 +88,39 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./behavioral.html" aria-current="page"> 
+    <a class="nav-link" href="../../behavioral.html"> 
 <span class="menu-text">Behavioral</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./labmeeting.html"> 
+    <a class="nav-link" href="../../labmeeting.html"> 
 <span class="menu-text">Labmeeting</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./leaving.html"> 
+    <a class="nav-link" href="../../leaving.html"> 
 <span class="menu-text">Leaving</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri.html"> 
+    <a class="nav-link" href="../../mri.html"> 
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri_lab.html"> 
+    <a class="nav-link" href="../../mri_lab.html"> 
 <span class="menu-text">MRI lab</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./physiology.html"> 
+    <a class="nav-link" href="../../physiology.html"> 
 <span class="menu-text">Physiology</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./students.html"> 
+    <a class="nav-link" href="../../students.html"> 
 <span class="menu-text">Students</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./luminancemeasurement.html"> 
+    <a class="nav-link" href="../../luminancemeasurement.html"> 
 <span class="menu-text">Luminance Measurement</span></a>
   </li>  
 </ul>
@@ -195,81 +135,89 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bids-for-behavioral-studies" id="toc-bids-for-behavioral-studies" class="nav-link active" data-scroll-target="#bids-for-behavioral-studies">BIDS for behavioral studies</a>
+  <ul class="collapse">
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software:</a></li>
+  <li><a href="#how-to-implement" id="toc-how-to-implement" class="nav-link" data-scroll-target="#how-to-implement">How to implement</a>
+  <ul class="collapse">
+  <li><a href="#after-preprocessing" id="toc-after-preprocessing" class="nav-link" data-scroll-target="#after-preprocessing">After preprocessing:</a></li>
+  <li><a href="#before-finalizing-everything" id="toc-before-finalizing-everything" class="nav-link" data-scroll-target="#before-finalizing-everything">Before finalizing everything:</a></li>
+  <li><a href="#pipeline-for-transriv-project-as-an-example" id="toc-pipeline-for-transriv-project-as-an-example" class="nav-link" data-scroll-target="#pipeline-for-transriv-project-as-an-example">Pipeline for transriv project as an example</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Information about collecting behavioural data</h1>
-</div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<section id="bids-for-behavioral-studies" class="level1">
+<h1>BIDS for behavioral studies</h1>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/behavioral-experiments.html">Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0</a></p>
+</section>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software:</h2>
+<p><a href="https://github.com/bids-standard/bids-matlab">bids-matlab</a> |</p>
+<p><a href="https://github.com/bids-standard/bids-starter-kit">bids-starter-kit on GitHub</a> |</p>
+<p><a href="https://github.com/gllmflndn/JSONio">JSONio on GitHub</a></p>
+</section>
+<section id="how-to-implement" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-implement">How to implement</h2>
+<p>You may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.</p>
+<section id="after-preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="after-preprocessing">After preprocessing:</h3>
+<p>create_events_tsv_json_full.m</p>
+</section>
+<section id="before-finalizing-everything" class="level3">
+<h3 class="anchored" data-anchor-id="before-finalizing-everything">Before finalizing everything:</h3>
+<p>createBIDS_participants_tsv.m</p>
+<p>createBIDS_dataset_description_json.m</p>
+</section>
+<section id="pipeline-for-transriv-project-as-an-example" class="level3">
+<h3 class="anchored" data-anchor-id="pipeline-for-transriv-project-as-an-example">Pipeline for transriv project as an example</h3>
+<ul>
+<li><p>Add ‘transriv-bids’ to matlab path</p></li>
+<li><p>Go to the root_dir or use the full path of root_dir as input to the functions</p></li>
+<li><p>Preprocess data from a subject:</p></li>
+</ul>
+<p><code>createBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)</code></p>
+<ul>
+<li>Create dataset files by running <code>transriv_finalizeBIDS.m</code> (when data collection is finished)</li>
+</ul>
+<p>The folder structure based on BIDS:</p>
+<pre><code>root_dir
+  └─ ‘transriv’
+        ├─ participants.xlsx
+        ├─ participants.tsv
+        ├─ participants.json
+        ├─ sourcedata
+        │     └─ sub-S001
+        │         └─ ses-Rivalry
+        │               └─ beh
+        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat
+        └─ rawdata
+             └─ sub-S001
+                 └─ ses-Rivalry
+                     └─ beh
+                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json
+                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv</code></pre>
 
-    
-  
-    
-  </div>
-  
 
+</section>
+</section>
+</section>
 
-</header>
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1716385786866" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<a href="./behavioral/2024-05-22/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Vision tests
-</h5>
-<div class="card-text listing-description">
-Before starting any experiment with a subject, confirm that they have “normal vision” since it is a critical exclusion criteria for most of the studies in vision science.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1716390323926" data-listing-reading-time-sort="2" data-listing-word-count-sort="350">
-<a href="./behavioral/2024-05-23/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-BIDS for behavioral studies
-</h5>
-<div class="card-text listing-description">
-Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

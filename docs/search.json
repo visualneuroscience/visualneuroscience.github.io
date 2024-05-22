@@ -165,7 +165,7 @@
     "href": "behavioral.html",
     "title": "Information about collecting behavioural data",
     "section": "",
-    "text": "Vision tests\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Vision tests\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBIDS for behavioral studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -215,5 +215,61 @@
     "title": "Vision tests",
     "section": "Parameters that we use",
     "text": "Parameters that we use\nFrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people.\n\nacuity_task                  4-step Landolt-Cs\nunit                          VAdec (1.0+) & LogMAR(&lt;0)\nlengthOfCalibrationRuler   173.0\ndistanceInCm               230.0\nmaxDecimalAcuity         2.41\ncontrastWeber             100.0\nnTrials                       24\nrangeLimitStatus           rangeOK\ncrowding                   0\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V:\nThe first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.\n\ndistanceInCm    230.0\nthreshold        hardest level with correct response =&lt; 3"
+  },
+  {
+    "objectID": "luminancemeasurement/2024-05-22/index.html",
+    "href": "luminancemeasurement/2024-05-22/index.html",
+    "title": "Luminance measurement and gamma table",
+    "section": "",
+    "text": "For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in fromt of the output screen. In the worst case, a second person can hold the photometer at a constant distance. With the Script, 17 different levels of luminance for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The luminance measures are typed into the command window. When the script is run without an error, it automatically saves the 17 values into a mat-file. Importantly, the room in which luminance is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated. ## Required softwares:\n\nIdeally Linux OS\nMatlab/Octave\nPsychtoolbox\n\n\n\n\n\nopen saveReadings.m and edit the general info. If you want to customize the measurement, you may change the parameters as well.\nrun saveReadings.m (alternatively, you may call directly the function vals = saveMonitorPhotometerReadings(17, 'red'))\nthen, call the function to create gamma tables\n[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)\n\nTwo gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts."
+  },
+  {
+    "objectID": "luminancemeasurement/2024-05-22/index.html#general-info",
+    "href": "luminancemeasurement/2024-05-22/index.html#general-info",
+    "title": "Luminance measurement and gamma table",
+    "section": "",
+    "text": "For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in fromt of the output screen. In the worst case, a second person can hold the photometer at a constant distance. With the Script, 17 different levels of luminance for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The luminance measures are typed into the command window. When the script is run without an error, it automatically saves the 17 values into a mat-file. Importantly, the room in which luminance is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated. ## Required softwares:\n\nIdeally Linux OS\nMatlab/Octave\nPsychtoolbox"
+  },
+  {
+    "objectID": "luminancemeasurement/2024-05-22/index.html#operation",
+    "href": "luminancemeasurement/2024-05-22/index.html#operation",
+    "title": "Luminance measurement and gamma table",
+    "section": "",
+    "text": "open saveReadings.m and edit the general info. If you want to customize the measurement, you may change the parameters as well.\nrun saveReadings.m (alternatively, you may call directly the function vals = saveMonitorPhotometerReadings(17, 'red'))\nthen, call the function to create gamma tables\n[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)\n\nTwo gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts."
+  },
+  {
+    "objectID": "luminancemeasurement.html",
+    "href": "luminancemeasurement.html",
+    "title": "Information about how to measure luminance on monitors",
+    "section": "",
+    "text": "Luminance measurement and gamma table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html",
+    "href": "behavioral/2024-05-23/index.html",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0\n\n\n\nbids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub\n\n\n\nYou may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\n\ncreate_events_tsv_json_full.m\n\n\n\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\n\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#resources",
+    "href": "behavioral/2024-05-23/index.html#resources",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#software",
+    "href": "behavioral/2024-05-23/index.html#software",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "bids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#how-to-implement",
+    "href": "behavioral/2024-05-23/index.html#how-to-implement",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "You may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\n\ncreate_events_tsv_json_full.m\n\n\n\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\n\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv"
   }
 ]

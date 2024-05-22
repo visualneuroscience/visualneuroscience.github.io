@@ -22,6 +22,9 @@ website:
         text: Physiology
       - href: students.qmd
         text: Students
+      - href: luminancemeasurement.qmd
+        text: Luminance Measurement
+
   page-footer:
     background: light
     right:
