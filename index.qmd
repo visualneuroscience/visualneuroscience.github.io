@@ -8,7 +8,7 @@ about:
   links:
     - icon: github 
       text: GitHub
-      href: https://github.com/adam-coates
+      href: https://github.com/visualneuroscience
     - icon: globe
       text: Uni Graz
       href: https://neurovision.uni-graz.at
@@ -21,6 +21,10 @@ about:
 ### About
 
 <p class="topbr">
+
+We investigate how subjective experience arises from sensory input and how this is represented in the brain.
+
+PI: Natalia Zaretskaya 
 
 </p>
 
