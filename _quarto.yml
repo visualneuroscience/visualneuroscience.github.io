@@ -29,7 +29,7 @@ website:
     background: light
     right:
       - icon: github
-        href: https://visualneuroscience.github.com/
+        href: https://github.com/visualneuroscience
 format:
   html:
     page-layout: full
