@@ -1,10 +1,66 @@
 [
   {
-    "objectID": "students.html",
-    "href": "students.html",
-    "title": "Information for students in the lab",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Visual Neuroscience lab",
     "section": "",
-    "text": "Vor/während der Masterarbeit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n:::"
+  },
+  {
+    "objectID": "labmeeting/2024-05-22/index.html",
+    "href": "labmeeting/2024-05-22/index.html",
+    "title": "Reading list",
+    "section": "",
+    "text": "Reading list\nJournal club reading list (will be updated as I come across new papers that may be useful; suggestions are welcome!)\n\n\nfMRI methods\n\nMargulies et al., 2016: Hierarchy of areas based on the resting-state data: https://www.pnas.org/doi/10.1073/pnas.1608282113\nGlasser parcellation of the cortex, which everyone is using now: https://www.nature.com/articles/nature18933\nMultiple comparison correction methods for fMRI (no specific paper yet)\nHCP processing pipeline and CIFTI format (alternative to fmriprep and state-of-the-art for 7 T preprocessing): https://www.sciencedirect.com/science/article/pii/S1053811913005053?via%3Dihub\nResting-state connectivity of subcortical structures (including the claustrum) https://www.jneurosci.org/content/43/39/6609\nNeuroquery https://elifesciences.org/articles/53385\nNeurodesk https://www.nature.com/articles/s41592-023-02145-x\nWhite matter activations https://www.pnas.org/doi/10.1073/pnas.2219666120\n\n\n\nSubjective experience\n\nSelf et al., 2019: ephys signatures of figure-ground segmentation in macaque V1: https://www.sciencedirect.com/science/article/pii/S0960982219301551\nRecent findings from Tsao lab: https://www.pnas.org/doi/10.1073/pnas.2221122120\nDMN and awareness: https://www.nature.com/articles/s41467-022-34410-6\nPerceptography: https://www.biorxiv.org/content/10.1101/2022.10.24.513337v2\nPerceptography in humans using visual illusions: https://www.science.org/doi/full/10.1126/sciadv.adj3906\n\n\n\nGeneral methods\n\nStatistical power (small sample sizes): https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267527/\nStatistical power: https://elifesciences.org/articles/62461\nExperimental methods: https://www.frontiersin.org/articles/10.3389/fnhum.2018.00421/full\nScientific writing: https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf\nRandomization techniques for statistical inference: permutation, bootstrapping, Monte Carlo simulations (no specific paper yet)\n\n\n\nAI\n\nhttps://www.sciencedirect.com/science/article/pii/S2589004222011853?via%3Dihub"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html",
+    "href": "behavioral/2024-05-23/index.html",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0\n\n\n\nbids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub\n\n\n\nYou may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\n\ncreate_events_tsv_json_full.m\n\n\n\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\n\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv\nLink to our GitHub repo containing relevant scripts"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#resources",
+    "href": "behavioral/2024-05-23/index.html#resources",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#software",
+    "href": "behavioral/2024-05-23/index.html#software",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "bids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub"
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#how-to-implement",
+    "href": "behavioral/2024-05-23/index.html#how-to-implement",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "You may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\n\ncreate_events_tsv_json_full.m\n\n\n\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\n\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv\nLink to our GitHub repo containing relevant scripts"
+  },
+  {
+    "objectID": "physiology.html",
+    "href": "physiology.html",
+    "title": "Information regarding processing physiology",
+    "section": "",
+    "text": "Creating physiology regressors using the PhysIO toolbox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "mri_lab/2024-05-30/index.html",
+    "href": "mri_lab/2024-05-30/index.html",
+    "title": "Update to the MRI lab setup",
+    "section": "",
+    "text": "The MRI lab has had some upgrades in 2024 including:\n\nNew stimulation PC\nStimulation goggles\n\nThis document details some information about the new setup\n\n\n\n\n\n\nTurn on the stimulus presentation PC\nTurn on the eyetracking PC (if using the goggles or eyetracking)\n\n\nEven if not using the eyetracker but using the goggles it is useful to use the eyetracker to be able to ensure that the goggles are aligned properly with the participant\n\n\nLogin to the stimulus pc and/or the eyetracker pc with the credentials provided\n\n\nWhen logging into the stimulus PC it might be that you actually don’t see anything on the screen yet if there are other screens connected to the stimulus PC, therefore the sequence of keystrokes when starting the PC is:\n\n    1. Enter decryption password \n\n    2. Press enter \n    \n    3. Press enter again (this selects the top-most user)\n    \n    4. Enter the user password required from the technician (or someone else in our lab)\n\n\n\n\nIf you are using the goggles then make sure that the HDMI cables are first plugged in\n\n\n\n\n\nGoggles HDMI inputs\n\n\n\n\nThe right goggle’s hdmi cable (labelled with tape) should be in the top most position and the left in the bottom position\n\n\nThe goggles can now be plugged in\n\n\n\n\n\nGoggles plug unplugged\n\n\n\n\n\nGoggles plug plugged in\n\n\n\n\nThe goggles need to be additionally turned on inside the scanner room (double check with technician that this is the case)\nIf using the eyetracker function of the goggles plug in the cable to link the eyetracker signal to the PC\n\n\n\n\n\nThe light on the eyetracker should be illuminated red\n\n\n\n\nStart ViewPoint and you should see something other than ‘no signal’\n\n\nFor more information visit the arringtonresearch website\n\n\n\n\n\nPopOS (the stimulation PC’s operating system) might be a bit funky when it comes to changing the display settings when doing so with the settings menu in PopOS\n\n\nWhen opening the display settings do not click apply but instead choose a different settings option e.g. power/ sound/ notficiations etc. and then close the settings menu\n\n\n\n\n\nPopOS example settings window, always make sure to close this window and not apply new display settings\n\n\n\n\nUse shortcut win + p to change whether to extend or mirror the screens, you can hit win + p twice and this will change to mirror mode\n\n\n\n\n\nThe KVM switcher is used to switch between devices and for the goggle + stimulation PC setup can be used to switch between either the eyetracker PC or stimulus PC\n\n\n\n\n\nKVM switcher, button 1 = eyetracker pc, 2 = stimulus pc\n\n\n\n\n\n\n\nSometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC\nIf this is the case the USB light on the box will be flashing (indicating that the USB is not connected)\nLocate at the back of the box the corresponding USB input and plug it in\n\n\n\n\n\nBack of the trigger box\n\n\n\n\nThe USB light should stop flashing\nTest the button box inside the scanner\n\n\n\n\n\nTrigger box front\n\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent\n\n\n\n\nBefore entering the scanner room always make sure you are MR safe and sign the respective forms\n\nAsk the participant to sign the forms while doing so ensure that the button box inside the scanner works and double check the view on the goggles that everything looks okay\n\n\n\n\n\nStart psychopy by opening the terminal and typing Psychopy-2024\nUsually psychopy starts by asking to open a .psyexp file so just open the one you have or if using the coder only:\n\nOpen a .psyexp file that doesn’t apply to you\nquit builder view and do not save\n\nNow you can open a .py file\n\nAlternatively start psychopy with the -c flag"
+  },
+  {
+    "objectID": "mri_lab/2024-05-30/index.html#general-setup-information",
+    "href": "mri_lab/2024-05-30/index.html#general-setup-information",
+    "title": "Update to the MRI lab setup",
+    "section": "",
+    "text": "Turn on the stimulus presentation PC\nTurn on the eyetracking PC (if using the goggles or eyetracking)\n\n\nEven if not using the eyetracker but using the goggles it is useful to use the eyetracker to be able to ensure that the goggles are aligned properly with the participant\n\n\nLogin to the stimulus pc and/or the eyetracker pc with the credentials provided\n\n\nWhen logging into the stimulus PC it might be that you actually don’t see anything on the screen yet if there are other screens connected to the stimulus PC, therefore the sequence of keystrokes when starting the PC is:\n\n    1. Enter decryption password \n\n    2. Press enter \n    \n    3. Press enter again (this selects the top-most user)\n    \n    4. Enter the user password required from the technician (or someone else in our lab)\n\n\n\n\nIf you are using the goggles then make sure that the HDMI cables are first plugged in\n\n\n\n\n\nGoggles HDMI inputs\n\n\n\n\nThe right goggle’s hdmi cable (labelled with tape) should be in the top most position and the left in the bottom position\n\n\nThe goggles can now be plugged in\n\n\n\n\n\nGoggles plug unplugged\n\n\n\n\n\nGoggles plug plugged in\n\n\n\n\nThe goggles need to be additionally turned on inside the scanner room (double check with technician that this is the case)\nIf using the eyetracker function of the goggles plug in the cable to link the eyetracker signal to the PC\n\n\n\n\n\nThe light on the eyetracker should be illuminated red\n\n\n\n\nStart ViewPoint and you should see something other than ‘no signal’\n\n\nFor more information visit the arringtonresearch website\n\n\n\n\n\nPopOS (the stimulation PC’s operating system) might be a bit funky when it comes to changing the display settings when doing so with the settings menu in PopOS\n\n\nWhen opening the display settings do not click apply but instead choose a different settings option e.g. power/ sound/ notficiations etc. and then close the settings menu\n\n\n\n\n\nPopOS example settings window, always make sure to close this window and not apply new display settings\n\n\n\n\nUse shortcut win + p to change whether to extend or mirror the screens, you can hit win + p twice and this will change to mirror mode\n\n\n\n\n\nThe KVM switcher is used to switch between devices and for the goggle + stimulation PC setup can be used to switch between either the eyetracker PC or stimulus PC\n\n\n\n\n\nKVM switcher, button 1 = eyetracker pc, 2 = stimulus pc\n\n\n\n\n\n\n\nSometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC\nIf this is the case the USB light on the box will be flashing (indicating that the USB is not connected)\nLocate at the back of the box the corresponding USB input and plug it in\n\n\n\n\n\nBack of the trigger box\n\n\n\n\nThe USB light should stop flashing\nTest the button box inside the scanner\n\n\n\n\n\nTrigger box front\n\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent\n\n\n\n\nBefore entering the scanner room always make sure you are MR safe and sign the respective forms\n\nAsk the participant to sign the forms while doing so ensure that the button box inside the scanner works and double check the view on the goggles that everything looks okay\n\n\n\n\n\nStart psychopy by opening the terminal and typing Psychopy-2024\nUsually psychopy starts by asking to open a .psyexp file so just open the one you have or if using the coder only:\n\nOpen a .psyexp file that doesn’t apply to you\nquit builder view and do not save\n\nNow you can open a .py file\n\nAlternatively start psychopy with the -c flag"
   },
   {
     "objectID": "students/2024-05-22/index.html",
@@ -49,13 +105,6 @@
     "text": "Gesellschaft für Neuropsychologie Österreich\n(Ausschreibung x1 im Jahr per Email) https://gnpoe.at/"
   },
   {
-    "objectID": "physiology.html",
-    "href": "physiology.html",
-    "title": "Information regarding processing physiology",
-    "section": "",
-    "text": "Creating physiology regressors using the PhysIO toolbox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "leaving.html",
     "href": "leaving.html",
     "title": "Information about what to do when leaving the lab",
@@ -63,32 +112,18 @@
     "text": "TODO list and guidelines for people who are leaving\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "labmeeting/2024-05-22/index.html",
-    "href": "labmeeting/2024-05-22/index.html",
-    "title": "Reading list",
+    "objectID": "behavioral.html",
+    "href": "behavioral.html",
+    "title": "Information about collecting behavioural data",
     "section": "",
-    "text": "Reading list\nJournal club reading list (will be updated as I come across new papers that may be useful; suggestions are welcome!)\n\n\nfMRI methods\n\nMargulies et al., 2016: Hierarchy of areas based on the resting-state data: https://www.pnas.org/doi/10.1073/pnas.1608282113\nGlasser parcellation of the cortex, which everyone is using now: https://www.nature.com/articles/nature18933\nMultiple comparison correction methods for fMRI (no specific paper yet)\nHCP processing pipeline and CIFTI format (alternative to fmriprep and state-of-the-art for 7 T preprocessing): https://www.sciencedirect.com/science/article/pii/S1053811913005053?via%3Dihub\nResting-state connectivity of subcortical structures (including the claustrum) https://www.jneurosci.org/content/43/39/6609\nNeuroquery https://elifesciences.org/articles/53385\nNeurodesk https://www.nature.com/articles/s41592-023-02145-x\nWhite matter activations https://www.pnas.org/doi/10.1073/pnas.2219666120\n\n\n\nSubjective experience\n\nSelf et al., 2019: ephys signatures of figure-ground segmentation in macaque V1: https://www.sciencedirect.com/science/article/pii/S0960982219301551\nRecent findings from Tsao lab: https://www.pnas.org/doi/10.1073/pnas.2221122120\nDMN and awareness: https://www.nature.com/articles/s41467-022-34410-6\nPerceptography: https://www.biorxiv.org/content/10.1101/2022.10.24.513337v2\nPerceptography in humans using visual illusions: https://www.science.org/doi/full/10.1126/sciadv.adj3906\n\n\n\nGeneral methods\n\nStatistical power (small sample sizes): https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267527/\nStatistical power: https://elifesciences.org/articles/62461\nExperimental methods: https://www.frontiersin.org/articles/10.3389/fnhum.2018.00421/full\nScientific writing: https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf\nRandomization techniques for statistical inference: permutation, bootstrapping, Monte Carlo simulations (no specific paper yet)\n\n\n\nAI\n\nhttps://www.sciencedirect.com/science/article/pii/S2589004222011853?via%3Dihub"
-  },
-  {
-    "objectID": "labmeeting.html",
-    "href": "labmeeting.html",
-    "title": "Information about our lab meeting",
-    "section": "",
-    "text": "Reading list\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "BIDS for behavioral studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVision tests\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "mri_lab.html",
     "href": "mri_lab.html",
     "title": "Information about our mri lab setup",
     "section": "",
-    "text": "MRI LAB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "behavioral/2024-05-22/index.html",
-    "href": "behavioral/2024-05-22/index.html",
-    "title": "Vision tests",
-    "section": "",
-    "text": "Vision tests\n\n\nPrescreening tests\nBefore starting any experiment with a subject, confirm that they have “normal vision” since it is a critical exclusion criteria for most of the studies in vision science. ## Visual acuity According to the World Heath Organization (WHO), “visual acuity is … a simple, non-invasive measure and critical to determine the presence of vision impairment” [1]. The vision impairment is an eye condition which causes imperfections in the function of visual system [2]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.\nIn our lab, we perform FrACT10 to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [3]. ## Stereoacuity Stereopsis is also an important phenomenon for binocular rivalry since it is based on binocular disparity [4]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [5]. We use Random Dot V test with red cyan anaglyph glasses to quantify the stereopsis.\nThe difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above. ## Parameters that we use FrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people. - acuity_task                  4-step Landolt-Cs - unit                          VAdec (1.0+) & LogMAR(&lt;0) - lengthOfCalibrationRuler   173.0 - distanceInCm               230.0 - maxDecimalAcuity         2.41 - contrastWeber             100.0 - nTrials                       24 - rangeLimitStatus           rangeOK - crowding                   0\n\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V: The first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4. - distanceInCm    230.0 - threshold        hardest level with correct response =&lt; 3"
+    "text": "Update to the MRI lab setup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMRI LAB\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "mri/2024-05-22/index.html",
@@ -103,6 +138,34 @@
     "title": "BIDS",
     "section": "Validating BIDS dataset",
     "text": "Validating BIDS dataset\nWith docker, you can run this line in the terminal:\n$ docker run -ti --rm -v [path_to_your_toplevel_bids_directory]:/data:ro bids/validator /data\nCommon issues:\n\nfiles don’t follow BIDS naming conventions (more info about filenames here)\nevents.tsv files are missing\nparticipants.tsv is missing\nparticipants.json file is missing or does not describe all variables from the tsv file\ndatasset_description is missing or there is no name of the dataset or author names in it.\nreadme file is missing or too short\n…"
+  },
+  {
+    "objectID": "students.html",
+    "href": "students.html",
+    "title": "Information for students in the lab",
+    "section": "",
+    "text": "Vor/während der Masterarbeit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "luminancemeasurement/2024-05-22/index.html",
+    "href": "luminancemeasurement/2024-05-22/index.html",
+    "title": "Luminance measurement and gamma table",
+    "section": "",
+    "text": "For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in fromt of the output screen. In the worst case, a second person can hold the photometer at a constant distance. With the Script, 17 different levels of luminance for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The luminance measures are typed into the command window. When the script is run without an error, it automatically saves the 17 values into a mat-file. Importantly, the room in which luminance is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated. ## Required softwares:\n\nIdeally Linux OS\nMatlab/Octave\nPsychtoolbox\n\n\n\n\n\nopen saveReadings.m and edit the general info. If you want to customize the measurement, you may change the parameters as well.\nrun saveReadings.m (alternatively, you may call directly the function vals = saveMonitorPhotometerReadings(17, 'red'))\nthen, call the function to create gamma tables\n[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)\n\nTwo gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts.\nLink to our GitHub repo containing relevant scripts"
+  },
+  {
+    "objectID": "luminancemeasurement/2024-05-22/index.html#general-info",
+    "href": "luminancemeasurement/2024-05-22/index.html#general-info",
+    "title": "Luminance measurement and gamma table",
+    "section": "",
+    "text": "For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in fromt of the output screen. In the worst case, a second person can hold the photometer at a constant distance. With the Script, 17 different levels of luminance for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The luminance measures are typed into the command window. When the script is run without an error, it automatically saves the 17 values into a mat-file. Importantly, the room in which luminance is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated. ## Required softwares:\n\nIdeally Linux OS\nMatlab/Octave\nPsychtoolbox"
+  },
+  {
+    "objectID": "luminancemeasurement/2024-05-22/index.html#operation",
+    "href": "luminancemeasurement/2024-05-22/index.html#operation",
+    "title": "Luminance measurement and gamma table",
+    "section": "",
+    "text": "open saveReadings.m and edit the general info. If you want to customize the measurement, you may change the parameters as well.\nrun saveReadings.m (alternatively, you may call directly the function vals = saveMonitorPhotometerReadings(17, 'red'))\nthen, call the function to create gamma tables\n[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)\n\nTwo gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts.\nLink to our GitHub repo containing relevant scripts"
   },
   {
     "objectID": "leaving/2024-05-22/index.html",
@@ -124,6 +187,34 @@
     "title": "Information about processing mri data",
     "section": "",
     "text": "BIDS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "labmeeting.html",
+    "href": "labmeeting.html",
+    "title": "Information about our lab meeting",
+    "section": "",
+    "text": "Reading list\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "mri_lab/2024-05-22/index.html",
+    "href": "mri_lab/2024-05-22/index.html",
+    "title": "MRI LAB",
+    "section": "",
+    "text": "Information about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nMake sure to switch to the Linux computer (the button number 2 under the monitor)\nLogin with credentials you received\n\n\n\n\nimage\n\n\n\nOnce logged in:\nIf you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)\nCheck if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):\n\n\n\n\nimage\n\n\n\nStart MATLAB / Octave and test the trigger box with the script response_box_check.m\n\n\n\n\nimage\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent.\n\n\n\n\n\nParticipants can fill out the forms in the lobby. You can also instruct them there.\nPaperwork: …\nSnellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!"
+  },
+  {
+    "objectID": "mri_lab/2024-05-22/index.html#general-setup-information",
+    "href": "mri_lab/2024-05-22/index.html#general-setup-information",
+    "title": "MRI LAB",
+    "section": "",
+    "text": "Make sure to switch to the Linux computer (the button number 2 under the monitor)\nLogin with credentials you received\n\n\n\n\nimage\n\n\n\nOnce logged in:\nIf you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)\nCheck if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):\n\n\n\n\nimage\n\n\n\nStart MATLAB / Octave and test the trigger box with the script response_box_check.m\n\n\n\n\nimage\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent."
+  },
+  {
+    "objectID": "mri_lab/2024-05-22/index.html#experimental-protocol",
+    "href": "mri_lab/2024-05-22/index.html#experimental-protocol",
+    "title": "MRI LAB",
+    "section": "",
+    "text": "Participants can fill out the forms in the lobby. You can also instruct them there.\nPaperwork: …\nSnellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!"
   },
   {
     "objectID": "physiology/2023-10-22/index.html",
@@ -161,41 +252,6 @@
     "text": "Validation of results - Check the diagnostic plots the toolbox delivers:\n\nCheck the raw time series for artifacts/ detachments (4A)\nCheck distribution of raw physiological data (should be left-skewed, 4B), are there any indications for ceiling effects or temporary detachment (2)?\n\nCheck period used for synchronization, does it fit? (4C)\nCheck filtered time series (are there still severe artifacts?)\nCheck regressor file (3): regressors should have a value for each slice and 18 regressors if you specified RETROICOR (i.e., 6 cardiac phase regressors, 8 respiratory phase regressors, and 4 interaction terms).\nRegressors can then be added to a GLM.\n\n\nFigure 2. Artifacts in raw respiratory signal due to issues during recording with the breathing belt.\n\nFigure 3. Final output (RETROICOR regressors)\n\nFigure 4. Steps from raw data to the final regressors."
   },
   {
-    "objectID": "behavioral.html",
-    "href": "behavioral.html",
-    "title": "Information about collecting behavioural data",
-    "section": "",
-    "text": "Vision tests\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBIDS for behavioral studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Visual Neuroscience lab",
-    "section": "",
-    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n:::"
-  },
-  {
-    "objectID": "mri_lab/2024-05-22/index.html",
-    "href": "mri_lab/2024-05-22/index.html",
-    "title": "MRI LAB",
-    "section": "",
-    "text": "Information about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nMake sure to switch to the Linux computer (the button number 2 under the monitor)\nLogin with credentials you received\n\n\n\n\nimage\n\n\n\nOnce logged in:\nIf you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)\nCheck if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):\n\n\n\n\nimage\n\n\n\nStart MATLAB / Octave and test the trigger box with the script response_box_check.m\n\n\n\n\nimage\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent.\n\n\n\n\n\nParticipants can fill out the forms in the lobby. You can also instruct them there.\nPaperwork: …\nSnellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!"
-  },
-  {
-    "objectID": "mri_lab/2024-05-22/index.html#general-setup-information",
-    "href": "mri_lab/2024-05-22/index.html#general-setup-information",
-    "title": "MRI LAB",
-    "section": "",
-    "text": "Make sure to switch to the Linux computer (the button number 2 under the monitor)\nLogin with credentials you received\n\n\n\n\nimage\n\n\n\nOnce logged in:\nIf you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)\nCheck if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):\n\n\n\n\nimage\n\n\n\nStart MATLAB / Octave and test the trigger box with the script response_box_check.m\n\n\n\n\nimage\n\n\n\n8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed\nOn the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent."
-  },
-  {
-    "objectID": "mri_lab/2024-05-22/index.html#experimental-protocol",
-    "href": "mri_lab/2024-05-22/index.html#experimental-protocol",
-    "title": "MRI LAB",
-    "section": "",
-    "text": "Participants can fill out the forms in the lobby. You can also instruct them there.\nPaperwork: …\nSnellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!"
-  },
-  {
     "objectID": "behavioral/2024-05-22/index.html#visual-acuity",
     "href": "behavioral/2024-05-22/index.html#visual-acuity",
     "title": "Vision tests",
@@ -217,59 +273,10 @@
     "text": "Parameters that we use\nFrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people.\n\nacuity_task                  4-step Landolt-Cs\nunit                          VAdec (1.0+) & LogMAR(&lt;0)\nlengthOfCalibrationRuler   173.0\ndistanceInCm               230.0\nmaxDecimalAcuity         2.41\ncontrastWeber             100.0\nnTrials                       24\nrangeLimitStatus           rangeOK\ncrowding                   0\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V:\nThe first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.\n\ndistanceInCm    230.0\nthreshold        hardest level with correct response =&lt; 3"
   },
   {
-    "objectID": "luminancemeasurement/2024-05-22/index.html",
-    "href": "luminancemeasurement/2024-05-22/index.html",
-    "title": "Luminance measurement and gamma table",
-    "section": "",
-    "text": "For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in fromt of the output screen. In the worst case, a second person can hold the photometer at a constant distance. With the Script, 17 different levels of luminance for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The luminance measures are typed into the command window. When the script is run without an error, it automatically saves the 17 values into a mat-file. Importantly, the room in which luminance is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated. ## Required softwares:\n\nIdeally Linux OS\nMatlab/Octave\nPsychtoolbox\n\n\n\n\n\nopen saveReadings.m and edit the general info. If you want to customize the measurement, you may change the parameters as well.\nrun saveReadings.m (alternatively, you may call directly the function vals = saveMonitorPhotometerReadings(17, 'red'))\nthen, call the function to create gamma tables\n[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)\n\nTwo gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts.\nLink to our GitHub repo containing relevant scripts"
-  },
-  {
-    "objectID": "luminancemeasurement/2024-05-22/index.html#general-info",
-    "href": "luminancemeasurement/2024-05-22/index.html#general-info",
-    "title": "Luminance measurement and gamma table",
-    "section": "",
-    "text": "For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in fromt of the output screen. In the worst case, a second person can hold the photometer at a constant distance. With the Script, 17 different levels of luminance for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The luminance measures are typed into the command window. When the script is run without an error, it automatically saves the 17 values into a mat-file. Importantly, the room in which luminance is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated. ## Required softwares:\n\nIdeally Linux OS\nMatlab/Octave\nPsychtoolbox"
-  },
-  {
-    "objectID": "luminancemeasurement/2024-05-22/index.html#operation",
-    "href": "luminancemeasurement/2024-05-22/index.html#operation",
-    "title": "Luminance measurement and gamma table",
-    "section": "",
-    "text": "open saveReadings.m and edit the general info. If you want to customize the measurement, you may change the parameters as well.\nrun saveReadings.m (alternatively, you may call directly the function vals = saveMonitorPhotometerReadings(17, 'red'))\nthen, call the function to create gamma tables\n[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)\n\nTwo gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts.\nLink to our GitHub repo containing relevant scripts"
-  },
-  {
     "objectID": "luminancemeasurement.html",
     "href": "luminancemeasurement.html",
     "title": "Information about how to measure luminance on monitors",
     "section": "",
     "text": "Luminance measurement and gamma table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html",
-    "href": "behavioral/2024-05-23/index.html",
-    "title": "BIDS for behavioral studies",
-    "section": "",
-    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0\n\n\n\nbids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub\n\n\n\nYou may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\n\ncreate_events_tsv_json_full.m\n\n\n\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\n\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv\nLink to our GitHub repo containing relevant scripts"
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html#resources",
-    "href": "behavioral/2024-05-23/index.html#resources",
-    "title": "BIDS for behavioral studies",
-    "section": "",
-    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0"
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html#software",
-    "href": "behavioral/2024-05-23/index.html#software",
-    "title": "BIDS for behavioral studies",
-    "section": "",
-    "text": "bids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub"
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html#how-to-implement",
-    "href": "behavioral/2024-05-23/index.html#how-to-implement",
-    "title": "BIDS for behavioral studies",
-    "section": "",
-    "text": "You may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\n\ncreate_events_tsv_json_full.m\n\n\n\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\n\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv\nLink to our GitHub repo containing relevant scripts"
   }
 ]

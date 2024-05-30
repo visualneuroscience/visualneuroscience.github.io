@@ -1,11 +1,5 @@
 [
   {
-    "listing": "/students.html",
-    "items": [
-      "/students/2024-05-22/index.html"
-    ]
-  },
-  {
     "listing": "/physiology.html",
     "items": [
       "/physiology/2023-10-22/index.html"
@@ -18,15 +12,23 @@
     ]
   },
   {
-    "listing": "/labmeeting.html",
+    "listing": "/behavioral.html",
     "items": [
-      "/labmeeting/2024-05-22/index.html"
+      "/behavioral/2024-05-23/index.html",
+      "/behavioral/2024-05-22/index.html"
     ]
   },
   {
     "listing": "/mri_lab.html",
     "items": [
+      "/mri_lab/2024-05-30/index.html",
       "/mri_lab/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/students.html",
+    "items": [
+      "/students/2024-05-22/index.html"
     ]
   },
   {
@@ -36,10 +38,9 @@
     ]
   },
   {
-    "listing": "/behavioral.html",
+    "listing": "/labmeeting.html",
     "items": [
-      "/behavioral/2024-05-22/index.html",
-      "/behavioral/2024-05-23/index.html"
+      "/labmeeting/2024-05-22/index.html"
     ]
   },
   {

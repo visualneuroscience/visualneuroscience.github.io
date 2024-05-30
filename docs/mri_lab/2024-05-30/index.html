@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Visual Neuroscience Lab - Information about how to measure luminance on monitors</title>
+<title>Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,65 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -137,7 +77,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
   </div>
@@ -148,39 +88,39 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./behavioral.html"> 
+    <a class="nav-link" href="../../behavioral.html"> 
 <span class="menu-text">Behavioral</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./labmeeting.html"> 
+    <a class="nav-link" href="../../labmeeting.html"> 
 <span class="menu-text">Labmeeting</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./leaving.html"> 
+    <a class="nav-link" href="../../leaving.html"> 
 <span class="menu-text">Leaving</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri.html"> 
+    <a class="nav-link" href="../../mri.html"> 
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri_lab.html"> 
+    <a class="nav-link" href="../../mri_lab.html"> 
 <span class="menu-text">MRI lab</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./physiology.html"> 
+    <a class="nav-link" href="../../physiology.html"> 
 <span class="menu-text">Physiology</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./students.html"> 
+    <a class="nav-link" href="../../students.html"> 
 <span class="menu-text">Students</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./luminancemeasurement.html" aria-current="page"> 
+    <a class="nav-link" href="../../luminancemeasurement.html"> 
 <span class="menu-text">Luminance Measurement</span></a>
   </li>  
 </ul>
@@ -195,61 +135,211 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#update-to-the-mri-lab-setup" id="toc-update-to-the-mri-lab-setup" class="nav-link active" data-scroll-target="#update-to-the-mri-lab-setup">Update to the MRI lab setup</a>
+  <ul class="collapse">
+  <li><a href="#general-setup-information" id="toc-general-setup-information" class="nav-link" data-scroll-target="#general-setup-information">General setup information:</a>
+  <ul class="collapse">
+  <li><a href="#starting" id="toc-starting" class="nav-link" data-scroll-target="#starting">Starting</a></li>
+  <li><a href="#plug-peripherals-in" id="toc-plug-peripherals-in" class="nav-link" data-scroll-target="#plug-peripherals-in">Plug peripherals in</a></li>
+  <li><a href="#extend-mirror-display" id="toc-extend-mirror-display" class="nav-link" data-scroll-target="#extend-mirror-display">Extend/ mirror display</a></li>
+  <li><a href="#kvm-switcher" id="toc-kvm-switcher" class="nav-link" data-scroll-target="#kvm-switcher">KVM switcher</a></li>
+  <li><a href="#trigger-box" id="toc-trigger-box" class="nav-link" data-scroll-target="#trigger-box">Trigger box</a></li>
+  <li><a href="#experimental-protocol" id="toc-experimental-protocol" class="nav-link" data-scroll-target="#experimental-protocol">Experimental Protocol</a></li>
+  <li><a href="#psychopy" id="toc-psychopy" class="nav-link" data-scroll-target="#psychopy">Psychopy</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Information about how to measure luminance on monitors</h1>
-</div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<section id="update-to-the-mri-lab-setup" class="level1">
+<h1>Update to the MRI lab setup</h1>
+<ul>
+<li><p>The MRI lab has had some upgrades in 2024 including:</p>
+<ol type="1">
+<li><p>New stimulation PC</p></li>
+<li><p>Stimulation goggles</p></li>
+</ol></li>
+<li><p>This document details some information about the new setup</p></li>
+</ul>
+<section id="general-setup-information" class="level2">
+<h2 class="anchored" data-anchor-id="general-setup-information">General setup information:</h2>
+<section id="starting" class="level3">
+<h3 class="anchored" data-anchor-id="starting">Starting</h3>
+<ol type="1">
+<li><p>Turn on the stimulus presentation PC</p></li>
+<li><p>Turn on the eyetracking PC (if using the goggles or eyetracking)</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>Even if not using the eyetracker but using the goggles it is useful to use the eyetracker to be able to ensure that the goggles are aligned properly with the participant</p>
+</blockquote>
+<ul>
+<li>Login to the stimulus pc and/or the eyetracker pc with the credentials provided</li>
+</ul>
+<blockquote class="blockquote">
+<p>When logging into the stimulus PC it might be that you actually don’t see anything on the screen yet if there are other screens connected to the stimulus PC, therefore the sequence of keystrokes when starting the PC is:</p>
+</blockquote>
+<pre><code>    1. Enter decryption password 
 
+    2. Press enter 
     
-  
+    3. Press enter again (this selects the top-most user)
     
-  </div>
-  
-
-
-</header>
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1717078216485" data-listing-reading-time-sort="2" data-listing-word-count-sort="276">
-<a href="./luminancemeasurement/2024-05-22/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Luminance measurement and gamma table
-</h5>
-<div class="card-text listing-description">
-For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display…
+    4. Enter the user password required from the technician (or someone else in our lab)</code></pre>
+</section>
+<section id="plug-peripherals-in" class="level3">
+<h3 class="anchored" data-anchor-id="plug-peripherals-in">Plug peripherals in</h3>
+<ol type="1">
+<li>If you are using the goggles then make sure that the HDMI cables are first plugged in</li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./goggle_box.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Goggles HDMI inputs</figcaption>
+</figure>
 </div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+</center>
+<ul>
+<li>The right goggle’s hdmi cable (labelled with tape) should be in the top most position and the left in the bottom position</li>
+</ul>
+<ol start="2" type="1">
+<li>The goggles can now be plugged in</li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./goggle_unplug.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>Goggles plug unplugged</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./goggle_plug.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>Goggles plug plugged in</figcaption>
+</figure>
+</div>
+</center>
+<ol start="3" type="1">
+<li><p>The goggles need to be additionally turned on inside the scanner room (double check with technician that this is the case)</p></li>
+<li><p>If using the eyetracker function of the goggles plug in the cable to link the eyetracker signal to the PC</p></li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./eyetracker_box.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>The light on the eyetracker should be illuminated red</figcaption>
+</figure>
+</div>
+</center>
+<ol start="5" type="1">
+<li>Start ViewPoint and you should see something other than ‘no signal’</li>
+</ol>
+<ul>
+<li>For more information visit the <a href="http://www.arringtonresearch.com/viewpoint.html">arringtonresearch</a> website</li>
+</ul>
+</section>
+<section id="extend-mirror-display" class="level3">
+<h3 class="anchored" data-anchor-id="extend-mirror-display">Extend/ mirror display</h3>
+<ul>
+<li>PopOS (the stimulation PC’s operating system) might be a bit funky when it comes to changing the display settings when doing so with the settings menu in PopOS</li>
+</ul>
+<blockquote class="blockquote">
+<p>When opening the display settings do not click apply but instead choose a different settings option e.g.&nbsp;power/ sound/ notficiations etc. and then close the settings menu</p>
+</blockquote>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./pop_os_eg.png" class="img-fluid figure-img"></p>
+<figcaption>PopOS example settings window, always make sure to close this window and not apply new display settings</figcaption>
+</figure>
+</div>
+</center>
+<ul>
+<li>Use shortcut win + p to change whether to extend or mirror the screens, you can hit win + p twice and this will change to mirror mode</li>
+</ul>
+</section>
+<section id="kvm-switcher" class="level3">
+<h3 class="anchored" data-anchor-id="kvm-switcher">KVM switcher</h3>
+<ul>
+<li>The KVM switcher is used to switch between devices and for the goggle + stimulation PC setup can be used to switch between either the eyetracker PC or stimulus PC</li>
+</ul>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./KVM_switch.png" class="img-fluid figure-img"></p>
+<figcaption>KVM switcher, button 1 = eyetracker pc, 2 = stimulus pc</figcaption>
+</figure>
+</div>
+</center>
+</section>
+<section id="trigger-box" class="level3">
+<h3 class="anchored" data-anchor-id="trigger-box">Trigger box</h3>
+<ul>
+<li><p>Sometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC</p></li>
+<li><p>If this is the case the USB light on the box will be flashing (indicating that the USB is not connected)</p></li>
+<li><p>Locate at the back of the box the corresponding USB input and plug it in</p></li>
+</ul>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tigger_box_back.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Back of the trigger box</figcaption>
+</figure>
+</div>
+</center>
+<ul>
+<li><p>The USB light should stop flashing</p></li>
+<li><p>Test the button box inside the scanner</p></li>
+</ul>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./trigger_box_front.png" class="img-fluid figure-img"></p>
+<figcaption>Trigger box front</figcaption>
+</figure>
+</div>
+</center>
+<ul>
+<li>8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed</li>
+<li>On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent</li>
+</ul>
+</section>
+<section id="experimental-protocol" class="level3">
+<h3 class="anchored" data-anchor-id="experimental-protocol">Experimental Protocol</h3>
+<p><span class="smallcaps"><font size="+2">Before entering the scanner room always make sure you are MR safe and sign the respective forms</font></span></p>
+<ul>
+<li>Ask the participant to sign the forms while doing so ensure that the button box inside the scanner works and double check the view on the goggles that everything looks okay</li>
+</ul>
+</section>
+<section id="psychopy" class="level3">
+<h3 class="anchored" data-anchor-id="psychopy">Psychopy</h3>
+<ul>
+<li><p>Start psychopy by opening the terminal and typing Psychopy-2024</p></li>
+<li><p>Usually psychopy starts by asking to open a .psyexp file so just open the one you have or if using the coder only:</p>
+<ol type="1">
+<li><p>Open a .psyexp file that doesn’t apply to you</p></li>
+<li><p>quit builder view and do not save</p></li>
+</ol></li>
+<li><p>Now you can open a .py file</p></li>
+</ul>
+<p>Alternatively start psychopy with the <code>-c</code> flag</p>
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,0 +1,154 @@
+# Update to the MRI lab setup 
+
+- The MRI lab has had some upgrades in 2024 including:
+
+    1. New stimulation PC
+
+    2. Stimulation goggles 
+
+- This document details some information about the new setup 
+
+## General setup information: 
+
+### Starting
+
+1. Turn on the stimulus presentation PC
+
+2. Turn on the eyetracking PC (if using the goggles or eyetracking)
+
+> Even if not using the eyetracker but using the goggles it is useful to use the eyetracker to be able to ensure that the goggles are aligned properly with the participant
+
+- Login to the stimulus pc and/or the eyetracker pc with the credentials provided 
+
+> When logging into the stimulus PC it might be that you actually don't see anything on the screen yet if there are other screens connected to the stimulus PC, therefore the sequence of keystrokes when starting the PC is: 
+
+        1. Enter decryption password 
+    
+        2. Press enter 
+        
+        3. Press enter again (this selects the top-most user)
+        
+        4. Enter the user password required from the technician (or someone else in our lab)
+
+### Plug peripherals in 
+
+1. If you are using the goggles then make sure that the HDMI cables are first plugged in 
+
+
+<center>
+
+![Goggles HDMI inputs](./goggle_box.png){width=75%}
+
+</center>
+
+- The right goggle's hdmi cable (labelled with tape) should be in the top most position and the left in the bottom position 
+
+2. The goggles can now be plugged in
+
+
+<center>
+
+![Goggles plug unplugged](./goggle_unplug.jpg){width=30%}
+
+
+![Goggles plug plugged in](./goggle_plug.jpg){width=30%}
+
+</center>
+
+
+3. The goggles need to be additionally turned on inside the scanner room (double check with technician that this is the case)
+
+
+4. If using the eyetracker function of the goggles plug in the cable to link the eyetracker signal to the PC
+
+<center>
+
+![The light on the eyetracker should be illuminated red](./eyetracker_box.jpg){width=30%}
+
+</center>
+
+5. Start ViewPoint and you should see something other than 'no signal'
+
+- For more information visit the [arringtonresearch](http://www.arringtonresearch.com/viewpoint.html) website
+
+
+### Extend/ mirror display  
+
+- PopOS (the stimulation PC's operating system) might be a bit funky when it comes to changing the display settings when doing so with the settings menu in PopOS
+
+> When opening the display settings do not click apply but instead choose a different settings option e.g. power/ sound/ notficiations etc. and then close the settings menu 
+
+<center>
+
+![PopOS example settings window, always make sure to close this window and not apply new display settings](./pop_os_eg.png)
+
+</center>
+
+- Use shortcut win + p to change whether to extend or mirror the screens, you can hit win + p twice and this will change to mirror mode
+
+
+
+### KVM switcher 
+
+- The KVM switcher is used to switch between devices and for the goggle + stimulation PC setup can be used to switch between either the eyetracker PC or stimulus PC 
+
+
+<center>
+
+![KVM switcher, button 1 = eyetracker pc, 2 = stimulus pc](./KVM_switch.png)
+
+</center>
+
+
+### Trigger box 
+
+
+- Sometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC
+
+- If this is the case the USB light on the box will be flashing (indicating that the USB is not connected)
+
+- Locate at the back of the box the corresponding USB input and plug it in 
+
+<center>
+
+![Back of the trigger box](./tigger_box_back.png){width=75%}
+
+</center>
+
+- The USB light should stop flashing 
+
+- Test the button box inside the scanner 
+
+<center>
+
+![Trigger box front](./trigger_box_front.png)
+
+</center>
+
+- 8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed
+- On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent 
+
+
+### Experimental Protocol 
+
+<span style="font-variant:small-caps;"><font size="+2">Before entering the scanner room always make sure you are MR safe and sign the respective forms</font></span>
+
+- Ask the participant to sign the forms while doing so ensure that the button box inside the scanner works and double check the view on the goggles that everything looks okay
+
+
+
+### Psychopy 
+
+- Start psychopy by opening the terminal and typing Psychopy-2024 
+
+- Usually psychopy starts by asking to open a .psyexp file so just open the one you have or if using the coder only: 
+
+    1. Open a .psyexp file that doesn't apply to you 
+
+    2. quit builder view and do not save
+
+- Now you can open a .py file 
+
+Alternatively start psychopy with the `-c` flag
+
+
