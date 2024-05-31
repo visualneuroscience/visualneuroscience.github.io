@@ -151,4 +151,8 @@
 
 Alternatively start psychopy with the `-c` flag
 
+<center> 
 
+<font size="-2">adam.c</font>
+
+</center>
