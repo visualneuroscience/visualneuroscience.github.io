@@ -5,9 +5,6 @@ format: html
 editor: visual
 ---
 
-
-# Update to the MRI lab setup 
-
 - The MRI lab has had some upgrades in 2024 including:
 
     1. New stimulation PC
