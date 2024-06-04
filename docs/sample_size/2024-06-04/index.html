@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="CY">
 
-<title>Visual Neuroscience Lab</title>
+<title>Visual Neuroscience Lab - Calculating a priori sample size using G Power</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -143,10 +173,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mri-lab" id="toc-mri-lab" class="nav-link active" data-scroll-target="#mri-lab">MRI LAB</a>
+  <li><a href="#power-analysis" id="toc-power-analysis" class="nav-link active" data-scroll-target="#power-analysis">Power analysis</a></li>
+  <li><a href="#gpower" id="toc-gpower" class="nav-link" data-scroll-target="#gpower">G*Power</a></li>
+  <li><a href="#how-to-calculate-a-priori-sample-size" id="toc-how-to-calculate-a-priori-sample-size" class="nav-link" data-scroll-target="#how-to-calculate-a-priori-sample-size">How to calculate <em>a priori</em> sample size</a>
   <ul class="collapse">
-  <li><a href="#general-setup-information" id="toc-general-setup-information" class="nav-link" data-scroll-target="#general-setup-information">General setup information:</a></li>
-  <li><a href="#experimental-protocol" id="toc-experimental-protocol" class="nav-link" data-scroll-target="#experimental-protocol">Experimental Protocol</a></li>
+  <li><a href="#calculating-a-priori-sample-size-for-a-repeated-measures-anova" id="toc-calculating-a-priori-sample-size-for-a-repeated-measures-anova" class="nav-link" data-scroll-target="#calculating-a-priori-sample-size-for-a-repeated-measures-anova">Calculating <em>a priori</em> sample size for a repeated measures ANOVA</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -154,56 +185,101 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Calculating a priori sample size using G Power</h1>
+</div>
 
 
 
-<section id="mri-lab" class="level1">
-<h1>MRI LAB</h1>
-<p>Information about running experiments in the MRI lab (before the new computer arrived!)</p>
-<section id="general-setup-information" class="level2">
-<h2 class="anchored" data-anchor-id="general-setup-information">General setup information:</h2>
-<ul>
-<li>Make sure to switch to the Linux computer (the button number 2 under the monitor)</li>
-<li>Login with credentials you received</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./316896390-c2262ad2-04dc-48b0-97cb-4ab0d373b50c.png" class="img-fluid figure-img"></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-<ul>
-<li>Once logged in:</li>
-<li>If you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)</li>
-<li>Check if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./316896326-d1109ced-7fe1-482c-9d28-8d54a82cb805.png" class="img-fluid figure-img"></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-<ul>
-<li>Start MATLAB / Octave and test the trigger box with the script response_box_check.m</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./316895640-7f4fa294-89fc-4fe1-a430-589a4f116768.png" class="img-fluid figure-img"></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-<ul>
-<li>8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed</li>
-<li>On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent.</li>
-</ul>
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>CY </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="power-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="power-analysis">Power analysis</h2>
+<p>Power analysis is a statistical technique that helps scientists determine the sample size required to detect an effect of a given size with a desired degree of certainty. It helps researchers understand the likelihood that their study will detect a meaningful difference or relationship (if one exists) between groups or variables being studied. By performing a power analysis before conducting an experiment, scientists can ensure that the study is neither too small (which would result in a lack of statistical power to detect an effect, leading to a possible Type II error) nor too large (which could waste resources and potentially expose participants to unnecessary procedures). It’s a crucial step in the research design process that helps in making informed decisions and in enhancing the credibility and replicability of scientific findings.</p>
 </section>
-<section id="experimental-protocol" class="level2">
-<h2 class="anchored" data-anchor-id="experimental-protocol">Experimental Protocol</h2>
+<section id="gpower" class="level2">
+<h2 class="anchored" data-anchor-id="gpower">G*Power</h2>
+<p>G<em>Power is a very popular and free software program that researchers use to conduct power analysis. It was developed by Franz Faul at the Universität Kiel, Germany, and is frequently updated and improved upon. The software is designed to help researchers with a variety of statistical tests, including t-tests, F-tests, chi-squared tests, z-tests, and some exact tests.<br>
+<br>
+G</em>Power provides a flexible tool for calculating the required sample size for a study based on the effect size, significance level, and power – which refers to the probability of correctly rejecting a false null hypothesis. Researchers can also use G*Power to calculate the power of their study given the sample size and effect size.<br>
+<br>
+The program is user-friendly, allowing both beginners and experienced users to carry out a range of power analyses that might otherwise be complex and time-consuming. Its broad applicability across various statistical analyses makes it a valuable tool in the research planning process, helping to ensure that studies are properly designed to yield valid and reliable results.</p>
+<p>See <a href="https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower">official page</a> of G*Power</p>
+</section>
+<section id="how-to-calculate-a-priori-sample-size" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-calculate-a-priori-sample-size">How to calculate <em>a priori</em> sample size</h2>
+<p>To calculate an <em>a priori</em> sample size using G*Power, you need to follow several steps. The specific steps might change slightly depending on the statistical test you plan to use, but the overall process is similar:</p>
+<ol type="1">
+<li><p>Download and Open G*Power</p></li>
+<li><p>Choose the Test</p>
+<p>In the G*Power interface, select the statistical test that you intend to use from the ‘Test family’ (e.g., t tests, F tests, etc.) and the ‘Statistical test’ (e.g., ANOVA, linear multiple regression, etc.) menus according to the hypothesis of your study.</p></li>
+<li><p>Determine the Type of Power Analysis</p>
+<p>Since you want to calculate the sample size, you should choose ‘A priori: Compute required sample size - given α, power, and effect size’.</p></li>
+<li><p>Input Parameters</p>
 <ul>
-<li>Participants can fill out the forms in the lobby. You can also instruct them there.</li>
-<li>Paperwork: …</li>
-<li>Snellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!</li>
-</ul>
+<li><p><strong>Effect Size</strong>: Estimate the effect size for your desired test, which indicates the magnitude of the relationship or difference that you expect to find. You can use previous literature or pilot studies to estimate this.</p></li>
+<li><p><strong>α Error Probability (Significance Level)</strong>: Typically, this is set at 0.05.</p></li>
+<li><p><strong>Power (1-β Error Probability)</strong>: Commonly set at 0.80, indicating an 80% chance of detecting an effect if there really is one.</p></li>
+<li><p><strong>Allocation Ratio (for comparative studies)</strong>: This is the ratio of the number of participants in one group to the number of participants in the other group(s). For equal group sizes, this is set to 1.</p></li>
+</ul></li>
+<li><p>Calculate</p>
+<p>Once all parameters are entered, click on the ‘Calculate’ button. G*Power will display the required sample size for your study based on the input values.</p></li>
+<li><p>Review Output</p>
+<p>G*Power will provide the calculated sample size along with other details related to the power analysis. Carefully review this output to determine if it is suitable for the needs of your study.</p></li>
+</ol>
+<p>Keep in mind that determining these parameters, especially the effect size, can sometimes be the most challenging part of a power analysis. Consult with a statistician, your team members or relevant literature if you are unsure about these inputs. Finally, remember that power analysis is an important part of designing your study, but it should be combined with practical considerations like resource availability, ethical constraints, and methodological limitations.</p>
+<section id="calculating-a-priori-sample-size-for-a-repeated-measures-anova" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-a-priori-sample-size-for-a-repeated-measures-anova">Calculating <em>a priori</em> sample size for a repeated measures ANOVA</h3>
+<p>As an example, let’s say we have 3 different stimulus types. In each session, we will present one type of stimuli at 4 different contrast levels. The task will be the same throughout the experiment. Our aim is to determine the effect of contrast.</p>
+<p>In such a case, we need using a repeated measures ANOVA (or 2-way mixed ANOVA or split-plot ANOVA). Calculating an <em>a priori</em> sample size for a mixed-design ANOVA in GPower can be a bit tricky, as <em>G</em>Power does not directly provide a pre-built module for mixed ANOVAs with both within- (repeated measures) and between-subjects factors. However, you can still approximate the necessary calculations by considering the most powerful test within your design, which is typically the repeated measures part if the effect sizes are similar. Here is a general guide on how to do this:</p>
+<ol type="1">
+<li><p>Open G*Power</p></li>
+<li><p>Select the Statistical Test</p>
+<ul>
+<li><p>Choose ‘F tests’ as the test family.</p></li>
+<li><p>Choose ‘ANOVA: Repeated measures, within factors’.</p>
+<p>(You can also choose ‘ANOVA: Repeated measures, between factors’ depending on which effect you expect to be larger or more important to your hypothesis testing. However, a conservative approach is often to consider the within-effects when uncertain.)</p></li>
+</ul></li>
+<li><p>Choose the Type of Power Analysis</p>
+<ul>
+<li>Select ‘A priori: Compute required sample size - given α, power, and effect size’.</li>
+</ul></li>
+<li><p>Input the Parameters</p>
+<ul>
+<li><p><strong>Effect Size</strong>: We need to determine the effect size with direct method to count the effect of repeated measure. To do that, click on ‘Determine =)&gt;’. On the pop-up window, select ‘Direct’. Enter eta squared value. Click ‘Calculate and transfer to main window’.</p>
+<p>Eta squared (<span class="math inline">\(\eta^{2}\)</span>) is the effect size that indicates the total variance in testing explained by the within-subject variable (in our case, different contrast levels). Approximate partial eta squared conventions are small = 0.02, medium = 0.06, large = 0.14.</p></li>
+<li><p><strong>α Error Probability</strong>: The significance level is typically set at 0.05.</p></li>
+<li><p><strong>Power</strong>: Set this commonly to 0.80, indicating an 80% probability of correctly rejecting the null hypothesis.</p></li>
+<li><p><strong>Number of Groups</strong>: For the between-subjects factor, input the number of levels or conditions. In our case, it is the number of different stimuli.</p></li>
+<li><p><strong>Number of Measurements</strong>: For the within-subjects factor, input the number of levels or conditions. In our case, it is the number of different contrast levels.</p></li>
+<li><p><strong>Correlation among Repeated Measures</strong>: This is determined by the expected correlation between the measures at different levels of contrast. If you don’t have an estimate, using a default value like 0.5 can be a starting point.</p></li>
+<li><p><strong>Nonsphericity Correction ε</strong>: If you have an estimate for this, input it here; otherwise, you can keep it at 1 or use the default provided by G*Power.</p></li>
+</ul></li>
+<li><p>Calculate</p></li>
+<li><p>Review Results</p></li>
+</ol>
+<center>
+<p><img src="./gpower_example.png" class="img-fluid"></p>
+</center>
+<p>Please note that this approach is an approximation, as it does not fully represent the complexity of a mixed-design ANOVA. It essentially treats the between-subjects factor as another within-subjects level, which may not be totally accurate but can give you a ballpark figure for your sample size. If possible, consult with a statistician to ensure that the calculation is correctly tailored to your study’s specific needs and to take into account other complexities that G*Power may not directly address for mixed designs.</p>
+<p>See another example on <a href="https://www.youtube.com/watch?v=NRha9ZEYfI0">YouTube</a></p>
 
 
 </section>

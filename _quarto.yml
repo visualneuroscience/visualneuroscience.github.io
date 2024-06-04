@@ -24,6 +24,8 @@ website:
         text: Students
       - href: luminancemeasurement.qmd
         text: Luminance Measurement
+      - href: sample_size.qmd
+        text: Sample size calculation
 
   page-footer:
     background: light
