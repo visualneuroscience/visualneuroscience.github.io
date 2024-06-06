@@ -26,7 +26,7 @@ website:
         text: Luminance Measurement
       - href: sample_size.qmd
         text: Sample size calculation
-
+  #DO NOT EDIT BELOW THIS LINE
   page-footer:
     background: light
     right:
