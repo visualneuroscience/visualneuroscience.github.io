@@ -1,0 +1,57 @@
+/*-- scss:rules --*/
+.reveal .box {
+  width: 100% auto;
+  margin-bottom: 15px;
+  margin-top: 1ex;
+  line-height: 1.2;
+  padding: 0;
+  text-align: center;
+  overflow: auto;
+  text-align: left;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  box-shadow: 8px 8px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.reveal .box .title,
+.reveal .box .content {
+  padding-left: 3%;
+  padding-right: 3%;
+  border: #000 1px solid;
+}
+
+.reveal .box .title {
+  padding-top: 0.4ex;
+  padding-bottom: 0.5ex;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000;
+  background-color: #918e8e;
+  border-bottom: none;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+}
+
+.reveal .box .content {
+  padding-top: 0.8ex;
+  padding-bottom: 1ex;
+  color: #000000;
+  text-shadow: none;
+  background-color: #ffffff;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.reveal .vivid .title {
+  background-color: #d1500f;
+}
+
+.reveal .vivid .content {
+  background-color: #f3d86d;
+}
+
+/*
+.panel-tabset-tabby a {
+  color: #ffffff;
+  background-color: #918e8e;
+}
+*/

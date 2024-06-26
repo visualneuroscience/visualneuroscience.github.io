@@ -25,6 +25,12 @@
     ]
   },
   {
+    "listing": "/contribute.html",
+    "items": [
+      "/contribute/index.html"
+    ]
+  },
+  {
     "listing": "/students.html",
     "items": [
       "/students/2024-05-22/index.html"

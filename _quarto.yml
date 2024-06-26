@@ -26,6 +26,8 @@ website:
         text: Luminance Measurement
       - href: sample_size.qmd
         text: Sample size calculation
+      - href: contribute.qmd
+        text: how to contribute to the lab website
   #DO NOT EDIT BELOW THIS LINE
   page-footer:
     background: light
