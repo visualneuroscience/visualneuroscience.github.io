@@ -1,14 +1,8 @@
 [
   {
-    "listing": "/physiology.html",
+    "listing": "/leaving.html",
     "items": [
-      "/physiology/2023-10-22/index.html"
-    ]
-  },
-  {
-    "listing": "/labmeeting.html",
-    "items": [
-      "/labmeeting/2024-05-22/index.html"
+      "/leaving/2024-05-22/index.html"
     ]
   },
   {
@@ -18,10 +12,41 @@
     ]
   },
   {
+    "listing": "/luminancemeasurement.html",
+    "items": [
+      "/luminancemeasurement/2024-05-22/index.html"
+    ]
+  },
+  {
     "listing": "/mri_lab.html",
     "items": [
-      "/mri_lab/2024-05-30/index.html",
-      "/mri_lab/2024-05-22/index.html"
+      "/mri_lab/2024-05-22/index.html",
+      "/mri_lab/2024-05-30/index.html"
+    ]
+  },
+  {
+    "listing": "/members.html",
+    "items": [
+      "/members/server/index.html"
+    ]
+  },
+  {
+    "listing": "/labmeeting.html",
+    "items": [
+      "/labmeeting/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/behavioral.html",
+    "items": [
+      "/behavioral/2024-05-22/index.html",
+      "/behavioral/2024-05-23/index.html"
+    ]
+  },
+  {
+    "listing": "/sample_size.html",
+    "items": [
+      "/sample_size/2024-06-04/index.html"
     ]
   },
   {
@@ -37,28 +62,9 @@
     ]
   },
   {
-    "listing": "/behavioral.html",
+    "listing": "/physiology.html",
     "items": [
-      "/behavioral/2024-05-23/index.html",
-      "/behavioral/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/leaving.html",
-    "items": [
-      "/leaving/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/sample_size.html",
-    "items": [
-      "/sample_size/2024-06-04/index.html"
-    ]
-  },
-  {
-    "listing": "/luminancemeasurement.html",
-    "items": [
-      "/luminancemeasurement/2024-05-22/index.html"
+      "/physiology/2023-10-22/index.html"
     ]
   }
 ]
