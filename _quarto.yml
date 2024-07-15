@@ -28,6 +28,8 @@ website:
         text: Sample size calculation
       - href: contribute.qmd
         text: how to contribute to the lab website
+      - href: members.qmd
+        text: members only
   #DO NOT EDIT BELOW THIS LINE
   page-footer:
     background: light
