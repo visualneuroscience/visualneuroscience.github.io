@@ -1,0 +1,18 @@
+---
+title: "Server access information"
+author: "NZ"
+format: html
+editor: visual
+---
+
+# X2go
+
+![](images/clipboard-2910869127.png)
+
+<https://cloud.uni-graz.at/index.php/f/220686851>
+
+# Neurodesktop
+
+\[tba\]
+
+# 
