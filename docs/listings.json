@@ -6,34 +6,28 @@
     ]
   },
   {
-    "listing": "/mri.html",
+    "listing": "/physiology.html",
     "items": [
-      "/mri/2024-05-22/index.html"
+      "/physiology/2023-10-22/index.html"
     ]
   },
   {
-    "listing": "/luminancemeasurement.html",
+    "listing": "/students.html",
     "items": [
-      "/luminancemeasurement/2024-05-22/index.html"
+      "/students/2024-05-22/index.html"
     ]
   },
   {
-    "listing": "/mri_lab.html",
+    "listing": "/contribute.html",
     "items": [
-      "/mri_lab/2024-05-22/index.html",
-      "/mri_lab/2024-05-30/index.html"
+      "/contribute/rstudio/index.html",
+      "/contribute/index.html"
     ]
   },
   {
-    "listing": "/members.html",
+    "listing": "/sample_size.html",
     "items": [
-      "/members/server/index.html"
-    ]
-  },
-  {
-    "listing": "/labmeeting.html",
-    "items": [
-      "/labmeeting/2024-05-22/index.html"
+      "/sample_size/2024-06-04/index.html"
     ]
   },
   {
@@ -44,27 +38,34 @@
     ]
   },
   {
-    "listing": "/sample_size.html",
+    "listing": "/labmeeting.html",
     "items": [
-      "/sample_size/2024-06-04/index.html"
+      "/labmeeting/2024-05-22/index.html"
     ]
   },
   {
-    "listing": "/contribute.html",
+    "listing": "/members.html",
     "items": [
-      "/contribute/index.html"
+      "/members/server/index.html"
     ]
   },
   {
-    "listing": "/students.html",
+    "listing": "/mri_lab.html",
     "items": [
-      "/students/2024-05-22/index.html"
+      "/mri_lab/2024-05-22/index.html",
+      "/mri_lab/2024-05-30/index.html"
     ]
   },
   {
-    "listing": "/physiology.html",
+    "listing": "/luminancemeasurement.html",
     "items": [
-      "/physiology/2023-10-22/index.html"
+      "/luminancemeasurement/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/mri.html",
+    "items": [
+      "/mri/2024-05-22/index.html"
     ]
   }
 ]

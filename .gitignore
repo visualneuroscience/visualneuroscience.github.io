@@ -1,3 +1,5 @@
 /.quarto/
 **/desktop.ini
 .Rproj.user
+.Rhistory
+visualneuroscience.github.io.Rproj
