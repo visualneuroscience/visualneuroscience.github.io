@@ -108,14 +108,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../mri_lab.html"> 
-<span class="menu-text">MRI lab</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../physiology.html"> 
-<span class="menu-text">Physiology</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../students.html"> 
 <span class="menu-text">Students</span></a>
   </li>  
@@ -151,10 +143,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mri-lab" id="toc-mri-lab" class="nav-link active" data-scroll-target="#mri-lab">MRI LAB</a>
+  <li><a href="#creating-physiology-regressors-using-the-physio-toolbox" id="toc-creating-physiology-regressors-using-the-physio-toolbox" class="nav-link active" data-scroll-target="#creating-physiology-regressors-using-the-physio-toolbox">Creating physiology regressors using the PhysIO toolbox</a>
   <ul class="collapse">
-  <li><a href="#general-setup-information" id="toc-general-setup-information" class="nav-link" data-scroll-target="#general-setup-information">General setup information:</a></li>
-  <li><a href="#experimental-protocol" id="toc-experimental-protocol" class="nav-link" data-scroll-target="#experimental-protocol">Experimental Protocol</a></li>
+  <li><a href="#acquistion-of-log-files" id="toc-acquistion-of-log-files" class="nav-link" data-scroll-target="#acquistion-of-log-files"><em>Acquistion of log-files:</em></a>
+  <ul class="collapse">
+  <li><a href="#physiology-logging" id="toc-physiology-logging" class="nav-link" data-scroll-target="#physiology-logging"><em>Physiology logging:</em></a></li>
+  </ul></li>
+  <li><a href="#required" id="toc-required" class="nav-link" data-scroll-target="#required"><em>Required:</em></a></li>
+  <li><a href="#before-running-the-script" id="toc-before-running-the-script" class="nav-link" data-scroll-target="#before-running-the-script"><em>Before running the script:</em></a></li>
+  <li><a href="#after-running-the-script" id="toc-after-running-the-script" class="nav-link" data-scroll-target="#after-running-the-script"><em>After running the script:</em></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -165,53 +162,78 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="mri-lab" class="level1">
-<h1>MRI LAB</h1>
-<p>Information about running experiments in the MRI lab (before the new computer arrived!)</p>
-<section id="general-setup-information" class="level2">
-<h2 class="anchored" data-anchor-id="general-setup-information">General setup information:</h2>
+<section id="creating-physiology-regressors-using-the-physio-toolbox" class="level1">
+<h1>Creating physiology regressors using the PhysIO toolbox</h1>
+<p>October 2023; additional info and further read: https://www.sciencedirect.com/science/article/pii/S016502701630259X?via%3Dihub</p>
+<section id="acquistion-of-log-files" class="level2">
+<h2 class="anchored" data-anchor-id="acquistion-of-log-files"><em>Acquistion of log-files:</em></h2>
+<section id="physiology-logging" class="level3">
+<h3 class="anchored" data-anchor-id="physiology-logging"><em>Physiology logging:</em></h3>
 <ul>
-<li>Make sure to switch to the Linux computer (the button number 2 under the monitor)</li>
-<li>Login with credentials you received</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./316896390-c2262ad2-04dc-48b0-97cb-4ab0d373b50c.png" class="img-fluid figure-img"></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-<ul>
-<li>Once logged in:</li>
-<li>If you plan to use MATLAB, you’re going to need internet connection: Einstellungen -&gt; Netzwerk -&gt; Kabel -&gt; Here you can choose between Internet or Eyelink (it should default to the internet)</li>
-<li>Check if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./316896326-d1109ced-7fe1-482c-9d28-8d54a82cb805.png" class="img-fluid figure-img"></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-<ul>
-<li>Start MATLAB / Octave and test the trigger box with the script response_box_check.m</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./316895640-7f4fa294-89fc-4fe1-a430-589a4f116768.png" class="img-fluid figure-img"></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-<ul>
-<li>8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed</li>
-<li>On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent.</li>
+<li>Press tab + [-&gt; + Entf to enter admin mode</li>
+<li>PMU control</li>
+<li>control-esc</li>
+<li>run -&gt; cmd</li>
+<li>in the terminal, type ideacmdtool</li>
+<li>DON’T use startLogAll, start puls and ECG separately (if both are started simultaneously, recording will terminate after 5 min.)</li>
+<li>After a while there should be a message with “ok” at the end</li>
+<li>Data is stored in <code>C:\ProgramFiles\Siemens\Numaris\ Mars\log\</code> (there is a shortcut “log” in the Explorer )</li>
+<li>Stop recording after experiment with stopLogAll, move data to <code>C:\_Natalia\STUDYNAME</code></li>
 </ul>
 </section>
-<section id="experimental-protocol" class="level2">
-<h2 class="anchored" data-anchor-id="experimental-protocol">Experimental Protocol</h2>
+</section>
+<section id="required" class="level2">
+<h2 class="anchored" data-anchor-id="required"><em>Required:</em></h2>
 <ul>
-<li>Participants can fill out the forms in the lobby. You can also instruct them there.</li>
-<li>Paperwork: …</li>
-<li>Snellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!</li>
+<li>Json- files of functional data for each run</li>
+<li>Physiology log-files, one for all runs (.resp and .puls files)</li>
 </ul>
+<p><strong>Figure 1.</strong> Puls and resp-file.</p>
+<p><img src="./Picture1.jpg" class="img-fluid"></p>
+<ul>
+<li>Script: <code>/storage/nv_shared/PhysIO_excitex/PhysIO_get_regressors.m</code></li>
+</ul>
+</section>
+<section id="before-running-the-script" class="level2">
+<h2 class="anchored" data-anchor-id="before-running-the-script"><em>Before running the script:</em></h2>
+<ul>
+<li><p>Always check if on path: SPM: <code>/usr/local/spm12/</code> Toolbox-code modified for our scanner model: <code>/storage/nv_shared/software/PhysIO/tapas-master/PhysIO/code</code></p></li>
+<li><p>Individual parameter settings in the script:</p>
+<ul>
+<li><code>physio.log_files.vendor</code> = ‘Siemens_xa20’; % specific for our scanner model.</li>
+<li><code>physio.log_files.resp_type</code> = ‘spine’; % set to spine or belt, depending on type of physiology correction.</li>
+<li><code>physio.model.orthogonalise</code> = ‘RETROICOR’; % select depending on physiology model used, e.g.&nbsp;‘RETROICOR’, or c, r; to avoid correlations between regressors.</li>
+<li><code>physio.model.retroicor.include</code> = true; % select physiology model here: RETROICOR, RVT or HVT.</li>
+<li><code>physio.model.retroicor.order.c</code> = 3;</li>
+<li><code>physio.model.retroicor.order.r</code> = 4;</li>
+<li><code>physio.model.retroicor.order.cr</code> = 1; % select orders for RETROICOR model; here the default option based on Glover et al., 2000 is set.</li>
+<li><code>physio.model.rvt.include</code> = false; % select physiology model here.</li>
+<li><code>physio.model.hrv.include</code> = false; % select physiology model here.</li>
+<li><code>physio.model.other.include</code> = false; % select physiology model here.</li>
+<li><code>physio.verbose.level</code> = 3; % 2 or 3, will produce control plots – useful to check quality of data and if synchronization has worked; when analyzing several participants it’s best to set to 0.</li>
+</ul></li>
+</ul>
+</section>
+<section id="after-running-the-script" class="level2">
+<h2 class="anchored" data-anchor-id="after-running-the-script"><em>After running the script:</em></h2>
+<ul>
+<li>Validation of results - Check the diagnostic plots the toolbox delivers:
+<ul>
+<li>Check the raw time series for artifacts/ detachments (4A)</li>
+<li>Check distribution of raw physiological data (should be left-skewed, 4B), are there any indications for ceiling effects or temporary detachment (2)?<br>
+</li>
+<li>Check period used for synchronization, does it fit? (4C)</li>
+<li>Check filtered time series (are there still severe artifacts?)</li>
+<li>Check regressor file (3): regressors should have a value for each slice and 18 regressors if you specified RETROICOR (i.e., 6 cardiac phase regressors, 8 respiratory phase regressors, and 4 interaction terms).</li>
+<li>Regressors can then be added to a GLM.</li>
+</ul></li>
+</ul>
+<p><strong>Figure 2.</strong> Artifacts in raw respiratory signal due to issues during recording with the breathing belt.</p>
+<p><img src="./Picture2.jpg" class="img-fluid"></p>
+<p><strong>Figure 3.</strong> Final output (RETROICOR regressors)</p>
+<p><img src="./Picture3.png" class="img-fluid"></p>
+<p><strong>Figure 4.</strong> Steps from raw data to the final regressors.</p>
+<p><img src="./Picture4.jpg" class="img-fluid"></p>
 
 
 </section>

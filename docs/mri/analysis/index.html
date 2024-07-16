@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="AC">
 
-<title>Visual Neuroscience Lab - Update to the MRI lab setup</title>
+<title>Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,14 +108,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../mri_lab.html"> 
-<span class="menu-text">MRI lab</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../physiology.html"> 
-<span class="menu-text">Physiology</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../students.html"> 
 <span class="menu-text">Students</span></a>
   </li>  
@@ -152,15 +143,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general-setup-information" id="toc-general-setup-information" class="nav-link active" data-scroll-target="#general-setup-information">General setup information:</a>
+  <li><a href="#bids" id="toc-bids" class="nav-link active" data-scroll-target="#bids">BIDS</a>
   <ul class="collapse">
-  <li><a href="#starting" id="toc-starting" class="nav-link" data-scroll-target="#starting">Starting</a></li>
-  <li><a href="#plug-peripherals-in" id="toc-plug-peripherals-in" class="nav-link" data-scroll-target="#plug-peripherals-in">Plug peripherals in</a></li>
-  <li><a href="#extend-mirror-display" id="toc-extend-mirror-display" class="nav-link" data-scroll-target="#extend-mirror-display">Extend/ mirror display</a></li>
-  <li><a href="#kvm-switcher" id="toc-kvm-switcher" class="nav-link" data-scroll-target="#kvm-switcher">KVM switcher</a></li>
-  <li><a href="#trigger-box" id="toc-trigger-box" class="nav-link" data-scroll-target="#trigger-box">Trigger box</a></li>
-  <li><a href="#experimental-protocol" id="toc-experimental-protocol" class="nav-link" data-scroll-target="#experimental-protocol">Experimental Protocol</a></li>
-  <li><a href="#psychopy" id="toc-psychopy" class="nav-link" data-scroll-target="#psychopy">Psychopy</a></li>
+  <li><a href="#validating-bids-dataset" id="toc-validating-bids-dataset" class="nav-link" data-scroll-target="#validating-bids-dataset">Validating BIDS dataset</a></li>
+  </ul></li>
+  <li><a href="#osf" id="toc-osf" class="nav-link" data-scroll-target="#osf">OSF</a>
+  <ul class="collapse">
+  <li><a href="#upload-a-file-to-an-osf-project" id="toc-upload-a-file-to-an-osf-project" class="nav-link" data-scroll-target="#upload-a-file-to-an-osf-project">Upload a file to an OSF project</a></li>
+  <li><a href="#set-your-osf-acctount-password" id="toc-set-your-osf-acctount-password" class="nav-link" data-scroll-target="#set-your-osf-acctount-password">Set your OSF acctount password</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -168,201 +158,42 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Update to the MRI lab setup</h1>
-</div>
 
 
 
-<div class="quarto-title-meta column-page-left">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>AC </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<p>Information about MRI and fMRI, processing and analysis steps.</p>
+<p>Topics:</p>
+<section id="bids" class="level1">
+<h1>BIDS</h1>
+<p>Brain Imaging Data Structure (more information <a href="https://bids-standard.github.io/bids-starter-kit/">here</a>).</p>
+<section id="validating-bids-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="validating-bids-dataset">Validating BIDS dataset</h2>
+<p>With docker, you can run this line in the terminal:</p>
+<p><code>$ docker run -ti --rm -v [path_to_your_toplevel_bids_directory]:/data:ro bids/validator /data</code></p>
+<p>Common issues:</p>
 <ul>
-<li><p>The MRI lab has had some upgrades in 2024 including:</p>
-<ol type="1">
-<li><p>New stimulation PC</p></li>
-<li><p>Stimulation goggles</p></li>
-</ol></li>
-<li><p>This document details some information about the new setup</p></li>
-</ul>
-<section id="general-setup-information" class="level2">
-<h2 class="anchored" data-anchor-id="general-setup-information">General setup information:</h2>
-<section id="starting" class="level3">
-<h3 class="anchored" data-anchor-id="starting">Starting</h3>
-<ol type="1">
-<li><p>Turn on the stimulus presentation PC</p></li>
-<li><p>Turn on the eyetracking PC (if using the goggles or eyetracking)</p></li>
-</ol>
-<blockquote class="blockquote">
-<p>Even if not using the eyetracker but using the goggles it is useful to use the eyetracker to be able to ensure that the goggles are aligned properly with the participant</p>
-</blockquote>
-<ul>
-<li>Login to the stimulus pc and/or the eyetracker pc with the credentials provided</li>
-</ul>
-<blockquote class="blockquote">
-<p>When logging into the stimulus PC it might be that you actually don’t see anything on the screen yet if there are other screens connected to the stimulus PC, therefore the sequence of keystrokes when starting the PC is:</p>
-</blockquote>
-<pre><code>    1. Enter decryption password 
-
-    2. Press enter 
-    
-    3. Press enter again (this selects the top-most user)
-    
-    4. Enter the user password required from the technician (or someone else in our lab)</code></pre>
-</section>
-<section id="plug-peripherals-in" class="level3">
-<h3 class="anchored" data-anchor-id="plug-peripherals-in">Plug peripherals in</h3>
-<ol type="1">
-<li>If you are using the goggles then make sure that the HDMI cables are first plugged in</li>
-</ol>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./goggle_box.png" class="img-fluid figure-img" style="width:75.0%"></p>
-<figcaption>Goggles HDMI inputs</figcaption>
-</figure>
-</div>
-</center>
-<ul>
-<li>The right goggle’s hdmi cable (labelled with tape) should be in the top most position and the left in the bottom position</li>
-</ul>
-<ol start="2" type="1">
-<li>The goggles can now be plugged in</li>
-</ol>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./goggle_unplug.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
-<figcaption>Goggles plug unplugged</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./goggle_plug.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
-<figcaption>Goggles plug plugged in</figcaption>
-</figure>
-</div>
-</center>
-<ol start="3" type="1">
-<li><p>The goggles need to be additionally turned on inside the scanner room (double check with technician that this is the case)</p></li>
-<li><p>If using the eyetracker function of the goggles plug in the cable to link the eyetracker signal to the PC</p></li>
-</ol>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./eyetracker_box.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
-<figcaption>The light on the eyetracker should be illuminated red</figcaption>
-</figure>
-</div>
-</center>
-<ol start="5" type="1">
-<li>Start ViewPoint and you should see something other than ‘no signal’</li>
-</ol>
-<ul>
-<li>For more information visit the <a href="http://www.arringtonresearch.com/viewpoint.html">arringtonresearch</a> website</li>
+<li>files don’t follow BIDS naming conventions (more info about filenames <a href="https://bids-standard.github.io/bids-starter-kit/folders_and_files/files.html">here</a>)</li>
+<li>events.tsv files are missing</li>
+<li>participants.tsv is missing</li>
+<li>participants.json file is missing or does not describe all variables from the tsv file</li>
+<li>datasset_description is missing or there is no name of the dataset or author names in it.</li>
+<li>readme file is missing or too short</li>
+<li>…</li>
 </ul>
 </section>
-<section id="extend-mirror-display" class="level3">
-<h3 class="anchored" data-anchor-id="extend-mirror-display">Extend/ mirror display</h3>
-<ul>
-<li>PopOS (the stimulation PC’s operating system) might be a bit funky when it comes to changing the display settings when doing so with the settings menu in PopOS</li>
-</ul>
-<blockquote class="blockquote">
-<p>When opening the display settings do not click apply but instead choose a different settings option e.g.&nbsp;power/ sound/ notficiations etc. and then close the settings menu</p>
-</blockquote>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./pop_os_eg.png" class="img-fluid figure-img"></p>
-<figcaption>PopOS example settings window, always make sure to close this window and not apply new display settings</figcaption>
-</figure>
-</div>
-</center>
-<ul>
-<li>Use shortcut win + p to change whether to extend or mirror the screens, you can hit win + p twice and this will change to mirror mode</li>
-</ul>
 </section>
-<section id="kvm-switcher" class="level3">
-<h3 class="anchored" data-anchor-id="kvm-switcher">KVM switcher</h3>
-<ul>
-<li>The KVM switcher is used to switch between devices and for the goggle + stimulation PC setup can be used to switch between either the eyetracker PC or stimulus PC</li>
-</ul>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./KVM_switch.png" class="img-fluid figure-img"></p>
-<figcaption>KVM switcher, button 1 = eyetracker pc, 2 = stimulus pc</figcaption>
-</figure>
-</div>
-</center>
+<section id="osf" class="level1">
+<h1>OSF</h1>
+<p>Upload your dataset to OSF using <em>osfclient</em> (user’s guide <a href="https://osfclient.readthedocs.io/en/latest/cli-usage.html">here</a>). This is a useful python-based package to uploading data in bulk to OSF, especially because you cannot upload folders to OSF projects via browser.</p>
+<p>Installation: <code>$ pip3 install osfclient</code></p>
+<section id="upload-a-file-to-an-osf-project" class="level3">
+<h3 class="anchored" data-anchor-id="upload-a-file-to-an-osf-project">Upload a file to an OSF project</h3>
+<p><code>$ osf -p &lt;projectid&gt; -u yourOSFacount@example.com upload local/file.txt remote/path.txt</code> ### Upload a folder (recursively) to an OSF project <code>$ osf -p &lt;projectid&gt; -u yourOSFacount@example.com upload -r local/folder remote/path</code></p>
 </section>
-<section id="trigger-box" class="level3">
-<h3 class="anchored" data-anchor-id="trigger-box">Trigger box</h3>
-<ul>
-<li><p>Sometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC</p></li>
-<li><p>If this is the case the USB light on the box will be flashing (indicating that the USB is not connected)</p></li>
-<li><p>Locate at the back of the box the corresponding USB input and plug it in</p></li>
-</ul>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./tigger_box_back.png" class="img-fluid figure-img" style="width:75.0%"></p>
-<figcaption>Back of the trigger box</figcaption>
-</figure>
-</div>
-</center>
-<ul>
-<li><p>The USB light should stop flashing</p></li>
-<li><p>Test the button box inside the scanner</p></li>
-</ul>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./trigger_box_front.png" class="img-fluid figure-img"></p>
-<figcaption>Trigger box front</figcaption>
-</figure>
-</div>
-</center>
-<ul>
-<li>8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed</li>
-<li>On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent</li>
-</ul>
-</section>
-<section id="experimental-protocol" class="level3">
-<h3 class="anchored" data-anchor-id="experimental-protocol">Experimental Protocol</h3>
-<p><span class="smallcaps"><font size="+2">Before entering the scanner room always make sure you are MR safe and sign the respective forms</font></span></p>
-<ul>
-<li>Ask the participant to sign the forms while doing so ensure that the button box inside the scanner works and double check the view on the goggles that everything looks okay</li>
-</ul>
-</section>
-<section id="psychopy" class="level3">
-<h3 class="anchored" data-anchor-id="psychopy">Psychopy</h3>
-<ul>
-<li><p>Start psychopy by opening the terminal and typing Psychopy-2024</p></li>
-<li><p>Usually psychopy starts by asking to open a .psyexp file so just open the one you have or if using the coder only:</p>
-<ol type="1">
-<li><p>Open a .psyexp file that doesn’t apply to you</p></li>
-<li><p>quit builder view and do not save</p></li>
-</ol></li>
-<li><p>Now you can open a .py file</p></li>
-</ul>
-<p>Alternatively start psychopy with the <code>-c</code> flag</p>
+<section id="set-your-osf-acctount-password" class="level3">
+<h3 class="anchored" data-anchor-id="set-your-osf-acctount-password">Set your OSF acctount password</h3>
+<p>Set a password so you don’t have to enter it each time you upload data</p>
+<p><code>$ export OSF_PASSWORD=yourpassword</code></p>
 
 
 </section>

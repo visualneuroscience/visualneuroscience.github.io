@@ -16,10 +16,6 @@ website:
         text: Leaving
       - href: mri.qmd
         text: MRI
-      - href: mri_lab.qmd
-        text: MRI lab
-      - href: physiology.qmd
-        text: Physiology
       - href: students.qmd
         text: Students
       - href: displays.qmd

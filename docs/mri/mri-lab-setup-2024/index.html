@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="AC">
 
-<title>Visual Neuroscience Lab</title>
+<title>Visual Neuroscience Lab - Update to the MRI lab setup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,14 +109,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../mri_lab.html"> 
-<span class="menu-text">MRI lab</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../physiology.html"> 
-<span class="menu-text">Physiology</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../students.html"> 
 <span class="menu-text">Students</span></a>
   </li>  
@@ -151,15 +144,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-physiology-regressors-using-the-physio-toolbox" id="toc-creating-physiology-regressors-using-the-physio-toolbox" class="nav-link active" data-scroll-target="#creating-physiology-regressors-using-the-physio-toolbox">Creating physiology regressors using the PhysIO toolbox</a>
+  <li><a href="#general-setup-information" id="toc-general-setup-information" class="nav-link active" data-scroll-target="#general-setup-information">General setup information:</a>
   <ul class="collapse">
-  <li><a href="#acquistion-of-log-files" id="toc-acquistion-of-log-files" class="nav-link" data-scroll-target="#acquistion-of-log-files"><em>Acquistion of log-files:</em></a>
-  <ul class="collapse">
-  <li><a href="#physiology-logging" id="toc-physiology-logging" class="nav-link" data-scroll-target="#physiology-logging"><em>Physiology logging:</em></a></li>
-  </ul></li>
-  <li><a href="#required" id="toc-required" class="nav-link" data-scroll-target="#required"><em>Required:</em></a></li>
-  <li><a href="#before-running-the-script" id="toc-before-running-the-script" class="nav-link" data-scroll-target="#before-running-the-script"><em>Before running the script:</em></a></li>
-  <li><a href="#after-running-the-script" id="toc-after-running-the-script" class="nav-link" data-scroll-target="#after-running-the-script"><em>After running the script:</em></a></li>
+  <li><a href="#starting" id="toc-starting" class="nav-link" data-scroll-target="#starting">Starting</a></li>
+  <li><a href="#plug-peripherals-in" id="toc-plug-peripherals-in" class="nav-link" data-scroll-target="#plug-peripherals-in">Plug peripherals in</a></li>
+  <li><a href="#extend-mirror-display" id="toc-extend-mirror-display" class="nav-link" data-scroll-target="#extend-mirror-display">Extend/ mirror display</a></li>
+  <li><a href="#kvm-switcher" id="toc-kvm-switcher" class="nav-link" data-scroll-target="#kvm-switcher">KVM switcher</a></li>
+  <li><a href="#trigger-box" id="toc-trigger-box" class="nav-link" data-scroll-target="#trigger-box">Trigger box</a></li>
+  <li><a href="#experimental-protocol" id="toc-experimental-protocol" class="nav-link" data-scroll-target="#experimental-protocol">Experimental Protocol</a></li>
+  <li><a href="#psychopy" id="toc-psychopy" class="nav-link" data-scroll-target="#psychopy">Psychopy</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -167,81 +160,201 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Update to the MRI lab setup</h1>
+</div>
 
 
 
-<section id="creating-physiology-regressors-using-the-physio-toolbox" class="level1">
-<h1>Creating physiology regressors using the PhysIO toolbox</h1>
-<p>October 2023; additional info and further read: https://www.sciencedirect.com/science/article/pii/S016502701630259X?via%3Dihub</p>
-<section id="acquistion-of-log-files" class="level2">
-<h2 class="anchored" data-anchor-id="acquistion-of-log-files"><em>Acquistion of log-files:</em></h2>
-<section id="physiology-logging" class="level3">
-<h3 class="anchored" data-anchor-id="physiology-logging"><em>Physiology logging:</em></h3>
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>AC </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <ul>
-<li>Press tab + [-&gt; + Entf to enter admin mode</li>
-<li>PMU control</li>
-<li>control-esc</li>
-<li>run -&gt; cmd</li>
-<li>in the terminal, type ideacmdtool</li>
-<li>DON’T use startLogAll, start puls and ECG separately (if both are started simultaneously, recording will terminate after 5 min.)</li>
-<li>After a while there should be a message with “ok” at the end</li>
-<li>Data is stored in <code>C:\ProgramFiles\Siemens\Numaris\ Mars\log\</code> (there is a shortcut “log” in the Explorer )</li>
-<li>Stop recording after experiment with stopLogAll, move data to <code>C:\_Natalia\STUDYNAME</code></li>
+<li><p>The MRI lab has had some upgrades in 2024 including:</p>
+<ol type="1">
+<li><p>New stimulation PC</p></li>
+<li><p>Stimulation goggles</p></li>
+</ol></li>
+<li><p>This document details some information about the new setup</p></li>
+</ul>
+<section id="general-setup-information" class="level2">
+<h2 class="anchored" data-anchor-id="general-setup-information">General setup information:</h2>
+<section id="starting" class="level3">
+<h3 class="anchored" data-anchor-id="starting">Starting</h3>
+<ol type="1">
+<li><p>Turn on the stimulus presentation PC</p></li>
+<li><p>Turn on the eyetracking PC (if using the goggles or eyetracking)</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>Even if not using the eyetracker but using the goggles it is useful to use the eyetracker to be able to ensure that the goggles are aligned properly with the participant</p>
+</blockquote>
+<ul>
+<li>Login to the stimulus pc and/or the eyetracker pc with the credentials provided</li>
+</ul>
+<blockquote class="blockquote">
+<p>When logging into the stimulus PC it might be that you actually don’t see anything on the screen yet if there are other screens connected to the stimulus PC, therefore the sequence of keystrokes when starting the PC is:</p>
+</blockquote>
+<pre><code>    1. Enter decryption password 
+
+    2. Press enter 
+    
+    3. Press enter again (this selects the top-most user)
+    
+    4. Enter the user password required from the technician (or someone else in our lab)</code></pre>
+</section>
+<section id="plug-peripherals-in" class="level3">
+<h3 class="anchored" data-anchor-id="plug-peripherals-in">Plug peripherals in</h3>
+<ol type="1">
+<li>If you are using the goggles then make sure that the HDMI cables are first plugged in</li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./goggle_box.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Goggles HDMI inputs</figcaption>
+</figure>
+</div>
+</center>
+<ul>
+<li>The right goggle’s hdmi cable (labelled with tape) should be in the top most position and the left in the bottom position</li>
+</ul>
+<ol start="2" type="1">
+<li>The goggles can now be plugged in</li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./goggle_unplug.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>Goggles plug unplugged</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./goggle_plug.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>Goggles plug plugged in</figcaption>
+</figure>
+</div>
+</center>
+<ol start="3" type="1">
+<li><p>The goggles need to be additionally turned on inside the scanner room (double check with technician that this is the case)</p></li>
+<li><p>If using the eyetracker function of the goggles plug in the cable to link the eyetracker signal to the PC</p></li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./eyetracker_box.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>The light on the eyetracker should be illuminated red</figcaption>
+</figure>
+</div>
+</center>
+<ol start="5" type="1">
+<li>Start ViewPoint and you should see something other than ‘no signal’</li>
+</ol>
+<ul>
+<li>For more information visit the <a href="http://www.arringtonresearch.com/viewpoint.html">arringtonresearch</a> website</li>
 </ul>
 </section>
-</section>
-<section id="required" class="level2">
-<h2 class="anchored" data-anchor-id="required"><em>Required:</em></h2>
+<section id="extend-mirror-display" class="level3">
+<h3 class="anchored" data-anchor-id="extend-mirror-display">Extend/ mirror display</h3>
 <ul>
-<li>Json- files of functional data for each run</li>
-<li>Physiology log-files, one for all runs (.resp and .puls files)</li>
+<li>PopOS (the stimulation PC’s operating system) might be a bit funky when it comes to changing the display settings when doing so with the settings menu in PopOS</li>
 </ul>
-<p><strong>Figure 1.</strong> Puls and resp-file.</p>
-<p><img src="./Picture1.jpg" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>When opening the display settings do not click apply but instead choose a different settings option e.g.&nbsp;power/ sound/ notficiations etc. and then close the settings menu</p>
+</blockquote>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./pop_os_eg.png" class="img-fluid figure-img"></p>
+<figcaption>PopOS example settings window, always make sure to close this window and not apply new display settings</figcaption>
+</figure>
+</div>
+</center>
 <ul>
-<li>Script: <code>/storage/nv_shared/PhysIO_excitex/PhysIO_get_regressors.m</code></li>
-</ul>
-</section>
-<section id="before-running-the-script" class="level2">
-<h2 class="anchored" data-anchor-id="before-running-the-script"><em>Before running the script:</em></h2>
-<ul>
-<li><p>Always check if on path: SPM: <code>/usr/local/spm12/</code> Toolbox-code modified for our scanner model: <code>/storage/nv_shared/software/PhysIO/tapas-master/PhysIO/code</code></p></li>
-<li><p>Individual parameter settings in the script:</p>
-<ul>
-<li><code>physio.log_files.vendor</code> = ‘Siemens_xa20’; % specific for our scanner model.</li>
-<li><code>physio.log_files.resp_type</code> = ‘spine’; % set to spine or belt, depending on type of physiology correction.</li>
-<li><code>physio.model.orthogonalise</code> = ‘RETROICOR’; % select depending on physiology model used, e.g.&nbsp;‘RETROICOR’, or c, r; to avoid correlations between regressors.</li>
-<li><code>physio.model.retroicor.include</code> = true; % select physiology model here: RETROICOR, RVT or HVT.</li>
-<li><code>physio.model.retroicor.order.c</code> = 3;</li>
-<li><code>physio.model.retroicor.order.r</code> = 4;</li>
-<li><code>physio.model.retroicor.order.cr</code> = 1; % select orders for RETROICOR model; here the default option based on Glover et al., 2000 is set.</li>
-<li><code>physio.model.rvt.include</code> = false; % select physiology model here.</li>
-<li><code>physio.model.hrv.include</code> = false; % select physiology model here.</li>
-<li><code>physio.model.other.include</code> = false; % select physiology model here.</li>
-<li><code>physio.verbose.level</code> = 3; % 2 or 3, will produce control plots – useful to check quality of data and if synchronization has worked; when analyzing several participants it’s best to set to 0.</li>
-</ul></li>
+<li>Use shortcut win + p to change whether to extend or mirror the screens, you can hit win + p twice and this will change to mirror mode</li>
 </ul>
 </section>
-<section id="after-running-the-script" class="level2">
-<h2 class="anchored" data-anchor-id="after-running-the-script"><em>After running the script:</em></h2>
+<section id="kvm-switcher" class="level3">
+<h3 class="anchored" data-anchor-id="kvm-switcher">KVM switcher</h3>
 <ul>
-<li>Validation of results - Check the diagnostic plots the toolbox delivers:
-<ul>
-<li>Check the raw time series for artifacts/ detachments (4A)</li>
-<li>Check distribution of raw physiological data (should be left-skewed, 4B), are there any indications for ceiling effects or temporary detachment (2)?<br>
-</li>
-<li>Check period used for synchronization, does it fit? (4C)</li>
-<li>Check filtered time series (are there still severe artifacts?)</li>
-<li>Check regressor file (3): regressors should have a value for each slice and 18 regressors if you specified RETROICOR (i.e., 6 cardiac phase regressors, 8 respiratory phase regressors, and 4 interaction terms).</li>
-<li>Regressors can then be added to a GLM.</li>
-</ul></li>
+<li>The KVM switcher is used to switch between devices and for the goggle + stimulation PC setup can be used to switch between either the eyetracker PC or stimulus PC</li>
 </ul>
-<p><strong>Figure 2.</strong> Artifacts in raw respiratory signal due to issues during recording with the breathing belt.</p>
-<p><img src="./Picture2.jpg" class="img-fluid"></p>
-<p><strong>Figure 3.</strong> Final output (RETROICOR regressors)</p>
-<p><img src="./Picture3.png" class="img-fluid"></p>
-<p><strong>Figure 4.</strong> Steps from raw data to the final regressors.</p>
-<p><img src="./Picture4.jpg" class="img-fluid"></p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./KVM_switch.png" class="img-fluid figure-img"></p>
+<figcaption>KVM switcher, button 1 = eyetracker pc, 2 = stimulus pc</figcaption>
+</figure>
+</div>
+</center>
+</section>
+<section id="trigger-box" class="level3">
+<h3 class="anchored" data-anchor-id="trigger-box">Trigger box</h3>
+<ul>
+<li><p>Sometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC</p></li>
+<li><p>If this is the case the USB light on the box will be flashing (indicating that the USB is not connected)</p></li>
+<li><p>Locate at the back of the box the corresponding USB input and plug it in</p></li>
+</ul>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tigger_box_back.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Back of the trigger box</figcaption>
+</figure>
+</div>
+</center>
+<ul>
+<li><p>The USB light should stop flashing</p></li>
+<li><p>Test the button box inside the scanner</p></li>
+</ul>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./trigger_box_front.png" class="img-fluid figure-img"></p>
+<figcaption>Trigger box front</figcaption>
+</figure>
+</div>
+</center>
+<ul>
+<li>8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed</li>
+<li>On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent</li>
+</ul>
+</section>
+<section id="experimental-protocol" class="level3">
+<h3 class="anchored" data-anchor-id="experimental-protocol">Experimental Protocol</h3>
+<p><span class="smallcaps"><font size="+2">Before entering the scanner room always make sure you are MR safe and sign the respective forms</font></span></p>
+<ul>
+<li>Ask the participant to sign the forms while doing so ensure that the button box inside the scanner works and double check the view on the goggles that everything looks okay</li>
+</ul>
+</section>
+<section id="psychopy" class="level3">
+<h3 class="anchored" data-anchor-id="psychopy">Psychopy</h3>
+<ul>
+<li><p>Start psychopy by opening the terminal and typing Psychopy-2024</p></li>
+<li><p>Usually psychopy starts by asking to open a .psyexp file so just open the one you have or if using the coder only:</p>
+<ol type="1">
+<li><p>Open a .psyexp file that doesn’t apply to you</p></li>
+<li><p>quit builder view and do not save</p></li>
+</ol></li>
+<li><p>Now you can open a .py file</p></li>
+</ul>
+<p>Alternatively start psychopy with the <code>-c</code> flag</p>
 
 
 </section>
