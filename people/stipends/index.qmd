@@ -1,25 +1,47 @@
-# Stipends you can apply for
+# Stipends and prizes you can apply for as a Master student
 
 ## Before or during your master's thesis
 
-## NAWI - Leistungsstipendium
+### NAWI - Leistungsstipendium
 
-https://nawi.uni-graz.at/de/studieren/informationen-und-formulare-fuer-studierende/stipendien/leistungsstipendium/#c125989
+Stipend of the Natural Science Faculty (we have mixed experiences with it)
 
-## NAWI-Förderstipendium
+<https://nawi.uni-graz.at/de/studieren/informationen-und-formulare-fuer-studierende/stipendien/leistungsstipendium/#c125989>
 
-https://nawi.uni-graz.at/de/studieren/informationen-und-formulare-fuer-studierende/stipendien/foerderungsstipendium/
+### NAWI - Förderstipendium
 
-## Grazer Universitaetsverbund
+Stipend of the Natural Science Faculty
 
-https://universitaetsbund.uni-graz.at/de/gub-foerderungen/
+<https://nawi.uni-graz.at/de/studieren/informationen-und-formulare-fuer-studierende/stipendien/foerderungsstipendium/>
 
-# Nach dem Abschluss der Masterarbeit
+### Grazer Universitaetsverbund
 
-## Initiative Gehirnforschung Steiermark
+No experience so far
 
-Forschungspreis Kategorie Masterarbeit/Diplom https://gehirnforschung.at/nachwuchsforderung/forschungspreis/
+<https://universitaetsbund.uni-graz.at/de/gub-foerderungen/>
 
-## Gesellschaft für Neuropsychologie Österreich
+### BioTechMed-Graz lab rotation program
 
-(Ausschreibung x1 im Jahr per Email) https://gnpoe.at/
+This is suitable if you would like to go to another lab and learn a new method to potentially check out PhD options elswhere
+
+<https://biotechmedgraz.at/de/programme/lab-rotation-program/>
+
+## If you would like to apply for a PhD stipend after finishing your Master's thesis
+
+There is a possibility to apply to the Austrian Academy of Sciences, but it has to be done well in advance:
+
+<https://stipendien.oeaw.ac.at/stipendien/doc>
+
+## After finishing the thesis
+
+### Initiative Gehirnforschung Steiermark
+
+IngeSt Prise in the category "Masterarbeit/Diplom"
+
+<https://gehirnforschung.at/nachwuchsforderung/forschungspreis/>
+
+### Prises of the Austrian Society for Neurpsychology (Gesellschaft für Neuropsychologie Österreich)
+
+Advertised x1 per year via Email, look out for an email from Natalia
+
+<https://gnpoe.at/>
