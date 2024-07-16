@@ -1,6 +1,6 @@
-Stipends you can apply for
+# Stipends you can apply for
 
-# Vor/während der Masterarbeit
+## Before or during your master's thesis
 
 ## NAWI - Leistungsstipendium
 
@@ -18,10 +18,8 @@ https://universitaetsbund.uni-graz.at/de/gub-foerderungen/
 
 ## Initiative Gehirnforschung Steiermark
 
-Forschungspreis Kategorie Masterarbeit/Diplom
-https://gehirnforschung.at/nachwuchsforderung/forschungspreis/
+Forschungspreis Kategorie Masterarbeit/Diplom https://gehirnforschung.at/nachwuchsforderung/forschungspreis/
 
 ## Gesellschaft für Neuropsychologie Österreich
 
-(Ausschreibung x1 im Jahr per Email)
-https://gnpoe.at/
+(Ausschreibung x1 im Jahr per Email) https://gnpoe.at/

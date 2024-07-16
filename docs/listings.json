@@ -1,8 +1,17 @@
 [
   {
-    "listing": "/leaving.html",
+    "listing": "/stats.html",
     "items": [
-      "/leaving/2024-05-22/index.html"
+      "/stats/2024-06-04/index.html"
+    ]
+  },
+  {
+    "listing": "/mri.html",
+    "items": [
+      "/mri/mri-lab-setup-2023/index.html",
+      "/mri/mri-lab-setup-2024/index.html",
+      "/mri/analysis/index.html",
+      "/mri/physiology/index.html"
     ]
   },
   {
@@ -20,15 +29,15 @@
     ]
   },
   {
-    "listing": "/labmeeting.html",
-    "items": [
-      "/labmeeting/2024-05-22/index.html"
-    ]
-  },
-  {
     "listing": "/members.html",
     "items": [
       "/members/server/index.html"
+    ]
+  },
+  {
+    "listing": "/labmeeting.html",
+    "items": [
+      "/labmeeting/2024-05-22/index.html"
     ]
   },
   {
@@ -38,24 +47,10 @@
     ]
   },
   {
-    "listing": "/students.html",
+    "listing": "/people.html",
     "items": [
-      "/students/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/mri.html",
-    "items": [
-      "/mri/mri-lab-setup-2023/index.html",
-      "/mri/mri-lab-setup-2024/index.html",
-      "/mri/analysis/index.html",
-      "/mri/physiology/index.html"
-    ]
-  },
-  {
-    "listing": "/stats.html",
-    "items": [
-      "/stats/2024-06-04/index.html"
+      "/people/leaving/index.html",
+      "/people/stipends/index.html"
     ]
   }
 ]

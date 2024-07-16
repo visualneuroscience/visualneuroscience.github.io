@@ -10,22 +10,20 @@ website:
         text: Home
       - href: behavioral.qmd
         text: Behavioral
-      - href: labmeeting.qmd
-        text: Labmeeting
-      - href: leaving.qmd
-        text: Leaving
-      - href: mri.qmd
-        text: MRI
-      - href: students.qmd
-        text: Students
       - href: displays.qmd
         text: Displays
+      - href: labmeeting.qmd
+        text: Labmeeting
+      - href: mri.qmd
+        text: MRI
+      - href: people.qmd
+        text: People
       - href: stats.qmd
         text: Stats
       - href: contribute.qmd
         text: how to contribute to the lab website
       - href: members.qmd
-        text: members only
+        text: lab members only
   #DO NOT EDIT BELOW THIS LINE
   page-footer:
     background: light
