@@ -22,10 +22,10 @@ website:
         text: Physiology
       - href: students.qmd
         text: Students
-      - href: luminancemeasurement.qmd
-        text: Luminance Measurement
-      - href: sample_size.qmd
-        text: Sample size calculation
+      - href: displays.qmd
+        text: Displays
+      - href: stats.qmd
+        text: Stats
       - href: contribute.qmd
         text: how to contribute to the lab website
       - href: members.qmd

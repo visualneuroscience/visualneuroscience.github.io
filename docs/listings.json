@@ -12,22 +12,10 @@
     ]
   },
   {
-    "listing": "/students.html",
+    "listing": "/mri_lab.html",
     "items": [
-      "/students/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/contribute.html",
-    "items": [
-      "/contribute/rstudio/index.html",
-      "/contribute/index.html"
-    ]
-  },
-  {
-    "listing": "/sample_size.html",
-    "items": [
-      "/sample_size/2024-06-04/index.html"
+      "/mri_lab/2024-05-22/index.html",
+      "/mri_lab/2024-05-30/index.html"
     ]
   },
   {
@@ -50,22 +38,34 @@
     ]
   },
   {
-    "listing": "/mri_lab.html",
+    "listing": "/displays.html",
     "items": [
-      "/mri_lab/2024-05-22/index.html",
-      "/mri_lab/2024-05-30/index.html"
+      "/displays/2024-05-22/index.html"
     ]
   },
   {
-    "listing": "/luminancemeasurement.html",
+    "listing": "/contribute.html",
     "items": [
-      "/luminancemeasurement/2024-05-22/index.html"
+      "/contribute/rstudio/index.html",
+      "/contribute/index.html"
+    ]
+  },
+  {
+    "listing": "/students.html",
+    "items": [
+      "/students/2024-05-22/index.html"
     ]
   },
   {
     "listing": "/mri.html",
     "items": [
       "/mri/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/stats.html",
+    "items": [
+      "/stats/2024-06-04/index.html"
     ]
   }
 ]
