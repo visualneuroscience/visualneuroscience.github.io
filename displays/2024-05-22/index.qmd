@@ -44,6 +44,8 @@ Two gamma tables and two spline tables will be saved: one with RGB and one with 
 
 [Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/displays/2024-05-22)
 
+[Link to saved values and Gamma lookup tables for VPixx/3D](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/displays/2024-05-22/luxMeasNewVPixx/)
+
 ## Usage
 
 In Psychtoolbox, you can load a saved gamma table

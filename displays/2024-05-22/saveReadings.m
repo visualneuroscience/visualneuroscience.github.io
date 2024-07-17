@@ -2,9 +2,9 @@
 % CY 05/24
 % ----------------------------------------------------------------------- %
 % general info
-readingDate   = '22-May-2024';
+readingDate   = '19-Jul-2024';
 readingDevice = 'PCE-L335 LightMeter';
-labName       = 'AW-lab';
+labName       = 'AW';
 screenName    = 'VPixx';
 % ----------------------------------------------------------------------- %
 % parameters
@@ -25,7 +25,7 @@ if measured
     end
 else
     for col = 1:length(colorIDs)
-        allLuminanceReadings(col, :) = saveMonitorPhotometerReadings(numMeasures, max(Screen('Screens')), colorIDs{col})
+        allLuminanceReadings(col, :) = saveMonitorPhotometerReadings(numMeasures, max(Screen('Screens')), colorIDs{col});
     end
 end
 % ----------------------------------------------------------------------- %

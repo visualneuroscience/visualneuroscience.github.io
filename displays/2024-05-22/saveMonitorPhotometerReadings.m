@@ -1,6 +1,6 @@
-function vals = saveMonitorPhotometerReadings(numMeasures, colorID, screenid)
+function vals = saveMonitorPhotometerReadings(numMeasures, screenid, colorID)
 % vals = saveMonitorPhotometerReadings([numMeasures=9], [screenid=max], [colorID=[1 2 3]])
-% 
+%
 % example call:
 % go through red values
 % CalibrateMonitorPhotometerRGB(17, 'R', max(Screen('Screens'))
@@ -14,7 +14,7 @@ function vals = saveMonitorPhotometerReadings(numMeasures, colorID, screenid)
 % A simple calibration script for analog photometers.
 %
 % numMeasures (default: 9) readings are taken manually, and the readings
-% are saved in a mat file. (numMeasures - 1) should be a power of 2, 
+% are saved in a mat file. (numMeasures - 1) should be a power of 2,
 % ideally (9, 17, 33, etc.). The measured values will be returned.
 %
 %
@@ -43,15 +43,16 @@ global inputV;
            'get reading in cd/m^2, input reading using numpad and press enter. \n' ...
            'A screen of higher luminance will be shown. Repeat %d times. ' ...
            'Press enter to start'], numMeasures));
-       
-    psychlasterror('reset');    
+
+    psychlasterror('reset');
     try
         if nargin < 3 || isempty(screenid)
             % Open black window on default screen:
             screenid = max(Screen('Screens'));
         end
-        
+
         % Open black window:
+        screenid
         win = Screen('OpenWindow', screenid, [0 0 0]);
         maxLevel = Screen('ColorRange', win);
 
@@ -63,9 +64,9 @@ global inputV;
         inputV(end) = maxLevel;
         rgb = [0 0 0];
         count=1;
-        
+
         input('now press alt+tab to go back to command line and press enter :)');
-        
+
         if strcmpi(colorID, 'R')
             colorID = 1;
         elseif strcmpi(colorID, 'G')
@@ -75,7 +76,7 @@ global inputV;
         elseif strcmpi(colorID, 'A')
             colorID = [1, 2, 3];
         end
-        
+
         for i = inputV
             rgb(colorID) = i;
             Screen('FillRect',win,rgb);
@@ -87,7 +88,7 @@ global inputV;
             vals = [vals resp]; %#ok<AGROW>
             count = count+1;
         end
-        
+
         % Restore normal gamma table and close down:
         RestoreCluts;
         Screen('CloseAll');
@@ -99,11 +100,11 @@ global inputV;
 
     displayRange = range(vals);
     displayBaseline = min(vals);
-    
+
     %Normalize values
     vals_norm = (vals - displayBaseline) / displayRange;
     inputV = inputV/maxLevel;
-    
+
     % save the data
     save(sprintf('luminance_readings_%s.mat', num2str(colorID)));
     figure; plot(inputV, vals_norm)
