@@ -42,7 +42,7 @@ When the script is run without an error, it automatically saves the 17 values in
 
 Two gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts.
 
-[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/luminancemeasurement/2024-05-22)
+[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/displays/2024-05-22)
 
 ## Usage
 
