@@ -20,13 +20,17 @@ In visual psychophysics, we want to have a linear mapping between the input and 
 
 For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output secondary screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in front of the output screen. In the worst case, a second person can hold the photometer at a constant distance.
 
-![](images/clipboard-1520472544.png){width="416"}
+![](images/clipboard-1520472544.png){width="260"}
 
-With the saveReadings.m script, 17 different levels of brightness for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The light measures shown on the lux meter are typed into the command window.
+With the saveReadings.m script, 17 different levels of brightness for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The light measures shown on the lux meter can be typed into the command window.
 
-![](images/clipboard-2623240969.png)
+![](images/clipboard-2623240969.png){width="245"}
 
-When the script is run without an error, it automatically saves the 17 values into a mat-file. Importantly, if you care about the absolute lux values, the room in which brightness is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated.
+However, it is better to note them on paper or - even better - in a spreadsheet of another computer. This is because in case you mistype something in the script, you will have to redo everything from the beginning, which can be annoying.
+
+![](images/clipboard-3848956039.png){width="246"}
+
+When the script is run without an error, it automatically saves the 17 values into a mat-file (but it is better to note them on paper as well, as mentioned above). Importantly, if you care about the absolute lux values, the room in which brightness is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated.
 
 ## Operation
 
@@ -45,6 +49,8 @@ Two gamma tables and two spline tables will be saved: one with RGB and one with 
 [Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/displays/2024-05-22)
 
 [Link to saved values and Gamma lookup tables for VPixx/3D](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/displays/2024-05-22/luxMeasNewVPixx/)
+
+[Link to saved values and Gamma lookup tables for MRI display devices](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/displays/2024-05-22/luxMeasMRI/)
 
 ## Usage
 
