@@ -19,7 +19,7 @@ Link to [fMRIprep github](https://github.com/nipreps/fmriprep) (Useful informati
 
 - Where possible fMRIprep should be used in preprocessing to limit the variability involved in preprocessing data 
 
-- fMRIprep follows the BIDS format see here on how to validate bids
+- fMRIprep follows the BIDS format see [here](https://visualneuroscience.github.io/mri/analysis/bids.html) on how to validate bids
 
 &nbsp;
 
