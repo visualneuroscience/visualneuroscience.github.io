@@ -25,15 +25,8 @@ Link to [fMRIprep github](https://github.com/nipreps/fmriprep) (Useful informati
 
 ### Permissions
 
+
 - fMRIprep is run as a docker container meaning that you will need to be added to the docker group on the server before running it 
-
-- To avoid the output folders of fMRIprep being owned by `root` you can run fMRIprep with the following flags:
-
-    `docker run -u $(id -u):$(id -g) ...`
-
-    
-<span style="font-variant:small-caps;"><font size="-1">NOTE: using `fitlins` does not currently work using the flag `-u $(id -u):$(id -g) the user must specify their user id directly e.g. -u 1087:1092` see post about fitlins</font></span>
-
 
 - Before running fMRIprep it is necessary to create the folders that fMRIprep uses 
     1. Scratch directory (meaning just the temporary output files for fMRIprep)
@@ -45,6 +38,15 @@ Link to [fMRIprep github](https://github.com/nipreps/fmriprep) (Useful informati
 mkdir $niidir/../fmriprep_tmp
 mkdir $niidir/derivatives/fmriprep
 ```
+
+- To avoid the output folders of fMRIprep being owned by `root` you can run fMRIprep with the following flags:
+
+    `docker run -u $(id -u):$(id -g) ...`
+
+    
+<span style="font-variant:small-caps;"><font size="-1">NOTE: using `fitlins` does not currently work using the flag `-u $(id -u):$(id -g)` the user must specify their user id directly e.g. `-u 1087:1092` see post about fitlins</font></span>
+
+
 &nbsp;
 
 ## Example fMRIprep scripts
@@ -148,7 +150,7 @@ docker run -u $(id -u):$(id -g) --rm -it \
 
     > fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri). 
    
-   - If your fmap .json file is using the BIDS uri specification in the `IntendedFor` field and you are using an older fMRIprep version then this will need to changed the older path specification e.g.
+   - If your fmap .json file is using the BIDS uri specification in the `IntendedFor` field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.
     
     BIDS uri spec:
 

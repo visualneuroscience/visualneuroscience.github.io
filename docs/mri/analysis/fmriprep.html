@@ -242,20 +242,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="permissions">Permissions</h3>
 <ul>
 <li><p>fMRIprep is run as a docker container meaning that you will need to be added to the docker group on the server before running it</p></li>
-<li><p>To avoid the output folders of fMRIprep being owned by <code>root</code> you can run fMRIprep with the following flags:</p>
-<p><code>docker run -u $(id -u):$(id -g) ...</code></p></li>
-</ul>
-<p><span class="smallcaps"><font size="-1">NOTE: using <code>fitlins</code> does not currently work using the flag <code>-u $(id -u):$(id -g) the user must specify their user id directly e.g. -u 1087:1092</code> see post about fitlins</font></span></p>
-<ul>
-<li>Before running fMRIprep it is necessary to create the folders that fMRIprep uses
+<li><p>Before running fMRIprep it is necessary to create the folders that fMRIprep uses</p>
 <ol type="1">
 <li>Scratch directory (meaning just the temporary output files for fMRIprep)</li>
 <li>Output directory (The actual output of fMRIprep)</li>
 </ol></li>
-<li>To create the folders first run the following:</li>
+<li><p>To create the folders first run the following:</p></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$niidir</span>/../fmriprep_tmp</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$niidir</span>/derivatives/fmriprep</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>To avoid the output folders of fMRIprep being owned by <code>root</code> you can run fMRIprep with the following flags:</p>
+<p><code>docker run -u $(id -u):$(id -g) ...</code></p></li>
+</ul>
+<p><span class="smallcaps"><font size="-1">NOTE: using <code>fitlins</code> does not currently work using the flag <code>-u $(id -u):$(id -g)</code> the user must specify their user id directly e.g.&nbsp;<code>-u 1087:1092</code> see post about fitlins</font></span></p>
 <p>&nbsp;</p>
 </section>
 </section>
@@ -353,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap <code>json</code> file. See <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri">Information about BIDS uri</a>.</p>
 </blockquote>
 <ul>
-<li>If your fmap .json file is using the BIDS uri specification in the <code>IntendedFor</code> field and you are using an older fMRIprep version then this will need to changed the older path specification e.g.</li>
+<li>If your fmap .json file is using the BIDS uri specification in the <code>IntendedFor</code> field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.</li>
 </ul>
 <p>BIDS uri spec:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
