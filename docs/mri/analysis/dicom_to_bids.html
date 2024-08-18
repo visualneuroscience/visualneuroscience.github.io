@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Adam Coates">
-<meta name="dcterms.date" content="2024-12-08">
+<meta name="dcterms.date" content="2024-08-12">
 <meta name="description" content="how to convert from dicom’s to bids">
 
-<title>Visual Neuroscience Lab - Dicom to Bids conversion</title>
+<title>Dicom to Bids conversion – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 8, 2024</p>
+      <p class="date">August 12, 2024</p>
     </div>
   </div>
   
@@ -209,19 +209,15 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/dcmunpack">dcmunpack</a></li>
 </ul></li>
 </ul>
-<p>See also:</p>
-<pre><code>[BIDS specificiation](https://bids-specification.readthedocs.io/en/stable/introduction.html)</code></pre>
+<p>See also <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS specificiation</a></p>
 <ul>
 <li>Other programs that can be used to convert dicoms to BIDS</li>
 </ul>
 <p>Going from DICOMS to BIDS datasets (with folder structure):</p>
-<pre><code>https://github.com/nipy/heudiconv 
-https://github.com/cbedetti/Dcm2Bids 
-https://github.com/jmtyszka/bidskit 
-https://github.com/dangom/dac2bids </code></pre>
+<p><a href="https://github.com/nipy/heudiconv">https://github.com/nipy/heudiconv</a> <a href="https://github.com/cbedetti/Dcm2Bids">https://github.com/cbedetti/Dcm2Bids</a> <a href="https://github.com/jmtyszka/bidskit">https://github.com/jmtyszka/bidskit</a> <a href="https://github.com/dangom/dac2bids">https://github.com/dangom/dac2bids</a></p>
 <p>Going from DICOMS to NIFTI + BIDS JSON sidecar:</p>
-<pre><code>https://github.com/rordenlab/dcm2niix 
-https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-converter--nifti-tool-and-viewer </code></pre>
+<p><a href="https://github.com/rordenlab/dcm2niix">https://github.com/rordenlab/dcm2niix</a></p>
+<p><a href="https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-converter--nifti-tool-and-viewer">matlab dicom to nifti tool converter</a></p>
 <p>&nbsp;</p>
 </section>
 <section id="dicoms" class="level1">
@@ -268,7 +264,9 @@ https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-conver
 </section>
 <section id="dicom-search.-this-will-either-use-pydicom-or-dcmunpack" class="level3">
 <h3 class="anchored" data-anchor-id="dicom-search.-this-will-either-use-pydicom-or-dcmunpack">4. DICOM search. This will either use pydicom or dcmunpack</h3>
-<pre><code>&gt; For some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes </code></pre>
+<blockquote class="blockquote">
+<p>For some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes</p>
+</blockquote>
 <ul>
 <li>Here the script roughly unpacks all the dicoms ready for the step which renames files and folders and puts the niftis in these new folders</li>
 </ul>
@@ -277,24 +275,37 @@ https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-conver
 </section>
 <section id="information-about-the-renaming-and-bids-conventions" class="level3">
 <h3 class="anchored" data-anchor-id="information-about-the-renaming-and-bids-conventions">5. Information about the renaming and BIDS conventions</h3>
-<pre><code>- pydicom and dcmunpack don't get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format
-
-- The option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS</code></pre>
+<blockquote class="blockquote">
+<p>pydicom and dcmunpack don’t get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS</p>
+</blockquote>
 <p><img src="./dicom2bids_renameinfo.PNG" class="img-fluid"></p>
 <p>&nbsp;</p>
 </section>
 <section id="keep-modify-delete" class="level3">
 <h3 class="anchored" data-anchor-id="keep-modify-delete">6. Keep/ modify/ delete</h3>
-<pre><code>- Choose to keep the dicom and the name of the dicom, modify it or delete it (ie don't convert) </code></pre>
+<blockquote class="blockquote">
+<p>Choose to keep the dicom and the name of the dicom, modify it or delete it (ie don’t convert)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Any action here will apply to the <code>.nii.gz</code> and the <code>.json</code></p>
+</blockquote>
 <p><img src="./dicom2bids_keepmodifydelete.PNG" class="img-fluid"></p>
 <ul>
 <li>If you want to modify the name of the BIDS file then choose modify and rename according to the BIDS naming convention</li>
 </ul>
 <p><img src="./dicom2bids_modify.PNG" class="img-fluid"></p>
+<p>&nbsp;</p>
+<hr>
 <ul>
 <li>If you want to keep or modify the folder the BIDS file belong to then select either keep or modify</li>
 </ul>
 <p><img src="./dicom2bids_foldername_keeprename.PNG" class="img-fluid"></p>
+<ul>
+<li>Here I want to keep the folder <code>func</code> because it is correct</li>
+</ul>
 <p><img src="./dicom2bids_foldername_rename.PNG" class="img-fluid"></p>
 <ul>
 <li>Here I want to choose the folder <code>extra</code> (this is not a BIDS folder but I want to convert the dicom to a nifti, I’d remove this before fMRIprep)</li>
@@ -308,7 +319,7 @@ https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-conver
 <section id="adding-intendedfor-field-to-fmap-json" class="level3">
 <h3 class="anchored" data-anchor-id="adding-intendedfor-field-to-fmap-json">7. Adding <code>IntendedFor</code> field to fmap json</h3>
 <ul>
-<li><p>The conversion does not always add the IntenderFor field to the .json in the fmap folder</p></li>
+<li><p>The conversion does not always add the IntenderFor field to the <code>.json</code> in the fmap folder</p></li>
 <li><p>For [distortion correction] to take place in fMRIprep it is necessary to add the IntendedFor field to the .json</p></li>
 <li><p>The script uses <code>jq</code> to provide the insertion into the fmap .json file</p></li>
 <li><p>The format that is added is not BIDS URI compliant but the script will output a text file that can be used to change the intendedfor field with BIDS uri compliant paths.</p></li>
@@ -355,18 +366,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -398,7 +398,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -406,7 +428,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

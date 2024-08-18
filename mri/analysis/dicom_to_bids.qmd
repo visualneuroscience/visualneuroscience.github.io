@@ -5,7 +5,7 @@ title: Dicom to Bids conversion
 description: "how to convert from dicom's to bids"
 image: ./dicom2bids_start.PNG
 author: Adam Coates
-date: 12/08/2024
+date: 08/12/2024
 ---
 # Documentation
 
@@ -16,9 +16,7 @@ date: 12/08/2024
     - [dcmunpack](https://surfer.nmr.mgh.harvard.edu/fswiki/dcmunpack)
 
 
-See also:
-
-    [BIDS specificiation](https://bids-specification.readthedocs.io/en/stable/introduction.html)
+See also [BIDS specificiation](https://bids-specification.readthedocs.io/en/stable/introduction.html)
 
 
 - Other programs that can be used to convert dicoms to BIDS 
@@ -26,15 +24,20 @@ See also:
 
 Going from DICOMS to BIDS datasets (with folder structure):
 
-    https://github.com/nipy/heudiconv 
-    https://github.com/cbedetti/Dcm2Bids 
-    https://github.com/jmtyszka/bidskit 
-    https://github.com/dangom/dac2bids 
+[https://github.com/nipy/heudiconv](https://github.com/nipy/heudiconv) 
+[https://github.com/cbedetti/Dcm2Bids](https://github.com/cbedetti/Dcm2Bids)
+[https://github.com/jmtyszka/bidskit](https://github.com/jmtyszka/bidskit)
+[https://github.com/dangom/dac2bids](https://github.com/dangom/dac2bids)
 
 Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
-    https://github.com/rordenlab/dcm2niix 
-    https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-converter--nifti-tool-and-viewer 
+[https://github.com/rordenlab/dcm2niix](https://github.com/rordenlab/dcm2niix)
+
+
+
+
+
+[matlab dicom to nifti tool converter](https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-converter--nifti-tool-and-viewer)
 
 
 &nbsp;
@@ -92,7 +95,7 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 &nbsp;
 
 ### 4. DICOM search. This will either use pydicom or dcmunpack 
-    > For some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes 
+> For some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes 
 
 - Here the script roughly unpacks all the dicoms ready for the step which renames files and folders and puts the niftis in these new folders
 
@@ -102,9 +105,9 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 ### 5. Information about the renaming and BIDS conventions 
 
-    - pydicom and dcmunpack don't get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format
+>pydicom and dcmunpack don't get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format
 
-    - The option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS
+>The option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS
 
 ![](./dicom2bids_renameinfo.PNG)
 
@@ -112,7 +115,9 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 ### 6. Keep/ modify/ delete
 
-    - Choose to keep the dicom and the name of the dicom, modify it or delete it (ie don't convert) 
+> Choose to keep the dicom and the name of the dicom, modify it or delete it (ie don't convert) 
+
+> Any action here will apply to the `.nii.gz` and the `.json`
 
 
 ![](./dicom2bids_keepmodifydelete.PNG)
@@ -122,9 +127,15 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 ![](./dicom2bids_modify.PNG)
 
+&nbsp;
+
+---
+
 - If you want to keep or modify the folder the BIDS file belong to then select either keep or modify 
 
 ![](./dicom2bids_foldername_keeprename.PNG)
+
+- Here I want to keep the folder `func` because it is correct
 
 
 ![](./dicom2bids_foldername_rename.PNG)
@@ -140,7 +151,7 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 ### 7. Adding `IntendedFor` field to fmap json
 
-- The conversion does not always add the IntenderFor field to the .json in the fmap folder
+- The conversion does not always add the IntenderFor field to the `.json` in the fmap folder
 
 - For [distortion correction] to take place in fMRIprep it is necessary to add the IntendedFor field to the .json 
 
