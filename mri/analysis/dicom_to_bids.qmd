@@ -3,7 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Dicom to Bids conversion
 description: "how to convert from dicom's to bids"
-image: ./fMRIprep_pr.gif
+image: ./dicom2bids_start.PNG
 author: Adam Coates
 date: 12/08/2024
 ---
