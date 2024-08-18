@@ -8,31 +8,27 @@
   {
     "listing": "/people.html",
     "items": [
-      "/people/coffee/index.html",
       "/people/leaving/index.html",
+      "/people/coffee/index.html",
       "/people/stipends/index.html"
     ]
   },
   {
-    "listing": "/mri.html",
+    "listing": "/displays.html",
     "items": [
-      "/mri/analysis/bids.html",
-      "/mri/mri-lab-setup-2023/index.html",
-      "/mri/mri-lab-setup-2024/index.html",
-      "/mri/physiology/index.html",
-      "/mri/analysis/fmriprep.html"
-    ]
-  },
-  {
-    "listing": "/members.html",
-    "items": [
-      "/members/server/index.html"
+      "/displays/2024-05-22/index.html"
     ]
   },
   {
     "listing": "/labmeeting.html",
     "items": [
       "/labmeeting/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/members.html",
+    "items": [
+      "/members/server/index.html"
     ]
   },
   {
@@ -45,14 +41,19 @@
   {
     "listing": "/contribute.html",
     "items": [
-      "/contribute/index.html",
-      "/contribute/rstudio/index.html"
+      "/contribute/rstudio/index.html",
+      "/contribute/index.html"
     ]
   },
   {
-    "listing": "/displays.html",
+    "listing": "/mri.html",
     "items": [
-      "/displays/2024-05-22/index.html"
+      "/mri/mri-lab-setup-2023/index.html",
+      "/mri/mri-lab-setup-2024/index.html",
+      "/mri/analysis/bids.html",
+      "/mri/physiology/index.html",
+      "/mri/analysis/dicom_to_bids.html",
+      "/mri/analysis/fmriprep.html"
     ]
   }
 ]
