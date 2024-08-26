@@ -196,6 +196,6 @@ docker run -u $(id -u):$(id -g) --rm -it \
 
 ------------------------------------------------------------------------
 
-3.  If fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:
+4.  If fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:
 
     `--bold2t1w-init header`
