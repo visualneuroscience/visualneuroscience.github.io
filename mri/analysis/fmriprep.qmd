@@ -12,50 +12,47 @@ Link to [fMRIprep documentation](https://fmriprep.org/en/stable/)
 
 Link to [fMRIprep github](https://github.com/nipreps/fmriprep) (Useful information in the issues section about troubleshooting etc.)
 
-
 ## Reasons to use fMRIprep
 
-- fMRIprep is a useful tool to preprocess fMRI data in a manor that can be reproducible across research 
+-   fMRIprep is a useful tool to preprocess fMRI data in a manor that can be reproducible across research
 
-- Where possible fMRIprep should be used in preprocessing to limit the variability involved in preprocessing data 
+-   Where possible fMRIprep should be used in preprocessing to limit the variability involved in preprocessing data
 
-- fMRIprep follows the BIDS format see [here](https://visualneuroscience.github.io/mri/analysis/bids.html) on how to validate bids
+-   fMRIprep follows the BIDS format see [here](https://visualneuroscience.github.io/mri/analysis/bids.html) on how to validate bids
 
-&nbsp;
+ 
 
 ### Permissions
 
+-   fMRIprep is run as a docker container meaning that you will need to be added to the docker group on the server before running it
 
-- fMRIprep is run as a docker container meaning that you will need to be added to the docker group on the server before running it 
+-   Before running fMRIprep it is necessary to create the folders that fMRIprep uses
 
-- Before running fMRIprep it is necessary to create the folders that fMRIprep uses 
-    1. Scratch directory (meaning just the temporary output files for fMRIprep)
-    2. Output directory (The actual output of fMRIprep)
+    1.  Scratch directory (meaning just the temporary output files for fMRIprep)
+    2.  Output directory (The actual output of fMRIprep)
 
-- To create the folders first run the following:
+-   To create the folders first run the following:
 
-```bash
+``` bash
 mkdir $niidir/../fmriprep_tmp
 mkdir $niidir/derivatives/fmriprep
 ```
 
-- To avoid the output folders of fMRIprep being owned by `root` you can run fMRIprep with the following flags:
+-   To avoid the output folders of fMRIprep being owned by `root` you can run fMRIprep with the following flags:
 
     `docker run -u $(id -u):$(id -g) ...`
 
-    
-<span style="font-variant:small-caps;"><font size="-1">NOTE: using `fitlins` does not currently work using the flag `-u $(id -u):$(id -g)` the user must specify their user id directly e.g. `-u 1087:1092` see post about fitlins</font></span>
+<font size="-1">NOTE: using `fitlins` does not currently work using the flag `-u $(id -u):$(id -g)` the user must specify their user id directly e.g. `-u 1087:1092` see post about fitlins</font>
 
-
-&nbsp;
+ 
 
 ## Example fMRIprep scripts
 
+### fMRIprep without prerun FreeSurfer
 
-### fMRIprep without prerun FreeSurfer 
 An example script of fMRIprep when there is no prerun FreeSurfer
 
-```bash
+``` bash
 export PATH=~/local/python2/:$PATH
 export FREESURFER_HOME=/usr/local/freesurfer_7.3.2
 export MATLAB=/usr/bin/matlab
@@ -73,8 +70,8 @@ rsync -a -v $niidir/$subject/ses-1/anat/*T1w.nii.gz $niidir/../all_anat_faced/
 scansForDefacing=$(ls -1 $niidir/$subject/ses-1/anat/*.nii.gz)
 echo $scansForDefacing
 for theScan in $scansForDefacing; do
-	echo "defacing scan $theScan"
-	pydeface $theScan --outfile $theScan --force
+    echo "defacing scan $theScan"
+    pydeface $theScan --outfile $theScan --force
 done
 #--- mriqc (current v 23.0.1) ---#
 docker run -it --rm -v $niidir:/data:ro -v $niidir/derivatives/mriqc:/out nipreps/mriqc:23.0.1 /data /out participant --participant_label $subject --no-sub
@@ -92,14 +89,13 @@ docker run -u $(id -u):$(id -g) --rm -it \
         --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w
 ```
 
-
-&nbsp;
-
+ 
 
 ### fMRIprep prerun FreeSurfer (no hires)
+
 An example script with prerun FreeSurfer (without hires options and biascorrecing the anatomical scan):
 
-```bash
+``` bash
 export PATH=~/local/python2/:$PATH
 export FREESURFER_HOME=/usr/local/freesurfer_7.3.2
 export MATLAB=/usr/bin/matlab
@@ -117,8 +113,8 @@ rsync -a -v $niidir/$subject/ses-1/anat/*T1w.nii.gz $niidir/../all_anat_faced/
 scansForDefacing=$(ls -1 $niidir/$subject/ses-1/anat/*.nii.gz)
 echo $scansForDefacing
 for theScan in $scansForDefacing; do
-	echo "defacing scan $theScan"
-	pydeface $theScan --outfile $theScan --force
+    echo "defacing scan $theScan"
+    pydeface $theScan --outfile $theScan --force
 done
 #--- mriqc (current v 23.0.1) ---#
 docker run -it --rm -v $niidir:/data:ro -v $niidir/derivatives/mriqc:/out nipreps/mriqc:23.0.1 /data /out participant --participant_label $subject --no-sub
@@ -139,32 +135,32 @@ docker run -u $(id -u):$(id -g) --rm -it \
         /data /out participant --fs-subjects-dir /sub-dir --participant-label $subject \
         --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w
 ```
-&nbsp;
 
-&nbsp;
+ 
 
+ 
 
-## Troubleshooting 
+## Troubleshooting
 
-1. I ran fMRIprep but no distortion correction happened
+1.  I ran fMRIprep but no distortion correction happened
 
-    > fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri). 
-   
-   - If your fmap .json file is using the BIDS uri specification in the `IntendedFor` field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.
-    
+    > fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri).
+
+    -   If your fmap .json file is using the BIDS uri specification in the `IntendedFor` field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.
+
     BIDS uri spec:
 
-    ```json
+    ``` json
     "IntendedFor": [
         "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
         "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz", 
         etc
         ]
     ```
-    
+
     Older fmap spec:
 
-    ```json
+    ``` json
     "IntendedFor": [
         "ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
         "ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz",
@@ -172,36 +168,34 @@ docker run -u $(id -u):$(id -g) --rm -it \
         ]
     ```
 
-&nbsp;
+ 
 
----
+------------------------------------------------------------------------
 
-&nbsp;
+ 
 
-2. I ran fMRIprep and the distortion correction of the data is too extreme 
-
+2.  I ran fMRIprep and the distortion correction of the data is too extreme
 
 <center>
 
-![An example of poor distortion correction](./poor_DC.png){width=60%}
+![An example of poor distortion correction](./poor_DC.png){width="60%"}
 
 </center>
 
-
 > This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven't been tested)
 
-&nbsp;
+ 
 
----
+------------------------------------------------------------------------
 
-&nbsp;
+ 
 
-3. If using already run FreeSurfer `recon-all` output and have specified an `expert-opts` file then fMRIprep shows multiple errors 
-    
-    - In the directory that has the prerun `recon-all` there is a folder `scripts` that saves the `expert-opts` file. Removing this file allows fMRIprep to run 
+3.  If using already run FreeSurfer `recon-all` output and have specified an `expert-opts` file then fMRIprep shows multiple errors
 
+    -   In the directory that has the prerun `recon-all` there is a folder `scripts` that saves the `expert-opts` file. Removing this file allows fMRIprep to run
 
+------------------------------------------------------------------------
 
+3.  If fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:
 
-
-
+    `--bold2t1w-init header`
