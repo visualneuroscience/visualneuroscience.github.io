@@ -3,7 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Custom-built chin rests
 description: "Information about producing a chinrest for behavioral experiments"
-author: Natalia Zaretskaya
+author: NZ
 date: 08/26/2024
 ---
 

@@ -1,0 +1,42 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Neurodesktop access
+description: "How to use Neurodesktop on the server"
+image: images/clipboard-3609792068.png
+author: NZ
+date: 08/27/2024
+---
+
+Neurodesktop is a Linux environment specifically developed for open and reproducinble neuroimaging. For details, see <https://www.neurodesk.org>
+
+To use the neurodesktop on our lab's server, please follow the steps below.
+
+Neurodesktop is accessible from the office, via VPN (for employees only, or for those who's student account has been explicitly activated for server access by the IT), and in the student computer room.
+
+1.  In your browser, type https://{server IP}:800\
+    \
+    Please note that you will receive a browser warning for the SSL certificate because it is a local address with a self-signed certificate created by our technical staff. You can safely ignore this warning. To proceed, click on "Advanced" and then "Continue to website" or a similar option (this may vary slightly depending on your browser). Below is Safari example.
+
+    ![](images/clipboard-2094179120.png){width="400"}
+
+    ![](images/clipboard-1188963608.png){width="400"}
+
+2.  After you sign up, You account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us. \@Lab members: if you use the same account name as your local server user account, you will automatically have access permissions for all your data via the serverpath /storage/neurodesk/users/{username}. For example, Natalia should use natalia_nv as username.
+
+3.  Once your account is authorized, you can sing in with your credentials and you will see a JupyterLab session. You can start the neurodesktop by clicking on the icon. The session can be suspended and resumed later, with all your applications remaining as you left them.
+
+    ![](images/clipboard-3633669417.png){width="400"}
+
+    You should see the desktop with all the apps:
+
+    ![](images/clipboard-3609792068.png){width="400"}\
+
+4.  If you don't have a local server account, you can transfer the data via nextcloud client, which is included in neurodsktop
+
+    ![](images/clipboard-3813941447.png){width="400"}
+
+    \
+    There are different Neurodesktop versions available on the JupyterHub. If you need another Jupyter Notebook or another version of the Neurodesk, please let us know. Additionally, if anything is not working as expected, do not hesitate to report it.
+
+    Enjoy!\

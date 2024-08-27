@@ -53,6 +53,7 @@
       "/mri/mri-lab-setup-2024/index.html",
       "/mri/analysis/bids.html",
       "/mri/physiology/index.html",
+      "/mri/neurodesktop/neurodesktop.html",
       "/mri/analysis/dicom_to_bids.html",
       "/mri/analysis/fmriprep.html"
     ]
