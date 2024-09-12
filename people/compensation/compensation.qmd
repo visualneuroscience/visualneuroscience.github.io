@@ -3,7 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Participant compensation
 description: "How to provide your participants with money or course credit for experiment participation"
-image: images/clipboard-3609792068.png
+image: images/clipboard-516230918.png
 author: NZ
 date: 09/23/2024
 ---
