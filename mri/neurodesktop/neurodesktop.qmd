@@ -8,7 +8,7 @@ author: NZ
 date: 08/27/2024
 ---
 
-Neurodesktop is a Linux environment specifically developed for open and reproducinble neuroimaging. For details, see <https://www.neurodesk.org>
+Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see <https://www.neurodesk.org>
 
 To use the neurodesktop on our lab's server, please follow the steps below.
 
