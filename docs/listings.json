@@ -9,9 +9,9 @@
     "listing": "/people.html",
     "items": [
       "/people/leaving/index.html",
+      "/people/compensation/compensation.html",
       "/people/coffee/index.html",
-      "/people/stipends/index.html",
-      "/people/compensation/compensation.html"
+      "/people/stipends/index.html"
     ]
   },
   {
@@ -24,9 +24,9 @@
   {
     "listing": "/behavioral.html",
     "items": [
-      "/behavioral/2024-05-22/index.html",
+      "/behavioral/chinrests/chinrests.html",
       "/behavioral/2024-05-23/index.html",
-      "/behavioral/chinrests/chinrests.html"
+      "/behavioral/2024-05-22/index.html"
     ]
   },
   {
@@ -50,13 +50,13 @@
   {
     "listing": "/mri.html",
     "items": [
-      "/mri/mri-lab-setup-2023/index.html",
       "/mri/mri-lab-setup-2024/index.html",
-      "/mri/analysis/bids.html",
       "/mri/physiology/index.html",
       "/mri/neurodesktop/neurodesktop.html",
       "/mri/analysis/dicom_to_bids.html",
-      "/mri/analysis/fmriprep.html"
+      "/mri/analysis/fmriprep.html",
+      "/mri/analysis/bids.html",
+      "/mri/mri-lab-setup-2023/index.html"
     ]
   }
 ]

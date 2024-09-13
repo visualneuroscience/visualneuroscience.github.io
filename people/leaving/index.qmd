@@ -1,3 +1,13 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Things to do if you are leaving the lab
+description: "How to provide your participants with money or course credit for experiment participation"
+image: images/clipboard-4025791976.png
+author: NZ
+date: 09/23/2024
+---
+
 # Things to do if you are leaving the lab
 
 Leaving can be sad. In addition, there is a ton of boring admin work to be done.

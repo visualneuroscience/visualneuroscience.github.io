@@ -1,14 +1,21 @@
-# BIDS for behavioral studies
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: BIDS for behavioral studies
+description: "How to store your data in bids structure if you are using psychtoolbox"
+author: CY
+date: 05/23/2024
+---
 
 ## Resources
 
 [Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/behavioral-experiments.html)
 
-## Software: 
+## Software:
 
-[bids-matlab](https://github.com/bids-standard/bids-matlab) | 
+[bids-matlab](https://github.com/bids-standard/bids-matlab) \|
 
-[bids-starter-kit on GitHub](https://github.com/bids-standard/bids-starter-kit) | 
+[bids-starter-kit on GitHub](https://github.com/bids-standard/bids-starter-kit) \|
 
 [JSONio on GitHub](https://github.com/gllmflndn/JSONio)
 
@@ -22,25 +29,25 @@ create_events_tsv_json_full.m
 
 ### Before finalizing everything:
 
-createBIDS_participants_tsv.m    
+createBIDS_participants_tsv.m
 
 createBIDS_dataset_description_json.m
 
 ### Pipeline for transriv project as an example
 
-- Add ‘transriv-bids’ to matlab path
+-   Add ‘transriv-bids’ to matlab path
 
-- Go to the root_dir or use the full path of root_dir as input to the functions
+-   Go to the root_dir or use the full path of root_dir as input to the functions
 
-- Preprocess data from a subject: 
+-   Preprocess data from a subject:
 
 `createBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)`
 
-- Create dataset files by running `transriv_finalizeBIDS.m` (when data collection is finished)
+-   Create dataset files by running `transriv_finalizeBIDS.m` (when data collection is finished)
 
 The folder structure based on BIDS:
 
-```
+```         
 root_dir
   └─ ‘transriv’
         ├─ participants.xlsx
@@ -59,4 +66,4 @@ root_dir
                          └─ sub-S001_ses-Rivalry_run-GG_beh.tsv
 ```
 
-[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/behavioral/2024-05-23) 
+[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/behavioral/2024-05-23)

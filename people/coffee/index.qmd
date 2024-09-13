@@ -1,4 +1,12 @@
-# Coffee time
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Coffee time
+description: "Coffee information"
+image: images/clipboard-4025791976.png
+author: NZ
+date: 08/26/2024
+---
 
 ## History
 

@@ -1,4 +1,12 @@
-# Gamma correction
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Gamma correction
+description: "How to measure monitor gamma and apply it in visual experiments"
+image: images/clipboard-1520472544.png
+author: NZ
+date: 08/26/2024
+---
 
 ## Background
 
@@ -8,13 +16,13 @@ In visual psychophysics, we want to have a linear mapping between the input and 
 
 ## You will need
 
--   Light meter device, like PCA-L335 (can be found in PTA's office). There are other similar devices available[^index-1].
+-   Light meter device, like PCA-L335 (can be found in PTA's office). There are other similar devices available[^1].
 
     ![](images/clipboard-3209665526.png)
 
 -   A computer with two independent screens, one output screen and one experimenter screen (can be a laptop with an external screen) running psychtoolbox. For this procedure it does not have to be a linux computer, since timing is not important.
 
-[^index-1]: There are also fancy spectrometers ranging from 200 to 20000 Euros in price, which can be connected to the computer via a USB. This allows to store the color spectra automatically. For simple gamma correction a lux meter is enough though.
+[^1]: There are also fancy spectrometers ranging from 200 to 20000 Euros in price, which can be connected to the computer via a USB. This allows to store the color spectra automatically. For simple gamma correction a lux meter is enough though.
 
 ## General info
 

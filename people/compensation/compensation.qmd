@@ -24,5 +24,8 @@ Participants can always be compensated with course credit (=Versuchsscheine) if 
 Reimbursement is done via the bank transfer by the University to participants' bank accounts. Therefore, it is useful to warn them that it will take some weeks until they receive the money. To start the reimbursement process, follow these steps.
 
 1.  Download the example [excel sheet](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/people/compensation/files/AWE_Form_example.xlsx)
-2.  Fill out one row per participant with the information they provided (you can create your own dedicated form for that). Ask Natalia for the correct value of the Innenauftrag field, since this varies from study to study. **Attention! The bank information should be 100% correct, otherwise there is an administrative disaster. Therefore, triple-check with participants.**
+2.  Fill out one row per participant with the information they provided (you can create your own dedicated form for that). Ask Natalia for the correct value of the Innenauftrag field, since this varies from study to study.
+    -   The study name can not exceed a certain number of symbols, so please keep it short (fMRI studies can use their MRI lab abbreviations: pacmond, clav, deka, etc.)
+    -   Note: Although it may seem meaningless, you need to get bot **IBAN and BIC** from you subject (even if they try to convince you otherwise).
+    -   **Attention! The bank information should be 100% correct, otherwise there is an administrative disaster. Therefore, triple-check with participants.**
 3.  Once you collect a sufficient number of participants, or once every 1-2 weeks, send this sheet to the secretary's office, and they will take care of the rest.

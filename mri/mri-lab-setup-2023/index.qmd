@@ -1,30 +1,35 @@
-# MRI LAB
-Information about running experiments in the MRI lab
-(before the new computer arrived!)
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Old MRI setup
+description: "Information about running experiments in the MRI lab (before the new computer arrived!)"
+image: images/316896326-d1109ced-7fe1-482c-9d28-8d54a82cb805.png
+author: AA
+date: 01/01/2023
+---
 
 ## General setup information:
 
-- Make sure to switch to the Linux computer (the button number 2 under the monitor)
-- Login with credentials you received
+-   Make sure to switch to the Linux computer (the button number 2 under the monitor)
+-   Login with credentials you received
 
 ![image](./316896390-c2262ad2-04dc-48b0-97cb-4ab0d373b50c.png)
 
-- Once logged in:
-- If you plan to use MATLAB, you’re going to need internet connection: 
-Einstellungen -> Netzwerk -> Kabel -> Here you can choose between Internet or Eyelink (it should default to the internet)
-- Check if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):
+-   Once logged in:
+-   If you plan to use MATLAB, you’re going to need internet connection: Einstellungen -\> Netzwerk -\> Kabel -\> Here you can choose between Internet or Eyelink (it should default to the internet)
+-   Check if the trigger box is connected to the computer (and at the correct USB Port is used – bottom right):
 
 ![image](./316896326-d1109ced-7fe1-482c-9d28-8d54a82cb805.png)
 
-- Start MATLAB / Octave and test the trigger box with the script response_box_check.m
+-   Start MATLAB / Octave and test the trigger box with the script response_box_check.m
 
 ![image](./316895640-7f4fa294-89fc-4fe1-a430-589a4f116768.png)
 
-- 8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed
-- On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent.
-
+-   8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed
+-   On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent.
 
 ## Experimental Protocol
-- Participants can fill out the forms in the lobby. You can also instruct them there.
-- Paperwork: ...
-- Snellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!
+
+-   Participants can fill out the forms in the lobby. You can also instruct them there.
+-   Paperwork: ...
+-   Snellen chart is available behind one of the changing rooms. There, an MRI-compatible googles are available as well, with lenses of different diopters in the suitcase. The goggles and lenses should be disinfected before and after each use!

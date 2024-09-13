@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="NZ">
+<meta name="dcterms.date" content="2024-08-26">
+<meta name="description" content="How to measure monitor gamma and apply it in visual experiments">
 
-<title>Visual Neuroscience Lab</title>
+<title>Visual Neuroscience Lab - Gamma correction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,25 +142,53 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gamma-correction" id="toc-gamma-correction" class="nav-link active" data-scroll-target="#gamma-correction">Gamma correction</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#you-will-need" id="toc-you-will-need" class="nav-link" data-scroll-target="#you-will-need">You will need</a></li>
   <li><a href="#general-info" id="toc-general-info" class="nav-link" data-scroll-target="#general-info">General info</a></li>
   <li><a href="#operation" id="toc-operation" class="nav-link" data-scroll-target="#operation">Operation</a></li>
   <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Gamma correction</h1>
+</div>
+
+<div>
+  <div class="description">
+    How to measure monitor gamma and apply it in visual experiments
+  </div>
+</div>
 
 
+<div class="quarto-title-meta column-page-left">
 
-<section id="gamma-correction" class="level1">
-<h1>Gamma correction</h1>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>NZ </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 26, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>Typical screens have nonlinear outputs. This means that if your psychtoolbox or python script gives a command to show luminance values in liner steps, e.g.&nbsp;0, 0.25, 0.5, 0.75, 1.0, the measured monitor light emittance will not be linearly spaced. For details, see e.g.&nbsp;<a href="https://www.eizo.com/library/basics/lcd_display_gamma/" class="uri">https://www.eizo.com/library/basics/lcd_display_gamma/</a></p>
@@ -203,7 +234,6 @@ ul.task-list li input[type="checkbox"] {
 <p>In PsychoPy, you can indicate a gamma value in Monitor Center</p>
 
 
-</section>
 </section>
 
 
