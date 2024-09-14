@@ -13,6 +13,6 @@ editor: visual
 
 # Neurodesktop
 
-\[tba\]
+We have activated server access via neurodesktop for students and those lap members who would like to use it. Please see the [dedicated page](https://visualneuroscience.github.io/mri/neurodesktop/neurodesktop.html) in the MRI section.
 
 # 
