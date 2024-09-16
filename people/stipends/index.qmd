@@ -3,7 +3,6 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Stipends and prizes for master students
 description: "This is a list of resources with stipends and prizes you can apply for"
-image: images/clipboard-1520472544.png
 author: NZ
 date: 08/26/2024
 ---

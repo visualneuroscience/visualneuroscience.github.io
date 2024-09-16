@@ -3,7 +3,6 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Vision tests
 description: "How to conduct vision tests"
-image: images/clipboard-4025791976.png
 author: CY
 date: 05/22/2024
 ---
