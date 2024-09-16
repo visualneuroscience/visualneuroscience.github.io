@@ -146,7 +146,7 @@ Alternatively start psychopy with the `-c` flag
 
 ### Psychtoolbox
 
-Differently from PsychoPy, PsychToolbox under Linux handles multiple keyboards independently. It is therefore important that your PsychToolbox script reads scanner trigger (Key '5%') and button box input from the correct keyboard (Trigger Box). To check the Keyboard ID of the Trigger Box and its name, run "[response_box_check.m](https://visualneuroscience.github.io/mri/mri-lab-setup-2024/response_box_check.m)" prior to putting the subject into the scanner. Currently, the keybaord name is 'Current Designs, Inc. 932' , but the Keyboard ID can vary depending on other devices that are plugged in.
+Differently from PsychoPy, PsychToolbox under Linux handles multiple keyboards independently. It is therefore important that your PsychToolbox script reads scanner trigger (Key '5%') and button box input from the correct keyboard (Trigger Box). To check the Keyboard ID of the Trigger Box and its name, run "[response_box_check.m](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/mri/mri-lab-setup-2024/response_box_check.m)" prior to putting the subject into the scanner. Currently, the keybaord name is 'Current Designs, Inc. 932' , but the Keyboard ID can vary depending on other devices that are plugged in.
 
 Here are the steps:
 
