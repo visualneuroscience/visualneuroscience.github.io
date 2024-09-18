@@ -1,0 +1,32 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Scientific writing in practice
+description: "Practical recommendations for preparing scientific manuscripts, thesis papers, reports, etc."
+author: NZ
+date: 09/18/2024
+---
+
+# Graphs
+
+-   Software for making artwork for figures: PowerPoint, Inkscape (advanced functionality)
+-   Graphs: R and python packages
+-   Pasting graphs into the text
+    -   as bitmaps/jpegs, not as an Microsoft graphical object
+    -   with "In line with text" option (to prevent figures/graphs from moving around when text is being edited)
+
+# Text
+
+-   Introduction structure as an ice cream cone: \<3 form more general to more specific. The cone should be "pointing" exactly at your research question
+-   Discussion: from more important to less important
+-   Throughout the text: use "working" headings for each paragraph that will be deleted later. They are useful for structuring the thoughts and the text. The heading should answer the question "what is this paragraph about?"
+-   Text structure resamples a computer program.
+    -   There are specific building blocks that repeat. Within the paragraph, it may be "first, second, third". Across the paragraphs it may be "The first/second/third phase of the experiment consisted of... ".
+    -   Listings of different things should have identical and parallel grammatical structure. Bad example: *"The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape.  The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape"*
+-   Text layout:
+    -   Use headings and subheadings function in MS Word
+        -   Useful for navigation
+        -   Simplifies formatting
+    -   Add page numbers!!!
+    -   For article manuscripts: also add line numbers
+-   #reading recommendation to avoid complex and bulky text: <https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf>
