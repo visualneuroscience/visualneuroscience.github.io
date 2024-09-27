@@ -132,7 +132,11 @@ editor: visual
 
 ### Psychopy
 
--   Start psychopy by opening the terminal and typing Psychopy-2024
+-   Start psychopy by opening the terminal and typing Psy and the pressing "Tab"
+
+-   You will see multiple PsychoPy versions available listed ad bash scripts (.sh extension)
+
+-   Choose the version you need and run it
 
 -   Usually psychopy starts by asking to open a .psyexp file so just open the one you have or if using the coder only:
 
