@@ -6,9 +6,20 @@
     ]
   },
   {
+    "listing": "/people.html",
+    "items": [
+      "/people/compensation/compensation.html",
+      "/people/leaving/index.html",
+      "/people/writing/writing.html",
+      "/people/coffee/index.html",
+      "/people/stipends/index.html"
+    ]
+  },
+  {
     "listing": "/mri.html",
     "items": [
       "/mri/mri-lab-setup-2024/index.html",
+      "/mri/3D-prints/3d-prints.html",
       "/mri/neurodesktop/neurodesktop.html",
       "/mri/analysis/dicom_to_bids.html",
       "/mri/analysis/fmriprep.html",
@@ -24,15 +35,10 @@
     ]
   },
   {
-    "listing": "/labmeeting.html",
+    "listing": "/contribute.html",
     "items": [
-      "/labmeeting/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/members.html",
-    "items": [
-      "/members/server/index.html"
+      "/contribute/index.html",
+      "/contribute/rstudio/index.html"
     ]
   },
   {
@@ -44,20 +50,15 @@
     ]
   },
   {
-    "listing": "/contribute.html",
+    "listing": "/labmeeting.html",
     "items": [
-      "/contribute/rstudio/index.html",
-      "/contribute/index.html"
+      "/labmeeting/2024-05-22/index.html"
     ]
   },
   {
-    "listing": "/people.html",
+    "listing": "/members.html",
     "items": [
-      "/people/leaving/index.html",
-      "/people/compensation/compensation.html",
-      "/people/writing/writing.html",
-      "/people/coffee/index.html",
-      "/people/stipends/index.html"
+      "/members/server/index.html"
     ]
   }
 ]
