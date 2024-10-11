@@ -9,6 +9,8 @@ editor: visual
 
 (tested on **RStudio 2024.04.2** Build 764 for OSX)
 
+Note: You need to have git installed and you need to generate a personal authentication token in your github account to be able to push your changes to the remote repo.
+
 This has an advantage that you can edit .qmd files in visual mode and paste screenshots without having to explicitly save and link images.
 
 1.  Go to File -\> New Project
@@ -33,3 +35,15 @@ This has an advantage that you can edit .qmd files in visual mode and paste scre
     ![](images/clipboard-974248695.png)
 
 7.  Every time you start editing the R project, first press "Pull" to make sure your local version contains all the most recent changes, which may have been made by others.
+
+# Note on Windows
+
+The difficulty on windows PC in the office has been the extreme slowness of the Git Gui window. The solution is to use the terminal (not the R console!) to commit changes and push:
+
+``` bash
+git add *  
+
+git commit -m "yourmessage"  
+
+git push
+```
