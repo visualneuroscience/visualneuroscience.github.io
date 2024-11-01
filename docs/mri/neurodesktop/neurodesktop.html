@@ -137,11 +137,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general">General</a></li>
+  <li><a href="#lab-members" id="toc-lab-members" class="nav-link" data-scroll-target="#lab-members">Lab members</a>
+  <ul class="collapse">
+  <li><a href="#folder-mappings-left-is-server-right-is-neurodesk" id="toc-folder-mappings-left-is-server-right-is-neurodesk" class="nav-link" data-scroll-target="#folder-mappings-left-is-server-right-is-neurodesk">Folder mappings: (left is server right is neurodesk)</a></li>
+  <li><a href="#using-freesurferview-with-storage-data" id="toc-using-freesurferview-with-storage-data" class="nav-link" data-scroll-target="#using-freesurferview-with-storage-data">Using FreeSurfer/View with <code>/storage</code> Data</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -155,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -182,14 +193,19 @@ ul.task-list li input[type="checkbox"] {
 <p>Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see <a href="https://www.neurodesk.org" class="uri">https://www.neurodesk.org</a></p>
 <p>To use the neurodesktop on our lab’s server, please follow the steps below.</p>
 <p>Neurodesktop is accessible from the office, via VPN (for employees only, or for those who’s student account has been explicitly activated for server access by the IT), and in the student computer room.</p>
+<section id="general" class="level1">
+<h1>General</h1>
 <ol type="1">
-<li><p>In your browser, type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a></p></li>
-<li><p>After you sign up, You account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us. @Lab members: if you use the same account name as your local server user account, you will automatically have access permissions for all your data via the serverpath /storage/neurodesk/users/{username}. For example, Natalia should use natalia_nv as username.</p></li>
+<li><p>In your browser, type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a> and sign up for a account</p></li>
+<li><p>After you sign up, You account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us. @Lab members: please use the same account name as your local server user account. That way you will automatically have access permissions for all your data via the serverpath /storage/neurodesk/users/{username}. For example, Natalia should use natalia_nv as username.</p></li>
 <li><p>Once your account is authorized, you can sing in with your credentials and you will see a JupyterLab session. You can start the neurodesktop by clicking on the icon. The session can be suspended and resumed later, with all your applications remaining as you left them.</p>
 <p><img src="images/clipboard-3633669417.png" class="img-fluid" width="400"></p>
 <p>You should see the desktop with all the apps:</p>
 <p><img src="images/clipboard-3609792068.png" class="img-fluid" width="400"><br>
 </p></li>
+<li><p>Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:</p>
+<p><br>
+<code>singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg</code> [your fitlins commands]</p></li>
 <li><p>If you don’t have a local server account, you can transfer the data via nextcloud client, which is included in neurodsktop</p>
 <p><img src="images/clipboard-3813941447.png" class="img-fluid" width="400"></p>
 <p><br>
@@ -197,8 +213,27 @@ There are different Neurodesktop versions available on the JupyterHub. If you ne
 <p>Enjoy!<br>
 </p></li>
 </ol>
+</section>
+<section id="lab-members" class="level1">
+<h1>Lab members</h1>
+<section id="folder-mappings-left-is-server-right-is-neurodesk" class="level2">
+<h2 class="anchored" data-anchor-id="folder-mappings-left-is-server-right-is-neurodesk">Folder mappings: (left is server right is neurodesk)</h2>
+<p><br>
+<code>/storage -&gt; /storage</code><br>
+<code>/storage/neurodesk/shared -&gt; /shared</code><br>
+<code>/storage/neurodesk/users/{username} -&gt; /home/jovyan</code></p>
+<p>Only these three folders are persistent.</p>
+</section>
+<section id="using-freesurferview-with-storage-data" class="level2">
+<h2 class="anchored" data-anchor-id="using-freesurferview-with-storage-data">Using FreeSurfer/View with <code>/storage</code> Data</h2>
+<p>To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows</p>
+<pre><code>ml freesurfer/7.4.1
+cd /storage
+freeview</code></pre>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
