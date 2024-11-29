@@ -4,3 +4,6 @@
 .Rhistory
 visualneuroscience.github.io.Rproj
 .DS_Store
+.Rdata
+.httr-oauth
+.quarto

@@ -142,11 +142,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general">General</a></li>
-  <li><a href="#lab-members" id="toc-lab-members" class="nav-link" data-scroll-target="#lab-members">Lab members</a>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#for-lab-members" id="toc-for-lab-members" class="nav-link" data-scroll-target="#for-lab-members">For lab members</a>
   <ul class="collapse">
   <li><a href="#folder-mappings-left-is-server-right-is-neurodesk" id="toc-folder-mappings-left-is-server-right-is-neurodesk" class="nav-link" data-scroll-target="#folder-mappings-left-is-server-right-is-neurodesk">Folder mappings: (left is server right is neurodesk)</a></li>
-  <li><a href="#using-freesurferview-with-storage-data" id="toc-using-freesurferview-with-storage-data" class="nav-link" data-scroll-target="#using-freesurferview-with-storage-data">Using FreeSurfer/View with <code>/storage</code> Data</a></li>
+  <li><a href="#for-interfacing-with-the-folders-on-storage" id="toc-for-interfacing-with-the-folders-on-storage" class="nav-link" data-scroll-target="#for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -193,8 +193,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see <a href="https://www.neurodesk.org" class="uri">https://www.neurodesk.org</a></p>
 <p>To use the neurodesktop on our lab’s server, please follow the steps below.</p>
 <p>Neurodesktop is accessible from the office, via VPN (for employees only, or for those who’s student account has been explicitly activated for server access by the IT), and in the student computer room.</p>
-<section id="general" class="level1">
-<h1>General</h1>
+<section id="getting-started" class="level1">
+<h1>Getting started</h1>
 <ol type="1">
 <li><p>In your browser, type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a> and sign up for a account</p></li>
 <li><p>After you sign up, You account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us. @Lab members: please use the same account name as your local server user account. That way you will automatically have access permissions for all your data via the serverpath /storage/neurodesk/users/{username}. For example, Natalia should use natalia_nv as username.</p></li>
@@ -202,20 +202,39 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/clipboard-3633669417.png" class="img-fluid" width="400"></p>
 <p>You should see the desktop with all the apps:</p>
 <p><img src="images/clipboard-3609792068.png" class="img-fluid" width="400"><br>
-</p></li>
-<li><p>Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:</p>
+</p>
+<ol start="4" type="1">
+<li><p>You can use <a href="https://pslg-nv1.uni-graz.at/hub/home" class="uri">https://pslg-nv1.uni-graz.at/hub/home</a> to control your container (start/stop) or change your password.</p>
+<p>There are different Neurodesktop versions available on the JupyterHub. If you need another Jupyter Notebook or another version of the Neurodesk, please let us know. Additionally, if anything is not working as expected, do not hesitate to report it.</p></li>
+</ol>
+<p>Enjoy!<br>
+</p>
+<h1 id="general-info">General info</h1>
+<h2 id="storing-data" class="anchored" data-anchor-id="getting-started">Storing data</h2>
+<p>If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up</p>
+<h2 id="sharing-data" class="anchored">Sharing data</h2>
+<p>All neurodesk users have read and write permissions to <code>/shared</code> neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)</p>
+<h2 id="data-transfer" class="anchored">Data transfer</h2>
+<p>There are currently two alternatives</p>
+<ol type="1">
+<li><p>If you don’t have a local server account, you can transfer the data via nextcloud client, which is included in neurodsktop</p>
+<p><img src="images/clipboard-3813941447.png" class="img-fluid" width="400"></p></li>
+<li><p>“file upload” button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files</p>
+<p><img src="images/clipboard-1030227267.png" class="img-fluid"></p></li>
+</ol>
+<h2 id="using-freesurfer" class="anchored">Using FreeSurfer</h2>
+<p>To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows</p>
+<pre><code>ml freesurfer/7.4.1 cd /storage freeview</code></pre>
+<p>To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)</p>
+<pre><code>export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]</code></pre>
+<h2 id="using-fitlins" class="anchored">Using fitlins</h2>
+<p>Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:</p>
 <p><br>
 <code>singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg</code> [your fitlins commands]</p></li>
-<li><p>If you don’t have a local server account, you can transfer the data via nextcloud client, which is included in neurodsktop</p>
-<p><img src="images/clipboard-3813941447.png" class="img-fluid" width="400"></p>
-<p><br>
-There are different Neurodesktop versions available on the JupyterHub. If you need another Jupyter Notebook or another version of the Neurodesk, please let us know. Additionally, if anything is not working as expected, do not hesitate to report it.</p>
-<p>Enjoy!<br>
-</p></li>
 </ol>
 </section>
-<section id="lab-members" class="level1">
-<h1>Lab members</h1>
+<section id="for-lab-members" class="level1">
+<h1>For lab members</h1>
 <section id="folder-mappings-left-is-server-right-is-neurodesk" class="level2">
 <h2 class="anchored" data-anchor-id="folder-mappings-left-is-server-right-is-neurodesk">Folder mappings: (left is server right is neurodesk)</h2>
 <p><br>
@@ -224,12 +243,10 @@ There are different Neurodesktop versions available on the JupyterHub. If you ne
 <code>/storage/neurodesk/users/{username} -&gt; /home/jovyan</code></p>
 <p>Only these three folders are persistent.</p>
 </section>
-<section id="using-freesurferview-with-storage-data" class="level2">
-<h2 class="anchored" data-anchor-id="using-freesurferview-with-storage-data">Using FreeSurfer/View with <code>/storage</code> Data</h2>
-<p>To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows</p>
-<pre><code>ml freesurfer/7.4.1
-cd /storage
-freeview</code></pre>
+<section id="for-interfacing-with-the-folders-on-storage" class="level2">
+<h2 class="anchored" data-anchor-id="for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</h2>
+<p>You can create symbolic links in your home directory:</p>
+<p><code>ln -s /storage/ /home/jovyan/storage</code></p>
 
 
 </section>

@@ -14,7 +14,7 @@ To use the neurodesktop on our lab's server, please follow the steps below.
 
 Neurodesktop is accessible from the office, via VPN (for employees only, or for those who's student account has been explicitly activated for server access by the IT), and in the student computer room.
 
-# General
+# Getting started
 
 1.  In your browser, type [https://pslg-nv1.uni-graz.at](https://pslg-nv1.uni-graz.at/) and sign up for a account
 
@@ -28,37 +28,68 @@ Neurodesktop is accessible from the office, via VPN (for employees only, or for 
 
     ![](images/clipboard-3609792068.png){width="400"}\
 
-4.  Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
+    4.  You can use <https://pslg-nv1.uni-graz.at/hub/home> to control your container (start/stop) or change your password.
+
+        There are different Neurodesktop versions available on the JupyterHub. If you need another Jupyter Notebook or another version of the Neurodesk, please let us know. Additionally, if anything is not working as expected, do not hesitate to report it.
+
+    Enjoy!\
+
+    # General info
+
+    ## Storing data
+
+    If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up
+
+    ## Sharing data
+
+    All neurodesk users have read and write permissions to `/shared` neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)
+
+    ## Data transfer
+
+    There are currently two alternatives
+
+    1.  If you don't have a local server account, you can transfer the data via nextcloud client, which is included in neurodsktop
+
+        ![](images/clipboard-3813941447.png){width="400"}
+
+    2.  "file upload" button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files
+
+        ![](images/clipboard-1030227267.png)
+
+    ## Using FreeSurfer
+
+    To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
+
+    ```         
+    ml freesurfer/7.4.1 cd /storage freeview
+    ```
+
+    To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)
+
+    ```         
+    export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]
+    ```
+
+    ## Using fitlins
+
+    Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
 
     \
     `singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg` \[your fitlins commands\]
 
-5.  If you don't have a local server account, you can transfer the data via nextcloud client, which is included in neurodsktop
-
-    ![](images/clipboard-3813941447.png){width="400"}
-
-    \
-    There are different Neurodesktop versions available on the JupyterHub. If you need another Jupyter Notebook or another version of the Neurodesk, please let us know. Additionally, if anything is not working as expected, do not hesitate to report it.
-
-    Enjoy!\
-
-# Lab members
+# For lab members
 
 ## Folder mappings: (left is server right is neurodesk)
 
 \
 `/storage -> /storage`\
-`/storage/neurodesk/shared -> /shared` \
+`/storage/neurodesk/shared -> /shared`\
 `/storage/neurodesk/users/{username} -> /home/jovyan`
 
 Only these three folders are persistent.
 
-## Using FreeSurfer/View with `/storage` Data
+## For interfacing with the folders on storage
 
-To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
+You can create symbolic links in your home directory:
 
-```         
-ml freesurfer/7.4.1
-cd /storage
-freeview
-```
+`ln -s /storage/ /home/jovyan/storage`
