@@ -14,6 +14,8 @@ To use the neurodesktop on our lab's server, please follow the steps below.
 
 Neurodesktop is accessible from the office, via VPN (for employees only, or for those who's student account has been explicitly activated for server access by the IT), and in the student computer room.
 
+Each neurodesktop user is limited to 256GB RAM out of 504GB and to 20 out of 32 CPU cores.
+
 # Getting started
 
 1.  In your browser, type [https://pslg-nv1.uni-graz.at](https://pslg-nv1.uni-graz.at/) and sign up for a account

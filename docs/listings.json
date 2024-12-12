@@ -8,11 +8,44 @@
   {
     "listing": "/people.html",
     "items": [
-      "/people/compensation/compensation.html",
       "/people/leaving/index.html",
+      "/people/compensation/compensation.html",
       "/people/writing/writing.html",
       "/people/coffee/index.html",
       "/people/stipends/index.html"
+    ]
+  },
+  {
+    "listing": "/contribute.html",
+    "items": [
+      "/contribute/rstudio/index.html",
+      "/contribute/index.html"
+    ]
+  },
+  {
+    "listing": "/behavioral.html",
+    "items": [
+      "/behavioral/chinrests/chinrests.html",
+      "/behavioral/2024-05-23/index.html",
+      "/behavioral/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/members.html",
+    "items": [
+      "/members/server/index.html"
+    ]
+  },
+  {
+    "listing": "/labmeeting.html",
+    "items": [
+      "/labmeeting/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/displays.html",
+    "items": [
+      "/displays/2024-05-22/index.html"
     ]
   },
   {
@@ -26,39 +59,6 @@
       "/mri/analysis/bids.html",
       "/mri/physiology/index.html",
       "/mri/mri-lab-setup-2023/index.html"
-    ]
-  },
-  {
-    "listing": "/displays.html",
-    "items": [
-      "/displays/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/contribute.html",
-    "items": [
-      "/contribute/index.html",
-      "/contribute/rstudio/index.html"
-    ]
-  },
-  {
-    "listing": "/behavioral.html",
-    "items": [
-      "/behavioral/chinrests/chinrests.html",
-      "/behavioral/2024-05-23/index.html",
-      "/behavioral/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/labmeeting.html",
-    "items": [
-      "/labmeeting/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/members.html",
-    "items": [
-      "/members/server/index.html"
     ]
   }
 ]
