@@ -225,7 +225,9 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <h2 id="using-freesurfer" class="anchored">Using FreeSurfer</h2>
 <p>To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows</p>
-<pre><code>ml freesurfer/7.4.1 cd /storage freeview</code></pre>
+<pre><code>ml freesurfer/7.4.1
+cd /storage
+freeview</code></pre>
 <p>To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)</p>
 <pre><code>export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]</code></pre>
 <h2 id="using-fitlins" class="anchored">Using fitlins</h2>

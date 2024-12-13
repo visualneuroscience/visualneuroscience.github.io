@@ -63,7 +63,9 @@ Each neurodesktop user is limited to 256GB RAM out of 504GB and to 20 out of 32
     To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
 
     ```         
-    ml freesurfer/7.4.1 cd /storage freeview
+    ml freesurfer/7.4.1
+    cd /storage
+    freeview
     ```
 
     To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)
