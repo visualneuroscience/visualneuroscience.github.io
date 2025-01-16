@@ -4,7 +4,7 @@ geometry: margin=3cm
 title: fMRIprep analysis
 description: "Information about using fMRIprep to preprocess fMRI data"
 image: ./fMRIprep_pr.gif
-author: Adam Coates
+author: AC
 date: 07/08/2024
 ---
 

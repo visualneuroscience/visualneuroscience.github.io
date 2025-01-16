@@ -3,7 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: FreeSurfer FSFAST 
 description: "Information about running an FSFAST analysis on Neurodesk"
-author: Adam Coates
+author: AC
 image: ./neurodesk.png
 engine: knitr
 date: 01/16/2025
