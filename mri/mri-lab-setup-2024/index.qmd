@@ -122,7 +122,20 @@ editor: visual
 </center>
 
 -   8 lights on the left are blinking whenever the 8 buttons on the response boxes are being pressed
+
 -   On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent
+
+-   In case you are not getting the trigger box signal if pressing the buttons inside the scanner room, you might need to check the corresponding trigger box settings; for this press the trigger box front button and check the settings:
+
+    ![](images/clipboard-4162729877.png){width="600"}
+
+    -   The first should say "HHSC-xxxx" - the item between HHSC-2x4-D and HHSC-1x1-CYL (it got cropped on this photo by the refresh of the screen).
+
+    -   Then the USB should be selected
+
+    ![](images/clipboard-680179673.png){width="600"}
+
+    -   The last setting should be HID KEY 12345 (as in the picture above) if you want to use the regular current designs buttons
 
 ### Experimental Protocol
 
