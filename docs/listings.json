@@ -8,26 +8,25 @@
   {
     "listing": "/people.html",
     "items": [
-      "/people/leaving/index.html",
       "/people/compensation/compensation.html",
+      "/people/leaving/index.html",
       "/people/writing/writing.html",
       "/people/coffee/index.html",
       "/people/stipends/index.html"
     ]
   },
   {
-    "listing": "/contribute.html",
+    "listing": "/mri.html",
     "items": [
-      "/contribute/rstudio/index.html",
-      "/contribute/index.html"
-    ]
-  },
-  {
-    "listing": "/behavioral.html",
-    "items": [
-      "/behavioral/chinrests/chinrests.html",
-      "/behavioral/2024-05-23/index.html",
-      "/behavioral/2024-05-22/index.html"
+      "/mri/mri-lab-setup-2024/index.html",
+      "/mri/analysis/freesurfer FSFAST.html",
+      "/mri/3D-prints/3d-prints.html",
+      "/mri/neurodesktop/neurodesktop.html",
+      "/mri/analysis/dicom_to_bids.html",
+      "/mri/analysis/fmriprep.html",
+      "/mri/analysis/bids.html",
+      "/mri/physiology/index.html",
+      "/mri/mri-lab-setup-2023/index.html"
     ]
   },
   {
@@ -43,22 +42,24 @@
     ]
   },
   {
-    "listing": "/displays.html",
+    "listing": "/behavioral.html",
     "items": [
-      "/displays/2024-05-22/index.html"
+      "/behavioral/chinrests/chinrests.html",
+      "/behavioral/2024-05-23/index.html",
+      "/behavioral/2024-05-22/index.html"
     ]
   },
   {
-    "listing": "/mri.html",
+    "listing": "/contribute.html",
     "items": [
-      "/mri/mri-lab-setup-2024/index.html",
-      "/mri/3D-prints/3d-prints.html",
-      "/mri/neurodesktop/neurodesktop.html",
-      "/mri/analysis/dicom_to_bids.html",
-      "/mri/analysis/fmriprep.html",
-      "/mri/analysis/bids.html",
-      "/mri/physiology/index.html",
-      "/mri/mri-lab-setup-2023/index.html"
+      "/contribute/index.html",
+      "/contribute/rstudio/index.html"
+    ]
+  },
+  {
+    "listing": "/displays.html",
+    "items": [
+      "/displays/2024-05-22/index.html"
     ]
   }
 ]
