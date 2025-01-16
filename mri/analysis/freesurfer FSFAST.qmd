@@ -61,7 +61,9 @@ Link to [FreeSurfers FSFAST tutorial](https://surfer.nmr.mgh.harvard.edu/fswiki/
 
 However, FreeSurfer uses something called a **MATLAB runtime environment** 
 
-- MATLAB runtime environment is a way in which you can use FreeSurfer commands without having MATLAB directly installed
+- MATLAB runtime environment is smaller piece of software that **is** inside the FreeSurfer container
+
+- FreeSurfer commands can be run without the **whole** of MATLAB directly and instead use this "MATLAB runtime environment"
 
 
 :::
