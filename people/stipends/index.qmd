@@ -7,6 +7,8 @@ author: NZ
 date: 08/26/2024
 ---
 
+# Master
+
 ## Before or during your master's thesis
 
 ### NAWI - Leistungsstipendium
@@ -33,7 +35,7 @@ This is suitable if you would like to go to another lab and learn a new method t
 
 <https://biotechmedgraz.at/de/programme/lab-rotation-program/>
 
-## If you would like to apply for a PhD stipend after finishing your Master's thesis
+### If you would like to apply for a PhD stipend after finishing your Master's thesis
 
 There is a possibility to apply to the Austrian Academy of Sciences, but it has to be done well in advance:
 
@@ -51,4 +53,26 @@ IngeSt Prise in the category "Masterarbeit/Diplom"
 
 Advertised x1 per year via Email, look out for an email from Natalia
 
+Experience: We have been shortlisted several times, but without a final success
+
 <https://gnpoe.at/>
+
+# PhD
+
+## Josef-Krainer-Förderungspreis
+
+deadline typically in September
+
+Experience: awarded to one former doctoral student
+
+<http://www.steirisches-gedenkwerk.at/wissenschaftspreis/>
+
+## Initiative Gehirnforschung Steiermark
+
+IngeSt Prise in the category "Dissertation"
+
+<https://gehirnforschung.at/nachwuchsforderung/forschungspreis/>
+
+## Some stipends and fellowships are listed here:
+
+<https://stipendien.oeaw.ac.at/en/fellowships>
