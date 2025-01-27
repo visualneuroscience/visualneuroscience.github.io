@@ -14,7 +14,8 @@ about:
       href: https://neurovision.uni-graz.at
     - icon: calendar
       text: lab calendar
-      href: https://calendar.online/cadcb4379c842ce87f53    
+      href: https://calendar.online/cadcb4379c842ce87f53
+toc: false
 ---
 
 ### About
