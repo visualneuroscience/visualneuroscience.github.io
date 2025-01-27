@@ -234,9 +234,7 @@ figcaption{
 <ul>
 <li>The script should be located in <code>/shared/7T_analysis/anatomy</code></li>
 </ul>
-<ol start="0" type="1">
-<li>Open a terminal:</li>
-</ol>
+<p><strong>0. Open a terminal:</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./open_terminal.gif" class="img-fluid figure-img"></p>
@@ -244,9 +242,7 @@ figcaption{
 </figure>
 </div>
 <p>&nbsp;</p>
-<ol type="1">
-<li>Start the container</li>
-</ol>
+<p><strong>1. Start the container</strong></p>
 <ul>
 <li>The container can be started like so:</li>
 </ul>
@@ -272,9 +268,7 @@ figcaption{
 <li><p>This then means that once in side the container the path to my data is now <strong>mounted</strong> to a folder called <code>/derivative</code></p></li>
 <li><p>Put simply I create a link from my local folder <code>/home/jovyan/7t_auditory/bids/sub-a001/ses-1/</code> to a folder inside the container called <code>/derivatives</code></p></li>
 </ul>
-<ol start="2" type="1">
-<li>Once inside the container</li>
-</ol>
+<p><strong>2. Once inside the container</strong></p>
 <ul>
 <li>To know if you are in the container or not you will see the following:</li>
 </ul>
@@ -287,16 +281,12 @@ figcaption{
 <ul>
 <li>This means that we are in our own environment and that we can run the command necessary to start the anatomical preprocessing</li>
 </ul>
-<ol start="3" type="1">
-<li>Export FreeSurfer subjects directory</li>
-</ol>
+<p><strong>3. Export FreeSurfer subjects directory</strong></p>
 <ul>
 <li>This command should be the same for everyone</li>
 </ul>
 <p><code>export $SUBJECTS_DIR=/derivatives/mprage_recon-all/freesurfer</code></p>
-<ol start="4" type="1">
-<li>Run the script</li>
-</ol>
+<p><strong>4. Run the script</strong></p>
 <ul>
 <li>We need to now start the preprocessing script</li>
 </ul>
@@ -320,9 +310,7 @@ Recall
 <li>Therefore, we can run the script like so:</li>
 </ul>
 <p><code>mp2rage_recon-all.py --inv2 /derivatives/anat/inv2.nii --uni /derivatives/anat/uni.nii</code></p>
-<ol start="5" type="1">
-<li>The script will now start and run everything needed to run the anatomical analysis</li>
-</ol>
+<p><strong>5. The script will now start and run everything needed to run the anatomical analysis</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -344,7 +332,7 @@ multiple sessions?
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
 <ul>
-<li>The files might need to be <em>unzipped</em> first. This is becuase the script uses SPM12 and that this is only able to read files that end in <code>.nii</code> and not <code>.nii.gz</code></li>
+<li>The files will need to be <em>unzipped</em> first. This is becuase the script uses SPM12 and that this is only able to read files that end in <code>.nii</code> and not <code>.nii.gz</code></li>
 </ul>
 <p>Run the commands in a new terminal window:</p>
 <p><code>ml freesurfer</code></p>
