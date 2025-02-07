@@ -14,7 +14,7 @@ Participants can always be compensated with course credit (=Versuchsscheine) if 
 
 1.  Download the form available on the Insitute's [sharepoint](https://sharepoint.uni-graz.at/sites/602/untersuchen/_layouts/15/WopiFrame2.aspx?sourcedoc=%7BFAA90B5A-5D5D-4DA2-A636-9FD2AE63A8D9%7D&file=Bestätigung_Untersuchung.pdf&action=default) and fill it out with your study's data (study name, your name, supervisor's name).
 2.  Print some forms (number equal to the number of participants you will test)
-3.  Put a round stamp on each form in the Testothek (Universitätsplatz 2, top floor)
+3.  Put a round stamp on each form. Round stamps are available at the secretary's office or in the Testothek (Universitätsplatz 2, top floor)
 4.  Once a subject finished the experiment, fill out the rest of the data, put a date, sign, and give it to the subject.
 
 ![](images/clipboard-516230918.png)
