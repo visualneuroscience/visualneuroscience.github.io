@@ -1,8 +1,0 @@
----
-fontsize: 12pt
-geometry: margin=3cm
-title: "Providing Participants with their T1w File"
-description: "Information about how to provide participants with their T1w image"
-author: MG
-date: 08/03/2025
----
