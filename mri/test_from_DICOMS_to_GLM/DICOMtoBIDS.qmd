@@ -16,4 +16,4 @@ date: 08/03/2025
 
 # From Dicom to nifti
 
-Even though we often get our data from the scanner already in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, there can be cases when you have to do this conversion by yourself. Next to a clear structure that is understandable for other researchers as well, the BIDS format offers further advantages, like various apps, that perform different steps automatically (e.g. fmriprep), but that require the data to be in BIDs Format. [See here for a list of other possible BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html)
+Even though we often get the data from the scanner already in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, there can be cases when you have to do this conversion by yourself. Next to a clear structure that is understandable for other researchers as well, the BIDS format offers further advantages, like various apps, that perform different steps automatically (e.g. fmriprep), but that require the data to be in BIDs Format. [See here for a list of other possible BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html)
