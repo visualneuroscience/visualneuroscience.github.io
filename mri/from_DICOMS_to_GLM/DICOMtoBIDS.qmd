@@ -14,7 +14,6 @@ date: 08/03/2025
 -   the raw files from the scanner are DICOM-Files
 -   not really useful since we need `.nifti` files for our analysis
 
-$\qquad\to$ first step is to transform the `DICOM`- to `.nift`-files
 
 # From Dicom to nifti
 
