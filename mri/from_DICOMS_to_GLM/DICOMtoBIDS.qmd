@@ -50,11 +50,11 @@ To ensure that [later](#sec-filename), it might be helpful to write down the pro
 
 ### Create a naming.txt {#sec-naming}
 
-a) navigate to your `scripts` folder, right-click, select `Create New > Empty File`![Create Empty File](./images/01_dcm2bids/14_0_CreateEmptyFile.png)
+a)  navigate to your `scripts` folder, right-click, select `Create New > Empty File`![Create Empty File](./images/01_dcm2bids/14_0_CreateEmptyFile.png)
 
-b) assign a name (in this case `naming.txt`)![Assign Filename](./images/01_dcm2bids/14_1_AssignFileName.png)
+b)  assign a name (in this case `naming.txt`)![Assign Filename](./images/01_dcm2bids/14_1_AssignFileName.png)
 
-c) fill this text file with the proper, [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) names for the nifti files **and save**![Fill the textfile and save](./images/01_dcm2bids/14_2_FillTextfile.png)Now, you can just open this file [when you need to change the name of a nifti](#sec-filename).
+c)  fill this text file with the proper, [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) names for the nifti files **and save**![Fill the textfile and save](./images/01_dcm2bids/14_2_FillTextfile.png)Now, you can just open this file [when you need to change the name of a nifti](#sec-filename).
 
 # Starting the script {#sec-start}
 
@@ -82,14 +82,13 @@ With all necessary packages installed, you are asked to provide the path to the 
 
 Nifti directory means the directory/folder, where the nifti-files should be saved to. This is our (currently empty) bids folder [that we created in the beginning](#sec-structure).
 
-a) To indicate the nifti directory, we either type in the path manually, or get the path by navigating to the directory, right-clicking the bids directory and selecting `Copy Path(s)` ([same procedure as when we needed the path of the script](#sec-start))
+a)  To indicate the nifti directory, we either type in the path manually, or get the path by navigating to the directory, right-clicking the bids directory and selecting `Copy Path(s)` ([same procedure as when we needed the path of the script](#sec-start))
 
-b) go back to the terminal window where `dcm2bids` is running
+b)  go back to the terminal window where `dcm2bids` is running
 
-c) right-click and select `Paste` to enter the path
+c)  right-click and select `Paste` to enter the path
 
-d) press enter
-
+d)  press enter
 
 Subsequently, you are asked to indicate the dicom directory.
 
@@ -113,7 +112,6 @@ Subsequently, you get a short reminder in which directories your files should be
 
 By pressing `enter`, the script starts to convert your dicom files to nifti's. *This can take a few seconds - be patient!*
 
-
 # Assigning nifti's to directories and adjusting file names
 
 After the script converts the dicom's to nifti's, we have to potentially correct automatically assigned names and assign a directory. At the top of the terminal, you always see how many dicoms are left to categorize.
@@ -124,7 +122,7 @@ After the script converts the dicom's to nifti's, we have to potentially correct
 
 You can select one of three options for any dicom file (*use up-/down arrow key to switch between the options and press enter to confirm your choice*):
 
-a)  `Keep`: By selecting this option, you tell the script that the suggested name is correct and that you want to assign this file with the shown name to a directory (*Since BIDS uses a specific* [naming convention](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)*, you´ll probably need this option only for "additional files", like files related to denoising, that will be placed in a directory that is more or less independent of the BIDS-Format*; see @sec-extra*)
+a)  `Keep`: By selecting this option, you tell the script that the suggested name is correct and that you want to assign this file with the shown name to a directory (*Since BIDS uses a specific* [naming convention](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)*, you´ll probably need this option only for "additional files", like files related to denoising, that will be placed in a directory that is more or less independent of the BIDS-Format*; see @sec-extra\*)
 
 b)  `Modify Name`: This option tells the script that you want to change the suggested name. This is needed, when the suggested name is not [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames). After selecting this option (by pressing `enter`), you are asked to edit the name. Change the name (first delete the suggested one) to a [BIDS-conform filename](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) (*Hint: the initially suggested name implies what type of scan it was, so you should be able to easily determine if it was an anatomical scan, which run of a functional scan, or the fieldmap*). Using a [previously created file with bids-conform names](#sec-naming) can help avoiding errors and typos here, by just copy/pasting the prepared filenames! After you changed the name, press `enter` to confirm![Modyfing the Filename](./images/01_dcm2bids/15_modifyNames.png)
 
@@ -148,7 +146,6 @@ Sometimes we acquire files that are not part of the [BIDS](https://bids-specific
 
 Those files have to be stored in a different directory! Thus, [when asked about where to assign the file](#sec-directory), we select `Modify folder name`. All "additional" files can be saved in a directory named `extra` ($\to$ edit the name of the directory to `extra` and press `enter`)![Assign File to Folder "extra"](./images/01_dcm2bids/18_Optional_newOrRenameFolder.png)
 
-
 After assigning the last file to its directory, you´ll see the information, that an additional file has been created, [which we will use later](#sec-IntendedFor). The script has finished:![This is how it looks when the script has finished](./images/01_dcm2bids/19_EndOfdcm2bids.png)
 
 # The resulting BIDS-directory {#sec-bidsdirectory}
@@ -159,7 +156,6 @@ When you enter the `sub-999` directory, you´ll find the sub-directory `ses-1` (
 
 Each of these sub-directories contains all the files that you assigned, including the `.nii.gz` and a `.json` file![Content of the func directory](./images/01_dcm2bids/22_BIDS_funcs.png)![Content of the fmap directory](./images/01_dcm2bids/23_BIDS_fmap.png)![Content of the anat directory](./images/01_dcm2bids/24_BIDS_anat.png)![Content of the extra directory](./images/01_dcm2bids/25_BIDS_extra.png)
 
-
 # Edit "IntendedFor"-Section in the fmap {#sec-IntendedFor}
 
 Before you continue, there is one last adaptation that should be done immediately.
@@ -168,17 +164,17 @@ With changing Versions of [BIDS](https://bids-specification.readthedocs.io/en/st
 
 To correct this:
 
-a) Navigate to your `bids` directory
+a)  Navigate to your `bids` directory
 
-b) Open the file `sub-999-bidsurifmap.json` (double click, or right-click + `gedit`)![Open sub-999-bidsurifmap.json](./images/01_dcm2bids/26_Open_bidsurifmap.png)
+b)  Open the file `sub-999-bidsurifmap.json` (double click, or right-click + `gedit`)![Open sub-999-bidsurifmap.json](./images/01_dcm2bids/26_Open_bidsurifmap.png)
 
-c) Select all content and copy it (since Strg + c/v does not always work, you can use right-click and select `copy`)![Select and Copy content of bidsurifmap.json](./images/01_dcm2bids/27_Copy_content_of_bidsurifmap.png)
+c)  Select all content and copy it (since Strg + c/v does not always work, you can use right-click and select `copy`)![Select and Copy content of bidsurifmap.json](./images/01_dcm2bids/27_Copy_content_of_bidsurifmap.png)
 
-d) Navigate to the `fmap` directory (`*/bids/sub-999/ses-1/fmap/`) and open the `.json` file![Go to and open .json file](./images/01_dcm2bids/28_Navigate_to_fmap_json.png)
+d)  Navigate to the `fmap` directory (`*/bids/sub-999/ses-1/fmap/`) and open the `.json` file![Go to and open .json file](./images/01_dcm2bids/28_Navigate_to_fmap_json.png)
 
-e) After the file opens, scroll down to the very end of it. There should be a section that starts with `IntendedFor` and looks like this:![Initial IntendedFor Section](./images/01_dcm2bids/29_json_initial.png)
+e)  After the file opens, scroll down to the very end of it. There should be a section that starts with `IntendedFor` and looks like this:![Initial IntendedFor Section](./images/01_dcm2bids/29_json_initial.png)
 
-f) Remove all lines within the brackets after `"IntendedFor"` and paste the lines you copied from the `bidsurifmap.json` file. Remember to end every (but the last) line with a comma (`,`)!! It might also be good to keep the indentation at the beginning of each line (4 Spaches). At the end, it should look like this:![Changed IntendedFor Section](./images/01_dcm2bids/30_json_changed.png)
+f)  Remove all lines within the brackets after `"IntendedFor"` and paste the lines you copied from the `bidsurifmap.json` file. Remember to end every (but the last) line with a comma (`,`)!! It might also be good to keep the indentation at the beginning of each line (4 Spaches). At the end, it should look like this:![Changed IntendedFor Section](./images/01_dcm2bids/30_json_changed.png)
 
 ***Don´t forget to save the file afterwards!!!***
 
@@ -188,12 +184,12 @@ f) Remove all lines within the brackets after `"IntendedFor"` and paste the line
 
 Please return to the [Overview-Page](Overview_fromDICOMtoGLM.qmd) to check what to do next.
 
-Alternatively, here is a list of potential next steps to continue with 
+Alternatively, here is a list of potential next steps to continue with
 
-1. [Provide participants with their T1w-file?](ProvidingParticipantsWithTheirT1wFile.qmd)
+1.  [Provide participants with their T1w-file?](ProvidingParticipantsWithTheirT1wFile.qmd)
 
-2. [Defacing](defacing.qmd)
+2.  [Defacing](defacing.qmd)
 
-3. [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+3.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
 
-4. [fmriprep](run_fmriprep.qmd)
+4.  [fmriprep](run_fmriprep.qmd)
