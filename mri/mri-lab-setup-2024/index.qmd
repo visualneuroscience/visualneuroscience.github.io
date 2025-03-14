@@ -99,6 +99,10 @@ editor: visual
 
 ### Trigger box
 
+-   If the trigger box is not powered, plug it in
+
+    ![Trigger box plugged in](images/clipboard-1147648555.png){width="300"}
+
 -   Sometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC
 
 -   If this is the case the USB light on the box will be flashing (indicating that the USB is not connected)
@@ -125,17 +129,31 @@ editor: visual
 
 -   On the right, the top light is constantly turned on if it is connected to the computer. On the bottom, the light is blinking whenever the scanner trigger is being sent
 
--   In case you are not getting the trigger box signal if pressing the buttons inside the scanner room, you might need to check the corresponding trigger box settings; for this press the trigger box front button and check the settings:
+    ### Trigger box settings
 
-    ![](images/clipboard-4162729877.png){width="600"}
+    The trigger box settings for the normal button box which we typically use should look as in the picture below
 
-    -   The first should say "HHSC-xxxx" - the item between HHSC-2x4-D and HHSC-1x1-CYL (it got cropped on this photo by the refresh of the screen).
+    ![](images/F841BB68-DDFC-4E3E-B6A6-E24FBB87B94C.JPG)
 
-    -   Then the USB should be selected
+    If not, press the round button and select the following settings:
 
-    ![](images/clipboard-680179673.png){width="600"}
+-   Manual config
 
-    -   The last setting should be HID KEY 12345 (as in the picture above) if you want to use the regular current designs buttons
+    ![](images/9B0EEF03-CD1B-48AB-9D45-F936D7CE2390.JPG)
+
+-   HHSC-2x4-L
+
+    ![](images/C3F33E12-B1C5-45F1-A490-649C0B1B1335.JPG)
+
+-   USB
+
+    ![](images/A0755E6A-EB4A-47DB-9170-37CF7A50620A.JPG)
+
+-   HID KEY 12345
+
+    ![](images/86067ABB-CD86-4B15-A49B-128F5A51069D-01.JPG)
+
+    Press some buttons in the scanner to make sure the trigger box works. If not, unplug it and plug it in again.
 
 ### Experimental Protocol
 
