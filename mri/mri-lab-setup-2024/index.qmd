@@ -101,7 +101,7 @@ editor: visual
 
 -   If the trigger box is not powered, plug it in
 
-    ![Trigger box plugged in](images/clipboard-1147648555.png){width="300"}
+    ![](images/clipboard-1147648555.png){width="75%"}
 
 -   Sometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC
 
@@ -133,25 +133,25 @@ editor: visual
 
     The trigger box settings for the normal button box which we typically use should look as in the picture below
 
-    ![](images/F841BB68-DDFC-4E3E-B6A6-E24FBB87B94C.JPG)
+    ![](images/F841BB68-DDFC-4E3E-B6A6-E24FBB87B94C.JPG){width="75%"}
 
     If not, press the round button and select the following settings:
 
 -   Manual config
 
-    ![](images/9B0EEF03-CD1B-48AB-9D45-F936D7CE2390.JPG)
+    ![](images/9B0EEF03-CD1B-48AB-9D45-F936D7CE2390.JPG){width="75%"}
 
 -   HHSC-2x4-L
 
-    ![](images/C3F33E12-B1C5-45F1-A490-649C0B1B1335.JPG)
+    ![](images/C3F33E12-B1C5-45F1-A490-649C0B1B1335.JPG){width="75%"}
 
 -   USB
 
-    ![](images/A0755E6A-EB4A-47DB-9170-37CF7A50620A.JPG)
+    ![](images/A0755E6A-EB4A-47DB-9170-37CF7A50620A.JPG){width="75%"}
 
 -   HID KEY 12345
 
-    ![](images/86067ABB-CD86-4B15-A49B-128F5A51069D-01.JPG)
+    ![](images/86067ABB-CD86-4B15-A49B-128F5A51069D-01.JPG){width="75%"}
 
     Press some buttons in the scanner to make sure the trigger box works. If not, unplug it and plug it in again.
 
