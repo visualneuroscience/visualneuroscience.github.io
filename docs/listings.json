@@ -8,8 +8,8 @@
   {
     "listing": "/people.html",
     "items": [
-      "/people/leaving/index.html",
       "/people/compensation/compensation.html",
+      "/people/leaving/index.html",
       "/people/writing/writing.html",
       "/people/coffee/index.html",
       "/people/stipends/index.html"
@@ -20,11 +20,11 @@
     "items": [
       "/mri/mri-lab-setup-2024/index.html",
       "/mri/analysis/7t_analysis_on_neurodesk.html",
-      "/mri/from_DICOMS_to_GLM/run_fmriprep.html",
-      "/mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html",
-      "/mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html",
       "/mri/from_DICOMS_to_GLM/defacing.html",
+      "/mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html",
       "/mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html",
+      "/mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html",
+      "/mri/from_DICOMS_to_GLM/run_fmriprep.html",
       "/mri/from_DICOMS_to_GLM/DICOMtoBIDS.html",
       "/mri/analysis/freesurfer FSFAST.html",
       "/mri/3D-prints/3d-prints.html",
