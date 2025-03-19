@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c6d45bdbc8fa515d7bf5433019e93711.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -179,7 +179,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#preparations" id="toc-preparations" class="nav-link" data-scroll-target="#preparations"><span class="header-section-number">4</span> Preparations</a>
   <ul class="collapse">
-  <li><a href="#setting-up-the-directory-structure-sec-structure" id="toc-setting-up-the-directory-structure-sec-structure" class="nav-link" data-scroll-target="#setting-up-the-directory-structure-sec-structure"><span class="header-section-number">4.1</span> Setting up the directory structure (#sec-structure)</a></li>
+  <li><a href="#sec-structure" id="toc-sec-structure" class="nav-link" data-scroll-target="#sec-structure"><span class="header-section-number">4.1</span> Setting up the directory structure</a></li>
   <li><a href="#naming-of-the-nifti-files" id="toc-naming-of-the-nifti-files" class="nav-link" data-scroll-target="#naming-of-the-nifti-files"><span class="header-section-number">4.2</span> Naming of the nifti files</a>
   <ul class="collapse">
   <li><a href="#sec-naming" id="toc-sec-naming" class="nav-link" data-scroll-target="#sec-naming"><span class="header-section-number">4.2.1</span> Create a naming.txt</a></li>
@@ -260,8 +260,8 @@ window.Quarto = {
 </section>
 <section id="preparations" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Preparations</h1>
-<section id="setting-up-the-directory-structure-sec-structure" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="setting-up-the-directory-structure-sec-structure"><span class="header-section-number">4.1</span> Setting up the directory structure (#sec-structure)</h2>
+<section id="sec-structure" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-structure"><span class="header-section-number">4.1</span> Setting up the directory structure</h2>
 <p>First, you need to set up the correct structure for the script to run properly later. For this, you:</p>
 <ol type="1">
 <li><p>Create an empty directory named <code>bids</code> (right-click, <code>Create New... &gt; Folder</code>)</p></li>
@@ -366,9 +366,9 @@ window.Quarto = {
 </section>
 <section id="sec-IntendedFor" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Edit “IntendedFor”-Section in the fmap</h1>
-<p>Before you continue, there is one last adaptation that should be done immediately.</p>
+<p>Before you continue, there is one last potential adaptation that should be considered.</p>
 <p>With changing Versions of <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> and <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a>, slight changes occur in how and where you have to include specific information. One example for this is the <code>IntendedFor</code> information in the fmap’s <code>.json</code> file.</p>
-<p>To correct this:</p>
+<p>Depending on the Version of <a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a> you plan to use, it may be necessary to change the <code>IntendedFor</code> field of the fmap’s .json file! The steps described below have to be done <em>if you want to use fmriprep 24.0.0 <strong>or newer</strong>!</em> (If you use an older Version, you don´t have to do the described steps)</p>
 <ol type="a">
 <li><p>Navigate to your <code>bids</code> directory</p></li>
 <li><p>Open the file <code>sub-999-bidsurifmap.json</code> (double click, or right-click + <code>gedit</code>)<img src="./images/01_dcm2bids/26_Open_bidsurifmap.png" class="img-fluid" alt="Open sub-999-bidsurifmap.json"></p></li>
@@ -477,6 +477,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -587,6 +589,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

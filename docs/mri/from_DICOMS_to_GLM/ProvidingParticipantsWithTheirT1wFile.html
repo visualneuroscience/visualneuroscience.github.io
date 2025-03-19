@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-08-03">
+<meta name="dcterms.date" content="2025-03-08">
 <meta name="description" content="Information about how to provide participants with their T1w image">
 
 <title>Providing Participants with their T1w File – Visual Neuroscience Lab</title>
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c6d45bdbc8fa515d7bf5433019e93711.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction">This Site is currently under construction!</a></li>
+  <li><a href="#the-next-steps" id="toc-the-next-steps" class="nav-link active" data-scroll-target="#the-next-steps"><span class="header-section-number">1</span> The next Steps</a></li>
   </ul>
 </nav>
     </div>
@@ -173,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 3, 2025</p>
+      <p class="date">March 8, 2025</p>
     </div>
   </div>
   
@@ -185,8 +185,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="this-site-is-currently-under-construction" class="level1">
-<h1>This Site is currently under construction!</h1>
+<p>It can be a good incentive to promote your study by offering participants to give them their T1w files (since everyone knows how cool images of brains are!) <strong>If you promise to give out the T1w-scans to participants, make sure, that you really do it!</strong></p>
+<p>There are only some things to remember: 1. Participants get the “original” T1w scan! Thus, either send the scan <strong>before</strong> <a href="../../mri/from_DICOMS_to_GLM/defacing.html">defacing</a>, or copy/paste the original T1w scan to another location before defacing!</p>
+<ol start="2" type="1">
+<li><p>If you provide participants with their T1w scans, it might be a good idea to provide them with the software on how to look at their data! For example, you could point them to MRIcroGL as free tool that they can install themselves to look at their data: <a href="https://www.nitrc.org/projects/mricrogl/">Link to MRIcroGL Download</a></p></li>
+<li><p><strong>We do not keep the “non-defaced” T1w scans of participants</strong>! Thus, delete the T1w scan of a participant either after you sent it, or at the latest after your study finished!</p></li>
+</ol>
+<section id="the-next-steps" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> The next Steps</h1>
+<p>To continue in your journey to your Analysis, please return to the <a href="../../mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
+<p>Alternatively, here is a list of potential next steps to continue with</p>
+<ol type="1">
+<li><p><a href="../../mri/from_DICOMS_to_GLM/defacing.html">Defacing</a></p></li>
+<li><p><a href="../../mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html">Remove Denoising Scans from your data?</a></p></li>
+<li><p><a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a></p></li>
+</ol>
 
 
 </section>
@@ -274,6 +287,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -384,6 +399,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

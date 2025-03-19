@@ -3,8 +3,9 @@ fontsize: 12pt
 geometry: margin=3cm
 title: "Overview_fromDICOMtoGLM"
 description: "Overview about how to get from DICOM files from the Scanner to your GLM Analysis"
+number-sections: true
 author: MG
-date: 08/03/2025
+date: 03/08/2025
 ---
 
 # This Site is currently under construction!!
@@ -13,17 +14,24 @@ date: 08/03/2025
 
 This page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.
 
-# 1. DICOM-Files
+# DICOM-Files
 
 -   the raw files from the scanner are DICOM-Files
 -   not really useful since we need `.nifti` files for our analysis $\qquad\to$ first step is to transform the `DICOM`- to `.nift`-files
 
-# 2. [DICOM to nifti](DICOMtoBIDS.qmd)
+
+# [DICOM to nifti](DICOMtoBIDS.qmd)
 
 -   using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or under `ADD THE PATH TO SHARED?`)
 -   results in `.nifti` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
 
-# 3. [Defacing your data](defacing.qmd)
+# [Distribute the T1w files to participants?](ProvidingParticipantsWithTheirT1wFile.qmd)
+
+- if you promised participants that they will get their T1w images, you should make sure that they really get them
+- this should be done before [defacing](defacing.qmd)
+
+
+# [Defacing your data](defacing.qmd)
 
 -   $\bf{You\ have\ to\ deface\ your\ data\ before\ running\ fmriprep\ or\ your\ analysis!!!!!}$
 -   You may want to save the "non-defaced" files somewhere else to give them to your participants
@@ -31,11 +39,13 @@ This page gives an overview and brief information about the necessary steps to g
 -   NEVER share data that was not defaced before!
 -   Defacing is done with `pydeface` (Docker; Version 2.0.2)
 
-# 4. ([Remove denoising scan from your data](RemoveDenoisingScan.qmd))
+# ([Remove denoising scan from your data](RemoveDenoisingScan.qmd))
 
 -   if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continueing
 
-# 5. [fmriprep](run_fmriprep.qmd)
+# [fmriprep](run_fmriprep.qmd)
 
 -   this is one of many [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html) (that require [a BIDS-valid Dataset](https://bids-standard.github.io/bids-validator/))
 -   runs various preprocessing steps on it´s own
+
+# first-level Analysis

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-08-03">
+<meta name="dcterms.date" content="2025-03-08">
 <meta name="description" content="Overview about how to get from DICOM files from the Scanner to your GLM Analysis">
 
 <title>Overview_fromDICOMtoGLM – Visual Neuroscience Lab</title>
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c6d45bdbc8fa515d7bf5433019e93711.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -171,13 +171,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction">This Site is currently under construction!!</a></li>
-  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a></li>
-  <li><a href="#dicom-files" id="toc-dicom-files" class="nav-link" data-scroll-target="#dicom-files">1. DICOM-Files</a></li>
-  <li><a href="#dicom-to-nifti" id="toc-dicom-to-nifti" class="nav-link" data-scroll-target="#dicom-to-nifti">2. DICOM to nifti</a></li>
-  <li><a href="#defacing-your-data" id="toc-defacing-your-data" class="nav-link" data-scroll-target="#defacing-your-data">3. Defacing your data</a></li>
-  <li><a href="#remove-denoising-scan-from-your-data" id="toc-remove-denoising-scan-from-your-data" class="nav-link" data-scroll-target="#remove-denoising-scan-from-your-data">4. (Remove denoising scan from your data)</a></li>
-  <li><a href="#fmriprep" id="toc-fmriprep" class="nav-link" data-scroll-target="#fmriprep">5. fmriprep</a></li>
+  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction"><span class="header-section-number">1</span> This Site is currently under construction!!</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general"><span class="header-section-number">2</span> General</a></li>
+  <li><a href="#dicom-files" id="toc-dicom-files" class="nav-link" data-scroll-target="#dicom-files"><span class="header-section-number">3</span> DICOM-Files</a></li>
+  <li><a href="#dicom-to-nifti" id="toc-dicom-to-nifti" class="nav-link" data-scroll-target="#dicom-to-nifti"><span class="header-section-number">4</span> DICOM to nifti</a></li>
+  <li><a href="#distribute-the-t1w-files-to-participants" id="toc-distribute-the-t1w-files-to-participants" class="nav-link" data-scroll-target="#distribute-the-t1w-files-to-participants"><span class="header-section-number">5</span> Distribute the T1w files to participants?</a></li>
+  <li><a href="#defacing-your-data" id="toc-defacing-your-data" class="nav-link" data-scroll-target="#defacing-your-data"><span class="header-section-number">6</span> Defacing your data</a></li>
+  <li><a href="#remove-denoising-scan-from-your-data" id="toc-remove-denoising-scan-from-your-data" class="nav-link" data-scroll-target="#remove-denoising-scan-from-your-data"><span class="header-section-number">7</span> (Remove denoising scan from your data)</a></li>
+  <li><a href="#fmriprep" id="toc-fmriprep" class="nav-link" data-scroll-target="#fmriprep"><span class="header-section-number">8</span> fmriprep</a></li>
+  <li><a href="#first-level-analysis" id="toc-first-level-analysis" class="nav-link" data-scroll-target="#first-level-analysis"><span class="header-section-number">9</span> first-level Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -208,7 +210,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 3, 2025</p>
+      <p class="date">March 8, 2025</p>
     </div>
   </div>
   
@@ -220,29 +222,36 @@ window.Quarto = {
 </header>
 
 
-<section id="this-site-is-currently-under-construction" class="level1">
-<h1>This Site is currently under construction!!</h1>
+<section id="this-site-is-currently-under-construction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> This Site is currently under construction!!</h1>
 </section>
-<section id="general" class="level1">
-<h1>General</h1>
+<section id="general" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> General</h1>
 <p>This page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.</p>
 </section>
-<section id="dicom-files" class="level1">
-<h1>1. DICOM-Files</h1>
+<section id="dicom-files" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> DICOM-Files</h1>
 <ul>
 <li>the raw files from the scanner are DICOM-Files</li>
 <li>not really useful since we need <code>.nifti</code> files for our analysis <span class="math inline">\(\qquad\to\)</span> first step is to transform the <code>DICOM</code>- to <code>.nift</code>-files</li>
 </ul>
 </section>
-<section id="dicom-to-nifti" class="level1">
-<h1>2. <a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html">DICOM to nifti</a></h1>
+<section id="dicom-to-nifti" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> <a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html">DICOM to nifti</a></h1>
 <ul>
 <li>using a script from Adam that can be <a href="https://github.com/adam-coates/dicom2bids">found here</a> (or under <code>ADD THE PATH TO SHARED?</code>)</li>
 <li>results in <code>.nifti</code> files in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format</li>
 </ul>
 </section>
-<section id="defacing-your-data" class="level1">
-<h1>3. <a href="../../mri/from_DICOMS_to_GLM/defacing.html">Defacing your data</a></h1>
+<section id="distribute-the-t1w-files-to-participants" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> <a href="../../mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html">Distribute the T1w files to participants?</a></h1>
+<ul>
+<li>if you promised participants that they will get their T1w images, you should make sure that they really get them</li>
+<li>this shoulb be done before <a href="../../mri/from_DICOMS_to_GLM/defacing.html">defacing</a></li>
+</ul>
+</section>
+<section id="defacing-your-data" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <a href="../../mri/from_DICOMS_to_GLM/defacing.html">Defacing your data</a></h1>
 <ul>
 <li><span class="math inline">\(\bf{You\ have\ to\ deface\ your\ data\ before\ running\ fmriprep\ or\ your\ analysis!!!!!}\)</span></li>
 <li>You may want to save the “non-defaced” files somewhere else to give them to your participants</li>
@@ -251,18 +260,21 @@ window.Quarto = {
 <li>Defacing is done with <code>pydeface</code> (Docker; Version 2.0.2)</li>
 </ul>
 </section>
-<section id="remove-denoising-scan-from-your-data" class="level1">
-<h1>4. (<a href="../../mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html">Remove denoising scan from your data</a>)</h1>
+<section id="remove-denoising-scan-from-your-data" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> (<a href="../../mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html">Remove denoising scan from your data</a>)</h1>
 <ul>
 <li>if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continueing</li>
 </ul>
 </section>
-<section id="fmriprep" class="level1">
-<h1>5. <a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a></h1>
+<section id="fmriprep" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> <a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a></h1>
 <ul>
 <li>this is one of many <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a> (that require <a href="https://bids-standard.github.io/bids-validator/">a BIDS-valid Dataset</a>)</li>
 <li>runs various preprocessing steps on it´s own</li>
 </ul>
+</section>
+<section id="first-level-analysis" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> first-level Analysis</h1>
 
 
 </section>
@@ -350,6 +362,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -460,6 +474,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

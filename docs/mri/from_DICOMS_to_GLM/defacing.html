@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-08-03">
+<meta name="dcterms.date" content="2025-03-08">
 <meta name="description" content="Step by step description of how to deface your data">
 
 <title>Defacing – Visual Neuroscience Lab</title>
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c6d45bdbc8fa515d7bf5433019e93711.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -142,7 +142,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction">This Site is currently under construction!!</a></li>
+  <li><a href="#sec-startPydeface" id="toc-sec-startPydeface" class="nav-link active" data-scroll-target="#sec-startPydeface"><span class="header-section-number">1</span> Start Pydeface (v.2.0.2)</a></li>
+  <li><a href="#get-the-path-to-your-original-t1w-scan" id="toc-get-the-path-to-your-original-t1w-scan" class="nav-link" data-scroll-target="#get-the-path-to-your-original-t1w-scan"><span class="header-section-number">2</span> Get the path to your original T1w scan</a></li>
+  <li><a href="#the-pydeface-command" id="toc-the-pydeface-command" class="nav-link" data-scroll-target="#the-pydeface-command"><span class="header-section-number">3</span> The pydeface command</a></li>
+  <li><a href="#the-next-steps" id="toc-the-next-steps" class="nav-link" data-scroll-target="#the-next-steps"><span class="header-section-number">4</span> The next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -173,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 3, 2025</p>
+      <p class="date">March 8, 2025</p>
     </div>
   </div>
   
@@ -185,8 +188,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="this-site-is-currently-under-construction" class="level1">
-<h1>This Site is currently under construction!!</h1>
+<p>To deface your T1w-scan, you first need a T1w nifti file! If you only have DICOM files, please <a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html">convert them to nifti’s first</a>!</p>
+<p><strong>Defacing you T1w scans is an important preprocessing step <em>that has to be done before</em> <a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a>. If you run fmriprep without prior defacing, you´ll probably run into errors!</strong></p>
+<p><em>Important</em> (if you <a href="../../mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html">promised participants that they´ll get their T1w scan</a>: Make sure that you either already have sent the original T1w scan to the participants, or that you have additionally saved it somewhere else!</p>
+<section id="sec-startPydeface" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Start Pydeface (v.2.0.2)</h1>
+<p>To deface your t1w, you first have to open <code>pydeface</code>:</p>
+<ol type="1">
+<li><p>Click on the Birds-Symbol at the bottom left</p></li>
+<li><p>Hover <code>Neurodesk</code></p></li>
+<li><p>Hover <code>All Applications</code></p></li>
+<li><p>Scroll down until you find <code>pydeface</code></p></li>
+<li><p>Click on <code>pydeface 2.0.2</code> <img src="./images/03_Defacing/01_open_Pydeface.png" class="img-fluid" alt="Pydeface 2.0.2"></p></li>
+</ol>
+<p>After it opens, it may need some time to load everything - be patient!</p>
+<p>Finally, it should look like this: <img src="./images/03_Defacing/02_pydeface_opened.png" class="img-fluid" alt="Pydeface Started"></p>
+</section>
+<section id="get-the-path-to-your-original-t1w-scan" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Get the path to your original T1w scan</h1>
+<ol type="1">
+<li><p>Navigate to the anatomical scan of the participant within your <a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html">BIDS</a> directory</p></li>
+<li><p>Right-click on the anatomical nifti file</p></li>
+<li><p>Select `Copy Path(s) <img src="./images/03_Defacing/03_Path_to_T1w.png" class="img-fluid" alt="Get Path(s) of anat-scan"></p></li>
+</ol>
+</section>
+<section id="the-pydeface-command" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> The pydeface command</h1>
+<ol type="1">
+<li><p>Go back to the terminal window, where pydeface is loaded (<a href="#sec-startPydeface">or start it again</a>)</p></li>
+<li><p>Type <code>pydeface</code></p></li>
+<li><p>Enter the path to your T1w scan (right-click + <code>paste</code> or type in the path)</p></li>
+<li><p>Type <code>--outfile</code></p></li>
+<li><p>Repeat Step 3 (with this approach, you “overwrite” the initial T1w with the then defaced T1w file)</p></li>
+<li><p>Type `–force``</p></li>
+</ol>
+<p>It should look like this: <img src="./images/03_Defacing/04_pydeface_command.png" class="img-fluid" alt="Pydeface Command"></p>
+<p>Then, press enter. Again, it might take a few moments, until pydeface finishes, be patient! At the end, it should look like this: <img src="./images/03_Defacing/05_defacing_finished.png" class="img-fluid" alt="Pydeface Finished"></p>
+</section>
+<section id="the-next-steps" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The next steps</h1>
+<p>Congratulations, you successfully defaced a T1w-scan and you are one step closer to analyzing your data!</p>
+<p>To continue in your journey to your Analysis, please return to the <a href="../../mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
+<p>Alternatively, here is a list of potential next steps to continue with</p>
+<ol type="1">
+<li><p><a href="../../mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html">Remove Denoising Scans from your data?</a></p></li>
+<li><p><a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">run fmriprep</a></p></li>
+</ol>
 
 
 </section>
@@ -274,6 +321,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -384,6 +433,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

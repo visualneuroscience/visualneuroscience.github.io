@@ -28,7 +28,7 @@ Apart from a clear structure that is understandable (for other researchers as we
 
 # Preparations
 
-## Setting up the directory structure (#sec-structure)
+## Setting up the directory structure {#sec-structure}
 
 First, you need to set up the correct structure for the script to run properly later. For this, you:
 
@@ -158,11 +158,11 @@ Each of these sub-directories contains all the files that you assigned, includin
 
 # Edit "IntendedFor"-Section in the fmap {#sec-IntendedFor}
 
-Before you continue, there is one last adaptation that should be done immediately.
+Before you continue, there is one last potential adaptation that should be considered.
 
 With changing Versions of [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) and [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html), slight changes occur in how and where you have to include specific information. One example for this is the `IntendedFor` information in the fmap's `.json` file.
 
-To correct this:
+Depending on the Version of [fmriprep](run_fmriprep.qmd) you plan to use, it may be necessary to change the `IntendedFor` field of the fmap's .json file! The steps described below have to be done *if you want to use fmriprep 24.0.0 **or newer**!* (If you use an older Version, you don´t have to do the described steps)
 
 a)  Navigate to your `bids` directory
 
