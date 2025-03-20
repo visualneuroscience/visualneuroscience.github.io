@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "Removing Denoising Scan from Data"
+title: "04 - Removing Denoising Scan from Data"
 description: "Step by step description of how to remove the denoising scan from your data"
 number-sections: true
 image: ./images/02_RemoveDenoising/06_01_DenoisingScan_Confirmed.png
@@ -82,7 +82,6 @@ done
 
 *Information:* this code basically searches for all files in your working directory that end on `_bold.nii.gz`, gets the information about how many frames it includes using `mri_info` and then removes the last frame (which we confirmed to be the denoising scan prior)
 
-
 When you copy/paste into the terminal, the line breaks and indentation probably will look different, but this is no problem (see image below). Press enter to execute the pasted code. ![Code to remove noise scans](./images/02_RemoveDenoising/09_Enter_Command.png)
 
 This process can take a while, especially in the beginning. Don´t get stressed out, when nothing happens for a while and only info statements get printed, be patient! ![Waiting](./images/02_RemoveDenoising/10_sometimesWaiting.png)
@@ -95,22 +94,21 @@ To confirm that the noise scan was removed from your functional scans, [start fr
 
 # Repeat the process for your fmap!
 
-If your functional data were aquired with a denoising sequence and thus contained noise scans, your fmap will probably include noise scans as well!
-To remove the noise scans from the fmap, the same procedure has to be done, but this time with the fmap file(s):
+If your functional data were aquired with a denoising sequence and thus contained noise scans, your fmap will probably include noise scans as well! To remove the noise scans from the fmap, the same procedure has to be done, but this time with the fmap file(s):
 
-1. [Open Freeview](#sec-OpenFreeview)
+1.  [Open Freeview](#sec-OpenFreeview)
 
-2. [Open fmap](#sec-loadVolume)
+2.  [Open fmap](#sec-loadVolume)
 
-3. [Check if noise scan is included](#sec-CheckDenoising)
+3.  [Check if noise scan is included](#sec-CheckDenoising)
 
-4. Open a terminal and source freesurfer & fsl ([see Steps 1-3 here](#sec-RemoveDenoising))
+4.  Open a terminal and source freesurfer & fsl ([see Steps 1-3 here](#sec-RemoveDenoising))
 
-5. Set your working directory (**this time to your `fmap` directory!**; [adapt Step 4](#sec-RemoveDenoising))
+5.  Set your working directory (**this time to your `fmap` directory!**; [adapt Step 4](#sec-RemoveDenoising))
 
-6. Run the following Code:
+6.  Run the following Code:
 
-```
+```         
 for nii_file in *_epi.nii.gz; do
     img_size=$(mri_info --dim "$nii_file" | grep -E '^[0-9]' | awk '{print $NF}')
     
@@ -123,11 +121,9 @@ done
 
 *Information:* This basically does the same as the [Code for removing the noise scan for the functional data (See Step 5 above)](#sec-RemoveDenoising), but this time, it doesn´t perform the task for files ending in `_bold.nii.gz`, but for files ending in `_epi.nii.gz`
 
+7.  Wait until the all files are processed
 
-7. Wait until the all files are processed
-
-8. [Check if the removal was successful](#sec-RemovalSuccess)
-
+8.  [Check if the removal was successful](#sec-RemovalSuccess)
 
 # Next steps
 
@@ -137,6 +133,6 @@ To continue in your journey to your Analysis, please return to the [Overview-Pag
 
 Alternatively, here is a list of potential next steps to continue with
 
-1. [Defacing](defacing.qmd)
+1.  [Defacing](defacing.qmd)
 
-2. [run fmriprep](run_fmriprep.qmd)
+2.  [run fmriprep](run_fmriprep.qmd)

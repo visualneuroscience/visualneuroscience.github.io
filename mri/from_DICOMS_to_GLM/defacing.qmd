@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "Defacing"
+title: "03 - Defacing"
 description: "Step by step description of how to deface your data"
 number-sections: true
 image: ./images/03_Defacing/01_open_Pydeface.png
@@ -11,59 +11,53 @@ date: 03/08/2025
 
 To deface your T1w-scan, you first need a T1w nifti file! If you only have DICOM files, please [convert them to nifti's first](DICOMtoBIDS.qmd)!
 
-**Defacing you T1w scans is an important preprocessing step *that has to be done before* [fmriprep](run_fmriprep.qmd). If you run fmriprep without prior defacing, you´ll probably run into errors!**
+**Defacing you T1w scans is an important preprocessing step *that has to be done before*[fmriprep](run_fmriprep.qmd). If you run fmriprep without prior defacing, you´ll probably run into errors!**
 
 *Important* (if you [promised participants that they´ll get their T1w scan](ProvidingParticipantsWithTheirT1wFile.qmd): Make sure that you either already have sent the original T1w scan to the participants, or that you have additionally saved it somewhere else!
-
 
 # Start Pydeface (v.2.0.2) {#sec-startPydeface}
 
 To deface your t1w, you first have to open `pydeface`:
 
-1. Click on the Birds-Symbol at the bottom left
+1.  Click on the Birds-Symbol at the bottom left
 
-2. Hover `Neurodesk`
+2.  Hover `Neurodesk`
 
-3. Hover `All Applications`
+3.  Hover `All Applications`
 
-4. Scroll down until you find `pydeface`
+4.  Scroll down until you find `pydeface`
 
-5. Click on `pydeface 2.0.2`
- ![Pydeface 2.0.2](./images/03_Defacing/01_open_Pydeface.png)
+5.  Click on `pydeface 2.0.2` ![Pydeface 2.0.2](./images/03_Defacing/01_open_Pydeface.png)
 
-After it opens, it may need some time to load everything - be patient! 
+After it opens, it may need some time to load everything - be patient!
 
 Finally, it should look like this: ![Pydeface Started](./images/03_Defacing/02_pydeface_opened.png)
 
-
 # Get the path to your original T1w scan
 
-1. Navigate to the anatomical scan of the participant within your [BIDS](DICOMtoBIDS.qmd) directory
+1.  Navigate to the anatomical scan of the participant within your [BIDS](DICOMtoBIDS.qmd) directory
 
-2. Right-click on the anatomical nifti file
+2.  Right-click on the anatomical nifti file
 
-3. Select `Copy Path(s)
- ![Get Path(s) of anat-scan](./images/03_Defacing/03_Path_to_T1w.png)
-
+3.  Select \`Copy Path(s) ![Get Path(s) of anat-scan](./images/03_Defacing/03_Path_to_T1w.png)
 
 # The pydeface command
 
-1. Go back to the terminal window, where pydeface is loaded ([or start it again](#sec-startPydeface))
+1.  Go back to the terminal window, where pydeface is loaded ([or start it again](#sec-startPydeface))
 
-2. Type `pydeface`
+2.  Type `pydeface`
 
-3. Enter the path to your T1w scan (right-click + `paste` or type in the path)
+3.  Enter the path to your T1w scan (right-click + `paste` or type in the path)
 
-4. Type `--outfile`
+4.  Type `--outfile`
 
-5. Repeat Step 3 (with this approach, you "overwrite" the initial T1w with the then defaced T1w file)
+5.  Repeat Step 3 (with this approach, you "overwrite" the initial T1w with the then defaced T1w file)
 
-6. Type `--force``
+6.  Type \`--force\`\`
 
 It should look like this: ![Pydeface Command](./images/03_Defacing/04_pydeface_command.png)
 
 Then, press enter. Again, it might take a few moments, until pydeface finishes, be patient! At the end, it should look like this: ![Pydeface Finished](./images/03_Defacing/05_defacing_finished.png)
-
 
 # The next steps
 
