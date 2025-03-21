@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -170,10 +204,16 @@ window.Quarto = {
    
   <ul>
   <li><a href="#power-analysis" id="toc-power-analysis" class="nav-link active" data-scroll-target="#power-analysis">Power analysis</a></li>
-  <li><a href="#gpower" id="toc-gpower" class="nav-link" data-scroll-target="#gpower">G*Power</a></li>
-  <li><a href="#how-to-calculate-a-priori-sample-size" id="toc-how-to-calculate-a-priori-sample-size" class="nav-link" data-scroll-target="#how-to-calculate-a-priori-sample-size">How to calculate <em>a priori</em> sample size</a>
+  <li><a href="#gpower" id="toc-gpower" class="nav-link" data-scroll-target="#gpower">G*Power</a>
   <ul class="collapse">
-  <li><a href="#calculating-a-priori-sample-size-for-a-repeated-measures-anova" id="toc-calculating-a-priori-sample-size-for-a-repeated-measures-anova" class="nav-link" data-scroll-target="#calculating-a-priori-sample-size-for-a-repeated-measures-anova">Calculating <em>a priori</em> sample size for a repeated measures ANOVA</a></li>
+  <li><a href="#how-to-calculate-a-priori-sample-size-on-gpower" id="toc-how-to-calculate-a-priori-sample-size-on-gpower" class="nav-link" data-scroll-target="#how-to-calculate-a-priori-sample-size-on-gpower">How to calculate <em>a priori</em> sample size on G*Power</a></li>
+  <li><a href="#repeated-measures-anova-on-gpower" id="toc-repeated-measures-anova-on-gpower" class="nav-link" data-scroll-target="#repeated-measures-anova-on-gpower">Repeated measures ANOVA on G*Power</a></li>
+  </ul></li>
+  <li><a href="#power-analysis-by-r-packages" id="toc-power-analysis-by-r-packages" class="nav-link" data-scroll-target="#power-analysis-by-r-packages">Power analysis by R packages</a>
+  <ul class="collapse">
+  <li><a href="#pwr" id="toc-pwr" class="nav-link" data-scroll-target="#pwr">pwr</a></li>
+  <li><a href="#webpower" id="toc-webpower" class="nav-link" data-scroll-target="#webpower">WebPower</a></li>
+  <li><a href="#superpower" id="toc-superpower" class="nav-link" data-scroll-target="#superpower">Superpower</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -209,18 +249,18 @@ window.Quarto = {
 <section id="power-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="power-analysis">Power analysis</h2>
 <p>Power analysis is a statistical technique that helps scientists determine the sample size required to detect an effect of a given size with a desired degree of certainty. It helps researchers understand the likelihood that their study will detect a meaningful difference or relationship (if one exists) between groups or variables being studied. By performing a power analysis before conducting an experiment, scientists can ensure that the study is neither too small (which would result in a lack of statistical power to detect an effect, leading to a possible Type II error) nor too large (which could waste resources and potentially expose participants to unnecessary procedures). It’s a crucial step in the research design process that helps in making informed decisions and in enhancing the credibility and replicability of scientific findings.</p>
+<p>You need to calculate a priori sample size according to the statistical test you want to make an argument. For example, if you are interested in only the results of ANOVA comparisons then, you should make your calculation for your ANOVA test. However, if you desire to analyze further with multiple comparisons then, you should calculate required sample size based on your post-hoc method which is commonly paired t test.</p>
 </section>
 <section id="gpower" class="level2">
 <h2 class="anchored" data-anchor-id="gpower">G*Power</h2>
-<p>G<em>Power is a very popular and free software program that researchers use to conduct power analysis. It was developed by Franz Faul at the Universität Kiel, Germany, and is frequently updated and improved upon. The software is designed to help researchers with a variety of statistical tests, including t-tests, F-tests, chi-squared tests, z-tests, and some exact tests.<br>
+<p>G*Power is a very popular and free software program that researchers use to conduct power analysis. It was developed by Franz Faul at the Universität Kiel, Germany, and is frequently updated and improved upon. The software is designed to help researchers with a variety of statistical tests, including t-tests, F-tests, chi-squared tests, z-tests, and some exact tests.<br>
 <br>
-G</em>Power provides a flexible tool for calculating the required sample size for a study based on the effect size, significance level, and power – which refers to the probability of correctly rejecting a false null hypothesis. Researchers can also use G*Power to calculate the power of their study given the sample size and effect size.<br>
+G*Power provides a flexible tool for calculating the required sample size for a study based on the effect size, significance level, and power – which refers to the probability of correctly rejecting a false null hypothesis. Researchers can also use G*Power to calculate the power of their study given the sample size and effect size.<br>
 <br>
 The program is user-friendly, allowing both beginners and experienced users to carry out a range of power analyses that might otherwise be complex and time-consuming. Its broad applicability across various statistical analyses makes it a valuable tool in the research planning process, helping to ensure that studies are properly designed to yield valid and reliable results.</p>
 <p>See <a href="https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower">official page</a> of G*Power</p>
-</section>
-<section id="how-to-calculate-a-priori-sample-size" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-calculate-a-priori-sample-size">How to calculate <em>a priori</em> sample size</h2>
+<section id="how-to-calculate-a-priori-sample-size-on-gpower" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-calculate-a-priori-sample-size-on-gpower">How to calculate <em>a priori</em> sample size on G*Power</h3>
 <p>To calculate an <em>a priori</em> sample size using G*Power, you need to follow several steps. The specific steps might change slightly depending on the statistical test you plan to use, but the overall process is similar:</p>
 <ol type="1">
 <li><p>Download and Open G*Power</p></li>
@@ -241,10 +281,11 @@ The program is user-friendly, allowing both beginners and experienced users to c
 <p>G*Power will provide the calculated sample size along with other details related to the power analysis. Carefully review this output to determine if it is suitable for the needs of your study.</p></li>
 </ol>
 <p>Keep in mind that determining these parameters, especially the effect size, can sometimes be the most challenging part of a power analysis. Consult with a statistician, your team members or relevant literature if you are unsure about these inputs. Finally, remember that power analysis is an important part of designing your study, but it should be combined with practical considerations like resource availability, ethical constraints, and methodological limitations.</p>
-<section id="calculating-a-priori-sample-size-for-a-repeated-measures-anova" class="level3">
-<h3 class="anchored" data-anchor-id="calculating-a-priori-sample-size-for-a-repeated-measures-anova">Calculating <em>a priori</em> sample size for a repeated measures ANOVA</h3>
+</section>
+<section id="repeated-measures-anova-on-gpower" class="level3">
+<h3 class="anchored" data-anchor-id="repeated-measures-anova-on-gpower">Repeated measures ANOVA on G*Power</h3>
 <p>As an example, let’s say we have 3 different stimulus types. In each session, we will present one type of stimuli at 4 different contrast levels. The task will be the same throughout the experiment. Our aim is to determine the effect of contrast.</p>
-<p>In such a case, we need using a repeated measures ANOVA (or 2-way mixed ANOVA or split-plot ANOVA). Calculating an <em>a priori</em> sample size for a mixed-design ANOVA in GPower can be a bit tricky, as <em>G</em>Power does not directly provide a pre-built module for mixed ANOVAs with both within- (repeated measures) and between-subjects factors. However, you can still approximate the necessary calculations by considering the most powerful test within your design, which is typically the repeated measures part if the effect sizes are similar. Here is a general guide on how to do this:</p>
+<p>In such a case, we need using a repeated measures ANOVA (or 2-way mixed ANOVA or split-plot ANOVA). Calculating an <em>a priori</em> sample size for a mixed-design ANOVA in GPower can be a bit tricky, as G*Power does not directly provide a pre-built module for mixed ANOVAs with both within- (repeated measures) and between-subjects factors. However, you can still approximate the necessary calculations by considering the most powerful test within your design, which is typically the repeated measures part if the effect sizes are similar. Here is a general guide on how to do this:</p>
 <ol type="1">
 <li><p>Open G*Power</p></li>
 <li><p>Select the Statistical Test</p>
@@ -263,8 +304,8 @@ The program is user-friendly, allowing both beginners and experienced users to c
 <p>Eta squared (<span class="math inline">\(\eta^{2}\)</span>) is the effect size that indicates the total variance in testing explained by the within-subject variable (in our case, different contrast levels). Approximate partial eta squared conventions are small = 0.02, medium = 0.06, large = 0.14.</p></li>
 <li><p><strong>α Error Probability</strong>: The significance level is typically set at 0.05.</p></li>
 <li><p><strong>Power</strong>: Set this commonly to 0.80, indicating an 80% probability of correctly rejecting the null hypothesis.</p></li>
-<li><p><strong>Number of Groups</strong>: For the between-subjects factor, input the number of levels or conditions. In our case, it is the number of different stimuli.</p></li>
-<li><p><strong>Number of Measurements</strong>: For the within-subjects factor, input the number of levels or conditions. In our case, it is the number of different contrast levels.</p></li>
+<li><p><strong>Number of Groups</strong>: For the between-subjects factor, input the number of levels or conditions. If you compare, for example, healthy vs patient group, the number of groups is 2. For within-subject designs, the number of groups should be 1.</p></li>
+<li><p><strong>Number of Measurements</strong>: For the within-subjects factor, input the number of levels or conditions. If you have more than one independent variable, you can compute the number of measurements by multiplying the number of conditions for each factor. For example, if you have three stimulus types (k = 3) each of that is presented at four contrast levels (m = 4), you have 12 measurements (k x m = 3 x 4).</p></li>
 <li><p><strong>Correlation among Repeated Measures</strong>: This is determined by the expected correlation between the measures at different levels of contrast. If you don’t have an estimate, using a default value like 0.5 can be a starting point.</p></li>
 <li><p><strong>Nonsphericity Correction ε</strong>: If you have an estimate for this, input it here; otherwise, you can keep it at 1 or use the default provided by G*Power.</p></li>
 </ul></li>
@@ -272,10 +313,183 @@ The program is user-friendly, allowing both beginners and experienced users to c
 <li><p>Review Results</p></li>
 </ol>
 <center>
-<p><img src="./gpower_example.png" class="img-fluid"></p>
+<img src="./gpower_example.png" class="img-fluid">
 </center>
 <p>Please note that this approach is an approximation, as it does not fully represent the complexity of a mixed-design ANOVA. It essentially treats the between-subjects factor as another within-subjects level, which may not be totally accurate but can give you a ballpark figure for your sample size. If possible, consult with a statistician to ensure that the calculation is correctly tailored to your study’s specific needs and to take into account other complexities that G*Power may not directly address for mixed designs.</p>
 <p>See another example on <a href="https://www.youtube.com/watch?v=NRha9ZEYfI0">YouTube</a></p>
+</section>
+</section>
+<section id="power-analysis-by-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="power-analysis-by-r-packages">Power analysis by R packages</h2>
+<p>If you want to use R to calculate your power level or required sample size, you can use one of the available packages depending on your needs.You can use the ready-to-use function with default parameters: <a href="https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/stats/2024-06-04/power_analysis.R">Script is here.</a></p>
+<section id="pwr" class="level3">
+<h3 class="anchored" data-anchor-id="pwr">pwr</h3>
+<p>This is the most common and basic package for power analysis. However, it is not suitable for complex statistical tests such as repeated measures ANOVA.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pwr<span class="sc">:::</span><span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="cn">NULL</span>,  <span class="co"># NULL to calculate a priori sample size</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">d =</span> <span class="fl">0.4</span>,  <span class="co"># Cohen's d, effect size</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">sig.level =</span> <span class="fl">0.05</span>,  <span class="co"># alpha value</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">power =</span> <span class="fl">0.80</span>,  <span class="co"># desired power level</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"paired"</span>,  <span class="co"># type of t test</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">alternative =</span> <span class="st">"two.sided"</span>  <span class="co"># alternative hypothesis</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Paired t test power calculation 
+
+              n = 51.00945
+              d = 0.4
+      sig.level = 0.05
+          power = 0.8
+    alternative = two.sided
+
+NOTE: n is number of *pairs*</code></pre>
+</div>
+</div>
+</section>
+<section id="webpower" class="level3">
+<h3 class="anchored" data-anchor-id="webpower">WebPower</h3>
+<p>This is a strong tool for different types of ANOVA.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>WebPower<span class="sc">::</span><span class="fu">wp.rmanova</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="cn">NULL</span>,  <span class="co"># Compute required sample size</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ng =</span> <span class="dv">1</span>,   <span class="co"># Only one group if it's a within-subjects design</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">nm =</span> <span class="dv">3</span><span class="sc">*</span><span class="dv">3</span>,  <span class="co"># Number of measurements (n*m for n x m design)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">f =</span> <span class="fl">0.4</span>,  <span class="co"># Effect size</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">nscor =</span> <span class="dv">1</span>,  <span class="co"># Nonsphericity correction (assumed sphericity for now)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">alpha =</span> <span class="fl">0.05</span>,  <span class="co"># significance level, aka alpha value</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">power =</span> <span class="fl">0.80</span>,  <span class="co"># desired power </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="dv">1</span> <span class="co"># 0: between-effect; 1: within-effect; 2: interaction effect</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Repeated-measures ANOVA analysis
+
+           n   f ng nm nscor alpha power
+    94.86041 0.4  1  9     1  0.05   0.8
+
+NOTE: Power analysis for within-effect test
+URL: http://psychstat.org/rmanova</code></pre>
+</div>
+</div>
+</section>
+<section id="superpower" class="level3">
+<h3 class="anchored" data-anchor-id="superpower">Superpower</h3>
+<p>As the name suggests, it is super for power analysis :) However, you need to simulate your data to calculate required sample size. It might be useful to calculate actual power level. However, it is hard to create simulations in general for our studies in Visual Neuroscience Lab.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Experimental design</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>design_result <span class="ot">&lt;-</span> Superpower<span class="sc">::</span><span class="fu">ANOVA_design</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">design =</span> <span class="st">"3w*3w"</span>,  <span class="co"># 3x2 within-subjects </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="dv">30</span>,  <span class="co"># as a start point to find the required sample size</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">mu =</span> <span class="fu">c</span>(<span class="dv">500</span>, <span class="dv">520</span>, <span class="dv">540</span>, <span class="dv">490</span>, <span class="dv">510</span>, <span class="dv">530</span>, <span class="dv">480</span>, <span class="dv">500</span>, <span class="dv">520</span>),  <span class="co"># average values for dependent variable</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd =</span> <span class="dv">50</span>,  <span class="co"># estimated standard deviation</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">r =</span> <span class="fl">0.5</span>,  <span class="co"># correlation between repeated measures</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">labelnames =</span> <span class="fu">c</span>(<span class="st">"Stimulus"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"Condition"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># simulation for power analysis</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Superpower<span class="sc">::</span><span class="fu">ANOVA_power</span>(design_result, <span class="at">nsims =</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Power and Effect sizes for ANOVA tests
+                         power effect_size
+anova_Stimulus            91.0     0.21648
+anova_Condition          100.0     0.50259
+anova_Stimulus:Condition   5.5     0.03397
+
+Power and Effect sizes for pairwise comparisons (t-tests)
+                                                power effect_size
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.7   0.4097362
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.4   0.8223203
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  17.2  -0.2005831
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.4   0.2066731
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.1   0.6143429
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  54.4  -0.4039498
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   5.0   0.0002379
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.2   0.4124414
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  57.3   0.4118309
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.0  -0.6164512
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  19.2  -0.2051272
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.1   0.2037725
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.7  -0.8221411
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  55.7  -0.4096956
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   6.5   0.0009081
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0  -1.0308669
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  90.4  -0.6184151
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.0  -0.2111281
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0  -1.2282963
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.4  -0.8245028
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.8  -0.4089366
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  57.0   0.4093103
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  99.3   0.8185618
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.5  -0.2075187
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  18.3   0.2033512
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3   0.6157089
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  55.9   0.4076980
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  89.5  -0.6154179
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  19.0  -0.2070594
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.1   0.2067871
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0  -1.0215097
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.2  -0.6132789
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.5  -0.2039301
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.1   0.4048387
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.1   0.8205641
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.1   0.4122619
+
+
+Within-Subject Factors Included: Check MANOVA Results</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Power and Effect sizes for ANOVA tests
+                         power effect_size
+anova_Stimulus            91.0     0.21648
+anova_Condition          100.0     0.50259
+anova_Stimulus:Condition   5.5     0.03397
+
+Power and Effect sizes for pairwise comparisons (t-tests)
+                                                power effect_size
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.7   0.4097362
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.4   0.8223203
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  17.2  -0.2005831
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.4   0.2066731
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.1   0.6143429
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  54.4  -0.4039498
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   5.0   0.0002379
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.2   0.4124414
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  57.3   0.4118309
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.0  -0.6164512
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  19.2  -0.2051272
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.1   0.2037725
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.7  -0.8221411
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  55.7  -0.4096956
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   6.5   0.0009081
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0  -1.0308669
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  90.4  -0.6184151
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.0  -0.2111281
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0  -1.2282963
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.4  -0.8245028
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.8  -0.4089366
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  57.0   0.4093103
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  99.3   0.8185618
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.5  -0.2075187
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  18.3   0.2033512
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3   0.6157089
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  55.9   0.4076980
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  89.5  -0.6154179
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  19.0  -0.2070594
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.1   0.2067871
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0  -1.0215097
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.2  -0.6132789
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.5  -0.2039301
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.1   0.4048387
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.1   0.8205641
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.1   0.4122619</code></pre>
+</div>
+</div>
 
 
 </section>
