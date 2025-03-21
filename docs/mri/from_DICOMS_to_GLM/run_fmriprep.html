@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-08-03">
 <meta name="description" content="Step by step description of how to run fmriprep">
 
-<title>How to run fmriprep – Visual Neuroscience Lab</title>
+<title>05 - How to run fmriprep – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -38,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c6d45bdbc8fa515d7bf5433019e93711.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -142,7 +176,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction">This Site is currently under construction</a></li>
+  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction"><span class="header-section-number">1</span> This Site is currently under construction</a></li>
+  <li><a href="#sec-NecessitiesFmriprep" id="toc-sec-NecessitiesFmriprep" class="nav-link" data-scroll-target="#sec-NecessitiesFmriprep"><span class="header-section-number">2</span> Before running fmriprep</a></li>
+  <li><a href="#sec-fmriprepStart" id="toc-sec-fmriprepStart" class="nav-link" data-scroll-target="#sec-fmriprepStart"><span class="header-section-number">3</span> Starting fmriprep</a></li>
+  <li><a href="#sec-fmriprepSetup" id="toc-sec-fmriprepSetup" class="nav-link" data-scroll-target="#sec-fmriprepSetup"><span class="header-section-number">4</span> Setting up necessary directories and defining “SUBJECTS_DIR”</a></li>
+  <li><a href="#sec-fmriprepCommand" id="toc-sec-fmriprepCommand" class="nav-link" data-scroll-target="#sec-fmriprepCommand"><span class="header-section-number">5</span> fmriprep command</a></li>
+  <li><a href="#waiting" id="toc-waiting" class="nav-link" data-scroll-target="#waiting"><span class="header-section-number">6</span> Waiting</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">7</span> Troubleshooting</a></li>
+  <li><a href="#the-next-steps" id="toc-the-next-steps" class="nav-link" data-scroll-target="#the-next-steps"><span class="header-section-number">8</span> The next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -151,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">How to run fmriprep</h1>
+<h1 class="title">05 - How to run fmriprep</h1>
 </div>
 
 <div>
@@ -185,8 +226,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="this-site-is-currently-under-construction" class="level1">
-<h1>This Site is currently under construction</h1>
+<section id="this-site-is-currently-under-construction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> This Site is currently under construction</h1>
+</section>
+<section id="sec-NecessitiesFmriprep" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Before running fmriprep</h1>
+<p>Before you start fmriprep, you have to make sure, that you:</p>
+<ol type="1">
+<li><p><a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html">have nifti files in BIDS format</a></p></li>
+<li><p><a href="../../mri/from_DICOMS_to_GLM/defacing.html">defaced your anatomical scans</a></p></li>
+<li><p><a href="../../mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html">Optional: removed the noise scans from your functional data</a></p></li>
+<li><p><a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html#sec-IntendedFor">Optional: adapted the “IntendedFor” section in the fmap’s .json file (if you want to use fmriprep 24.0.0 or newer)</a></p></li>
+</ol>
+</section>
+<section id="sec-fmriprepStart" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Starting fmriprep</h1>
+<p>To start fmriprep, click on the bird symbol at the bottom left on neurodesk, hover <code>neurodesk</code>, then <code>All applications</code> and navigate to <code>fmriprep</code>. Select the version of fmriprep that you want to use <img src="./images/04_fmriprep/00_OpenFmriprep.png" class="img-fluid" alt="Starting fmriprep"></p>
+<p>After selecting your version, a new <code>bash</code> window opens and fmriprep loads. This can take a few moments, be patient! When everything is ready, the bottom line should state <code>fmriprep-"Version"</code> (with “Version” being whatever version you selected, for example <code>fmriprep-24.1.1</code>) <img src="./images/04_fmriprep/01_fmriprepReady.png" class="img-fluid" alt="fmriprep is ready"></p>
+</section>
+<section id="sec-fmriprepSetup" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Setting up necessary directories and defining “SUBJECTS_DIR”</h1>
+<p>First, you need to create some new directories that are necessary for fmriprep to run properly. For this, enter the following command (adapt the path(s) if necessary)</p>
+<pre><code>mkdir -p /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</code></pre>
+<p>By confirming your command with Enter, you´ll find the new directory structure within you derivatives directory<img src="./images/04_fmriprep/02_newDirectories.png" class="img-fluid" alt="New Directories"></p>
+<p>Then, we need to specify where fmriprep should store the resulting files with this command (again, adapt the path(s) if necessary):</p>
+<pre><code>SUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/04_fmriprep/03_setSUBJECTS_DIR.png" class="img-fluid figure-img"></p>
+<figcaption>Set SUBJECTS_DIR</figcaption>
+</figure>
+</div>
+<p><strong>Hint:</strong> you can copy/paste both commands from above and execute them by pressing enter simultaneously, it doesn´t matter</p>
+</section>
+<section id="sec-fmriprepCommand" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> fmriprep command</h1>
+<p>With the setup done, you can now run the command:</p>
+<pre><code>fmriprep /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant --bold2t1w-init header --force-bbr -w /home/jovyan/website/fmriprep_tmp --output-spaces T1w fsaverage fsnative --participant-label sub-999 --nprocs 8 --mem 10000 --skip_bids_validation --stop-on-first-crash -v --fs-license-file /home/jovyan/website/freesurferlicense/license.txt</code></pre>
+<p><strong>Important:</strong> adapt the flag <code>--participant-label sub-999</code> accordingly, so that you state the subject you want to preprocess</p>
+<p><strong>Hint:</strong> same as before, you could run this command with the two commands above for the setup as well. The only important thing is the order: first the command for making the directories, then defining <code>SUBJECTS_DIR</code>and finally the fmriprep command.</p>
+</section>
+<section id="waiting" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Waiting</h1>
+<p>When fmriprep started, now it´s probably time to get a coffee and do something else. This process will take quite some time (hours), you don´t have to stare at the output the whole time. You can also close the Tab where you opened neurodesk! Even if you close it, the program continues its work!</p>
+</section>
+<section id="troubleshooting" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Troubleshooting</h1>
+<ol type="1">
+<li><p>I ran fMRIprep but no distortion correction happened</p>
+<blockquote class="blockquote">
+<p>fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap <code>json</code> file. See <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri">Information about BIDS uri</a>, or the <a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html#sec-IntendedFor">corresponding wiki entry</a>.</p>
+</blockquote>
+<ul>
+<li>If your fmap .json file is using the BIDS uri specification in the <code>IntendedFor</code> field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.</li>
+</ul>
+<p>BIDS uri spec for fmriprep 24.0.0 or newer:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz"</span><span class="ot">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz"</span><span class="ot">,</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">etc</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Older fmap spec for fmriprep older than 24.0.0:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz"</span><span class="ot">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz"</span><span class="ot">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">etc</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<ol start="2" type="1">
+<li>I ran fMRIprep and the distortion correction of the data is too extreme</li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/poor_DC.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>An example of poor distortion correction</figcaption>
+</figure>
+</div>
+</center>
+<blockquote class="blockquote">
+<p>This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven’t been tested)</p>
+</blockquote>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<ol start="3" type="1">
+<li><p>If using already run FreeSurfer <code>recon-all</code> output and have specified an <code>expert-opts</code> file then fMRIprep shows multiple errors</p>
+<ul>
+<li>In the directory that has the prerun <code>recon-all</code> there is a folder <code>scripts</code> that saves the <code>expert-opts</code> file. Removing this file allows fMRIprep to run</li>
+</ul></li>
+</ol>
+<hr>
+<ol start="4" type="1">
+<li><p>If fmriprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:</p>
+<p><code>--bold2t1w-init header</code></p></li>
+</ol>
+</section>
+<section id="the-next-steps" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> The next steps</h1>
+<p>Congratulations, you successfully preprocessed your data and you are one step closer to analyzing your data!</p>
+<p>To continue in your journey to your Analysis, please return to the <a href="../../mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
+<p>Alternatively, here is a list of potential next steps to continue with</p>
+<ol type="1">
+<li></li>
+</ol>
 
 
 </section>
@@ -274,8 +420,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -386,7 +530,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

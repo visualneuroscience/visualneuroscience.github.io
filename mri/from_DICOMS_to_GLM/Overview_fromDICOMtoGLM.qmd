@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "Overview_fromDICOMtoGLM"
+title: "00 - from DICOM to GLM"
 description: "Overview about how to get from DICOM files from the Scanner to your GLM Analysis"
 number-sections: true
 author: MG

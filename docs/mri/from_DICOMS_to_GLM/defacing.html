@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-03-08">
 <meta name="description" content="Step by step description of how to deface your data">
 
-<title>Defacing – Visual Neuroscience Lab</title>
+<title>03 - Defacing – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c6d45bdbc8fa515d7bf5433019e93711.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Defacing</h1>
+<h1 class="title">03 - Defacing</h1>
 </div>
 
 <div>
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>To deface your T1w-scan, you first need a T1w nifti file! If you only have DICOM files, please <a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html">convert them to nifti’s first</a>!</p>
-<p><strong>Defacing you T1w scans is an important preprocessing step <em>that has to be done before</em> <a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a>. If you run fmriprep without prior defacing, you´ll probably run into errors!</strong></p>
+<p><strong>Defacing you T1w scans is an important preprocessing step <em>that has to be done before</em><a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a>. If you run fmriprep without prior defacing, you´ll probably run into errors!</strong></p>
 <p><em>Important</em> (if you <a href="../../mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html">promised participants that they´ll get their T1w scan</a>: Make sure that you either already have sent the original T1w scan to the participants, or that you have additionally saved it somewhere else!</p>
 <section id="sec-startPydeface" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Start Pydeface (v.2.0.2)</h1>
@@ -321,8 +321,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -433,7 +431,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
