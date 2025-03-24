@@ -16,16 +16,26 @@
     ]
   },
   {
+    "listing": "/other_topics.html",
+    "items": [
+      "/OtherTopics/CalculatingAPrioriPower.html",
+      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
+      "/OtherTopics/ContributeWithR.html",
+      "/OtherTopics/Labmeeting.html",
+      "/OtherTopics/displays/displays.html"
+    ]
+  },
+  {
     "listing": "/mri.html",
     "items": [
       "/mri/mri-lab-setup-2024/index.html",
       "/mri/analysis/7t_analysis_on_neurodesk.html",
-      "/mri/from_DICOMS_to_GLM/run_fmriprep.html",
       "/mri/from_DICOMS_to_GLM/defacing.html",
       "/mri/from_DICOMS_to_GLM/DICOMtoBIDS.html",
       "/mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html",
       "/mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html",
       "/mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html",
+      "/mri/from_DICOMS_to_GLM/run_fmriprep.html",
       "/mri/analysis/freesurfer FSFAST.html",
       "/mri/3D-prints/3d-prints.html",
       "/mri/neurodesktop/neurodesktop.html",
@@ -39,7 +49,8 @@
   {
     "listing": "/displays.html",
     "items": [
-      "/displays/2024-05-22/index.html"
+      "/displays/2024-05-22/index.html",
+      "/OtherTopics/displays/displays.html"
     ]
   },
   {

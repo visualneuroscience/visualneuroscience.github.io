@@ -1,0 +1,21 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: "Lab Members Only!!!"
+description: "This site is dedicated only for members of the lab!"
+author: NZ
+number-sections: true
+editor: visual
+---
+
+# Server
+
+## X2go
+
+![](images/clipboard-2910869127.png)
+
+<https://cloud.uni-graz.at/index.php/f/220686861>
+
+## Neurodesktop
+
+We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and those lab members who would like to use it. Please see the [dedicated page](https://visualneuroscience.github.io/mri/neurodesktop/neurodesktop.html) in the MRI section.

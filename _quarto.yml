@@ -24,6 +24,8 @@ website:
         text: how to contribute to the lab website
       - href: members.qmd
         text: lab members only
+      - href: other_topics.qmd
+        text: Other Topics
   #DO NOT EDIT BELOW THIS LINE
   page-footer:
     background: light
