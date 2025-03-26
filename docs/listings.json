@@ -1,31 +1,5 @@
 [
   {
-    "listing": "/stats.html",
-    "items": [
-      "/stats/2024-06-04/index.html"
-    ]
-  },
-  {
-    "listing": "/people.html",
-    "items": [
-      "/people/compensation/compensation.html",
-      "/people/leaving/index.html",
-      "/people/writing/writing.html",
-      "/people/coffee/index.html",
-      "/people/stipends/index.html"
-    ]
-  },
-  {
-    "listing": "/other_topics.html",
-    "items": [
-      "/OtherTopics/CalculatingAPrioriPower.html",
-      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
-      "/OtherTopics/ContributeWithR.html",
-      "/OtherTopics/Labmeeting.html",
-      "/OtherTopics/displays/displays.html"
-    ]
-  },
-  {
     "listing": "/mri.html",
     "items": [
       "/mri/mri-lab-setup-2024/index.html",
@@ -54,30 +28,29 @@
     ]
   },
   {
-    "listing": "/contribute.html",
+    "listing": "/other_topics.html",
     "items": [
-      "/contribute/index.html",
-      "/contribute/rstudio/index.html"
+      "/OtherTopics/CalculatingAPrioriPower.html",
+      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
+      "/OtherTopics/ContributeWithR.html",
+      "/OtherTopics/Labmeeting.html",
+      "/OtherTopics/displays/displays.html"
     ]
   },
   {
-    "listing": "/behavioral.html",
+    "listing": "/people.html",
     "items": [
-      "/behavioral/chinrests/chinrests.html",
-      "/behavioral/2024-05-23/index.html",
-      "/behavioral/2024-05-22/index.html"
+      "/people/compensation/compensation.html",
+      "/people/leaving/index.html",
+      "/people/writing/writing.html",
+      "/people/coffee/index.html",
+      "/people/stipends/index.html"
     ]
   },
   {
-    "listing": "/labmeeting.html",
+    "listing": "/stats.html",
     "items": [
-      "/labmeeting/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/members.html",
-    "items": [
-      "/members/server/index.html"
+      "/stats/2024-06-04/index.html"
     ]
   }
 ]

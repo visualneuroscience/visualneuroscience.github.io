@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c6d45bdbc8fa515d7bf5433019e93711.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -146,10 +146,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting started</a></li>
-  <li><a href="#for-lab-members" id="toc-for-lab-members" class="nav-link" data-scroll-target="#for-lab-members">For lab members</a>
+  <li><a href="#general-information" id="toc-general-information" class="nav-link active" data-scroll-target="#general-information">General information</a>
   <ul class="collapse">
-  <li><a href="#folder-mappings-left-is-server-right-is-neurodesk" id="toc-folder-mappings-left-is-server-right-is-neurodesk" class="nav-link" data-scroll-target="#folder-mappings-left-is-server-right-is-neurodesk">Folder mappings: (left is server right is neurodesk)</a></li>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a>
+  <ul class="collapse">
+  <li><a href="#employees" id="toc-employees" class="nav-link" data-scroll-target="#employees">Employees</a></li>
+  <li><a href="#non-employees-students-and-interns" id="toc-non-employees-students-and-interns" class="nav-link" data-scroll-target="#non-employees-students-and-interns">Non-employees (students and interns)</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul></li>
+  <li><a href="#getting-an-account" id="toc-getting-an-account" class="nav-link" data-scroll-target="#getting-an-account">Getting an account</a></li>
+  <li><a href="#using-neurodesk" id="toc-using-neurodesk" class="nav-link" data-scroll-target="#using-neurodesk">Using Neurodesk</a></li>
+  <li><a href="#information-for-lab-members-with-ssh-access" id="toc-information-for-lab-members-with-ssh-access" class="nav-link" data-scroll-target="#information-for-lab-members-with-ssh-access">Information for lab members with ssh access</a>
+  <ul class="collapse">
+  <li><a href="#folder-mappings" id="toc-folder-mappings" class="nav-link" data-scroll-target="#folder-mappings">Folder mappings:</a></li>
   <li><a href="#for-interfacing-with-the-folders-on-storage" id="toc-for-interfacing-with-the-folders-on-storage" class="nav-link" data-scroll-target="#for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</a></li>
   </ul></li>
   </ul>
@@ -194,37 +204,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="general-information" class="level1">
+<h1>General information</h1>
 <p>Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see <a href="https://www.neurodesk.org" class="uri">https://www.neurodesk.org</a></p>
-<p>To use the neurodesktop on our lab’s server, please follow the steps below.</p>
-<p>Neurodesktop is accessible from the office, via VPN (for employees only, or for those who’s student account has been explicitly activated for server access by the IT), and in the student computer room.</p>
+<p>This page provides information and instructions on how to use neurodesktop on our lab’s server.</p>
+<section id="access" class="level2">
+<h2 class="anchored" data-anchor-id="access">Access</h2>
+<section id="employees" class="level3">
+<h3 class="anchored" data-anchor-id="employees">Employees</h3>
+<p>Office computers and VPN with an employee account</p>
+</section>
+<section id="non-employees-students-and-interns" class="level3">
+<h3 class="anchored" data-anchor-id="non-employees-students-and-interns">Non-employees (students and interns)</h3>
+<ul>
+<li><p>Office computers</p></li>
+<li><p>Student PC room</p></li>
+</ul>
+</section>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <p>Each neurodesktop user is limited to 256GB RAM&nbsp;out of 504GB and to 20 out of 32 CPU cores.</p>
-<section id="getting-started" class="level1">
-<h1>Getting started</h1>
+</section>
+</section>
+<section id="getting-an-account" class="level1">
+<h1>Getting an account</h1>
 <ol type="1">
-<li><p>In your browser, type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a> and sign up for a account</p></li>
-<li><p>After you sign up, You account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us. @Lab members: please use the same account name as your local server user account. That way you will automatically have access permissions for all your data via the serverpath /storage/neurodesk/users/{username}. For example, Natalia should use natalia_nv as username.</p></li>
-<li><p>Once your account is authorized, you can sing in with your credentials and you will see a JupyterLab session. You can start the neurodesktop by clicking on the icon. The session can be suspended and resumed later, with all your applications remaining as you left them.</p>
-<p><img src="images/clipboard-3633669417.png" class="img-fluid" width="400"></p>
-<p>You should see the desktop with all the apps:</p>
-<p><img src="images/clipboard-3609792068.png" class="img-fluid" width="400"><br>
-</p>
-<ol start="4" type="1">
-<li><p>You can use <a href="https://pslg-nv1.uni-graz.at/hub/home" class="uri">https://pslg-nv1.uni-graz.at/hub/home</a> to control your container (start/stop) or change your password.</p>
-<p>There are different Neurodesktop versions available on the JupyterHub. If you need another Jupyter Notebook or another version of the Neurodesk, please let us know. Additionally, if anything is not working as expected, do not hesitate to report it.</p></li>
+<li><p>Use a computer with server access (described in <a href="#access">Access</a> section)</p></li>
+<li><p>Open a browser and type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a></p></li>
+<li><p>Select “sign up”</p>
+<p><img src="images/clipboard-777788509.png" class="img-fluid"></p></li>
+<li><p>Fill out the following fields</p>
+<ul>
+<li><p>Username: first part of your univesity email account before “@”, e.g.&nbsp;jane.doe if your email address is jane.doe@edu.uni-graz.at</p></li>
+<li><p>Email: your university student or employee email address (if you are a course participant: university student email address)</p></li>
+<li><p>Password of your choice</p></li>
+</ul>
+<p><img src="images/clipboard-3276311981.png" class="img-fluid"></p></li>
+<li><p>After you sign up, your account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us.</p></li>
+<li><p>Once your account is authorized, you should receive an email notification</p></li>
 </ol>
-<p>Enjoy!<br>
-</p>
-<h1 id="general-info">General info</h1>
-<h2 id="storing-data" class="anchored" data-anchor-id="getting-started">Storing data</h2>
-<p>If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up</p>
+</section>
+<section id="using-neurodesk" class="level1">
+<h1>Using Neurodesk</h1>
+<p>Once your account has been authorized</p>
+<ol type="1">
+<li><p>Open a browser and type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a></p></li>
+<li><p>Sing in with your credentials</p></li>
+<li><p>You will see a JupyterLab session. In neurodesk everyone becomes a linux user “jovyan”. Your home directory <code>/home/jovyan</code> will appear on the left handide</p></li>
+<li><p>You can use the terminal or jupyter notebook directly in the browser by clicking the corresponding icons</p></li>
+<li><p>If you would like to use graphical interface, you can start the neuroDESKTOP by clicking on the icon.</p>
+<p><img src="images/clipboard-3175354375.png" class="img-fluid" width="406"></p></li>
+<li><p>You should see the desktop with all the apps:</p>
+<p><img src="images/clipboard-3609792068.png" class="img-fluid" width="400"></p></li>
+<li><p>If you close this window and reopen it later, all your work will be saved as you left it (unless the server has been restarted in the meantime, which happens every Tuesday)</p></li>
+<li><p>You can use <a href="https://pslg-nv1.uni-graz.at/hub/home" class="uri">https://pslg-nv1.uni-graz.at/hub/home</a> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -&gt; Hub Control Panel from the menue.</p>
+<p><img src="images/clipboard-2628836406.png" class="img-fluid"></p>
+<h1 id="note">Note</h1>
+<p>The first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).</p>
+<h2 id="storing-data" class="anchored" data-anchor-id="using-neurodesk">Storing data</h2>
+<p>If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.</p>
 <h2 id="sharing-data" class="anchored">Sharing data</h2>
 <p>All neurodesk users have read and write permissions to <code>/shared</code> neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)</p>
 <h2 id="data-transfer" class="anchored">Data transfer</h2>
 <p>There are currently two alternatives</p>
 <ol type="1">
-<li><p>If you don’t have a local server account, you can transfer the data via nextcloud client, which is included in neurodsktop</p>
+<li><p>You can transfer the data via nextcloud client, which is included in neurodsktop</p>
 <p><img src="images/clipboard-3813941447.png" class="img-fluid" width="400"></p></li>
-<li><p>“file upload” button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files</p>
+<li><p>“file upload” button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.</p>
 <p><img src="images/clipboard-1030227267.png" class="img-fluid"></p></li>
 </ol>
 <h2 id="using-freesurfer" class="anchored">Using FreeSurfer</h2>
@@ -237,14 +284,15 @@ freeview</code></pre>
 <h2 id="using-fitlins" class="anchored">Using fitlins</h2>
 <p>Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:</p>
 <p><br>
-<code>singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg</code> [your fitlins commands]</p></li>
+<code>singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg</code> [your fitlins commands]</p>
+<p>Please note that we are abandoning fitlins usage and are switching to <a href="https://nilearn.github.io/stable/index.html">nilearn</a> for GLM analysis</p></li>
 </ol>
 </section>
-<section id="for-lab-members" class="level1">
-<h1>For lab members</h1>
-<section id="folder-mappings-left-is-server-right-is-neurodesk" class="level2">
-<h2 class="anchored" data-anchor-id="folder-mappings-left-is-server-right-is-neurodesk">Folder mappings: (left is server right is neurodesk)</h2>
-<p><br>
+<section id="information-for-lab-members-with-ssh-access" class="level1">
+<h1>Information for lab members with ssh access</h1>
+<section id="folder-mappings" class="level2">
+<h2 class="anchored" data-anchor-id="folder-mappings">Folder mappings:</h2>
+<p>(left is server right is neurodesk)<br>
 <code>/storage -&gt; /storage</code><br>
 <code>/storage/neurodesk/shared -&gt; /shared</code><br>
 <code>/storage/neurodesk/users/{username} -&gt; /home/jovyan</code></p>
@@ -342,8 +390,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -454,7 +500,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

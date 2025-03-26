@@ -26,7 +26,7 @@ Reimbursement is done via the bank transfer by the University to participants' b
 1.  Download the example [excel sheet](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/people/compensation/files/AWE_Form_example.xlsx)
 2.  Fill out one row per participant, entering information into EVERY field that is nonempty in the excel sheet (you can create your own dedicated template):
     -   Betrag
-    -    Text (study name): The study name can not exceed a certain number of symbols, so please keep it short (fMRI studies can use their MRI lab abbreviations: pacmond, clav, deka, etc.)
+    -   Text (study name): The study name can not exceed a certain number of symbols, so please keep it short (fMRI studies can use their MRI lab abbreviations: pacmond, clav, deka, etc.)
     -   Name CPD: first and last name
     -   Strasse CPD: Street address of the participant
     -   Ort CPD: City where participant lived
