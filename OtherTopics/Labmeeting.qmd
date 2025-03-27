@@ -1,8 +1,8 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: Lab meeting information
-description: "Info about our lab meeting"
+title: "Labmeeting"
+description: "Information about our lab meeting"
 author: MG
 number-sections: true
 date: 03/24/2025

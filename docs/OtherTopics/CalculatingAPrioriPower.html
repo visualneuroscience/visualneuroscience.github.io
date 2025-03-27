@@ -135,7 +135,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -153,7 +153,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -198,10 +198,259 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../other_topics.html">Other Topics</a></li><li class="breadcrumb-item"><a href="../OtherTopics/CalculatingAPrioriPower.html">Calculating a priori sample size using G Power</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/neurodesktop/neurodesktop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neurodesktop access</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01 DICOM to BIDS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 T1w for PBn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/from_DICOMS_to_GLM/defacing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03 - Defacing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04 - Removing Noise Scan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/from_DICOMS_to_GLM/run_fmriprep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 fmriprep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/from_DICOMS_to_GLM/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../mri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MRI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3D printing a brain</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7T anatomical analysis on neurodesk</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MRI BIDS and OSF</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/dicom_to_bids.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dicom to Bids conversion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">fMRIprep analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/freesurfer FSFAST.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FreeSurfer FSFAST</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Old MRI setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Update to the MRI lab setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/physiology/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Physiological noise correction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../behavioral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Behavioral</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vision tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BIDS for behavioral studies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom-built chin rests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../other_topics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Other Topics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Calculating a priori sample size using G Power</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma correction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/stipends/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stipends and prizes for master students</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/coffee/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coffee time</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant compensation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/leaving/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Things to do if you are leaving the lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/writing/writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scientific writing in practice</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/Labmeeting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Labmeeting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab Members Only!!!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contribute to the website</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -224,9 +473,9 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../other_topics.html">Other Topics</a></li><li class="breadcrumb-item"><a href="../OtherTopics/CalculatingAPrioriPower.html">Calculating a priori sample size using G Power</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Calculating a priori sample size using G Power</h1>
 </div>
@@ -238,7 +487,7 @@ window.Quarto = {
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-body">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -407,48 +656,48 @@ URL: http://psychstat.org/rmanova</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Power and Effect sizes for ANOVA tests
                          power effect_size
-anova_Stimulus            92.3     0.21802
-anova_Condition          100.0     0.49731
-anova_Stimulus:Condition   5.0     0.03367
+anova_Stimulus            92.4     0.21924
+anova_Condition          100.0     0.50159
+anova_Stimulus:Condition   4.8     0.03265
 
 Power and Effect sizes for pairwise comparisons (t-tests)
                                                 power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  58.9    0.417914
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.5    0.827219
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  16.3   -0.195690
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  20.7    0.213634
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.7    0.616782
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  57.0   -0.413984
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.9   -0.001233
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.1    0.412226
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  54.1    0.402501
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  90.3   -0.612243
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  17.2   -0.204164
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.0    0.195229
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.2   -0.826539
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  59.6   -0.419962
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.2   -0.003858
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.019078
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.1   -0.608722
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.3   -0.209688
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.232768
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.1   -0.820111
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.1   -0.407591
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.6    0.408513
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.7    0.804837
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  20.5   -0.215780
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  17.4    0.191390
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.6    0.607900
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  53.3    0.398229
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  90.1   -0.621156
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  21.3   -0.214207
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.7    0.199489
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.020326
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.4   -0.612807
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.3   -0.197607
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.3    0.408465
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.7    0.818030
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.2    0.408107
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  58.9    0.415333
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.3    0.820920
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.9   -0.207901
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.3    0.199246
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  90.4    0.617232
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  56.9   -0.414435
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   3.9    0.001102
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.2    0.404664
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  53.4    0.404082
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.9   -0.619747
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  18.5   -0.209653
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.4    0.203456
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.7   -0.829332
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  58.1   -0.415020
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   4.7   -0.007233
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1  99.9   -1.023212
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.3   -0.615736
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  17.9   -0.201312
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.236438
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.9   -0.818625
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.8   -0.414514
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.1    0.407082
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  99.0    0.822547
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.4   -0.207036
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  20.6    0.207896
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.4    0.613551
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  57.7    0.412194
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  88.8   -0.617330
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  17.7   -0.200471
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.2    0.203526
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.8   -1.021736
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.9   -0.615600
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.6   -0.209471
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.2    0.415576
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.8    0.817710
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  53.5    0.405448
 
 
 Within-Subject Factors Included: Check MANOVA Results</code></pre>
@@ -456,48 +705,48 @@ Within-Subject Factors Included: Check MANOVA Results</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Power and Effect sizes for ANOVA tests
                          power effect_size
-anova_Stimulus            92.3     0.21802
-anova_Condition          100.0     0.49731
-anova_Stimulus:Condition   5.0     0.03367
+anova_Stimulus            92.4     0.21924
+anova_Condition          100.0     0.50159
+anova_Stimulus:Condition   4.8     0.03265
 
 Power and Effect sizes for pairwise comparisons (t-tests)
                                                 power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  58.9    0.417914
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.5    0.827219
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  16.3   -0.195690
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  20.7    0.213634
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.7    0.616782
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  57.0   -0.413984
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.9   -0.001233
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.1    0.412226
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  54.1    0.402501
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  90.3   -0.612243
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  17.2   -0.204164
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.0    0.195229
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.2   -0.826539
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  59.6   -0.419962
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.2   -0.003858
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.019078
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.1   -0.608722
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.3   -0.209688
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.232768
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.1   -0.820111
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.1   -0.407591
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.6    0.408513
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.7    0.804837
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  20.5   -0.215780
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  17.4    0.191390
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.6    0.607900
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  53.3    0.398229
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  90.1   -0.621156
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  21.3   -0.214207
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.7    0.199489
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.020326
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.4   -0.612807
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.3   -0.197607
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.3    0.408465
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.7    0.818030
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.2    0.408107</code></pre>
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  58.9    0.415333
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.3    0.820920
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.9   -0.207901
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.3    0.199246
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  90.4    0.617232
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  56.9   -0.414435
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   3.9    0.001102
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.2    0.404664
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  53.4    0.404082
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.9   -0.619747
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  18.5   -0.209653
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.4    0.203456
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.7   -0.829332
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  58.1   -0.415020
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   4.7   -0.007233
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1  99.9   -1.023212
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.3   -0.615736
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  17.9   -0.201312
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.236438
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.9   -0.818625
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.8   -0.414514
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.1    0.407082
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  99.0    0.822547
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.4   -0.207036
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  20.6    0.207896
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.4    0.613551
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  57.7    0.412194
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  88.8   -0.617330
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  17.7   -0.200471
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.2    0.203526
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.8   -1.021736
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.9   -0.615600
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.6   -0.209471
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.2    0.415576
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.8    0.817710
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  53.5    0.405448</code></pre>
 </div>
 </div>
 

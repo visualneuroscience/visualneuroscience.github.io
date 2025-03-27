@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "02 - Providing Participants with their T1w File"
+title: "02 T1w for PBn"
 description: "Information about how to provide participants with their T1w image"
 number-sections: true
 image: ./images/anat.png

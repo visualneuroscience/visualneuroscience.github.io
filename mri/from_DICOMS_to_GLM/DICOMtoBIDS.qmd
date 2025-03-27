@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "01 - from DICOM- to nifti-files in BIDS format"
+title: "01 DICOM to BIDS"
 number-sections: true
 description: "Step by step description of how to get from DICOM files to necessary nifti-files in BIDS format"
 image: ./images/01_dcm2bids/001_0_StartingScreen.png

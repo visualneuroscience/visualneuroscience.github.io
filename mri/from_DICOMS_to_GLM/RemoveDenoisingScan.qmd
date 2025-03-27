@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "04 - Removing Denoising Scan from Data"
+title: "04 - Removing Noise Scan"
 description: "Step by step description of how to remove the denoising scan from your data"
 number-sections: true
 image: ./images/02_RemoveDenoising/06_01_DenoisingScan_Confirmed.png

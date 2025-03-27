@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "How to contribute to the website"
+title: "Contribute to the website"
 description: "Information about how to contribute and edit the website"
 author: NZ, MG
 number-sections: true
