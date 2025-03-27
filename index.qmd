@@ -1,6 +1,6 @@
 ---
 title: "Visual Neuroscience lab"
-image: images/pr.png
+image: ./images/pr.png
 about: 
   template: jolla
   image-width: 14em
@@ -24,9 +24,10 @@ toc: false
 
 We investigate how subjective experience arises from sensory input and how this is represented in the brain.
 
-PI: Natalia Zaretskaya 
+PI: Natalia Zaretskaya
 
 </p>
 
 ------------------------------------------------------------------------
+
 :::
