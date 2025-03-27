@@ -11,9 +11,9 @@ date: 03/08/2025
 
 To deface your T1w-scan, you first need a T1w nifti file! If you only have DICOM files, please [convert them to nifti's first](DICOMtoBIDS.qmd)!
 
-**Defacing you T1w scans is an important preprocessing step *that has to be done before*[fmriprep](run_fmriprep.qmd). If you run fmriprep without prior defacing, you´ll probably run into errors!**
+**Defacing you T1w scans is an important preprocessing step *that has to be done before* [running fmriprep](run_fmriprep.qmd). If you run fmriprep without prior defacing, you´ll probably run into errors!**
 
-*Important* (if you [promised participants that they´ll get their T1w scan](ProvidingParticipantsWithTheirT1wFile.qmd): Make sure that you either already have sent the original T1w scan to the participants, or that you have additionally saved it somewhere else!
+*Important* (if you [promised participants that they´ll get their T1w scan](ProvidingParticipantsWithTheirT1wFile.qmd)): Make sure that you either already have sent the original T1w scan to the participants, or that you have additionally saved it somewhere else!
 
 # Start Pydeface (v.2.0.2) {#sec-startPydeface}
 
@@ -53,9 +53,13 @@ Finally, it should look like this: ![Pydeface Started](./images/03_Defacing/02_p
 
 5.  Repeat Step 3 (with this approach, you "overwrite" the initial T1w with the then defaced T1w file)
 
-6.  Type \`--force\`\`
+6.  Type `--force`
 
 It should look like this: ![Pydeface Command](./images/03_Defacing/04_pydeface_command.png)
+
+```
+pydeface /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --outfile /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --force
+```
 
 Then, press enter. Again, it might take a few moments, until pydeface finishes, be patient! At the end, it should look like this: ![Pydeface Finished](./images/03_Defacing/05_defacing_finished.png)
 

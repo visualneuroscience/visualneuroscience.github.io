@@ -442,8 +442,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>To deface your T1w-scan, you first need a T1w nifti file! If you only have DICOM files, please <a href="../../mri/from_DICOMS_to_GLM/DICOMtoBIDS.html">convert them to nifti’s first</a>!</p>
-<p><strong>Defacing you T1w scans is an important preprocessing step <em>that has to be done before</em><a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">fmriprep</a>. If you run fmriprep without prior defacing, you´ll probably run into errors!</strong></p>
-<p><em>Important</em> (if you <a href="../../mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html">promised participants that they´ll get their T1w scan</a>: Make sure that you either already have sent the original T1w scan to the participants, or that you have additionally saved it somewhere else!</p>
+<p><strong>Defacing you T1w scans is an important preprocessing step <em>that has to be done before</em> <a href="../../mri/from_DICOMS_to_GLM/run_fmriprep.html">running fmriprep</a>. If you run fmriprep without prior defacing, you´ll probably run into errors!</strong></p>
+<p><em>Important</em> (if you <a href="../../mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html">promised participants that they´ll get their T1w scan</a>): Make sure that you either already have sent the original T1w scan to the participants, or that you have additionally saved it somewhere else!</p>
 <section id="sec-startPydeface" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Start Pydeface (v.2.0.2)</h1>
 <p>To deface your t1w, you first have to open <code>pydeface</code>:</p>
@@ -473,9 +473,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Enter the path to your T1w scan (right-click + <code>paste</code> or type in the path)</p></li>
 <li><p>Type <code>--outfile</code></p></li>
 <li><p>Repeat Step 3 (with this approach, you “overwrite” the initial T1w with the then defaced T1w file)</p></li>
-<li><p>Type `–force``</p></li>
+<li><p>Type <code>--force</code></p></li>
 </ol>
 <p>It should look like this: <img src="./images/03_Defacing/04_pydeface_command.png" class="img-fluid" alt="Pydeface Command"></p>
+<pre><code>pydeface /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --outfile /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --force</code></pre>
 <p>Then, press enter. Again, it might take a few moments, until pydeface finishes, be patient! At the end, it should look like this: <img src="./images/03_Defacing/05_defacing_finished.png" class="img-fluid" alt="Pydeface Finished"></p>
 </section>
 <section id="the-next-steps" class="level1" data-number="4">
