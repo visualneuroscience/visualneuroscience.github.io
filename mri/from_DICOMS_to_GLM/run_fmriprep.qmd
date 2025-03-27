@@ -67,6 +67,9 @@ When fmriprep started, now it´s probably time to get a coffee and do something 
 
 # Troubleshooting
 
+$\to$ If there are any problems, please refer to the dedicated [troubleshooting page](troubleshooting.qmd#sec-TroublesFmriprep)
+
+
 1.  I ran fMRIprep but no distortion correction happened
 
     > fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri), or the [corresponding wiki entry](DICOMtoBIDS.qmd#sec-IntendedFor).
@@ -124,6 +127,7 @@ When fmriprep started, now it´s probably time to get a coffee and do something 
 4.  If fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:
 
     `--bold2t1w-init header`
+
 
 # The next steps
 
