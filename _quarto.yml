@@ -73,6 +73,7 @@ website:
       - OtherTopics/Labmeeting.qmd
       - OtherTopics/LabMembersOnly/LabMembersOnly.qmd
       - OtherTopics/ContributeWithR.qmd
+      - archive.qmd
   #DO NOT EDIT BELOW THIS LINE
   page-footer:
     background: light
