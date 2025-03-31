@@ -18,10 +18,10 @@
   {
     "listing": "/other_topics.html",
     "items": [
-      "/OtherTopics/CalculatingAPrioriPower.html",
-      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
       "/OtherTopics/ContributeWithR.html",
       "/OtherTopics/Labmeeting.html",
+      "/OtherTopics/CalculatingAPrioriPower.html",
+      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
       "/OtherTopics/displays/displays.html"
     ]
   },
@@ -57,6 +57,16 @@
     "listing": "/labmeeting.html",
     "items": [
       "/labmeeting/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/OtherTopics/ContributeWithR.html",
+      "/OtherTopics/Labmeeting.html",
+      "/OtherTopics/CalculatingAPrioriPower.html",
+      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
+      "/OtherTopics/displays/displays.html"
     ]
   },
   {

@@ -29,6 +29,7 @@ website:
   sidebar:
     style: "docked"
     search: true
+    collapse-level: 1
     contents:
       - text: "Home"
         href: index.qmd

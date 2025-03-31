@@ -15,6 +15,14 @@ about:
     - icon: calendar
       text: lab calendar
       href: https://calendar.online/cadcb4379c842ce87f53
+listing:
+  - id: recent-posts
+    contents:
+      - OtherTopics
+    type: grid
+    max-items: 3
+    sort:
+      - "date desc"
 toc: false
 ---
 
@@ -30,4 +38,5 @@ PI: Natalia Zaretskaya
 
 ------------------------------------------------------------------------
 
+:::{#recent-posts}
 :::

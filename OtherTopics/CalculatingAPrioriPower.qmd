@@ -6,6 +6,7 @@ description: "Information and descriptions of how to calculate a priori sample s
 author: CY
 number-sections: true
 editor: visual
+date: 03/21/2025
 ---
 
 # Power analysis
