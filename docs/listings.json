@@ -68,6 +68,13 @@
     ]
   },
   {
+    "listing": "/archive.html",
+    "items": [
+      "/archive/freesurfer FSFAST.html",
+      "/archive/dicom_to_bids.html"
+    ]
+  },
+  {
     "listing": "/contribute.html",
     "items": [
       "/contribute/index.html",
