@@ -52,7 +52,7 @@ Each neurodesktop user is limited to 256GB RAM out of 504GB and to 20 out of 32
 
 5.  After you sign up, your account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us.
 
-6.  Once your account is authorized, you should receive an email notification
+6.  Once your account is authorized, you should be able to log in with your credentials (you won't get a any special notifications, so please just check regularly)
 
 # Using Neurodesk
 
@@ -131,7 +131,7 @@ Once your account has been authorized
 
 # Information for lab members with ssh access
 
-## Folder mappings: 
+## Folder mappings:
 
 (left is server right is neurodesk)\
 `/storage -> /storage`\
