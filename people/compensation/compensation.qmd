@@ -25,18 +25,18 @@ Reimbursement is done via the bank transfer by the University to participants' b
 
 1.  Download the example [excel sheet](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/people/compensation/files/AWE_Form_example.xlsx)
 2.  Fill out one row per participant, entering information into EVERY field that is nonempty in the excel sheet (you can create your own dedicated template):
-    -   Betrag
+    -   Betrag: amount in euro
     -   Text (study name): The study name can not exceed a certain number of symbols, so please keep it short (fMRI studies can use their MRI lab abbreviations: pacmond, clav, deka, etc.)
-    -   Name CPD: first and last name
+    -   Name CPD: first and last name of the participant
     -   Strasse CPD: Street address of the participant
     -   Ort CPD: City where participant lived
     -   PLZ CPD: postal code of participant's address
     -   Land CPD: Country where participant lived
     -   Bankland CPD: country of the participant's bank (can be inferred from IBAN)
-    -   BIC CPD: Participant's bank BIC-code. Note: Although it may seem meaningless, you need to get both IBAN and **BIC** from you subject (even if they try to convince you otherwise). This is important for the university.
+    -   BIC CPD: Participant's bank BIC-code. Note: Although it may seem meaningless, you need to get both IBAN and **BIC** from you subject (even if they try to convince you that BIC is not needed). This is important for the university.
     -   IBAN CPD: Participant's IBAN of the account number where the money should be transferred
-        -   Note: Although it may seem meaningless, you need to get bot **IBAN and BIC** from you subject (even if they try to convince you otherwise).
-        -   **Attention! The bank information should be 100% correct, otherwise there is an administrative disaster. Therefore, triple-check with participants.**
+        -   Note: Although it may seem meaningless, you need to get both **IBAN** [**and BIC**]{style="color:red"} from you subject (even if they try to convince you that BIC is not needed).
+        -   [**Attention!!! The bank information should be 100% correct, otherwise there is an administrative disaster. Therefore, triple-check with participants.**]{style="color:red"}
     -   Innenauftrag: Ask Natalia for the correct value of the Innenauftrag field, since this varies from study to study.
     -   Leave the fields "Zahlweg" and "Kostenstelle" empty
 3.  Once you collect a sufficient number of participants, or once every 1-2 weeks, send this sheet to the secretary's office of the general psychology section (NOT the institute's secretary!), and they will take care of the rest.
