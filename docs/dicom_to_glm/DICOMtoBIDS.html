@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="MG">
+<meta name="dcterms.date" content="2025-03-08">
+<meta name="description" content="Step by step description of how to get from DICOM files to necessary nifti-files in BIDS format">
+
+<title>01 - DICOM to BIDS – Visual Neuroscience Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Visual Neuroscience Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../neurodesk/neurodesktop.html"> 
+<span class="menu-text">Neurodesktop</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../behavioral.html"> 
+<span class="menu-text">Behavioral</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../labmeeting.html"> 
+<span class="menu-text">Labmeeting</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dicom_to_glm.html"> 
+<span class="menu-text">from DICOM to GLM</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../mri.html"> 
+<span class="menu-text">MRI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../people.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../other_topics.html"> 
+<span class="menu-text">Other Topics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../archive.html"> 
+<span class="menu-text">Archive</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/DICOMtoBIDS.html">01 - DICOM to BIDS</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neurodesktop</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">01 - DICOM to BIDS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 - T1w for PBn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03 - Defacing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04 - Removing Noise Scan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 - fmriprep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../mri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MRI</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3D printing a brain</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7T anatomical analysis on neurodesk</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MRI BIDS and OSF</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">fMRIprep analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Old MRI setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Update to the MRI lab setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/physiology/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Physiological noise correction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../behavioral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Behavioral</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vision tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BIDS for behavioral studies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom-built chin rests</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../people.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">People</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/stipends/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stipends and prizes for master students</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/coffee/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coffee time</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant compensation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/leaving/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Things to do if you are leaving the lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people/writing/writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scientific writing in practice</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../other_topics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Other Topics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calculating a priori sample size using G Power</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma correction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contribute to the website</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab Members Only!!!</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labmeeting/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Labmeeting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../archive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Archive</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction"><span class="header-section-number">1</span> This Site is currently under construction!!</a></li>
+  <li><a href="#dicom-files" id="toc-dicom-files" class="nav-link" data-scroll-target="#dicom-files"><span class="header-section-number">2</span> DICOM-Files</a></li>
+  <li><a href="#from-dicom-to-nifti" id="toc-from-dicom-to-nifti" class="nav-link" data-scroll-target="#from-dicom-to-nifti"><span class="header-section-number">3</span> From Dicom to nifti</a>
+  <ul class="collapse">
+  <li><a href="#about-bids" id="toc-about-bids" class="nav-link" data-scroll-target="#about-bids"><span class="header-section-number">3.1</span> About BIDS</a></li>
+  </ul></li>
+  <li><a href="#preparations" id="toc-preparations" class="nav-link" data-scroll-target="#preparations"><span class="header-section-number">4</span> Preparations</a>
+  <ul class="collapse">
+  <li><a href="#sec-structure" id="toc-sec-structure" class="nav-link" data-scroll-target="#sec-structure"><span class="header-section-number">4.1</span> Setting up the directory structure</a></li>
+  <li><a href="#naming-of-the-nifti-files" id="toc-naming-of-the-nifti-files" class="nav-link" data-scroll-target="#naming-of-the-nifti-files"><span class="header-section-number">4.2</span> Naming of the nifti files</a>
+  <ul class="collapse">
+  <li><a href="#sec-naming" id="toc-sec-naming" class="nav-link" data-scroll-target="#sec-naming"><span class="header-section-number">4.2.1</span> Create a naming.txt</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-start" id="toc-sec-start" class="nav-link" data-scroll-target="#sec-start"><span class="header-section-number">5</span> Starting the script</a></li>
+  <li><a href="#installing-all-necessary-packages" id="toc-installing-all-necessary-packages" class="nav-link" data-scroll-target="#installing-all-necessary-packages"><span class="header-section-number">6</span> (Installing all necessary packages)</a></li>
+  <li><a href="#sec-preparation" id="toc-sec-preparation" class="nav-link" data-scroll-target="#sec-preparation"><span class="header-section-number">7</span> Preparation: Provide Input and Output Directory</a></li>
+  <li><a href="#assigning-niftis-to-directories-and-adjusting-file-names" id="toc-assigning-niftis-to-directories-and-adjusting-file-names" class="nav-link" data-scroll-target="#assigning-niftis-to-directories-and-adjusting-file-names"><span class="header-section-number">8</span> Assigning nifti’s to directories and adjusting file names</a>
+  <ul class="collapse">
+  <li><a href="#sec-filename" id="toc-sec-filename" class="nav-link" data-scroll-target="#sec-filename"><span class="header-section-number">8.1</span> Possible Actions to perform for a dicom</a></li>
+  <li><a href="#sec-directory" id="toc-sec-directory" class="nav-link" data-scroll-target="#sec-directory"><span class="header-section-number">8.2</span> Assigning a file to a directory</a></li>
+  <li><a href="#sec-extra" id="toc-sec-extra" class="nav-link" data-scroll-target="#sec-extra"><span class="header-section-number">8.3</span> The “extra” directory</a></li>
+  </ul></li>
+  <li><a href="#sec-bidsdirectory" id="toc-sec-bidsdirectory" class="nav-link" data-scroll-target="#sec-bidsdirectory"><span class="header-section-number">9</span> The resulting BIDS-directory</a></li>
+  <li><a href="#sec-IntendedFor" id="toc-sec-IntendedFor" class="nav-link" data-scroll-target="#sec-IntendedFor"><span class="header-section-number">10</span> Edit “IntendedFor”-Section in the fmap</a></li>
+  <li><a href="#congratuliations-you-did-it" id="toc-congratuliations-you-did-it" class="nav-link" data-scroll-target="#congratuliations-you-did-it"><span class="header-section-number">11</span> Congratuliations, you did it!</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/DICOMtoBIDS.html">01 - DICOM to BIDS</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">01 - DICOM to BIDS</h1>
+</div>
+
+<div>
+  <div class="description">
+    Step by step description of how to get from DICOM files to necessary nifti-files in BIDS format
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-body">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>MG </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 8, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="this-site-is-currently-under-construction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> This Site is currently under construction!!</h1>
+</section>
+<section id="dicom-files" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> DICOM-Files</h1>
+<ul>
+<li>the raw files from the scanner are DICOM-Files</li>
+<li>not really useful since we need .nifti files for our analysis <img src="./images/01_dcm2bids/001_1_DICOMS.png" class="img-fluid" alt="DICOM-Files"></li>
+</ul>
+<p><span class="math inline">\(\qquad\to\)</span> first step is to transform the DICOM- to nifti-files</p>
+</section>
+<section id="from-dicom-to-nifti" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> From Dicom to nifti</h1>
+<p>Even though we often get the data from the scanner already in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, there can be cases when you have to do this conversion by yourself. For this, you can use a script from Adam: <code>dcm2bids.sh</code> (You can find this script here: <code>/shared/website/dcm2bids.sh</code>)</p>
+<section id="about-bids" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="about-bids"><span class="header-section-number">3.1</span> About BIDS</h2>
+<p>Apart from a clear structure that is understandable (for other researchers as well) and standardized, the <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format offers further advantages. For example, various <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a> can perform different steps automatically (e.g.&nbsp;<a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>), but they require the data to be <a href="https://bids-standard.github.io/bids-validator/">BIDS-valid</a>).</p>
+</section>
+</section>
+<section id="preparations" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Preparations</h1>
+<section id="sec-structure" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-structure"><span class="header-section-number">4.1</span> Setting up the directory structure</h2>
+<p>First, you need to set up the correct structure for the script to run properly later. For this, you:</p>
+<ol type="1">
+<li><p>Create an empty directory named <code>bids</code> (right-click, <code>Create New... &gt; Folder</code>)</p></li>
+<li><p>Create a directory (name can be anything, for example <code>dicoms</code>) and copy/paste your folder with the DICOM-Files in this directory<img src="./images/01_dcm2bids/02_dicomsFolder.png" class="img-fluid" alt="DICOM-Folder"></p></li>
+</ol>
+<p>It should look like this:<img src="./images/01_dcm2bids/01_folder.png" class="img-fluid" alt="Folder Structure"></p>
+<p>These two directories (<code>bids</code> &amp; <code>dicoms</code>) <strong>need to be there for the script to work</strong>!</p>
+<p>The directory <code>scrips</code> is not necessary for the script to run, but it may be helpful to gather and safe the scripts and notes that you need during the <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">process from your raw files to the “final” analysis</a>.</p>
+</section>
+<section id="naming-of-the-nifti-files" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="naming-of-the-nifti-files"><span class="header-section-number">4.2</span> Naming of the nifti files</h2>
+<p>It is curcial for the <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, that the resulting nifti-files are named properly (<a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">see here for the naming convention(s)</a>).</p>
+<p>To ensure that <a href="#sec-filename">later</a>, it might be helpful to write down the proper names for the files <em>before</em> you start the process. This could be done in a simple .txt file, where you specify all the file-names. You can then just open this .txt file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your <code>scripts</code> folder as well.</p>
+<section id="sec-naming" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="sec-naming"><span class="header-section-number">4.2.1</span> Create a naming.txt</h3>
+<ol type="a">
+<li><p>navigate to your <code>scripts</code> folder, right-click, select <code>Create New &gt; Empty File</code><img src="./images/01_dcm2bids/14_0_CreateEmptyFile.png" class="img-fluid" alt="Create Empty File"></p></li>
+<li><p>assign a name (in this case <code>naming.txt</code>)<img src="./images/01_dcm2bids/14_1_AssignFileName.png" class="img-fluid" alt="Assign Filename"></p></li>
+<li><p>fill this text file with the proper, <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform</a> names for the nifti files <strong>and save</strong><img src="./images/01_dcm2bids/14_2_FillTextfile.png" class="img-fluid" alt="Fill the textfile and save">Now, you can just open this file <a href="#sec-filename">when you need to change the name of a nifti</a>.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="sec-start" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Starting the script</h1>
+<ol type="a">
+<li><p>To start the script, you first need to know where the script <code>dcm2bids.sh</code> is. In this case it is here: <code>/home/jovyan/Website/scripts/dcm2bids.sh</code> (you can copy/paste this file to your directory from <code>/shared/website/dcm2bids.sh</code>, or directly access) <img src="./images/01_dcm2bids/03_Script_dcm2bids.png" class="img-fluid" alt="Location of the Script"></p></li>
+<li><p>Navigate to the location of the script, right-click it, and select <code>Copy Path(s)</code> <img src="./images/01_dcm2bids/04_CopyScriptPath.png" class="img-fluid" alt="Copy Path(s)"></p></li>
+<li><p>Open a Terminal (icon of a monitor at the bottom left of your screen):<img src="./images/01_dcm2bids/open_terminal.gif" class="img-fluid" alt="Open a Terminal"></p></li>
+<li><p>Type <code>ml freesurfer</code> and press enter</p></li>
+<li><p>Type <code>bash</code>, add a space, then right-click and select <code>Paste</code> to fill in the path to the script (or type in the path manually)<img src="./images/01_dcm2bids/06_0_Commands_dcm2bids.png" class="img-fluid" alt="Commands to start the Script">Press <code>enter</code> to start the script.</p></li>
+</ol>
+</section>
+<section id="installing-all-necessary-packages" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> (Installing all necessary packages)</h1>
+<p>It is possible (especially if you start the script for the first time), that some necessary packages are not installed. If this is the case, <strong>the script will tell you</strong>! If something is missing you´ll be asked, if you want to install these packages. By typing in <code>y</code> and pressing <code>enter</code>, the package will get installed (you might have to do this for more than one package):<img src="./images/01_dcm2bids/06_1_packagesMissing.png" class="img-fluid" alt="Missing Packages"></p>
+<p>If there is still a missing package after all “automatic” suggestions of packages to install, it is probably related to <code>dcm2bids_scaffold</code> (<em>but again, the script will “show” you that there is something missing</em>). In this case, type <code>pip install dcm2bids</code> and press <em>enter</em><img src="./images/01_dcm2bids/06_2_installManually.png" class="img-fluid" alt="Install dcm2bids manually"></p>
+<p>Now “restart” the script (<a href="#sec-start">see 2.d + 2.e</a>): <img src="./images/01_dcm2bids/06_3_restartScript.png" class="img-fluid" alt="Restart the Script"></p>
+</section>
+<section id="sec-preparation" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Preparation: Provide Input and Output Directory</h1>
+<p>With all necessary packages installed, you are asked to provide the path to the nifti directory. It should look like this:<img src="./images/01_dcm2bids/07_Initial_dcm2bids.png" class="img-fluid" alt="Start of the Process"></p>
+<p>Nifti directory means the directory/folder, where the nifti-files should be saved to. This is our (currently empty) bids folder <a href="#sec-structure">that we created in the beginning</a>.</p>
+<ol type="a">
+<li><p>To indicate the nifti directory, we either type in the path manually, or get the path by navigating to the directory, right-clicking the bids directory and selecting <code>Copy Path(s)</code> (<a href="#sec-start">same procedure as when we needed the path of the script</a>)</p></li>
+<li><p>go back to the terminal window where <code>dcm2bids</code> is running</p></li>
+<li><p>right-click and select <code>Paste</code> to enter the path</p></li>
+<li><p>press enter</p></li>
+</ol>
+<p>Subsequently, you are asked to indicate the dicom directory.</p>
+<p><span class="math inline">\(\to\)</span> Repeat the steps a)-d) for the dicom directory where your dicoms are stored (<a href="#sec-structure">that we also created in the beginning</a>)</p>
+<p>When both paths are set, you are asked to choose a dicom name (basically the files of a participant; in this case, there is only one scanning-session, but if you have more than one subject, you can select the one that you want do process) and it should look like this:<img src="./images/01_dcm2bids/09_PathsSet_And_SelectSubject.png" class="img-fluid" alt="Select Name"></p>
+<p>After selecting a subject/dicom name (Press <code>enter</code>), the script automatically suggest a BIDS “subject id” and asks if it is correct (<em>Watch out!</em> Generally the suggested ID is not <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform</a>!)<img src="./images/01_dcm2bids/10_IncorrectSubjName.png" class="img-fluid" alt="Suggested Subject Name"></p>
+<p>For your data to be <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform</a> at the end, the “subject id” has to have a structure like this: sub-001, sub-002,… (All necessary information about BIDS can be found <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">here</a>)</p>
+<p>If the suggested name is correct, type in <code>y</code> and press <code>enter</code>.</p>
+<p>If it is not correct, type in <code>n</code>, press <code>enter</code> and type in a/the correct subject id<img src="./images/01_dcm2bids/11_ChangeName.png" class="img-fluid" alt="Enter correct subject id"> Once again, press <code>enter</code></p>
+<p>As a last preparative step, you are asked, if you would like to change the session folder from <code>ses-1</code> to another session. If you only have one session, type <code>n</code> and press <code>enter</code><img src="./images/01_dcm2bids/12_SelectSession.png" class="img-fluid" alt="Keep Ses-1"></p>
+<p>If you want to change the session, type <code>y</code> and provide the name of the sessions (<em>Important</em>: to have/get a <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform</a> structure at the end, subdirectories for sessions have to be named <code>ses-x</code> with <code>x</code> being a number)</p>
+<p>Subsequently, you get a short reminder in which directories your files should be stored.<img src="./images/01_dcm2bids/13_Start.png" class="img-fluid" alt="Reminder before Start"></p>
+<p>By pressing <code>enter</code>, the script starts to convert your dicom files to nifti’s. <em>This can take a few seconds - be patient!</em></p>
+</section>
+<section id="assigning-niftis-to-directories-and-adjusting-file-names" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Assigning nifti’s to directories and adjusting file names</h1>
+<p>After the script converts the dicom’s to nifti’s, we have to potentially correct automatically assigned names and assign a directory. At the top of the terminal, you always see how many dicoms are left to categorize.</p>
+<section id="sec-filename" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="sec-filename"><span class="header-section-number">8.1</span> Possible Actions to perform for a dicom</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/01_dcm2bids/14_ActionsNamingFiles.png" class="img-fluid figure-img"></p>
+<figcaption>Actions for a dicom</figcaption>
+</figure>
+</div>
+<p>You can select one of three options for any dicom file (<em>use up-/down arrow key to switch between the options and press enter to confirm your choice</em>):</p>
+<ol type="a">
+<li><p><code>Keep</code>: By selecting this option, you tell the script that the suggested name is correct and that you want to assign this file with the shown name to a directory (<em>Since BIDS uses a specific</em> <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">naming convention</a><em>, you´ll probably need this option only for “additional files”, like files related to denoising, that will be placed in a directory that is more or less independent of the BIDS-Format</em>; see <a href="#sec-extra" class="quarto-xref">Section&nbsp;8.3</a>*)</p></li>
+<li><p><code>Modify Name</code>: This option tells the script that you want to change the suggested name. This is needed, when the suggested name is not <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform</a>. After selecting this option (by pressing <code>enter</code>), you are asked to edit the name. Change the name (first delete the suggested one) to a <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform filename</a> (<em>Hint: the initially suggested name implies what type of scan it was, so you should be able to easily determine if it was an anatomical scan, which run of a functional scan, or the fieldmap</em>). Using a <a href="#sec-naming">previously created file with bids-conform names</a> can help avoiding errors and typos here, by just copy/pasting the prepared filenames! After you changed the name, press <code>enter</code> to confirm<img src="./images/01_dcm2bids/15_modifyNames.png" class="img-fluid" alt="Modyfing the Filename"></p></li>
+<li><p><code>Delete (Do not convert)</code>: As the name suggests, selecting this option deletes the mentioned file (thus, there will be no corresponding nifti-file!). One case when this is generally used is for the <code>anat-scout</code> scan that is irrelevant for the preprocessing and analysis, since it is a short scan at the beginning of a scanning session to ensure a proper position of the participant and to adjust the parameters for the actual scans.</p></li>
+</ol>
+</section>
+<section id="sec-directory" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-directory"><span class="header-section-number">8.2</span> Assigning a file to a directory</h2>
+<p>After either keeping or modifying the name, you are asked to assign the file to a directory.<img src="./images/01_dcm2bids/16_folderOptions.png" class="img-fluid" alt="Assign File to Directory"></p>
+<p>You can either:</p>
+<ol type="a">
+<li><p><code>Keep folder name</code>: By selecting this option, you accept the suggested directory. In general, the correct directory is already suggested for most files (anatomical <span class="math inline">\(\to\)</span> <code>anat</code>, functional <span class="math inline">\(\to\)</span> <code>func</code>, fieldmap <span class="math inline">\(\to\)</span> <code>fmap</code>)</p></li>
+<li><p><code>Modify folder name</code>: This option is only needed for files that were acquired “additionally”, for example, when a denoising sequence was used (files with <code>.ph</code> at the end, <a href="#sec-extra">see here</a>). As for the file name, you can edit the name of the directory after selecting this option. Entering a new/unique name for the directory here will result in an additional sub-directory in the subsequent <a href="#sec-bidsdirectory">BIDS-directory</a> (if you enter the same name for all “additional” files, they will all be stored in this specified directory)</p></li>
+</ol>
+</section>
+<section id="sec-extra" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-extra"><span class="header-section-number">8.3</span> The “extra” directory</h2>
+<p>Sometimes we acquire files that are not part of the <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a>-Format (and, more importantly, are not used by <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a>), for example when running a denoising sequence during acquisition of the data. In the example of a denoising sequence, corresponding files are named with <code>_ph</code> at the end. <a href="#sec-filename">When asked about the filename</a>, we can just keep it as it is, since we use these files separately anyway.<img src="./images/01_dcm2bids/17_Optional_DenoisingFiles.png" class="img-fluid" alt="Keep Name of additional Files"></p>
+<p><strong>Important!!</strong></p>
+<p>Those files have to be stored in a different directory! Thus, <a href="#sec-directory">when asked about where to assign the file</a>, we select <code>Modify folder name</code>. All “additional” files can be saved in a directory named <code>extra</code> (<span class="math inline">\(\to\)</span> edit the name of the directory to <code>extra</code> and press <code>enter</code>)<img src="./images/01_dcm2bids/18_Optional_newOrRenameFolder.png" class="img-fluid" alt="Assign File to Folder “extra”"></p>
+<p>After assigning the last file to its directory, you´ll see the information, that an additional file has been created, <a href="#sec-IntendedFor">which we will use later</a>. The script has finished:<img src="./images/01_dcm2bids/19_EndOfdcm2bids.png" class="img-fluid" alt="This is how it looks when the script has finished"></p>
+</section>
+</section>
+<section id="sec-bidsdirectory" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> The resulting BIDS-directory</h1>
+<p>This is how your bids-directory (which was initially created as an empty directory) should look like:<img src="./images/01_dcm2bids/20_resultingBIDSfolder.png" class="img-fluid" alt="Resulting bids-directory"></p>
+<p>When you enter the <code>sub-999</code> directory, you´ll find the sub-directory <code>ses-1</code> (or whatever session you specified during the <a href="#sec-preparation">preparation</a>). Inside, all sub-directories <a href="#sec-directory">that you selected/edited to assign the files to</a> are listed:<img src="./images/01_dcm2bids/21_BIDS_ses1.png" class="img-fluid" alt="Sub-Directories in ses-1"></p>
+<p>Each of these sub-directories contains all the files that you assigned, including the <code>.nii.gz</code> and a <code>.json</code> file<img src="./images/01_dcm2bids/22_BIDS_funcs.png" class="img-fluid" alt="Content of the func directory"><img src="./images/01_dcm2bids/23_BIDS_fmap.png" class="img-fluid" alt="Content of the fmap directory"><img src="./images/01_dcm2bids/24_BIDS_anat.png" class="img-fluid" alt="Content of the anat directory"><img src="./images/01_dcm2bids/25_BIDS_extra.png" class="img-fluid" alt="Content of the extra directory"></p>
+</section>
+<section id="sec-IntendedFor" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Edit “IntendedFor”-Section in the fmap</h1>
+<p>Before you continue, there is one last potential adaptation that should be considered.</p>
+<p>With changing Versions of <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> and <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a>, slight changes occur in how and where you have to include specific information. One example for this is the <code>IntendedFor</code> information in the fmap’s <code>.json</code> file.</p>
+<p>Depending on the Version of <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a> you plan to use, it may be necessary to change the <code>IntendedFor</code> field of the fmap’s .json file! The steps described below have to be done <em>if you want to use fmriprep 24.0.0 <strong>or newer</strong>!</em> (If you use an older Version, you don´t have to do the described steps)</p>
+<ol type="a">
+<li><p>Navigate to your <code>bids</code> directory</p></li>
+<li><p>Open the file <code>sub-999-bidsurifmap.json</code> (double click, or right-click + <code>gedit</code>)<img src="./images/01_dcm2bids/26_Open_bidsurifmap.png" class="img-fluid" alt="Open sub-999-bidsurifmap.json"></p></li>
+<li><p>Select all content and copy it (since Strg + c/v does not always work, you can use right-click and select <code>copy</code>)<img src="./images/01_dcm2bids/27_Copy_content_of_bidsurifmap.png" class="img-fluid" alt="Select and Copy content of bidsurifmap.json"></p></li>
+<li><p>Navigate to the <code>fmap</code> directory (<code>*/bids/sub-999/ses-1/fmap/</code>) and open the <code>.json</code> file<img src="./images/01_dcm2bids/28_Navigate_to_fmap_json.png" class="img-fluid" alt="Go to and open .json file"></p></li>
+<li><p>After the file opens, scroll down to the very end of it. There should be a section that starts with <code>IntendedFor</code> and looks like this:<img src="./images/01_dcm2bids/29_json_initial.png" class="img-fluid" alt="Initial IntendedFor Section"></p></li>
+<li><p>Remove all lines within the brackets after <code>"IntendedFor"</code> and paste the lines you copied from the <code>bidsurifmap.json</code> file. Remember to end every (but the last) line with a comma (<code>,</code>)!! It might also be good to keep the indentation at the beginning of each line (4 Spaches). At the end, it should look like this:<img src="./images/01_dcm2bids/30_json_changed.png" class="img-fluid" alt="Changed IntendedFor Section"></p></li>
+</ol>
+<p><strong><em>Don´t forget to save the file afterwards!!!</em></strong></p>
+</section>
+<section id="congratuliations-you-did-it" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Congratuliations, you did it!</h1>
+<p><strong><em>Congratulations</em></strong>! You successfully finished the process of converting your DICOM to nifti files in BIDS-Format and you are one step closer to analyzing your data!</p>
+<p>Please return to the <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
+<p>Alternatively, here is a list of potential next steps to continue with</p>
+<ol type="1">
+<li><p><a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">Provide participants with their T1w-file?</a></p></li>
+<li><p><a href="../dicom_to_glm/defacing.html">Defacing</a></p></li>
+<li><p><a href="../dicom_to_glm/RemoveDenoisingScan.html">Remove Denoising Scans from your data?</a></p></li>
+<li><p><a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/visualneuroscience">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
