@@ -8,18 +8,18 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: mri/neurodesktop/neurodesktop.qmd
+      - href: neurodesk/neurodesktop.qmd
         text: Neurodesktop
       - href: behavioral.qmd
         text: Behavioral
       - href: labmeeting.qmd
         text: Labmeeting
+      - href: dicom_to_glm.qmd
+        text: DICOM to GLM
       - href: mri.qmd
         text: MRI
       - href: people.qmd
         text: People
-      - href: contribute.qmd
-        text: how to contribute to the lab website
       - href: other_topics.qmd
         text: Other Topics
       - href: archive.qmd
@@ -32,16 +32,16 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Neurodesktop"
-        href: mri/neurodesktop/neurodesktop.qmd
+        href: neurodesk/neurodesktop.qmd
       - section: "MRI: from DICOM to GLM Analysis"
-        href: mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.qmd
+        href: dicom_to_glm/Overview_fromDICOMtoGLM.qmd
         contents:
-          - mri/from_DICOMS_to_GLM/DICOMtoBIDS.qmd
-          - mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.qmd
-          - mri/from_DICOMS_to_GLM/defacing.qmd
-          - mri/from_DICOMS_to_GLM/RemoveDenoisingScan.qmd
-          - mri/from_DICOMS_to_GLM/run_fmriprep.qmd
-          - mri/from_DICOMS_to_GLM/troubleshooting.qmd
+          - dicom_to_glm/DICOMtoBIDS.qmd
+          - dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.qmd
+          - dicom_to_glm/defacing.qmd
+          - dicom_to_glm/RemoveDenoisingScan.qmd
+          - dicom_to_glm/run_fmriprep.qmd
+          - dicom_to_glm/troubleshooting.qmd
       - section: "MRI"
         href: mri.qmd
         contents:

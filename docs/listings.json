@@ -19,6 +19,18 @@
     ]
   },
   {
+    "listing": "/dicom_to_glm.html",
+    "items": [
+      "/dicom_to_glm/troubleshooting.html",
+      "/dicom_to_glm/defacing.html",
+      "/dicom_to_glm/DICOMtoBIDS.html",
+      "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
+      "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
+      "/dicom_to_glm/RemoveDenoisingScan.html",
+      "/dicom_to_glm/run_fmriprep.html"
+    ]
+  },
+  {
     "listing": "/contribute.html",
     "items": [
       "/contribute/index.html",
@@ -64,17 +76,15 @@
       "/mri/analysis/dicom_to_bids.html",
       "/mri/analysis/fmriprep.html",
       "/mri/analysis/freesurfer FSFAST.html",
-      "/mri/from_DICOMS_to_GLM/defacing.html",
-      "/mri/from_DICOMS_to_GLM/DICOMtoBIDS.html",
-      "/mri/from_DICOMS_to_GLM/Overview_fromDICOMtoGLM.html",
-      "/mri/from_DICOMS_to_GLM/ProvidingParticipantsWithTheirT1wFile.html",
-      "/mri/from_DICOMS_to_GLM/RemoveDenoisingScan.html",
-      "/mri/from_DICOMS_to_GLM/run_fmriprep.html",
-      "/mri/from_DICOMS_to_GLM/troubleshooting.html",
       "/mri/mri-lab-setup-2023/index.html",
       "/mri/mri-lab-setup-2024/index.html",
-      "/mri/neurodesktop/neurodesktop.html",
       "/mri/physiology/index.html"
+    ]
+  },
+  {
+    "listing": "/neurodesk.html",
+    "items": [
+      "/neurodesk/neurodesktop.html"
     ]
   }
 ]
