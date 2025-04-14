@@ -5,7 +5,7 @@ title: "Contribute to the website"
 description: "Information about how to contribute and edit the website"
 author: NZ, MG
 number-sections: true
-date: 03/24/2025
+date: 04/14/2025
 ---
 
 # Contributing using RStudio
@@ -50,3 +50,21 @@ git commit -m "yourmessage"
 
 git push
 ```
+
+# General Information
+
+## Recent Changes Section
+
+At the starting page of the website, there is a ["Recent Changes"](index.qmd) section at the bottom. For making this section useful, it is important to add the `date` option in the meta-data of a page (format: MM-DD-YYYY)! Additionally, when you make *meaningful and important* changes to an existing page, you also need to change the data in the meta-data of the respective page! Otherwise, the change will not be shown at the "Recent Changes" section!
+
+## Adding new content
+
+After getting access, you´ll see the directory structure of the website.
+
+At the top of the hierarchy, you see the directories representing the "major topics" of the website (Labmeeting, People, Archive,...). If you want to add a page that is related to an existing topic, make sure to add it in the respective directory. If you´ll add something "new and unrelated to the rest", you can add a new directory (+ corresponding `.qmd` file).
+
+## "Making changes visible"
+
+After adding new content, you might have to take an additional step to actually make it visible on the website! If you created a new directory, you also have to add it in the `_quarto.yml` file! Here you have the option to add it to the menu bar at the top and/or on the side.
+
+If you added a new page within an existing directory, it should be visible automatically.

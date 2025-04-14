@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="NZ, MG">
-<meta name="dcterms.date" content="2025-03-24">
+<meta name="dcterms.date" content="2025-04-14">
 <meta name="description" content="Information about how to contribute and edit the website">
 
 <title>Contribute to the website – Visual Neuroscience Lab</title>
@@ -142,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../dicom_to_glm.html"> 
-<span class="menu-text">from DICOM to GLM</span></a>
+<span class="menu-text">DICOM to GLM</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../mri.html"> 
@@ -410,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labmeeting/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../labmeeting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labmeeting</span></a>
   </div>
 </li>
@@ -433,6 +433,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#contributing-using-rstudio" id="toc-contributing-using-rstudio" class="nav-link active" data-scroll-target="#contributing-using-rstudio"><span class="header-section-number">1</span> Contributing using RStudio</a>
   <ul class="collapse">
   <li><a href="#note-on-windows" id="toc-note-on-windows" class="nav-link" data-scroll-target="#note-on-windows"><span class="header-section-number">1.1</span> Note on Windows</a></li>
+  </ul></li>
+  <li><a href="#general-information" id="toc-general-information" class="nav-link" data-scroll-target="#general-information"><span class="header-section-number">2</span> General Information</a>
+  <ul class="collapse">
+  <li><a href="#recent-changes-section" id="toc-recent-changes-section" class="nav-link" data-scroll-target="#recent-changes-section"><span class="header-section-number">2.1</span> Recent Changes Section</a></li>
+  <li><a href="#adding-new-content" id="toc-adding-new-content" class="nav-link" data-scroll-target="#adding-new-content"><span class="header-section-number">2.2</span> Adding new content</a></li>
+  <li><a href="#making-changes-visible" id="toc-making-changes-visible" class="nav-link" data-scroll-target="#making-changes-visible"><span class="header-section-number">2.3</span> “Making changes visible”</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -464,7 +470,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 24, 2025</p>
+      <p class="date">April 14, 2025</p>
     </div>
   </div>
   
@@ -504,6 +510,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"yourmessage"</span>  </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="general-information" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> General Information</h1>
+<section id="recent-changes-section" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="recent-changes-section"><span class="header-section-number">2.1</span> Recent Changes Section</h2>
+<p>At the starting page of the website, there is a <a href="index.qmd">“Recent Changes”</a> section at the bottom. For making this section useful, it is important to add the <code>date</code> option in the meta-data of a page (format: MM-DD-YYYY)! Additionally, when you make <em>meaningful and important</em> changes to an existing page, you also need to change the data in the meta-data of the respective page! Otherwise, the change will not be shown at the “Recent Changes” section!</p>
+</section>
+<section id="adding-new-content" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="adding-new-content"><span class="header-section-number">2.2</span> Adding new content</h2>
+<p>After getting access, you´ll see the directory structure of the website.</p>
+<p>At the top of the hierarchy, you see the directories representing the “major topics” of the website (Labmeeting, People, Archive,…). If you want to add a page that is related to an existing topic, make sure to add it in the respective directory. If you´ll add something “new and unrelated to the rest”, you can add a new directory (+ corresponding <code>.qmd</code> file).</p>
+</section>
+<section id="making-changes-visible" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="making-changes-visible"><span class="header-section-number">2.3</span> “Making changes visible”</h2>
+<p>After adding new content, you might have to take an additional step to actually make it visible on the website! If you created a new directory, you also have to add it in the <code>_quarto.yml</code> file! Here you have the option to add it to the menu bar at the top and/or on the side.</p>
+<p>If you added a new page within an existing directory, it should be visible automatically.</p>
 
 
 </section>

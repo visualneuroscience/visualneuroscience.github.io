@@ -21,27 +21,13 @@
   {
     "listing": "/dicom_to_glm.html",
     "items": [
-      "/dicom_to_glm/troubleshooting.html",
+      "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
       "/dicom_to_glm/defacing.html",
+      "/dicom_to_glm/troubleshooting.html",
       "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
-      "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
       "/dicom_to_glm/RemoveDenoisingScan.html",
       "/dicom_to_glm/run_fmriprep.html"
-    ]
-  },
-  {
-    "listing": "/contribute.html",
-    "items": [
-      "/contribute/index.html",
-      "/contribute/rstudio/index.html"
-    ]
-  },
-  {
-    "listing": "/archive.html",
-    "items": [
-      "/archive/freesurfer FSFAST.html",
-      "/archive/dicom_to_bids.html"
     ]
   },
   {
@@ -50,6 +36,13 @@
       "/behavioral/chinrests/chinrests.html",
       "/behavioral/2024-05-23/index.html",
       "/behavioral/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/archive/freesurfer FSFAST.html",
+      "/archive/dicom_to_bids.html"
     ]
   },
   {
@@ -64,7 +57,7 @@
   {
     "listing": "/labmeeting.html",
     "items": [
-      "/labmeeting/2024-05-22/index.html"
+      "/labmeeting/index.html"
     ]
   },
   {

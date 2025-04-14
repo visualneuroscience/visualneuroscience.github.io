@@ -6,18 +6,18 @@ description: "Information about how to provide participants with their T1w image
 number-sections: true
 image: ./images/anat.png
 author: MG
-date: 03/08/2025
+date: 04/14/2025
 ---
 
 It can be a good incentive to promote your study by offering participants to give them their T1w files (since everyone knows how cool images of brains are!) **If you promise to give out the T1w-scans to participants, make sure, that you really do it!**
 
 There are only some things to remember:
 
-1. Participants get the "original" T1w scan! Thus, either send the scan **before** [defacing](defacing.qmd), or copy/paste the original T1w scan to another location before defacing!
+1.  Since the scans are already defaced when we don´t scan ourself, participants *always* get the defaced T1w scan! Thus, if we acquired the data ourselves (and started with the dicom files) make sure to do the [defacing](defacing.qmd) **before** you send the T1w-file to the participants!
 
 2.  If you provide participants with their T1w scans, it might be a good idea to provide them with the software on how to look at their data! For example, you could point them to MRIcroGL as free tool that they can install themselves to look at their data: [Link to MRIcroGL Download](https://www.nitrc.org/projects/mricrogl/)
 
-3.  **We do not keep the "non-defaced" T1w scans of participants**! Thus, delete the T1w scan of a participant either after you sent it, or at the latest after your study finished!
+3.  **We do not keep the "non-defaced" T1w scans of participants**! Thus, delete the non-defaced T1w scan of a participant either immediately after [defacing](defacing.qmd), or at the latest after your study finished!
 
 # The next Steps
 

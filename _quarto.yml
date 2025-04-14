@@ -74,7 +74,7 @@ website:
           - OtherTopics/ContributeWithR.qmd
           - OtherTopics/LabMembersOnly/LabMembersOnly.qmd
       - text: "Labmeeting"
-        href: labmeeting/2024-05-22/index.qmd
+        href: labmeeting/index.qmd
       - text: "Archive"
         href: archive.qmd
   #DO NOT EDIT BELOW THIS LINE
