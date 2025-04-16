@@ -5,6 +5,7 @@ title: Old MRI setup
 description: "Information about running experiments in the MRI lab (before the new computer arrived!)"
 image: 316895640-7f4fa294-89fc-4fe1-a430-589a4f116768.png
 author: AA
+categories: [MRI]
 date: 01/01/2023
 ---
 

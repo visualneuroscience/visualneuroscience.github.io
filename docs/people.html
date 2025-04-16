@@ -450,7 +450,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Coffee">Coffee <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Compensation">Compensation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Lab">Lab <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
@@ -479,7 +479,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1727042400000" data-listing-file-modified-sort="1744096670406" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="538">
+<div class="g-col-1" data-index="0" data-categories="Compensation" data-listing-date-sort="1727042400000" data-listing-file-modified-sort="1744792458073" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="538">
 <a href="./people/compensation/compensation.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -489,6 +489,11 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 Participant compensation
 </h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Compensation'); return false;">
+Compensation
+</div>
+</div>
 <div class="card-text listing-description">
 How to provide your participants with money or course credit for experiment participation
 </div>
@@ -504,7 +509,7 @@ Sep 23, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1727042400000" data-listing-file-modified-sort="1741178211915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="424">
+<div class="g-col-1" data-index="1" data-categories="Lab" data-listing-date-sort="1727042400000" data-listing-file-modified-sort="1744792475120" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="424">
 <a href="./people/leaving/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -514,6 +519,11 @@ Sep 23, 2024
 <h5 class="no-anchor card-title listing-title">
 Things to do if you are leaving the lab
 </h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Lab'); return false;">
+Lab
+</div>
+</div>
 <div class="card-text listing-description">
 How to provide your participants with money or course credit for experiment participation
 </div>
@@ -552,7 +562,7 @@ Sep 18, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1724623200000" data-listing-file-modified-sort="1741178211887" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
+<div class="g-col-1" data-index="3" data-categories="Coffee,Lab" data-listing-date-sort="1724623200000" data-listing-file-modified-sort="1744792435300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
 <a href="./people/coffee/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -562,6 +572,14 @@ Sep 18, 2024
 <h5 class="no-anchor card-title listing-title">
 Coffee time
 </h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Coffee'); return false;">
+Coffee
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Lab'); return false;">
+Lab
+</div>
+</div>
 <div class="card-text listing-description">
 Coffee information
 </div>
@@ -604,7 +622,7 @@ Aug 26, 2024
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

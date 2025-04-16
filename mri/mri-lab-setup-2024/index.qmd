@@ -1,6 +1,8 @@
 ---
 title: "Update to the MRI lab setup "
 author: "AC"
+categories: [MRI, NNL-Goggles]
+date: 10/07/2024
 format: html
 editor: visual
 ---

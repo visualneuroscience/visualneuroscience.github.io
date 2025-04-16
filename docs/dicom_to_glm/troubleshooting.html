@@ -449,7 +449,14 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/troubleshooting.html">Troubleshooting</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Troubleshooting</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">MRI</div>
+    <div class="quarto-category">Analysis</div>
+    <div class="quarto-category">fmriPrep</div>
+    <div class="quarto-category">Preprocessing</div>
+    <div class="quarto-category">Neurodesk</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
@@ -500,7 +507,7 @@ window.Quarto = {
 <section id="silent-error" class="level4" data-number="2.1.1.2">
 <h4 data-number="2.1.1.2" class="anchored" data-anchor-id="silent-error"><span class="header-section-number">2.1.1.2</span> Silent error</h4>
 <p>It can be hard to realize this issue, since this problem sometimes “occurs silently”, thus no error message will be shown.</p>
-<p>If the distortion correction was successful, the subject’s .html should include a section <em><span class="math inline">\(B_0\)</span> field mapping</em>. As you can see in the image below, this would be shown at the top of the file where the different sections are listed as well:<img src="./images/Troubleshooting/missingDistortionCorrection.png" class="img-fluid" alt=".html-File with B0 field mapping"></p>
+<p>If the distortion correction was successful, the subject’s .html should include a section <span class="math inline">\(B_0\)</span> field mapping. As you can see in the image below, this would be shown at the top of the file where the different sections are listed as well:<img src="./images/Troubleshooting/missingDistortionCorrection.png" class="img-fluid" alt=".html-File with B0 field mapping"></p>
 <p>If the distortion correction failed silently (thus, without an explicit error that is printed somewhere), the section is missing as whole and is not shown at the top of the .html file:<img src="./images/Troubleshooting/MissingDC.png" class="img-fluid" alt=".html file where B0 field mapping is missing"></p>
 </section>
 </section>
@@ -575,7 +582,7 @@ Older fmap spec for fmriprep older than 24.0.0:
 </section>
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

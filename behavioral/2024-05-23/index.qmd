@@ -3,6 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: BIDS for behavioral studies
 description: "How to store your data in bids structure if you are using psychtoolbox"
+categories: [BIDS, Behavioral]
 author: CY
 date: 05/23/2024
 ---

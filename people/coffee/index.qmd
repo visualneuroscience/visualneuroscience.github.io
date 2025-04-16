@@ -5,6 +5,7 @@ title: Coffee time
 description: "Coffee information"
 image: images/clipboard-235917595.png
 author: NZ
+categories: [Coffee, Lab]
 date: 08/26/2024
 ---
 

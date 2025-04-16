@@ -4,6 +4,7 @@ geometry: margin=3cm
 title: "Labmeeting"
 description: "Information about our lab meeting"
 author: NZ, MG
+categories: [Lab]
 number-sections: true
 date: 01/04/2025
 ---

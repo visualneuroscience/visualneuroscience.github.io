@@ -19,6 +19,12 @@ listing:
   - id: recent-posts
     contents:
       - OtherTopics
+      - people
+      - neurodesk
+      - mri
+      - labmeeting
+      - dicom_to_glm
+      - behavioral
     type: grid
     max-items: 5
     sort:

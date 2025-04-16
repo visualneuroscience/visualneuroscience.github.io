@@ -4,6 +4,7 @@ geometry: margin=3cm
 title: Custom-built chin rests
 description: "Information about producing a chinrest for behavioral experiments"
 author: NZ
+categories: [3D-Print]
 date: 08/26/2024
 ---
 

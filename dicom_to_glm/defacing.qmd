@@ -5,6 +5,7 @@ title: "03 - Defacing"
 description: "Step by step description of how to deface your data"
 number-sections: true
 image: ./images/03_Defacing/01_open_Pydeface.png
+categories: [MRI, Preprocessing, Neurodesk]
 author: MG
 date: 04/13/2025
 ---

@@ -5,6 +5,7 @@ title: "01 - DICOM to BIDS"
 number-sections: true
 description: "Step by step description of how to get from DICOM files to necessary nifti-files in BIDS format"
 image: ./images/01_dcm2bids/001_0_StartingScreen.png
+categories: [MRI, DICOM, BIDS, Preprocessing, Neurodesk]
 author: MG
 date: 03/08/2025
 ---

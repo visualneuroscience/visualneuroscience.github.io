@@ -5,8 +5,9 @@ title: "02 - T1w for PBn"
 description: "Information about how to provide participants with their T1w image"
 number-sections: true
 image: ./images/anat.png
+categories: [MRI]
 author: MG
-date: 04/14/2025
+date: 04/15/2025
 ---
 
 It can be a good incentive to promote your study by offering participants to give them their T1w files (since everyone knows how cool images of brains are!) **If you promise to give out the T1w-scans to participants, make sure, that you really do it!**

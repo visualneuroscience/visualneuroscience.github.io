@@ -5,6 +5,7 @@ title: "Contribute to the website"
 description: "Information about how to contribute and edit the website"
 author: NZ, MG
 number-sections: true
+categories: [Website]
 date: 04/14/2025
 ---
 

@@ -4,6 +4,7 @@ geometry: margin=3cm
 title: Physiological noise correction
 description: "Creating physiology regressors using the PhysIO toolbox"
 image: Picture4.jpg
+categories: [MRI, Physiology]
 author: MW
 date: 10/26/2023
 ---

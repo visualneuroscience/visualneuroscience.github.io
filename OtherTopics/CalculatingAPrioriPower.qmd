@@ -5,6 +5,7 @@ title: "Calculating a priori sample size using G Power"
 description: "Information and descriptions of how to calculate a priori sample size using G Power"
 author: CY
 number-sections: true
+categories: [Power, Analysis]
 editor: visual
 date: 03/21/2025
 ---
