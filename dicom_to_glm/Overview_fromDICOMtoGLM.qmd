@@ -39,7 +39,7 @@ This page gives an overview and brief information about the necessary steps to g
 
 # ([Remove denoising scan from your data](RemoveDenoisingScan.qmd))
 
--   if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continueing
+-   if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continuing
 
 # [fmriprep](run_fmriprep.qmd)
 

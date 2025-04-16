@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Visual Neuroscience Lab"
+  back-to-top-navigation: true
   navbar:
     right:
       - href: index.qmd

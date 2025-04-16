@@ -3,6 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: MRI BIDS and OSF
 description: Information about BIDS and OSF
+categories: [BIDS, OSF]
 author: AA
 date: 05/23/2024
 ---

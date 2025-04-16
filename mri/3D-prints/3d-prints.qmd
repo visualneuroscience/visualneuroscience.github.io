@@ -4,6 +4,7 @@ geometry: margin=3cm
 title: 3D printing a brain
 description: "current procedure for 3d printing brains"
 image: ./images/clipboard-3427974075.png
+categories: [MRI, 3D-Print]
 author: NZ
 date: 10/10/2024
 ---
