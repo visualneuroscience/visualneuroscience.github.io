@@ -34,7 +34,7 @@ After selecting your version, a new `bash` window opens and fmriprep loads. This
 
 First, you need to create some new directories that are necessary for fmriprep to run properly. For this, enter the following command (adapt the path(s) if necessary)
 
-```         
+``` bash         
 mkdir -p /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/
 ```
 
@@ -42,7 +42,7 @@ By confirming your command with Enter, you´ll find the new directory structure 
 
 Then, we need to specify where fmriprep should store the resulting files with this command (again, adapt the path(s) if necessary):
 
-```         
+``` bash         
 SUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/
 ```
 
@@ -54,7 +54,7 @@ SUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfe
 
 With the setup done, you can now run the command:
 
-```         
+``` bash         
 fmriprep /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant --bold2t1w-init header --force-bbr -w /home/jovyan/website/fmriprep_tmp --output-spaces T1w fsaverage fsnative --participant-label sub-999 --nprocs 8 --mem 10000 --skip_bids_validation --stop-on-first-crash -v --fs-license-file /home/jovyan/website/freesurferlicense/license.txt
 ```
 

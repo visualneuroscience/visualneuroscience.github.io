@@ -56,7 +56,7 @@ git push
 
 ## Recent Changes Section
 
-At the starting page of the website, there is a ["Recent Changes"](index.qmd) section at the bottom. For making this section useful, it is important to add the `date` option in the meta-data of a page (format: MM-DD-YYYY)! Additionally, when you make *meaningful and important* changes to an existing page, you also need to change the data in the meta-data of the respective page! Otherwise, the change will not be shown at the "Recent Changes" section!
+At the starting page of the website, there is a ["Recent Changes"](../index.qmd) section at the bottom. For making this section useful, it is important to add the `date` option in the meta-data of a page (format: MM-DD-YYYY)! Additionally, when you make *meaningful and important* changes to an existing page, you also need to change the data in the meta-data of the respective page! Otherwise, the change will not be shown at the "Recent Changes" section!
 
 ## Adding new content
 

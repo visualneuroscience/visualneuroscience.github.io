@@ -21,11 +21,11 @@
   {
     "listing": "/dicom_to_glm.html",
     "items": [
+      "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
       "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
       "/dicom_to_glm/defacing.html",
       "/dicom_to_glm/troubleshooting.html",
-      "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/RemoveDenoisingScan.html",
       "/dicom_to_glm/run_fmriprep.html"
     ]
@@ -48,13 +48,13 @@
   {
     "listing": "/index.html",
     "items": [
+      "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
       "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
       "/OtherTopics/ContributeWithR.html",
       "/dicom_to_glm/defacing.html",
       "/dicom_to_glm/troubleshooting.html",
       "/OtherTopics/CalculatingAPrioriPower.html",
-      "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/RemoveDenoisingScan.html",
       "/dicom_to_glm/run_fmriprep.html",
       "/mri/analysis/7t_analysis_on_neurodesk.html",

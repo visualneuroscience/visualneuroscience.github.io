@@ -4,11 +4,7 @@
     "href": "people.html",
     "title": "People-related information",
     "section": "",
-<<<<<<< HEAD
     "text": "Participant compensation\n\n\n\nCompensation\n\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThings to do if you are leaving the lab\n\n\n\nLab\n\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nScientific writing in practice\n\n\nPractical recommendations for preparing scientific manuscripts, thesis papers, reports, etc.\n\n\n\nNZ\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoffee time\n\n\n\nCoffee\n\n\nLab\n\n\n\nCoffee information\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStipends and prizes for master students\n\n\nThis is a list of resources with stipends and prizes you can apply for\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-=======
-    "text": "Participant compensation\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThings to do if you are leaving the lab\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nScientific writing in practice\n\n\nPractical recommendations for preparing scientific manuscripts, thesis papers, reports, etc.\n\n\n\nNZ\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoffee time\n\n\nCoffee information\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStipends and prizes for master students\n\n\nThis is a list of resources with stipends and prizes you can apply for\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
     "crumbs": [
       "Home",
       "People"
@@ -103,11 +99,7 @@
     "href": "other_topics.html",
     "title": "Other Topics",
     "section": "",
-<<<<<<< HEAD
     "text": "Contribute to the website\n\n\n\nWebsite\n\n\n\nInformation about how to contribute and edit the website\n\n\n\nNZ, MG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCalculating a priori sample size using G Power\n\n\n\nPower\n\n\nAnalysis\n\n\n\nInformation and descriptions of how to calculate a priori sample size using G Power\n\n\n\nCY\n\n\nMar 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nLab Members Only!!!\n\n\nThis site is dedicated only for members of the lab!\n\n\n\nNZ\n\n\nJan 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGamma correction\n\n\nHow to measure monitor gamma and apply it in visual experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-=======
-    "text": "Contribute to the website\n\n\nInformation about how to contribute and edit the website\n\n\n\nNZ, MG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCalculating a priori sample size using G Power\n\n\nInformation and descriptions of how to calculate a priori sample size using G Power\n\n\n\nCY\n\n\nMar 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nLab Members Only!!!\n\n\nThis site is dedicated only for members of the lab!\n\n\n\nNZ\n\n\nJan 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGamma correction\n\n\nHow to measure monitor gamma and apply it in visual experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
     "crumbs": [
       "Home",
       "Other Topics"
@@ -202,11 +194,7 @@
     "href": "OtherTopics/CalculatingAPrioriPower.html#superpower",
     "title": "Calculating a priori sample size using G Power",
     "section": "3.3 Superpower",
-<<<<<<< HEAD
-    "text": "3.3 Superpower\nAs the name suggests, it is super for power analysis :) However, you need to simulate your data to calculate required sample size. It might be useful to calculate actual power level. However, it is hard to create simulations in general for our studies in Visual Neuroscience Lab.\n\n# Experimental design\ndesign_result &lt;- Superpower::ANOVA_design(\n  design = \"3w*3w\",  # 3x2 within-subjects \n  n = 30,  # as a start point to find the required sample size\n  mu = c(500, 520, 540, 490, 510, 530, 480, 500, 520),  # average values for dependent variable\n  sd = 50,  # estimated standard deviation\n  r = 0.5,  # correlation between repeated measures\n  labelnames = c(\"Stimulus\", \"A\", \"B\", \"C\", \"Condition\", \"1\", \"2\", \"3\")\n)\n\n\n\n\n\n\n\n# simulation for power analysis\nSuperpower::ANOVA_power(design_result, nsims = 1000)\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            91.4     0.21556\nanova_Condition          100.0     0.50435\nanova_Stimulus:Condition   5.3     0.03351\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  57.0    0.410276\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.4    0.821801\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  21.5   -0.207963\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  19.7    0.213674\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.7    0.616916\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  55.0   -0.405377\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.7    0.001952\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.5    0.419904\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.9    0.416067\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.6   -0.621283\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  18.0   -0.197375\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  18.4    0.201430\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.2   -0.818741\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  57.3   -0.412380\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.5    0.008100\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.027786\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.6   -0.612011\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.0   -0.214175\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.225381\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.1   -0.825279\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.2   -0.410024\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  59.2    0.423181\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.7    0.825073\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  17.1   -0.198151\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  20.3    0.209579\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  89.0    0.630072\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  51.9    0.397544\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  90.0   -0.625632\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  17.6   -0.212040\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.4    0.205360\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.025091\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.0   -0.608394\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  16.3   -0.193607\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.9    0.409735\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.2    0.830108\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.3    0.416647\n\n\nWithin-Subject Factors Included: Check MANOVA Results\n\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            91.4     0.21556\nanova_Condition          100.0     0.50435\nanova_Stimulus:Condition   5.3     0.03351\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  57.0    0.410276\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.4    0.821801\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  21.5   -0.207963\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  19.7    0.213674\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.7    0.616916\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  55.0   -0.405377\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.7    0.001952\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.5    0.419904\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.9    0.416067\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.6   -0.621283\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  18.0   -0.197375\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  18.4    0.201430\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.2   -0.818741\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  57.3   -0.412380\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.5    0.008100\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.027786\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.6   -0.612011\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.0   -0.214175\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.225381\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.1   -0.825279\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.2   -0.410024\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  59.2    0.423181\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.7    0.825073\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  17.1   -0.198151\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  20.3    0.209579\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  89.0    0.630072\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  51.9    0.397544\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  90.0   -0.625632\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  17.6   -0.212040\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.4    0.205360\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.025091\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.0   -0.608394\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  16.3   -0.193607\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.9    0.409735\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.2    0.830108\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.3    0.416647",
-=======
-    "text": "3.3 Superpower\nAs the name suggests, it is super for power analysis :) However, you need to simulate your data to calculate required sample size. It might be useful to calculate actual power level. However, it is hard to create simulations in general for our studies in Visual Neuroscience Lab.\n\n# Experimental design\ndesign_result &lt;- Superpower::ANOVA_design(\n  design = \"3w*3w\",  # 3x2 within-subjects \n  n = 30,  # as a start point to find the required sample size\n  mu = c(500, 520, 540, 490, 510, 530, 480, 500, 520),  # average values for dependent variable\n  sd = 50,  # estimated standard deviation\n  r = 0.5,  # correlation between repeated measures\n  labelnames = c(\"Stimulus\", \"A\", \"B\", \"C\", \"Condition\", \"1\", \"2\", \"3\")\n)\n\n\n\n\n\n\n\n# simulation for power analysis\nSuperpower::ANOVA_power(design_result, nsims = 1000)\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            92.7     0.21636\nanova_Condition          100.0     0.50087\nanova_Stimulus:Condition   4.9     0.03208\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.7    0.417447\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.3    0.829024\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  16.3   -0.200779\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  19.9    0.207205\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.7    0.617223\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  55.5   -0.408114\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.9    0.002472\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.1    0.411138\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.5    0.402647\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.6   -0.613006\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  19.2   -0.207588\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.0    0.195293\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.9   -0.824162\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  56.3   -0.412323\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.2   -0.007322\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.023096\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.7   -0.611063\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  17.2   -0.206885\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.234486\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.1   -0.820720\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.9   -0.409369\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  53.8    0.407555\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.7    0.809475\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.3   -0.209734\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.6    0.201085\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.1    0.609515\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  54.2    0.405167\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.1   -0.615773\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.8   -0.203194\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  18.9    0.202436\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.015318\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  87.6   -0.607733\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.2   -0.204290\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.1    0.409462\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.8    0.816546\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  54.6    0.405943\n\n\nWithin-Subject Factors Included: Check MANOVA Results\n\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            92.7     0.21636\nanova_Condition          100.0     0.50087\nanova_Stimulus:Condition   4.9     0.03208\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.7    0.417447\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.3    0.829024\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  16.3   -0.200779\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  19.9    0.207205\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.7    0.617223\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  55.5   -0.408114\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.9    0.002472\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.1    0.411138\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.5    0.402647\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.6   -0.613006\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  19.2   -0.207588\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.0    0.195293\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.9   -0.824162\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  56.3   -0.412323\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.2   -0.007322\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.023096\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.7   -0.611063\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  17.2   -0.206885\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.234486\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.1   -0.820720\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.9   -0.409369\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  53.8    0.407555\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.7    0.809475\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.3   -0.209734\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.6    0.201085\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.1    0.609515\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  54.2    0.405167\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.1   -0.615773\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.8   -0.203194\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  18.9    0.202436\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.015318\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  87.6   -0.607733\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.2   -0.204290\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.1    0.409462\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.8    0.816546\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  54.6    0.405943",
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
+    "text": "3.3 Superpower\nAs the name suggests, it is super for power analysis :) However, you need to simulate your data to calculate required sample size. It might be useful to calculate actual power level. However, it is hard to create simulations in general for our studies in Visual Neuroscience Lab.\n\n# Experimental design\ndesign_result &lt;- Superpower::ANOVA_design(\n  design = \"3w*3w\",  # 3x2 within-subjects \n  n = 30,  # as a start point to find the required sample size\n  mu = c(500, 520, 540, 490, 510, 530, 480, 500, 520),  # average values for dependent variable\n  sd = 50,  # estimated standard deviation\n  r = 0.5,  # correlation between repeated measures\n  labelnames = c(\"Stimulus\", \"A\", \"B\", \"C\", \"Condition\", \"1\", \"2\", \"3\")\n)\n\n\n\n\n\n\n\n# simulation for power analysis\nSuperpower::ANOVA_power(design_result, nsims = 1000)\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            92.1     0.21818\nanova_Condition          100.0     0.49887\nanova_Stimulus:Condition   4.9     0.03382\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  59.1   0.4204547\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.4   0.8344282\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.7  -0.2009876\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  21.6   0.2179527\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.1   0.6108302\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  55.8  -0.4076614\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   5.7   0.0001133\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.5   0.4084345\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  57.0   0.4162525\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.4  -0.6194759\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  19.3  -0.2019008\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  16.2   0.1904804\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.0  -0.8191283\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  58.3  -0.4153784\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.5  -0.0097577\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0  -1.0329764\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.3  -0.6133448\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  21.8  -0.2230277\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0  -1.2378254\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.0  -0.8293685\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  58.6  -0.4233920\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  57.9   0.4184646\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.9   0.8097276\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  19.3  -0.2051002\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  17.7   0.2035610\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.2   0.6077289\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  52.3   0.3909391\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  89.7  -0.6237347\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  21.1  -0.2155666\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.5   0.1925687\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0  -1.0167974\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.2  -0.6109184\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  17.2  -0.2013246\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  54.6   0.4058641\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.4   0.8174290\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  56.5   0.4089222\n\n\nWithin-Subject Factors Included: Check MANOVA Results\n\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            92.1     0.21818\nanova_Condition          100.0     0.49887\nanova_Stimulus:Condition   4.9     0.03382\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  59.1   0.4204547\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.4   0.8344282\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.7  -0.2009876\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  21.6   0.2179527\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.1   0.6108302\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  55.8  -0.4076614\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   5.7   0.0001133\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.5   0.4084345\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  57.0   0.4162525\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.4  -0.6194759\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  19.3  -0.2019008\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  16.2   0.1904804\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.0  -0.8191283\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  58.3  -0.4153784\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.5  -0.0097577\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0  -1.0329764\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.3  -0.6133448\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  21.8  -0.2230277\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0  -1.2378254\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.0  -0.8293685\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  58.6  -0.4233920\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  57.9   0.4184646\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.9   0.8097276\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  19.3  -0.2051002\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  17.7   0.2035610\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.2   0.6077289\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  52.3   0.3909391\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  89.7  -0.6237347\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  21.1  -0.2155666\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.5   0.1925687\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0  -1.0167974\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.2  -0.6109184\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  17.2  -0.2013246\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  54.6   0.4058641\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.4   0.8174290\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  56.5   0.4089222",
     "crumbs": [
       "Home",
       "Other Topics",
@@ -508,11 +496,7 @@
     "href": "dicom_to_glm.html",
     "title": "MRI: from DICOMs to GLM",
     "section": "",
-<<<<<<< HEAD
-    "text": "Overview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nApr 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02 - T1w for PBn\n\n\n\nMRI\n\n\n\nInformation about how to provide participants with their T1w image\n\n\n\nMG\n\n\nApr 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03 - Defacing\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to deface your data\n\n\n\nMG\n\n\nApr 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nCollection of known potential problems and their solutions\n\n\n\nMG\n\n\nMar 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01 - DICOM to BIDS\n\n\n\nMRI\n\n\nDICOM\n\n\nBIDS\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04 - Removing Noise Scan\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to remove the denoising scan from your data\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n05 - fmriprep\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nNeurodesk\n\n\n\nStep by step description of how to run fmriprep\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-=======
-    "text": "02 - T1w for PBn\n\n\nInformation about how to provide participants with their T1w image\n\n\n\nMG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03 - Defacing\n\n\nStep by step description of how to deface your data\n\n\n\nMG\n\n\nApr 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\nCollection of known potential problems and their solutions\n\n\n\nMG\n\n\nMar 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01 - DICOM to BIDS\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nOverview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04 - Removing Noise Scan\n\n\nStep by step description of how to remove the denoising scan from your data\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n05 - fmriprep\n\n\nStep by step description of how to run fmriprep\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
+    "text": "01 - DICOM to BIDS\n\n\n\nMRI\n\n\nDICOM\n\n\nBIDS\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nApr 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nOverview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nApr 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02 - T1w for PBn\n\n\n\nMRI\n\n\n\nInformation about how to provide participants with their T1w image\n\n\n\nMG\n\n\nApr 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03 - Defacing\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to deface your data\n\n\n\nMG\n\n\nApr 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nCollection of known potential problems and their solutions\n\n\n\nMG\n\n\nMar 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04 - Removing Noise Scan\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to remove the denoising scan from your data\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n05 - fmriprep\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nNeurodesk\n\n\n\nStep by step description of how to run fmriprep\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "dicom_to_glm/run_fmriprep.html",
@@ -539,11 +523,23 @@
     ]
   },
   {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html",
+    "href": "dicom_to_glm/DICOMtoBIDS.html",
+    "title": "01 - DICOM to BIDS",
+    "section": "",
+    "text": "the raw files from the scanner are DICOM-Files\nnot really useful since we need .nifti files for our analysis \n\n\\(\\qquad\\to\\) first step is to transform the DICOM- to nifti-files",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
     "objectID": "dicom_to_glm/DICOMtoBIDS.html#about-bids",
     "href": "dicom_to_glm/DICOMtoBIDS.html#about-bids",
     "title": "01 - DICOM to BIDS",
-    "section": "3.1 About BIDS",
-    "text": "3.1 About BIDS\nApart from a clear structure that is understandable (for other researchers as well) and standardized, the BIDS format offers further advantages. For example, various BIDS-Apps can perform different steps automatically (e.g. fmriprep), but they require the data to be BIDS-valid).",
+    "section": "2.1 About BIDS",
+    "text": "2.1 About BIDS\nApart from a clear structure that is understandable (for other researchers as well) and standardized, the BIDS format offers further advantages. For example, various BIDS-Apps can perform different steps automatically (e.g. fmriprep), but they require the data to be BIDS-valid).",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -551,11 +547,11 @@
     ]
   },
   {
-    "objectID": "dicom_to_glm/DICOMtoBIDS.html#sec-structure",
-    "href": "dicom_to_glm/DICOMtoBIDS.html#sec-structure",
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#bidscoin",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#bidscoin",
     "title": "01 - DICOM to BIDS",
-    "section": "4.1 Setting up the directory structure",
-    "text": "4.1 Setting up the directory structure\nFirst, you need to set up the correct structure for the script to run properly later. For this, you:\n\nCreate an empty directory named bids (right-click, Create New... &gt; Folder)\nCreate a directory (name can be anything, for example dicoms) and copy/paste your folder with the DICOM-Files in this directory\n\nIt should look like this:\nThese two directories (bids & dicoms) need to be there for the script to work!\nThe directory scrips is not necessary for the script to run, but it may be helpful to gather and safe the scripts and notes that you need during the process from your raw files to the “final” analysis.",
+    "section": "3.1 bidscoin",
+    "text": "3.1 bidscoin\nFirst, you need to start through the bird-icon on the bottom left of neurodesk, navigate to Neurodesk &gt; All Applications &gt; bidscoin and select a version (the process has been tested with v4.6.0 & v4.6.1)",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -563,11 +559,11 @@
     ]
   },
   {
-    "objectID": "dicom_to_glm/DICOMtoBIDS.html#naming-of-the-nifti-files",
-    "href": "dicom_to_glm/DICOMtoBIDS.html#naming-of-the-nifti-files",
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#shell-commands",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#shell-commands",
     "title": "01 - DICOM to BIDS",
-    "section": "4.2 Naming of the nifti files",
-    "text": "4.2 Naming of the nifti files\nIt is curcial for the BIDS format, that the resulting nifti-files are named properly (see here for the naming convention(s)).\nTo ensure that later, it might be helpful to write down the proper names for the files before you start the process. This could be done in a simple .txt file, where you specify all the file-names. You can then just open this .txt file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your scripts folder as well.\n\n4.2.1 Create a naming.txt\n\nnavigate to your scripts folder, right-click, select Create New &gt; Empty File\nassign a name (in this case naming.txt)\nfill this text file with the proper, BIDS-conform names for the nifti files and saveNow, you can just open this file when you need to change the name of a nifti.",
+    "section": "3.2 Shell commands",
+    "text": "3.2 Shell commands\nAfter some time to load, it should look like this:\n\nThen you can follow this script (running the lines separately can help you find/fix potential problems! For potential problems also see the subsections below!):\n#!/bin/bash\n\n# you can copypaste the following commands into the terminal window that is opened by BIDSCOINER\n\n# define directories\nsourceFolder=/home/jovyan/completion2/dcm\nsortedFolder=/home/jovyan/completion2/dcm_sorted\n\n# check the output of the source folder\nls -l $sourceFolder\n\n# make the target directory with subdirectories\nmkdir -p $sortedFolder\n\n# change to the script folder\ncd /home/jovyan/dicomsort/\n\n# run the script\n./DICOMsort.sh $sourceFolder $sortedFolder\n\n# check the output of the target folder\nls -l $sortedFolder\n\n# run bidsmapper\nbidsmapper $sortedFolder /home/jovyan/completion2/bids\n# note: in the intendedFor of the fieldmap, add func/sub-001_ses-1_xxx_bold.*\n\n# once you are happy with the mapping, run bidscoiner\nbidscoiner $sortedFolder /home/jovyan/completion2/bids",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -575,11 +571,11 @@
     ]
   },
   {
-    "objectID": "dicom_to_glm/DICOMtoBIDS.html#sec-filename",
-    "href": "dicom_to_glm/DICOMtoBIDS.html#sec-filename",
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#bismapper",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#bismapper",
     "title": "01 - DICOM to BIDS",
-    "section": "8.1 Possible Actions to perform for a dicom",
-    "text": "8.1 Possible Actions to perform for a dicom\n\n\n\nActions for a dicom\n\n\nYou can select one of three options for any dicom file (use up-/down arrow key to switch between the options and press enter to confirm your choice):\n\nKeep: By selecting this option, you tell the script that the suggested name is correct and that you want to assign this file with the shown name to a directory (Since BIDS uses a specific naming convention, you´ll probably need this option only for “additional files”, like files related to denoising, that will be placed in a directory that is more or less independent of the BIDS-Format; see Section 8.3*)\nModify Name: This option tells the script that you want to change the suggested name. This is needed, when the suggested name is not BIDS-conform. After selecting this option (by pressing enter), you are asked to edit the name. Change the name (first delete the suggested one) to a BIDS-conform filename (Hint: the initially suggested name implies what type of scan it was, so you should be able to easily determine if it was an anatomical scan, which run of a functional scan, or the fieldmap). Using a previously created file with bids-conform names can help avoiding errors and typos here, by just copy/pasting the prepared filenames! After you changed the name, press enter to confirm\nDelete (Do not convert): As the name suggests, selecting this option deletes the mentioned file (thus, there will be no corresponding nifti-file!). One case when this is generally used is for the anat-scout scan that is irrelevant for the preprocessing and analysis, since it is a short scan at the beginning of a scanning session to ensure a proper position of the participant and to adjust the parameters for the actual scans.",
+    "section": "3.3 bismapper",
+    "text": "3.3 bismapper\n\nCurrently, to discover the data we need to delete the content of the “subprefix” field and then save the bids map in the default location. After this, run the same bidsmapper command again.",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -587,11 +583,11 @@
     ]
   },
   {
-    "objectID": "dicom_to_glm/DICOMtoBIDS.html#sec-directory",
-    "href": "dicom_to_glm/DICOMtoBIDS.html#sec-directory",
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#subject-and-session",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#subject-and-session",
     "title": "01 - DICOM to BIDS",
-    "section": "8.2 Assigning a file to a directory",
-    "text": "8.2 Assigning a file to a directory\nAfter either keeping or modifying the name, you are asked to assign the file to a directory.\nYou can either:\n\nKeep folder name: By selecting this option, you accept the suggested directory. In general, the correct directory is already suggested for most files (anatomical \\(\\to\\) anat, functional \\(\\to\\) func, fieldmap \\(\\to\\) fmap)\nModify folder name: This option is only needed for files that were acquired “additionally”, for example, when a denoising sequence was used (files with .ph at the end, see here). As for the file name, you can edit the name of the directory after selecting this option. Entering a new/unique name for the directory here will result in an additional sub-directory in the subsequent BIDS-directory (if you enter the same name for all “additional” files, they will all be stored in this specified directory)",
+    "section": "3.4 Subject and session",
+    "text": "3.4 Subject and session\n\nNow the bidsmapper discovered everything, but the files are not named correctly.\nEdit subject and session first.\nNow we need to rename the files by clicking “Edit” next to every file.",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -599,11 +595,119 @@
     ]
   },
   {
-    "objectID": "dicom_to_glm/DICOMtoBIDS.html#sec-extra",
-    "href": "dicom_to_glm/DICOMtoBIDS.html#sec-extra",
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#editing-file-names-anatomical",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#editing-file-names-anatomical",
     "title": "01 - DICOM to BIDS",
-    "section": "8.3 The “extra” directory",
-    "text": "8.3 The “extra” directory\nSometimes we acquire files that are not part of the BIDS-Format (and, more importantly, are not used by BIDS-Apps), for example when running a denoising sequence during acquisition of the data. In the example of a denoising sequence, corresponding files are named with _ph at the end. When asked about the filename, we can just keep it as it is, since we use these files separately anyway.\nImportant!!\nThose files have to be stored in a different directory! Thus, when asked about where to assign the file, we select Modify folder name. All “additional” files can be saved in a directory named extra (\\(\\to\\) edit the name of the directory to extra and press enter)\nAfter assigning the last file to its directory, you´ll see the information, that an additional file has been created, which we will use later. The script has finished:",
+    "section": "3.5 Editing file names: anatomical",
+    "text": "3.5 Editing file names: anatomical\n\nanatmprage -&gt; mprage in the “acq” filed",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#editing-file-names-functional",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#editing-file-names-functional",
+    "title": "01 - DICOM to BIDS",
+    "section": "3.6 Editing file names: functional",
+    "text": "3.6 Editing file names: functional\n\nEdit the task name and acq field\nDo this for every functional file\nIn the intendedFor of the fieldmap, add “func/sub-999_ses-1_task-completion_acq–noise_bold.*” with a wildcard. This will select all respective functional runs\nOnce you are happy, run bidscoiner to do the actual conversion",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#view-files",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#view-files",
+    "title": "01 - DICOM to BIDS",
+    "section": "3.7 View files",
+    "text": "3.7 View files",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#mricron",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#mricron",
+    "title": "01 - DICOM to BIDS",
+    "section": "3.8 MRICron",
+    "text": "3.8 MRICron\n\nNow you can view the nifti files with any suitable software",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#preparations",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#preparations",
+    "title": "01 - DICOM to BIDS",
+    "section": "4.1 Preparations",
+    "text": "4.1 Preparations\n\n4.1.1 Setting up the directory structure\nFirst, you need to set up the correct structure for the script to run properly later. For this, you:\n\nCreate an empty directory named bids (right-click, Create New... &gt; Folder)\nCreate a directory (name can be anything, for example dicoms) and copy/paste your folder with the DICOM-Files in this directory\n\nIt should look like this:\nThese two directories (bids & dicoms) need to be there for the script to work!\nThe directory scrips is not necessary for the script to run, but it may be helpful to gather and safe the scripts and notes that you need during the process from your raw files to the “final” analysis.\n\n\n4.1.2 Naming of the nifti files\nIt is curcial for the BIDS format, that the resulting nifti-files are named properly (see here for the naming convention(s)).\nTo ensure that later, it might be helpful to write down the proper names for the files before you start the process. This could be done in a simple .txt file, where you specify all the file-names. You can then just open this .txt file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your scripts folder as well.\n\n4.1.2.1 Create a naming.txt\n\nnavigate to your scripts folder, right-click, select Create New &gt; Empty File\nassign a name (in this case naming.txt)\nfill this text file with the proper, BIDS-conform names for the nifti files and saveNow, you can just open this file when you need to change the name of a nifti.",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#sec-start",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#sec-start",
+    "title": "01 - DICOM to BIDS",
+    "section": "4.2 Starting the script",
+    "text": "4.2 Starting the script\n\nTo start the script, you first need to know where the script dcm2bids.sh is. In this case it is here: /home/jovyan/Website/scripts/dcm2bids.sh (you can copy/paste this file to your directory from /shared/website/dcm2bids.sh, or directly access) \nNavigate to the location of the script, right-click it, and select Copy Path(s) \nOpen a Terminal (icon of a monitor at the bottom left of your screen):\nType ml freesurfer and press enter\nType bash, add a space, then right-click and select Paste to fill in the path to the script (or type in the path manually)Press enter to start the script.",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#installing-all-necessary-packages",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#installing-all-necessary-packages",
+    "title": "01 - DICOM to BIDS",
+    "section": "4.3 (Installing all necessary packages)",
+    "text": "4.3 (Installing all necessary packages)\nIt is possible (especially if you start the script for the first time), that some necessary packages are not installed. If this is the case, the script will tell you! If something is missing you´ll be asked, if you want to install these packages. By typing in y and pressing enter, the package will get installed (you might have to do this for more than one package):\nIf there is still a missing package after all “automatic” suggestions of packages to install, it is probably related to dcm2bids_scaffold (but again, the script will “show” you that there is something missing). In this case, type pip install dcm2bids and press enter\nNow “restart” the script (see 2.d + 2.e):",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#sec-preparation",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#sec-preparation",
+    "title": "01 - DICOM to BIDS",
+    "section": "4.4 Preparation: Provide Input and Output Directory",
+    "text": "4.4 Preparation: Provide Input and Output Directory\nWith all necessary packages installed, you are asked to provide the path to the nifti directory. It should look like this:\nNifti directory means the directory/folder, where the nifti-files should be saved to. This is our (currently empty) bids folder that we created in the beginning.\n\nTo indicate the nifti directory, we either type in the path manually, or get the path by navigating to the directory, right-clicking the bids directory and selecting Copy Path(s) (same procedure as when we needed the path of the script)\ngo back to the terminal window where dcm2bids is running\nright-click and select Paste to enter the path\npress enter\n\nSubsequently, you are asked to indicate the dicom directory.\n\\(\\to\\) Repeat the steps a)-d) for the dicom directory where your dicoms are stored (that we also created in the beginning)\nWhen both paths are set, you are asked to choose a dicom name (basically the files of a participant; in this case, there is only one scanning-session, but if you have more than one subject, you can select the one that you want do process) and it should look like this:\nAfter selecting a subject/dicom name (Press enter), the script automatically suggest a BIDS “subject id” and asks if it is correct (Watch out! Generally the suggested ID is not BIDS-conform!)\nFor your data to be BIDS-conform at the end, the “subject id” has to have a structure like this: sub-001, sub-002,… (All necessary information about BIDS can be found here)\nIf the suggested name is correct, type in y and press enter.\nIf it is not correct, type in n, press enter and type in a/the correct subject id Once again, press enter\nAs a last preparative step, you are asked, if you would like to change the session folder from ses-1 to another session. If you only have one session, type n and press enter\nIf you want to change the session, type y and provide the name of the sessions (Important: to have/get a BIDS-conform structure at the end, subdirectories for sessions have to be named ses-x with x being a number)\nSubsequently, you get a short reminder in which directories your files should be stored.\nBy pressing enter, the script starts to convert your dicom files to nifti’s. This can take a few seconds - be patient!",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#assigning-niftis-to-directories-and-adjusting-file-names",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#assigning-niftis-to-directories-and-adjusting-file-names",
+    "title": "01 - DICOM to BIDS",
+    "section": "4.5 Assigning nifti’s to directories and adjusting file names",
+    "text": "4.5 Assigning nifti’s to directories and adjusting file names\nAfter the script converts the dicom’s to nifti’s, we have to potentially correct automatically assigned names and assign a directory. At the top of the terminal, you always see how many dicoms are left to categorize.\n\n4.5.1 Possible Actions to perform for a dicom\n\n\n\nActions for a dicom\n\n\nYou can select one of three options for any dicom file (use up-/down arrow key to switch between the options and press enter to confirm your choice):\n\nKeep: By selecting this option, you tell the script that the suggested name is correct and that you want to assign this file with the shown name to a directory (Since BIDS uses a specific naming convention, you´ll probably need this option only for “additional files”, like files related to denoising, that will be placed in a directory that is more or less independent of the BIDS-Format; see Section 4.5.3*)\nModify Name: This option tells the script that you want to change the suggested name. This is needed, when the suggested name is not BIDS-conform. After selecting this option (by pressing enter), you are asked to edit the name. Change the name (first delete the suggested one) to a BIDS-conform filename (Hint: the initially suggested name implies what type of scan it was, so you should be able to easily determine if it was an anatomical scan, which run of a functional scan, or the fieldmap). Using a previously created file with bids-conform names can help avoiding errors and typos here, by just copy/pasting the prepared filenames! After you changed the name, press enter to confirm\nDelete (Do not convert): As the name suggests, selecting this option deletes the mentioned file (thus, there will be no corresponding nifti-file!). One case when this is generally used is for the anat-scout scan that is irrelevant for the preprocessing and analysis, since it is a short scan at the beginning of a scanning session to ensure a proper position of the participant and to adjust the parameters for the actual scans.\n\n\n\n4.5.2 Assigning a file to a directory\nAfter either keeping or modifying the name, you are asked to assign the file to a directory.\nYou can either:\n\nKeep folder name: By selecting this option, you accept the suggested directory. In general, the correct directory is already suggested for most files (anatomical \\(\\to\\) anat, functional \\(\\to\\) func, fieldmap \\(\\to\\) fmap)\nModify folder name: This option is only needed for files that were acquired “additionally”, for example, when a denoising sequence was used (files with .ph at the end, see here). As for the file name, you can edit the name of the directory after selecting this option. Entering a new/unique name for the directory here will result in an additional sub-directory in the subsequent BIDS-directory (if you enter the same name for all “additional” files, they will all be stored in this specified directory)\n\n\n\n4.5.3 The “extra” directory\nSometimes we acquire files that are not part of the BIDS-Format (and, more importantly, are not used by BIDS-Apps), for example when running a denoising sequence during acquisition of the data. In the example of a denoising sequence, corresponding files are named with _ph at the end. When asked about the filename, we can just keep it as it is, since we use these files separately anyway.\nImportant!!\nThose files have to be stored in a different directory! Thus, when asked about where to assign the file, we select Modify folder name. All “additional” files can be saved in a directory named extra (\\(\\to\\) edit the name of the directory to extra and press enter)\nAfter assigning the last file to its directory, you´ll see the information, that an additional file has been created, which we will use later. The script has finished:",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "01 - DICOM to BIDS"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/DICOMtoBIDS.html#sec-IntendedFor",
+    "href": "dicom_to_glm/DICOMtoBIDS.html#sec-IntendedFor",
+    "title": "01 - DICOM to BIDS",
+    "section": "5.1 Edit “IntendedFor”-Section in the fmap",
+    "text": "5.1 Edit “IntendedFor”-Section in the fmap\nBefore you continue, there is one last potential adaptation that should be considered.\nWith changing Versions of BIDS and BIDS-Apps, slight changes occur in how and where you have to include specific information. One example for this is the IntendedFor information in the fmap’s .json file.\nDepending on the Version of fmriprep you plan to use, it may be necessary to change the IntendedFor field of the fmap’s .json file! The steps described below have to be done if you want to use fmriprep 24.0.0 or newer! (If you use an older Version, you don´t have to do the described steps)\n\nNavigate to your bids directory\nOpen the file sub-999-bidsurifmap.json (double click, or right-click + gedit)\nSelect all content and copy it (since Strg + c/v does not always work, you can use right-click and select copy)\nNavigate to the fmap directory (*/bids/sub-999/ses-1/fmap/) and open the .json file\nAfter the file opens, scroll down to the very end of it. There should be a section that starts with IntendedFor and looks like this:\nRemove all lines within the brackets after \"IntendedFor\" and paste the lines you copied from the bidsurifmap.json file. Remember to end every (but the last) line with a comma (,)!! It might also be good to keep the indentation at the beginning of each line (4 Spaches). At the end, it should look like this:\n\nDon´t forget to save the file afterwards!!!",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -615,11 +719,7 @@
     "href": "behavioral.html",
     "title": "Information about collecting behavioural data",
     "section": "",
-<<<<<<< HEAD
     "text": "Custom-built chin rests\n\n\n\n3D-Print\n\n\n\nInformation about producing a chinrest for behavioral experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBIDS for behavioral studies\n\n\n\nBIDS\n\n\nBehavioral\n\n\n\nHow to store your data in bids structure if you are using psychtoolbox\n\n\n\nCY\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVision tests\n\n\n\nVision-Prescreening\n\n\n\nHow to conduct vision tests\n\n\n\nCY\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-=======
-    "text": "Custom-built chin rests\n\n\nInformation about producing a chinrest for behavioral experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBIDS for behavioral studies\n\n\nHow to store your data in bids structure if you are using psychtoolbox\n\n\n\nCY\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVision tests\n\n\nHow to conduct vision tests\n\n\n\nCY\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
     "crumbs": [
       "Home",
       "Behavioral"
@@ -678,11 +778,7 @@
     "href": "archive.html",
     "title": "Archive",
     "section": "",
-<<<<<<< HEAD
     "text": "FreeSurfer FSFAST\n\n\n\nMRI\n\n\nAnalysis\n\n\narchived\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\n\nMRI\n\n\nBIDS\n\n\nDICOM\n\n\narchived\n\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-=======
-    "text": "FreeSurfer FSFAST\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
     "crumbs": [
       "Home",
       "Archive"
@@ -802,7 +898,7 @@
     "href": "dicom_to_glm/defacing.html",
     "title": "03 - Defacing",
     "section": "",
-    "text": "When we acquired data “ourselves” (and start with the dicom files), we have to deface the T1w-scan! (When we get our data from the MRI-Lab, it will already be defaced)\nTo deface your T1w-scan, you first need a T1w nifti file! If you currently have DICOM files, you have to convert them to nifti’s first!\nDefacing you T1w scans is an important preprocessing step that has to be done beforerunning fmriprep. If you run fmriprep without prior defacing, you´ll probably run into errors!\nImportant (if you promised participants that they´ll get their T1w scan): Since we get already defaced images when not testing ourselves, every participant only gets the defaced T1w-scans. Thus, you have to do the defacing before sending the file to your participant!",
+    "text": "When we acquired data “ourselves” (and start with the dicom files), we have to deface the T1w-scan! (When we get our data from the MRI-Lab, it will already be defaced)\nTo deface your T1w-scan, you first need a T1w nifti file! If you currently have DICOM files, you have to convert them to nifti’s first!\nDefacing you T1w scans is an important preprocessing step that has to be done before running fmriprep. If you run fmriprep without prior defacing, you´ll probably run into errors!\nImportant (if you promised participants that they´ll get their T1w scan): Since we get already defaced images when not testing ourselves, every participant only gets the defaced T1w-scans. Thus, you have to do the defacing before sending the file to your participant!",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -884,8 +980,8 @@
     "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview",
     "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview",
     "title": "04 - Removing Noise Scan",
-    "section": "2.1 Open freeview",
-    "text": "2.1 Open freeview\nYou can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:\n\nOpen a terminal (Monitor Icon at the bottom left on neurodesk) \nType ml freesurfer and press enter\nType freeview and press enter (from time to time, it can take a while until freeview opens, be patient! It is also possible, that some messages about runtime are printed in the terminal, but that is nothing to worry about!) \n\n\\(\\to\\) When freeview opened successfully, it should look like this:",
+    "section": "1.1 Open freeview",
+    "text": "1.1 Open freeview\nYou can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:\n\nOpen a terminal (Monitor Icon at the bottom left on neurodesk) \nType ml freesurfer and press enter\nType freeview and press enter (from time to time, it can take a while until freeview opens, be patient! It is also possible, that some messages about runtime are printed in the terminal, but that is nothing to worry about!) \n\n\\(\\to\\) When freeview opened successfully, it should look like this:",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -896,8 +992,8 @@
     "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume",
     "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume",
     "title": "04 - Removing Noise Scan",
-    "section": "2.2 Load a functional volume",
-    "text": "2.2 Load a functional volume\nNow you have to look at a functional scan to see if there is a denoising scan at the end.\nFor this, select File &gt; Load Volume (top left corner in freeview): \nA new window opens, asking you to Select volume file. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol \nNavigate to your func directory in your BIDS, select one of the nifti files of one of the runs and press Open afterwards \nNow, with the field Select volume file specified with the path(s) to the nifti file, you can click Open\nWhen the volume loaded, it should see some kind of data and something that looks like a brain:",
+    "section": "1.2 Load a functional volume",
+    "text": "1.2 Load a functional volume\nNow you have to look at a functional scan to see if there is a denoising scan at the end.\nFor this, select File &gt; Load Volume (top left corner in freeview): \nA new window opens, asking you to Select volume file. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol \nNavigate to your func directory in your BIDS, select one of the nifti files of one of the runs and press Open afterwards \nNow, with the field Select volume file specified with the path(s) to the nifti file, you can click Open\nWhen the volume loaded, it should see some kind of data and something that looks like a brain:",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -908,8 +1004,8 @@
     "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-CheckDenoising",
     "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-CheckDenoising",
     "title": "04 - Removing Noise Scan",
-    "section": "2.3 Check for Denoising Scan",
-    "text": "2.3 Check for Denoising Scan\nTo check if a denoising scan is included in you data, use the slider next to Frames (left side, roughly in the middle), to navigate to the last frame. If a denoising sequence was used during data acquisition in the scanner, this frame looks “empty”. Toggle between the last and second to last frame, to visualize the difference even more \nIf you confirmed the denoising being present in one of your functional runs, they will probably be there for all your runs. It might be good to check every run anyway.",
+    "section": "1.3 Check for Denoising Scan",
+    "text": "1.3 Check for Denoising Scan\nTo check if a denoising scan is included in you data, use the slider next to Frames (left side, roughly in the middle), to navigate to the last frame. If a denoising sequence was used during data acquisition in the scanner, this frame looks “empty”. Toggle between the last and second to last frame, to visualize the difference even more \nIf you confirmed the denoising being present in one of your functional runs, they will probably be there for all your runs. It might be good to check every run anyway.",
     "crumbs": [
       "Home",
       "MRI: from DICOM to GLM Analysis",
@@ -981,11 +1077,7 @@
     "href": "index.html",
     "title": "Visual Neuroscience lab",
     "section": "",
-<<<<<<< HEAD
-    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\nOverview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nApr 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02 - T1w for PBn\n\n\nInformation about how to provide participants with their T1w image\n\n\n\nMG\n\n\nApr 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nContribute to the website\n\n\nInformation about how to contribute and edit the website\n\n\n\nNZ, MG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03 - Defacing\n\n\nStep by step description of how to deface your data\n\n\n\nMG\n\n\nApr 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\nCollection of known potential problems and their solutions\n\n\n\nMG\n\n\nMar 27, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
-=======
-    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\nContribute to the website\n\n\nInformation about how to contribute and edit the website\n\n\n\nNZ, MG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCalculating a priori sample size using G Power\n\n\nInformation and descriptions of how to calculate a priori sample size using G Power\n\n\n\nCY\n\n\nMar 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nLab Members Only!!!\n\n\nThis site is dedicated only for members of the lab!\n\n\n\nNZ\n\n\nJan 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGamma correction\n\n\nHow to measure monitor gamma and apply it in visual experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
+    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\n\n\n01 - DICOM to BIDS\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nApr 17, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nOverview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nApr 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02 - T1w for PBn\n\n\nInformation about how to provide participants with their T1w image\n\n\n\nMG\n\n\nApr 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nContribute to the website\n\n\nInformation about how to contribute and edit the website\n\n\n\nNZ, MG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03 - Defacing\n\n\nStep by step description of how to deface your data\n\n\n\nMG\n\n\nApr 13, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home"
     ]
@@ -995,11 +1087,7 @@
     "href": "labmeeting.html",
     "title": "Information about our lab meeting",
     "section": "",
-<<<<<<< HEAD
     "text": "Labmeeting\n\n\n\nLab\n\n\n\nInformation about our lab meeting\n\n\n\nNZ, MG\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-=======
-    "text": "Labmeeting\n\n\nInformation about our lab meeting\n\n\n\nNZ, MG\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
   },
   {
     "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#basics",
@@ -1127,11 +1215,7 @@
     "href": "mri.html",
     "title": "MRI",
     "section": "",
-<<<<<<< HEAD
     "text": "3D printing a brain\n\n\n\nMRI\n\n\n3D-Print\n\n\n\ncurrent procedure for 3d printing brains\n\n\n\nNZ\n\n\nOct 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7T anatomical analysis on neurodesk\n\n\n\nMRI\n\n\n7T\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nHow to run 7 Tesla anatomy analysis on neurodesk\n\n\n\nAC\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMRI BIDS and OSF\n\n\n\nBIDS\n\n\nOSF\n\n\n\nInformation about BIDS and OSF\n\n\n\nAA\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\n\nDICOM\n\n\nBIDS\n\n\nMRI\n\n\nNeurodesk\n\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfMRIprep analysis\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\nfmriPrep\n\n\n\nInformation about using fMRIprep to preprocess fMRI data\n\n\n\nAC\n\n\nJul 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeSurfer FSFAST\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOld MRI setup\n\n\n\nMRI\n\n\n\nInformation about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nAA\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUpdate to the MRI lab setup\n\n\n\nMRI\n\n\nNNL-Goggles\n\n\n\n\n\n\n\nAC\n\n\nOct 7, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhysiological noise correction\n\n\n\nMRI\n\n\nPhysiology\n\n\n\nCreating physiology regressors using the PhysIO toolbox\n\n\n\nMW\n\n\nOct 26, 2023\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-=======
-    "text": "3D printing a brain\n\n\n\nMRI\n\n\n3D-Print\n\n\n\ncurrent procedure for 3d printing brains\n\n\n\nNZ\n\n\nOct 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7T anatomical analysis on neurodesk\n\n\n\nMRI\n\n\n7T\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nHow to run 7 Tesla anatomy analysis on neurodesk\n\n\n\nAC\n\n\nMar 1, 2027\n\n\n\n\n\n\n\n\n\n\n\n\nMRI BIDS and OSF\n\n\n\nBIDS\n\n\nOSF\n\n\n\nInformation about BIDS and OSF\n\n\n\nAA\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\n\nDICOM\n\n\nBIDS\n\n\nMRI\n\n\nNeurodesk\n\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfMRIprep analysis\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\nfmriPrep\n\n\n\nInformation about using fMRIprep to preprocess fMRI data\n\n\n\nAC\n\n\nJul 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeSurfer FSFAST\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOld MRI setup\n\n\nInformation about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nAA\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUpdate to the MRI lab setup\n\n\n\n\n\n\nAC\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhysiological noise correction\n\n\nCreating physiology regressors using the PhysIO toolbox\n\n\n\nMW\n\n\nOct 26, 2023\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
     "crumbs": [
       "Home",
       "MRI"
@@ -1142,11 +1226,7 @@
     "href": "neurodesk.html",
     "title": "Neurodesktop",
     "section": "",
-<<<<<<< HEAD
     "text": "Neurodesktop access\n\n\n\nNeurodesk\n\n\n\nHow to use Neurodesktop on the server\n\n\n\nNZ\n\n\nSep 27, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-=======
-    "text": "Neurodesktop access\n\n\nHow to use Neurodesktop on the server\n\n\n\nNZ\n\n\nSep 27, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
->>>>>>> 1e0acb28f31c49644e41d8f022a2d32e725ad00a
   },
   {
     "objectID": "OtherTopics/ContributeWithR.html",

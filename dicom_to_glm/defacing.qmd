@@ -16,7 +16,7 @@ When we acquired data "ourselves" (and start with the dicom files), we have to d
 
 To deface your T1w-scan, you first need a T1w nifti file! If you currently have DICOM files, you have to [convert them to nifti's first](DICOMtoBIDS.qmd)!
 
-**Defacing you T1w scans is an important preprocessing step *that has to be done before*[running fmriprep](run_fmriprep.qmd). If you run fmriprep without prior defacing, you´ll probably run into errors!**
+**Defacing you T1w scans is an important preprocessing step *that has to be done before* [running fmriprep](run_fmriprep.qmd). If you run fmriprep without prior defacing, you´ll probably run into errors!**
 
 *Important* (if you [promised participants that they´ll get their T1w scan](ProvidingParticipantsWithTheirT1wFile.qmd)): Since we get already defaced images when not testing ourselves, every participant only gets the defaced T1w-scans. Thus, you have to do the defacing *before* sending the file to your participant!
 

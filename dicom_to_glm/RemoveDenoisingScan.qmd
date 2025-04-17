@@ -10,8 +10,6 @@ author: MG
 date: 03/08/2025
 ---
 
-# This site is currently under construction!!
-
 For this step, you need to already have nifti files! If you currently only have DICOM files, please [convert them to nifti's first](DICOMtoBIDS.qmd)!
 
 Depending on the sequence used in the scanner session, you might have data that were acquired with a denoising sequence. This is sometimes done, since it doesn´t take much time in the scanner, but you have the ability to denoise the data if it turns out to be necessary.

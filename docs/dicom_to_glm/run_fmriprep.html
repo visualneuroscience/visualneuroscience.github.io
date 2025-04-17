@@ -536,10 +536,10 @@ window.Quarto = {
 <section id="sec-fmriprepSetup" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Setting up necessary directories and defining “SUBJECTS_DIR”</h1>
 <p>First, you need to create some new directories that are necessary for fmriprep to run properly. For this, enter the following command (adapt the path(s) if necessary)</p>
-<pre><code>mkdir -p /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>By confirming your command with Enter, you´ll find the new directory structure within you derivatives directory<img src="./images/04_fmriprep/02_newDirectories.png" class="img-fluid" alt="New Directories"></p>
 <p>Then, we need to specify where fmriprep should store the resulting files with this command (again, adapt the path(s) if necessary):</p>
-<pre><code>SUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">SUBJECTS_DIR</span><span class="op">=</span>/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./images/04_fmriprep/03_setSUBJECTS_DIR.png" class="img-fluid figure-img"></p>
@@ -551,7 +551,7 @@ window.Quarto = {
 <section id="sec-fmriprepCommand" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> fmriprep command</h1>
 <p>With the setup done, you can now run the command:</p>
-<pre><code>fmriprep /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant --bold2t1w-init header --force-bbr -w /home/jovyan/website/fmriprep_tmp --output-spaces T1w fsaverage fsnative --participant-label sub-999 --nprocs 8 --mem 10000 --skip_bids_validation --stop-on-first-crash -v --fs-license-file /home/jovyan/website/freesurferlicense/license.txt</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fmriprep</span> /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant <span class="at">--bold2t1w-init</span> header <span class="at">--force-bbr</span> <span class="at">-w</span> /home/jovyan/website/fmriprep_tmp <span class="at">--output-spaces</span> T1w fsaverage fsnative <span class="at">--participant-label</span> sub-999 <span class="at">--nprocs</span> 8 <span class="at">--mem</span> 10000 <span class="at">--skip_bids_validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">-v</span> <span class="at">--fs-license-file</span> /home/jovyan/website/freesurferlicense/license.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Important:</strong> adapt the flag <code>--participant-label sub-999</code> accordingly, so that you state the subject you want to preprocess</p>
 <p><strong>Hint:</strong> same as before, you could run this command with the two commands above for the setup as well. The only important thing is the order: first the command for making the directories, then defining <code>SUBJECTS_DIR</code>and finally the fmriprep command.</p>
 </section>
