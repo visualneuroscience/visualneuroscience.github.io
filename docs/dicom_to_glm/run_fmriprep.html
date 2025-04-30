@@ -459,14 +459,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-site-is-currently-under-construction" id="toc-this-site-is-currently-under-construction" class="nav-link active" data-scroll-target="#this-site-is-currently-under-construction"><span class="header-section-number">1</span> This Site is currently under construction</a></li>
-  <li><a href="#sec-NecessitiesFmriprep" id="toc-sec-NecessitiesFmriprep" class="nav-link" data-scroll-target="#sec-NecessitiesFmriprep"><span class="header-section-number">2</span> Before running fmriprep</a></li>
-  <li><a href="#sec-fmriprepStart" id="toc-sec-fmriprepStart" class="nav-link" data-scroll-target="#sec-fmriprepStart"><span class="header-section-number">3</span> Starting fmriprep</a></li>
-  <li><a href="#sec-fmriprepSetup" id="toc-sec-fmriprepSetup" class="nav-link" data-scroll-target="#sec-fmriprepSetup"><span class="header-section-number">4</span> Setting up necessary directories and defining “SUBJECTS_DIR”</a></li>
-  <li><a href="#sec-fmriprepCommand" id="toc-sec-fmriprepCommand" class="nav-link" data-scroll-target="#sec-fmriprepCommand"><span class="header-section-number">5</span> fmriprep command</a></li>
-  <li><a href="#waiting" id="toc-waiting" class="nav-link" data-scroll-target="#waiting"><span class="header-section-number">6</span> Waiting</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">7</span> Troubleshooting</a></li>
-  <li><a href="#the-next-steps" id="toc-the-next-steps" class="nav-link" data-scroll-target="#the-next-steps"><span class="header-section-number">8</span> The next steps</a></li>
+  <li><a href="#sec-NecessitiesFmriprep" id="toc-sec-NecessitiesFmriprep" class="nav-link active" data-scroll-target="#sec-NecessitiesFmriprep"><span class="header-section-number">1</span> Before running fmriprep</a></li>
+  <li><a href="#sec-fmriprepStart" id="toc-sec-fmriprepStart" class="nav-link" data-scroll-target="#sec-fmriprepStart"><span class="header-section-number">2</span> Starting fmriprep</a></li>
+  <li><a href="#sec-fmriprepSetup" id="toc-sec-fmriprepSetup" class="nav-link" data-scroll-target="#sec-fmriprepSetup"><span class="header-section-number">3</span> Setting up necessary directories and defining “SUBJECTS_DIR”</a></li>
+  <li><a href="#sec-fmriprepCommand" id="toc-sec-fmriprepCommand" class="nav-link" data-scroll-target="#sec-fmriprepCommand"><span class="header-section-number">4</span> fmriprep command</a></li>
+  <li><a href="#waiting" id="toc-waiting" class="nav-link" data-scroll-target="#waiting"><span class="header-section-number">5</span> Waiting</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">6</span> Troubleshooting</a></li>
+  <li><a href="#the-next-steps" id="toc-the-next-steps" class="nav-link" data-scroll-target="#the-next-steps"><span class="header-section-number">7</span> The next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -515,11 +514,8 @@ window.Quarto = {
 </header>
 
 
-<section id="this-site-is-currently-under-construction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> This Site is currently under construction</h1>
-</section>
-<section id="sec-NecessitiesFmriprep" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Before running fmriprep</h1>
+<section id="sec-NecessitiesFmriprep" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Before running fmriprep</h1>
 <p>Before you start fmriprep, you have to make sure, that you:</p>
 <ol type="1">
 <li><p><a href="../dicom_to_glm/DICOMtoBIDS.html">have nifti files in BIDS format</a></p></li>
@@ -528,13 +524,13 @@ window.Quarto = {
 <li><p><a href="../dicom_to_glm/DICOMtoBIDS.html#sec-IntendedFor">Optional: adapted the “IntendedFor” section in the fmap’s .json file (if you want to use fmriprep 24.0.0 or newer)</a></p></li>
 </ol>
 </section>
-<section id="sec-fmriprepStart" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Starting fmriprep</h1>
+<section id="sec-fmriprepStart" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Starting fmriprep</h1>
 <p>To start fmriprep, click on the bird symbol at the bottom left on neurodesk, hover <code>neurodesk</code>, then <code>All applications</code> and navigate to <code>fmriprep</code>. Select the version of fmriprep that you want to use <img src="./images/04_fmriprep/00_OpenFmriprep.png" class="img-fluid" alt="Starting fmriprep"></p>
 <p>After selecting your version, a new <code>bash</code> window opens and fmriprep loads. This can take a few moments, be patient! When everything is ready, the bottom line should state <code>fmriprep-"Version"</code> (with “Version” being whatever version you selected, for example <code>fmriprep-24.1.1</code>) <img src="./images/04_fmriprep/01_fmriprepReady.png" class="img-fluid" alt="fmriprep is ready"></p>
 </section>
-<section id="sec-fmriprepSetup" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Setting up necessary directories and defining “SUBJECTS_DIR”</h1>
+<section id="sec-fmriprepSetup" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Setting up necessary directories and defining “SUBJECTS_DIR”</h1>
 <p>First, you need to create some new directories that are necessary for fmriprep to run properly. For this, enter the following command (adapt the path(s) if necessary)</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>By confirming your command with Enter, you´ll find the new directory structure within you derivatives directory<img src="./images/04_fmriprep/02_newDirectories.png" class="img-fluid" alt="New Directories"></p>
@@ -548,19 +544,19 @@ window.Quarto = {
 </div>
 <p><strong>Hint:</strong> you can copy/paste both commands from above and execute them by pressing enter simultaneously, it doesn´t matter</p>
 </section>
-<section id="sec-fmriprepCommand" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> fmriprep command</h1>
+<section id="sec-fmriprepCommand" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> fmriprep command</h1>
 <p>With the setup done, you can now run the command:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fmriprep</span> /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant <span class="at">--bold2t1w-init</span> header <span class="at">--force-bbr</span> <span class="at">-w</span> /home/jovyan/website/fmriprep_tmp <span class="at">--output-spaces</span> T1w fsaverage fsnative <span class="at">--participant-label</span> sub-999 <span class="at">--nprocs</span> 8 <span class="at">--mem</span> 10000 <span class="at">--skip_bids_validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">-v</span> <span class="at">--fs-license-file</span> /home/jovyan/website/freesurferlicense/license.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Important:</strong> adapt the flag <code>--participant-label sub-999</code> accordingly, so that you state the subject you want to preprocess</p>
 <p><strong>Hint:</strong> same as before, you could run this command with the two commands above for the setup as well. The only important thing is the order: first the command for making the directories, then defining <code>SUBJECTS_DIR</code>and finally the fmriprep command.</p>
 </section>
-<section id="waiting" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Waiting</h1>
+<section id="waiting" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Waiting</h1>
 <p>When fmriprep started, now it´s probably time to get a coffee and do something else. This process will take quite some time (hours), you don´t have to stare at the output the whole time. You can also close the Tab where you opened neurodesk! Even if you close it, the program continues its work!</p>
 </section>
-<section id="troubleshooting" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Troubleshooting</h1>
+<section id="troubleshooting" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Troubleshooting</h1>
 <p><span class="math inline">\(\to\)</span> If there are any problems, please refer to the dedicated <a href="../dicom_to_glm/troubleshooting.html#sec-TroublesFmriprep">troubleshooting page</a></p>
 <ol type="1">
 <li><p>I ran fMRIprep but no distortion correction happened</p>
@@ -615,8 +611,8 @@ window.Quarto = {
 <p><code>--bold2t1w-init header</code></p></li>
 </ol>
 </section>
-<section id="the-next-steps" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> The next steps</h1>
+<section id="the-next-steps" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> The next steps</h1>
 <p>Congratulations, you successfully preprocessed your data and you are one step closer to analyzing your data!</p>
 <p>To continue in your journey to your Analysis, please return to the <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
 <p>Alternatively, here is a list of potential next steps to continue with</p>

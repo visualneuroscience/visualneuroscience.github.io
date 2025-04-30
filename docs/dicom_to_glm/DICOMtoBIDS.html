@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-04-17">
+<meta name="dcterms.date" content="2025-04-30">
 <meta name="description" content="Step by step description of how to get from DICOM files to necessary nifti-files in BIDS format">
 
 <title>01 - DICOM to BIDS – Visual Neuroscience Lab</title>
@@ -468,12 +468,16 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#bidscoin" id="toc-bidscoin" class="nav-link" data-scroll-target="#bidscoin"><span class="header-section-number">3.1</span> bidscoin</a></li>
   <li><a href="#shell-commands" id="toc-shell-commands" class="nav-link" data-scroll-target="#shell-commands"><span class="header-section-number">3.2</span> Shell commands</a></li>
-  <li><a href="#bismapper" id="toc-bismapper" class="nav-link" data-scroll-target="#bismapper"><span class="header-section-number">3.3</span> bismapper</a></li>
-  <li><a href="#subject-and-session" id="toc-subject-and-session" class="nav-link" data-scroll-target="#subject-and-session"><span class="header-section-number">3.4</span> Subject and session</a></li>
-  <li><a href="#editing-file-names-anatomical" id="toc-editing-file-names-anatomical" class="nav-link" data-scroll-target="#editing-file-names-anatomical"><span class="header-section-number">3.5</span> Editing file names: anatomical</a></li>
-  <li><a href="#editing-file-names-functional" id="toc-editing-file-names-functional" class="nav-link" data-scroll-target="#editing-file-names-functional"><span class="header-section-number">3.6</span> Editing file names: functional</a></li>
-  <li><a href="#view-files" id="toc-view-files" class="nav-link" data-scroll-target="#view-files"><span class="header-section-number">3.7</span> View files</a></li>
-  <li><a href="#mricron" id="toc-mricron" class="nav-link" data-scroll-target="#mricron"><span class="header-section-number">3.8</span> MRICron</a></li>
+  <li><a href="#bismapper" id="toc-bismapper" class="nav-link" data-scroll-target="#bismapper"><span class="header-section-number">3.3</span> bismapper</a>
+  <ul class="collapse">
+  <li><a href="#subject-and-session" id="toc-subject-and-session" class="nav-link" data-scroll-target="#subject-and-session"><span class="header-section-number">3.3.1</span> Subject and session</a></li>
+  <li><a href="#editing-file-names-anatomical" id="toc-editing-file-names-anatomical" class="nav-link" data-scroll-target="#editing-file-names-anatomical"><span class="header-section-number">3.3.2</span> Editing file names: anatomical</a></li>
+  <li><a href="#editing-file-names-functional" id="toc-editing-file-names-functional" class="nav-link" data-scroll-target="#editing-file-names-functional"><span class="header-section-number">3.3.3</span> Editing file names: functional</a></li>
+  <li><a href="#editing-file-names-fieldmap" id="toc-editing-file-names-fieldmap" class="nav-link" data-scroll-target="#editing-file-names-fieldmap"><span class="header-section-number">3.3.4</span> Editing file names: fieldmap</a></li>
+  </ul></li>
+  <li><a href="#bidscoiner-after-renaming-all-files" id="toc-bidscoiner-after-renaming-all-files" class="nav-link" data-scroll-target="#bidscoiner-after-renaming-all-files"><span class="header-section-number">3.4</span> bidscoiner after renaming all files</a></li>
+  <li><a href="#view-files" id="toc-view-files" class="nav-link" data-scroll-target="#view-files"><span class="header-section-number">3.5</span> View files</a></li>
+  <li><a href="#mricron" id="toc-mricron" class="nav-link" data-scroll-target="#mricron"><span class="header-section-number">3.6</span> MRICron</a></li>
   </ul></li>
   <li><a href="#sec-script" id="toc-sec-script" class="nav-link" data-scroll-target="#sec-script"><span class="header-section-number">4</span> From Dicom to nifti in BIDS format with Adam’s script</a>
   <ul class="collapse">
@@ -534,7 +538,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 17, 2025</p>
+      <p class="date">April 30, 2025</p>
     </div>
   </div>
   
@@ -609,33 +613,41 @@ window.Quarto = {
 <h2 data-number="3.3" class="anchored" data-anchor-id="bismapper"><span class="header-section-number">3.3</span> bismapper</h2>
 <p><img src="images/clipboard-3995624064.png" class="img-fluid" style="width:32.0%"></p>
 <p>Currently, to discover the data we need to delete the content of the “subprefix” field and then save the bids map in the default location. After this, run the same bidsmapper command again.</p>
-</section>
-<section id="subject-and-session" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="subject-and-session"><span class="header-section-number">3.4</span> Subject and session</h2>
+<section id="subject-and-session" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="subject-and-session"><span class="header-section-number">3.3.1</span> Subject and session</h3>
 <p><img src="images/clipboard-325791456.png" class="img-fluid" style="width:50.0%"></p>
 <p>Now the bidsmapper discovered everything, but the files are not named correctly.</p>
 <p>Edit subject and session first.</p>
 <p>Now we need to rename the files by clicking “Edit” next to every file.</p>
 </section>
-<section id="editing-file-names-anatomical" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="editing-file-names-anatomical"><span class="header-section-number">3.5</span> Editing file names: anatomical</h2>
+<section id="editing-file-names-anatomical" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="editing-file-names-anatomical"><span class="header-section-number">3.3.2</span> Editing file names: anatomical</h3>
 <p><img src="images/clipboard-1483139836.png" class="img-fluid" style="width:50.0%"></p>
 <p>anatmprage -&gt; mprage in the “acq” filed</p>
 </section>
-<section id="editing-file-names-functional" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="editing-file-names-functional"><span class="header-section-number">3.6</span> Editing file names: functional</h2>
+<section id="editing-file-names-functional" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="editing-file-names-functional"><span class="header-section-number">3.3.3</span> Editing file names: functional</h3>
 <p><img src="images/clipboard-103624418.png" class="img-fluid" style="width:50.0%"></p>
 <p>Edit the task name and acq field</p>
 <p>Do this for every functional file</p>
-<p>In the intendedFor of the fieldmap, add “func/sub-999_ses-1_task-completion_acq–noise_bold.*” with a wildcard. This will select all respective functional runs</p>
-<p>Once you are happy, run bidscoiner to do the actual conversion</p>
 </section>
-<section id="view-files" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="view-files"><span class="header-section-number">3.7</span> View files</h2>
+<section id="editing-file-names-fieldmap" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="editing-file-names-fieldmap"><span class="header-section-number">3.3.4</span> Editing file names: fieldmap</h3>
+<p><img src="images/bidsmapper_fmap.png" class="img-fluid" style="width:50.0%"></p>
+<p>Keep in mind, that we often need the option “epi” in the selection field of “suffix” (and not the “fieldmap” option)!</p>
+<p>In the section “Metadata” you have to add which files should be selected for the “IntendedFor” field of the fieldmap. You can use a wildcard (*) to select all respective functional runs: “func/sub-001*_bold.*“. This includes all files in the directory”func” that start with “sub-001” and somewhere in the filename include “_bold.”. Watch out if you have more than one session! Then you might need to specify the respective session as well, e.g.&nbsp;“func/sub-001_ses-3*_bold.*”</p>
+</section>
+</section>
+<section id="bidscoiner-after-renaming-all-files" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="bidscoiner-after-renaming-all-files"><span class="header-section-number">3.4</span> bidscoiner after renaming all files</h2>
+<p>Once you are happy with the naming of the files, run bidscoiner-command to do the actual conversion</p>
+</section>
+<section id="view-files" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="view-files"><span class="header-section-number">3.5</span> View files</h2>
 <p><img src="images/clipboard-3124758617.png" class="img-fluid"></p>
 </section>
-<section id="mricron" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="mricron"><span class="header-section-number">3.8</span> MRICron</h2>
+<section id="mricron" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="mricron"><span class="header-section-number">3.6</span> MRICron</h2>
 <p><img src="images/clipboard-2244027224.png" class="img-fluid" width="446"></p>
 <p>Now you can view the nifti files with any suitable software</p>
 </section>

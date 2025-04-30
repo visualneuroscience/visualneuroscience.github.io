@@ -8,8 +8,6 @@ author: MG
 date: 04/16/2025
 ---
 
-# This Site is currently under construction!!
-
 # General
 
 This page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.

@@ -7,7 +7,7 @@ description: "Step by step description of how to get from DICOM files to necessa
 image: ./images/01_dcm2bids/001_0_StartingScreen.png
 categories: [MRI, DICOM, BIDS, Preprocessing, Neurodesk]
 author: MG
-date: 04/17/2025
+date: 04/30/2025
 ---
 
 # DICOM-Files
@@ -81,7 +81,7 @@ bidscoiner $sortedFolder /home/jovyan/completion2/bids
 
 Currently, to discover the data we need to delete the content of the "subprefix" field and then save the bids map in the default location. After this, run the same bidsmapper command again.
 
-## Subject and session
+### Subject and session
 
 ![](images/clipboard-325791456.png){width="50%"}
 
@@ -91,13 +91,13 @@ Edit subject and session first.
 
 Now we need to rename the files by clicking "Edit" next to every file.
 
-## Editing file names: anatomical
+### Editing file names: anatomical
 
 ![](images/clipboard-1483139836.png){width="50%"}
 
 anatmprage -\> mprage in the "acq" filed
 
-## Editing file names: functional
+### Editing file names: functional
 
 ![](images/clipboard-103624418.png){width="50%"}
 
@@ -105,9 +105,19 @@ Edit the task name and acq field
 
 Do this for every functional file
 
-In the intendedFor of the fieldmap, add "func/sub-999_ses-1_task-completion_acq–noise_bold.\*" with a wildcard. This will select all respective functional runs
+### Editing file names: fieldmap
 
-Once you are happy, run bidscoiner to do the actual conversion
+![](images/bidsmapper_fmap.png){width="50%"}
+
+Keep in mind, that we often need the option "epi" in the selection field of "suffix" (and not the "fieldmap" option)! 
+
+In the section "Metadata" you have to add which files should be selected for the "IntendedFor" field of the fieldmap. You can use a wildcard (\*) to select all respective functional runs: "func/sub-001\*_bold.\*". This includes all files in the directory "func" that start with "sub-001" and somewhere in the filename include "_bold.".
+Watch out if you have more than one session! Then you might need to specify the respective session as well, e.g. "func/sub-001_ses-3\*_bold.\*"
+
+
+## bidscoiner after renaming all files
+
+Once you are happy with the naming of the files, run bidscoiner-command to do the actual conversion
 
 ## View files
 
