@@ -19,35 +19,16 @@
     ]
   },
   {
-    "listing": "/dicom_to_glm.html",
+    "listing": "/labmeeting.html",
     "items": [
-      "/dicom_to_glm/DICOMtoBIDS.html",
-      "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
-      "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
-      "/dicom_to_glm/defacing.html",
-      "/dicom_to_glm/troubleshooting.html",
-      "/dicom_to_glm/RemoveDenoisingScan.html",
-      "/dicom_to_glm/run_fmriprep.html"
-    ]
-  },
-  {
-    "listing": "/behavioral.html",
-    "items": [
-      "/behavioral/chinrests/chinrests.html",
-      "/behavioral/2024-05-23/index.html",
-      "/behavioral/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/archive.html",
-    "items": [
-      "/archive/freesurfer FSFAST.html",
-      "/archive/dicom_to_bids.html"
+      "/labmeeting/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/mri/retinotopic_mapping.html",
+      "/dicom_to_glm/first_level_glm_nilearn.html",
       "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
       "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
@@ -81,9 +62,31 @@
     ]
   },
   {
-    "listing": "/labmeeting.html",
+    "listing": "/behavioral.html",
     "items": [
-      "/labmeeting/index.html"
+      "/behavioral/chinrests/chinrests.html",
+      "/behavioral/2024-05-23/index.html",
+      "/behavioral/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/archive/freesurfer FSFAST.html",
+      "/archive/dicom_to_bids.html"
+    ]
+  },
+  {
+    "listing": "/dicom_to_glm.html",
+    "items": [
+      "/dicom_to_glm/first_level_glm_nilearn.html",
+      "/dicom_to_glm/DICOMtoBIDS.html",
+      "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
+      "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
+      "/dicom_to_glm/defacing.html",
+      "/dicom_to_glm/troubleshooting.html",
+      "/dicom_to_glm/RemoveDenoisingScan.html",
+      "/dicom_to_glm/run_fmriprep.html"
     ]
   },
   {
@@ -97,7 +100,8 @@
       "/mri/analysis/freesurfer FSFAST.html",
       "/mri/mri-lab-setup-2023/index.html",
       "/mri/mri-lab-setup-2024/index.html",
-      "/mri/physiology/index.html"
+      "/mri/physiology/index.html",
+      "/mri/retinotopic_mapping.html"
     ]
   },
   {

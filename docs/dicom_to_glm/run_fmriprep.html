@@ -273,6 +273,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06 - first level GLM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
@@ -288,6 +294,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Retinotopic Mapping</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
@@ -535,7 +547,7 @@ window.Quarto = {
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>By confirming your command with Enter, you´ll find the new directory structure within you derivatives directory<img src="./images/04_fmriprep/02_newDirectories.png" class="img-fluid" alt="New Directories"></p>
 <p>Then, we need to specify where fmriprep should store the resulting files with this command (again, adapt the path(s) if necessary):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">SUBJECTS_DIR</span><span class="op">=</span>/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">SUBJECTS_DIR</span><span class="op">=</span>/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./images/04_fmriprep/03_setSUBJECTS_DIR.png" class="img-fluid figure-img"></p>
@@ -547,7 +559,7 @@ window.Quarto = {
 <section id="sec-fmriprepCommand" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> fmriprep command</h1>
 <p>With the setup done, you can now run the command:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fmriprep</span> /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant <span class="at">--bold2t1w-init</span> header <span class="at">--force-bbr</span> <span class="at">-w</span> /home/jovyan/website/fmriprep_tmp <span class="at">--output-spaces</span> T1w fsaverage fsnative <span class="at">--participant-label</span> sub-999 <span class="at">--nprocs</span> 8 <span class="at">--mem</span> 10000 <span class="at">--skip_bids_validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">-v</span> <span class="at">--fs-license-file</span> /home/jovyan/website/freesurferlicense/license.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fmriprep</span> /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant <span class="at">--bold2t1w-init</span> header <span class="at">--force-bbr</span> <span class="at">-w</span> /home/jovyan/website/fmriprep_tmp <span class="at">--output-spaces</span> T1w fsaverage fsnative <span class="at">--participant-label</span> sub-999 <span class="at">--nprocs</span> 8 <span class="at">--mem</span> 10000 <span class="at">--skip_bids_validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">-v</span> <span class="at">--fs-license-file</span> /home/jovyan/website/freesurferlicense/license.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Important:</strong> adapt the flag <code>--participant-label sub-999</code> accordingly, so that you state the subject you want to preprocess</p>
 <p><strong>Hint:</strong> same as before, you could run this command with the two commands above for the setup as well. The only important thing is the order: first the command for making the directories, then defining <code>SUBJECTS_DIR</code>and finally the fmriprep command.</p>
 </section>
@@ -616,8 +628,10 @@ window.Quarto = {
 <p>Congratulations, you successfully preprocessed your data and you are one step closer to analyzing your data!</p>
 <p>To continue in your journey to your Analysis, please return to the <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
 <p>Alternatively, here is a list of potential next steps to continue with</p>
-<ol type="1">
-<li></li>
+<p>1.<a href="../mri/retinotopic_mapping.html">Retinotopic Mapping</a></p>
+<ol start="2" type="1">
+<li><p><a href="../dicom_to_glm/first_level_glm_nilearn.html">first-level GLM</a></p></li>
+<li><p>second-level GLM</p></li>
 </ol>
 
 

@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="MW">
-<meta name="dcterms.date" content="2023-10-26">
-<meta name="description" content="Creating physiology regressors using the PhysIO toolbox">
+<meta name="author" content="MG">
+<meta name="dcterms.date" content="2025-05-05">
+<meta name="description" content="Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas">
 
-<title>Physiological noise correction – Visual Neuroscience Lab</title>
+<title>Retinotopic Mapping – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,22 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
   </div>
@@ -91,39 +120,39 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../neurodesk/neurodesktop.html"> 
+    <a class="nav-link" href="../neurodesk/neurodesktop.html"> 
 <span class="menu-text">Neurodesktop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../behavioral.html"> 
+    <a class="nav-link" href="../behavioral.html"> 
 <span class="menu-text">Behavioral</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../labmeeting.html"> 
+    <a class="nav-link" href="../labmeeting.html"> 
 <span class="menu-text">Labmeeting</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../dicom_to_glm.html"> 
+    <a class="nav-link" href="../dicom_to_glm.html"> 
 <span class="menu-text">DICOM to GLM</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../mri.html"> 
+    <a class="nav-link" href="../mri.html"> 
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../people.html"> 
+    <a class="nav-link" href="../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../other_topics.html"> 
+    <a class="nav-link" href="../other_topics.html"> 
 <span class="menu-text">Other Topics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../archive.html"> 
+    <a class="nav-link" href="../archive.html"> 
 <span class="menu-text">Archive</span></a>
   </li>  
 </ul>
@@ -137,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../mri.html">MRI</a></li><li class="breadcrumb-item"><a href="../../mri/physiology/index.html">Physiological noise correction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../mri.html">MRI</a></li><li class="breadcrumb-item"><a href="../mri/retinotopic_mapping.html">Retinotopic Mapping</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,19 +188,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
+  <a href="../neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neurodesktop</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
+            <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -180,43 +209,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01 - DICOM to BIDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02 - T1w for PBn</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03 - Defacing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04 - Removing Noise Scan</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 - fmriprep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06 - first level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
 </li>
@@ -224,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../mri.html" class="sidebar-item-text sidebar-link">
+            <a href="../mri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -233,49 +262,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3D printing a brain</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">7T anatomical analysis on neurodesk</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI BIDS and OSF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Old MRI setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Update to the MRI lab setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../mri/physiology/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../mri/physiology/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Physiological noise correction</span></a>
   </div>
 </li>
@@ -283,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../behavioral.html" class="sidebar-item-text sidebar-link">
+            <a href="../behavioral.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -292,19 +321,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vision tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BIDS for behavioral studies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
+  <a href="../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom-built chin rests</span></a>
   </div>
 </li>
@@ -312,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../people.html" class="sidebar-item-text sidebar-link">
+            <a href="../people.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">People</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -321,31 +350,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../people/stipends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/stipends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stipends and prizes for master students</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../people/coffee/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/coffee/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coffee time</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Participant compensation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../people/leaving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/leaving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Things to do if you are leaving the lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../people/writing/writing.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/writing/writing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scientific writing in practice</span></a>
   </div>
 </li>
@@ -353,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../other_topics.html" class="sidebar-item-text sidebar-link">
+            <a href="../other_topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Other Topics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -362,25 +391,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calculating a priori sample size using G Power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma correction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contribute to the website</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab Members Only!!!</span></a>
   </div>
 </li>
@@ -388,13 +417,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../labmeeting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../labmeeting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labmeeting</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive</span></a>
   </div>
 </li>
@@ -408,31 +437,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#acquistion-of-log-files" id="toc-acquistion-of-log-files" class="nav-link active" data-scroll-target="#acquistion-of-log-files"><em>Acquistion of log-files:</em></a>
-  <ul class="collapse">
-  <li><a href="#physiology-logging" id="toc-physiology-logging" class="nav-link" data-scroll-target="#physiology-logging"><em>Physiology logging:</em></a></li>
-  </ul></li>
-  <li><a href="#required" id="toc-required" class="nav-link" data-scroll-target="#required"><em>Required:</em></a></li>
-  <li><a href="#before-running-the-script" id="toc-before-running-the-script" class="nav-link" data-scroll-target="#before-running-the-script"><em>Before running the script:</em></a></li>
-  <li><a href="#after-running-the-script" id="toc-after-running-the-script" class="nav-link" data-scroll-target="#after-running-the-script"><em>After running the script:</em></a></li>
+  <li><a href="#the-script" id="toc-the-script" class="nav-link active" data-scroll-target="#the-script">The script</a></li>
+  <li><a href="#necessary-adaptiation-steps" id="toc-necessary-adaptiation-steps" class="nav-link" data-scroll-target="#necessary-adaptiation-steps">Necessary adaptiation steps</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../mri.html">MRI</a></li><li class="breadcrumb-item"><a href="../../mri/physiology/index.html">Physiological noise correction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../mri.html">MRI</a></li><li class="breadcrumb-item"><a href="../mri/retinotopic_mapping.html">Retinotopic Mapping</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Physiological noise correction</h1>
+<h1 class="title">Retinotopic Mapping</h1>
   <div class="quarto-categories">
     <div class="quarto-category">MRI</div>
-    <div class="quarto-category">Physiology</div>
+    <div class="quarto-category">Retinotopy</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Creating physiology regressors using the PhysIO toolbox
+    Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas
   </div>
 </div>
 
@@ -442,14 +466,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>MW </p>
+             <p>MG </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 26, 2023</p>
+      <p class="date">May 5, 2025</p>
     </div>
   </div>
   
@@ -461,76 +485,115 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>October 2023; additional info and further read: https://www.sciencedirect.com/science/article/pii/S016502701630259X?via%3Dihub</p>
-<section id="acquistion-of-log-files" class="level2">
-<h2 class="anchored" data-anchor-id="acquistion-of-log-files"><em>Acquistion of log-files:</em></h2>
-<section id="physiology-logging" class="level3">
-<h3 class="anchored" data-anchor-id="physiology-logging"><em>Physiology logging:</em></h3>
-<ul>
-<li>Press tab + [-&gt; + Entf to enter admin mode</li>
-<li>PMU control</li>
-<li>control-esc</li>
-<li>run -&gt; cmd</li>
-<li>in the terminal, type ideacmdtool</li>
-<li>DON’T use startLogAll, start puls and ECG separately (if both are started simultaneously, recording will terminate after 5 min.)</li>
-<li>After a while there should be a message with “ok” at the end</li>
-<li>Data is stored in <code>C:\ProgramFiles\Siemens\Numaris\ Mars\log\</code> (there is a shortcut “log” in the Explorer )</li>
-<li>Stop recording after experiment with stopLogAll, move data to <code>C:\_Natalia\STUDYNAME</code></li>
-</ul>
+<p>Retinotopic mapping is used to individually identify subregions in the visual cortex (i.e V1, V2, V3 and sometimes higher areas as well). This is then used to better understand how visual information is processed in the brain by different regions.</p>
+<p>Normally, this is achieved by implementing dedicated “retinotopy-runs” in the experimental design. However, this is not always possible.</p>
+<p>The Benson2014 atlas allows to get a retinotopic mapping even without dedicated “retinotopy-runs” by using structural features and probabilistic maps.</p>
+<section id="the-script" class="level1">
+<h1>The script</h1>
+<p>The script to run the probabilistic retinotopic mapping can be found on the server: <code>/shared/website/occatlas.sh</code></p>
+<p>Alternatively, you can copy/paste the code (after adapting it for your data! See below):</p>
+<pre class="{bash}"><code>#!/usr/bin/env bash
+
+# This script demonstrates how to run Benson's neuropythy atlas on neurodesk
+# and map early visual areas onto the subject's functional volume space
+# NZ 2025.03.21
+
+# define variables and make dirs
+ml freesurfer/7.4.1 # tested with fs 7.4.1
+sid=999
+niidir=/home/jovyan/completion/4_conditions_main/bids
+export SUBJECTS_DIR=$niidir/derivatives/fmriprep/sourcedata/freesurfer
+export SINGULARITYENV_SUBJECTS_DIR=$SUBJECTS_DIR # this is container-specific definition of SUBJECTS_DIR
+export APPTAINERENV_SUBJECTS_DIR=$SUBJECTS_DIR   # this is container-specific definition of SUBJECTS_DIR
+mkdir -p /home/jovyan/completion/4_conditions_main/bids/neuropythy_tmp
+show=yes # show images: yes or no
+do_volumetric=no # run volumetric (surf2vol) part: yes or no
+
+# run benson's occipital atlas docker as singularity container
+tmpdir=/home/jovyan/completion/4_conditions_main/bids/neuropythy_tmp
+singularity run -B $SUBJECTS_DIR:/subjects \
+  -B $tmpdir:/data docker://nben/neuropythy \
+  atlas --verbose sub-$sid
+
+if [ "$show" = "yes" ]; then
+  # take a look at the data
+  freeview \
+    -f $SUBJECTS_DIR/sub-$sid/surf/lh.inflated:overlay=$SUBJECTS_DIR/sub-$sid/surf/lh.benson14_varea.mgz:overlay_color=colorwheel \
+    -f $SUBJECTS_DIR/sub-$sid/surf/rh.inflated:overlay=$SUBJECTS_DIR/sub-$sid/surf/rh.benson14_varea.mgz:overlay_color=colorwheel
+fi
+
+# run volumetric projection if enabled
+if [ "$do_volumetric" = "yes" ]; then
+
+  # surf2vol
+  mkdir -p $niidir/derivatives/rois/sub-$sid
+
+  # loop over hemis
+  for hemi in lh rh; do
+
+    # convert to t1 space first
+    mri_surf2vol \
+      --surfval $SUBJECTS_DIR/sub-$sid/surf/$hemi.benson14_varea.mgz \
+      --temp $SUBJECTS_DIR/sub-$sid/mri/orig.mgz \
+      --identity sub-$sid \
+      --o $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-T1.nii.gz \
+      --fill-projfrac -0.5 1.5 0.05 \
+      --subject "sub-$sid" \
+      --hemi $hemi
+
+    if [ "$show" = "yes" ]; then
+      freeview \
+        $SUBJECTS_DIR/sub-$sid/mri/orig.mgz \
+        $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-T1.nii.gz:colormap=LUT
+    fi
+
+    # now convert from T1 to BOLD space
+    mri_vol2vol \
+      --mov $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-T1.nii.gz \
+      --targ $niidir/derivatives/fmriprep/sub-$sid/ses-1/func/*task-loc*space-T1w_boldref.nii.gz \
+      --o $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-bold.nii.gz \
+      --regheader \
+      --nearest
+
+    if [ "$show" = "yes" ]; then
+      freeview \
+        $niidir/derivatives/fmriprep/sub-$sid/ses-1/func/*task-loc*space-T1w_boldref.nii.gz \
+        $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-bold.nii.gz:colormap=LUT
+    fi
+
+    # binarize the labels
+    mri_binarize \
+      --i $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-bold.nii.gz \
+      --match 1 2 3 --o "$niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_evc_space-bold.nii.gz"
+
+  done
+
+  # unite hemispheres and binarize again
+  mri_concat \
+    --i $niidir/derivatives/rois/sub-$sid/lh.sub-${sid}_evc_space-bold.nii.gz \
+    --i $niidir/derivatives/rois/sub-$sid/rh.sub-${sid}_evc_space-bold.nii.gz \
+    --sum \
+    --o $niidir/derivatives/rois/sub-$sid/sub-${sid}_evc_space-bold.nii.gz
+
+fi
+
+# the rest should probably be done in python, thresholding values on the fly</code></pre>
 </section>
-</section>
-<section id="required" class="level2">
-<h2 class="anchored" data-anchor-id="required"><em>Required:</em></h2>
-<ul>
-<li>Json- files of functional data for each run</li>
-<li>Physiology log-files, one for all runs (.resp and .puls files)</li>
-</ul>
-<p><strong>Figure 1.</strong> Puls and resp-file.</p>
-<p><img src="./Picture1.jpg" class="img-fluid"></p>
-<ul>
-<li>Script: <code>/storage/nv_shared/PhysIO_excitex/PhysIO_get_regressors.m</code></li>
-</ul>
-</section>
-<section id="before-running-the-script" class="level2">
-<h2 class="anchored" data-anchor-id="before-running-the-script"><em>Before running the script:</em></h2>
-<ul>
-<li><p>Always check if on path: SPM: <code>/usr/local/spm12/</code> Toolbox-code modified for our scanner model: <code>/storage/nv_shared/software/PhysIO/tapas-master/PhysIO/code</code></p></li>
-<li><p>Individual parameter settings in the script:</p>
-<ul>
-<li><code>physio.log_files.vendor</code> = ‘Siemens_xa20’; % specific for our scanner model.</li>
-<li><code>physio.log_files.resp_type</code> = ‘spine’; % set to spine or belt, depending on type of physiology correction.</li>
-<li><code>physio.model.orthogonalise</code> = ‘RETROICOR’; % select depending on physiology model used, e.g.&nbsp;‘RETROICOR’, or c, r; to avoid correlations between regressors.</li>
-<li><code>physio.model.retroicor.include</code> = true; % select physiology model here: RETROICOR, RVT or HVT.</li>
-<li><code>physio.model.retroicor.order.c</code> = 3;</li>
-<li><code>physio.model.retroicor.order.r</code> = 4;</li>
-<li><code>physio.model.retroicor.order.cr</code> = 1; % select orders for RETROICOR model; here the default option based on Glover et al., 2000 is set.</li>
-<li><code>physio.model.rvt.include</code> = false; % select physiology model here.</li>
-<li><code>physio.model.hrv.include</code> = false; % select physiology model here.</li>
-<li><code>physio.model.other.include</code> = false; % select physiology model here.</li>
-<li><code>physio.verbose.level</code> = 3; % 2 or 3, will produce control plots – useful to check quality of data and if synchronization has worked; when analyzing several participants it’s best to set to 0.</li>
-</ul></li>
-</ul>
-</section>
-<section id="after-running-the-script" class="level2">
-<h2 class="anchored" data-anchor-id="after-running-the-script"><em>After running the script:</em></h2>
-<ul>
-<li>Validation of results - Check the diagnostic plots the toolbox delivers:
-<ul>
-<li>Check the raw time series for artifacts/ detachments (4A)</li>
-<li>Check distribution of raw physiological data (should be left-skewed, 4B), are there any indications for ceiling effects or temporary detachment (2)?<br>
-</li>
-<li>Check period used for synchronization, does it fit? (4C)</li>
-<li>Check filtered time series (are there still severe artifacts?)</li>
-<li>Check regressor file (3): regressors should have a value for each slice and 18 regressors if you specified RETROICOR (i.e., 6 cardiac phase regressors, 8 respiratory phase regressors, and 4 interaction terms).</li>
-<li>Regressors can then be added to a GLM.</li>
-</ul></li>
-</ul>
-<p><strong>Figure 2.</strong> Artifacts in raw respiratory signal due to issues during recording with the breathing belt.</p>
-<p><img src="./Picture2.jpg" class="img-fluid"></p>
-<p><strong>Figure 3.</strong> Final output (RETROICOR regressors)</p>
-<p><img src="./Picture3.png" class="img-fluid"></p>
-<p><strong>Figure 4.</strong> Steps from raw data to the final regressors.</p>
-<p><img src="./Picture4.jpg" class="img-fluid"></p>
+<section id="necessary-adaptiation-steps" class="level1">
+<h1>Necessary adaptiation steps</h1>
+<ol type="1">
+<li><p>Change the variable <code>sid</code> to match the subject you want to process (<em>only the number is necessary</em>! In the script it will be implemented as <code>sub-sid</code>)</p></li>
+<li><p>Change the variable <code>niidir</code> to match the path to your BIDS-directory</p></li>
+<li><p>Optional (you can look at the output later anyway): Change the variable <code>show</code> to see the intermediate steps (<span class="math inline">\(\to\)</span> <code>show=yes</code> vs.&nbsp;<code>show=no</code>)</p></li>
+<li><p>Indicate if you use volumentric (<code>do_volumetric=yes</code>) oder surface data (<code>do_volumentric=no</code>) in your later analysis</p></li>
+<li><p>Save your changes</p></li>
+<li><p>Run the script <span class="math inline">\(\to\)</span> open a terminal and execute:</p></li>
+</ol>
+<!-- -->
+<ol type="a">
+<li><code>bash /Path/to/occatlas.sh</code></li>
+<li>change the working directory to where the script is using <code>cd /Path/to/directory/with/script</code> and then <code>bash ./occatlas.sh</code></li>
+</ol>
 
 
 </section>

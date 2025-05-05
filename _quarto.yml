@@ -42,10 +42,12 @@ website:
           - dicom_to_glm/defacing.qmd
           - dicom_to_glm/RemoveDenoisingScan.qmd
           - dicom_to_glm/run_fmriprep.qmd
+          - dicom_to_glm/first_level_glm_nilearn.qmd
           - dicom_to_glm/troubleshooting.qmd
       - section: "MRI"
         href: mri.qmd
         contents:
+          - mri/retinotopic_mapping.qmd
           - mri/3D-prints/3d-prints.qmd
           - mri/analysis/7t_analysis_on_neurodesk.qmd
           - mri/analysis/bids.qmd

@@ -1,0 +1,130 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Retinotopic Mapping
+description: "Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas"
+#image: ./images/clipboard-3427974075.png
+categories: [MRI, Retinotopy]
+author: MG
+date: 05/05/2025
+---
+
+Retinotopic mapping is used to individually identify subregions in the visual cortex (i.e V1, V2, V3 and sometimes higher areas as well). This is then used to better understand how visual information is processed in the brain by different regions.
+
+Normally, this is achieved by implementing dedicated "retinotopy-runs" in the experimental design. However, this is not always possible.
+
+The Benson2014 atlas allows to get a retinotopic mapping even without dedicated "retinotopy-runs" by using structural features and probabilistic maps.
+
+# The script
+
+The script to run the probabilistic retinotopic mapping can be found on the server: `/shared/website/occatlas.sh`
+
+Alternatively, you can copy/paste the code (after adapting it for your data! See below):
+
+```{bash}
+#!/usr/bin/env bash
+
+# This script demonstrates how to run Benson's neuropythy atlas on neurodesk
+# and map early visual areas onto the subject's functional volume space
+# NZ 2025.03.21
+
+# define variables and make dirs
+ml freesurfer/7.4.1 # tested with fs 7.4.1
+sid=999
+niidir=/home/jovyan/completion/4_conditions_main/bids
+export SUBJECTS_DIR=$niidir/derivatives/fmriprep/sourcedata/freesurfer
+export SINGULARITYENV_SUBJECTS_DIR=$SUBJECTS_DIR # this is container-specific definition of SUBJECTS_DIR
+export APPTAINERENV_SUBJECTS_DIR=$SUBJECTS_DIR   # this is container-specific definition of SUBJECTS_DIR
+mkdir -p /home/jovyan/completion/4_conditions_main/bids/neuropythy_tmp
+show=yes # show images: yes or no
+do_volumetric=no # run volumetric (surf2vol) part: yes or no
+
+# run benson's occipital atlas docker as singularity container
+tmpdir=/home/jovyan/completion/4_conditions_main/bids/neuropythy_tmp
+singularity run -B $SUBJECTS_DIR:/subjects \
+  -B $tmpdir:/data docker://nben/neuropythy \
+  atlas --verbose sub-$sid
+
+if [ "$show" = "yes" ]; then
+  # take a look at the data
+  freeview \
+    -f $SUBJECTS_DIR/sub-$sid/surf/lh.inflated:overlay=$SUBJECTS_DIR/sub-$sid/surf/lh.benson14_varea.mgz:overlay_color=colorwheel \
+    -f $SUBJECTS_DIR/sub-$sid/surf/rh.inflated:overlay=$SUBJECTS_DIR/sub-$sid/surf/rh.benson14_varea.mgz:overlay_color=colorwheel
+fi
+
+# run volumetric projection if enabled
+if [ "$do_volumetric" = "yes" ]; then
+
+  # surf2vol
+  mkdir -p $niidir/derivatives/rois/sub-$sid
+
+  # loop over hemis
+  for hemi in lh rh; do
+
+    # convert to t1 space first
+    mri_surf2vol \
+      --surfval $SUBJECTS_DIR/sub-$sid/surf/$hemi.benson14_varea.mgz \
+      --temp $SUBJECTS_DIR/sub-$sid/mri/orig.mgz \
+      --identity sub-$sid \
+      --o $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-T1.nii.gz \
+      --fill-projfrac -0.5 1.5 0.05 \
+      --subject "sub-$sid" \
+      --hemi $hemi
+
+    if [ "$show" = "yes" ]; then
+      freeview \
+        $SUBJECTS_DIR/sub-$sid/mri/orig.mgz \
+        $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-T1.nii.gz:colormap=LUT
+    fi
+
+    # now convert from T1 to BOLD space
+    mri_vol2vol \
+      --mov $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-T1.nii.gz \
+      --targ $niidir/derivatives/fmriprep/sub-$sid/ses-1/func/*task-loc*space-T1w_boldref.nii.gz \
+      --o $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-bold.nii.gz \
+      --regheader \
+      --nearest
+
+    if [ "$show" = "yes" ]; then
+      freeview \
+        $niidir/derivatives/fmriprep/sub-$sid/ses-1/func/*task-loc*space-T1w_boldref.nii.gz \
+        $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-bold.nii.gz:colormap=LUT
+    fi
+
+    # binarize the labels
+    mri_binarize \
+      --i $niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_benson14_varea_space-bold.nii.gz \
+      --match 1 2 3 --o "$niidir/derivatives/rois/sub-$sid/$hemi.sub-${sid}_evc_space-bold.nii.gz"
+
+  done
+
+  # unite hemispheres and binarize again
+  mri_concat \
+    --i $niidir/derivatives/rois/sub-$sid/lh.sub-${sid}_evc_space-bold.nii.gz \
+    --i $niidir/derivatives/rois/sub-$sid/rh.sub-${sid}_evc_space-bold.nii.gz \
+    --sum \
+    --o $niidir/derivatives/rois/sub-$sid/sub-${sid}_evc_space-bold.nii.gz
+
+fi
+
+# the rest should probably be done in python, thresholding values on the fly
+```
+
+# Necessary adaptiation steps
+
+1.  Change the variable `sid` to match the subject you want to process (*only the number is necessary*! In the script it will be implemented as `sub-sid`)
+
+2.  Change the variable `niidir` to match the path to your BIDS-directory
+
+3.  Optional (you can look at the output later anyway): Change the variable `show` to see the intermediate steps ($\to$ `show=yes` vs. `show=no`)
+
+4.  Indicate if you use volumentric (`do_volumetric=yes`) oder surface data (`do_volumentric=no`) in your later analysis
+
+5.  Save your changes
+
+6.  Run the script $\to$ open a terminal and execute:
+
+<!-- -->
+
+a)  `bash /Path/to/occatlas.sh`
+b)  change the working directory to where the script is using `cd /Path/to/directory/with/script` and then `bash ./occatlas.sh`
