@@ -21,7 +21,7 @@ The script to run the probabilistic retinotopic mapping can be found on the serv
 
 Alternatively, you can copy/paste the code (after adapting it for your data! See below):
 
-```{bash}
+``` bash
 #!/usr/bin/env bash
 
 # This script demonstrates how to run Benson's neuropythy atlas on neurodesk

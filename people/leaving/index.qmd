@@ -61,6 +61,12 @@ Leaving can be sad. In addition, there is a ton of boring admin work to be done.
 
 `/storage/natalia/projects.md`
 
+For neurodesk users:
+
+```         
+/home/jovyan/
+```
+
 #### Fast and functionally specific cortical thickness changes induced by visual stimulation
 
 1.  project nickname: hexcite

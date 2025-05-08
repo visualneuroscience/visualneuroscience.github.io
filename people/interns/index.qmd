@@ -1,0 +1,41 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Dear interns
+description: "Information for starting as an intern"
+author: NZ
+categories: [People, Lab]
+date: 05/08/2025
+---
+
+Interns are an integral part of our team and are treated as equal colleagues. However, there are specific rules related to internships that all of us must abide by. Below you will find an internship checklist, which should help you navigate the process.
+
+# Internship checklist
+
+## Before starting
+
+-   Discuss the content of your project with the PI
+
+-   Do the necessary paperwork and make sure you got an o.k. from the secretary's office, the HR department of the university or the international office (depending on how you came here).
+
+## On the first day
+
+-   Get an office key from the secretary's office
+
+-   Find out where your desk is
+
+-   Join our lab's slack (ask someone to add you if you did not receive an invitation yet)
+
+-   Make sure you know the date and time of the lab meetings if you would like to attend them
+
+-   Create a spreadsheet in any format where you note the dates and times you worked on the project. This is not meant to control you, but rather to make sure we do not overload you with work.
+
+## During the internship
+
+-   Notify the PI when you reach your last 20 hours of your internship time, because we would love to hear about your project and its outcome in the lab meeting presentation
+
+## Before leaving
+
+-   Make sure you check out the [leaving](../leaving/index.qmd) section. It is made primarily for doctoral students, but some things in there will apply to you as well.
+
+-   Have the PI sign your documents.
