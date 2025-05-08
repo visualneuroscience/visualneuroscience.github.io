@@ -24,9 +24,11 @@ Interns are an integral part of our team and are treated as equal colleagues. Ho
 
 -   Have someone show you your desk
 
--   Do the safety briefing with a PTA or PI (form can be found [here](https://sharepoint.uni-graz.at/sites/602/_layouts/15/WopiFrame.aspx?sourcedoc={EC8D17C7-17DF-4538-A235-C15504B41B1B}&file=Unterweisungen_Untersuchungsraum.pdf&action=default))
+-   Do the safety briefing with a PTA or PI (form can be found [here](https://sharepoint.uni-graz.at/sites/602/_layouts/15/WopiFrame.aspx?sourcedoc=%7BEC8D17C7-17DF-4538-A235-C15504B41B1B%7D&file=Unterweisungen_Untersuchungsraum.pdf&action=default))
 
 -   Join our lab's slack (ask someone to add you if you did not receive an invitation yet)
+
+    -   Do not feel obliged to keep slack on all the time and silence your notifications for times when you don't want to be disturbed. Everyone in the lab has the right to have their own working hours and nobody expects anyone else to have the same ones.
 
 -   Make sure you know the date and time of the lab meetings if you would like to attend them
 
