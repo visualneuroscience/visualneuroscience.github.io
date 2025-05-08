@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: Dear interns
+title: Interns
 description: "Information for starting as an intern"
 author: NZ
 categories: [People, Lab]
@@ -16,13 +16,15 @@ Interns are an integral part of our team and are treated as equal colleagues. Ho
 
 -   Discuss the content of your project with the PI
 
--   Do the necessary paperwork and make sure you got an o.k. from the secretary's office, the HR department of the university or the international office (depending on how you came here).
+-   Do the necessary paperwork and make sure you got an o.k. from the secretary's office, the HR department of the university or the international office (for international students).
 
 ## On the first day
 
 -   Get an office key from the secretary's office
 
--   Find out where your desk is
+-   Have someone show you your desk
+
+-   Do the safety briefing with a PTA or PI (form can be found [here](https://sharepoint.uni-graz.at/sites/602/_layouts/15/WopiFrame.aspx?sourcedoc={EC8D17C7-17DF-4538-A235-C15504B41B1B}&file=Unterweisungen_Untersuchungsraum.pdf&action=default))
 
 -   Join our lab's slack (ask someone to add you if you did not receive an invitation yet)
 
