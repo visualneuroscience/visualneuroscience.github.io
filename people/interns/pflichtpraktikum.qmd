@@ -1,0 +1,28 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Pflichtpraktikum
+description: "Information for compulsory internship for bachelor students"
+author: HM
+categories: [People, Lab]
+date: 05/09/2025
+---
+
+Also, was musst du tun? Hier ist einfach alles von Anfang an:
+
+1.  Moodle: Der erste Schritt ist, dem VU „Einführung in die Praxisfelder der Psychologie“ auf Moodle beizutreten. Im Wintersemester ist es der Kurs „602.060 Einführung in die Praxisfelder der Psychologie“, im Sommersemester der Kurs „602.067 Einführung in die Praxisfelder der Psychologie“. Man kann sich immer selbst auf Moodle eintragen (Passwort: "pp2011"). Offizielle Informationen hierzu gibt es auch auf der Institutsseite: <https://psychologie.neu.uni-graz.at/de/studienorganisation/pflichtpraxis/>
+2.  Dann musst du im Kurs den Antrag auf Genehmigung der Praxis-Stelle ausfüllen, hochladen und auf das „OK“ von der Kursleitung warten.
+3.  Während du auf das „OK“ wartest, musst du die Kursleitung (zur Zeit [PJ](https://online.uni-graz.at/kfu_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/visitenkarte.show_vcard?$ctx=design=ca2;header=max;lang=DE&pPersonenGruppe=3&pPersonenId=85E1975CF6B861F0)) noch anschreiben, damit die Kursleitung die Bestätigung für eine Praxisstelle unterschreiben kann. Alle Formulare findest du immer im Moodle-Kurs.
+4.  Sobald du das „OK“ und die unterschriebene Bestätigung hast, schreib das [Sekretariat der allgemeinen Psychologie](https://online.uni-graz.at/kfu_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/visitenkarte.show_vcard?$ctx=design=ca2;header=max;lang=DE&pPersonenGruppe=3&pPersonenId=ED1E1B74A7AF7F12) wegen deines Pflichtpraktikums an. In der E-Mail sollten diese Formulare dabei sein:
+
+-   Scan deines Reisepasses
+
+-   Screenshot des „OK“ aus Moodle
+
+-   Die unterschriebene Bestätigung für die Praxisstelle
+
+-   Der ausgefüllte Antrag auf Genehmigung der Praxisstelle
+
+Das war's eigentlich auch schon!
+
+Erfahrungsgemäß dauert der ganze Vorgang vom Schritt 1 bis zur endgültigen Bewilligung und Start 2-4 Wochen.

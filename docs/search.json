@@ -4,7 +4,7 @@
     "href": "people.html",
     "title": "People-related information",
     "section": "",
-    "text": "Interns\n\n\n\nPeople\n\n\nLab\n\n\n\nInformation for starting as an intern\n\n\n\nNZ\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParticipant compensation\n\n\n\nCompensation\n\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThings to do if you are leaving the lab\n\n\n\nLab\n\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nScientific writing in practice\n\n\nPractical recommendations for preparing scientific manuscripts, thesis papers, reports, etc.\n\n\n\nNZ\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoffee time\n\n\n\nCoffee\n\n\nLab\n\n\n\nCoffee information\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStipends and prizes for master students\n\n\nThis is a list of resources with stipends and prizes you can apply for\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "Pflichtpraktikum\n\n\n\nPeople\n\n\nLab\n\n\n\nInformation for compulsory internship for bachelor students\n\n\n\nHM\n\n\nMay 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInterns\n\n\n\nPeople\n\n\nLab\n\n\n\nInformation for starting as an intern\n\n\n\nNZ\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThings to do if you are leaving the lab\n\n\n\nLab\n\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParticipant compensation\n\n\n\nCompensation\n\n\n\nHow to provide your participants with money or course credit for experiment participation\n\n\n\nNZ\n\n\nSep 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nScientific writing in practice\n\n\nPractical recommendations for preparing scientific manuscripts, thesis papers, reports, etc.\n\n\n\nNZ\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoffee time\n\n\n\nCoffee\n\n\nLab\n\n\n\nCoffee information\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nStipends and prizes for master students\n\n\nThis is a list of resources with stipends and prizes you can apply for\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
     "crumbs": [
       "Home",
       "People"
@@ -94,7 +94,7 @@
     "href": "people/interns/index.html#before-starting",
     "title": "Interns",
     "section": "Before starting",
-    "text": "Before starting\n\nDiscuss the content of your project with the PI\nDo the necessary paperwork and make sure you got an o.k. from the secretary’s office, the HR department of the university or the international office (for international students)."
+    "text": "Before starting\n\nDiscuss the content of your project with the PI\nDo the necessary paperwork and make sure you got an o.k. from the secretary’s office, the HR department of the university or the international office (for international students).\n\nIf you are a bachelor student doing a “Pflichtpraktikum” at the University of Graz, you can find the relevant information in the Pflichtpraktikum Section."
   },
   {
     "objectID": "people/interns/index.html#on-the-first-day",
@@ -108,7 +108,7 @@
     "href": "people/interns/index.html#during-the-internship",
     "title": "Interns",
     "section": "During the internship",
-    "text": "During the internship\n\nNotify the PI when you reach your last 20 hours of your internship time, because we would love to hear about your project and its outcome in the lab meeting presentation"
+    "text": "During the internship\n\nNotify the PI when you reach your last 20 hours of your internship time, because we would love to hear about your project and its outcome in the lab meeting presentation.\nYou do not have to, but if you would like to use the office outside of the institute’s typical opening hours (Sundays, holidays and late evenings), you can ask the secretary’s office to activate your student card for entering the building."
   },
   {
     "objectID": "people/interns/index.html#before-leaving",
@@ -1112,7 +1112,7 @@
     "href": "index.html",
     "title": "Visual Neuroscience lab",
     "section": "",
-    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\nInterns\n\n\nInformation for starting as an intern\n\n\n\nNZ\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRetinotopic Mapping\n\n\nProcedure to apply the probabilistic retinotopic mapping using the Benson Atlas\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n06 - first level GLM\n\n\nSeveral approaches to run a first level GLM using nilearn\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01 - DICOM to BIDS\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nOverview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nApr 16, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
+    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\nPflichtpraktikum\n\n\nInformation for compulsory internship for bachelor students\n\n\n\nHM\n\n\nMay 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInterns\n\n\nInformation for starting as an intern\n\n\n\nNZ\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRetinotopic Mapping\n\n\nProcedure to apply the probabilistic retinotopic mapping using the Benson Atlas\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n06 - first level GLM\n\n\nSeveral approaches to run a first level GLM using nilearn\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01 - DICOM to BIDS\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Home"
     ]
@@ -1490,5 +1490,12 @@
       "People",
       "Scientific writing in practice"
     ]
+  },
+  {
+    "objectID": "people/interns/pflichtpraktikum.html",
+    "href": "people/interns/pflichtpraktikum.html",
+    "title": "Pflichtpraktikum",
+    "section": "",
+    "text": "Also, was musst du tun? Hier ist einfach alles von Anfang an:\n\nMoodle: Der erste Schritt ist, dem VU „Einführung in die Praxisfelder der Psychologie“ auf Moodle beizutreten. Im Wintersemester ist es der Kurs „602.060 Einführung in die Praxisfelder der Psychologie“, im Sommersemester der Kurs „602.067 Einführung in die Praxisfelder der Psychologie“. Man kann sich immer selbst auf Moodle eintragen (Passwort: “pp2011”). Offizielle Informationen hierzu gibt es auch auf der Institutsseite: https://psychologie.neu.uni-graz.at/de/studienorganisation/pflichtpraxis/\nDann musst du im Kurs den Antrag auf Genehmigung der Praxis-Stelle ausfüllen, hochladen und auf das „OK“ von der Kursleitung warten.\nWährend du auf das „OK“ wartest, musst du die Kursleitung (zur Zeit PJ) noch anschreiben, damit die Kursleitung die Bestätigung für eine Praxisstelle unterschreiben kann. Alle Formulare findest du immer im Moodle-Kurs.\nSobald du das „OK“ und die unterschriebene Bestätigung hast, schreib das Sekretariat der allgemeinen Psychologie wegen deines Pflichtpraktikums an. In der E-Mail sollten diese Formulare dabei sein:\n\n\nScan deines Reisepasses\nScreenshot des „OK“ aus Moodle\nDie unterschriebene Bestätigung für die Praxisstelle\nDer ausgefüllte Antrag auf Genehmigung der Praxisstelle\n\nDas war’s eigentlich auch schon!\nErfahrungsgemäß dauert der ganze Vorgang vom Schritt 1 bis zur endgültigen Bewilligung und Start 2-4 Wochen.\n\n\n\n Back to top"
   }
 ]

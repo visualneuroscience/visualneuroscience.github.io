@@ -2,9 +2,10 @@
   {
     "listing": "/people.html",
     "items": [
+      "/people/interns/pflichtpraktikum.html",
       "/people/interns/index.html",
-      "/people/compensation/compensation.html",
       "/people/leaving/index.html",
+      "/people/compensation/compensation.html",
       "/people/writing/writing.html",
       "/people/coffee/index.html",
       "/people/stipends/index.html"
@@ -62,6 +63,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/people/interns/pflichtpraktikum.html",
       "/people/interns/index.html",
       "/mri/retinotopic_mapping.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
@@ -72,8 +74,8 @@
       "/dicom_to_glm/defacing.html",
       "/dicom_to_glm/troubleshooting.html",
       "/OtherTopics/CalculatingAPrioriPower.html",
-      "/dicom_to_glm/RemoveDenoisingScan.html",
       "/dicom_to_glm/run_fmriprep.html",
+      "/dicom_to_glm/RemoveDenoisingScan.html",
       "/mri/analysis/7t_analysis_on_neurodesk.html",
       "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
       "/mri/analysis/freesurfer FSFAST.html",
@@ -81,8 +83,8 @@
       "/mri/3D-prints/3d-prints.html",
       "/mri/mri-lab-setup-2024/index.html",
       "/neurodesk/neurodesktop.html",
-      "/people/compensation/compensation.html",
       "/people/leaving/index.html",
+      "/people/compensation/compensation.html",
       "/people/writing/writing.html",
       "/OtherTopics/displays/displays.html",
       "/people/coffee/index.html",
