@@ -36,7 +36,7 @@ Interns are an integral part of our team and are treated as equal colleagues. Ho
 
 -   [ ] Create a spreadsheet in any format where you note the dates and times you worked on the project. This is not meant to control you, but rather to make sure we do not overload you with work.
 
--   [ ] If you would like to appear as intern on our lab's [official website](https://neurovision.uni-graz.at/en/contact-team/), please provide a square photograph of yourself (currently to MG)
+-   [ ] If you would like to appear as intern on our lab's [official website](https://neurovision.uni-graz.at/en/contact-team/), please provide a square photograph (at least 700x700 pixels) of yourself (currently to MG)
 
 ## During the internship
 
