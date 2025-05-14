@@ -12,58 +12,68 @@ date: 05/05/2025
 
 After preprocessing your data, probably with [fmriprep](run_fmriprep.qmd), it´s time to do your first level GLM (= general linear model).
 
-In this step, you will compute beta-estimates for predefined contrasts for each subject individually. These estimations will often be used later in the [second level Analysis](second_level_glm_nilearn.qmd) to compute your "actual" statistical analysis (t-Tests, ANOVA,...).
+In this step, you will compute mean contrast-estimates for predefined contrasts for each subject individually. These estimations will be used later in the [second level Analysis](second_level_glm_nilearn.qmd), where you extract relevant (for your research question/hypothesis) values.
 
 For all cases described below, there are generally three things you have to change before running the cells in the jupyter notebook (or the python script):
 
-1. Change the directories
+1.  Change the directories
 
-2. Indicate the task, the number of sessions and the subject
+2.  Indicate the task, the number of sessions and the subject
 
-3. Implement your contrasts
+3.  Implement your contrasts
 
 # Surface-based Analysis
 
-## One task, multiple Sessions
-
-If you used one task and have multiple Sessions, you can adapt this script: `/shared/nilearn_ffx.ipynb`
+To compute a first-level GLM you can adapt the following jupyter notebook: `/shared/nilearn_ffx.ipynb`
 
 You can either run each cell separately ("Play"-Button at the top) after implementing the changes (if changes are needed), or first implement all changes and then run all cells automaticall ("Double-Play"-Button at the top)
 
+1.  In the second cell (indicated with `[2]:` at the left), change:
 
-1. In the second cell (indicated with `[2]:` at the left), change:
+<!-- -->
 
-  a) `data_dir`
-  
-  b) `fmriprep_dir`
-  
-  c) `task_label` (this refers to how your files are named! $\to$ in your BIDS-valid naming of your file, what´s behind "task-" $\to$ For `sub-12002_ses-1_task-loc_run-1_space-T1w_desc-preproc_bold.nii.gz` the corresponding `task_label` would be `loc` $\to$ `task_label = "loc"`)
-  
-  d) `sub_labels`
-  
-  e) After the comment `# Loop over sessions`: indicate the number of sessions, by "counting" from 1 to the number of sessions you did (if you did 4 sessions, the line should read `for ses in [1, 2, 3, 4]`)
+a)  `data_dir`
 
-2. In the third cell (indicated with `[3]:` at the left), change the number of sessions similar to step 1e)
+b)  `fmriprep_dir`
 
-3. In the sixth cell (indicated with `[6]:` at the left):
+c)  `task_label` (this refers to how your files are named! $\to$ in your BIDS-valid naming of your file, what´s behind "task-" $\to$ For `sub-12002_ses-1_task-loc_run-1_space-T1w_desc-preproc_bold.nii.gz` the corresponding `task_label` would be `loc` $\to$ `task_label = "loc"`)
 
-  a) Define your `constrasts`-dictionairy, by defining a name for each contrast (= key) and indicating how it is computed (= value)
-  
-  b) for indicating how a contrast is computed, you can access the columns of the design matrix (that should be printed above this cell). Keep in mind, that for `basic_contrasts[]` you indicate the actual name of the column, not the index!
-  
-  c) you can print the resulting contrasts matrices, but you don´t have to
+d)  `sub_labels`
 
-4. In the seventh cell (indicated with `[7]:` at the left):
+e)  After the comment `# Loop over sessions`: indicate the number of sessions, by "counting" from 1 to the number of sessions you did (if you did 4 sessions, the line should read `for ses in [1, 2, 3, 4]`)
 
-  a) define empty lists for each of your contrasts
-  
-  b) change the respective names of the lists before the `.append` statement
-  
-  c) indicate the correct contrast names in the parameters of the `.compute_contrast` function
+<!-- -->
 
-5. In the eighth cell (indicated with `[8]:` at the left): change `contrasts_dict` to match with your **lists**
+2.  In the third cell (indicated with `[3]:` at the left), change the number of sessions similar to step 1e)
 
-6. In the second part of the eighth cell (somehow the enumeration is messed up there): comment out (using `#`) the line starting with `data_dir =` (since you should have writing access in your own directories and you already defined `data_dir` in the beginning of the script)
+3.  In the sixth cell (indicated with `[6]:` at the left):
 
-## Script to personalize
+<!-- -->
 
+a)  Define your `constrasts`-dictionairy, by defining a name for each contrast (= key) and indicating how it is computed (= value)
+
+b)  for indicating how a contrast is computed, you can access the columns of the design matrix (that should be printed above this cell). Keep in mind, that for `basic_contrasts[]` you indicate the actual name of the column, not the index!
+
+c)  you can print the resulting contrasts matrices, but you don´t have to
+
+<!-- -->
+
+4.  In the seventh cell (indicated with `[7]:` at the left):
+
+<!-- -->
+
+a)  define empty lists for each of your contrasts
+
+b)  change the respective names of the lists before the `.append` statement
+
+c)  indicate the correct contrast names in the parameters of the `.compute_contrast` function
+
+<!-- -->
+
+5.  In the eighth cell (indicated with `[8]:` at the left): change `contrasts_dict` to match with your **lists**
+
+6.  In the second part of the eighth cell (somehow the enumeration is messed up there): comment out (using `#`) the line starting with `data_dir =` (since you should have writing access in your own directories and you already defined `data_dir` in the beginning of the script)
+
+# Volume-based Analysis
+
+There is also a script for Volume-based Analysis
