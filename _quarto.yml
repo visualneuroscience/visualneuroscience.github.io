@@ -69,6 +69,8 @@ website:
           - people/compensation/compensation.qmd
           - people/leaving/index.qmd
           - people/writing/writing.qmd
+          - people/interns/index.qmd
+          - people/interns/pflichtpraktikum.qmd
       - section: "Other Topics"
         href: other_topics.qmd
         contents:
