@@ -26,9 +26,9 @@ Leaving can be sad. In addition, there is a ton of boring admin work to be done.
 
 ## Data
 
--   [ ] Make sure that all subject's private data that is irrelevant for research (e.g. bank account information for reimbursement) is deleted
+-   [ ] Make sure that all subject's private data that is irrelevant for research (e.g. bank account information for reimbursement) is deleted from the server, from local institute's computers and from your private computer if relevant
 -   [ ] Make sure that all incidental findings have been clarified, and once this is the case, delete subjects' contact information if you kept it
--   [ ] At the top level of your directory on storage, create a text/markdown file named "projects" containing server paths (/storage/, J:, or external storage in the case of Marilena) as follows
+-   [ ] At the top level of your directory on /storage, create a text/markdown file named "projects" containing server paths (/storage/, J:, or external storage in the case of MW) as follows in the example below
 -   [ ] It would be nice if you could put a contact email for after your uni-graz email address expires (optional, of course) at the top of this file
 
 1.  project nickname
@@ -51,7 +51,7 @@ Leaving can be sad. In addition, there is a ton of boring admin work to be done.
 
 7.  Group results
 
-8.  Latest version of the submitted manuscript with rebuttal, if applicable
+8.  Latest version of the submitted manuscript with rebuttal, if applicable. For master students: your UGOnline submitted thesis, preferably in word format
 
 9.  Posters and submitted conference abstracts related to the study
 
@@ -61,7 +61,7 @@ Leaving can be sad. In addition, there is a ton of boring admin work to be done.
 
 `/storage/natalia/projects.md`
 
-For neurodesk users:
+For neurodesk users, the projects file can be in your home directory:
 
 ```         
 /home/jovyan/

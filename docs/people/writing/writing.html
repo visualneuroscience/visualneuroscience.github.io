@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-935cc08f532542a8bf69a45a7dd1972a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -454,7 +454,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#graphs" id="toc-graphs" class="nav-link active" data-scroll-target="#graphs">Graphs</a></li>
-  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a></li>
+  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a>
+  <ul class="collapse">
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#general-notes-on-text" id="toc-general-notes-on-text" class="nav-link" data-scroll-target="#general-notes-on-text">General notes on text</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -468,8 +474,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="graphs" class="level1">
 <h1>Graphs</h1>
 <ul>
-<li>Software for making artwork for figures: PowerPoint, Inkscape (advanced functionality)</li>
-<li>Graphs: R and python packages</li>
+<li>Software for making artwork for figures: PowerPoint (simple), Inkscape (advanced functionality)</li>
+<li>Graphs: R and python packages (especially seaborn)</li>
 <li>Pasting graphs into the text
 <ul>
 <li>as bitmaps/jpegs, not as an Microsoft graphical object</li>
@@ -479,16 +485,44 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="text" class="level1">
 <h1>Text</h1>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<p>Microsoft word or similar. Please do not use latex or quarto pdf rendering. These are nice tools, but unfortunately they lack track-changes option which we need.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Introduction is structured as an ice cream cone: &lt;3 It goes form more general to more specific. The cone should be “pointing” exactly at your research question. Typically the introduction covers the following topics (in this order):</p>
 <ul>
-<li>Introduction structure as an ice cream cone: &lt;3 form more general to more specific. The cone should be “pointing” exactly at your research question</li>
-<li>Discussion: from more important to less important</li>
-<li>Throughout the text: use “working” headings for each paragraph that will be deleted later. They are useful for structuring the thoughts and the text. The heading should answer the question “what is this paragraph about?”</li>
-<li>Text structure resamples a computer program.
+<li><p>General relevance of the topic</p></li>
+<li><p>Previous research research on the topic and its findings</p></li>
+<li><p>Gaps in knowledge, methodological problems or any reasons to study this topic further</p></li>
+<li><p>Your specific research question/approach</p></li>
+</ul>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>Discussion has the following sections.</p>
+<ul>
+<li><p>It starts with a single-paragraph brief summary of the main (not all!) results without interpretation.</p></li>
+<li><p>The main part consists of the discussion of individual results, starting from more important and going to less important. For each result, one can compare the findings with the previous studies and speculate on the reasons if the results diverge. One can also speculate on the reasons for particularly interesting/unexpected results</p></li>
+<li><p>An outlook for future studies is not always feasible as a separate section. The outlook on what future studies should study or improve can be provided separately for each aspect of the results that is being discussed.</p></li>
+<li><p>A conclusion at the end should again briefly state the results and main implications.</p></li>
+</ul>
+</section>
+<section id="general-notes-on-text" class="level2">
+<h2 class="anchored" data-anchor-id="general-notes-on-text">General notes on text</h2>
+<ul>
+<li><p>Throughout the text: use “working” headings for each paragraph that will be deleted later. They are useful for structuring the thoughts and the text. The heading should answer the question “what is this paragraph about?”</p></li>
+<li><p>Text structure resemples a computer program</p>
 <ul>
 <li>There are specific building blocks that repeat. Within the paragraph, it may be “first, second, third”. Across the paragraphs it may be “The first/second/third phase of the experiment consisted of…”.</li>
-<li>Listings of different things should have identical and parallel grammatical structure. Bad example: <em>“The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape. &nbsp;The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape”</em></li>
+<li>Listings of different things should have identical and parallel grammatical structure.
+<ul>
+<li>Bad example: <em>“The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape. &nbsp;The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape”</em></li>
+<li>Improved example: <em>“<strong>The brain activity at the location of the illusory surfacewas increased</strong> when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape. &nbsp;The brain activity at the location of inducers <strong>forming</strong> the illusory shape was inhibited <strong>compared to when the inducers did not form an illusory shape</strong>. T<strong>he brain activity at the location of the background was not modulated</strong> by the presence of the illusory shape”</em></li>
 </ul></li>
-<li>Text layout:
+</ul></li>
+<li><p>Text layout:</p>
 <ul>
 <li>Use headings and subheadings function in MS Word
 <ul>
@@ -498,10 +532,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Add page numbers!!!</li>
 <li>For article manuscripts: also add line numbers</li>
 </ul></li>
-<li>#reading recommendation to avoid complex and bulky text: <a href="https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf" class="uri">https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf</a></li>
+<li><p>#reading recommendation to avoid complex and bulky text: <a href="https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf" class="uri">https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf</a></p></li>
 </ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -587,8 +622,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -699,7 +732,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

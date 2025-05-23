@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-935cc08f532542a8bf69a45a7dd1972a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -493,9 +493,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">Make sure that all subject’s private data that is irrelevant for research (e.g.&nbsp;bank account information for reimbursement) is deleted</label></li>
+<li><label><input type="checkbox">Make sure that all subject’s private data that is irrelevant for research (e.g.&nbsp;bank account information for reimbursement) is deleted from the server, from local institute’s computers and from your private computer if relevant</label></li>
 <li><label><input type="checkbox">Make sure that all incidental findings have been clarified, and once this is the case, delete subjects’ contact information if you kept it</label></li>
-<li><label><input type="checkbox">At the top level of your directory on storage, create a text/markdown file named “projects” containing server paths (/storage/, J:, or external storage in the case of Marilena) as follows</label></li>
+<li><label><input type="checkbox">At the top level of your directory on /storage, create a text/markdown file named “projects” containing server paths (/storage/, J:, or external storage in the case of MW) as follows in the example below</label></li>
 <li><label><input type="checkbox">It would be nice if you could put a contact email for after your uni-graz email address expires (optional, of course) at the top of this file</label></li>
 </ul>
 <ol type="1">
@@ -513,13 +513,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Subject-level results</p></li>
 <li><p>Group analysis scripts</p></li>
 <li><p>Group results</p></li>
-<li><p>Latest version of the submitted manuscript with rebuttal, if applicable</p></li>
+<li><p>Latest version of the submitted manuscript with rebuttal, if applicable. For master students: your UGOnline submitted thesis, preferably in word format</p></li>
 <li><p>Posters and submitted conference abstracts related to the study</p></li>
 <li><p>Location of the consent forms (either electronic or paper)</p>
 <h3 id="example" class="anchored">Example:</h3></li>
 </ol>
 <p><code>/storage/natalia/projects.md</code></p>
-<p>For neurodesk users:</p>
+<p>For neurodesk users, the projects file can be in your home directory:</p>
 <pre><code>/home/jovyan/</code></pre>
 <section id="fast-and-functionally-specific-cortical-thickness-changes-induced-by-visual-stimulation" class="level4">
 <h4 class="anchored" data-anchor-id="fast-and-functionally-specific-cortical-thickness-changes-induced-by-visual-stimulation">Fast and functionally specific cortical thickness changes induced by visual stimulation</h4>
@@ -634,8 +634,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -746,7 +744,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
