@@ -1,0 +1,53 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Advice on preparing and giving scientific talks
+description: "Practical recommendations for preparing and delivering sicentific talks"
+image: images/classroom-1297780_1280.png
+author: NZ
+date: 05/25/2025
+---
+
+## Structure
+
+Similar to a manuscript, the talk should have the following parts:
+
+-   Introduction
+
+    -   Ideally, the introduction should demonstrate the importance of the topic in a catchy manner. Use a demonstration, an example or anything else that engages/intrigues the audience
+
+<!-- -->
+
+-   Main body
+
+-   Ending
+
+    -   It is good to have a summary slide that reiterates your main points. However, the danger here is that it becomes a slide with lots of borig text. If possible, try to provide a graphical summary instead of text/bullet points.
+
+    -   Scientific talks typically end with an acknowledgement slide, where you thank co-authors and other contributors, as well as the funding sources. Only then you can thank the audience for their attention.
+
+## Slides
+
+Slides should help you demonstrate the *graphical* content that is not easy to convey with words: visual illusions, brain activation, graphs, etc. Slides **are not** meant for you to remind yourself what you wanted to say, and should contain minimum (ideally zero) text.
+
+Slide titles should be *informative*. There should be no slide that says e.g. "Introduction", "Results" or "Conclusion".
+
+Slide content should be simple (one, maximum two graphs or images per slide)
+
+### Citations
+
+It is good scientific practice to indicate sources for each image or figure you use. Scientific articles are cited at the bottom of each slide where you mention them. There should be no reference list at the end.
+
+## Talk text
+
+You should deliver you talk in a simple spoken language. Avoid bulky sentences and complicated grammatical structures. Avoid using fancy scientific style. Imagine you are explaining the content to your friend or, even better, to your grandmother.
+
+Prepare the text you are planning to say for each slide as slide notes. Make sure there are no grammatical mistakes.
+
+## Practice
+
+Practice your talk many times, memorizing your text by heart. This is important, because oftentimes it will not be possible to deliver your talk in dual-screen mode, where you see the notes on the main monitor. You should be prepared for this.
+
+While practicing, you will notice that you may want to change the wording/adapt the text. Do this and practice again. This is an iterative process.
+
+An example of an excellent speaker in neuroscience is Leslie Ungerleider: https://www.youtube.com/watch?v=mzCl7zMOPYo
