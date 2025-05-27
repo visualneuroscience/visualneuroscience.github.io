@@ -19,4 +19,4 @@ date: 01/24/2025
 
 ## Neurodesktop
 
-We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and those lab members who would like to use it. Please see the [dedicated page](https://visualneuroscience.github.io/mri/neurodesktop/neurodesktop.html) in the MRI section.
+We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and those lab members who would like to use it. Please see the  [dedicated page](/neurodesk/neurodesktop.qmd).

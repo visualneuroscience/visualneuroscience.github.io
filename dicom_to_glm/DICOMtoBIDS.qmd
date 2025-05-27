@@ -109,11 +109,9 @@ Do this for every functional file
 
 ![](images/bidsmapper_fmap.png){width="50%"}
 
-Keep in mind, that we often need the option "epi" in the selection field of "suffix" (and not the "fieldmap" option)! 
+Keep in mind, that we often need the option "epi" in the selection field of "suffix" (and not the "fieldmap" option)!
 
-In the section "Metadata" you have to add which files should be selected for the "IntendedFor" field of the fieldmap. You can use a wildcard (\*) to select all respective functional runs: "func/sub-001\*_bold.\*". This includes all files in the directory "func" that start with "sub-001" and somewhere in the filename include "_bold.".
-Watch out if you have more than one session! Then you might need to specify the respective session as well, e.g. "func/sub-001_ses-3\*_bold.\*"
-
+In the section "Metadata" you have to add which files should be selected for the "IntendedFor" field of the fieldmap. You can use a wildcard (\*) to select all respective functional runs: "func/sub-001\*\_bold.\*". This includes all files in the directory "func" that start with "sub-001" and somewhere in the filename include "\_bold.". Watch out if you have more than one session! Then you might need to specify the respective session as well, e.g. "func/sub-001_ses-3\*\_bold.\*"
 
 ## bidscoiner after renaming all files
 
