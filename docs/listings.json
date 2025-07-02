@@ -2,8 +2,8 @@
   {
     "listing": "/people.html",
     "items": [
-      "/people/talks/talks.html",
       "/people/interns/pflichtpraktikum.html",
+      "/people/talks/talks.html",
       "/people/interns/index.html",
       "/people/compensation/compensation.html",
       "/people/leaving/index.html",
@@ -64,8 +64,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/people/talks/talks.html",
       "/people/interns/pflichtpraktikum.html",
+      "/people/talks/talks.html",
       "/people/interns/index.html",
       "/mri/retinotopic_mapping.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
