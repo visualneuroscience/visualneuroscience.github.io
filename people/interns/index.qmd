@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: Interns
+title: Internship Checklist
 description: "Information for starting as an intern"
 author: NZ
 categories: [People, Lab]

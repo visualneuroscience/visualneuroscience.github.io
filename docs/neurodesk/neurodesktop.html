@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-2f36d1b840a6005202c0df5fd377aaa8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -352,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../people/interns/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interns</span></a>
+ <span class="menu-text">Internship Checklist</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -435,6 +464,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#folder-mappings" id="toc-folder-mappings" class="nav-link" data-scroll-target="#folder-mappings">Folder mappings:</a></li>
   <li><a href="#for-interfacing-with-the-folders-on-storage" id="toc-for-interfacing-with-the-folders-on-storage" class="nav-link" data-scroll-target="#for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</a></li>
+  <li><a href="#mount-network-shares" id="toc-mount-network-shares" class="nav-link" data-scroll-target="#mount-network-shares">Mount network shares</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -579,6 +609,24 @@ freeview</code></pre>
 <h2 class="anchored" data-anchor-id="for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</h2>
 <p>You can create symbolic links in your home directory:</p>
 <p><code>ln -s /storage/ /home/jovyan/storage</code></p>
+</section>
+<section id="mount-network-shares" class="level2">
+<h2 class="anchored" data-anchor-id="mount-network-shares">Mount network shares</h2>
+<p>You can mount network shares with Lukas’ helper script at <code>/shared/mount_network_share.sh</code> (i.e.&nbsp;you´ll see a directory through which you can access the network from within neurodesk)</p>
+<ol type="1">
+<li><p>Usage: <code>/shared/mount_network_share.sh &lt;mount_point&gt; &lt;share_choice|full_share_path&gt;</code></p></li>
+<li><p>Share choices</p>
+<ul>
+<li>J <span class="math inline">\(\to\)</span> mounts <code>//pslg067044.pers.ad.uni-graz.at/Allgemeine</code></li>
+<li>Y <span class="math inline">\(\to\)</span> mounts <code>//pers.ad.uni-graz.at/fs/ou/602</code></li>
+<li>Any other value <span class="math inline">\(\to\)</span> treated as a full UNC path (e.g.&nbsp;<code>//server/share/path</code>)</li>
+</ul></li>
+<li><p>Examples:</p>
+<ul>
+<li><code>/shared/mount_network_share.sh /home/jovyan/allg_j J</code><br><span class="math inline">\(\to\)</span> mounts the J network to <code>/home/jovyan/allg_j</code> (i.e.&nbsp;there will be a directory <code>allg_j</code> within your <code>/home/jovyan/</code> directory that accesses the J network)</li>
+<li><code>shared/mount_network_share.sh /home/jovyan/allg_y Y</code><br><span class="math inline">\(\to\)</span> mounts the Y network to <code>/home/jovyan/allg_y</code> (i.e.&nbsp;there will be a directory <code>allg_y</code> within your <code>/home/jovyan/</code> directory that accesses the Y network)</li>
+</ul></li>
+</ol>
 
 
 </section>
@@ -667,8 +715,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -779,7 +825,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

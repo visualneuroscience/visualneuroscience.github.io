@@ -146,3 +146,20 @@ Only these three folders are persistent.
 You can create symbolic links in your home directory:
 
 `ln -s /storage/ /home/jovyan/storage`
+
+## Mount network shares
+
+You can mount network shares with Lukas' helper script at `/shared/mount_network_share.sh` (i.e. you´ll see a directory through which you can access the network from within neurodesk)
+
+1.  Usage: `/shared/mount_network_share.sh <mount_point> <share_choice|full_share_path>`
+
+2.  Share choices
+
+    -   J $\to$ mounts `//pslg067044.pers.ad.uni-graz.at/Allgemeine`
+    -   Y $\to$ mounts `//pers.ad.uni-graz.at/fs/ou/602`
+    -   Any other value $\to$ treated as a full UNC path (e.g. `//server/share/path`)
+
+3.  Examples:
+
+    -   `/shared/mount_network_share.sh /home/jovyan/allg_j J`<br>$\to$ mounts the J network to `/home/jovyan/allg_j` (i.e. there will be a directory `allg_j` within your `/home/jovyan/` directory that accesses the J network)
+    -   `shared/mount_network_share.sh /home/jovyan/allg_y Y`<br>$\to$ mounts the Y network to `/home/jovyan/allg_y` (i.e. there will be a directory `allg_y` within your `/home/jovyan/` directory that accesses the Y network)
