@@ -8,6 +8,7 @@ categories: [People, Lab]
 date: 07/02/2025
 ---
 
+<<<<<<< HEAD
 Um das Pflichtpraktikum im Rahmen des Bachelor- oder Masterstudiums in unserer Arbeitsgruppe absolvieren zu können, muss der gleiche Prozess wie für jede andere Praktikumsstelle für das Pflichtpraktium durchlaufen werden. Die relevanten Informationen hierzu sind auf der [Institutsseite](https://psychologiestudium.uni-graz.at/de/pflichtpraxis/) und im entsprechenden Moodle-Kurs zu finden.
 
 Wichtig: Es sollten **IMMER** die Informationen des Moodle-Kurses beachtet werden! Die folgenden Schritte beschreiben die Schritte, wie sie in der Vergangenheit notwendig warem, um das Praktikum bei uns beginnen zu können:
@@ -19,6 +20,20 @@ Wichtig: Es sollten **IMMER** die Informationen des Moodle-Kurses beachtet werde
 3.  (Möglich während auf das "OK" für den Antrag gewartet wird:) Kursleitung (zur Zeit [PJ](https://online.uni-graz.at/kfu_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/visitenkarte.show_vcard?$ctx=design=ca2;header=max;lang=DE&pPersonenGruppe=3&pPersonenId=85E1975CF6B861F0)) kontaktieren, dass diese die Bestätigung für die Praxisstelle unterschreibt. Das entsprechende Formular ist (wie alle anderen Formulare auch) im Moodle-Kurs zu finden.
 
 4.  Sobald das "OK" für den Antrag im Moodle-Kurs sowie die unterschriebene Bestätigung für die Praxisstelle vorliegt, muss eine Mail an das [Sekretariat der allgemeinen Psychologie](https://online.uni-graz.at/kfu_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/visitenkarte.show_vcard?$ctx=design=ca2;header=max;lang=DE&pPersonenGruppe=3&pPersonenId=ED1E1B74A7AF7F12) geschickt werden, um dann endlich mit dem Praktikum beginnen zu können. In der Mail sollten folgende Dokumente enthalten sein:
+=======
+Um das Pflichtpraktikum im Rahmen des Bachelor- oder Masterstudiums in unserer Arbeitsgruppe absolvieren zu können, muss der gleiche Prozess wie für jede andere Praktikumsstelle durchlaufen werden.
+Die relevanten Informationen hierzu sind auf der [Institutsseite](https://psychologiestudium.uni-graz.at/de/pflichtpraxis/) und im entsprechenden Moodle-Kurs zu finden.
+
+Es sollten **IMMER** die Informationen des Moodle-Kurses beachtet werden! Aus Erfahrungen in der Vergangenheit sollten die folgenden Schritte notwendig sein, um das Praktikum bei uns beginnen zu können:
+
+1. Anmeldung zur VU "Einführung in die Praxisfelder der Psychologie" (Bachelor; Kursnummer im WS: 602.060, Kursnummer im SS: 602.067) oder "Supervision der facheinschlägigen Praxis" (Master; Kursnummer immer "PSY.940") in Uni Graz Online, oder auf Moodle mit dem Passwort "pp2011" selbst einschreiben.
+
+2. Im Kurs den ausgefüllten [Antrag auf Genehmigung der Pflichtpraxis](https://static.uni-graz.at/fileadmin/gewi/downloads/ba-ma/Praxis_Genehmigung.pdf) einreichen und auf das "OK" der Kursleitung warten.
+
+3. (Möglich während auf das "OK" für den Antrag gewartet wird:) Kursleitung (zur Zeit [PJ](https://online.uni-graz.at/kfu_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/visitenkarte.show_vcard?$ctx=design=ca2;header=max;lang=DE&pPersonenGruppe=3&pPersonenId=85E1975CF6B861F0)) kontaktieren, dass diese die Bestätigung für die Praxisstelle unterschreibt. Das entsprechende Formular ist (wie alle anderen Formulare auch) im Moodle-Kurs zu finden.
+
+4. Sobald das "OK" für den Antrag im Moodle-Kurs sowie die unterschriebene Bestätigung für die Praxisstelle vorliegt, muss eine Mail an das [Sekretariat der allgemeinen Psychologie](https://online.uni-graz.at/kfu_online/ee/ui/ca2/app/desktop/#/pl/ui/$ctx/visitenkarte.show_vcard?$ctx=design=ca2;header=max;lang=DE&pPersonenGruppe=3&pPersonenId=ED1E1B74A7AF7F12) geschickt werden, um dann endlich mit dem Praktikum beginnen zu können. In der Mail sollten folgende Dokumente enthalten sein:
+>>>>>>> db02cdb6286ee5509bd35c0b3e56aa84b159f17e
 
 -   Scan deines Reisepasses
 
@@ -28,6 +43,13 @@ Wichtig: Es sollten **IMMER** die Informationen des Moodle-Kurses beachtet werde
 
 -   Der ausgefüllte Antrag auf Genehmigung der Praxisstelle
 
+<<<<<<< HEAD
 5.  Nach Bestätigung durch das Sekretariat geht es auch schon los!
 
 Insgesamt sollte der gesamte Prozess, von Schritt 1 bis zum tatsächlichen Beginn des Praktikums, circa 2-4 Wochen dauern.
+=======
+
+5. Nach Bestätigung durch das Sekretariat geht es auch schon los!
+
+Insgesamt sollte der gesamte Prozess, von Schritt 1 bis zum tatsächlichen Beginn des Praktikums, circa 2-4 Wochen dauern.
+>>>>>>> db02cdb6286ee5509bd35c0b3e56aa84b159f17e
