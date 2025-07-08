@@ -22,6 +22,11 @@ This page gives an overview and brief information about the necessary steps to g
 -   using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/dcm2bids.sh`)
 -   results in `.nifti` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
 
+# [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
+
+- depending on what method you used to [convert your DICOMs to niftis](DICOMtoBIDS.qmd) (or if you got a bids valid data from the MRI-Lab) and what version of [fmriPrep](run_fmriprep.qmd) you plan to use, it might be necessary to update the content of the "IntendedFor" field of the fmap's JSON file
+
+
 # [Distribute the T1w files to participants?](ProvidingParticipantsWithTheirT1wFile.qmd)
 
 -   if you promised participants that they will get their T1w images, you should make sure that they really get them
@@ -47,5 +52,3 @@ This page gives an overview and brief information about the necessary steps to g
 # [first-level Analysis](first_level_glm_nilearn.qmd)
 
 # [second-level Analysis](second_level_glm_nilearn.qmd)
-
-

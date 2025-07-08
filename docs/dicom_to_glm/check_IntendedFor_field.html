@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-03-27">
-<meta name="description" content="Collection of known potential problems and their solutions">
+<meta name="dcterms.date" content="2025-07-08">
+<meta name="description" content="Description of how to check and potentially update the fmap’s JSON file">
 
-<title>Troubleshooting – Visual Neuroscience Lab</title>
+<title>Check IntendedFor field of the fmap’s JSON – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -166,7 +137,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/troubleshooting.html">Troubleshooting</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Check IntendedFor field of the fmap’s JSON</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -202,11 +173,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
@@ -245,7 +216,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link active">
+  <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
 </li>
@@ -449,31 +420,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
-  <li><a href="#sec-TroublesFmriprep" id="toc-sec-TroublesFmriprep" class="nav-link" data-scroll-target="#sec-TroublesFmriprep"><span class="header-section-number">2</span> fmriprep</a>
-  <ul class="collapse">
-  <li><a href="#i-ran-fmriprep-but-no-distortion-correction-happened" id="toc-i-ran-fmriprep-but-no-distortion-correction-happened" class="nav-link" data-scroll-target="#i-ran-fmriprep-but-no-distortion-correction-happened"><span class="header-section-number">2.1</span> I ran fMRIprep but no distortion correction happened</a>
-  <ul class="collapse">
-  <li><a href="#detection-of-this-problem" id="toc-detection-of-this-problem" class="nav-link" data-scroll-target="#detection-of-this-problem"><span class="header-section-number">2.1.1</span> Detection of this Problem</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><span class="header-section-number">2.1.2</span> Solution</a></li>
-  </ul></li>
-  <li><a href="#valueerror-reference-passed-is-not-aligned-with-spline-grids" id="toc-valueerror-reference-passed-is-not-aligned-with-spline-grids" class="nav-link" data-scroll-target="#valueerror-reference-passed-is-not-aligned-with-spline-grids"><span class="header-section-number">2.2</span> ValueError: Reference passed is not aligned with spline grids</a>
-  <ul class="collapse">
-  <li><a href="#transform-your-t1w-scan" id="toc-transform-your-t1w-scan" class="nav-link" data-scroll-target="#transform-your-t1w-scan"><span class="header-section-number">2.2.1</span> Transform your T1w scan</a></li>
-  </ul></li>
-  <li><a href="#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors" id="toc-if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors" class="nav-link" data-scroll-target="#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors"><span class="header-section-number">2.3</span> If using already run FreeSurfer <code>recon-all</code> output and have specified an <code>expert-opts</code> file then fMRIprep shows multiple errors</a></li>
-  <li><a href="#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme" id="toc-i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme" class="nav-link" data-scroll-target="#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme"><span class="header-section-number">2.4</span> I ran fMRIprep and the distortion correction of the data is too extreme</a></li>
-  <li><a href="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" id="toc-fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" class="nav-link" data-scroll-target="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fmriprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</a></li>
-  </ul></li>
+  <li><a href="#check-the-content-of-the-json-file" id="toc-check-the-content-of-the-json-file" class="nav-link active" data-scroll-target="#check-the-content-of-the-json-file"><span class="header-section-number">1</span> Check the content of the JSON file</a></li>
+  <li><a href="#update-intendedfor-field-of-the-fmaps-json-file" id="toc-update-intendedfor-field-of-the-fmaps-json-file" class="nav-link" data-scroll-target="#update-intendedfor-field-of-the-fmaps-json-file"><span class="header-section-number">2</span> Update “IntendedFor” field of the fmap’s JSON file</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/troubleshooting.html">Troubleshooting</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Troubleshooting</h1>
+<h1 class="title">Check IntendedFor field of the fmap’s JSON</h1>
   <div class="quarto-categories">
     <div class="quarto-category">MRI</div>
     <div class="quarto-category">Analysis</div>
@@ -485,7 +442,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Collection of known potential problems and their solutions
+    Description of how to check and potentially update the fmap’s JSON file
   </div>
 </div>
 
@@ -502,7 +459,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 27, 2025</p>
+      <p class="date">July 8, 2025</p>
     </div>
   </div>
   
@@ -514,82 +471,52 @@ window.Quarto = {
 </header>
 
 
-<p>This page is dedicated for Troubleshooting. Known errors and problems will be listed here with a possible solution for solving this issue. If you solved a problem that might be relevant for others as well, feel free to contact Maximilian (,Adam or Natalia) so that it can be added to this page as well.</p>
-<section id="general" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> General</h1>
-<p>If you encounter an error - Check the error message, maybe copy/paste it to google to get a first idea of what is wrong - Check if all necessary ressources are sourced (e.g.&nbsp;did you include <code>ml freesurfer</code> before <a href="../dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview">opening a volume to check for noise scans</a>) - Check if your working directory is set correctly, if not, correct that with <code>cd /desired/path/</code> (e.g.&nbsp;<a href="../dicom_to_glm/RemoveDenoisingScan.html#sec-RemoveDenoising">when you try to remove the noise scans</a>) - Check if the paths in your command are correct. In some scripts you define you path in a variable, like <code>$SUBJECTS_DIR</code> or <code>$niidir</code>. If you want to only run a specific line of code separately, you might have to write out the complete path</p>
+<p>The “IntendedFor” field of the fmap’s JSON file tells <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a> for which (functional) data the distortion correction should be applied to.</p>
+<p>Depending on the conversion method you used to <a href="../dicom_to_glm/DICOMtoBIDS.html">convert your DICOM to nifti files</a>, the contents will look differently.</p>
+<p>Additionally, depending on the version of <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a> you plan to use for preprocessing, you need different naming conventions of the entries.</p>
+<p>In general, there are two naming conventions that might be used in the IntendedFor field:</p>
+<pre><code>BIDS uri spec necessary for fmriprep 24.0.0 or newer:
+
+``` json
+"IntendedFor": [
+    "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
+    "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz", 
+    etc
+    ]
+```
+
+Older fmap spec necessary for fmriprep older than 24.0.0:
+
+``` json
+"IntendedFor": [
+    "ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
+    "ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz",
+    etc
+    ]
+```</code></pre>
+<p>With changing Versions of <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> and <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a>, slight changes occur in how and where you have to include specific information. One example for this is the <code>IntendedFor</code> information in the fmap’s <code>.json</code> file.</p>
+<p>Due to these differences and potential resulting problems (e.g.&nbsp;no distortion correction is applied), you should always check the content of the fmap’s “IntendedFor” field before <a href="../dicom_to_glm/run_fmriprep.html">running fmriPrep</a>.</p>
+<section id="check-the-content-of-the-json-file" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Check the content of the JSON file</h1>
+<p>Navigate to the <code>fmap</code> directory of a/each subject (<code>*/bids/sub-999/ses-1/fmap/</code>) and open the <code>.json</code> file<img src="./images/01_dcm2bids/28_Navigate_to_fmap_json.png" class="img-fluid" alt="Go to and open .json file"></p>
+<p>Scroll down to the very end of it. There should be a section that starts with <code>IntendedFor</code> and looks like this:<img src="./images/01_dcm2bids/29_json_initial.png" class="img-fluid" alt="Initial IntendedFor Section"></p>
+<p>In General, all entries should follow the same naming convention (either the new or the old one, see above). If the naming convention corresponds to the <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a> version you want to use, you don´t have to change anything. If it does not correspond to the naming convention necessary for your version, you can follow the steps below to update the file.</p>
+<p>Additionally, it may occur, that additional files are included in this field (e.g.&nbsp;files named “*part-phase*”) where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, your should remove the entries of these files (see below)</p>
 </section>
-<section id="sec-TroublesFmriprep" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
-<section id="i-ran-fmriprep-but-no-distortion-correction-happened" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="i-ran-fmriprep-but-no-distortion-correction-happened"><span class="header-section-number">2.1</span> I ran fMRIprep but no distortion correction happened</h2>
-<section id="detection-of-this-problem" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="detection-of-this-problem"><span class="header-section-number">2.1.1</span> Detection of this Problem</h3>
-<section id="error-message" class="level4" data-number="2.1.1.1">
-<h4 data-number="2.1.1.1" class="anchored" data-anchor-id="error-message"><span class="header-section-number">2.1.1.1</span> Error Message</h4>
-<p>This problem might occur with a corresponding error message (and the fmriprep command stopping)<img src="./images/Troubleshooting/OtherIntendedFor_Error.png" class="img-fluid" alt="Error for IntendedFor Problems"></p>
-</section>
-<section id="silent-error" class="level4" data-number="2.1.1.2">
-<h4 data-number="2.1.1.2" class="anchored" data-anchor-id="silent-error"><span class="header-section-number">2.1.1.2</span> Silent error</h4>
-<p>It can be hard to realize this issue as the output might not be visible anymore, or the problem “occurs silently” (no error message are shown at all).</p>
-<p>If the distortion correction was successful, the subject’s .html should include a section <span class="math inline">\(B_0\)</span> field mapping. As you can see in the image below, this would be shown at the top of the file where the different sections are listed as well:<img src="./images/Troubleshooting/missingDistortionCorrection.png" class="img-fluid" alt=".html-File with B0 field mapping"></p>
-<p>If the distortion correction failed silently (thus, without an explicit error that is printed somewhere), the section is missing as whole and is not shown at the top of the .html file:<img src="./images/Troubleshooting/MissingDC.png" class="img-fluid" alt=".html file where B0 field mapping is missing"></p>
-</section>
-</section>
-<section id="solution" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="solution"><span class="header-section-number">2.1.2</span> Solution</h3>
-<ul>
-<li><p>you might be using a wrong BIDS specification in the fmap’s <code>json</code> file. See <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri">Information about BIDS uri</a>, or the <a href="../dicom_to_glm/check_IntendedFor_field.html">corresponding wiki entry</a>.</p></li>
-<li><p>If the content of the fmap’s .json file uses a different naming convention than necessary for your version of <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a>, no distortion correction is applie</p></li>
-</ul>
-<p><span class="math inline">\(\to\)</span> Follow <a href="../dicom_to_glm/check_IntendedFor_field.html">this wiki entry</a> to check and update the entries of the fmap’s .json file</p>
-</section>
-</section>
-<section id="valueerror-reference-passed-is-not-aligned-with-spline-grids" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="valueerror-reference-passed-is-not-aligned-with-spline-grids"><span class="header-section-number">2.2</span> ValueError: Reference passed is not aligned with spline grids</h2>
-<p>This error sometimes occurs by chance, but should not appear regularly. It is caused by the coregistration algorithm of fmriprep itself. There are two options you can try:</p>
+<section id="update-intendedfor-field-of-the-fmaps-json-file" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Update “IntendedFor” field of the fmap’s JSON file</h1>
+<p>There is a dedicated script to update the contents of the fmap’s .json file. It can be found at <code>/shared/update_json.py</code>. To start and use the script:</p>
 <ol type="1">
-<li><p>Try a different version of <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></p></li>
-<li><p>Transform your T1w scan</p></li>
+<li><p>Open a terminal <img src="./images/01_dcm2bids/open_terminal.gif" class="img-fluid" alt="Open a Terminal"></p></li>
+<li><p>Type <code>/shared/update_json.py</code></p></li>
+<li><p>Indicate if you want to change the naming convention (independent of the current version, the old naming convention is changed to the new one and vice versa if you select 1 (=Yes) here)</p></li>
+<li><p>Indicate if you want to remove entries from the field</p></li>
+<li><p>If you want to remove entries, indicate the keywords that identify an entry to be removed</p></li>
+<li><p>Provide the path to your bids directory</p></li>
 </ol>
-<section id="transform-your-t1w-scan" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="transform-your-t1w-scan"><span class="header-section-number">2.2.1</span> Transform your T1w scan</h3>
-<p>Transforming your T1w scan to avoid this error is not the ideal solution, but it is a good workaround for this complex problem.</p>
-<p>To transform your T1w scan:</p>
-<ol type="1">
-<li><p>Load your structural scan in freeview (<a href="../dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume">identical process as described here for a functional scan</a>)</p></li>
-<li><p>In the menu-bar in freeview (top-left), select <code>Tools &gt; Transform Volume...</code><img src="./images/Troubleshooting/Transform_T1w.png" class="img-fluid" alt="Tools > Transform Volume…"></p></li>
-<li><p>In the resulting window, select <code>Transform</code> in the top menu and change the value in the second “line” (= <code>Y (P-A)</code>) to -2.5 (with the slider or enter the number directly). This will shift the T1w scan 2.5mm in the posterior direction. Subsequently, select <code>Save Volume As</code><img src="./images/Troubleshooting/Transform_T1w_2.png" class="img-fluid" alt="Shift T1w and save volume"></p></li>
-<li><p>You can simply overwrite the existing T1w file which should already be selected (you could always reverse this step with the described method). <strong>Make sure to select the option</strong> <code>Do not resample voxel data when saving (only update header)</code><strong>!</strong><img src="./images/Troubleshooting/Transform_T1w_3.png" class="img-fluid" alt="Only update header"></p></li>
-</ol>
-<p><span class="math inline">\(\to\)</span> when you run freesurfer with this transformed T1w scan, the “Spline Grid Error” should not occur anymore.</p>
-</section>
-</section>
-<section id="if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors"><span class="header-section-number">2.3</span> If using already run FreeSurfer <code>recon-all</code> output and have specified an <code>expert-opts</code> file then fMRIprep shows multiple errors</h2>
-<p><span class="math inline">\(\to\)</span> In the directory that has the prerun <code>recon-all</code> there is a folder <code>scripts</code> that saves the <code>expert-opts</code> file. Removing this file allows fMRIprep to run</p>
-</section>
-<section id="i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme"><span class="header-section-number">2.4</span> I ran fMRIprep and the distortion correction of the data is too extreme</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./images/poor_DC.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>An example of poor distortion correction</figcaption>
-</figure>
-</div>
-</center>
-<blockquote class="blockquote">
-<p>This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven’t been tested)</p>
-</blockquote>
-</section>
-<section id="fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fmriprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</h2>
-<p><span class="math inline">\(\to\)</span> the solution is (if your structural and functional scans are from the same session) to add the following flag:</p>
-<pre><code>`--bold2t1w-init header`</code></pre>
+<p>After providing all the inputs, the indicated changes will be performed and saved in the file automatically. Additionally, the original .json file will be saved as filename_orig.json (if the original entries are needed later again)</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

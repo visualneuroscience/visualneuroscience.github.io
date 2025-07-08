@@ -68,63 +68,6 @@ When fmriprep started, now it´s probably time to get a coffee and do something 
 
 $\to$ If there are any problems, please refer to the dedicated [troubleshooting page](troubleshooting.qmd#sec-TroublesFmriprep)
 
-1.  I ran fMRIprep but no distortion correction happened
-
-    > fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri), or the [corresponding wiki entry](DICOMtoBIDS.qmd#sec-IntendedFor).
-
-    -   If your fmap .json file is using the BIDS uri specification in the `IntendedFor` field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.
-
-    BIDS uri spec for fmriprep 24.0.0 or newer:
-
-    ``` json
-    "IntendedFor": [
-        "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
-        "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz", 
-        etc
-        ]
-    ```
-
-    Older fmap spec for fmriprep older than 24.0.0:
-
-    ``` json
-    "IntendedFor": [
-        "ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
-        "ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz",
-        etc
-        ]
-    ```
-
- 
-
-------------------------------------------------------------------------
-
- 
-
-2.  I ran fMRIprep and the distortion correction of the data is too extreme
-
-<center>
-
-![An example of poor distortion correction](./images/poor_DC.png){width="60%"}
-
-</center>
-
-> This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven't been tested)
-
- 
-
-------------------------------------------------------------------------
-
- 
-
-3.  If using already run FreeSurfer `recon-all` output and have specified an `expert-opts` file then fMRIprep shows multiple errors
-
-    -   In the directory that has the prerun `recon-all` there is a folder `scripts` that saves the `expert-opts` file. Removing this file allows fMRIprep to run
-
-------------------------------------------------------------------------
-
-4.  If fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:
-
-    `--bold2t1w-init header`
 
 # The next steps
 

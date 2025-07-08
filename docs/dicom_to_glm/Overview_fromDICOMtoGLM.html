@@ -452,12 +452,13 @@ window.Quarto = {
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
   <li><a href="#dicom-files" id="toc-dicom-files" class="nav-link" data-scroll-target="#dicom-files"><span class="header-section-number">2</span> DICOM-Files</a></li>
   <li><a href="#dicom-to-nifti" id="toc-dicom-to-nifti" class="nav-link" data-scroll-target="#dicom-to-nifti"><span class="header-section-number">3</span> DICOM to nifti</a></li>
-  <li><a href="#distribute-the-t1w-files-to-participants" id="toc-distribute-the-t1w-files-to-participants" class="nav-link" data-scroll-target="#distribute-the-t1w-files-to-participants"><span class="header-section-number">4</span> Distribute the T1w files to participants?</a></li>
-  <li><a href="#defacing-your-data" id="toc-defacing-your-data" class="nav-link" data-scroll-target="#defacing-your-data"><span class="header-section-number">5</span> Defacing your data</a></li>
-  <li><a href="#remove-denoising-scan-from-your-data" id="toc-remove-denoising-scan-from-your-data" class="nav-link" data-scroll-target="#remove-denoising-scan-from-your-data"><span class="header-section-number">6</span> (Remove denoising scan from your data)</a></li>
-  <li><a href="#fmriprep" id="toc-fmriprep" class="nav-link" data-scroll-target="#fmriprep"><span class="header-section-number">7</span> fmriprep</a></li>
-  <li><a href="#first-level-analysis" id="toc-first-level-analysis" class="nav-link" data-scroll-target="#first-level-analysis"><span class="header-section-number">8</span> first-level Analysis</a></li>
-  <li><a href="#second-level-analysis" id="toc-second-level-analysis" class="nav-link" data-scroll-target="#second-level-analysis"><span class="header-section-number">9</span> second-level Analysis</a></li>
+  <li><a href="#check-the-intendedfor-entry-of-the-fmaps-json-file" id="toc-check-the-intendedfor-entry-of-the-fmaps-json-file" class="nav-link" data-scroll-target="#check-the-intendedfor-entry-of-the-fmaps-json-file"><span class="header-section-number">4</span> Check the “IntendedFor” entry of the fmap’s JSON file</a></li>
+  <li><a href="#distribute-the-t1w-files-to-participants" id="toc-distribute-the-t1w-files-to-participants" class="nav-link" data-scroll-target="#distribute-the-t1w-files-to-participants"><span class="header-section-number">5</span> Distribute the T1w files to participants?</a></li>
+  <li><a href="#defacing-your-data" id="toc-defacing-your-data" class="nav-link" data-scroll-target="#defacing-your-data"><span class="header-section-number">6</span> Defacing your data</a></li>
+  <li><a href="#remove-denoising-scan-from-your-data" id="toc-remove-denoising-scan-from-your-data" class="nav-link" data-scroll-target="#remove-denoising-scan-from-your-data"><span class="header-section-number">7</span> (Remove denoising scan from your data)</a></li>
+  <li><a href="#fmriprep" id="toc-fmriprep" class="nav-link" data-scroll-target="#fmriprep"><span class="header-section-number">8</span> fmriprep</a></li>
+  <li><a href="#first-level-analysis" id="toc-first-level-analysis" class="nav-link" data-scroll-target="#first-level-analysis"><span class="header-section-number">9</span> first-level Analysis</a></li>
+  <li><a href="#second-level-analysis" id="toc-second-level-analysis" class="nav-link" data-scroll-target="#second-level-analysis"><span class="header-section-number">10</span> second-level Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -518,15 +519,21 @@ window.Quarto = {
 <li>results in <code>.nifti</code> files in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format</li>
 </ul>
 </section>
-<section id="distribute-the-t1w-files-to-participants" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">Distribute the T1w files to participants?</a></h1>
+<section id="check-the-intendedfor-entry-of-the-fmaps-json-file" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> <a href="../dicom_to_glm/check_IntendedFor_field.html">Check the “IntendedFor” entry of the fmap’s JSON file</a></h1>
+<ul>
+<li>depending on what method you used to <a href="../dicom_to_glm/DICOMtoBIDS.html">convert your DICOMs to niftis</a> (or if you got a bids valid data from the MRI-Lab) and what version of <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a> you plan to use, it might be necessary to update the content of the “IntendedFor” field of the fmap’s JSON file</li>
+</ul>
+</section>
+<section id="distribute-the-t1w-files-to-participants" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">Distribute the T1w files to participants?</a></h1>
 <ul>
 <li>if you promised participants that they will get their T1w images, you should make sure that they really get them</li>
 <li>this should be done before <a href="../dicom_to_glm/defacing.html">defacing</a></li>
 </ul>
 </section>
-<section id="defacing-your-data" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> <a href="../dicom_to_glm/defacing.html">Defacing your data</a></h1>
+<section id="defacing-your-data" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <a href="../dicom_to_glm/defacing.html">Defacing your data</a></h1>
 <ul>
 <li><span class="math inline">\(\bf{You\ have\ to\ deface\ your\ data\ before\ running\ fmriprep\ or\ your\ analysis!!!!!}\)</span></li>
 <li>You may want to save the “non-defaced” files somewhere else to give them to your participants</li>
@@ -535,24 +542,24 @@ window.Quarto = {
 <li>Defacing is done with <code>pydeface</code> (Docker; Version 2.0.2)</li>
 </ul>
 </section>
-<section id="remove-denoising-scan-from-your-data" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> (<a href="../dicom_to_glm/RemoveDenoisingScan.html">Remove denoising scan from your data</a>)</h1>
+<section id="remove-denoising-scan-from-your-data" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> (<a href="../dicom_to_glm/RemoveDenoisingScan.html">Remove denoising scan from your data</a>)</h1>
 <ul>
 <li>if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continuing</li>
 </ul>
 </section>
-<section id="fmriprep" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
+<section id="fmriprep" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
 <ul>
 <li>this is one of many <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a> (that require <a href="https://bids-standard.github.io/bids-validator/">a BIDS-valid Dataset</a>)</li>
 <li>runs various preprocessing steps on it´s own</li>
 </ul>
 </section>
-<section id="first-level-analysis" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> <a href="../dicom_to_glm/first_level_glm_nilearn.html">first-level Analysis</a></h1>
+<section id="first-level-analysis" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> <a href="../dicom_to_glm/first_level_glm_nilearn.html">first-level Analysis</a></h1>
 </section>
-<section id="second-level-analysis" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> <a href="second_level_glm_nilearn.qmd">second-level Analysis</a></h1>
+<section id="second-level-analysis" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> <a href="second_level_glm_nilearn.qmd">second-level Analysis</a></h1>
 
 
 </section>

@@ -520,10 +520,7 @@ window.Quarto = {
   <li><a href="#sec-extra" id="toc-sec-extra" class="nav-link" data-scroll-target="#sec-extra"><span class="header-section-number">4.5.3</span> The “extra” directory</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-bidsdirectory" id="toc-sec-bidsdirectory" class="nav-link" data-scroll-target="#sec-bidsdirectory"><span class="header-section-number">5</span> The resulting BIDS-directory</a>
-  <ul class="collapse">
-  <li><a href="#sec-IntendedFor" id="toc-sec-IntendedFor" class="nav-link" data-scroll-target="#sec-IntendedFor"><span class="header-section-number">5.1</span> Edit “IntendedFor”-Section in the fmap</a></li>
-  </ul></li>
+  <li><a href="#sec-bidsdirectory" id="toc-sec-bidsdirectory" class="nav-link" data-scroll-target="#sec-bidsdirectory"><span class="header-section-number">5</span> The resulting BIDS-directory</a></li>
   <li><a href="#congratuliations-you-did-it" id="toc-congratuliations-you-did-it" class="nav-link" data-scroll-target="#congratuliations-you-did-it"><span class="header-section-number">6</span> Congratuliations, you did it!</a></li>
   </ul>
 </nav>
@@ -784,21 +781,6 @@ window.Quarto = {
 <p>This is how your bids-directory (which was initially created as an empty directory) should look like:<img src="./images/01_dcm2bids/20_resultingBIDSfolder.png" class="img-fluid" alt="Resulting bids-directory"></p>
 <p>When you enter the <code>sub-999</code> directory, you´ll find the sub-directory <code>ses-1</code> (or whatever session you specified during the <a href="#sec-preparation">preparation</a>). Inside, all sub-directories <a href="#sec-directory">that you selected/edited to assign the files to</a> are listed:<img src="./images/01_dcm2bids/21_BIDS_ses1.png" class="img-fluid" alt="Sub-Directories in ses-1"></p>
 <p>Each of these sub-directories contains all the files that you assigned, including the <code>.nii.gz</code> and a <code>.json</code> file<img src="./images/01_dcm2bids/22_BIDS_funcs.png" class="img-fluid" alt="Content of the func directory"><img src="./images/01_dcm2bids/23_BIDS_fmap.png" class="img-fluid" alt="Content of the fmap directory"><img src="./images/01_dcm2bids/24_BIDS_anat.png" class="img-fluid" alt="Content of the anat directory"><img src="./images/01_dcm2bids/25_BIDS_extra.png" class="img-fluid" alt="Content of the extra directory"></p>
-<section id="sec-IntendedFor" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="sec-IntendedFor"><span class="header-section-number">5.1</span> Edit “IntendedFor”-Section in the fmap</h2>
-<p>Before you continue, there is one last potential adaptation that should be considered.</p>
-<p>With changing Versions of <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> and <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a>, slight changes occur in how and where you have to include specific information. One example for this is the <code>IntendedFor</code> information in the fmap’s <code>.json</code> file.</p>
-<p>Depending on the Version of <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a> you plan to use, it may be necessary to change the <code>IntendedFor</code> field of the fmap’s .json file! The steps described below have to be done <em>if you want to use fmriprep 24.0.0 <strong>or newer</strong>!</em> (If you use an older Version, you don´t have to do the described steps)</p>
-<ol type="a">
-<li><p>Navigate to your <code>bids</code> directory</p></li>
-<li><p>Open the file <code>sub-999-bidsurifmap.json</code> (double click, or right-click + <code>gedit</code>)<img src="./images/01_dcm2bids/26_Open_bidsurifmap.png" class="img-fluid" alt="Open sub-999-bidsurifmap.json"></p></li>
-<li><p>Select all content and copy it (since Strg + c/v does not always work, you can use right-click and select <code>copy</code>)<img src="./images/01_dcm2bids/27_Copy_content_of_bidsurifmap.png" class="img-fluid" alt="Select and Copy content of bidsurifmap.json"></p></li>
-<li><p>Navigate to the <code>fmap</code> directory (<code>*/bids/sub-999/ses-1/fmap/</code>) and open the <code>.json</code> file<img src="./images/01_dcm2bids/28_Navigate_to_fmap_json.png" class="img-fluid" alt="Go to and open .json file"></p></li>
-<li><p>After the file opens, scroll down to the very end of it. There should be a section that starts with <code>IntendedFor</code> and looks like this:<img src="./images/01_dcm2bids/29_json_initial.png" class="img-fluid" alt="Initial IntendedFor Section"></p></li>
-<li><p>Remove all lines within the brackets after <code>"IntendedFor"</code> and paste the lines you copied from the <code>bidsurifmap.json</code> file. Remember to end every (but the last) line with a comma (<code>,</code>)!! It might also be good to keep the indentation at the beginning of each line (4 Spaches). At the end, it should look like this:<img src="./images/01_dcm2bids/30_json_changed.png" class="img-fluid" alt="Changed IntendedFor Section"></p></li>
-</ol>
-<p><strong><em>Don´t forget to save the file afterwards!!!</em></strong></p>
-</section>
 </section>
 <section id="congratuliations-you-did-it" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Congratuliations, you did it!</h1>
@@ -806,6 +788,7 @@ window.Quarto = {
 <p>Please return to the <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
 <p>Alternatively, here is a list of potential next steps to continue with</p>
 <ol type="1">
+<li><p><a href="../dicom_to_glm/check_IntendedFor_field.html">Check the “IntendedFor” field of the fmap’s JSON file</a></p></li>
 <li><p><a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">Provide participants with their T1w-file?</a></p></li>
 <li><p><a href="../dicom_to_glm/defacing.html">Defacing</a></p></li>
 <li><p><a href="../dicom_to_glm/RemoveDenoisingScan.html">Remove Denoising Scans from your data?</a></p></li>

@@ -582,58 +582,6 @@ window.Quarto = {
 <section id="troubleshooting" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Troubleshooting</h1>
 <p><span class="math inline">\(\to\)</span> If there are any problems, please refer to the dedicated <a href="../dicom_to_glm/troubleshooting.html#sec-TroublesFmriprep">troubleshooting page</a></p>
-<ol type="1">
-<li><p>I ran fMRIprep but no distortion correction happened</p>
-<blockquote class="blockquote">
-<p>fMRIprep might be using an outdated BIDS specification. Here this is related to the fmap <code>json</code> file. See <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri">Information about BIDS uri</a>, or the <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-IntendedFor">corresponding wiki entry</a>.</p>
-</blockquote>
-<ul>
-<li>If your fmap .json file is using the BIDS uri specification in the <code>IntendedFor</code> field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.</li>
-</ul>
-<p>BIDS uri spec for fmriprep 24.0.0 or newer:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz"</span><span class="ot">,</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz"</span><span class="ot">,</span> </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">etc</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Older fmap spec for fmriprep older than 24.0.0:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz"</span><span class="ot">,</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz"</span><span class="ot">,</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">etc</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ol>
-<p>&nbsp;</p>
-<hr>
-<p>&nbsp;</p>
-<ol start="2" type="1">
-<li>I ran fMRIprep and the distortion correction of the data is too extreme</li>
-</ol>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./images/poor_DC.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>An example of poor distortion correction</figcaption>
-</figure>
-</div>
-</center>
-<blockquote class="blockquote">
-<p>This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven’t been tested)</p>
-</blockquote>
-<p>&nbsp;</p>
-<hr>
-<p>&nbsp;</p>
-<ol start="3" type="1">
-<li><p>If using already run FreeSurfer <code>recon-all</code> output and have specified an <code>expert-opts</code> file then fMRIprep shows multiple errors</p>
-<ul>
-<li>In the directory that has the prerun <code>recon-all</code> there is a folder <code>scripts</code> that saves the <code>expert-opts</code> file. Removing this file allows fMRIprep to run</li>
-</ul></li>
-</ol>
-<hr>
-<ol start="4" type="1">
-<li><p>If fmriprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:</p>
-<p><code>--bold2t1w-init header</code></p></li>
-</ol>
 </section>
 <section id="the-next-steps" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> The next steps</h1>

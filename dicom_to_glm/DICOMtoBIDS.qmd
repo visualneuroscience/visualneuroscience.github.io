@@ -259,28 +259,6 @@ When you enter the `sub-999` directory, you´ll find the sub-directory `ses-1` (
 
 Each of these sub-directories contains all the files that you assigned, including the `.nii.gz` and a `.json` file![Content of the func directory](./images/01_dcm2bids/22_BIDS_funcs.png)![Content of the fmap directory](./images/01_dcm2bids/23_BIDS_fmap.png)![Content of the anat directory](./images/01_dcm2bids/24_BIDS_anat.png)![Content of the extra directory](./images/01_dcm2bids/25_BIDS_extra.png)
 
-## Edit "IntendedFor"-Section in the fmap {#sec-IntendedFor}
-
-Before you continue, there is one last potential adaptation that should be considered.
-
-With changing Versions of [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) and [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html), slight changes occur in how and where you have to include specific information. One example for this is the `IntendedFor` information in the fmap's `.json` file.
-
-Depending on the Version of [fmriprep](run_fmriprep.qmd) you plan to use, it may be necessary to change the `IntendedFor` field of the fmap's .json file! The steps described below have to be done *if you want to use fmriprep 24.0.0 **or newer**!* (If you use an older Version, you don´t have to do the described steps)
-
-a)  Navigate to your `bids` directory
-
-b)  Open the file `sub-999-bidsurifmap.json` (double click, or right-click + `gedit`)![Open sub-999-bidsurifmap.json](./images/01_dcm2bids/26_Open_bidsurifmap.png)
-
-c)  Select all content and copy it (since Strg + c/v does not always work, you can use right-click and select `copy`)![Select and Copy content of bidsurifmap.json](./images/01_dcm2bids/27_Copy_content_of_bidsurifmap.png)
-
-d)  Navigate to the `fmap` directory (`*/bids/sub-999/ses-1/fmap/`) and open the `.json` file![Go to and open .json file](./images/01_dcm2bids/28_Navigate_to_fmap_json.png)
-
-e)  After the file opens, scroll down to the very end of it. There should be a section that starts with `IntendedFor` and looks like this:![Initial IntendedFor Section](./images/01_dcm2bids/29_json_initial.png)
-
-f)  Remove all lines within the brackets after `"IntendedFor"` and paste the lines you copied from the `bidsurifmap.json` file. Remember to end every (but the last) line with a comma (`,`)!! It might also be good to keep the indentation at the beginning of each line (4 Spaches). At the end, it should look like this:![Changed IntendedFor Section](./images/01_dcm2bids/30_json_changed.png)
-
-***Don´t forget to save the file afterwards!!!***
-
 # Congratuliations, you did it!
 
 ***Congratulations***! You successfully finished the process of converting your DICOM to nifti files in BIDS-Format and you are one step closer to analyzing your data!
@@ -289,10 +267,12 @@ Please return to the [Overview-Page](Overview_fromDICOMtoGLM.qmd) to check what 
 
 Alternatively, here is a list of potential next steps to continue with
 
-1.  [Provide participants with their T1w-file?](ProvidingParticipantsWithTheirT1wFile.qmd)
+1.  [Check the "IntendedFor" field of the fmap's JSON file](check_IntendedFor_field.qmd)
 
-2.  [Defacing](defacing.qmd)
+2.  [Provide participants with their T1w-file?](ProvidingParticipantsWithTheirT1wFile.qmd)
 
-3.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+3.  [Defacing](defacing.qmd)
 
-4.  [fmriprep](run_fmriprep.qmd)
+4.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+
+5.  [fmriprep](run_fmriprep.qmd)

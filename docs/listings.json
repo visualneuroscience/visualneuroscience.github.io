@@ -36,6 +36,7 @@
   {
     "listing": "/dicom_to_glm.html",
     "items": [
+      "/dicom_to_glm/check_IntendedFor_field.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
       "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
@@ -47,13 +48,6 @@
     ]
   },
   {
-    "listing": "/archive.html",
-    "items": [
-      "/archive/freesurfer FSFAST.html",
-      "/archive/dicom_to_bids.html"
-    ]
-  },
-  {
     "listing": "/behavioral.html",
     "items": [
       "/behavioral/chinrests/chinrests.html",
@@ -62,8 +56,16 @@
     ]
   },
   {
+    "listing": "/archive.html",
+    "items": [
+      "/archive/freesurfer FSFAST.html",
+      "/archive/dicom_to_bids.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
+      "/dicom_to_glm/check_IntendedFor_field.html",
       "/people/interns/pflichtpraktikum.html",
       "/people/talks/talks.html",
       "/people/interns/index.html",

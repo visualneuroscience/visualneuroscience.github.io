@@ -28,7 +28,7 @@ This problem might occur with a corresponding error message (and the fmriprep co
 
 #### Silent error
 
-It can be hard to realize this issue, since this problem sometimes "occurs silently", thus no error message will be shown.
+It can be hard to realize this issue as the output might not be visible anymore, or the problem "occurs silently" (no error message are shown at all).
 
 If the distortion correction was successful, the subject's .html should include a section $B_0$ field mapping. As you can see in the image below, this would be shown at the top of the file where the different sections are listed as well:![.html-File with B0 field mapping](./images/Troubleshooting/missingDistortionCorrection.png)
 
@@ -36,35 +36,11 @@ If the distortion correction failed silently (thus, without an explicit error th
 
 ### Solution
 
--   you might be using a wrong BIDS specification in the fmap's `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri), or the [corresponding wiki entry](DICOMtoBIDS.qmd#sec-IntendedFor).
+-   you might be using a wrong BIDS specification in the fmap's `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri), or the [corresponding wiki entry](check_IntendedFor_field.qmd).
 
--   If your fmap .json file is using the BIDS uri specification (= newer version) in the `IntendedFor` field and you are using an older fMRIprep version (\< v24.0.0) then this will need to be changed to the older path specification. Similarly, if you changed the "IntendedFor" section [as described here](DICOMtoBIDS.qmd#sec-IntendedFor), but you use an fmriprep version older than 24.0.0, this leeds to the same problem
+-   If the content of the fmap's .json file uses a different naming convention than necessary for your version of [fmriPrep](run_fmriprep.qmd), no distortion correction is applie
 
-$\to$ Check the "IntendedFor" section of your fmap's .json file and compare if the entries are suitable for the version of fmriprep you want to use:
-
-````         
-BIDS uri spec for fmriprep 24.0.0 or newer:
-
-``` json
-"IntendedFor": [
-    "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
-    "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz", 
-    etc
-    ]
-```
-
-Older fmap spec for fmriprep older than 24.0.0:
-
-``` json
-"IntendedFor": [
-    "ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
-    "ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz",
-    etc
-    ]
-```
-````
-
-$\to$ if they don´t match, correct the "IntentedFor"-Section of the fmap's .json file
+$\to$ Follow [this wiki entry](check_IntendedFor_field.qmd) to check and update the entries of the fmap's .json file
 
 ## ValueError: Reference passed is not aligned with spline grids
 
@@ -103,3 +79,9 @@ $\to$ In the directory that has the prerun `recon-all` there is a folder `script
 </center>
 
 > This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven't been tested)
+
+##  fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan
+
+$\to$ the solution is (if your structural and functional scans are from the same session) to add the following flag:
+
+    `--bold2t1w-init header`
