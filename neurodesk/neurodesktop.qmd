@@ -6,7 +6,7 @@ description: "How to use Neurodesktop on the server"
 image: images/clipboard-3609792068.png
 categories: [Neurodesk]
 author: NZ
-date: 09/27/2024
+date: 07/10/2025
 ---
 
 # General information

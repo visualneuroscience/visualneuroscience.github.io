@@ -65,6 +65,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/neurodesk/neurodesktop.html",
       "/dicom_to_glm/check_IntendedFor_field.html",
       "/people/interns/pflichtpraktikum.html",
       "/people/talks/talks.html",
@@ -86,7 +87,6 @@
       "/labmeeting/index.html",
       "/mri/3D-prints/3d-prints.html",
       "/mri/mri-lab-setup-2024/index.html",
-      "/neurodesk/neurodesktop.html",
       "/people/compensation/compensation.html",
       "/people/leaving/index.html",
       "/people/writing/writing.html",
