@@ -74,6 +74,8 @@ Discussion has the following sections.
 
 -   [ ] For article manuscripts: also add line numbers
 
+-   [ ] Use a reference manager software; Zotero has the groups function where you can add collaborators.
+
 # Reading recommendation
 
 to avoid complex and bulky text:
