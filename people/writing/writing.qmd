@@ -60,7 +60,7 @@ Discussion has the following sections.
         |------------------------------------|------------------------------------|
         | *"The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape.  The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape"* | *"**Brain activity at the location of the illusory surface was increased** when the inducers formed an illusory shape **compared to when the inducers did not form an illusory shape.Brain activity at the location of** the inducers forming an illusory shape was inhibited **compared to when the inducers did not form an illusory shape**. Finally, **brain activity at the location of the background was not modulated** by the presence of an illusory shape".* |
 
-# Text layout checklist
+# Formatting checklist
 
 -   [ ] Use headings and subheadings function in MS Word
 
@@ -72,12 +72,12 @@ Discussion has the following sections.
 
 -   [ ] Make sure graphics are pasted "In line with text" to make sure they do not jump around when text is being edited.
 
--   [ ] For article manuscripts: also add line numbers
+-   [ ] For article manuscripts: also add line numbers (if the journal submission system does not add them automatically when you upload a PDF)
 
--   [ ] Use a reference manager software; Zotero has the groups function where you can add collaborators.
+-   [ ] Use a reference manager software. Currently Zotero is everyone's favourite. It has the "groups" function where you can add collaborators: <https://www.zotero.org/groups/>.
 
 # Reading recommendation
 
-to avoid complex and bulky text:
+To avoid complex and bulky text:
 
 <https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf>
