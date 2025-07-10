@@ -1604,5 +1604,93 @@
       "People",
       "Scientific writing in practice"
     ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#first-usage",
+    "href": "neurodesk/neurodesktop.html#first-usage",
+    "title": "Neurodesktop access",
+    "section": "First usage",
+    "text": "First usage\nThe first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#storing-data",
+    "href": "neurodesk/neurodesktop.html#storing-data",
+    "title": "Neurodesktop access",
+    "section": "Storing data",
+    "text": "Storing data\nIf working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#sharing-data",
+    "href": "neurodesk/neurodesktop.html#sharing-data",
+    "title": "Neurodesktop access",
+    "section": "Sharing data",
+    "text": "Sharing data\nAll neurodesk users have read and write permissions to /shared neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#data-transfer",
+    "href": "neurodesk/neurodesktop.html#data-transfer",
+    "title": "Neurodesktop access",
+    "section": "Data transfer",
+    "text": "Data transfer\nThere are currently two alternatives\n\nYou can transfer the data via nextcloud client, which is included in neurodsktop\n\n“file upload” button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#using-freesurfer",
+    "href": "neurodesk/neurodesktop.html#using-freesurfer",
+    "title": "Neurodesktop access",
+    "section": "Using FreeSurfer",
+    "text": "Using FreeSurfer\nTo force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows\nml freesurfer/7.4.1\ncd /storage\nfreeview\nTo set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)\nexport SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#using-fitlins",
+    "href": "neurodesk/neurodesktop.html#using-fitlins",
+    "title": "Neurodesktop access",
+    "section": "Using fitlins",
+    "text": "Using fitlins\nUsing FitLins (not a part of neurodesktop basic set of tools) with Singularity:\n\nsingularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg [your fitlins commands]\nPlease note that we are abandoning fitlins usage and are switching to nilearn for GLM analysis",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#resource-esp.-ram-usage",
+    "href": "neurodesk/neurodesktop.html#resource-esp.-ram-usage",
+    "title": "Neurodesktop access",
+    "section": "Resource (esp. RAM) usage",
+    "text": "Resource (esp. RAM) usage\nPlease keep an eye on your resource usage, especially RAM. If too much RAM is used up by users, the server will be slow and eventually unusable.\nThe overall resource usage on the server (all users) is displayed in the bottom left of the neurodesktop interface as blue and red bars:\n\n\n\nExample of about 50% RAM usage\n\n\nIf you want to check how much resources is used by you, open the terminal and type “htop” (you can use F6 to sort processes by “percentage memory”):\n\n\n\nExample of “normal” memory usage for running fMRIprep.",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#checking-resource-usage-directly-on-the-server",
+    "href": "neurodesk/neurodesktop.html#checking-resource-usage-directly-on-the-server",
+    "title": "Neurodesktop access",
+    "section": "Checking resource usage directly on the server",
+    "text": "Checking resource usage directly on the server\n\nresource usage per neurodesk container\n\ndocker stats\n\nper user and process\n\nhtop\n(all student containers are assigned to one user “allg_user”)",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
   }
 ]

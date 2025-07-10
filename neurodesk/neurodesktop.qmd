@@ -77,58 +77,70 @@ Once your account has been authorized
 
 7.  If you close this window and reopen it later, all your work will be saved as you left it (unless the server has been restarted in the meantime, which happens every Tuesday)
 
-8.  You can use <https://pslg-nv1.uni-graz.at/hub/home> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -\> Hub Control Panel from the menue.
+You can use <https://pslg-nv1.uni-graz.at/hub/home> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -\> Hub Control Panel from the menue.
 
-    ![](images/clipboard-2628836406.png)
+![](images/clipboard-2628836406.png)
 
-    # Note
+## First usage
 
-    The first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).
+The first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).
 
-    ## Storing data
+## Storing data
 
-    If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.
+If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.
 
-    ## Sharing data
+## Sharing data
 
-    All neurodesk users have read and write permissions to `/shared` neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)
+All neurodesk users have read and write permissions to `/shared` neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)
 
-    ## Data transfer
+## Data transfer
 
-    There are currently two alternatives
+There are currently two alternatives
 
-    1.  You can transfer the data via nextcloud client, which is included in neurodsktop
+1.  You can transfer the data via nextcloud client, which is included in neurodsktop
 
-        ![](images/clipboard-3813941447.png){width="400"}
+    ![](images/clipboard-3813941447.png){width="400"}
 
-    2.  "file upload" button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.
+2.  "file upload" button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.
 
-        ![](images/clipboard-1030227267.png)
+    ![](images/clipboard-1030227267.png)
 
-    ## Using FreeSurfer
+## Using FreeSurfer
 
-    To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
+To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
 
-    ```         
-    ml freesurfer/7.4.1
-    cd /storage
-    freeview
-    ```
+```         
+ml freesurfer/7.4.1
+cd /storage
+freeview
+```
 
-    To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)
+To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)
 
-    ```         
-    export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]
-    ```
+```         
+export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]
+```
 
-    ## Using fitlins
+## Using fitlins
 
-    Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
+Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
 
-    \
-    `singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg` \[your fitlins commands\]
+\
+`singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg` \[your fitlins commands\]
 
-    Please note that we are abandoning fitlins usage and are switching to [nilearn](https://nilearn.github.io/stable/index.html) for GLM analysis
+Please note that we are abandoning fitlins usage and are switching to [nilearn](https://nilearn.github.io/stable/index.html) for GLM analysis
+
+## Resource (esp. RAM) usage
+
+Please keep an eye on your resource usage, especially RAM. If too much RAM is used up by users, the server will be slow and eventually unusable.
+
+The overall resource usage on the server (all users) is displayed in the bottom left of the neurodesktop interface as blue and red bars:
+
+![Example of about 50% RAM usage](images/clipboard-211162115.png)
+
+If you want to check how much resources is used by you, open the terminal and type "htop" (you can use F6 to sort processes by "percentage memory"):
+
+![Example of "normal" memory usage for running fMRIprep.](images/clipboard-170336543.png)
 
 # Information for lab members with ssh access
 
@@ -163,3 +175,19 @@ You can mount network shares with Lukas' helper script at `/shared/mount_network
 
     -   `/shared/mount_network_share.sh /home/jovyan/allg_j J`<br>$\to$ mounts the J network to `/home/jovyan/allg_j` (i.e. there will be a directory `allg_j` within your `/home/jovyan/` directory that accesses the J network)
     -   `shared/mount_network_share.sh /home/jovyan/allg_y Y`<br>$\to$ mounts the Y network to `/home/jovyan/allg_y` (i.e. there will be a directory `allg_y` within your `/home/jovyan/` directory that accesses the Y network)
+
+## Checking resource usage directly on the server
+
+-   resource usage per neurodesk container
+
+``` bash
+docker stats
+```
+
+-   per user and process
+
+``` bash
+htop
+```
+
+(all student containers are assigned to one user "allg_user")

@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -459,12 +493,22 @@ window.Quarto = {
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul></li>
   <li><a href="#getting-an-account" id="toc-getting-an-account" class="nav-link" data-scroll-target="#getting-an-account">Getting an account</a></li>
-  <li><a href="#using-neurodesk" id="toc-using-neurodesk" class="nav-link" data-scroll-target="#using-neurodesk">Using Neurodesk</a></li>
+  <li><a href="#using-neurodesk" id="toc-using-neurodesk" class="nav-link" data-scroll-target="#using-neurodesk">Using Neurodesk</a>
+  <ul class="collapse">
+  <li><a href="#first-usage" id="toc-first-usage" class="nav-link" data-scroll-target="#first-usage">First usage</a></li>
+  <li><a href="#storing-data" id="toc-storing-data" class="nav-link" data-scroll-target="#storing-data">Storing data</a></li>
+  <li><a href="#sharing-data" id="toc-sharing-data" class="nav-link" data-scroll-target="#sharing-data">Sharing data</a></li>
+  <li><a href="#data-transfer" id="toc-data-transfer" class="nav-link" data-scroll-target="#data-transfer">Data transfer</a></li>
+  <li><a href="#using-freesurfer" id="toc-using-freesurfer" class="nav-link" data-scroll-target="#using-freesurfer">Using FreeSurfer</a></li>
+  <li><a href="#using-fitlins" id="toc-using-fitlins" class="nav-link" data-scroll-target="#using-fitlins">Using fitlins</a></li>
+  <li><a href="#resource-esp.-ram-usage" id="toc-resource-esp.-ram-usage" class="nav-link" data-scroll-target="#resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</a></li>
+  </ul></li>
   <li><a href="#information-for-lab-members-with-ssh-access" id="toc-information-for-lab-members-with-ssh-access" class="nav-link" data-scroll-target="#information-for-lab-members-with-ssh-access">Information for lab members with ssh access</a>
   <ul class="collapse">
   <li><a href="#folder-mappings" id="toc-folder-mappings" class="nav-link" data-scroll-target="#folder-mappings">Folder mappings:</a></li>
   <li><a href="#for-interfacing-with-the-folders-on-storage" id="toc-for-interfacing-with-the-folders-on-storage" class="nav-link" data-scroll-target="#for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</a></li>
   <li><a href="#mount-network-shares" id="toc-mount-network-shares" class="nav-link" data-scroll-target="#mount-network-shares">Mount network shares</a></li>
+  <li><a href="#checking-resource-usage-directly-on-the-server" id="toc-checking-resource-usage-directly-on-the-server" class="nav-link" data-scroll-target="#checking-resource-usage-directly-on-the-server">Checking resource usage directly on the server</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -565,15 +609,23 @@ window.Quarto = {
 <li><p>You should see the desktop with all the apps:</p>
 <p><img src="images/clipboard-3609792068.png" class="img-fluid" width="400"></p></li>
 <li><p>If you close this window and reopen it later, all your work will be saved as you left it (unless the server has been restarted in the meantime, which happens every Tuesday)</p></li>
-<li><p>You can use <a href="https://pslg-nv1.uni-graz.at/hub/home" class="uri">https://pslg-nv1.uni-graz.at/hub/home</a> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -&gt; Hub Control Panel from the menue.</p>
+</ol>
+<p>You can use <a href="https://pslg-nv1.uni-graz.at/hub/home" class="uri">https://pslg-nv1.uni-graz.at/hub/home</a> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -&gt; Hub Control Panel from the menue.</p>
 <p><img src="images/clipboard-2628836406.png" class="img-fluid"></p>
-<h1 id="note">Note</h1>
+<section id="first-usage" class="level2">
+<h2 class="anchored" data-anchor-id="first-usage">First usage</h2>
 <p>The first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).</p>
-<h2 id="storing-data" class="anchored" data-anchor-id="using-neurodesk">Storing data</h2>
+</section>
+<section id="storing-data" class="level2">
+<h2 class="anchored" data-anchor-id="storing-data">Storing data</h2>
 <p>If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.</p>
-<h2 id="sharing-data" class="anchored">Sharing data</h2>
+</section>
+<section id="sharing-data" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-data">Sharing data</h2>
 <p>All neurodesk users have read and write permissions to <code>/shared</code> neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)</p>
-<h2 id="data-transfer" class="anchored">Data transfer</h2>
+</section>
+<section id="data-transfer" class="level2">
+<h2 class="anchored" data-anchor-id="data-transfer">Data transfer</h2>
 <p>There are currently two alternatives</p>
 <ol type="1">
 <li><p>You can transfer the data via nextcloud client, which is included in neurodsktop</p>
@@ -581,19 +633,41 @@ window.Quarto = {
 <li><p>“file upload” button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.</p>
 <p><img src="images/clipboard-1030227267.png" class="img-fluid"></p></li>
 </ol>
-<h2 id="using-freesurfer" class="anchored">Using FreeSurfer</h2>
+</section>
+<section id="using-freesurfer" class="level2">
+<h2 class="anchored" data-anchor-id="using-freesurfer">Using FreeSurfer</h2>
 <p>To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows</p>
 <pre><code>ml freesurfer/7.4.1
 cd /storage
 freeview</code></pre>
 <p>To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)</p>
 <pre><code>export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]</code></pre>
-<h2 id="using-fitlins" class="anchored">Using fitlins</h2>
+</section>
+<section id="using-fitlins" class="level2">
+<h2 class="anchored" data-anchor-id="using-fitlins">Using fitlins</h2>
 <p>Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:</p>
 <p><br>
 <code>singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg</code> [your fitlins commands]</p>
-<p>Please note that we are abandoning fitlins usage and are switching to <a href="https://nilearn.github.io/stable/index.html">nilearn</a> for GLM analysis</p></li>
-</ol>
+<p>Please note that we are abandoning fitlins usage and are switching to <a href="https://nilearn.github.io/stable/index.html">nilearn</a> for GLM analysis</p>
+</section>
+<section id="resource-esp.-ram-usage" class="level2">
+<h2 class="anchored" data-anchor-id="resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</h2>
+<p>Please keep an eye on your resource usage, especially RAM. If too much RAM is used up by users, the server will be slow and eventually unusable.</p>
+<p>The overall resource usage on the server (all users) is displayed in the bottom left of the neurodesktop interface as blue and red bars:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-211162115.png" class="img-fluid figure-img"></p>
+<figcaption>Example of about 50% RAM usage</figcaption>
+</figure>
+</div>
+<p>If you want to check how much resources is used by you, open the terminal and type “htop” (you can use F6 to sort processes by “percentage memory”):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-170336543.png" class="img-fluid figure-img"></p>
+<figcaption>Example of “normal” memory usage for running fMRIprep.</figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="information-for-lab-members-with-ssh-access" class="level1">
 <h1>Information for lab members with ssh access</h1>
@@ -627,6 +701,18 @@ freeview</code></pre>
 <li><code>shared/mount_network_share.sh /home/jovyan/allg_y Y</code><br><span class="math inline">\(\to\)</span> mounts the Y network to <code>/home/jovyan/allg_y</code> (i.e.&nbsp;there will be a directory <code>allg_y</code> within your <code>/home/jovyan/</code> directory that accesses the Y network)</li>
 </ul></li>
 </ol>
+</section>
+<section id="checking-resource-usage-directly-on-the-server" class="level2">
+<h2 class="anchored" data-anchor-id="checking-resource-usage-directly-on-the-server">Checking resource usage directly on the server</h2>
+<ul>
+<li>resource usage per neurodesk container</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>per user and process</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">htop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>(all student containers are assigned to one user “allg_user”)</p>
 
 
 </section>
