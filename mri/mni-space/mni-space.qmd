@@ -1,0 +1,18 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: MNI space
+description: "information about various MNI spaces and templates"
+image: ./images/clipboard-309090548.png
+categories: [MRI]
+author: NZ
+date: 15/07/2025
+---
+
+This is a summary of useful information about MNI spaces, collected by Carmen. This page should be extended at some point to incorporate lab-specific information.
+
+Short: [About the MNI space(s) – Lead-DBS](https://www.lead-dbs.org/about-the-mni-spaces/)
+
+Detailed and up-to-date: [About the mNI space(s) - BIDS Team](https://bids-specification.readthedocs.io/en/latest/appendices/coordinate-systems.html)
+
+![](images/clipboard-309090548.png){width="206"}

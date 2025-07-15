@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="NZ">
+<meta name="dcterms.date" content="2026-03-07">
+<meta name="description" content="information about various MNI spaces and templates">
 
-<title>Information about our lab meeting – Visual Neuroscience Lab</title>
+<title>MNI space – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ff831f119fbfd4d850555b2599ad24da.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2f36d1b840a6005202c0df5fd377aaa8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,65 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -137,7 +80,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
   </div>
@@ -148,39 +91,39 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./neurodesk/neurodesktop.html"> 
+    <a class="nav-link" href="../../neurodesk/neurodesktop.html"> 
 <span class="menu-text">Neurodesktop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./behavioral.html"> 
+    <a class="nav-link" href="../../behavioral.html"> 
 <span class="menu-text">Behavioral</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./labmeeting.html"> 
+    <a class="nav-link" href="../../labmeeting.html"> 
 <span class="menu-text">Labmeeting</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dicom_to_glm.html"> 
+    <a class="nav-link" href="../../dicom_to_glm.html"> 
 <span class="menu-text">DICOM to GLM</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri.html"> 
+    <a class="nav-link" href="../../mri.html"> 
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./people.html"> 
+    <a class="nav-link" href="../../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./other_topics.html"> 
+    <a class="nav-link" href="../../other_topics.html"> 
 <span class="menu-text">Other Topics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./archive.html"> 
+    <a class="nav-link" href="../../archive.html"> 
 <span class="menu-text">Archive</span></a>
   </li>  
 </ul>
@@ -194,7 +137,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Information about our lab meeting</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">MNI space</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -216,19 +159,19 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
+  <a href="../../neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neurodesktop</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
+            <a href="../../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -237,43 +180,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01 - DICOM to BIDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02 - T1w for PBn</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03 - Defacing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04 - Removing Noise Scan</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 - fmriprep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06 - first level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
 </li>
@@ -281,7 +224,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./mri.html" class="sidebar-item-text sidebar-link">
+            <a href="../../mri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -290,49 +233,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3D printing a brain</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">7T anatomical analysis on neurodesk</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI BIDS and OSF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Old MRI setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Update to the MRI lab setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/physiology/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/physiology/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Physiological noise correction</span></a>
   </div>
 </li>
@@ -340,7 +283,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./behavioral.html" class="sidebar-item-text sidebar-link">
+            <a href="../../behavioral.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -349,19 +292,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vision tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BIDS for behavioral studies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom-built chin rests</span></a>
   </div>
 </li>
@@ -369,7 +312,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./people.html" class="sidebar-item-text sidebar-link">
+            <a href="../../people.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">People</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -378,43 +321,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/stipends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/stipends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stipends and prizes for master students</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/coffee/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/coffee/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coffee time</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Participant compensation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/leaving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/leaving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Things to do if you are leaving the lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/writing/writing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/writing/writing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scientific writing in practice</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/interns/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/interns/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internship Checklist</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/interns/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/interns/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pflichtpraktikum</span></a>
   </div>
 </li>
@@ -422,7 +365,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./other_topics.html" class="sidebar-item-text sidebar-link">
+            <a href="../../other_topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Other Topics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -431,25 +374,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calculating a priori sample size using G Power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma correction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contribute to the website</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab Members Only!!!</span></a>
   </div>
 </li>
@@ -457,13 +400,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labmeeting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../labmeeting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labmeeting</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive</span></a>
   </div>
 </li>
@@ -472,22 +415,42 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFi">Lab <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Information about our lab meeting</h1>
+<h1 class="title">MNI space</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MRI</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    information about various MNI spaces and templates
+  </div>
 </div>
 
 
+<div class="quarto-title-meta column-page-right">
 
-<div class="quarto-title-meta column-body">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>NZ </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 7, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -497,45 +460,14 @@ window.Quarto = {
 </header>
 
 
+<p>This is a summary of useful information about MNI spaces, collected by Carmen. This page should be extended at some point to incorporate lab-specific information.</p>
+<p>Short: <a href="https://www.lead-dbs.org/about-the-mni-spaces/">About the MNI space(s) – Lead-DBS</a></p>
+<p>Detailed and up-to-date: <a href="https://bids-specification.readthedocs.io/en/latest/appendices/coordinate-systems.html">About the mNI space(s) - BIDS Team</a></p>
+<p><img src="images/clipboard-309090548.png" class="img-fluid" width="206"></p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TGFi" data-listing-date-sort="1735945200000" data-listing-file-modified-sort="1746696936382" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294">
-<a href="./labmeeting/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Labmeeting
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TGFi'); return false;">
-Lab
-</div>
-</div>
-<div class="card-text listing-description">
-Information about our lab meeting
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ, MG
-</div>
-<div class="listing-date">
-Jan 4, 2025
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

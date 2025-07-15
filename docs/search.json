@@ -309,7 +309,7 @@
     "href": "mri.html",
     "title": "MRI",
     "section": "",
-    "text": "3D printing a brain\n\n\n\nMRI\n\n\n3D-Print\n\n\n\ncurrent procedure for 3d printing brains\n\n\n\nNZ\n\n\nOct 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7T anatomical analysis on neurodesk\n\n\n\nMRI\n\n\n7T\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nHow to run 7 Tesla anatomy analysis on neurodesk\n\n\n\nAC\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMRI BIDS and OSF\n\n\n\nBIDS\n\n\nOSF\n\n\n\nInformation about BIDS and OSF\n\n\n\nAA\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\n\nDICOM\n\n\nBIDS\n\n\nMRI\n\n\nNeurodesk\n\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfMRIprep analysis\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\nfmriPrep\n\n\n\nInformation about using fMRIprep to preprocess fMRI data\n\n\n\nAC\n\n\nJul 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeSurfer FSFAST\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOld MRI setup\n\n\n\nMRI\n\n\n\nInformation about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nAA\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUpdate to the MRI lab setup\n\n\n\nMRI\n\n\nNNL-Goggles\n\n\n\n\n\n\n\nAC\n\n\nOct 7, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhysiological noise correction\n\n\n\nMRI\n\n\nPhysiology\n\n\n\nCreating physiology regressors using the PhysIO toolbox\n\n\n\nMW\n\n\nOct 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRetinotopic Mapping\n\n\n\nMRI\n\n\nRetinotopy\n\n\n\nProcedure to apply the probabilistic retinotopic mapping using the Benson Atlas\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "3D printing a brain\n\n\n\nMRI\n\n\n3D-Print\n\n\n\ncurrent procedure for 3d printing brains\n\n\n\nNZ\n\n\nOct 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7T anatomical analysis on neurodesk\n\n\n\nMRI\n\n\n7T\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nHow to run 7 Tesla anatomy analysis on neurodesk\n\n\n\nAC\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMRI BIDS and OSF\n\n\n\nBIDS\n\n\nOSF\n\n\n\nInformation about BIDS and OSF\n\n\n\nAA\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\n\nDICOM\n\n\nBIDS\n\n\nMRI\n\n\nNeurodesk\n\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfMRIprep analysis\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\nfmriPrep\n\n\n\nInformation about using fMRIprep to preprocess fMRI data\n\n\n\nAC\n\n\nJul 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeSurfer FSFAST\n\n\n\nMRI\n\n\nAnalysis\n\n\nNeurodesk\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNI space\n\n\n\nMRI\n\n\n\ninformation about various MNI spaces and templates\n\n\n\nNZ\n\n\nMar 7, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOld MRI setup\n\n\n\nMRI\n\n\n\nInformation about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nAA\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUpdate to the MRI lab setup\n\n\n\nMRI\n\n\nNNL-Goggles\n\n\n\n\n\n\n\nAC\n\n\nOct 7, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhysiological noise correction\n\n\n\nMRI\n\n\nPhysiology\n\n\n\nCreating physiology regressors using the PhysIO toolbox\n\n\n\nMW\n\n\nOct 26, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRetinotopic Mapping\n\n\n\nMRI\n\n\nRetinotopy\n\n\n\nProcedure to apply the probabilistic retinotopic mapping using the Benson Atlas\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
     "crumbs": [
       "Home",
       "MRI"
@@ -412,432 +412,249 @@
     ]
   },
   {
-    "objectID": "mri/analysis/fmriprep.html",
-    "href": "mri/analysis/fmriprep.html",
-    "title": "fMRIprep analysis",
-    "section": "",
-    "text": "Link to fMRIprep documentation\nLink to fMRIprep github (Useful information in the issues section about troubleshooting etc.)",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "fMRIprep analysis"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/fmriprep.html#reasons-to-use-fmriprep",
-    "href": "mri/analysis/fmriprep.html#reasons-to-use-fmriprep",
-    "title": "fMRIprep analysis",
-    "section": "Reasons to use fMRIprep",
-    "text": "Reasons to use fMRIprep\n\nfMRIprep is a useful tool to preprocess fMRI data in a manor that can be reproducible across research\nWhere possible fMRIprep should be used in preprocessing to limit the variability involved in preprocessing data\nfMRIprep follows the BIDS format see here on how to validate bids\n\n \n\nPermissions\n\nfMRIprep is run as a docker container meaning that you will need to be added to the docker group on the server before running it\nBefore running fMRIprep it is necessary to create the folders that fMRIprep uses\n\nScratch directory (meaning just the temporary output files for fMRIprep)\nOutput directory (The actual output of fMRIprep)\n\nTo create the folders first run the following:\n\nmkdir $niidir/../fmriprep_tmp\nmkdir $niidir/derivatives/fmriprep\n\nTo avoid the output folders of fMRIprep being owned by root you can run fMRIprep with the following flags:\ndocker run -u $(id -u):$(id -g) ...\n\nNOTE: using fitlins does not currently work using the flag -u $(id -u):$(id -g) the user must specify their user id directly e.g. -u 1087:1092 see post about fitlins",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "fMRIprep analysis"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/fmriprep.html#example-fmriprep-scripts",
-    "href": "mri/analysis/fmriprep.html#example-fmriprep-scripts",
-    "title": "fMRIprep analysis",
-    "section": "Example fMRIprep scripts",
-    "text": "Example fMRIprep scripts\n\nfMRIprep without prerun FreeSurfer\nAn example script of fMRIprep when there is no prerun FreeSurfer\nexport PATH=~/local/python2/:$PATH\nexport FREESURFER_HOME=/usr/local/freesurfer_7.3.2\nexport MATLAB=/usr/bin/matlab\nexport FSL_DIR=/usr/local/fsl\nexport FSF_OUTPUT_FORMAT=nii.gz\nniidir=/storage/adam/CLAUS_3T/pilots/bids\nexport SUBJECTS_DIR=$niidir/derivatives/freesurfer/\npath=($path /usr/local/matlab/R2019b/bin/)\nsource $FREESURFER_HOME/SetUpFreeSurfer.sh\n\nsubject=sub-01\n\nrsync -a -v $niidir/$subject/ses-1/anat/*T1w.nii.gz $niidir/../all_anat_faced/\n#--- deface ---#\nscansForDefacing=$(ls -1 $niidir/$subject/ses-1/anat/*.nii.gz)\necho $scansForDefacing\nfor theScan in $scansForDefacing; do\n    echo \"defacing scan $theScan\"\n    pydeface $theScan --outfile $theScan --force\ndone\n#--- mriqc (current v 23.0.1) ---#\ndocker run -it --rm -v $niidir:/data:ro -v $niidir/derivatives/mriqc:/out nipreps/mriqc:23.0.1 /data /out participant --participant_label $subject --no-sub\n\n\nmkdir $niidir/../fmriprep_tmp\nmkdir $niidir/derivatives/fmriprep\n\ndocker run -u $(id -u):$(id -g) --rm -it \\\n        -v /usr/local/freesurfer_7.3.2/license.txt:/opt/freesurfer/license.txt \\\n        -v $niidir/../fmriprep_tmp:/scratch -v $niidir:/data:ro \\\n        -v $niidir/derivatives/fmriprep:/out \\\n        -v $niidir/derivatives/freesurfer:/sub-dir nipreps/fmriprep:21.0.1 \\\n        /data /out participant --participant-label $subject \\\n        --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w\n \n\n\nfMRIprep prerun FreeSurfer (no hires)\nAn example script with prerun FreeSurfer (without hires options and biascorrecing the anatomical scan):\nexport PATH=~/local/python2/:$PATH\nexport FREESURFER_HOME=/usr/local/freesurfer_7.3.2\nexport MATLAB=/usr/bin/matlab\nexport FSL_DIR=/usr/local/fsl\nexport FSF_OUTPUT_FORMAT=nii.gz\nniidir=/storage/adam/CLAUS_3T/pilots/bids\nexport SUBJECTS_DIR=$niidir/derivatives/freesurfer/\npath=($path /usr/local/matlab/R2019b/bin/)\nsource $FREESURFER_HOME/SetUpFreeSurfer.sh\n\nsubject=sub-01\n\nrsync -a -v $niidir/$subject/ses-1/anat/*T1w.nii.gz $niidir/../all_anat_faced/\n#--- deface ---#\nscansForDefacing=$(ls -1 $niidir/$subject/ses-1/anat/*.nii.gz)\necho $scansForDefacing\nfor theScan in $scansForDefacing; do\n    echo \"defacing scan $theScan\"\n    pydeface $theScan --outfile $theScan --force\ndone\n#--- mriqc (current v 23.0.1) ---#\ndocker run -it --rm -v $niidir:/data:ro -v $niidir/derivatives/mriqc:/out nipreps/mriqc:23.0.1 /data /out participant --participant_label $subject --no-sub\n# freesurfer\nrecon_path=$niidir/$subject/ses-1/anat/*.nii.gz\nrecon-all -all -i $recon_path -s $subject -threads 4\n\n\nmkdir $niidir/../fmriprep_tmp\nmkdir $niidir/derivatives/fmriprep\n\n# Here we add the flag --fs-output-dir to specify the directory where freesurfer output is located\ndocker run -u $(id -u):$(id -g) --rm -it \\\n        -v /usr/local/freesurfer_7.3.2/license.txt:/opt/freesurfer/license.txt \\\n        -v $niidir/../fmriprep_tmp:/scratch -v $niidir:/data:ro \\\n        -v $niidir/derivatives/fmriprep:/out \\\n        -v $niidir/derivatives/freesurfer:/sub-dir nipreps/fmriprep:21.0.1 \\\n        /data /out participant --fs-subjects-dir /sub-dir --participant-label $subject \\\n        --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "fMRIprep analysis"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/fmriprep.html#troubleshooting",
-    "href": "mri/analysis/fmriprep.html#troubleshooting",
-    "title": "fMRIprep analysis",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nI ran fMRIprep but no distortion correction happened\n\nfMRIprep might be using an outdated BIDS specification. Here this is related to the fmap json file. See Information about BIDS uri.\n\n\nIf your fmap .json file is using the BIDS uri specification in the IntendedFor field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.\n\nBIDS uri spec:\n\"IntendedFor\": [\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\", \n    etc\n    ]\nOlder fmap spec:\n\"IntendedFor\": [\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\",\n    etc\n    ]\n\n \n\n \n\nI ran fMRIprep and the distortion correction of the data is too extreme\n\n\n\n\n\nAn example of poor distortion correction\n\n\n\n\nThis is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven’t been tested)\n\n \n\n \n\nIf using already run FreeSurfer recon-all output and have specified an expert-opts file then fMRIprep shows multiple errors\n\nIn the directory that has the prerun recon-all there is a folder scripts that saves the expert-opts file. Removing this file allows fMRIprep to run\n\n\n\n\nIf fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:\n--bold2t1w-init header",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "fMRIprep analysis"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/bids.html",
-    "href": "mri/analysis/bids.html",
-    "title": "MRI BIDS and OSF",
-    "section": "",
-    "text": "Brain Imaging Data Structure (more information here).\n\n\nWith docker, you can run this line in the terminal:\n$ docker run -ti --rm -v [path_to_your_toplevel_bids_directory]:/data:ro bids/validator /data\nCommon issues:\n\nfiles don’t follow BIDS naming conventions (more info about filenames here)\nevents.tsv files are missing\nparticipants.tsv is missing\nparticipants.json file is missing or does not describe all variables from the tsv file\ndatasset_description is missing or there is no name of the dataset or author names in it.\nreadme file is missing or too short\n…",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "MRI BIDS and OSF"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/bids.html#validating-bids-dataset",
-    "href": "mri/analysis/bids.html#validating-bids-dataset",
-    "title": "MRI BIDS and OSF",
-    "section": "",
-    "text": "With docker, you can run this line in the terminal:\n$ docker run -ti --rm -v [path_to_your_toplevel_bids_directory]:/data:ro bids/validator /data\nCommon issues:\n\nfiles don’t follow BIDS naming conventions (more info about filenames here)\nevents.tsv files are missing\nparticipants.tsv is missing\nparticipants.json file is missing or does not describe all variables from the tsv file\ndatasset_description is missing or there is no name of the dataset or author names in it.\nreadme file is missing or too short\n…",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "MRI BIDS and OSF"
-    ]
-  },
-  {
-    "objectID": "mri/3D-prints/3d-prints.html",
-    "href": "mri/3D-prints/3d-prints.html",
-    "title": "3D printing a brain",
-    "section": "",
-    "text": "There are many guidelines and tutorials on how to 3D print a brain. The currently recommended procedure is to use this docker image:\nhttps://github.com/nimaid/mri2stl\nThe advantage is that the brain is printed with the cerebellum, and the number of things you manually need to do is minimal.\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "3D printing a brain"
-    ]
-  },
-  {
-    "objectID": "labmeeting/index.html",
-    "href": "labmeeting/index.html",
-    "title": "Labmeeting",
-    "section": "",
-    "text": "We meet every week in the corner office, alternating between Labmeetings and “Lunch & Science”. You can see the schedule on the calendar.\nIn labmeetings, we discuss organisatory issues and everyone can bring up potential topics or problems to discuss. Additionally, we do presentations of our work, discuss papers,…\nFor “Lunch & Science”, everyone gathers in the corner office with something to eat and we watch a talk related to our research.",
-    "crumbs": [
-      "Home",
-      "Labmeeting"
-    ]
-  },
-  {
-    "objectID": "labmeeting/index.html#fmri-methods",
-    "href": "labmeeting/index.html#fmri-methods",
-    "title": "Labmeeting",
-    "section": "1.1 fMRI methods",
-    "text": "1.1 fMRI methods\n\nMargulies et al., 2016: Hierarchy of areas based on the resting-state data: https://www.pnas.org/doi/10.1073/pnas.1608282113\nGlasser parcellation of the cortex, which everyone is using now: https://www.nature.com/articles/nature18933\nMultiple comparison correction methods for fMRI (no specific paper yet)\nHCP processing pipeline and CIFTI format (alternative to fmriprep and state-of-the-art for 7 T preprocessing): https://www.sciencedirect.com/science/article/pii/S1053811913005053?via%3Dihub\nResting-state connectivity of subcortical structures (including the claustrum) https://www.jneurosci.org/content/43/39/6609\nNeuroquery https://elifesciences.org/articles/53385\nNeurodesk https://www.nature.com/articles/s41592-023-02145-x\nWhite matter activations https://www.pnas.org/doi/10.1073/pnas.2219666120",
-    "crumbs": [
-      "Home",
-      "Labmeeting"
-    ]
-  },
-  {
-    "objectID": "labmeeting/index.html#subjective-experience",
-    "href": "labmeeting/index.html#subjective-experience",
-    "title": "Labmeeting",
-    "section": "1.2 Subjective experience",
-    "text": "1.2 Subjective experience\n\nSelf et al., 2019: ephys signatures of figure-ground segmentation in macaque V1: https://www.sciencedirect.com/science/article/pii/S0960982219301551\nRecent findings from Tsao lab: https://www.pnas.org/doi/10.1073/pnas.2221122120\nDMN and awareness: https://www.nature.com/articles/s41467-022-34410-6\nPerceptography: https://www.biorxiv.org/content/10.1101/2022.10.24.513337v2\nPerceptography in humans using visual illusions: https://www.science.org/doi/full/10.1126/sciadv.adj3906",
-    "crumbs": [
-      "Home",
-      "Labmeeting"
-    ]
-  },
-  {
-    "objectID": "labmeeting/index.html#general-methods",
-    "href": "labmeeting/index.html#general-methods",
-    "title": "Labmeeting",
-    "section": "1.3 General methods",
-    "text": "1.3 General methods\n\nStatistical power (small sample sizes): https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267527/\nStatistical power: https://elifesciences.org/articles/62461\nExperimental methods: https://www.frontiersin.org/articles/10.3389/fnhum.2018.00421/full\nScientific writing: https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf\nRandomization techniques for statistical inference: permutation, bootstrapping, Monte Carlo simulations (no specific paper yet)",
-    "crumbs": [
-      "Home",
-      "Labmeeting"
-    ]
-  },
-  {
-    "objectID": "labmeeting/index.html#ai",
-    "href": "labmeeting/index.html#ai",
-    "title": "Labmeeting",
-    "section": "1.4 AI",
-    "text": "1.4 AI\n\nhttps://www.sciencedirect.com/science/article/pii/S2589004222011853?via%3Dihub",
-    "crumbs": [
-      "Home",
-      "Labmeeting"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm.html",
-    "href": "dicom_to_glm.html",
-    "title": "MRI: from DICOMs to GLM",
-    "section": "",
-    "text": "Check IntendedFor field of the fmap’s JSON\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nDescription of how to check and potentially update the fmap’s JSON file\n\n\n\nMG\n\n\nJul 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n06 - first level GLM\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nNeurodesk\n\n\nnilearn\n\n\n\nSeveral approaches to run a first level GLM using nilearn\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01 - DICOM to BIDS\n\n\n\nMRI\n\n\nDICOM\n\n\nBIDS\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nOverview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nApr 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02 - T1w for PBn\n\n\n\nMRI\n\n\n\nInformation about how to provide participants with their T1w image\n\n\n\nMG\n\n\nApr 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03 - Defacing\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to deface your data\n\n\n\nMG\n\n\nApr 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nCollection of known potential problems and their solutions\n\n\n\nMG\n\n\nMar 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04 - Removing Noise Scan\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to remove the denoising scan from your data\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n05 - fmriprep\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nNeurodesk\n\n\n\nStep by step description of how to run fmriprep\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "dicom_to_glm/run_fmriprep.html",
-    "href": "dicom_to_glm/run_fmriprep.html",
-    "title": "05 - fmriprep",
-    "section": "",
-    "text": "1 Before running fmriprep\nBefore you start fmriprep, you have to make sure, that you:\n\nhave nifti files in BIDS format\ndefaced your anatomical scans\nOptional: removed the noise scans from your functional data\nOptional: adapted the “IntendedFor” section in the fmap’s .json file (if you want to use fmriprep 24.0.0 or newer)\n\n\n\n2 Starting fmriprep\nTo start fmriprep, click on the bird symbol at the bottom left on neurodesk, hover neurodesk, then All applications and navigate to fmriprep. Select the version of fmriprep that you want to use \nAfter selecting your version, a new bash window opens and fmriprep loads. This can take a few moments, be patient! When everything is ready, the bottom line should state fmriprep-\"Version\" (with “Version” being whatever version you selected, for example fmriprep-24.1.1) \n\n\n3 Setting up necessary directories and defining “SUBJECTS_DIR”\nFirst, you need to create some new directories that are necessary for fmriprep to run properly. For this, enter the following command (adapt the path(s) if necessary)\nmkdir -p /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/\nBy confirming your command with Enter, you´ll find the new directory structure within you derivatives directory\nThen, we need to specify where fmriprep should store the resulting files with this command (again, adapt the path(s) if necessary):\nSUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/\n\n\n\nSet SUBJECTS_DIR\n\n\nHint: you can copy/paste both commands from above and execute them by pressing enter simultaneously, it doesn´t matter\n\n\n4 fmriprep command\nWith the setup done, you can now run the command:\nfmriprep /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant --bold2t1w-init header --force-bbr -w /home/jovyan/website/fmriprep_tmp --output-spaces T1w fsaverage fsnative --participant-label sub-999 --nprocs 8 --mem 10000 --skip_bids_validation --stop-on-first-crash -v --fs-license-file /home/jovyan/website/freesurferlicense/license.txt\nImportant: adapt the flag --participant-label sub-999 accordingly, so that you state the subject you want to preprocess\nHint: same as before, you could run this command with the two commands above for the setup as well. The only important thing is the order: first the command for making the directories, then defining SUBJECTS_DIRand finally the fmriprep command.\n\n\n5 Waiting\nWhen fmriprep started, now it´s probably time to get a coffee and do something else. This process will take quite some time (hours), you don´t have to stare at the output the whole time. You can also close the Tab where you opened neurodesk! Even if you close it, the program continues its work!\n\n\n6 Troubleshooting\n\\(\\to\\) If there are any problems, please refer to the dedicated troubleshooting page\n\n\n7 The next steps\nCongratulations, you successfully preprocessed your data and you are one step closer to analyzing your data!\nTo continue in your journey to your Analysis, please return to the Overview-Page to check what to do next.\nAlternatively, here is a list of potential next steps to continue with\n1.Retinotopic Mapping\n\nfirst-level GLM\nsecond-level GLM\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "05 - fmriprep"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
-    "href": "dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
-    "title": "02 - T1w for PBn",
-    "section": "",
-    "text": "It can be a good incentive to promote your study by offering participants to give them their T1w files (since everyone knows how cool images of brains are!) If you promise to give out the T1w-scans to participants, make sure, that you really do it!\nThere are only some things to remember:\n\nSince the scans are already defaced when we don´t scan ourself, participants always get the defaced T1w scan! Thus, if we acquired the data ourselves (and started with the dicom files) make sure to do the defacing before you send the T1w-file to the participants!\nIf you provide participants with their T1w scans, it might be a good idea to provide them with the software on how to look at their data! For example, you could point them to MRIcroGL as free tool that they can install themselves to look at their data: Link to MRIcroGL Download\nWe do not keep the “non-defaced” T1w scans of participants! Thus, delete the non-defaced T1w scan of a participant either immediately after defacing, or at the latest after your study finished!\n\n\n1 The next Steps\nTo continue in your journey to your Analysis, please return to the Overview-Page to check what to do next.\nAlternatively, here is a list of potential next steps to continue with\n\nDefacing\nRemove Denoising Scans from your data?\nfmriprep\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "02 - T1w for PBn"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/first_level_glm_nilearn.html",
-    "href": "dicom_to_glm/first_level_glm_nilearn.html",
-    "title": "06 - first level GLM",
-    "section": "",
-    "text": "After preprocessing your data, probably with fmriprep, it´s time to do your first level GLM (= general linear model).\nIn this step, you will compute mean contrast-estimates for predefined contrasts for each subject individually. These estimations will be used later in the second level Analysis, where you extract relevant (for your research question/hypothesis) values.\nFor all cases described below, there are generally three things you have to change before running the cells in the jupyter notebook (or the python script):\n\nChange the directories\nIndicate the task, the number of sessions and the subject\nImplement your contrasts\n\n\n1 Surface-based Analysis\nTo compute a first-level GLM you can adapt the following jupyter notebook: /shared/nilearn_ffx.ipynb\nYou can either run each cell separately (“Play”-Button at the top) after implementing the changes (if changes are needed), or first implement all changes and then run all cells automaticall (“Double-Play”-Button at the top)\n\nIn the second cell (indicated with [2]: at the left), change:\n\n\n\ndata_dir\nfmriprep_dir\ntask_label (this refers to how your files are named! \\(\\to\\) in your BIDS-valid naming of your file, what´s behind “task-” \\(\\to\\) For sub-12002_ses-1_task-loc_run-1_space-T1w_desc-preproc_bold.nii.gz the corresponding task_label would be loc \\(\\to\\) task_label = \"loc\")\nsub_labels\nAfter the comment # Loop over sessions: indicate the number of sessions, by “counting” from 1 to the number of sessions you did (if you did 4 sessions, the line should read for ses in [1, 2, 3, 4])\n\n\n\nIn the third cell (indicated with [3]: at the left), change the number of sessions similar to step 1e)\nIn the sixth cell (indicated with [6]: at the left):\n\n\n\nDefine your constrasts-dictionairy, by defining a name for each contrast (= key) and indicating how it is computed (= value)\nfor indicating how a contrast is computed, you can access the columns of the design matrix (that should be printed above this cell). Keep in mind, that for basic_contrasts[] you indicate the actual name of the column, not the index!\nyou can print the resulting contrasts matrices, but you don´t have to\n\n\n\nIn the seventh cell (indicated with [7]: at the left):\n\n\n\ndefine empty lists for each of your contrasts\nchange the respective names of the lists before the .append statement\nindicate the correct contrast names in the parameters of the .compute_contrast function\n\n\n\nIn the eighth cell (indicated with [8]: at the left): change contrasts_dict to match with your lists\nIn the second part of the eighth cell (somehow the enumeration is messed up there): comment out (using #) the line starting with data_dir = (since you should have writing access in your own directories and you already defined data_dir in the beginning of the script)\n\n\n\n2 Volume-based Analysis\nThere is also a script for Volume-based Analysis\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "06 - first level GLM"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/defacing.html",
-    "href": "dicom_to_glm/defacing.html",
-    "title": "03 - Defacing",
-    "section": "",
-    "text": "When we acquired data “ourselves” (and start with the dicom files), we have to deface the T1w-scan! (When we get our data from the MRI-Lab, it will already be defaced)\nTo deface your T1w-scan, you first need a T1w nifti file! If you currently have DICOM files, you have to convert them to nifti’s first!\nDefacing you T1w scans is an important preprocessing step that has to be done beforerunning fmriprep. If you run fmriprep without prior defacing, you´ll probably run into errors!\nImportant (if you promised participants that they´ll get their T1w scan): Since we get already defaced images when not testing ourselves, every participant only gets the defaced T1w-scans. Thus, you have to do the defacing before sending the file to your participant!",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "03 - Defacing"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/defacing.html#sec-startPydeface",
-    "href": "dicom_to_glm/defacing.html#sec-startPydeface",
-    "title": "03 - Defacing",
-    "section": "2.1 Start Pydeface (v.2.0.2)",
-    "text": "2.1 Start Pydeface (v.2.0.2)\nTo deface your t1w, you first have to open pydeface:\n\nClick on the Birds-Symbol at the bottom left\nHover Neurodesk\nHover All Applications\nScroll down until you find pydeface\nClick on pydeface 2.0.2 \n\nAfter it opens, it may need some time to load everything - be patient!\nFinally, it should look like this:",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "03 - Defacing"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/defacing.html#get-the-path-to-your-original-t1w-scan",
-    "href": "dicom_to_glm/defacing.html#get-the-path-to-your-original-t1w-scan",
-    "title": "03 - Defacing",
-    "section": "2.2 Get the path to your original T1w scan",
-    "text": "2.2 Get the path to your original T1w scan\n\nNavigate to the anatomical scan of the participant within your BIDS directory\nRight-click on the anatomical nifti file\nSelect `Copy Path(s)",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "03 - Defacing"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/defacing.html#the-pydeface-command",
-    "href": "dicom_to_glm/defacing.html#the-pydeface-command",
-    "title": "03 - Defacing",
-    "section": "2.3 The pydeface command",
-    "text": "2.3 The pydeface command\n\nGo back to the terminal window, where pydeface is loaded (or start it again)\nType pydeface\nEnter the path to your T1w scan (right-click + paste or type in the path)\nType --outfile\nRepeat Step 3 (with this approach, you “overwrite” the initial T1w with the then defaced T1w file)\nType --force\n\nIt should look like this: \npydeface /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --outfile /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --force\nThen, press enter. Again, it might take a few moments, until pydeface finishes, be patient! At the end, it should look like this:",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "03 - Defacing"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/defacing.html#the-next-steps",
-    "href": "dicom_to_glm/defacing.html#the-next-steps",
-    "title": "03 - Defacing",
-    "section": "2.4 The next steps",
-    "text": "2.4 The next steps\nCongratulations, you successfully defaced a T1w-scan and you are one step closer to analyzing your data!\nTo continue in your journey to your Analysis, please return to the Overview-Page to check what to do next.\nAlternatively, here is a list of potential next steps to continue with\n\nRemove Denoising Scans from your data?\nrun fmriprep",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "03 - Defacing"
-    ]
-  },
-  {
-    "objectID": "behavioral.html",
-    "href": "behavioral.html",
-    "title": "Information about collecting behavioural data",
-    "section": "",
-    "text": "Custom-built chin rests\n\n\n\n3D-Print\n\n\n\nInformation about producing a chinrest for behavioral experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBIDS for behavioral studies\n\n\n\nBIDS\n\n\nBehavioral\n\n\n\nHow to store your data in bids structure if you are using psychtoolbox\n\n\n\nCY\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVision tests\n\n\n\nVision-Prescreening\n\n\n\nHow to conduct vision tests\n\n\n\nCY\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Behavioral"
-    ]
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html",
-    "href": "behavioral/2024-05-23/index.html",
-    "title": "BIDS for behavioral studies",
-    "section": "",
-    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0",
-    "crumbs": [
-      "Home",
-      "Behavioral",
-      "BIDS for behavioral studies"
-    ]
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html#resources",
-    "href": "behavioral/2024-05-23/index.html#resources",
-    "title": "BIDS for behavioral studies",
-    "section": "",
-    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0",
-    "crumbs": [
-      "Home",
-      "Behavioral",
-      "BIDS for behavioral studies"
-    ]
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html#software",
-    "href": "behavioral/2024-05-23/index.html#software",
-    "title": "BIDS for behavioral studies",
-    "section": "Software:",
-    "text": "Software:\nbids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub",
-    "crumbs": [
-      "Home",
-      "Behavioral",
-      "BIDS for behavioral studies"
-    ]
-  },
-  {
-    "objectID": "behavioral/2024-05-23/index.html#how-to-implement",
-    "href": "behavioral/2024-05-23/index.html#how-to-implement",
-    "title": "BIDS for behavioral studies",
-    "section": "How to implement",
-    "text": "How to implement\nYou may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\nAfter preprocessing:\ncreate_events_tsv_json_full.m\n\n\nBefore finalizing everything:\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\nPipeline for transriv project as an example\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv\nLink to our GitHub repo containing relevant scripts",
-    "crumbs": [
-      "Home",
-      "Behavioral",
-      "BIDS for behavioral studies"
-    ]
-  },
-  {
-    "objectID": "archive.html",
-    "href": "archive.html",
-    "title": "Archive",
-    "section": "",
-    "text": "FreeSurfer FSFAST\n\n\n\nMRI\n\n\nAnalysis\n\n\narchived\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\n\nMRI\n\n\nBIDS\n\n\nDICOM\n\n\narchived\n\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "Archive"
-    ]
-  },
-  {
-    "objectID": "archive/dicom_to_bids.html",
-    "href": "archive/dicom_to_bids.html",
-    "title": "Dicom to Bids conversion",
-    "section": "",
-    "text": "Documentation related to the conversion of dicoms to BIDS format\n\ndcm2niix github\npydicom\ndcmunpack\n\n\nSee also BIDS specificiation\n\nOther programs that can be used to convert dicoms to BIDS\n\nGoing from DICOMS to BIDS datasets (with folder structure):\nhttps://github.com/nipy/heudiconv https://github.com/cbedetti/Dcm2Bids https://github.com/jmtyszka/bidskit https://github.com/dangom/dac2bids\nGoing from DICOMS to NIFTI + BIDS JSON sidecar:\nhttps://github.com/rordenlab/dcm2niix\nmatlab dicom to nifti tool converter"
-  },
-  {
-    "objectID": "archive/dicom_to_bids.html#script",
-    "href": "archive/dicom_to_bids.html#script",
-    "title": "Dicom to Bids conversion",
-    "section": "Script",
-    "text": "Script\n\nI created a script found here that carries out the transformation from dicom to BIDS format\nThis is useful because often times we want to convert to BIDS and there are lots of different ways to do this (some more complicated than others)\nHere I wanted the script to be as easy as possible for a number of reasons but primarily so that anyone can run it (even without using .json files)"
-  },
-  {
-    "objectID": "archive/dicom_to_bids.html#how-to-use-the-script",
-    "href": "archive/dicom_to_bids.html#how-to-use-the-script",
-    "title": "Dicom to Bids conversion",
-    "section": "How to use the script",
-    "text": "How to use the script\n\nThe script will guide you through the process of converting from dicoms to BIDS\nWhat’s important to know is that the script is not always accurate and will require some input to correct some things\n\n \n\n1. Choose the name of the dicom folder in which to convert\n\n \n\n\n2. Optional: If there are subdirectories in the dicom folder (e.g. ses-1 or ses-2) pick one\n\n \n\n\n3. Get the name of BIDS subject\n\n\nWhat is often the case for us is that the dicoms folder for each participant is named differently to how we want out subject/ BIDS name to be.\n\n \n\n\n4. DICOM search. This will either use pydicom or dcmunpack\n\nFor some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes\n\n\nHere the script roughly unpacks all the dicoms ready for the step which renames files and folders and puts the niftis in these new folders\n\n\n \n\n\n5. Information about the renaming and BIDS conventions\n\npydicom and dcmunpack don’t get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format\n\n\nThe option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS\n\n\n \n\n\n6. Keep/ modify/ delete\n\nChoose to keep the dicom and the name of the dicom, modify it or delete it (ie don’t convert)\n\n\nAny action here will apply to the .nii.gz and the .json\n\n\n\nIf you want to modify the name of the BIDS file then choose modify and rename according to the BIDS naming convention\n\n\n \n\n\nIf you want to keep or modify the folder the BIDS file belong to then select either keep or modify\n\n\n\nHere I want to keep the folder func because it is correct\n\n\n\nHere I want to choose the folder extra (this is not a BIDS folder but I want to convert the dicom to a nifti, I’d remove this before fMRIprep)\n\n\n\nOften times the anat folder name is wrong. Here the name should just be anat\n\n \n\n\n7. Adding IntendedFor field to fmap json\n\nThe conversion does not always add the IntenderFor field to the .json in the fmap folder\nFor [distortion correction] to take place in fMRIprep it is necessary to add the IntendedFor field to the .json\nThe script uses jq to provide the insertion into the fmap .json file\nThe format that is added is not BIDS URI compliant but the script will output a text file that can be used to change the intendedfor field with BIDS uri compliant paths."
-  },
-  {
-    "objectID": "archive/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
-    "href": "archive/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
+    "objectID": "mri/analysis/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
+    "href": "mri/analysis/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
     "title": "FreeSurfer FSFAST",
     "section": "Reasons to use FreeSurfers FSFAST",
     "text": "Reasons to use FreeSurfers FSFAST\n\nIf fitlins does not have a particular option for you that you would like to use i.e. different\nPotentially easier when working with surface space data (FSFAST was originally designed for surface space data)"
   },
   {
-    "objectID": "archive/freesurfer FSFAST.html#neurodesk",
-    "href": "archive/freesurfer FSFAST.html#neurodesk",
+    "objectID": "mri/analysis/freesurfer FSFAST.html#neurodesk",
+    "href": "mri/analysis/freesurfer FSFAST.html#neurodesk",
     "title": "FreeSurfer FSFAST",
     "section": "Neurodesk",
     "text": "Neurodesk\n\nWhat does a container mean\n\nNeurodesk has a whole host of software that is available for us to use\nNeurodesk works in which each piece of software has its own container\nSimply put for us this means that we use 1 piece of software that is contained inside its own environment\n\n\n\n\nExample of what containers mean\n\n\n\nSo for the example above if you were inside of the FreeSurfer container the only available software to you would be FreeSurfer\nMATLAB, fMRIprep and SPM would not be available to you\n\n \n\n\n\n\n\n\nNote: MATLAB runtime environment\n\n\n\nHowever, FreeSurfer uses something called a MATLAB runtime environment\n\nMATLAB runtime environment is smaller piece of software that is inside the FreeSurfer container\nFreeSurfer commands can be run without the whole of MATLAB directly and instead use this “MATLAB runtime environment”"
   },
   {
-    "objectID": "archive/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
-    "href": "archive/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
+    "objectID": "mri/analysis/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
+    "href": "mri/analysis/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
     "title": "FreeSurfer FSFAST",
     "section": "FreeSurfer commands that do rely on the MATLAB runtime environment",
     "text": "FreeSurfer commands that do rely on the MATLAB runtime environment\n\nSometimes when running FreeSurfer commands on neurodesk you might run into an error like so:\n\n\n\n\n\n\n\nWhat this means is the following:\n\nFreeSurfer by default is looking for a whole MATLAB installation\nFreeSurfer does not know whether there is a MATLAB runtime environment\n\nThis is because the MATLAB runtime environment is installed in a folder somewhere"
   },
   {
-    "objectID": "archive/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
-    "href": "archive/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
+    "objectID": "mri/analysis/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
+    "href": "mri/analysis/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
     "title": "FreeSurfer FSFAST",
     "section": "Steps to run FreeSurfer commands",
     "text": "Steps to run FreeSurfer commands\n1. Start a FreeSurfer container:\n\n\n\n\n\n \n2. Set up your environment variables:\n\nWhen using FreeSurfer it’s important to tell FreeSurfer where to find the subjects directory (SUBJECTS_DIR)\n\n\n(see FreeSurfers FSFAST tutorial for more information)\n\nFor example:\nexport SUBJECTS_DIR=$TUTORIAL_DATA/buckner_data/tutorial_subjs\n \n3. Change directory to where your data is:\nFor example:\ncd data\n \n4. Try and run the command first:\nFor example:\nFreeview ← this doesn’t rely on MATLAB so the freeview window should open\nrecon-all ← this doesn’t rely on MATLAB either so should work\nmri_vol2vol ← this doesn’t rely on MATLAB so should also work\nmkcontrast-sess ← this does rely on MATLAB runtime environment\n \n5. What to do if your command doesn’t work?\nIf you run a command for example:\nmkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1\nAnd then see an error like so:\n\n\n\n\n\n\nFigure 1\n\n\n\n\nThis means that FreeSurfer doesn’t know where the MATLAB runtime environment is therefore run the following:\n\nexport FS_MCRROOT=/opt/MCR2019b/v97/\nThe command above is important to tell FreeSurfer where the MATLAB runtime environment is\n \n6. Re-run the command again\n\nIf you fall into the error as above Figure 1 : then run the command using -mcr 1\n\nFor example:\nmkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1 -mcr 1"
   },
   {
-    "objectID": "behavioral/2024-05-22/index.html",
-    "href": "behavioral/2024-05-22/index.html",
-    "title": "Vision tests",
+    "objectID": "mri/analysis/dicom_to_bids.html",
+    "href": "mri/analysis/dicom_to_bids.html",
+    "title": "Dicom to Bids conversion",
     "section": "",
-    "text": "Before starting any experiment with a subject, confirm that they have “normal vision” since it is a critical exclusion criteria for most of the studies in vision science.\n\n\nAccording to the World Heath Organization (WHO), “visual acuity is … a simple, non-invasive measure and critical to determine the presence of vision impairment” [1]. The vision impairment is an eye condition which causes imperfections in the function of visual system [2]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.\nIn our lab, we perform FrACT10 to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [3].\n\n\n\nStereopsis is also an important phenomenon for binocular rivalry since it is based on binocular disparity [4]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [5]. We use Random Dot V test with red cyan anaglyph glasses to quantify the stereopsis.\nThe difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above.\n\n\n\nFrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people.\n\nacuity_task                  4-step Landolt-Cs\nunit                          VAdec (1.0+) & LogMAR(&lt;0)\nlengthOfCalibrationRuler   173.0\ndistanceInCm               230.0\nmaxDecimalAcuity         2.41\ncontrastWeber             100.0\nnTrials                       24\nrangeLimitStatus           rangeOK\ncrowding                   0\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V:\nThe first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.\n\ndistanceInCm    230.0\nthreshold        hardest level with correct response =&lt; 3",
+    "text": "Documentation related to the conversion of dicoms to BIDS format\n\ndcm2niix github\npydicom\ndcmunpack\n\n\nSee also BIDS specificiation\n\nOther programs that can be used to convert dicoms to BIDS\n\nGoing from DICOMS to BIDS datasets (with folder structure):\nhttps://github.com/nipy/heudiconv https://github.com/cbedetti/Dcm2Bids https://github.com/jmtyszka/bidskit https://github.com/dangom/dac2bids\nGoing from DICOMS to NIFTI + BIDS JSON sidecar:\nhttps://github.com/rordenlab/dcm2niix\nmatlab dicom to nifti tool converter"
+  },
+  {
+    "objectID": "mri/analysis/dicom_to_bids.html#script",
+    "href": "mri/analysis/dicom_to_bids.html#script",
+    "title": "Dicom to Bids conversion",
+    "section": "Script",
+    "text": "Script\n\nI created a script found here that carries out the transformation from dicom to BIDS format\nThis is useful because often times we want to convert to BIDS and there are lots of different ways to do this (some more complicated than others)\nHere I wanted the script to be as easy as possible for a number of reasons but primarily so that anyone can run it (even without using .json files)"
+  },
+  {
+    "objectID": "mri/analysis/dicom_to_bids.html#how-to-use-the-script",
+    "href": "mri/analysis/dicom_to_bids.html#how-to-use-the-script",
+    "title": "Dicom to Bids conversion",
+    "section": "How to use the script",
+    "text": "How to use the script\n\nThe script will guide you through the process of converting from dicoms to BIDS\nWhat’s important to know is that the script is not always accurate and will require some input to correct some things\n\n \n\n1. Choose the name of the dicom folder in which to convert\n\n \n\n\n2. Optional: If there are subdirectories in the dicom folder (e.g. ses-1 or ses-2) pick one\n\n \n\n\n3. Get the name of BIDS subject\n\n\nWhat is often the case for us is that the dicoms folder for each participant is named differently to how we want out subject/ BIDS name to be.\n\n \n\n\n4. DICOM search. This will either use pydicom or dcmunpack\n\nFor some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes\n\n\nHere the script roughly unpacks all the dicoms ready for the step which renames files and folders and puts the niftis in these new folders\n\n\n \n\n\n5. Information about the renaming and BIDS conventions\n\npydicom and dcmunpack don’t get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format\n\n\nThe option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS\n\n\n \n\n\n6. Keep/ modify/ delete\n\nChoose to keep the dicom and the name of the dicom, modify it or delete it (ie don’t convert)\n\n\nAny action here will apply to the .nii.gz and the .json\n\n\n\nIf you want to modify the name of the BIDS file then choose modify and rename according to the BIDS naming convention\n\n\n \n\n\nIf you want to keep or modify the folder the BIDS file belong to then select either keep or modify\n\n\n\nHere I want to keep the folder func because it is correct\n\n\n\nHere I want to choose the folder extra (this is not a BIDS folder but I want to convert the dicom to a nifti, I’d remove this before fMRIprep)\n\n\n\nOften times the anat folder name is wrong. Here the name should just be anat\n\n \n\n\n7. Adding IntendedFor field to fmap json\n\nThe conversion does not always add the IntenderFor field to the .json in the fmap folder\nFor [distortion correction] to take place in fMRIprep it is necessary to add the IntendedFor field to the .json\nThe script uses jq to provide the insertion into the fmap .json file\nThe format that is added is not BIDS URI compliant but the script will output a text file that can be used to change the intendedfor field with BIDS uri compliant paths."
+  },
+  {
+    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#basics",
+    "href": "mri/analysis/7t_analysis_on_neurodesk.html#basics",
+    "title": "7T anatomical analysis on neurodesk",
+    "section": "Basics",
+    "text": "Basics\nAfter converting the data from DICOMS to niftis (BIDS format) you will notice that unlike 3T data, you might have collected 3 different anatomical scans:\n\nINV1 (1st inversion)\nINV2 (2nd inversion)\nUNI (MP2RAGE)\n\nThe files we really care about for the anatomical analysis are INV2 and UNI (MP2RAGE)\nWhen opening an MP2RAGE scan it is clear that there is a lot of noise that we do not get at 3T.\nThis means that we first need to get rid of this noise before using recon-all (recon-all will fail if trying to pass it these noisy images).\n\nThis means there are a few extra pieces of software that is needed to be able to run the anatomical analysis\n\n\nWhat software is needed for 7T anatomical analysis?\n\nPresurfer (uses MATLAB/ SPM12)\nCAT12\nFreeSurfer (to use recon-all)",
     "crumbs": [
       "Home",
-      "Behavioral",
-      "Vision tests"
+      "MRI",
+      "7T anatomical analysis on neurodesk"
     ]
   },
   {
-    "objectID": "behavioral/2024-05-22/index.html#visual-acuity",
-    "href": "behavioral/2024-05-22/index.html#visual-acuity",
-    "title": "Vision tests",
-    "section": "",
-    "text": "According to the World Heath Organization (WHO), “visual acuity is … a simple, non-invasive measure and critical to determine the presence of vision impairment” [1]. The vision impairment is an eye condition which causes imperfections in the function of visual system [2]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.\nIn our lab, we perform FrACT10 to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [3].",
+    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#neurodesk-and-containers",
+    "href": "mri/analysis/7t_analysis_on_neurodesk.html#neurodesk-and-containers",
+    "title": "7T anatomical analysis on neurodesk",
+    "section": "Neurodesk and containers",
+    "text": "Neurodesk and containers\nContainers are explained in more detail here.\n\nPut simply, currently on neurodesk we cannot load 2 or 3 pieces of software at once and this means that the anatomical analysis of 7T data is a bit tricky.\nLuckily Denis Chaimow (link to github) has created a container in which we can run the analysis.\nThe container and scripts I edited to allow the use of processing anatomical results for a single subject with multiple sessions",
     "crumbs": [
       "Home",
-      "Behavioral",
-      "Vision tests"
+      "MRI",
+      "7T anatomical analysis on neurodesk"
     ]
   },
   {
-    "objectID": "behavioral/2024-05-22/index.html#stereoacuity",
-    "href": "behavioral/2024-05-22/index.html#stereoacuity",
-    "title": "Vision tests",
-    "section": "",
-    "text": "Stereopsis is also an important phenomenon for binocular rivalry since it is based on binocular disparity [4]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [5]. We use Random Dot V test with red cyan anaglyph glasses to quantify the stereopsis.\nThe difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above.",
+    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#how-to-run-the-script",
+    "href": "mri/analysis/7t_analysis_on_neurodesk.html#how-to-run-the-script",
+    "title": "7T anatomical analysis on neurodesk",
+    "section": "How to run the script?",
+    "text": "How to run the script?\n\nThe script should be located in /shared/7T_analysis/anatomy\n\n0. Open a terminal:\n\n\n\nOpening a terminal on neurodesk\n\n\n \n1. Start the container\n\nThe container can be started like so:\n\nsingularity run --bind /path/to/output:/derivatives /shared/7T_analysis/anatomy/mp2rage_recon-all.sif\n\nHere we need to make sure that the /path/to/output is exactly where our data is stored.\n\nFor example:\n\nHere my anatomical data folder is stored in /home/jovyan/7t_auditory/bids/sub-a001/ses-1\n\n\n\n\nLocating where the data is stored\n\n\n\nThis means that I want to mount this folder to the container so my command will be like so:\n\nsingularity run --bind /home/jovyan/7t_auditory/bids/sub-a001/ses-1/:/derivatives /shared/7T_analysis/anatomy/mp2rage_recon-all.sif\n\nThis then means that once in side the container the path to my data is now mounted to a folder called /derivative\nPut simply I create a link from my local folder /home/jovyan/7t_auditory/bids/sub-a001/ses-1/ to a folder inside the container called /derivatives\n\n2. Once inside the container\n\nTo know if you are in the container or not you will see the following:\n\n\n\n\nInside the container\n\n\n\nThis means that we are in our own environment and that we can run the command necessary to start the anatomical preprocessing\n\n3. Export FreeSurfer subjects directory\n\nThis command should be the same for everyone\n\nexport $SUBJECTS_DIR=/derivatives/mprage_recon-all/freesurfer\n4. Run the script\n\nWe need to now start the preprocessing script\n\n\n\n\n\n\n\nRecall\n\n\n\n\nRemember that we have mounted a folder to this folder: /derivatives\nThis means that everything you see inside of your local directory e.g. /home/jovyan/7t_auditory/bids/sub-a001/ses-1/ is mirrored inside the container\n\n\n\n\nTherefore, we can run the script like so:\n\nmp2rage_recon-all.py --inv2 /derivatives/anat/inv2.nii --uni /derivatives/anat/uni.nii\n5. The script will now start and run everything needed to run the anatomical analysis\n\n\n\n\n\n\nmultiple sessions?\n\n\n\n\nIf you have multiple sessions you need to make sure that all anatomical scans sessions are inside just 1 folder\nYou can then run the command:\n\nmp2rage_recon-all.py --inv2 /derivatives/anat/inv2_session1.nii /derivatives/anat/inv2_session2.nii --uni /derivatives/anat/uni_session1.nii /derivatives/anat/uni_session2.nii",
     "crumbs": [
       "Home",
-      "Behavioral",
-      "Vision tests"
+      "MRI",
+      "7T anatomical analysis on neurodesk"
     ]
   },
   {
-    "objectID": "behavioral/2024-05-22/index.html#parameters-that-we-use",
-    "href": "behavioral/2024-05-22/index.html#parameters-that-we-use",
-    "title": "Vision tests",
-    "section": "",
-    "text": "FrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people.\n\nacuity_task                  4-step Landolt-Cs\nunit                          VAdec (1.0+) & LogMAR(&lt;0)\nlengthOfCalibrationRuler   173.0\ndistanceInCm               230.0\nmaxDecimalAcuity         2.41\ncontrastWeber             100.0\nnTrials                       24\nrangeLimitStatus           rangeOK\ncrowding                   0\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V:\nThe first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.\n\ndistanceInCm    230.0\nthreshold        hardest level with correct response =&lt; 3",
+    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#troubleshooting",
+    "href": "mri/analysis/7t_analysis_on_neurodesk.html#troubleshooting",
+    "title": "7T anatomical analysis on neurodesk",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nThe files will need to be unzipped first. This is becuase the script uses SPM12 and that this is only able to read files that end in .nii and not .nii.gz\n\nRun the commands in a new terminal window:\nml freesurfer\nmri_convert /path/to/file.nii.gz /path/to/file.nii\n\n\n\n\n\n\nValueError: substring not found\n\n\n\nOSError: This docstring was not generated by Nipype!\nThis error occurs for unknown reasons. The suggested fix is export FORCE_SPMMCR as an environment variable. So run this in the terminal:\n\nexport FORCE_SPMMCR=1\nhttps://neurostars.org/t/valueerror-substring-not-found-when-running-spm-spmcommand-version-with-spm-standalone-and-mcr-installation/24082",
     "crumbs": [
       "Home",
-      "Behavioral",
-      "Vision tests"
+      "MRI",
+      "7T anatomical analysis on neurodesk"
     ]
   },
   {
-    "objectID": "behavioral/chinrests/chinrests.html",
-    "href": "behavioral/chinrests/chinrests.html",
-    "title": "Custom-built chin rests",
+    "objectID": "labmeeting.html",
+    "href": "labmeeting.html",
+    "title": "Information about our lab meeting",
     "section": "",
-    "text": "If you need a solid chinrest for your behavioral, EEG or brain stimulation experiment, we can create one ourselves using 3D printing, some standard parts and this tutorial\nhttps://www.thingiverse.com/thing:2968729#google_vignette\nwith some adaptations/improvements. If you need a chinrest, talk to Lukas. Note that it may take a few weeks since some parts need to be orders and or/printed.\nThe result will look something like this:\n\n\n\n\n Back to top",
+    "text": "Labmeeting\n\n\n\nLab\n\n\n\nInformation about our lab meeting\n\n\n\nNZ, MG\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Visual Neuroscience lab",
+    "section": "",
+    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\n\n\nMNI space\n\n\ninformation about various MNI spaces and templates\n\n\n\nNZ\n\n\nMar 7, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeurodesktop access\n\n\nHow to use Neurodesktop on the server\n\n\n\nNZ\n\n\nJul 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCheck IntendedFor field of the fmap’s JSON\n\n\nDescription of how to check and potentially update the fmap’s JSON file\n\n\n\nMG\n\n\nJul 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPflichtpraktikum\n\n\nInformation for compulsory internship for bachelor students\n\n\n\nHM, MG\n\n\nJul 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdvice on preparing and giving scientific talks\n\n\nPractical recommendations for preparing and delivering sicentific talks\n\n\n\nNZ\n\n\nMay 25, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "Home",
-      "Behavioral",
-      "Custom-built chin rests"
+      "Home"
     ]
   },
   {
-    "objectID": "dicom_to_glm/check_IntendedFor_field.html",
-    "href": "dicom_to_glm/check_IntendedFor_field.html",
-    "title": "Check IntendedFor field of the fmap’s JSON",
+    "objectID": "dicom_to_glm/troubleshooting.html",
+    "href": "dicom_to_glm/troubleshooting.html",
+    "title": "Troubleshooting",
     "section": "",
-    "text": "The “IntendedFor” field of the fmap’s JSON file tells fmriPrep for which (functional) data the distortion correction should be applied to.\nDepending on the conversion method you used to convert your DICOM to nifti files, the contents will look differently.\nAdditionally, depending on the version of fmriPrep you plan to use for preprocessing, you need different naming conventions of the entries.\nIn general, there are two naming conventions that might be used in the IntendedFor field:\nBIDS uri spec necessary for fmriprep 24.0.0 or newer:\n\n``` json\n\"IntendedFor\": [\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\", \n    etc\n    ]\n```\n\nOlder fmap spec necessary for fmriprep older than 24.0.0:\n\n``` json\n\"IntendedFor\": [\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\",\n    etc\n    ]\n```\nWith changing Versions of BIDS and BIDS-Apps, slight changes occur in how and where you have to include specific information. One example for this is the IntendedFor information in the fmap’s .json file.\nDue to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap’s “IntendedFor” field before running fmriPrep.\n\n1 Check the content of the JSON file\nNavigate to the fmap directory of a/each subject (*/bids/sub-999/ses-1/fmap/) and open the .json file\nScroll down to the very end of it. There should be a section that starts with IntendedFor and looks like this:\nIn General, all entries should follow the same naming convention (either the new or the old one, see above). If the naming convention corresponds to the fmriPrep version you want to use, you don´t have to change anything. If it does not correspond to the naming convention necessary for your version, you can follow the steps below to update the file.\nAdditionally, it may occur, that additional files are included in this field (e.g. files named “*part-phase*”) where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, your should remove the entries of these files (see below)\n\n\n2 Update “IntendedFor” field of the fmap’s JSON file\nThere is a dedicated script to update the contents of the fmap’s .json file. It can be found at /shared/update_json.py. To start and use the script:\n\nOpen a terminal \nType /shared/update_json.py\nIndicate if you want to change the naming convention (independent of the current version, the old naming convention is changed to the new one and vice versa if you select 1 (=Yes) here)\nIndicate if you want to remove entries from the field\nIf you want to remove entries, indicate the keywords that identify an entry to be removed\nProvide the path to your bids directory\n\nAfter providing all the inputs, the indicated changes will be performed and saved in the file automatically. Additionally, the original .json file will be saved as filename_orig.json (if the original entries are needed later again)\n\n\n\n\n Back to top"
+    "text": "This page is dedicated for Troubleshooting. Known errors and problems will be listed here with a possible solution for solving this issue. If you solved a problem that might be relevant for others as well, feel free to contact Maximilian (,Adam or Natalia) so that it can be added to this page as well.",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-but-no-distortion-correction-happened",
+    "href": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-but-no-distortion-correction-happened",
+    "title": "Troubleshooting",
+    "section": "2.1 I ran fMRIprep but no distortion correction happened",
+    "text": "2.1 I ran fMRIprep but no distortion correction happened\n\n2.1.1 Detection of this Problem\n\n2.1.1.1 Error Message\nThis problem might occur with a corresponding error message (and the fmriprep command stopping)\n\n\n2.1.1.2 Silent error\nIt can be hard to realize this issue as the output might not be visible anymore, or the problem “occurs silently” (no error message are shown at all).\nIf the distortion correction was successful, the subject’s .html should include a section \\(B_0\\) field mapping. As you can see in the image below, this would be shown at the top of the file where the different sections are listed as well:\nIf the distortion correction failed silently (thus, without an explicit error that is printed somewhere), the section is missing as whole and is not shown at the top of the .html file:\n\n\n\n2.1.2 Solution\n\nyou might be using a wrong BIDS specification in the fmap’s json file. See Information about BIDS uri, or the corresponding wiki entry.\nIf the content of the fmap’s .json file uses a different naming convention than necessary for your version of fmriPrep, no distortion correction is applie\n\n\\(\\to\\) Follow this wiki entry to check and update the entries of the fmap’s .json file",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/troubleshooting.html#valueerror-reference-passed-is-not-aligned-with-spline-grids",
+    "href": "dicom_to_glm/troubleshooting.html#valueerror-reference-passed-is-not-aligned-with-spline-grids",
+    "title": "Troubleshooting",
+    "section": "2.2 ValueError: Reference passed is not aligned with spline grids",
+    "text": "2.2 ValueError: Reference passed is not aligned with spline grids\nThis error sometimes occurs by chance, but should not appear regularly. It is caused by the coregistration algorithm of fmriprep itself. There are two options you can try:\n\nTry a different version of fmriprep\nTransform your T1w scan\n\n\n2.2.1 Transform your T1w scan\nTransforming your T1w scan to avoid this error is not the ideal solution, but it is a good workaround for this complex problem.\nTo transform your T1w scan:\n\nLoad your structural scan in freeview (identical process as described here for a functional scan)\nIn the menu-bar in freeview (top-left), select Tools &gt; Transform Volume...\nIn the resulting window, select Transform in the top menu and change the value in the second “line” (= Y (P-A)) to -2.5 (with the slider or enter the number directly). This will shift the T1w scan 2.5mm in the posterior direction. Subsequently, select Save Volume As\nYou can simply overwrite the existing T1w file which should already be selected (you could always reverse this step with the described method). Make sure to select the option Do not resample voxel data when saving (only update header)!\n\n\\(\\to\\) when you run freesurfer with this transformed T1w scan, the “Spline Grid Error” should not occur anymore.",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/troubleshooting.html#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors",
+    "href": "dicom_to_glm/troubleshooting.html#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors",
+    "title": "Troubleshooting",
+    "section": "2.3 If using already run FreeSurfer recon-all output and have specified an expert-opts file then fMRIprep shows multiple errors",
+    "text": "2.3 If using already run FreeSurfer recon-all output and have specified an expert-opts file then fMRIprep shows multiple errors\n\\(\\to\\) In the directory that has the prerun recon-all there is a folder scripts that saves the expert-opts file. Removing this file allows fMRIprep to run",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme",
+    "href": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme",
+    "title": "Troubleshooting",
+    "section": "2.4 I ran fMRIprep and the distortion correction of the data is too extreme",
+    "text": "2.4 I ran fMRIprep and the distortion correction of the data is too extreme\n\n\n\n\nAn example of poor distortion correction\n\n\n\n\nThis is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven’t been tested)",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/troubleshooting.html#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan",
+    "href": "dicom_to_glm/troubleshooting.html#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan",
+    "title": "Troubleshooting",
+    "section": "2.5 fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan",
+    "text": "2.5 fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan\n\\(\\to\\) the solution is (if your structural and functional scans are from the same session) to add the following flag:\n`--bold2t1w-init header`",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/RemoveDenoisingScan.html",
+    "href": "dicom_to_glm/RemoveDenoisingScan.html",
+    "title": "04 - Removing Noise Scan",
+    "section": "",
+    "text": "For this step, you need to already have nifti files! If you currently only have DICOM files, please convert them to nifti’s first!\nDepending on the sequence used in the scanner session, you might have data that were acquired with a denoising sequence. This is sometimes done, since it doesn´t take much time in the scanner, but you have the ability to denoise the data if it turns out to be necessary.\nBut by default, we don´t use this denoising information. Additionally, some applications (like fmriprep) cannot process data with this additional information!\nThus, before running our default pipeline with fmriprep, we have to remove this information from our scans!",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "04 - Removing Noise Scan"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview",
+    "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview",
+    "title": "04 - Removing Noise Scan",
+    "section": "1.1 Open freeview",
+    "text": "1.1 Open freeview\nYou can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:\n\nOpen a terminal (Monitor Icon at the bottom left on neurodesk) \nType ml freesurfer and press enter\nType freeview and press enter (from time to time, it can take a while until freeview opens, be patient! It is also possible, that some messages about runtime are printed in the terminal, but that is nothing to worry about!) \n\n\\(\\to\\) When freeview opened successfully, it should look like this:",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "04 - Removing Noise Scan"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume",
+    "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume",
+    "title": "04 - Removing Noise Scan",
+    "section": "1.2 Load a functional volume",
+    "text": "1.2 Load a functional volume\nNow you have to look at a functional scan to see if there is a denoising scan at the end.\nFor this, select File &gt; Load Volume (top left corner in freeview): \nA new window opens, asking you to Select volume file. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol \nNavigate to your func directory in your BIDS, select one of the nifti files of one of the runs and press Open afterwards \nNow, with the field Select volume file specified with the path(s) to the nifti file, you can click Open\nWhen the volume loaded, it should see some kind of data and something that looks like a brain:",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "04 - Removing Noise Scan"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-CheckDenoising",
+    "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-CheckDenoising",
+    "title": "04 - Removing Noise Scan",
+    "section": "1.3 Check for Denoising Scan",
+    "text": "1.3 Check for Denoising Scan\nTo check if a denoising scan is included in you data, use the slider next to Frames (left side, roughly in the middle), to navigate to the last frame. If a denoising sequence was used during data acquisition in the scanner, this frame looks “empty”. Toggle between the last and second to last frame, to visualize the difference even more \nIf you confirmed the denoising being present in one of your functional runs, they will probably be there for all your runs. It might be good to check every run anyway.",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "04 - Removing Noise Scan"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/Overview_fromDICOMtoGLM.html",
+    "href": "dicom_to_glm/Overview_fromDICOMtoGLM.html",
+    "title": "Overview - from DICOM to GLM",
+    "section": "",
+    "text": "1 General\nThis page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.\n\n\n2 DICOM-Files\n\nthe raw files from the scanner are DICOM-Files\nnot really useful since we need .nifti files for our analysis \\(\\qquad\\to\\) first step is to transform the DICOM- to .nift-files\n\n\n\n3 DICOM to nifti\n\nusing a script from Adam that can be found here (or here: /shared/dcm2bids.sh)\nresults in .nifti files in BIDS format\n\n\n\n4 Check the “IntendedFor” entry of the fmap’s JSON file\n\ndepending on what method you used to convert your DICOMs to niftis (or if you got a bids valid data from the MRI-Lab) and what version of fmriPrep you plan to use, it might be necessary to update the content of the “IntendedFor” field of the fmap’s JSON file\n\n\n\n5 Distribute the T1w files to participants?\n\nif you promised participants that they will get their T1w images, you should make sure that they really get them\nthis should be done before defacing\n\n\n\n6 Defacing your data\n\n\\(\\bf{You\\ have\\ to\\ deface\\ your\\ data\\ before\\ running\\ fmriprep\\ or\\ your\\ analysis!!!!!}\\)\nYou may want to save the “non-defaced” files somewhere else to give them to your participants\nYou should delete the “non-defaced” files either after you distributed them to the respective participants, or after your study ended\nNEVER share data that was not defaced before!\nDefacing is done with pydeface (Docker; Version 2.0.2)\n\n\n\n7 (Remove denoising scan from your data)\n\nif a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continuing\n\n\n\n8 fmriprep\n\nthis is one of many BIDS-Apps (that require a BIDS-valid Dataset)\nruns various preprocessing steps on it´s own\n\n\n\n9 first-level Analysis\n\n\n10 second-level Analysis\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis"
+    ]
   },
   {
     "objectID": "dicom_to_glm/DICOMtoBIDS.html",
@@ -996,249 +813,439 @@
     ]
   },
   {
-    "objectID": "dicom_to_glm/Overview_fromDICOMtoGLM.html",
-    "href": "dicom_to_glm/Overview_fromDICOMtoGLM.html",
-    "title": "Overview - from DICOM to GLM",
+    "objectID": "dicom_to_glm/check_IntendedFor_field.html",
+    "href": "dicom_to_glm/check_IntendedFor_field.html",
+    "title": "Check IntendedFor field of the fmap’s JSON",
     "section": "",
-    "text": "1 General\nThis page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.\n\n\n2 DICOM-Files\n\nthe raw files from the scanner are DICOM-Files\nnot really useful since we need .nifti files for our analysis \\(\\qquad\\to\\) first step is to transform the DICOM- to .nift-files\n\n\n\n3 DICOM to nifti\n\nusing a script from Adam that can be found here (or here: /shared/dcm2bids.sh)\nresults in .nifti files in BIDS format\n\n\n\n4 Check the “IntendedFor” entry of the fmap’s JSON file\n\ndepending on what method you used to convert your DICOMs to niftis (or if you got a bids valid data from the MRI-Lab) and what version of fmriPrep you plan to use, it might be necessary to update the content of the “IntendedFor” field of the fmap’s JSON file\n\n\n\n5 Distribute the T1w files to participants?\n\nif you promised participants that they will get their T1w images, you should make sure that they really get them\nthis should be done before defacing\n\n\n\n6 Defacing your data\n\n\\(\\bf{You\\ have\\ to\\ deface\\ your\\ data\\ before\\ running\\ fmriprep\\ or\\ your\\ analysis!!!!!}\\)\nYou may want to save the “non-defaced” files somewhere else to give them to your participants\nYou should delete the “non-defaced” files either after you distributed them to the respective participants, or after your study ended\nNEVER share data that was not defaced before!\nDefacing is done with pydeface (Docker; Version 2.0.2)\n\n\n\n7 (Remove denoising scan from your data)\n\nif a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continuing\n\n\n\n8 fmriprep\n\nthis is one of many BIDS-Apps (that require a BIDS-valid Dataset)\nruns various preprocessing steps on it´s own\n\n\n\n9 first-level Analysis\n\n\n10 second-level Analysis\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis"
-    ]
+    "text": "The “IntendedFor” field of the fmap’s JSON file tells fmriPrep for which (functional) data the distortion correction should be applied to.\nDepending on the conversion method you used to convert your DICOM to nifti files, the contents will look differently.\nAdditionally, depending on the version of fmriPrep you plan to use for preprocessing, you need different naming conventions of the entries.\nIn general, there are two naming conventions that might be used in the IntendedFor field:\nBIDS uri spec necessary for fmriprep 24.0.0 or newer:\n\n``` json\n\"IntendedFor\": [\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\", \n    etc\n    ]\n```\n\nOlder fmap spec necessary for fmriprep older than 24.0.0:\n\n``` json\n\"IntendedFor\": [\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\",\n    etc\n    ]\n```\nWith changing Versions of BIDS and BIDS-Apps, slight changes occur in how and where you have to include specific information. One example for this is the IntendedFor information in the fmap’s .json file.\nDue to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap’s “IntendedFor” field before running fmriPrep.\n\n1 Check the content of the JSON file\nNavigate to the fmap directory of a/each subject (*/bids/sub-999/ses-1/fmap/) and open the .json file\nScroll down to the very end of it. There should be a section that starts with IntendedFor and looks like this:\nIn General, all entries should follow the same naming convention (either the new or the old one, see above). If the naming convention corresponds to the fmriPrep version you want to use, you don´t have to change anything. If it does not correspond to the naming convention necessary for your version, you can follow the steps below to update the file.\nAdditionally, it may occur, that additional files are included in this field (e.g. files named “*part-phase*”) where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, your should remove the entries of these files (see below)\n\n\n2 Update “IntendedFor” field of the fmap’s JSON file\nThere is a dedicated script to update the contents of the fmap’s .json file. It can be found at /shared/update_json.py. To start and use the script:\n\nOpen a terminal \nType /shared/update_json.py\nIndicate if you want to change the naming convention (independent of the current version, the old naming convention is changed to the new one and vice versa if you select 1 (=Yes) here)\nIndicate if you want to remove entries from the field\nIf you want to remove entries, indicate the keywords that identify an entry to be removed\nProvide the path to your bids directory\n\nAfter providing all the inputs, the indicated changes will be performed and saved in the file automatically. Additionally, the original .json file will be saved as filename_orig.json (if the original entries are needed later again)\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "dicom_to_glm/RemoveDenoisingScan.html",
-    "href": "dicom_to_glm/RemoveDenoisingScan.html",
-    "title": "04 - Removing Noise Scan",
+    "objectID": "behavioral/chinrests/chinrests.html",
+    "href": "behavioral/chinrests/chinrests.html",
+    "title": "Custom-built chin rests",
     "section": "",
-    "text": "For this step, you need to already have nifti files! If you currently only have DICOM files, please convert them to nifti’s first!\nDepending on the sequence used in the scanner session, you might have data that were acquired with a denoising sequence. This is sometimes done, since it doesn´t take much time in the scanner, but you have the ability to denoise the data if it turns out to be necessary.\nBut by default, we don´t use this denoising information. Additionally, some applications (like fmriprep) cannot process data with this additional information!\nThus, before running our default pipeline with fmriprep, we have to remove this information from our scans!",
+    "text": "If you need a solid chinrest for your behavioral, EEG or brain stimulation experiment, we can create one ourselves using 3D printing, some standard parts and this tutorial\nhttps://www.thingiverse.com/thing:2968729#google_vignette\nwith some adaptations/improvements. If you need a chinrest, talk to Lukas. Note that it may take a few weeks since some parts need to be orders and or/printed.\nThe result will look something like this:\n\n\n\n\n Back to top",
     "crumbs": [
       "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "04 - Removing Noise Scan"
+      "Behavioral",
+      "Custom-built chin rests"
     ]
   },
   {
-    "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview",
-    "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview",
-    "title": "04 - Removing Noise Scan",
-    "section": "1.1 Open freeview",
-    "text": "1.1 Open freeview\nYou can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:\n\nOpen a terminal (Monitor Icon at the bottom left on neurodesk) \nType ml freesurfer and press enter\nType freeview and press enter (from time to time, it can take a while until freeview opens, be patient! It is also possible, that some messages about runtime are printed in the terminal, but that is nothing to worry about!) \n\n\\(\\to\\) When freeview opened successfully, it should look like this:",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "04 - Removing Noise Scan"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume",
-    "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume",
-    "title": "04 - Removing Noise Scan",
-    "section": "1.2 Load a functional volume",
-    "text": "1.2 Load a functional volume\nNow you have to look at a functional scan to see if there is a denoising scan at the end.\nFor this, select File &gt; Load Volume (top left corner in freeview): \nA new window opens, asking you to Select volume file. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol \nNavigate to your func directory in your BIDS, select one of the nifti files of one of the runs and press Open afterwards \nNow, with the field Select volume file specified with the path(s) to the nifti file, you can click Open\nWhen the volume loaded, it should see some kind of data and something that looks like a brain:",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "04 - Removing Noise Scan"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/RemoveDenoisingScan.html#sec-CheckDenoising",
-    "href": "dicom_to_glm/RemoveDenoisingScan.html#sec-CheckDenoising",
-    "title": "04 - Removing Noise Scan",
-    "section": "1.3 Check for Denoising Scan",
-    "text": "1.3 Check for Denoising Scan\nTo check if a denoising scan is included in you data, use the slider next to Frames (left side, roughly in the middle), to navigate to the last frame. If a denoising sequence was used during data acquisition in the scanner, this frame looks “empty”. Toggle between the last and second to last frame, to visualize the difference even more \nIf you confirmed the denoising being present in one of your functional runs, they will probably be there for all your runs. It might be good to check every run anyway.",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "04 - Removing Noise Scan"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/troubleshooting.html",
-    "href": "dicom_to_glm/troubleshooting.html",
-    "title": "Troubleshooting",
+    "objectID": "behavioral/2024-05-22/index.html",
+    "href": "behavioral/2024-05-22/index.html",
+    "title": "Vision tests",
     "section": "",
-    "text": "This page is dedicated for Troubleshooting. Known errors and problems will be listed here with a possible solution for solving this issue. If you solved a problem that might be relevant for others as well, feel free to contact Maximilian (,Adam or Natalia) so that it can be added to this page as well.",
+    "text": "Before starting any experiment with a subject, confirm that they have “normal vision” since it is a critical exclusion criteria for most of the studies in vision science.\n\n\nAccording to the World Heath Organization (WHO), “visual acuity is … a simple, non-invasive measure and critical to determine the presence of vision impairment” [1]. The vision impairment is an eye condition which causes imperfections in the function of visual system [2]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.\nIn our lab, we perform FrACT10 to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [3].\n\n\n\nStereopsis is also an important phenomenon for binocular rivalry since it is based on binocular disparity [4]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [5]. We use Random Dot V test with red cyan anaglyph glasses to quantify the stereopsis.\nThe difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above.\n\n\n\nFrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people.\n\nacuity_task                  4-step Landolt-Cs\nunit                          VAdec (1.0+) & LogMAR(&lt;0)\nlengthOfCalibrationRuler   173.0\ndistanceInCm               230.0\nmaxDecimalAcuity         2.41\ncontrastWeber             100.0\nnTrials                       24\nrangeLimitStatus           rangeOK\ncrowding                   0\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V:\nThe first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.\n\ndistanceInCm    230.0\nthreshold        hardest level with correct response =&lt; 3",
     "crumbs": [
       "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "Troubleshooting"
+      "Behavioral",
+      "Vision tests"
     ]
   },
   {
-    "objectID": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-but-no-distortion-correction-happened",
-    "href": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-but-no-distortion-correction-happened",
-    "title": "Troubleshooting",
-    "section": "2.1 I ran fMRIprep but no distortion correction happened",
-    "text": "2.1 I ran fMRIprep but no distortion correction happened\n\n2.1.1 Detection of this Problem\n\n2.1.1.1 Error Message\nThis problem might occur with a corresponding error message (and the fmriprep command stopping)\n\n\n2.1.1.2 Silent error\nIt can be hard to realize this issue as the output might not be visible anymore, or the problem “occurs silently” (no error message are shown at all).\nIf the distortion correction was successful, the subject’s .html should include a section \\(B_0\\) field mapping. As you can see in the image below, this would be shown at the top of the file where the different sections are listed as well:\nIf the distortion correction failed silently (thus, without an explicit error that is printed somewhere), the section is missing as whole and is not shown at the top of the .html file:\n\n\n\n2.1.2 Solution\n\nyou might be using a wrong BIDS specification in the fmap’s json file. See Information about BIDS uri, or the corresponding wiki entry.\nIf the content of the fmap’s .json file uses a different naming convention than necessary for your version of fmriPrep, no distortion correction is applie\n\n\\(\\to\\) Follow this wiki entry to check and update the entries of the fmap’s .json file",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "Troubleshooting"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/troubleshooting.html#valueerror-reference-passed-is-not-aligned-with-spline-grids",
-    "href": "dicom_to_glm/troubleshooting.html#valueerror-reference-passed-is-not-aligned-with-spline-grids",
-    "title": "Troubleshooting",
-    "section": "2.2 ValueError: Reference passed is not aligned with spline grids",
-    "text": "2.2 ValueError: Reference passed is not aligned with spline grids\nThis error sometimes occurs by chance, but should not appear regularly. It is caused by the coregistration algorithm of fmriprep itself. There are two options you can try:\n\nTry a different version of fmriprep\nTransform your T1w scan\n\n\n2.2.1 Transform your T1w scan\nTransforming your T1w scan to avoid this error is not the ideal solution, but it is a good workaround for this complex problem.\nTo transform your T1w scan:\n\nLoad your structural scan in freeview (identical process as described here for a functional scan)\nIn the menu-bar in freeview (top-left), select Tools &gt; Transform Volume...\nIn the resulting window, select Transform in the top menu and change the value in the second “line” (= Y (P-A)) to -2.5 (with the slider or enter the number directly). This will shift the T1w scan 2.5mm in the posterior direction. Subsequently, select Save Volume As\nYou can simply overwrite the existing T1w file which should already be selected (you could always reverse this step with the described method). Make sure to select the option Do not resample voxel data when saving (only update header)!\n\n\\(\\to\\) when you run freesurfer with this transformed T1w scan, the “Spline Grid Error” should not occur anymore.",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "Troubleshooting"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/troubleshooting.html#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors",
-    "href": "dicom_to_glm/troubleshooting.html#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors",
-    "title": "Troubleshooting",
-    "section": "2.3 If using already run FreeSurfer recon-all output and have specified an expert-opts file then fMRIprep shows multiple errors",
-    "text": "2.3 If using already run FreeSurfer recon-all output and have specified an expert-opts file then fMRIprep shows multiple errors\n\\(\\to\\) In the directory that has the prerun recon-all there is a folder scripts that saves the expert-opts file. Removing this file allows fMRIprep to run",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "Troubleshooting"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme",
-    "href": "dicom_to_glm/troubleshooting.html#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme",
-    "title": "Troubleshooting",
-    "section": "2.4 I ran fMRIprep and the distortion correction of the data is too extreme",
-    "text": "2.4 I ran fMRIprep and the distortion correction of the data is too extreme\n\n\n\n\nAn example of poor distortion correction\n\n\n\n\nThis is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven’t been tested)",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "Troubleshooting"
-    ]
-  },
-  {
-    "objectID": "dicom_to_glm/troubleshooting.html#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan",
-    "href": "dicom_to_glm/troubleshooting.html#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan",
-    "title": "Troubleshooting",
-    "section": "2.5 fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan",
-    "text": "2.5 fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan\n\\(\\to\\) the solution is (if your structural and functional scans are from the same session) to add the following flag:\n`--bold2t1w-init header`",
-    "crumbs": [
-      "Home",
-      "MRI: from DICOM to GLM Analysis",
-      "Troubleshooting"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Visual Neuroscience lab",
+    "objectID": "behavioral/2024-05-22/index.html#visual-acuity",
+    "href": "behavioral/2024-05-22/index.html#visual-acuity",
+    "title": "Vision tests",
     "section": "",
-    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\n\n\nNeurodesktop access\n\n\nHow to use Neurodesktop on the server\n\n\n\nNZ\n\n\nJul 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCheck IntendedFor field of the fmap’s JSON\n\n\nDescription of how to check and potentially update the fmap’s JSON file\n\n\n\nMG\n\n\nJul 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPflichtpraktikum\n\n\nInformation for compulsory internship for bachelor students\n\n\n\nHM, MG\n\n\nJul 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdvice on preparing and giving scientific talks\n\n\nPractical recommendations for preparing and delivering sicentific talks\n\n\n\nNZ\n\n\nMay 25, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nInternship Checklist\n\n\nInformation for starting as an intern\n\n\n\nNZ\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n Back to top",
+    "text": "According to the World Heath Organization (WHO), “visual acuity is … a simple, non-invasive measure and critical to determine the presence of vision impairment” [1]. The vision impairment is an eye condition which causes imperfections in the function of visual system [2]. We use visual acuity tests to quantify how acurately the visual system perceives the outer world.\nIn our lab, we perform FrACT10 to measure the visual acuity. The subjects having mild impairment or worse are excluded based on the scores of FrACT10. The threshold for exclusion is 0.40 logMAR or 0.4 decVA [3].",
     "crumbs": [
-      "Home"
+      "Home",
+      "Behavioral",
+      "Vision tests"
     ]
   },
   {
-    "objectID": "labmeeting.html",
-    "href": "labmeeting.html",
-    "title": "Information about our lab meeting",
+    "objectID": "behavioral/2024-05-22/index.html#stereoacuity",
+    "href": "behavioral/2024-05-22/index.html#stereoacuity",
+    "title": "Vision tests",
     "section": "",
-    "text": "Labmeeting\n\n\n\nLab\n\n\n\nInformation about our lab meeting\n\n\n\nNZ, MG\n\n\nJan 4, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#basics",
-    "href": "mri/analysis/7t_analysis_on_neurodesk.html#basics",
-    "title": "7T anatomical analysis on neurodesk",
-    "section": "Basics",
-    "text": "Basics\nAfter converting the data from DICOMS to niftis (BIDS format) you will notice that unlike 3T data, you might have collected 3 different anatomical scans:\n\nINV1 (1st inversion)\nINV2 (2nd inversion)\nUNI (MP2RAGE)\n\nThe files we really care about for the anatomical analysis are INV2 and UNI (MP2RAGE)\nWhen opening an MP2RAGE scan it is clear that there is a lot of noise that we do not get at 3T.\nThis means that we first need to get rid of this noise before using recon-all (recon-all will fail if trying to pass it these noisy images).\n\nThis means there are a few extra pieces of software that is needed to be able to run the anatomical analysis\n\n\nWhat software is needed for 7T anatomical analysis?\n\nPresurfer (uses MATLAB/ SPM12)\nCAT12\nFreeSurfer (to use recon-all)",
+    "text": "Stereopsis is also an important phenomenon for binocular rivalry since it is based on binocular disparity [4]. Therefore, the subjects who has a stereoacuity less than 30arcsec are considered as having poor stereovision and mostly excluded from binocular rivalry experiments [5]. We use Random Dot V test with red cyan anaglyph glasses to quantify the stereopsis.\nThe difficulty of the test increases while the number on the test window decreases. Considering the distance from the screen, our threshold is level 3. So, the subject should perceive 3D shape on Random Dot V test at least level 3 and above.",
     "crumbs": [
       "Home",
-      "MRI",
-      "7T anatomical analysis on neurodesk"
+      "Behavioral",
+      "Vision tests"
     ]
   },
   {
-    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#neurodesk-and-containers",
-    "href": "mri/analysis/7t_analysis_on_neurodesk.html#neurodesk-and-containers",
-    "title": "7T anatomical analysis on neurodesk",
-    "section": "Neurodesk and containers",
-    "text": "Neurodesk and containers\nContainers are explained in more detail here.\n\nPut simply, currently on neurodesk we cannot load 2 or 3 pieces of software at once and this means that the anatomical analysis of 7T data is a bit tricky.\nLuckily Denis Chaimow (link to github) has created a container in which we can run the analysis.\nThe container and scripts I edited to allow the use of processing anatomical results for a single subject with multiple sessions",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "7T anatomical analysis on neurodesk"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#how-to-run-the-script",
-    "href": "mri/analysis/7t_analysis_on_neurodesk.html#how-to-run-the-script",
-    "title": "7T anatomical analysis on neurodesk",
-    "section": "How to run the script?",
-    "text": "How to run the script?\n\nThe script should be located in /shared/7T_analysis/anatomy\n\n0. Open a terminal:\n\n\n\nOpening a terminal on neurodesk\n\n\n \n1. Start the container\n\nThe container can be started like so:\n\nsingularity run --bind /path/to/output:/derivatives /shared/7T_analysis/anatomy/mp2rage_recon-all.sif\n\nHere we need to make sure that the /path/to/output is exactly where our data is stored.\n\nFor example:\n\nHere my anatomical data folder is stored in /home/jovyan/7t_auditory/bids/sub-a001/ses-1\n\n\n\n\nLocating where the data is stored\n\n\n\nThis means that I want to mount this folder to the container so my command will be like so:\n\nsingularity run --bind /home/jovyan/7t_auditory/bids/sub-a001/ses-1/:/derivatives /shared/7T_analysis/anatomy/mp2rage_recon-all.sif\n\nThis then means that once in side the container the path to my data is now mounted to a folder called /derivative\nPut simply I create a link from my local folder /home/jovyan/7t_auditory/bids/sub-a001/ses-1/ to a folder inside the container called /derivatives\n\n2. Once inside the container\n\nTo know if you are in the container or not you will see the following:\n\n\n\n\nInside the container\n\n\n\nThis means that we are in our own environment and that we can run the command necessary to start the anatomical preprocessing\n\n3. Export FreeSurfer subjects directory\n\nThis command should be the same for everyone\n\nexport $SUBJECTS_DIR=/derivatives/mprage_recon-all/freesurfer\n4. Run the script\n\nWe need to now start the preprocessing script\n\n\n\n\n\n\n\nRecall\n\n\n\n\nRemember that we have mounted a folder to this folder: /derivatives\nThis means that everything you see inside of your local directory e.g. /home/jovyan/7t_auditory/bids/sub-a001/ses-1/ is mirrored inside the container\n\n\n\n\nTherefore, we can run the script like so:\n\nmp2rage_recon-all.py --inv2 /derivatives/anat/inv2.nii --uni /derivatives/anat/uni.nii\n5. The script will now start and run everything needed to run the anatomical analysis\n\n\n\n\n\n\nmultiple sessions?\n\n\n\n\nIf you have multiple sessions you need to make sure that all anatomical scans sessions are inside just 1 folder\nYou can then run the command:\n\nmp2rage_recon-all.py --inv2 /derivatives/anat/inv2_session1.nii /derivatives/anat/inv2_session2.nii --uni /derivatives/anat/uni_session1.nii /derivatives/anat/uni_session2.nii",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "7T anatomical analysis on neurodesk"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/7t_analysis_on_neurodesk.html#troubleshooting",
-    "href": "mri/analysis/7t_analysis_on_neurodesk.html#troubleshooting",
-    "title": "7T anatomical analysis on neurodesk",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nThe files will need to be unzipped first. This is becuase the script uses SPM12 and that this is only able to read files that end in .nii and not .nii.gz\n\nRun the commands in a new terminal window:\nml freesurfer\nmri_convert /path/to/file.nii.gz /path/to/file.nii\n\n\n\n\n\n\nValueError: substring not found\n\n\n\nOSError: This docstring was not generated by Nipype!\nThis error occurs for unknown reasons. The suggested fix is export FORCE_SPMMCR as an environment variable. So run this in the terminal:\n\nexport FORCE_SPMMCR=1\nhttps://neurostars.org/t/valueerror-substring-not-found-when-running-spm-spmcommand-version-with-spm-standalone-and-mcr-installation/24082",
-    "crumbs": [
-      "Home",
-      "MRI",
-      "7T anatomical analysis on neurodesk"
-    ]
-  },
-  {
-    "objectID": "mri/analysis/dicom_to_bids.html",
-    "href": "mri/analysis/dicom_to_bids.html",
-    "title": "Dicom to Bids conversion",
+    "objectID": "behavioral/2024-05-22/index.html#parameters-that-we-use",
+    "href": "behavioral/2024-05-22/index.html#parameters-that-we-use",
+    "title": "Vision tests",
     "section": "",
-    "text": "Documentation related to the conversion of dicoms to BIDS format\n\ndcm2niix github\npydicom\ndcmunpack\n\n\nSee also BIDS specificiation\n\nOther programs that can be used to convert dicoms to BIDS\n\nGoing from DICOMS to BIDS datasets (with folder structure):\nhttps://github.com/nipy/heudiconv https://github.com/cbedetti/Dcm2Bids https://github.com/jmtyszka/bidskit https://github.com/dangom/dac2bids\nGoing from DICOMS to NIFTI + BIDS JSON sidecar:\nhttps://github.com/rordenlab/dcm2niix\nmatlab dicom to nifti tool converter"
+    "text": "FrACT10: Test when both eyes are open and then, when only one eye open (left and right seperately). You may train the subject before testing because it is not so straight-forward for some people.\n\nacuity_task                  4-step Landolt-Cs\nunit                          VAdec (1.0+) & LogMAR(&lt;0)\nlengthOfCalibrationRuler   173.0\ndistanceInCm               230.0\nmaxDecimalAcuity         2.41\ncontrastWeber             100.0\nnTrials                       24\nrangeLimitStatus           rangeOK\ncrowding                   0\nthreshold                   logMAR =&lt; 0.4\n\nRandom Dot V:\nThe first number at the right bottom corner of test window indicates the level of difficulty. Test starting from level 6 - right-click increases and left-click decreases the level. When you move the cursor outside of the test window, the stimulus is regenereted.\nThe second number at the right bottom corner of test window indicates the orientation of the letter V. The opening of V is up for 1, right for 2, down for 3, and left for 4.\n\ndistanceInCm    230.0\nthreshold        hardest level with correct response =&lt; 3",
+    "crumbs": [
+      "Home",
+      "Behavioral",
+      "Vision tests"
+    ]
   },
   {
-    "objectID": "mri/analysis/dicom_to_bids.html#script",
-    "href": "mri/analysis/dicom_to_bids.html#script",
-    "title": "Dicom to Bids conversion",
-    "section": "Script",
-    "text": "Script\n\nI created a script found here that carries out the transformation from dicom to BIDS format\nThis is useful because often times we want to convert to BIDS and there are lots of different ways to do this (some more complicated than others)\nHere I wanted the script to be as easy as possible for a number of reasons but primarily so that anyone can run it (even without using .json files)"
-  },
-  {
-    "objectID": "mri/analysis/dicom_to_bids.html#how-to-use-the-script",
-    "href": "mri/analysis/dicom_to_bids.html#how-to-use-the-script",
-    "title": "Dicom to Bids conversion",
-    "section": "How to use the script",
-    "text": "How to use the script\n\nThe script will guide you through the process of converting from dicoms to BIDS\nWhat’s important to know is that the script is not always accurate and will require some input to correct some things\n\n \n\n1. Choose the name of the dicom folder in which to convert\n\n \n\n\n2. Optional: If there are subdirectories in the dicom folder (e.g. ses-1 or ses-2) pick one\n\n \n\n\n3. Get the name of BIDS subject\n\n\nWhat is often the case for us is that the dicoms folder for each participant is named differently to how we want out subject/ BIDS name to be.\n\n \n\n\n4. DICOM search. This will either use pydicom or dcmunpack\n\nFor some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes\n\n\nHere the script roughly unpacks all the dicoms ready for the step which renames files and folders and puts the niftis in these new folders\n\n\n \n\n\n5. Information about the renaming and BIDS conventions\n\npydicom and dcmunpack don’t get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format\n\n\nThe option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS\n\n\n \n\n\n6. Keep/ modify/ delete\n\nChoose to keep the dicom and the name of the dicom, modify it or delete it (ie don’t convert)\n\n\nAny action here will apply to the .nii.gz and the .json\n\n\n\nIf you want to modify the name of the BIDS file then choose modify and rename according to the BIDS naming convention\n\n\n \n\n\nIf you want to keep or modify the folder the BIDS file belong to then select either keep or modify\n\n\n\nHere I want to keep the folder func because it is correct\n\n\n\nHere I want to choose the folder extra (this is not a BIDS folder but I want to convert the dicom to a nifti, I’d remove this before fMRIprep)\n\n\n\nOften times the anat folder name is wrong. Here the name should just be anat\n\n \n\n\n7. Adding IntendedFor field to fmap json\n\nThe conversion does not always add the IntenderFor field to the .json in the fmap folder\nFor [distortion correction] to take place in fMRIprep it is necessary to add the IntendedFor field to the .json\nThe script uses jq to provide the insertion into the fmap .json file\nThe format that is added is not BIDS URI compliant but the script will output a text file that can be used to change the intendedfor field with BIDS uri compliant paths."
-  },
-  {
-    "objectID": "mri/analysis/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
-    "href": "mri/analysis/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
+    "objectID": "archive/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
+    "href": "archive/freesurfer FSFAST.html#reasons-to-use-freesurfers-fsfast",
     "title": "FreeSurfer FSFAST",
     "section": "Reasons to use FreeSurfers FSFAST",
     "text": "Reasons to use FreeSurfers FSFAST\n\nIf fitlins does not have a particular option for you that you would like to use i.e. different\nPotentially easier when working with surface space data (FSFAST was originally designed for surface space data)"
   },
   {
-    "objectID": "mri/analysis/freesurfer FSFAST.html#neurodesk",
-    "href": "mri/analysis/freesurfer FSFAST.html#neurodesk",
+    "objectID": "archive/freesurfer FSFAST.html#neurodesk",
+    "href": "archive/freesurfer FSFAST.html#neurodesk",
     "title": "FreeSurfer FSFAST",
     "section": "Neurodesk",
     "text": "Neurodesk\n\nWhat does a container mean\n\nNeurodesk has a whole host of software that is available for us to use\nNeurodesk works in which each piece of software has its own container\nSimply put for us this means that we use 1 piece of software that is contained inside its own environment\n\n\n\n\nExample of what containers mean\n\n\n\nSo for the example above if you were inside of the FreeSurfer container the only available software to you would be FreeSurfer\nMATLAB, fMRIprep and SPM would not be available to you\n\n \n\n\n\n\n\n\nNote: MATLAB runtime environment\n\n\n\nHowever, FreeSurfer uses something called a MATLAB runtime environment\n\nMATLAB runtime environment is smaller piece of software that is inside the FreeSurfer container\nFreeSurfer commands can be run without the whole of MATLAB directly and instead use this “MATLAB runtime environment”"
   },
   {
-    "objectID": "mri/analysis/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
-    "href": "mri/analysis/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
+    "objectID": "archive/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
+    "href": "archive/freesurfer FSFAST.html#freesurfer-commands-that-do-rely-on-the-matlab-runtime-environment",
     "title": "FreeSurfer FSFAST",
     "section": "FreeSurfer commands that do rely on the MATLAB runtime environment",
     "text": "FreeSurfer commands that do rely on the MATLAB runtime environment\n\nSometimes when running FreeSurfer commands on neurodesk you might run into an error like so:\n\n\n\n\n\n\n\nWhat this means is the following:\n\nFreeSurfer by default is looking for a whole MATLAB installation\nFreeSurfer does not know whether there is a MATLAB runtime environment\n\nThis is because the MATLAB runtime environment is installed in a folder somewhere"
   },
   {
-    "objectID": "mri/analysis/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
-    "href": "mri/analysis/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
+    "objectID": "archive/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
+    "href": "archive/freesurfer FSFAST.html#steps-to-run-freesurfer-commands",
     "title": "FreeSurfer FSFAST",
     "section": "Steps to run FreeSurfer commands",
     "text": "Steps to run FreeSurfer commands\n1. Start a FreeSurfer container:\n\n\n\n\n\n \n2. Set up your environment variables:\n\nWhen using FreeSurfer it’s important to tell FreeSurfer where to find the subjects directory (SUBJECTS_DIR)\n\n\n(see FreeSurfers FSFAST tutorial for more information)\n\nFor example:\nexport SUBJECTS_DIR=$TUTORIAL_DATA/buckner_data/tutorial_subjs\n \n3. Change directory to where your data is:\nFor example:\ncd data\n \n4. Try and run the command first:\nFor example:\nFreeview ← this doesn’t rely on MATLAB so the freeview window should open\nrecon-all ← this doesn’t rely on MATLAB either so should work\nmri_vol2vol ← this doesn’t rely on MATLAB so should also work\nmkcontrast-sess ← this does rely on MATLAB runtime environment\n \n5. What to do if your command doesn’t work?\nIf you run a command for example:\nmkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1\nAnd then see an error like so:\n\n\n\n\n\n\nFigure 1\n\n\n\n\nThis means that FreeSurfer doesn’t know where the MATLAB runtime environment is therefore run the following:\n\nexport FS_MCRROOT=/opt/MCR2019b/v97/\nThe command above is important to tell FreeSurfer where the MATLAB runtime environment is\n \n6. Re-run the command again\n\nIf you fall into the error as above Figure 1 : then run the command using -mcr 1\n\nFor example:\nmkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1 -mcr 1"
+  },
+  {
+    "objectID": "archive/dicom_to_bids.html",
+    "href": "archive/dicom_to_bids.html",
+    "title": "Dicom to Bids conversion",
+    "section": "",
+    "text": "Documentation related to the conversion of dicoms to BIDS format\n\ndcm2niix github\npydicom\ndcmunpack\n\n\nSee also BIDS specificiation\n\nOther programs that can be used to convert dicoms to BIDS\n\nGoing from DICOMS to BIDS datasets (with folder structure):\nhttps://github.com/nipy/heudiconv https://github.com/cbedetti/Dcm2Bids https://github.com/jmtyszka/bidskit https://github.com/dangom/dac2bids\nGoing from DICOMS to NIFTI + BIDS JSON sidecar:\nhttps://github.com/rordenlab/dcm2niix\nmatlab dicom to nifti tool converter"
+  },
+  {
+    "objectID": "archive/dicom_to_bids.html#script",
+    "href": "archive/dicom_to_bids.html#script",
+    "title": "Dicom to Bids conversion",
+    "section": "Script",
+    "text": "Script\n\nI created a script found here that carries out the transformation from dicom to BIDS format\nThis is useful because often times we want to convert to BIDS and there are lots of different ways to do this (some more complicated than others)\nHere I wanted the script to be as easy as possible for a number of reasons but primarily so that anyone can run it (even without using .json files)"
+  },
+  {
+    "objectID": "archive/dicom_to_bids.html#how-to-use-the-script",
+    "href": "archive/dicom_to_bids.html#how-to-use-the-script",
+    "title": "Dicom to Bids conversion",
+    "section": "How to use the script",
+    "text": "How to use the script\n\nThe script will guide you through the process of converting from dicoms to BIDS\nWhat’s important to know is that the script is not always accurate and will require some input to correct some things\n\n \n\n1. Choose the name of the dicom folder in which to convert\n\n \n\n\n2. Optional: If there are subdirectories in the dicom folder (e.g. ses-1 or ses-2) pick one\n\n \n\n\n3. Get the name of BIDS subject\n\n\nWhat is often the case for us is that the dicoms folder for each participant is named differently to how we want out subject/ BIDS name to be.\n\n \n\n\n4. DICOM search. This will either use pydicom or dcmunpack\n\nFor some reason pydicom runs a lot faster!!! dcmunpack can take hours but using pydicom can be finished in a few minutes\n\n\nHere the script roughly unpacks all the dicoms ready for the step which renames files and folders and puts the niftis in these new folders\n\n\n \n\n\n5. Information about the renaming and BIDS conventions\n\npydicom and dcmunpack don’t get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format\n\n\nThe option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS\n\n\n \n\n\n6. Keep/ modify/ delete\n\nChoose to keep the dicom and the name of the dicom, modify it or delete it (ie don’t convert)\n\n\nAny action here will apply to the .nii.gz and the .json\n\n\n\nIf you want to modify the name of the BIDS file then choose modify and rename according to the BIDS naming convention\n\n\n \n\n\nIf you want to keep or modify the folder the BIDS file belong to then select either keep or modify\n\n\n\nHere I want to keep the folder func because it is correct\n\n\n\nHere I want to choose the folder extra (this is not a BIDS folder but I want to convert the dicom to a nifti, I’d remove this before fMRIprep)\n\n\n\nOften times the anat folder name is wrong. Here the name should just be anat\n\n \n\n\n7. Adding IntendedFor field to fmap json\n\nThe conversion does not always add the IntenderFor field to the .json in the fmap folder\nFor [distortion correction] to take place in fMRIprep it is necessary to add the IntendedFor field to the .json\nThe script uses jq to provide the insertion into the fmap .json file\nThe format that is added is not BIDS URI compliant but the script will output a text file that can be used to change the intendedfor field with BIDS uri compliant paths."
+  },
+  {
+    "objectID": "archive.html",
+    "href": "archive.html",
+    "title": "Archive",
+    "section": "",
+    "text": "FreeSurfer FSFAST\n\n\n\nMRI\n\n\nAnalysis\n\n\narchived\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDicom to Bids conversion\n\n\n\nMRI\n\n\nBIDS\n\n\nDICOM\n\n\narchived\n\n\n\nhow to convert from dicom’s to bids\n\n\n\nAC\n\n\nAug 12, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "Archive"
+    ]
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html",
+    "href": "behavioral/2024-05-23/index.html",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0",
+    "crumbs": [
+      "Home",
+      "Behavioral",
+      "BIDS for behavioral studies"
+    ]
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#resources",
+    "href": "behavioral/2024-05-23/index.html#resources",
+    "title": "BIDS for behavioral studies",
+    "section": "",
+    "text": "Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0",
+    "crumbs": [
+      "Home",
+      "Behavioral",
+      "BIDS for behavioral studies"
+    ]
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#software",
+    "href": "behavioral/2024-05-23/index.html#software",
+    "title": "BIDS for behavioral studies",
+    "section": "Software:",
+    "text": "Software:\nbids-matlab |\nbids-starter-kit on GitHub |\nJSONio on GitHub",
+    "crumbs": [
+      "Home",
+      "Behavioral",
+      "BIDS for behavioral studies"
+    ]
+  },
+  {
+    "objectID": "behavioral/2024-05-23/index.html#how-to-implement",
+    "href": "behavioral/2024-05-23/index.html#how-to-implement",
+    "title": "BIDS for behavioral studies",
+    "section": "How to implement",
+    "text": "How to implement\nYou may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.\n\nAfter preprocessing:\ncreate_events_tsv_json_full.m\n\n\nBefore finalizing everything:\ncreateBIDS_participants_tsv.m\ncreateBIDS_dataset_description_json.m\n\n\nPipeline for transriv project as an example\n\nAdd ‘transriv-bids’ to matlab path\nGo to the root_dir or use the full path of root_dir as input to the functions\nPreprocess data from a subject:\n\ncreateBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)\n\nCreate dataset files by running transriv_finalizeBIDS.m (when data collection is finished)\n\nThe folder structure based on BIDS:\nroot_dir\n  └─ ‘transriv’\n        ├─ participants.xlsx\n        ├─ participants.tsv\n        ├─ participants.json\n        ├─ sourcedata\n        │     └─ sub-S001\n        │         └─ ses-Rivalry\n        │               └─ beh\n        │                   └─ sub-S001_ses-Rivalry_run-GG_beh.mat\n        └─ rawdata\n             └─ sub-S001\n                 └─ ses-Rivalry\n                     └─ beh\n                         ├─ sub-S001_ses-Rivalry_run-GG_beh.json\n                         └─ sub-S001_ses-Rivalry_run-GG_beh.tsv\nLink to our GitHub repo containing relevant scripts",
+    "crumbs": [
+      "Home",
+      "Behavioral",
+      "BIDS for behavioral studies"
+    ]
+  },
+  {
+    "objectID": "behavioral.html",
+    "href": "behavioral.html",
+    "title": "Information about collecting behavioural data",
+    "section": "",
+    "text": "Custom-built chin rests\n\n\n\n3D-Print\n\n\n\nInformation about producing a chinrest for behavioral experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBIDS for behavioral studies\n\n\n\nBIDS\n\n\nBehavioral\n\n\n\nHow to store your data in bids structure if you are using psychtoolbox\n\n\n\nCY\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVision tests\n\n\n\nVision-Prescreening\n\n\n\nHow to conduct vision tests\n\n\n\nCY\n\n\nMay 22, 2024\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "Behavioral"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/defacing.html",
+    "href": "dicom_to_glm/defacing.html",
+    "title": "03 - Defacing",
+    "section": "",
+    "text": "When we acquired data “ourselves” (and start with the dicom files), we have to deface the T1w-scan! (When we get our data from the MRI-Lab, it will already be defaced)\nTo deface your T1w-scan, you first need a T1w nifti file! If you currently have DICOM files, you have to convert them to nifti’s first!\nDefacing you T1w scans is an important preprocessing step that has to be done beforerunning fmriprep. If you run fmriprep without prior defacing, you´ll probably run into errors!\nImportant (if you promised participants that they´ll get their T1w scan): Since we get already defaced images when not testing ourselves, every participant only gets the defaced T1w-scans. Thus, you have to do the defacing before sending the file to your participant!",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "03 - Defacing"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/defacing.html#sec-startPydeface",
+    "href": "dicom_to_glm/defacing.html#sec-startPydeface",
+    "title": "03 - Defacing",
+    "section": "2.1 Start Pydeface (v.2.0.2)",
+    "text": "2.1 Start Pydeface (v.2.0.2)\nTo deface your t1w, you first have to open pydeface:\n\nClick on the Birds-Symbol at the bottom left\nHover Neurodesk\nHover All Applications\nScroll down until you find pydeface\nClick on pydeface 2.0.2 \n\nAfter it opens, it may need some time to load everything - be patient!\nFinally, it should look like this:",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "03 - Defacing"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/defacing.html#get-the-path-to-your-original-t1w-scan",
+    "href": "dicom_to_glm/defacing.html#get-the-path-to-your-original-t1w-scan",
+    "title": "03 - Defacing",
+    "section": "2.2 Get the path to your original T1w scan",
+    "text": "2.2 Get the path to your original T1w scan\n\nNavigate to the anatomical scan of the participant within your BIDS directory\nRight-click on the anatomical nifti file\nSelect `Copy Path(s)",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "03 - Defacing"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/defacing.html#the-pydeface-command",
+    "href": "dicom_to_glm/defacing.html#the-pydeface-command",
+    "title": "03 - Defacing",
+    "section": "2.3 The pydeface command",
+    "text": "2.3 The pydeface command\n\nGo back to the terminal window, where pydeface is loaded (or start it again)\nType pydeface\nEnter the path to your T1w scan (right-click + paste or type in the path)\nType --outfile\nRepeat Step 3 (with this approach, you “overwrite” the initial T1w with the then defaced T1w file)\nType --force\n\nIt should look like this: \npydeface /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --outfile /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --force\nThen, press enter. Again, it might take a few moments, until pydeface finishes, be patient! At the end, it should look like this:",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "03 - Defacing"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/defacing.html#the-next-steps",
+    "href": "dicom_to_glm/defacing.html#the-next-steps",
+    "title": "03 - Defacing",
+    "section": "2.4 The next steps",
+    "text": "2.4 The next steps\nCongratulations, you successfully defaced a T1w-scan and you are one step closer to analyzing your data!\nTo continue in your journey to your Analysis, please return to the Overview-Page to check what to do next.\nAlternatively, here is a list of potential next steps to continue with\n\nRemove Denoising Scans from your data?\nrun fmriprep",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "03 - Defacing"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/first_level_glm_nilearn.html",
+    "href": "dicom_to_glm/first_level_glm_nilearn.html",
+    "title": "06 - first level GLM",
+    "section": "",
+    "text": "After preprocessing your data, probably with fmriprep, it´s time to do your first level GLM (= general linear model).\nIn this step, you will compute mean contrast-estimates for predefined contrasts for each subject individually. These estimations will be used later in the second level Analysis, where you extract relevant (for your research question/hypothesis) values.\nFor all cases described below, there are generally three things you have to change before running the cells in the jupyter notebook (or the python script):\n\nChange the directories\nIndicate the task, the number of sessions and the subject\nImplement your contrasts\n\n\n1 Surface-based Analysis\nTo compute a first-level GLM you can adapt the following jupyter notebook: /shared/nilearn_ffx.ipynb\nYou can either run each cell separately (“Play”-Button at the top) after implementing the changes (if changes are needed), or first implement all changes and then run all cells automaticall (“Double-Play”-Button at the top)\n\nIn the second cell (indicated with [2]: at the left), change:\n\n\n\ndata_dir\nfmriprep_dir\ntask_label (this refers to how your files are named! \\(\\to\\) in your BIDS-valid naming of your file, what´s behind “task-” \\(\\to\\) For sub-12002_ses-1_task-loc_run-1_space-T1w_desc-preproc_bold.nii.gz the corresponding task_label would be loc \\(\\to\\) task_label = \"loc\")\nsub_labels\nAfter the comment # Loop over sessions: indicate the number of sessions, by “counting” from 1 to the number of sessions you did (if you did 4 sessions, the line should read for ses in [1, 2, 3, 4])\n\n\n\nIn the third cell (indicated with [3]: at the left), change the number of sessions similar to step 1e)\nIn the sixth cell (indicated with [6]: at the left):\n\n\n\nDefine your constrasts-dictionairy, by defining a name for each contrast (= key) and indicating how it is computed (= value)\nfor indicating how a contrast is computed, you can access the columns of the design matrix (that should be printed above this cell). Keep in mind, that for basic_contrasts[] you indicate the actual name of the column, not the index!\nyou can print the resulting contrasts matrices, but you don´t have to\n\n\n\nIn the seventh cell (indicated with [7]: at the left):\n\n\n\ndefine empty lists for each of your contrasts\nchange the respective names of the lists before the .append statement\nindicate the correct contrast names in the parameters of the .compute_contrast function\n\n\n\nIn the eighth cell (indicated with [8]: at the left): change contrasts_dict to match with your lists\nIn the second part of the eighth cell (somehow the enumeration is messed up there): comment out (using #) the line starting with data_dir = (since you should have writing access in your own directories and you already defined data_dir in the beginning of the script)\n\n\n\n2 Volume-based Analysis\nThere is also a script for Volume-based Analysis\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "06 - first level GLM"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
+    "href": "dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
+    "title": "02 - T1w for PBn",
+    "section": "",
+    "text": "It can be a good incentive to promote your study by offering participants to give them their T1w files (since everyone knows how cool images of brains are!) If you promise to give out the T1w-scans to participants, make sure, that you really do it!\nThere are only some things to remember:\n\nSince the scans are already defaced when we don´t scan ourself, participants always get the defaced T1w scan! Thus, if we acquired the data ourselves (and started with the dicom files) make sure to do the defacing before you send the T1w-file to the participants!\nIf you provide participants with their T1w scans, it might be a good idea to provide them with the software on how to look at their data! For example, you could point them to MRIcroGL as free tool that they can install themselves to look at their data: Link to MRIcroGL Download\nWe do not keep the “non-defaced” T1w scans of participants! Thus, delete the non-defaced T1w scan of a participant either immediately after defacing, or at the latest after your study finished!\n\n\n1 The next Steps\nTo continue in your journey to your Analysis, please return to the Overview-Page to check what to do next.\nAlternatively, here is a list of potential next steps to continue with\n\nDefacing\nRemove Denoising Scans from your data?\nfmriprep\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "02 - T1w for PBn"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm/run_fmriprep.html",
+    "href": "dicom_to_glm/run_fmriprep.html",
+    "title": "05 - fmriprep",
+    "section": "",
+    "text": "1 Before running fmriprep\nBefore you start fmriprep, you have to make sure, that you:\n\nhave nifti files in BIDS format\ndefaced your anatomical scans\nOptional: removed the noise scans from your functional data\nOptional: adapted the “IntendedFor” section in the fmap’s .json file (if you want to use fmriprep 24.0.0 or newer)\n\n\n\n2 Starting fmriprep\nTo start fmriprep, click on the bird symbol at the bottom left on neurodesk, hover neurodesk, then All applications and navigate to fmriprep. Select the version of fmriprep that you want to use \nAfter selecting your version, a new bash window opens and fmriprep loads. This can take a few moments, be patient! When everything is ready, the bottom line should state fmriprep-\"Version\" (with “Version” being whatever version you selected, for example fmriprep-24.1.1) \n\n\n3 Setting up necessary directories and defining “SUBJECTS_DIR”\nFirst, you need to create some new directories that are necessary for fmriprep to run properly. For this, enter the following command (adapt the path(s) if necessary)\nmkdir -p /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/\nBy confirming your command with Enter, you´ll find the new directory structure within you derivatives directory\nThen, we need to specify where fmriprep should store the resulting files with this command (again, adapt the path(s) if necessary):\nSUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/\n\n\n\nSet SUBJECTS_DIR\n\n\nHint: you can copy/paste both commands from above and execute them by pressing enter simultaneously, it doesn´t matter\n\n\n4 fmriprep command\nWith the setup done, you can now run the command:\nfmriprep /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant --bold2t1w-init header --force-bbr -w /home/jovyan/website/fmriprep_tmp --output-spaces T1w fsaverage fsnative --participant-label sub-999 --nprocs 8 --mem 10000 --skip_bids_validation --stop-on-first-crash -v --fs-license-file /home/jovyan/website/freesurferlicense/license.txt\nImportant: adapt the flag --participant-label sub-999 accordingly, so that you state the subject you want to preprocess\nHint: same as before, you could run this command with the two commands above for the setup as well. The only important thing is the order: first the command for making the directories, then defining SUBJECTS_DIRand finally the fmriprep command.\n\n\n5 Waiting\nWhen fmriprep started, now it´s probably time to get a coffee and do something else. This process will take quite some time (hours), you don´t have to stare at the output the whole time. You can also close the Tab where you opened neurodesk! Even if you close it, the program continues its work!\n\n\n6 Troubleshooting\n\\(\\to\\) If there are any problems, please refer to the dedicated troubleshooting page\n\n\n7 The next steps\nCongratulations, you successfully preprocessed your data and you are one step closer to analyzing your data!\nTo continue in your journey to your Analysis, please return to the Overview-Page to check what to do next.\nAlternatively, here is a list of potential next steps to continue with\n1.Retinotopic Mapping\n\nfirst-level GLM\nsecond-level GLM\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "MRI: from DICOM to GLM Analysis",
+      "05 - fmriprep"
+    ]
+  },
+  {
+    "objectID": "dicom_to_glm.html",
+    "href": "dicom_to_glm.html",
+    "title": "MRI: from DICOMs to GLM",
+    "section": "",
+    "text": "Check IntendedFor field of the fmap’s JSON\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nDescription of how to check and potentially update the fmap’s JSON file\n\n\n\nMG\n\n\nJul 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n06 - first level GLM\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nNeurodesk\n\n\nnilearn\n\n\n\nSeveral approaches to run a first level GLM using nilearn\n\n\n\nMG\n\n\nMay 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01 - DICOM to BIDS\n\n\n\nMRI\n\n\nDICOM\n\n\nBIDS\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to get from DICOM files to necessary nifti-files in BIDS format\n\n\n\nMG\n\n\nApr 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nOverview - from DICOM to GLM\n\n\nOverview about how to get from DICOM files from the Scanner to your GLM Analysis\n\n\n\nMG\n\n\nApr 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02 - T1w for PBn\n\n\n\nMRI\n\n\n\nInformation about how to provide participants with their T1w image\n\n\n\nMG\n\n\nApr 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03 - Defacing\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to deface your data\n\n\n\nMG\n\n\nApr 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nCollection of known potential problems and their solutions\n\n\n\nMG\n\n\nMar 27, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04 - Removing Noise Scan\n\n\n\nMRI\n\n\nPreprocessing\n\n\nNeurodesk\n\n\n\nStep by step description of how to remove the denoising scan from your data\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n05 - fmriprep\n\n\n\nMRI\n\n\nAnalysis\n\n\nfmriPrep\n\n\nNeurodesk\n\n\n\nStep by step description of how to run fmriprep\n\n\n\nMG\n\n\nMar 8, 2025\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "labmeeting/index.html",
+    "href": "labmeeting/index.html",
+    "title": "Labmeeting",
+    "section": "",
+    "text": "We meet every week in the corner office, alternating between Labmeetings and “Lunch & Science”. You can see the schedule on the calendar.\nIn labmeetings, we discuss organisatory issues and everyone can bring up potential topics or problems to discuss. Additionally, we do presentations of our work, discuss papers,…\nFor “Lunch & Science”, everyone gathers in the corner office with something to eat and we watch a talk related to our research.",
+    "crumbs": [
+      "Home",
+      "Labmeeting"
+    ]
+  },
+  {
+    "objectID": "labmeeting/index.html#fmri-methods",
+    "href": "labmeeting/index.html#fmri-methods",
+    "title": "Labmeeting",
+    "section": "1.1 fMRI methods",
+    "text": "1.1 fMRI methods\n\nMargulies et al., 2016: Hierarchy of areas based on the resting-state data: https://www.pnas.org/doi/10.1073/pnas.1608282113\nGlasser parcellation of the cortex, which everyone is using now: https://www.nature.com/articles/nature18933\nMultiple comparison correction methods for fMRI (no specific paper yet)\nHCP processing pipeline and CIFTI format (alternative to fmriprep and state-of-the-art for 7 T preprocessing): https://www.sciencedirect.com/science/article/pii/S1053811913005053?via%3Dihub\nResting-state connectivity of subcortical structures (including the claustrum) https://www.jneurosci.org/content/43/39/6609\nNeuroquery https://elifesciences.org/articles/53385\nNeurodesk https://www.nature.com/articles/s41592-023-02145-x\nWhite matter activations https://www.pnas.org/doi/10.1073/pnas.2219666120",
+    "crumbs": [
+      "Home",
+      "Labmeeting"
+    ]
+  },
+  {
+    "objectID": "labmeeting/index.html#subjective-experience",
+    "href": "labmeeting/index.html#subjective-experience",
+    "title": "Labmeeting",
+    "section": "1.2 Subjective experience",
+    "text": "1.2 Subjective experience\n\nSelf et al., 2019: ephys signatures of figure-ground segmentation in macaque V1: https://www.sciencedirect.com/science/article/pii/S0960982219301551\nRecent findings from Tsao lab: https://www.pnas.org/doi/10.1073/pnas.2221122120\nDMN and awareness: https://www.nature.com/articles/s41467-022-34410-6\nPerceptography: https://www.biorxiv.org/content/10.1101/2022.10.24.513337v2\nPerceptography in humans using visual illusions: https://www.science.org/doi/full/10.1126/sciadv.adj3906",
+    "crumbs": [
+      "Home",
+      "Labmeeting"
+    ]
+  },
+  {
+    "objectID": "labmeeting/index.html#general-methods",
+    "href": "labmeeting/index.html#general-methods",
+    "title": "Labmeeting",
+    "section": "1.3 General methods",
+    "text": "1.3 General methods\n\nStatistical power (small sample sizes): https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267527/\nStatistical power: https://elifesciences.org/articles/62461\nExperimental methods: https://www.frontiersin.org/articles/10.3389/fnhum.2018.00421/full\nScientific writing: https://stevenpinker.com/files/pinker/files/descioli_pinker_2021_piled_modifiers.pdf\nRandomization techniques for statistical inference: permutation, bootstrapping, Monte Carlo simulations (no specific paper yet)",
+    "crumbs": [
+      "Home",
+      "Labmeeting"
+    ]
+  },
+  {
+    "objectID": "labmeeting/index.html#ai",
+    "href": "labmeeting/index.html#ai",
+    "title": "Labmeeting",
+    "section": "1.4 AI",
+    "text": "1.4 AI\n\nhttps://www.sciencedirect.com/science/article/pii/S2589004222011853?via%3Dihub",
+    "crumbs": [
+      "Home",
+      "Labmeeting"
+    ]
+  },
+  {
+    "objectID": "mri/3D-prints/3d-prints.html",
+    "href": "mri/3D-prints/3d-prints.html",
+    "title": "3D printing a brain",
+    "section": "",
+    "text": "There are many guidelines and tutorials on how to 3D print a brain. The currently recommended procedure is to use this docker image:\nhttps://github.com/nimaid/mri2stl\nThe advantage is that the brain is printed with the cerebellum, and the number of things you manually need to do is minimal.\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "3D printing a brain"
+    ]
+  },
+  {
+    "objectID": "mri/analysis/bids.html",
+    "href": "mri/analysis/bids.html",
+    "title": "MRI BIDS and OSF",
+    "section": "",
+    "text": "Brain Imaging Data Structure (more information here).\n\n\nWith docker, you can run this line in the terminal:\n$ docker run -ti --rm -v [path_to_your_toplevel_bids_directory]:/data:ro bids/validator /data\nCommon issues:\n\nfiles don’t follow BIDS naming conventions (more info about filenames here)\nevents.tsv files are missing\nparticipants.tsv is missing\nparticipants.json file is missing or does not describe all variables from the tsv file\ndatasset_description is missing or there is no name of the dataset or author names in it.\nreadme file is missing or too short\n…",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "MRI BIDS and OSF"
+    ]
+  },
+  {
+    "objectID": "mri/analysis/bids.html#validating-bids-dataset",
+    "href": "mri/analysis/bids.html#validating-bids-dataset",
+    "title": "MRI BIDS and OSF",
+    "section": "",
+    "text": "With docker, you can run this line in the terminal:\n$ docker run -ti --rm -v [path_to_your_toplevel_bids_directory]:/data:ro bids/validator /data\nCommon issues:\n\nfiles don’t follow BIDS naming conventions (more info about filenames here)\nevents.tsv files are missing\nparticipants.tsv is missing\nparticipants.json file is missing or does not describe all variables from the tsv file\ndatasset_description is missing or there is no name of the dataset or author names in it.\nreadme file is missing or too short\n…",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "MRI BIDS and OSF"
+    ]
+  },
+  {
+    "objectID": "mri/analysis/fmriprep.html",
+    "href": "mri/analysis/fmriprep.html",
+    "title": "fMRIprep analysis",
+    "section": "",
+    "text": "Link to fMRIprep documentation\nLink to fMRIprep github (Useful information in the issues section about troubleshooting etc.)",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "fMRIprep analysis"
+    ]
+  },
+  {
+    "objectID": "mri/analysis/fmriprep.html#reasons-to-use-fmriprep",
+    "href": "mri/analysis/fmriprep.html#reasons-to-use-fmriprep",
+    "title": "fMRIprep analysis",
+    "section": "Reasons to use fMRIprep",
+    "text": "Reasons to use fMRIprep\n\nfMRIprep is a useful tool to preprocess fMRI data in a manor that can be reproducible across research\nWhere possible fMRIprep should be used in preprocessing to limit the variability involved in preprocessing data\nfMRIprep follows the BIDS format see here on how to validate bids\n\n \n\nPermissions\n\nfMRIprep is run as a docker container meaning that you will need to be added to the docker group on the server before running it\nBefore running fMRIprep it is necessary to create the folders that fMRIprep uses\n\nScratch directory (meaning just the temporary output files for fMRIprep)\nOutput directory (The actual output of fMRIprep)\n\nTo create the folders first run the following:\n\nmkdir $niidir/../fmriprep_tmp\nmkdir $niidir/derivatives/fmriprep\n\nTo avoid the output folders of fMRIprep being owned by root you can run fMRIprep with the following flags:\ndocker run -u $(id -u):$(id -g) ...\n\nNOTE: using fitlins does not currently work using the flag -u $(id -u):$(id -g) the user must specify their user id directly e.g. -u 1087:1092 see post about fitlins",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "fMRIprep analysis"
+    ]
+  },
+  {
+    "objectID": "mri/analysis/fmriprep.html#example-fmriprep-scripts",
+    "href": "mri/analysis/fmriprep.html#example-fmriprep-scripts",
+    "title": "fMRIprep analysis",
+    "section": "Example fMRIprep scripts",
+    "text": "Example fMRIprep scripts\n\nfMRIprep without prerun FreeSurfer\nAn example script of fMRIprep when there is no prerun FreeSurfer\nexport PATH=~/local/python2/:$PATH\nexport FREESURFER_HOME=/usr/local/freesurfer_7.3.2\nexport MATLAB=/usr/bin/matlab\nexport FSL_DIR=/usr/local/fsl\nexport FSF_OUTPUT_FORMAT=nii.gz\nniidir=/storage/adam/CLAUS_3T/pilots/bids\nexport SUBJECTS_DIR=$niidir/derivatives/freesurfer/\npath=($path /usr/local/matlab/R2019b/bin/)\nsource $FREESURFER_HOME/SetUpFreeSurfer.sh\n\nsubject=sub-01\n\nrsync -a -v $niidir/$subject/ses-1/anat/*T1w.nii.gz $niidir/../all_anat_faced/\n#--- deface ---#\nscansForDefacing=$(ls -1 $niidir/$subject/ses-1/anat/*.nii.gz)\necho $scansForDefacing\nfor theScan in $scansForDefacing; do\n    echo \"defacing scan $theScan\"\n    pydeface $theScan --outfile $theScan --force\ndone\n#--- mriqc (current v 23.0.1) ---#\ndocker run -it --rm -v $niidir:/data:ro -v $niidir/derivatives/mriqc:/out nipreps/mriqc:23.0.1 /data /out participant --participant_label $subject --no-sub\n\n\nmkdir $niidir/../fmriprep_tmp\nmkdir $niidir/derivatives/fmriprep\n\ndocker run -u $(id -u):$(id -g) --rm -it \\\n        -v /usr/local/freesurfer_7.3.2/license.txt:/opt/freesurfer/license.txt \\\n        -v $niidir/../fmriprep_tmp:/scratch -v $niidir:/data:ro \\\n        -v $niidir/derivatives/fmriprep:/out \\\n        -v $niidir/derivatives/freesurfer:/sub-dir nipreps/fmriprep:21.0.1 \\\n        /data /out participant --participant-label $subject \\\n        --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w\n \n\n\nfMRIprep prerun FreeSurfer (no hires)\nAn example script with prerun FreeSurfer (without hires options and biascorrecing the anatomical scan):\nexport PATH=~/local/python2/:$PATH\nexport FREESURFER_HOME=/usr/local/freesurfer_7.3.2\nexport MATLAB=/usr/bin/matlab\nexport FSL_DIR=/usr/local/fsl\nexport FSF_OUTPUT_FORMAT=nii.gz\nniidir=/storage/adam/CLAUS_3T/pilots/bids\nexport SUBJECTS_DIR=$niidir/derivatives/freesurfer/\npath=($path /usr/local/matlab/R2019b/bin/)\nsource $FREESURFER_HOME/SetUpFreeSurfer.sh\n\nsubject=sub-01\n\nrsync -a -v $niidir/$subject/ses-1/anat/*T1w.nii.gz $niidir/../all_anat_faced/\n#--- deface ---#\nscansForDefacing=$(ls -1 $niidir/$subject/ses-1/anat/*.nii.gz)\necho $scansForDefacing\nfor theScan in $scansForDefacing; do\n    echo \"defacing scan $theScan\"\n    pydeface $theScan --outfile $theScan --force\ndone\n#--- mriqc (current v 23.0.1) ---#\ndocker run -it --rm -v $niidir:/data:ro -v $niidir/derivatives/mriqc:/out nipreps/mriqc:23.0.1 /data /out participant --participant_label $subject --no-sub\n# freesurfer\nrecon_path=$niidir/$subject/ses-1/anat/*.nii.gz\nrecon-all -all -i $recon_path -s $subject -threads 4\n\n\nmkdir $niidir/../fmriprep_tmp\nmkdir $niidir/derivatives/fmriprep\n\n# Here we add the flag --fs-output-dir to specify the directory where freesurfer output is located\ndocker run -u $(id -u):$(id -g) --rm -it \\\n        -v /usr/local/freesurfer_7.3.2/license.txt:/opt/freesurfer/license.txt \\\n        -v $niidir/../fmriprep_tmp:/scratch -v $niidir:/data:ro \\\n        -v $niidir/derivatives/fmriprep:/out \\\n        -v $niidir/derivatives/freesurfer:/sub-dir nipreps/fmriprep:21.0.1 \\\n        /data /out participant --fs-subjects-dir /sub-dir --participant-label $subject \\\n        --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "fMRIprep analysis"
+    ]
+  },
+  {
+    "objectID": "mri/analysis/fmriprep.html#troubleshooting",
+    "href": "mri/analysis/fmriprep.html#troubleshooting",
+    "title": "fMRIprep analysis",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nI ran fMRIprep but no distortion correction happened\n\nfMRIprep might be using an outdated BIDS specification. Here this is related to the fmap json file. See Information about BIDS uri.\n\n\nIf your fmap .json file is using the BIDS uri specification in the IntendedFor field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.\n\nBIDS uri spec:\n\"IntendedFor\": [\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\", \n    etc\n    ]\nOlder fmap spec:\n\"IntendedFor\": [\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz\",\n    \"ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz\",\n    etc\n    ]\n\n \n\n \n\nI ran fMRIprep and the distortion correction of the data is too extreme\n\n\n\n\n\nAn example of poor distortion correction\n\n\n\n\nThis is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven’t been tested)\n\n \n\n \n\nIf using already run FreeSurfer recon-all output and have specified an expert-opts file then fMRIprep shows multiple errors\n\nIn the directory that has the prerun recon-all there is a folder scripts that saves the expert-opts file. Removing this file allows fMRIprep to run\n\n\n\n\nIf fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan, the solution is (if your structural and functional scans are from the same session) to add the following flag:\n--bold2t1w-init header",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "fMRIprep analysis"
+    ]
+  },
+  {
+    "objectID": "mri/mni-space/mni-space.html",
+    "href": "mri/mni-space/mni-space.html",
+    "title": "MNI space",
+    "section": "",
+    "text": "This is a summary of useful information about MNI spaces, collected by Carmen. This page should be extended at some point to incorporate lab-specific information.\nShort: About the MNI space(s) – Lead-DBS\nDetailed and up-to-date: About the mNI space(s) - BIDS Team\n\n\n\n\n Back to top"
   },
   {
     "objectID": "mri/mri-lab-setup-2024/index.html",
@@ -1310,6 +1317,83 @@
     ]
   },
   {
+    "objectID": "neurodesk/neurodesktop.html#first-usage",
+    "href": "neurodesk/neurodesktop.html#first-usage",
+    "title": "Neurodesktop access",
+    "section": "First usage",
+    "text": "First usage\nThe first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#storing-data",
+    "href": "neurodesk/neurodesktop.html#storing-data",
+    "title": "Neurodesktop access",
+    "section": "Storing data",
+    "text": "Storing data\nIf working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#sharing-data",
+    "href": "neurodesk/neurodesktop.html#sharing-data",
+    "title": "Neurodesktop access",
+    "section": "Sharing data",
+    "text": "Sharing data\nAll neurodesk users have read and write permissions to /shared neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#data-transfer",
+    "href": "neurodesk/neurodesktop.html#data-transfer",
+    "title": "Neurodesktop access",
+    "section": "Data transfer",
+    "text": "Data transfer\nThere are currently two alternatives\n\nYou can transfer the data via nextcloud client, which is included in neurodsktop\n\n“file upload” button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#using-freesurfer",
+    "href": "neurodesk/neurodesktop.html#using-freesurfer",
+    "title": "Neurodesktop access",
+    "section": "Using FreeSurfer",
+    "text": "Using FreeSurfer\nTo force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows\nml freesurfer/7.4.1\ncd /storage\nfreeview\nTo set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)\nexport SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#using-fitlins",
+    "href": "neurodesk/neurodesktop.html#using-fitlins",
+    "title": "Neurodesktop access",
+    "section": "Using fitlins",
+    "text": "Using fitlins\nUsing FitLins (not a part of neurodesktop basic set of tools) with Singularity:\n\nsingularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg [your fitlins commands]\nPlease note that we are abandoning fitlins usage and are switching to nilearn for GLM analysis",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#resource-esp.-ram-usage",
+    "href": "neurodesk/neurodesktop.html#resource-esp.-ram-usage",
+    "title": "Neurodesktop access",
+    "section": "Resource (esp. RAM) usage",
+    "text": "Resource (esp. RAM) usage\nPlease keep an eye on your resource usage, especially RAM. If too much RAM is used up by users, the server will be slow and eventually unusable.\nThe overall resource usage on the server (all users) is displayed in the bottom left of the neurodesktop interface as blue and red bars:\n\n\n\nExample of about 50% RAM usage\n\n\nIf you want to check how much resources is used by you, open the terminal and type “htop” (you can use F6 to sort processes by “percentage memory”):\n\n\n\nExample of “normal” memory usage for running fMRIprep.",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
     "objectID": "neurodesk/neurodesktop.html#folder-mappings",
     "href": "neurodesk/neurodesktop.html#folder-mappings",
     "title": "Neurodesktop access",
@@ -1337,6 +1421,17 @@
     "title": "Neurodesktop access",
     "section": "Mount network shares",
     "text": "Mount network shares\nYou can mount network shares with Lukas’ helper script at /shared/mount_network_share.sh (i.e. you´ll see a directory through which you can access the network from within neurodesk)\n\nUsage: /shared/mount_network_share.sh &lt;mount_point&gt; &lt;share_choice|full_share_path&gt;\nShare choices\n\nJ \\(\\to\\) mounts //pslg067044.pers.ad.uni-graz.at/Allgemeine\nY \\(\\to\\) mounts //pers.ad.uni-graz.at/fs/ou/602\nAny other value \\(\\to\\) treated as a full UNC path (e.g. //server/share/path)\n\nExamples:\n\n/shared/mount_network_share.sh /home/jovyan/allg_j J\\(\\to\\) mounts the J network to /home/jovyan/allg_j (i.e. there will be a directory allg_j within your /home/jovyan/ directory that accesses the J network)\nshared/mount_network_share.sh /home/jovyan/allg_y Y\\(\\to\\) mounts the Y network to /home/jovyan/allg_y (i.e. there will be a directory allg_y within your /home/jovyan/ directory that accesses the Y network)",
+    "crumbs": [
+      "Home",
+      "Neurodesktop"
+    ]
+  },
+  {
+    "objectID": "neurodesk/neurodesktop.html#checking-resource-usage-directly-on-the-server",
+    "href": "neurodesk/neurodesktop.html#checking-resource-usage-directly-on-the-server",
+    "title": "Neurodesktop access",
+    "section": "Checking resource usage directly on the server",
+    "text": "Checking resource usage directly on the server\n\nresource usage per neurodesk container\n\ndocker stats\n\nper user and process\n\nhtop\n(all student containers are assigned to one user “allg_user”)",
     "crumbs": [
       "Home",
       "Neurodesktop"
@@ -1407,7 +1502,7 @@
     "href": "OtherTopics/CalculatingAPrioriPower.html#superpower",
     "title": "Calculating a priori sample size using G Power",
     "section": "3.3 Superpower",
-    "text": "3.3 Superpower\nAs the name suggests, it is super for power analysis :) However, you need to simulate your data to calculate required sample size. It might be useful to calculate actual power level. However, it is hard to create simulations in general for our studies in Visual Neuroscience Lab.\n\n# Experimental design\ndesign_result &lt;- Superpower::ANOVA_design(\n  design = \"3w*3w\",  # 3x2 within-subjects \n  n = 30,  # as a start point to find the required sample size\n  mu = c(500, 520, 540, 490, 510, 530, 480, 500, 520),  # average values for dependent variable\n  sd = 50,  # estimated standard deviation\n  r = 0.5,  # correlation between repeated measures\n  labelnames = c(\"Stimulus\", \"A\", \"B\", \"C\", \"Condition\", \"1\", \"2\", \"3\")\n)\n\n\n\n\n\n\n\n# simulation for power analysis\nSuperpower::ANOVA_power(design_result, nsims = 1000)\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            91.9     0.21484\nanova_Condition          100.0     0.50625\nanova_Stimulus:Condition   5.2     0.03282\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  54.3    0.404293\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.5    0.825044\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  19.7   -0.208131\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  19.0    0.209843\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.5    0.631395\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  53.7   -0.403817\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.3   -0.001351\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.3    0.411029\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  56.3    0.413685\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.3   -0.613982\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  15.2   -0.194671\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  18.5    0.218655\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.4   -0.805800\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  53.6   -0.407364\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.8    0.002806\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.028144\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.2   -0.612244\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  16.4   -0.198233\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.229456\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.2   -0.821577\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.0   -0.412438\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  56.5    0.417876\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.9    0.838376\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.2   -0.197593\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  18.6    0.209454\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.2    0.617345\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  56.0    0.416909\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.3   -0.618780\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  19.0   -0.210307\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.4    0.199834\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.9   -1.034277\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  90.9   -0.630142\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  21.7   -0.215556\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.7    0.407045\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.0    0.811379\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.1    0.412050\n\n\nWithin-Subject Factors Included: Check MANOVA Results\n\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            91.9     0.21484\nanova_Condition          100.0     0.50625\nanova_Stimulus:Condition   5.2     0.03282\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  54.3    0.404293\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.5    0.825044\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  19.7   -0.208131\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  19.0    0.209843\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.5    0.631395\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  53.7   -0.403817\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.3   -0.001351\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.3    0.411029\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  56.3    0.413685\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.3   -0.613982\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  15.2   -0.194671\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  18.5    0.218655\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.4   -0.805800\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  53.6   -0.407364\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.8    0.002806\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.028144\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  88.2   -0.612244\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  16.4   -0.198233\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.229456\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.2   -0.821577\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.0   -0.412438\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  56.5    0.417876\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.9    0.838376\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.2   -0.197593\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  18.6    0.209454\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  87.2    0.617345\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  56.0    0.416909\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.3   -0.618780\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  19.0   -0.210307\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.4    0.199834\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.9   -1.034277\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  90.9   -0.630142\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  21.7   -0.215556\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  55.7    0.407045\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.0    0.811379\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  57.1    0.412050",
+    "text": "3.3 Superpower\nAs the name suggests, it is super for power analysis :) However, you need to simulate your data to calculate required sample size. It might be useful to calculate actual power level. However, it is hard to create simulations in general for our studies in Visual Neuroscience Lab.\n\n# Experimental design\ndesign_result &lt;- Superpower::ANOVA_design(\n  design = \"3w*3w\",  # 3x2 within-subjects \n  n = 30,  # as a start point to find the required sample size\n  mu = c(500, 520, 540, 490, 510, 530, 480, 500, 520),  # average values for dependent variable\n  sd = 50,  # estimated standard deviation\n  r = 0.5,  # correlation between repeated measures\n  labelnames = c(\"Stimulus\", \"A\", \"B\", \"C\", \"Condition\", \"1\", \"2\", \"3\")\n)\n\n\n\n\n\n\n\n# simulation for power analysis\nSuperpower::ANOVA_power(design_result, nsims = 1000)\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            91.4     0.21656\nanova_Condition          100.0     0.49968\nanova_Stimulus:Condition   3.9     0.03219\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  54.9     0.40503\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.7     0.81386\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  19.2    -0.21314\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.9     0.19818\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  87.4     0.60559\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  58.1    -0.41919\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.3    -0.00170\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  53.1     0.39801\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  56.0     0.40788\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.0    -0.61598\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  16.8    -0.20517\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.6     0.20152\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.0    -0.82500\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  55.3    -0.40747\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.3    -0.00539\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0    -1.02707\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.2    -0.61417\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  18.6    -0.20477\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0    -1.23065\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.3    -0.81223\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  58.0    -0.41316\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.9     0.41079\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.9     0.82474\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  17.2    -0.20417\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.2     0.21202\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3     0.60737\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  56.4     0.40836\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  89.3    -0.61577\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  16.0    -0.19834\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.9     0.20237\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0    -1.03018\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.8    -0.60638\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.2    -0.20770\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  58.8     0.41911\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.9     0.81883\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  55.6     0.40303\n\n\nWithin-Subject Factors Included: Check MANOVA Results\n\n\nPower and Effect sizes for ANOVA tests\n                         power effect_size\nanova_Stimulus            91.4     0.21656\nanova_Condition          100.0     0.49968\nanova_Stimulus:Condition   3.9     0.03219\n\nPower and Effect sizes for pairwise comparisons (t-tests)\n                                                power effect_size\np_Stimulus_A_Condition_1_Stimulus_A_Condition_2  54.9     0.40503\np_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.7     0.81386\np_Stimulus_A_Condition_1_Stimulus_B_Condition_1  19.2    -0.21314\np_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.9     0.19818\np_Stimulus_A_Condition_1_Stimulus_B_Condition_3  87.4     0.60559\np_Stimulus_A_Condition_1_Stimulus_C_Condition_1  58.1    -0.41919\np_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.3    -0.00170\np_Stimulus_A_Condition_1_Stimulus_C_Condition_3  53.1     0.39801\np_Stimulus_A_Condition_2_Stimulus_A_Condition_3  56.0     0.40788\np_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.0    -0.61598\np_Stimulus_A_Condition_2_Stimulus_B_Condition_2  16.8    -0.20517\np_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.6     0.20152\np_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.0    -0.82500\np_Stimulus_A_Condition_2_Stimulus_C_Condition_2  55.3    -0.40747\np_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.3    -0.00539\np_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0    -1.02707\np_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.2    -0.61417\np_Stimulus_A_Condition_3_Stimulus_B_Condition_3  18.6    -0.20477\np_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0    -1.23065\np_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.3    -0.81223\np_Stimulus_A_Condition_3_Stimulus_C_Condition_3  58.0    -0.41316\np_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.9     0.41079\np_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.9     0.82474\np_Stimulus_B_Condition_1_Stimulus_C_Condition_1  17.2    -0.20417\np_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.2     0.21202\np_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3     0.60737\np_Stimulus_B_Condition_2_Stimulus_B_Condition_3  56.4     0.40836\np_Stimulus_B_Condition_2_Stimulus_C_Condition_1  89.3    -0.61577\np_Stimulus_B_Condition_2_Stimulus_C_Condition_2  16.0    -0.19834\np_Stimulus_B_Condition_2_Stimulus_C_Condition_3  17.9     0.20237\np_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0    -1.03018\np_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.8    -0.60638\np_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.2    -0.20770\np_Stimulus_C_Condition_1_Stimulus_C_Condition_2  58.8     0.41911\np_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.9     0.81883\np_Stimulus_C_Condition_2_Stimulus_C_Condition_3  55.6     0.40303",
     "crumbs": [
       "Home",
       "Other Topics",
@@ -1603,94 +1698,6 @@
       "Home",
       "People",
       "Scientific writing in practice"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#first-usage",
-    "href": "neurodesk/neurodesktop.html#first-usage",
-    "title": "Neurodesktop access",
-    "section": "First usage",
-    "text": "First usage\nThe first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#storing-data",
-    "href": "neurodesk/neurodesktop.html#storing-data",
-    "title": "Neurodesktop access",
-    "section": "Storing data",
-    "text": "Storing data\nIf working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#sharing-data",
-    "href": "neurodesk/neurodesktop.html#sharing-data",
-    "title": "Neurodesktop access",
-    "section": "Sharing data",
-    "text": "Sharing data\nAll neurodesk users have read and write permissions to /shared neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#data-transfer",
-    "href": "neurodesk/neurodesktop.html#data-transfer",
-    "title": "Neurodesktop access",
-    "section": "Data transfer",
-    "text": "Data transfer\nThere are currently two alternatives\n\nYou can transfer the data via nextcloud client, which is included in neurodsktop\n\n“file upload” button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#using-freesurfer",
-    "href": "neurodesk/neurodesktop.html#using-freesurfer",
-    "title": "Neurodesktop access",
-    "section": "Using FreeSurfer",
-    "text": "Using FreeSurfer\nTo force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows\nml freesurfer/7.4.1\ncd /storage\nfreeview\nTo set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)\nexport SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#using-fitlins",
-    "href": "neurodesk/neurodesktop.html#using-fitlins",
-    "title": "Neurodesktop access",
-    "section": "Using fitlins",
-    "text": "Using fitlins\nUsing FitLins (not a part of neurodesktop basic set of tools) with Singularity:\n\nsingularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg [your fitlins commands]\nPlease note that we are abandoning fitlins usage and are switching to nilearn for GLM analysis",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#resource-esp.-ram-usage",
-    "href": "neurodesk/neurodesktop.html#resource-esp.-ram-usage",
-    "title": "Neurodesktop access",
-    "section": "Resource (esp. RAM) usage",
-    "text": "Resource (esp. RAM) usage\nPlease keep an eye on your resource usage, especially RAM. If too much RAM is used up by users, the server will be slow and eventually unusable.\nThe overall resource usage on the server (all users) is displayed in the bottom left of the neurodesktop interface as blue and red bars:\n\n\n\nExample of about 50% RAM usage\n\n\nIf you want to check how much resources is used by you, open the terminal and type “htop” (you can use F6 to sort processes by “percentage memory”):\n\n\n\nExample of “normal” memory usage for running fMRIprep.",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
-    ]
-  },
-  {
-    "objectID": "neurodesk/neurodesktop.html#checking-resource-usage-directly-on-the-server",
-    "href": "neurodesk/neurodesktop.html#checking-resource-usage-directly-on-the-server",
-    "title": "Neurodesktop access",
-    "section": "Checking resource usage directly on the server",
-    "text": "Checking resource usage directly on the server\n\nresource usage per neurodesk container\n\ndocker stats\n\nper user and process\n\nhtop\n(all student containers are assigned to one user “allg_user”)",
-    "crumbs": [
-      "Home",
-      "Neurodesktop"
     ]
   }
 ]
