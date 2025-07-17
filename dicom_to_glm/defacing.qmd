@@ -10,15 +10,27 @@ author: MG
 date: 04/13/2025
 ---
 
+::: callout-warning
+## Ensure Defacing!
+
+Defacing your T1w scans is an important preprocessing step *that has to be done before* [running fmriprep](run_fmriprep.qmd) as you´ll probably run into errors otherwise!
+:::
+
 # General Information
 
-When we acquired data "ourselves" (and start with the dicom files), we have to deface the T1w-scan! (When we get our data from the MRI-Lab, it will already be defaced)
+When we acquired data "ourselves", we definetely have to deface the T1w-scan ([after converting the DICOMs to niftis](DICOMtoBIDS.qmd)) before we can continue!
 
-To deface your T1w-scan, you first need a T1w nifti file! If you currently have DICOM files, you have to [convert them to nifti's first](DICOMtoBIDS.qmd)!
+When acquiring data during regular scanner times, we already get nifti files. There should be a directory `rawdata`, which contains the data in BIDS-Format. Additionally there is a directory `faced`.
 
-**Defacing you T1w scans is an important preprocessing step *that has to be done before*[running fmriprep](run_fmriprep.qmd). If you run fmriprep without prior defacing, you´ll probably run into errors!**
+In theory, the directory `faced` should contain the original T1w-niftis that you can [send to the participant](ProvidingParticipantsWithTheirT1wFile.qmd) and the T1w-niftis within `rawdata` should already be defaced (and thus be ready to further work with them, e.g. [fmriprep](run_fmriprep.qmd)).
 
-*Important* (if you [promised participants that they´ll get their T1w scan](ProvidingParticipantsWithTheirT1wFile.qmd)): Since we get already defaced images when not testing ourselves, every participant only gets the defaced T1w-scans. Thus, you have to do the defacing *before* sending the file to your participant!
+However, sometimes the automatic defacing at the MRI-Lab does not work as intended, potentially resulting in "non-defaced" T1w-niftis in the `rawdata` directory! Thus, you should *always* check the T1w-nifti in `rawdata` to ensure that it is defaced and avoid potential subsequent problems.
+
+::: callout-important
+## Don´t forget your participants!
+
+If you [promised participants that they´ll get their T1w scan](ProvidingParticipantsWithTheirT1wFile.qmd): When the data was acquired outside the regular scanning times (i.e. we start with the DICOMs), make sure to save the T1w-nifti once separately before defacing!
+:::
 
 # Defacing your T1w-Scan
 
@@ -78,6 +90,10 @@ To continue in your journey to your Analysis, please return to the [Overview-Pag
 
 Alternatively, here is a list of potential next steps to continue with
 
-1.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+1. [Provide Participants their T1w file](ProvidingParticipantsWithTheirT1wFile.qmd)
 
-2.  [run fmriprep](run_fmriprep.qmd)
+2.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+
+3. [Check the IntendedFor field of the fmap](check_IntendedFor_field.qmd)
+
+4.  [run fmriprep](run_fmriprep.qmd)

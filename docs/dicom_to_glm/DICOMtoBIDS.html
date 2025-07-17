@@ -266,9 +266,18 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
+ <span class="menu-text">dicom_to_glm/ckeck_IntendedFor_field.qmd</span>
+  </li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 - fmriprep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -296,12 +305,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Retinotopic Mapping</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3D printing a brain</span></a>
   </div>
@@ -322,6 +325,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MNI space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -575,13 +584,13 @@ window.Quarto = {
 <h1 data-number="1"><span class="header-section-number">1</span> DICOM-Files</h1>
 <ul>
 <li>the raw files from the scanner are DICOM-Files</li>
-<li>not really useful since we need .nifti files for our analysis <img src="./images/01_dcm2bids/001_1_DICOMS.png" class="img-fluid" alt="DICOM-Files"></li>
+<li>not really useful as we need .nifti files for our analysis <img src="./images/01_dcm2bids/001_1_DICOMS.png" class="img-fluid" alt="DICOM-Files"></li>
 </ul>
 <p><span class="math inline">\(\qquad\to\)</span> first step is to transform the DICOM- to nifti-files</p>
 </section>
 <section id="from-dicom-to-nifti-in-bids-format" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> From Dicom to nifti in BIDS format</h1>
-<p>Even though we often get the data from the scanner already in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, there can be cases when you have to do this conversion by yourself. For this, you can either use bidscoiner, or a script from Adam: <code>dcm2bids.sh</code> (You can find this script here: <code>/shared/website/dcm2bids.sh</code>).</p>
+<p>Even though we often get the data from the scanner already in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, there can be cases when you have to do this conversion by yourself. For this, you can either use <a href="#sec-bidscoiner">bidscoiner</a>, or a <a href="#sec-script">script from Adam</a>: <code>dcm2bids.sh</code> (You can find this script here: <code>/shared/website/dcm2bids.sh</code>).</p>
 <p><em>For both, you need access to <a href="../neurodesk/neurodesktop.html">Neurodesk</a>!</em></p>
 <section id="about-bids" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="about-bids"><span class="header-section-number">2.1</span> About BIDS</h2>

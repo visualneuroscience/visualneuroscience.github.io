@@ -4,6 +4,7 @@ geometry: margin=3cm
 title: "Check IntendedFor field of the fmap's JSON"
 description: "Description of how to check and potentially update the fmap's JSON file"
 number-sections: true
+image: ./images/01_dcm2bids/29_json_initial.png
 categories: [MRI, Analysis, fmriPrep, Preprocessing, Neurodesk]
 author: MG
 date: 07/08/2025
@@ -53,22 +54,20 @@ In General, all entries should follow the same naming convention (either the new
 
 Additionally, it may occur, that additional files are included in this field (e.g. files named "\*part-phase\*") where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, your should remove the entries of these files (see below)
 
-
 # Update "IntendedFor" field of the fmap's JSON file
 
 There is a dedicated script to update the contents of the fmap's .json file. It can be found at `/shared/update_json.py`. To start and use the script:
 
-1. Open a terminal ![Open a Terminal](./images/01_dcm2bids/open_terminal.gif)
+1.  Open a terminal ![Open a Terminal](./images/01_dcm2bids/open_terminal.gif)
 
-2. Type `/shared/update_json.py`
+2.  Type `/shared/update_json.py`
 
-3. Indicate if you want to change the naming convention (independent of the current version, the old naming convention is changed to the new one and vice versa if you select 1 (=Yes) here)
+3.  Indicate if you want to change the naming convention (independent of the current version, the old naming convention is changed to the new one and vice versa if you select 1 (=Yes) here)
 
-4. Indicate if you want to remove entries from the field
+4.  Indicate if you want to remove entries from the field
 
-5. If you want to remove entries, indicate the keywords that identify an entry to be removed
+5.  If you want to remove entries, indicate the keywords that identify an entry to be removed
 
-6. Provide the path to your bids directory
-
+6.  Provide the path to your bids directory
 
 After providing all the inputs, the indicated changes will be performed and saved in the file automatically. Additionally, the original .json file will be saved as filename_orig.json (if the original entries are needed later again)

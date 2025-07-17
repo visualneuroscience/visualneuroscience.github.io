@@ -260,9 +260,18 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
+ <span class="menu-text">dicom_to_glm/ckeck_IntendedFor_field.qmd</span>
+  </li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 - fmriprep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -290,12 +299,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Retinotopic Mapping</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3D printing a brain</span></a>
   </div>
@@ -316,6 +319,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MNI space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -474,7 +483,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="M0QtUHJpbnQ=">3D-Print <span class="quarto-category-count">(1)</span></div><div class="category" data-category="N1Q=">7T <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QW5hbHlzaXM=">Analysis <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QklEUw==">BIDS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RElDT00=">DICOM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TVJJ">MRI <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Tk5MLUdvZ2dsZXM=">NNL-Goggles <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV1cm9kZXNr">Neurodesk <span class="quarto-category-count">(4)</span></div><div class="category" data-category="T1NG">OSF <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGh5c2lvbG9neQ==">Physiology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmV0aW5vdG9weQ==">Retinotopy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm1yaVByZXA=">fmriPrep <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="M0QtUHJpbnQ=">3D-Print <span class="quarto-category-count">(1)</span></div><div class="category" data-category="N1Q=">7T <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QW5hbHlzaXM=">Analysis <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QklEUw==">BIDS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RElDT00=">DICOM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TVJJ">MRI <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Tk5MLUdvZ2dsZXM=">NNL-Goggles <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV1cm9kZXNr">Neurodesk <span class="quarto-category-count">(4)</span></div><div class="category" data-category="T1NG">OSF <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGh5c2lvbG9neQ==">Physiology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm1yaVByZXA=">fmriPrep <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
@@ -503,7 +512,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TVJJJTJDM0QtUHJpbnQ=" data-listing-date-sort="1728511200000" data-listing-file-modified-sort="1746696936383" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
+<div class="g-col-1" data-index="0" data-categories="TVJJJTJDM0QtUHJpbnQ=" data-listing-date-sort="1728511200000" data-listing-file-modified-sort="1744790637909" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
 <a href="./mri/3D-prints/3d-prints.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -536,7 +545,7 @@ Oct 10, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="TVJJJTJDN1QlMkNBbmFseXNpcyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1737932400000" data-listing-file-modified-sort="1746696936384" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="634">
+<div class="g-col-1" data-index="1" data-categories="TVJJJTJDN1QlMkNBbmFseXNpcyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1737932400000" data-listing-file-modified-sort="1744793026963" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="634">
 <a href="./mri/analysis/7t_analysis_on_neurodesk.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -575,7 +584,7 @@ Jan 27, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="QklEUyUyQ09TRg==" data-listing-date-sort="1716415200000" data-listing-file-modified-sort="1746696936385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
+<div class="g-col-1" data-index="2" data-categories="QklEUyUyQ09TRg==" data-listing-date-sort="1716415200000" data-listing-file-modified-sort="1744790680480" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
 <a href="./mri/analysis/bids.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -606,7 +615,7 @@ May 23, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="RElDT00lMkNCSURTJTJDTVJJJTJDTmV1cm9kZXNr" data-listing-date-sort="1723413600000" data-listing-file-modified-sort="1746696936387" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="696">
+<div class="g-col-1" data-index="3" data-categories="RElDT00lMkNCSURTJTJDTVJJJTJDTmV1cm9kZXNr" data-listing-date-sort="1723413600000" data-listing-file-modified-sort="1744790835912" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="696">
 <a href="./mri/analysis/dicom_to_bids.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -645,7 +654,7 @@ Aug 12, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="TVJJJTJDQW5hbHlzaXMlMkNOZXVyb2Rlc2slMkNmbXJpUHJlcA==" data-listing-date-sort="1720389600000" data-listing-file-modified-sort="1746696936388" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="869">
+<div class="g-col-1" data-index="4" data-categories="TVJJJTJDQW5hbHlzaXMlMkNOZXVyb2Rlc2slMkNmbXJpUHJlcA==" data-listing-date-sort="1720389600000" data-listing-file-modified-sort="1744790825270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="869">
 <a href="./mri/analysis/fmriprep.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -684,7 +693,7 @@ Jul 8, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="TVJJJTJDQW5hbHlzaXMlMkNOZXVyb2Rlc2s=" data-listing-date-sort="1736982000000" data-listing-file-modified-sort="1746696936389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="491">
+<div class="g-col-1" data-index="5" data-categories="TVJJJTJDQW5hbHlzaXMlMkNOZXVyb2Rlc2s=" data-listing-date-sort="1736982000000" data-listing-file-modified-sort="1744790811001" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="491">
 <a href="./mri/analysis/freesurfer FSFAST.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -720,7 +729,7 @@ Jan 16, 2025
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="TVJJ" data-listing-date-sort="1772838000000" data-listing-file-modified-sort="1752571685258" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
+<div class="g-col-1" data-index="6" data-categories="TVJJ" data-listing-date-sort="1772838000000" data-listing-file-modified-sort="1752734706503" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
 <a href="./mri/mni-space/mni-space.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -750,7 +759,7 @@ Mar 7, 2026
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="TVJJ" data-listing-date-sort="1672527600000" data-listing-file-modified-sort="1746696936390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
+<div class="g-col-1" data-index="7" data-categories="TVJJ" data-listing-date-sort="1672527600000" data-listing-file-modified-sort="1744791393187" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
 <a href="./mri/mri-lab-setup-2023/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -780,7 +789,7 @@ Jan 1, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="TVJJJTJDTk5MLUdvZ2dsZXM=" data-listing-date-sort="1728252000000" data-listing-file-modified-sort="1746696936392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1066">
+<div class="g-col-1" data-index="8" data-categories="TVJJJTJDTk5MLUdvZ2dsZXM=" data-listing-date-sort="1728252000000" data-listing-file-modified-sort="1744793097755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1066">
 <a href="./mri/mri-lab-setup-2024/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="mri\mri-lab-setup-2024\goggle_box.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -811,7 +820,7 @@ Oct 7, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="TVJJJTJDUGh5c2lvbG9neQ==" data-listing-date-sort="1698271200000" data-listing-file-modified-sort="1746696936393" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="541">
+<div class="g-col-1" data-index="9" data-categories="TVJJJTJDUGh5c2lvbG9neQ==" data-listing-date-sort="1698271200000" data-listing-file-modified-sort="1744791481972" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="541">
 <a href="./mri/physiology/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -838,37 +847,6 @@ MW
 </div>
 <div class="listing-date">
 Oct 26, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="TVJJJTJDUmV0aW5vdG9weQ==" data-listing-date-sort="1746396000000" data-listing-file-modified-sort="1746703657568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="647">
-<a href="./mri/retinotopic_mapping.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Retinotopic Mapping
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">
-MRI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmV0aW5vdG9weQ=='); return false;">
-Retinotopy
-</div>
-</div>
-<div class="card-text listing-description">
-Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-MG
-</div>
-<div class="listing-date">
-May 5, 2025
 </div>
 </div>
 </div>

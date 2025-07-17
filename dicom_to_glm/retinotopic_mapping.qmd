@@ -13,9 +13,13 @@ Retinotopic mapping is used to individually identify subregions in the visual co
 
 Normally, this is achieved by implementing dedicated "retinotopy-runs" in the experimental design. However, this is not always possible.
 
-The Benson2014 atlas allows to get a retinotopic mapping even without dedicated "retinotopy-runs" by using structural features and probabilistic maps.
+The Benson2014 atlas allows to get a retinotopic mapping even without dedicated "retinotopy-runs" by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e. discrete labels for V1, V2, etc.; `varea`), the eccentricity (i.e. the distance from fixation in visual degrees; `eccen`) or the polar angle (`angle`)
 
 # The script
+
+::: callout-important
+To do the retinotopic mapping, you need [preprocessed](run_fmriprep.qmd) data!
+:::
 
 The script to run the probabilistic retinotopic mapping can be found on the server: `/shared/website/occatlas.sh`
 
@@ -127,4 +131,5 @@ fi
 <!-- -->
 
 a)  `bash /Path/to/occatlas.sh`
+
 b)  change the working directory to where the script is using `cd /Path/to/directory/with/script` and then `bash ./occatlas.sh`

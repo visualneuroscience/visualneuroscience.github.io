@@ -200,7 +200,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../mri.html">MRI</a></li><li class="breadcrumb-item"><a href="../mri/retinotopic_mapping.html">Retinotopic Mapping</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/retinotopic_mapping.html">Retinotopic Mapping</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -236,11 +236,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
@@ -266,9 +266,18 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
+ <span class="menu-text">dicom_to_glm/ckeck_IntendedFor_field.qmd</span>
+  </li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 - fmriprep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -289,17 +298,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../mri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../mri/retinotopic_mapping.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Retinotopic Mapping</span></a>
-  </div>
-</li>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
@@ -322,6 +325,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MNI space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -491,7 +500,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../mri.html">MRI</a></li><li class="breadcrumb-item"><a href="../mri/retinotopic_mapping.html">Retinotopic Mapping</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/retinotopic_mapping.html">Retinotopic Mapping</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Retinotopic Mapping</h1>
   <div class="quarto-categories">
@@ -533,9 +542,22 @@ window.Quarto = {
 
 <p>Retinotopic mapping is used to individually identify subregions in the visual cortex (i.e V1, V2, V3 and sometimes higher areas as well). This is then used to better understand how visual information is processed in the brain by different regions.</p>
 <p>Normally, this is achieved by implementing dedicated “retinotopy-runs” in the experimental design. However, this is not always possible.</p>
-<p>The Benson2014 atlas allows to get a retinotopic mapping even without dedicated “retinotopy-runs” by using structural features and probabilistic maps.</p>
+<p>The Benson2014 atlas allows to get a retinotopic mapping even without dedicated “retinotopy-runs” by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e.&nbsp;discrete labels for V1, V2, etc.; <code>varea</code>), the eccentricity (i.e.&nbsp;the distance from fixation in visual degrees; <code>eccen</code>) or the polar angle (<code>angle</code>)</p>
 <section id="the-script" class="level1">
 <h1>The script</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To do the retinotopic mapping, you need <a href="../dicom_to_glm/run_fmriprep.html">preprocessed</a> data!</p>
+</div>
+</div>
 <p>The script to run the probabilistic retinotopic mapping can be found on the server: <code>/shared/website/occatlas.sh</code></p>
 <p>Alternatively, you can copy/paste the code (after adapting it for your data! See below):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
@@ -637,8 +659,8 @@ window.Quarto = {
 </ol>
 <!-- -->
 <ol type="a">
-<li><code>bash /Path/to/occatlas.sh</code></li>
-<li>change the working directory to where the script is using <code>cd /Path/to/directory/with/script</code> and then <code>bash ./occatlas.sh</code></li>
+<li><p><code>bash /Path/to/occatlas.sh</code></p></li>
+<li><p>change the working directory to where the script is using <code>cd /Path/to/directory/with/script</code> and then <code>bash ./occatlas.sh</code></p></li>
 </ol>
 
 

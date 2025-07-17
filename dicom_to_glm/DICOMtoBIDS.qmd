@@ -13,13 +13,13 @@ date: 04/30/2025
 # DICOM-Files
 
 -   the raw files from the scanner are DICOM-Files
--   not really useful since we need .nifti files for our analysis ![DICOM-Files](./images/01_dcm2bids/001_1_DICOMS.png)
+-   not really useful as we need .nifti files for our analysis ![DICOM-Files](./images/01_dcm2bids/001_1_DICOMS.png)
 
 $\qquad\to$ first step is to transform the DICOM- to nifti-files
 
 # From Dicom to nifti in BIDS format
 
-Even though we often get the data from the scanner already in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, there can be cases when you have to do this conversion by yourself. For this, you can either use bidscoiner, or a script from Adam: `dcm2bids.sh` (You can find this script here: `/shared/website/dcm2bids.sh`).
+Even though we often get the data from the scanner already in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, there can be cases when you have to do this conversion by yourself. For this, you can either use [bidscoiner](#sec-bidscoiner), or a [script from Adam](#sec-script): `dcm2bids.sh` (You can find this script here: `/shared/website/dcm2bids.sh`).
 
 *For both, you need access to [Neurodesk](/neurodesk/neurodesktop.qmd)!*
 
