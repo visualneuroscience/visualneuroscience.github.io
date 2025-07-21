@@ -24,6 +24,12 @@ Participants can always be compensated with course credit (=Versuchsscheine) if 
 
 Reimbursement is done via the bank transfer by the University to participants' bank accounts. Therefore, it is useful to warn them that it will take some weeks until they receive the money. To start the reimbursement process, follow these steps.
 
+::: callout-warning
+## Dataprotection!
+
+When you reimburse participants with money and get their information (see below), make sure that participants don´t see the information of others!! In excel this can be achieved by hiding the rows. Additionally, you should save the file where you gather the information on a university server/cloud (e.g. your nextcloud)
+:::
+
 1.  Download the example [excel sheet](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/people/compensation/files/AWE_Form_example.xlsx)
 2.  Fill out one row per participant, entering information into EVERY field that is nonempty in the excel sheet (you can create your own dedicated template):
     -   Betrag: amount in euro

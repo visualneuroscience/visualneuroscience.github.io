@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: Retinotopic Mapping
+title: 06 - Retinotopic Mapping
 description: "Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas"
 #image: ./images/clipboard-3427974075.png
 categories: [MRI, Retinotopy]
