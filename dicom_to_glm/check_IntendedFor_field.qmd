@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "Check IntendedFor field of the fmap's JSON"
+title: "05 - Check IntendedFor field of the fmap's JSON"
 description: "Description of how to check and potentially update the fmap's JSON file"
 number-sections: true
 image: ./images/01_dcm2bids/29_json_initial.png

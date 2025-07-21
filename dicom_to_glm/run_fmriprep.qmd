@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "05 - fmriprep"
+title: "06 - fmriprep"
 description: "Step by step description of how to run fmriprep"
 number-sections: true
 image: ./images/04_fmriprep/00_OpenFmriprep.png
@@ -67,7 +67,6 @@ When fmriprep started, now it´s probably time to get a coffee and do something 
 # Troubleshooting
 
 $\to$ If there are any problems, please refer to the dedicated [troubleshooting page](troubleshooting.qmd#sec-TroublesFmriprep)
-
 
 # The next steps
 
