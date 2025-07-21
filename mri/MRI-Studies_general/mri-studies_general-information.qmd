@@ -18,6 +18,7 @@ If you realize something that is missing, please let us know, so we can add it h
 
 ## events.tsv files
 
+<<<<<<< HEAD
 -   to save time later, keep in mind that you often need `*_events.tsv` files for your analysis! [see here](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/task-events.html)
 
 -   In our fMRI Studies, the bare minimum generally is that these files should include is the `Onset`, `duration` and `trial_type`. This is later used to build your contrasts, e.g. in the [first level GLM](../../dicom_to_glm/first_level_glm_nilearn.qmd)
@@ -33,3 +34,21 @@ If you realize something that is missing, please let us know, so we can add it h
 -   If you compensate participants, carefully read the [corresponding entry](../../people/compensation/compensation.qmd)
 
 -   At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual "assessment" of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals, that participants moved too much, you can re-instruct them to don´t move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC)
+=======
+- to save time later, keep in mind that you often need `*_events.tsv` files for your analysis! [see here](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/task-events.html)
+
+- In our fMRI Studies, the bare minimum generally is that these files should include is the `Onset`, `duration` and `trial_type`. This is later used to build your contrasts, e.g. in the [first level GLM](../../../dicom_to_glm/first_level_glm_nilearn.qmd)
+
+- `*_events.tsv` files have to be named exactly like the functional run they are referring to (except the ending). E.g. for the functional scan `sub-140001_ses-1_task-loc_run-01_bold.nii.gz`, the corresponding file has to be named `sub-140001_ses-1_task-loc_run-01_events.tsv`
+
+
+# Running a study
+
+- When a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask Thomas or Alex to save the sequence as a PDF. If you have access, save this PDF to `storage/nv_shared/Neurovision_Protocols` (if you don´t have access, send it to Natalia)
+
+- ***make sure that your participants completely understand what will happen and what they´ll have to do in the scanner!!!*** If participants have to do a task while they are in the scanner, explain to them in detail what they have to do! Reassure that everything is clear by asking back! Include short reminders of the task before each run (if applicable). Only if participants understand what they have to do, we can get the data that you want (or what the study was designed for). It can also help to have a demo-run ready on your laptop to show participants what will happen (there are also computers at the MRI-Lab that could be used for this. If you want to use them, test it first!)
+
+- If you compensate participants, carefully read the [corresponding entry](../../people/compensation/compensation.qmd)
+
+- At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual "assessment" of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals, that participants moved too much, you can re-instruct them to don´t move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC)
+>>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
