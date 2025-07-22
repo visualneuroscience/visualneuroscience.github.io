@@ -1,11 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-<<<<<<< HEAD
 title: "08 - first level GLM"
-=======
-title: "07 - first level GLM"
->>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
 description: "Several approaches to run a first level GLM using nilearn"
 number-sections: true
 #image: ./images/04_fmriprep/00_OpenFmriprep.png

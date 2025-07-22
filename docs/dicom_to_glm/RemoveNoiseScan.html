@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="MG">
+<meta name="dcterms.date" content="2025-03-08">
+<meta name="description" content="Step by step description of how to remove the denoising scan from your data">
 
-<title>Information about our lab meeting – Visual Neuroscience Lab</title>
+<title>05 - Removing Noise Scan – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ff831f119fbfd4d850555b2599ad24da.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2f36d1b840a6005202c0df5fd377aaa8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -137,7 +109,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
   </div>
@@ -148,39 +120,39 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./neurodesk/neurodesktop.html"> 
+    <a class="nav-link" href="../neurodesk/neurodesktop.html"> 
 <span class="menu-text">Neurodesktop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./behavioral.html"> 
+    <a class="nav-link" href="../behavioral.html"> 
 <span class="menu-text">Behavioral</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./labmeeting.html"> 
+    <a class="nav-link" href="../labmeeting.html"> 
 <span class="menu-text">Labmeeting</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dicom_to_glm.html"> 
+    <a class="nav-link" href="../dicom_to_glm.html"> 
 <span class="menu-text">DICOM to GLM</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri.html"> 
+    <a class="nav-link" href="../mri.html"> 
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./people.html"> 
+    <a class="nav-link" href="../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./other_topics.html"> 
+    <a class="nav-link" href="../other_topics.html"> 
 <span class="menu-text">Other Topics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./archive.html"> 
+    <a class="nav-link" href="../archive.html"> 
 <span class="menu-text">Archive</span></a>
   </li>  
 </ul>
@@ -194,7 +166,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Information about our lab meeting</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/RemoveNoiseScan.html">05 - Removing Noise Scan</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -216,88 +188,88 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
+  <a href="../neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neurodesktop</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dicom_to_glm.html" class="sidebar-item-text sidebar-link">
+            <a href="../dicom_to_glm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">00 - Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01 - DICOM to BIDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02 - Check IntendedFor field of the fmap’s JSON</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03 - T1w for PBn</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04 - Defacing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">05 - Removing Noise Scan</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06 - fMRIprep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">07 - Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">08 - first level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">09- second level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
 </li>
@@ -305,7 +277,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./mri.html" class="sidebar-item-text sidebar-link">
+            <a href="../mri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -314,55 +286,55 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/MRI-Studies_general/mri-studies_general-information.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/MRI-Studies_general/mri-studies_general-information.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI-Studies: General Information</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3D printing a brain</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">7T anatomical analysis on neurodesk</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI BIDS and OSF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Old MRI setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Update to the MRI lab setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/physiology/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../mri/physiology/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Physiological noise correction</span></a>
   </div>
 </li>
@@ -370,7 +342,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./behavioral.html" class="sidebar-item-text sidebar-link">
+            <a href="../behavioral.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -379,19 +351,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vision tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BIDS for behavioral studies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
+  <a href="../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom-built chin rests</span></a>
   </div>
 </li>
@@ -399,7 +371,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./people.html" class="sidebar-item-text sidebar-link">
+            <a href="../people.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">People</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -408,43 +380,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/stipends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/stipends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stipends and prizes for master students</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/coffee/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/coffee/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coffee time</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Participant compensation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/leaving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/leaving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Things to do if you are leaving the lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/writing/writing.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/writing/writing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scientific writing in practice</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/interns/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/interns/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internship Checklist</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/interns/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
+  <a href="../people/interns/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pflichtpraktikum</span></a>
   </div>
 </li>
@@ -452,7 +424,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./other_topics.html" class="sidebar-item-text sidebar-link">
+            <a href="../other_topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Other Topics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -461,25 +433,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calculating a priori sample size using G Power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma correction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contribute to the website</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
+  <a href="../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab Members Only!!!</span></a>
   </div>
 </li>
@@ -487,13 +459,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labmeeting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../labmeeting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labmeeting</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive</span></a>
   </div>
 </li>
@@ -503,21 +475,57 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFi">Lab <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#check-for-noise-scan-in-nifti-file" id="toc-check-for-noise-scan-in-nifti-file" class="nav-link active" data-scroll-target="#check-for-noise-scan-in-nifti-file"><span class="header-section-number">1</span> Check for noise scan in nifti file</a>
+  <ul class="collapse">
+  <li><a href="#sec-OpenFreeview" id="toc-sec-OpenFreeview" class="nav-link" data-scroll-target="#sec-OpenFreeview"><span class="header-section-number">1.1</span> Open freeview</a></li>
+  <li><a href="#sec-loadVolume" id="toc-sec-loadVolume" class="nav-link" data-scroll-target="#sec-loadVolume"><span class="header-section-number">1.2</span> Load a functional volume</a></li>
+  <li><a href="#sec-CheckDenoising" id="toc-sec-CheckDenoising" class="nav-link" data-scroll-target="#sec-CheckDenoising"><span class="header-section-number">1.3</span> Check for noise Scan</a></li>
+  </ul></li>
+  <li><a href="#sec-RemoveDenoising" id="toc-sec-RemoveDenoising" class="nav-link" data-scroll-target="#sec-RemoveDenoising"><span class="header-section-number">2</span> Remove noise scan from the data</a></li>
+  <li><a href="#sec-RemovalSuccess" id="toc-sec-RemovalSuccess" class="nav-link" data-scroll-target="#sec-RemovalSuccess"><span class="header-section-number">3</span> Confirm successful removal</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">4</span> Next steps</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/RemoveNoiseScan.html">05 - Removing Noise Scan</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Information about our lab meeting</h1>
-</div>
+<h1 class="title">05 - Removing Noise Scan</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MRI</div>
+    <div class="quarto-category">Preprocessing</div>
+    <div class="quarto-category">Neurodesk</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Step by step description of how to remove the denoising scan from your data
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-body">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>MG </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 8, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -527,45 +535,75 @@ window.Quarto = {
 </header>
 
 
+<p>For this step, you need to already have nifti files! If you currently only have DICOM files, please <a href="../dicom_to_glm/DICOMtoBIDS.html">convert them to nifti’s first</a>!</p>
+<p>Depending on the sequence used in the scanner session, you might have data that were acquired with a denoising sequence. This is sometimes done, since it doesn´t take much time in the scanner, but you have the ability to denoise the data if it turns out to be necessary.</p>
+<p>But by default, we don´t use this denoising information. Additionally, some applications (<a href="../dicom_to_glm/run_fmriprep.html">like fmriprep</a>) cannot process data with this additional information!</p>
+<p>Thus, before running our default pipeline with <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>, we have to remove this information from our scans!</p>
+<section id="check-for-noise-scan-in-nifti-file" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Check for noise scan in nifti file</h1>
+<section id="sec-OpenFreeview" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sec-OpenFreeview"><span class="header-section-number">1.1</span> Open freeview</h2>
+<p>You can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:</p>
+<ol type="1">
+<li><p>Open a terminal (Monitor Icon at the bottom left on neurodesk) <img src="./images/01_dcm2bids/open_terminal.gif" class="img-fluid" alt="Open Terminal"></p></li>
+<li><p>Type <code>ml freesurfer</code> and press enter</p></li>
+<li><p>Type <code>freeview</code> and press enter (from time to time, it can take a while until freeview opens, be patient! It is also possible, that some messages about runtime are printed in the terminal, but that is nothing to worry about!) <img src="./images/02_RemoveDenoising/01_CheckInFreeview.png" class="img-fluid" alt="Opening freeview"></p></li>
+</ol>
+<p><span class="math inline">\(\to\)</span> When freeview opened successfully, it should look like this: <img src="./images/02_RemoveDenoising/01_1_FreeviewOpened.png" class="img-fluid" alt="Freeview Opened"></p>
+</section>
+<section id="sec-loadVolume" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-loadVolume"><span class="header-section-number">1.2</span> Load a functional volume</h2>
+<p>Now you have to look at a functional scan to see if there is a denoising scan at the end.</p>
+<p>For this, select <code>File &gt; Load Volume</code> (top left corner in freeview): <img src="./images/02_RemoveDenoising/02_File_loadVolume.png" class="img-fluid" alt="File > Load Volume"></p>
+<p>A new window opens, asking you to <code>Select volume file</code>. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol <img src="./images/02_RemoveDenoising/03_folderSymbol.png" class="img-fluid" alt="Click on Folder Symbol"></p>
+<p>Navigate to your <code>func</code> directory in your <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-bidsdirectory">BIDS</a>, select one of the nifti files of one of the runs and press <code>Open</code> afterwards <img src="./images/02_RemoveDenoising/04_Navigate_to_functional_file.png" class="img-fluid" alt="Select functional nifti file of a run in your bids directory"></p>
+<p>Now, with the field <code>Select volume file</code> specified with the path(s) to the nifti file, you can click <code>Open</code><img src="./images/02_RemoveDenoising/05_confirm_Selection.png" class="img-fluid" alt="Open Volume"></p>
+<p>When the volume loaded, it should see some kind of data and something that looks like a brain: <img src="./images/02_RemoveDenoising/06_0_firstFrame.png" class="img-fluid" alt="First Frame of Functional Scan"></p>
+</section>
+<section id="sec-CheckDenoising" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sec-CheckDenoising"><span class="header-section-number">1.3</span> Check for noise Scan</h2>
+<p>To check if a noise scan is included in you data, use the slider next to <code>Frames</code> (left side, roughly in the middle), to navigate <em>to the last frame</em>. If a denoising sequence was used during data acquisition in the scanner, this frame looks “empty”. Toggle between the last and second to last frame, to visualize the difference even more <img src="./images/02_RemoveDenoising/06_1_DenoisingScan_Confirmed.png" class="img-fluid" alt="Denoising Included in your Scan"></p>
+<p>If you confirmed a noise-scan in one functional run, they will probably be there for all your runs. It might be good to check every run anyway.</p>
+</section>
+</section>
+<section id="sec-RemoveDenoising" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Remove noise scan from the data</h1>
+<p>You confirmed noise information being present in your data in the last section. To run <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>, we have to remove this information. To achieve this:</p>
+<ol type="1">
+<li><p>Get the following script and copy it to your own storage: <code>/shared/website/remove_noiseScan.sh</code></p></li>
+<li><p>Open the script (left-click + <code>gedit</code>)</p></li>
+<li><p>Adjust the variables <code>subject_ids</code> and <code>constant_path</code></p>
+<ul>
+<li>with <code>constant_path</code> as it is right now, every subdirectory in <code>bids</code> would need to start with <code>sub-1400</code></li>
+<li>then it would look for all subjects indicated in <code>subject_ids</code></li>
+</ul></li>
+<li><p>run the script (either <code>cd</code> to the directory and run <code>bash ./remove_noiseScan.sh</code> or from anywhere run <code>bash /path/to/remove_noiseScan.sh</code>)</p></li>
+<li><p>After the script starts, you have to indicate if you want to remove the last frame from the fmap (Press 1), from the functional runs (Press 2), or from both (Press 3)</p></li>
+</ol>
+<p><em>Information:</em> this code basically searches for all files in your working directory that end on <code>_bold.nii.gz</code> (when functional files are processed) or <code>_epi.nii.gz</code> (when the fmap is processed), gets the information about how many frames it includes using <code>mri_info</code> and then removes the last frame (which we confirmed to be the noise scan prior)</p>
+<p>This process can take a while, especially in the beginning. Don´t get stressed out, when nothing happens for a while and only info statements get printed, be patient!</p>
+<p>After some time, you will get the information, that the first nifti is processed. This will be repeated for all files in your working directory that end in <code>_bold.nii.gz</code>/<code>_epi.nii.gz</code>. <img src="./images/02_RemoveDenoising/11_finished.png" class="img-fluid" alt="Remove Noise from all nii.gz files"></p>
+</section>
+<section id="sec-RemovalSuccess" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Confirm successful removal</h1>
+<p>To confirm that the noise scan was removed, <a href="#sec-OpenFreeview">start freeview</a>, <a href="#sec-loadVolume">load a functional scan</a> (or the fmap) and finally <a href="#sec-CheckDenoising">check the last frame</a>. The original “empty” frame should now be removed and final scan should picture “normal” data.<img src="./images/02_RemoveDenoising/12_confirm_success.png" class="img-fluid" alt="Noise Scan removed"></p>
+</section>
+<section id="next-steps" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Next steps</h1>
+<p>Congratulations, you successfully removed the noise scans from your functional and fmap and you are one step closer to analyzing your data!</p>
+<p>To continue in your journey to your Analysis, please return to the <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
+<p>Alternatively, here is a list of potential next steps to continue with</p>
+<ol type="1">
+<li><p><a href="../dicom_to_glm/defacing.html">Defacing</a></p></li>
+<li><p><a href="../dicom_to_glm/check_IntendedFor_field.html">Check JSON of fmap</a></p></li>
+<li><p><a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">Provide participants with their T1w file</a></p></li>
+<li><p><a href="../dicom_to_glm/run_fmriprep.html">run fmriprep</a></p></li>
+</ol>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TGFi" data-listing-date-sort="1735945200000" data-listing-file-modified-sort="1744792303700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294">
-<a href="./labmeeting/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Labmeeting
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TGFi'); return false;">
-Lab
-</div>
-</div>
-<div class="card-text listing-description">
-Information about our lab meeting
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ, MG
-</div>
-<div class="listing-date">
-Jan 4, 2025
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

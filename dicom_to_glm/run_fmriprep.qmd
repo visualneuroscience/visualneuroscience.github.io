@@ -1,8 +1,8 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "06 - fmriprep"
-description: "Step by step description of how to run fmriprep"
+title: "06 - fMRIprep"
+description: "Step by step description of how to run fMRIprep"
 number-sections: true
 image: ./images/04_fmriprep/00_OpenFmriprep.png
 categories: [MRI, Analysis, fmriPrep, Neurodesk]
@@ -12,17 +12,17 @@ date: 03/08/2025
 
 # Before running fmriprep {#sec-NecessitiesFmriprep}
 
-Before you start fmriprep, you have to make sure, that you:
+Before you start fMRIprep, you have to make sure, that you:
 
 1.  [have nifti files in BIDS format](DICOMtoBIDS.qmd)
 
 2.  [defaced your anatomical scans](defacing.qmd)
 
-3.  [Optional: removed the noise scans from your functional data](RemoveDenoisingScan.qmd)
+3.  [Optional: removed the noise scans from your functional data](RemoveNoiseScan.qmd)
 
-4.  [Optional: adapted the "IntendedFor" section in the fmap's .json file (if you want to use fmriprep 24.0.0 or newer)](DICOMtoBIDS.qmd#sec-IntendedFor)
+4.  [Check the IntendedFor field of the fmaps JSON file](check_IntendedFor_field.qmd)
 
-# Starting fmriprep {#sec-fmriprepStart}
+# Starting fMRIprep {#sec-fmriprepStart}
 
 To start fmriprep, click on the bird symbol at the bottom left on neurodesk, hover `neurodesk`, then `All applications` and navigate to `fmriprep`. Select the version of fmriprep that you want to use ![Starting fmriprep](./images/04_fmriprep/00_OpenFmriprep.png)
 
@@ -76,8 +76,8 @@ To continue in your journey to your Analysis, please return to the [Overview-Pag
 
 Alternatively, here is a list of potential next steps to continue with
 
-1.[Retinotopic Mapping](../mri/retinotopic_mapping.qmd)
+1. [Retinotopic Mapping](retinotopic_mapping.qmd)
 
 2.  [first-level GLM](first_level_glm_nilearn.qmd)
 
-3.  second-level GLM
+3.  [second-level GLM](second_level_glm_nilearn.qmd)

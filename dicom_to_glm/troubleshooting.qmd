@@ -14,7 +14,7 @@ This page is dedicated for Troubleshooting. Known errors and problems will be li
 
 # General
 
-If you encounter an error - Check the error message, maybe copy/paste it to google to get a first idea of what is wrong - Check if all necessary ressources are sourced (e.g. did you include `ml freesurfer` before [opening a volume to check for noise scans](RemoveDenoisingScan.qmd#sec-OpenFreeview)) - Check if your working directory is set correctly, if not, correct that with `cd /desired/path/` (e.g. [when you try to remove the noise scans](RemoveDenoisingScan.qmd#sec-RemoveDenoising)) - Check if the paths in your command are correct. In some scripts you define you path in a variable, like `$SUBJECTS_DIR` or `$niidir`. If you want to only run a specific line of code separately, you might have to write out the complete path
+If you encounter an error - Check the error message, maybe copy/paste it to google to get a first idea of what is wrong - Check if all necessary ressources are sourced (e.g. did you include `ml freesurfer` before [opening a volume to check for noise scans](RemoveNoiseScan.qmd#sec-OpenFreeview)) - Check if your working directory is set correctly, if not, correct that with `cd /desired/path/` (e.g. [when you try to remove the noise scans](RemoveNoiseScan.qmd#sec-RemoveDenoising)) - Check if the paths in your command are correct. In some scripts you define you path in a variable, like `$SUBJECTS_DIR` or `$niidir`. If you want to only run a specific line of code separately, you might have to write out the complete path
 
 # [fmriprep](run_fmriprep.qmd) {#sec-TroublesFmriprep}
 
@@ -56,7 +56,7 @@ Transforming your T1w scan to avoid this error is not the ideal solution, but it
 
 To transform your T1w scan:
 
-1.  Load your structural scan in freeview ([identical process as described here for a functional scan](RemoveDenoisingScan.qmd#sec-loadVolume))
+1.  Load your structural scan in freeview ([identical process as described here for a functional scan](RemoveNoiseScan.qmd#sec-loadVolume))
 
 2.  In the menu-bar in freeview (top-left), select `Tools > Transform Volume...`![Tools \> Transform Volume...](./images/Troubleshooting/Transform_T1w.png)
 
@@ -80,8 +80,10 @@ $\to$ In the directory that has the prerun `recon-all` there is a folder `script
 
 > This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven't been tested)
 
-##  fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan
+## fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan
 
 $\to$ the solution is (if your structural and functional scans are from the same session) to add the following flag:
 
-    `--bold2t1w-init header`
+```         
+`--bold2t1w-init header`
+```

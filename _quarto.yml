@@ -39,13 +39,14 @@ website:
         contents:
           - dicom_to_glm/Overview_fromDICOMtoGLM.qmd
           - dicom_to_glm/DICOMtoBIDS.qmd
+          - dicom_to_glm/check_IntendedFor_field.qmd
           - dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.qmd
           - dicom_to_glm/defacing.qmd
-          - dicom_to_glm/RemoveDenoisingScan.qmd
-          - dicom_to_glm/check_IntendedFor_field.qmd
+          - dicom_to_glm/RemoveNoiseScan.qmd
           - dicom_to_glm/run_fmriprep.qmd
           - dicom_to_glm/retinotopic_mapping.qmd
           - dicom_to_glm/first_level_glm_nilearn.qmd
+          - dicom_to_glm/second_level_glm_nilearn.qmd
           - dicom_to_glm/troubleshooting.qmd
       - section: "MRI"
         href: mri.qmd

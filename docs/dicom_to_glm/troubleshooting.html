@@ -221,52 +221,50 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 - Check IntendedFor field of the fmap’s JSON</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">02 - T1w for PBn</span></a>
+ <span class="menu-text">03 - T1w for PBn</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03 - Defacing</span></a>
+ <span class="menu-text">04 - Defacing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">04 - Removing Noise Scan</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">05 - Check IntendedFor field of the fmap’s JSON</span></a>
+  <a href="../dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 - Removing Noise Scan</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">06 - fmriprep</span></a>
+ <span class="menu-text">06 - fMRIprep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
-<<<<<<< HEAD
  <span class="menu-text">07 - Retinotopic Mapping</span></a>
-=======
- <span class="menu-text">06 - Retinotopic Mapping</span></a>
->>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
-<<<<<<< HEAD
  <span class="menu-text">08 - first level GLM</span></a>
-=======
- <span class="menu-text">07 - first level GLM</span></a>
->>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09- second level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -549,7 +547,7 @@ window.Quarto = {
 <p>This page is dedicated for Troubleshooting. Known errors and problems will be listed here with a possible solution for solving this issue. If you solved a problem that might be relevant for others as well, feel free to contact Maximilian (,Adam or Natalia) so that it can be added to this page as well.</p>
 <section id="general" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
-<p>If you encounter an error - Check the error message, maybe copy/paste it to google to get a first idea of what is wrong - Check if all necessary ressources are sourced (e.g.&nbsp;did you include <code>ml freesurfer</code> before <a href="../dicom_to_glm/RemoveDenoisingScan.html#sec-OpenFreeview">opening a volume to check for noise scans</a>) - Check if your working directory is set correctly, if not, correct that with <code>cd /desired/path/</code> (e.g.&nbsp;<a href="../dicom_to_glm/RemoveDenoisingScan.html#sec-RemoveDenoising">when you try to remove the noise scans</a>) - Check if the paths in your command are correct. In some scripts you define you path in a variable, like <code>$SUBJECTS_DIR</code> or <code>$niidir</code>. If you want to only run a specific line of code separately, you might have to write out the complete path</p>
+<p>If you encounter an error - Check the error message, maybe copy/paste it to google to get a first idea of what is wrong - Check if all necessary ressources are sourced (e.g.&nbsp;did you include <code>ml freesurfer</code> before <a href="../dicom_to_glm/RemoveNoiseScan.html#sec-OpenFreeview">opening a volume to check for noise scans</a>) - Check if your working directory is set correctly, if not, correct that with <code>cd /desired/path/</code> (e.g.&nbsp;<a href="../dicom_to_glm/RemoveNoiseScan.html#sec-RemoveDenoising">when you try to remove the noise scans</a>) - Check if the paths in your command are correct. In some scripts you define you path in a variable, like <code>$SUBJECTS_DIR</code> or <code>$niidir</code>. If you want to only run a specific line of code separately, you might have to write out the complete path</p>
 </section>
 <section id="sec-TroublesFmriprep" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
@@ -589,7 +587,7 @@ window.Quarto = {
 <p>Transforming your T1w scan to avoid this error is not the ideal solution, but it is a good workaround for this complex problem.</p>
 <p>To transform your T1w scan:</p>
 <ol type="1">
-<li><p>Load your structural scan in freeview (<a href="../dicom_to_glm/RemoveDenoisingScan.html#sec-loadVolume">identical process as described here for a functional scan</a>)</p></li>
+<li><p>Load your structural scan in freeview (<a href="../dicom_to_glm/RemoveNoiseScan.html#sec-loadVolume">identical process as described here for a functional scan</a>)</p></li>
 <li><p>In the menu-bar in freeview (top-left), select <code>Tools &gt; Transform Volume...</code><img src="./images/Troubleshooting/Transform_T1w.png" class="img-fluid" alt="Tools > Transform Volume…"></p></li>
 <li><p>In the resulting window, select <code>Transform</code> in the top menu and change the value in the second “line” (= <code>Y (P-A)</code>) to -2.5 (with the slider or enter the number directly). This will shift the T1w scan 2.5mm in the posterior direction. Subsequently, select <code>Save Volume As</code><img src="./images/Troubleshooting/Transform_T1w_2.png" class="img-fluid" alt="Shift T1w and save volume"></p></li>
 <li><p>You can simply overwrite the existing T1w file which should already be selected (you could always reverse this step with the described method). <strong>Make sure to select the option</strong> <code>Do not resample voxel data when saving (only update header)</code><strong>!</strong><img src="./images/Troubleshooting/Transform_T1w_3.png" class="img-fluid" alt="Only update header"></p></li>

@@ -12,42 +12,76 @@ date: 04/16/2025
 
 This page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.
 
-# DICOM-Files
+::: callout-hint
+## Two ways to your data
+
+1)  Regular scanning time:
+
+    -   you get the data as nifti files
+    -   a few days later via `mri-dropoff` in the `J` drive
+    -   step 1 and 4 generally are already done for you then (but check the defacing anyway, sometimes this doesn´t work!)
+
+2)  Scanning with Natalia
+
+    -   we have the raw DICOM files
+    -   conversion to niftis has to be done (see 1)
+    -   defacing has to be done (see 4)
+    -   ***IMPORTANT: Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
+:::
+
+# 0 - DICOM-Files
 
 -   the raw files from the scanner are DICOM-Files
 -   not really useful since we need `.nifti` files for our analysis $\qquad\to$ first step is to transform the `DICOM`- to `.nift`-files
+-   need to be converted to nifti files
 
-# [DICOM to nifti](DICOMtoBIDS.qmd)
+::: callout-warning
+## DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
+
+***Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
+:::
+
+# 1 - [DICOM to nifti](DICOMtoBIDS.qmd)
 
 -   using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/dcm2bids.sh`)
 -   results in `.nifti` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
 
-# [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
+# 2 - [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
 
--   depending on what method you used to [convert your DICOMs to niftis](DICOMtoBIDS.qmd) (or if you got a bids valid data from the MRI-Lab) and what version of [fmriPrep](run_fmriprep.qmd) you plan to use, it might be necessary to update the content of the "IntendedFor" field of the fmap's JSON file
+-   tells [fmriPrep](run_fmriprep.qmd) on what files distortion correction should be applied to
 
-# [Distribute the T1w files to participants?](ProvidingParticipantsWithTheirT1wFile.qmd)
+-   depending on the fMRIprep version you plan to use, the field has to look slightly different!
+
+-   to avoid unnecessary problems and delays, it doesn´t harm to always check this field before running fMRIprep!
+
+# 3 - [Distribute the T1w files to participants?](ProvidingParticipantsWithTheirT1wFile.qmd)
 
 -   if you promised participants that they will get their T1w images, you should make sure that they really get them
 -   this should be done before [defacing](defacing.qmd)
-
-# [Defacing your data](defacing.qmd)
-
--   $\bf{You\ have\ to\ deface\ your\ data\ before\ running\ fmriprep\ or\ your\ analysis!!!!!}$
--   You may want to save the "non-defaced" files somewhere else to give them to your participants
 -   You should delete the "non-defaced" files either after you distributed them to the respective participants, or after your study ended
--   NEVER share data that was not defaced before!
+
+# 4 - [Defacing your data](defacing.qmd)
+
+-   defaced data is necessary to savely run fMRIprep
+-   Save faced T1w-files to give to your participants (if you got the data during regular scanning times, there should be a `faced` directory, but you should still make sure, that you have the faced T1w files if you need them for your participants!)
+-   NEVER share data (e.g. on [open Neuro](https://openneuro.org/)) that was not defaced before!
 -   Defacing is done with `pydeface` (Docker; Version 2.0.2)
 
-# ([Remove denoising scan from your data](RemoveDenoisingScan.qmd))
+# 5 - ([Remove denoising scan from your data](RemoveNoiseScan.qmd))
 
--   if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you have to remove the last volume of each scan (which basically is a noise scan) before continuing
+-   if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you might have to remove the last volume of each scan (which basically is a noise scan) before continuing
 
-# [fmriprep](run_fmriprep.qmd)
+# 6 - [fmriprep](run_fmriprep.qmd)
 
 -   this is one of many [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html) (that require [a BIDS-valid Dataset](https://bids-standard.github.io/bids-validator/))
 -   runs various preprocessing steps on it´s own
 
-# [first-level Analysis](first_level_glm_nilearn.qmd)
+# 7 - [Retinotopic Mapping](retinotopic_mapping.qmd)
 
-# [second-level Analysis](second_level_glm_nilearn.qmd)
+-   if you want to specifically test potential effects in specific visual areas (e.g. V1, V2, etc.), you might need to do retinotopic mapping
+
+-   this allows you to differentiate different visual areas, eccentricity and more
+
+# 8 - [first-level Analysis](first_level_glm_nilearn.qmd)
+
+# 9 - [second-level Analysis](second_level_glm_nilearn.qmd)

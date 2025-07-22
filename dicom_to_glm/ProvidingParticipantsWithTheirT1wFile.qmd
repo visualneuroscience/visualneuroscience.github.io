@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "02 - T1w for PBn"
+title: "03 - T1w for PBn"
 description: "Information about how to provide participants with their T1w image"
 number-sections: true
 image: ./images/anat.png
@@ -10,13 +10,13 @@ author: MG
 date: 04/15/2025
 ---
 
-It can be a good incentive to promote your study by offering participants to give them their T1w files (since everyone knows how cool images of brains are!) **If you promise to give out the T1w-scans to participants, make sure, that you really do it!**
+It can be a good incentive to promote your study if you offer participants to give them their T1w files (since everyone knows how cool images of brains are!) **If you promise to give out the T1w-scans to participants, make sure, that you really do it!**
 
 There are only some things to remember:
 
-1.  Since the scans are already defaced when we don´t scan ourself, participants *always* get the defaced T1w scan! Thus, if we acquired the data ourselves (and started with the dicom files) make sure to do the [defacing](defacing.qmd) **before** you send the T1w-file to the participants!
+1.  Participants always get the "faced" T1w scan. If you get the data from the MRI lab directly, there should be a `faced` directory with the files that you can give to the participant. If you started with raw DICOM files, make sure to send the T1w file before [defacing](defacing.qmd) or save defaced image separately!
 
-2.  If you provide participants with their T1w scans, it might be a good idea to provide them with the software on how to look at their data! For example, you could point them to MRIcroGL as free tool that they can install themselves to look at their data: [Link to MRIcroGL Download](https://www.nitrc.org/projects/mricrogl/)
+2.  If you provide participants with their T1w scans, it might be a good idea to provide them with the software on how to look at their data! For example, you could point them to MRIcroGL as a free tool that they can install themselves to look at their data: [Link to MRIcroGL Download](https://www.nitrc.org/projects/mricrogl/)
 
 3.  **We do not keep the "non-defaced" T1w scans of participants**! Thus, delete the non-defaced T1w scan of a participant either immediately after [defacing](defacing.qmd), or at the latest after your study finished!
 
@@ -28,6 +28,8 @@ Alternatively, here is a list of potential next steps to continue with
 
 1.  [Defacing](defacing.qmd)
 
-2.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+2.  [Check JSON file of the fmap](check_IntendedFor_field.qmd)
 
-3.  [fmriprep](run_fmriprep.qmd)
+3.  [Remove noise scans](RemoveNoiseScan.qmd)
+
+4.  [fmriprep](run_fmriprep.qmd)

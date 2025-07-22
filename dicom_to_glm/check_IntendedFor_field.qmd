@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "05 - Check IntendedFor field of the fmap's JSON"
+title: "02 - Check IntendedFor field of the fmap's JSON"
 description: "Description of how to check and potentially update the fmap's JSON file"
 number-sections: true
 image: ./images/01_dcm2bids/29_json_initial.png
@@ -10,11 +10,11 @@ author: MG
 date: 07/08/2025
 ---
 
-The "IntendedFor" field of the fmap's JSON file tells [fmriPrep](run_fmriprep.qmd) for which (functional) data the distortion correction should be applied to.
+With changing Versions of [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) and [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html), slight changes occur in how and where you have to include specific information. One example for this is the `IntendedFor` information in the fmap's `.json` file. It tells [fmriPrep](run_fmriprep.qmd) for which (functional) data the distortion correction should be applied to.
 
 Depending on the conversion method you used to [convert your DICOM to nifti files](DICOMtoBIDS.qmd), the contents will look differently.
 
-Additionally, depending on the version of [fmriPrep](run_fmriprep.qmd) you plan to use for preprocessing, you need different naming conventions of the entries.
+Additionally, depending on the version of [fMRIprep](run_fmriprep.qmd) you plan to use for preprocessing, you need different naming conventions of the entries.
 
 In general, there are two naming conventions that might be used in the IntendedFor field:
 
@@ -40,9 +40,7 @@ Older fmap spec necessary for fmriprep older than 24.0.0:
 ```
 ````
 
-With changing Versions of [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) and [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html), slight changes occur in how and where you have to include specific information. One example for this is the `IntendedFor` information in the fmap's `.json` file.
-
-Due to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap's "IntendedFor" field before [running fmriPrep](run_fmriprep.qmd).
+Due to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap's "IntendedFor" field before [running fMRIprep](run_fmriprep.qmd).
 
 # Check the content of the JSON file
 
@@ -50,17 +48,19 @@ Navigate to the `fmap` directory of a/each subject (`*/bids/sub-999/ses-1/fmap/`
 
 Scroll down to the very end of it. There should be a section that starts with `IntendedFor` and looks like this:![Initial IntendedFor Section](./images/01_dcm2bids/29_json_initial.png)
 
-In General, all entries should follow the same naming convention (either the new or the old one, see above). If the naming convention corresponds to the [fmriPrep](run_fmriprep.qmd) version you want to use, you don´t have to change anything. If it does not correspond to the naming convention necessary for your version, you can follow the steps below to update the file.
+In General, all entries should follow the same naming convention (either the new or the old one, see above). If the naming convention corresponds to the [fMRIprep](run_fmriprep.qmd) version you want to use, you don´t have to change anything. If it does not correspond to the naming convention necessary for your version, you can follow the steps below to update the file.
 
 Additionally, it may occur, that additional files are included in this field (e.g. files named "\*part-phase\*") where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, your should remove the entries of these files (see below)
 
 # Update "IntendedFor" field of the fmap's JSON file
 
-There is a dedicated script to update the contents of the fmap's .json file. It can be found at `/shared/update_json.py`. To start and use the script:
+There is a dedicated script to update the contents of the fmap's .json file. It can be found at `/shared/update_json.py`. Of course, you can do the changes manually as well.
+
+To start and use the script:
 
 1.  Open a terminal ![Open a Terminal](./images/01_dcm2bids/open_terminal.gif)
 
-2.  Type `/shared/update_json.py`
+2.  Type `python /shared/update_json.py`
 
 3.  Indicate if you want to change the naming convention (independent of the current version, the old naming convention is changed to the new one and vice versa if you select 1 (=Yes) here)
 
@@ -70,4 +70,4 @@ There is a dedicated script to update the contents of the fmap's .json file. It 
 
 6.  Provide the path to your bids directory
 
-After providing all the inputs, the indicated changes will be performed and saved in the file automatically. Additionally, the original .json file will be saved as filename_orig.json (if the original entries are needed later again)
+After providing all the inputs, the indicated changes will be performed and saved in the file automatically. The original .json file will be saved as filename_orig.json (if the original entries are needed later again). Additionally, the changes are only applied, if a `fmap`-directory with a `.json` file doesn´t already have a `_orig.json`.

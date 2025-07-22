@@ -1,11 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-<<<<<<< HEAD
 title: 07 - Retinotopic Mapping
-=======
-title: 06 - Retinotopic Mapping
->>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
 description: "Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas"
 #image: ./images/clipboard-3427974075.png
 categories: [MRI, Retinotopy]
@@ -28,6 +24,7 @@ To do the retinotopic mapping, you need [preprocessed](run_fmriprep.qmd) data!
 The script to run the probabilistic retinotopic mapping can be found on the server: `/shared/website/occatlas.sh`
 
 Alternatively, you can copy/paste the code (after adapting it for your data! See below):
+
 
 ``` bash
 #!/usr/bin/env bash
@@ -132,8 +129,6 @@ fi
 
 6.  Run the script $\to$ open a terminal and execute:
 
-<!-- -->
+    a)  `bash /Path/to/occatlas.sh`
 
-a)  `bash /Path/to/occatlas.sh`
-
-b)  change the working directory to where the script is using `cd /Path/to/directory/with/script` and then `bash ./occatlas.sh`
+    b)  change the working directory to where the script is using `cd /Path/to/directory/with/script` and then `bash ./occatlas.sh`

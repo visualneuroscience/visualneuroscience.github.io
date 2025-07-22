@@ -192,52 +192,50 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02 - Check IntendedFor field of the fmap’s JSON</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">02 - T1w for PBn</span></a>
+ <span class="menu-text">03 - T1w for PBn</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03 - Defacing</span></a>
+ <span class="menu-text">04 - Defacing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/RemoveDenoisingScan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">04 - Removing Noise Scan</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">05 - Check IntendedFor field of the fmap’s JSON</span></a>
+  <a href="../../dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05 - Removing Noise Scan</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">06 - fmriprep</span></a>
+ <span class="menu-text">06 - fMRIprep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
-<<<<<<< HEAD
  <span class="menu-text">07 - Retinotopic Mapping</span></a>
-=======
- <span class="menu-text">06 - Retinotopic Mapping</span></a>
->>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
-<<<<<<< HEAD
  <span class="menu-text">08 - first level GLM</span></a>
-=======
- <span class="menu-text">07 - first level GLM</span></a>
->>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09- second level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -456,7 +454,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#events.tsv-files" id="toc-events.tsv-files" class="nav-link" data-scroll-target="#events.tsv-files"><span class="header-section-number">1.1</span> events.tsv files</a></li>
   </ul></li>
-  <li><a href="#running-a-study" id="toc-running-a-study" class="nav-link" data-scroll-target="#running-a-study"><span class="header-section-number">2</span> Running a study</a></li>
+  <li><a href="#piloting-a-study" id="toc-piloting-a-study" class="nav-link" data-scroll-target="#piloting-a-study"><span class="header-section-number">2</span> Piloting a study</a></li>
+  <li><a href="#running-a-study" id="toc-running-a-study" class="nav-link" data-scroll-target="#running-a-study"><span class="header-section-number">3</span> Running a study</a></li>
   </ul>
 </nav>
     </div>
@@ -502,7 +501,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page is a constant work-in-progress file. The goal is to gather and provide necessary/useful/helpful information regarding (f)MRI studies. It can serve as a helpful guide when starting to plan an Experiment and while doing it.</p>
+<p>This page is a constant work-in-progress file. The goal is to gather and provide necessary/useful/helpful information regarding (f)MRI studies. It can serve as a helpful guide when starting to plan an Experiment and while doing it. If you already acquired your data, you can refer to <a href="../../dicom_to_glm/Overview_fromDICOMtoGLM.html">this page</a> for information about the processing and analysis of your data.</p>
 <p>If you realize something that is missing, please let us know, so we can add it here!</p>
 <section id="planning-a-study" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Planning a study</h1>
@@ -510,17 +509,24 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="1.1" class="anchored" data-anchor-id="events.tsv-files"><span class="header-section-number">1.1</span> events.tsv files</h2>
 <ul>
 <li><p>to save time later, keep in mind that you often need <code>*_events.tsv</code> files for your analysis! <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/task-events.html">see here</a></p></li>
-<<<<<<< HEAD
-<li><p>In our fMRI Studies, the bare minimum generally is that these files should include is the <code>Onset</code>, <code>duration</code> and <code>trial_type</code>. This is later used to build your contrasts, e.g.&nbsp;in the <a href="../../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a></p></li>
-=======
-<li><p>In our fMRI Studies, the bare minimum generally is that these files should include is the <code>Onset</code>, <code>duration</code> and <code>trial_type</code>. This is later used to build your contrasts, e.g.&nbsp;in the <a href="../../../dicom_to_glm/first_level_glm_nilearn.qmd">first level GLM</a></p></li>
->>>>>>> 96f9924e8c8ae94a65fd67aead3ca5b47bfd4f3d
+<li><p>In our fMRI Studies, the bare minimum generally is that these files should include is the <code>Onset</code>, <code>duration</code> and <code>trial_type</code> (e.g.&nbsp;the condition that was shown). This is later used to build your contrasts, e.g.&nbsp;in the <a href="../../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a></p></li>
 <li><p><code>*_events.tsv</code> files have to be named exactly like the functional run they are referring to (except the ending). E.g. for the functional scan <code>sub-140001_ses-1_task-loc_run-01_bold.nii.gz</code>, the corresponding file has to be named <code>sub-140001_ses-1_task-loc_run-01_events.tsv</code></p></li>
 </ul>
+<p>Example of a rudimentary .tsv file:</p>
+<pre><code>onset   duration    trial_type
+0.5     1.0         Condition A
+2.0     1.0         Condition B
+4.0     1.5         Condition A</code></pre>
 </section>
 </section>
-<section id="running-a-study" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Running a study</h1>
+<section id="piloting-a-study" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Piloting a study</h1>
+<ul>
+<li>when you do a pilot run with Natalia, you might get the raw DICOM files. <strong><em>Load them to the server and delete them as soon as possible from any external device (USB-Stick, local storage of your computer, etc.)</em></strong></li>
+</ul>
+</section>
+<section id="running-a-study" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Running a study</h1>
 <ul>
 <li><p>When a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask Thomas or Alex to save the sequence as a PDF. If you have access, save this PDF to <code>storage/nv_shared/Neurovision_Protocols</code> (if you don´t have access, send it to Natalia)</p></li>
 <li><p><strong><em>make sure that your participants completely understand what will happen and what they´ll have to do in the scanner!!!</em></strong> If participants have to do a task while they are in the scanner, explain to them in detail what they have to do! Reassure that everything is clear by asking back! Include short reminders of the task before each run (if applicable). Only if participants understand what they have to do, we can get the data that you want (or what the study was designed for). It can also help to have a demo-run ready on your laptop to show participants what will happen (there are also computers at the MRI-Lab that could be used for this. If you want to use them, test it first!)</p></li>

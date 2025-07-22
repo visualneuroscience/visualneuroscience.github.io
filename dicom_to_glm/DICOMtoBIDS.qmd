@@ -273,6 +273,6 @@ Alternatively, here is a list of potential next steps to continue with
 
 3.  [Defacing](defacing.qmd)
 
-4.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+4.  [Remove Denoising Scans from your data?](RemoveNoiseScan.qmd)
 
 5.  [fmriprep](run_fmriprep.qmd)

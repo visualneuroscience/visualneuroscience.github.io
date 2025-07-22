@@ -36,6 +36,7 @@
   {
     "listing": "/dicom_to_glm.html",
     "items": [
+      "/dicom_to_glm/second_level_glm_nilearn.html",
       "/dicom_to_glm/check_IntendedFor_field.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
       "/dicom_to_glm/retinotopic_mapping.html",
@@ -44,15 +45,8 @@
       "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
       "/dicom_to_glm/defacing.html",
       "/dicom_to_glm/troubleshooting.html",
-      "/dicom_to_glm/RemoveDenoisingScan.html",
+      "/dicom_to_glm/RemoveNoiseScan.html",
       "/dicom_to_glm/run_fmriprep.html"
-    ]
-  },
-  {
-    "listing": "/archive.html",
-    "items": [
-      "/archive/freesurfer FSFAST.html",
-      "/archive/dicom_to_bids.html"
     ]
   },
   {
@@ -64,8 +58,16 @@
     ]
   },
   {
+    "listing": "/archive.html",
+    "items": [
+      "/archive/freesurfer FSFAST.html",
+      "/archive/dicom_to_bids.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
+      "/dicom_to_glm/second_level_glm_nilearn.html",
       "/mri/mni-space/mni-space.html",
       "/mri/MRI-Studies_general/mri-studies_general-information.html",
       "/neurodesk/neurodesktop.html",
@@ -82,7 +84,7 @@
       "/dicom_to_glm/defacing.html",
       "/dicom_to_glm/troubleshooting.html",
       "/OtherTopics/CalculatingAPrioriPower.html",
-      "/dicom_to_glm/RemoveDenoisingScan.html",
+      "/dicom_to_glm/RemoveNoiseScan.html",
       "/dicom_to_glm/run_fmriprep.html",
       "/mri/analysis/7t_analysis_on_neurodesk.html",
       "/OtherTopics/LabMembersOnly/LabMembersOnly.html",

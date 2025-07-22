@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "03 - Defacing"
+title: "04 - Defacing"
 description: "Step by step description of how to deface your data"
 number-sections: true
 image: ./images/03_Defacing/01_open_Pydeface.png
@@ -14,6 +14,8 @@ date: 04/13/2025
 ## Ensure Defacing!
 
 Defacing your T1w scans is an important preprocessing step *that has to be done before* [running fmriprep](run_fmriprep.qmd) as you´ll probably run into errors otherwise!
+
+BUT: don´t run the defacing by default! You should always check first if the T1w-file is already defaced. Running the defacing algorithm multiple times(even though not necessary) can potentially harm the quality of your data!
 :::
 
 # General Information
@@ -90,10 +92,10 @@ To continue in your journey to your Analysis, please return to the [Overview-Pag
 
 Alternatively, here is a list of potential next steps to continue with
 
-1. [Provide Participants their T1w file](ProvidingParticipantsWithTheirT1wFile.qmd)
+1.  [Provide Participants their T1w file](ProvidingParticipantsWithTheirT1wFile.qmd)
 
-2.  [Remove Denoising Scans from your data?](RemoveDenoisingScan.qmd)
+2.  [Remove Noise Scans from your data?](RemoveNoiseScan.qmd)
 
-3. [Check the IntendedFor field of the fmap](check_IntendedFor_field.qmd)
+3.  [Check the IntendedFor field of the fmap](check_IntendedFor_field.qmd)
 
 4.  [run fmriprep](run_fmriprep.qmd)

@@ -1,0 +1,96 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: "05 - Removing Noise Scan"
+description: "Step by step description of how to remove the denoising scan from your data"
+number-sections: true
+image: ./images/02_RemoveDenoising/06_01_DenoisingScan_Confirmed.png
+categories: [MRI, Preprocessing, Neurodesk]
+author: MG
+date: 03/08/2025
+---
+
+For this step, you need to already have nifti files! If you currently only have DICOM files, please [convert them to nifti's first](DICOMtoBIDS.qmd)!
+
+Depending on the sequence used in the scanner session, you might have data that were acquired with a denoising sequence. This is sometimes done, since it doesn´t take much time in the scanner, but you have the ability to denoise the data if it turns out to be necessary.
+
+But by default, we don´t use this denoising information. Additionally, some applications ([like fmriprep](run_fmriprep.qmd)) cannot process data with this additional information!
+
+Thus, before running our default pipeline with [fmriprep](run_fmriprep.qmd), we have to remove this information from our scans!
+
+# Check for noise scan in nifti file
+
+## Open freeview {#sec-OpenFreeview}
+
+You can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:
+
+1.  Open a terminal (Monitor Icon at the bottom left on neurodesk) ![Open Terminal](./images/01_dcm2bids/open_terminal.gif)
+
+2.  Type `ml freesurfer` and press enter
+
+3.  Type `freeview` and press enter (from time to time, it can take a while until freeview opens, be patient! It is also possible, that some messages about runtime are printed in the terminal, but that is nothing to worry about!) ![Opening freeview](./images/02_RemoveDenoising/01_CheckInFreeview.png)
+
+$\to$ When freeview opened successfully, it should look like this: ![Freeview Opened](./images/02_RemoveDenoising/01_1_FreeviewOpened.png)
+
+## Load a functional volume {#sec-loadVolume}
+
+Now you have to look at a functional scan to see if there is a denoising scan at the end.
+
+For this, select `File > Load Volume` (top left corner in freeview): ![File \> Load Volume](./images/02_RemoveDenoising/02_File_loadVolume.png)
+
+A new window opens, asking you to `Select volume file`. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol ![Click on Folder Symbol](./images/02_RemoveDenoising/03_folderSymbol.png)
+
+Navigate to your `func` directory in your [BIDS](DICOMtoBIDS.qmd#sec-bidsdirectory), select one of the nifti files of one of the runs and press `Open` afterwards ![Select functional nifti file of a run in your bids directory](./images/02_RemoveDenoising/04_Navigate_to_functional_file.png)
+
+Now, with the field `Select volume file` specified with the path(s) to the nifti file, you can click `Open`![Open Volume](./images/02_RemoveDenoising/05_confirm_Selection.png)
+
+When the volume loaded, it should see some kind of data and something that looks like a brain: ![First Frame of Functional Scan](./images/02_RemoveDenoising/06_0_firstFrame.png)
+
+## Check for noise Scan {#sec-CheckDenoising}
+
+To check if a noise scan is included in you data, use the slider next to `Frames` (left side, roughly in the middle), to navigate *to the last frame*. If a denoising sequence was used during data acquisition in the scanner, this frame looks "empty". Toggle between the last and second to last frame, to visualize the difference even more ![Denoising Included in your Scan](./images/02_RemoveDenoising/06_1_DenoisingScan_Confirmed.png)
+
+If you confirmed a noise-scan in one functional run, they will probably be there for all your runs. It might be good to check every run anyway.
+
+# Remove noise scan from the data {#sec-RemoveDenoising}
+
+You confirmed noise information being present in your data in the last section. To run [fmriprep](run_fmriprep.qmd), we have to remove this information. To achieve this:
+
+1.  Get the following script and copy it to your own storage: `/shared/website/remove_noiseScan.sh`
+
+2.  Open the script (left-click + `gedit`)
+
+3.  Adjust the variables `subject_ids` and `constant_path`
+
+    -   with `constant_path` as it is right now, every subdirectory in `bids` would need to start with `sub-1400`
+    -   then it would look for all subjects indicated in `subject_ids`
+
+4.  run the script (either `cd` to the directory and run `bash ./remove_noiseScan.sh` or from anywhere run `bash /path/to/remove_noiseScan.sh`)
+
+5.  After the script starts, you have to indicate if you want to remove the last frame from the fmap (Press 1), from the functional runs (Press 2), or from both (Press 3)
+
+*Information:* this code basically searches for all files in your working directory that end on `_bold.nii.gz` (when functional files are processed) or `_epi.nii.gz` (when the fmap is processed), gets the information about how many frames it includes using `mri_info` and then removes the last frame (which we confirmed to be the noise scan prior)
+
+This process can take a while, especially in the beginning. Don´t get stressed out, when nothing happens for a while and only info statements get printed, be patient!
+
+After some time, you will get the information, that the first nifti is processed. This will be repeated for all files in your working directory that end in `_bold.nii.gz`/`_epi.nii.gz`. ![Remove Noise from all nii.gz files](./images/02_RemoveDenoising/11_finished.png)
+
+# Confirm successful removal {#sec-RemovalSuccess}
+
+To confirm that the noise scan was removed, [start freeview](#sec-OpenFreeview), [load a functional scan](#sec-loadVolume) (or the fmap) and finally [check the last frame](#sec-CheckDenoising). The original "empty" frame should now be removed and final scan should picture "normal" data.![Noise Scan removed](./images/02_RemoveDenoising/12_confirm_success.png)
+
+# Next steps
+
+Congratulations, you successfully removed the noise scans from your functional and fmap and you are one step closer to analyzing your data!
+
+To continue in your journey to your Analysis, please return to the [Overview-Page](Overview_fromDICOMtoGLM.qmd) to check what to do next.
+
+Alternatively, here is a list of potential next steps to continue with
+
+1.  [Defacing](defacing.qmd)
+
+2.  [Check JSON of fmap](check_IntendedFor_field.qmd)
+
+3.  [Provide participants with their T1w file](ProvidingParticipantsWithTheirT1wFile.qmd)
+
+4.  [run fmriprep](run_fmriprep.qmd)
