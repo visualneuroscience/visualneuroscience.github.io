@@ -15,16 +15,19 @@ Normally, this is achieved by implementing dedicated "retinotopy-runs" in the ex
 
 The Benson2014 atlas allows to get a retinotopic mapping even without dedicated "retinotopy-runs" by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e. discrete labels for V1, V2, etc.; `varea`), the eccentricity (i.e. the distance from fixation in visual degrees; `eccen`) or the polar angle (`angle`)
 
-# The script
-
 ::: callout-important
 To do the retinotopic mapping, you need [preprocessed](run_fmriprep.qmd) data!
 :::
 
+
+# The script
+
 The script to run the probabilistic retinotopic mapping can be found on the server: `/shared/website/occatlas.sh`
 
-Alternatively, you can copy/paste the code (after adapting it for your data! See below):
+(If you do surface based analysis, you can adapt the script `/shared/website/occatlas_surface_multipleSubs.sh` to run multiple subjects after each other.)
 
+
+Alternatively, you can copy/paste the code (after adapting it for your data! See below):
 
 ``` bash
 #!/usr/bin/env bash
@@ -117,7 +120,7 @@ fi
 
 # Necessary adaptiation steps
 
-1.  Change the variable `sid` to match the subject you want to process (*only the number is necessary*! In the script it will be implemented as `sub-sid`)
+1.  Change the variable `sid` to match the subject you want to process (*only the number is necessary*! In the script it will be implemented as `sub-sid`). It has to match the directory name of your subjects!
 
 2.  Change the variable `niidir` to match the path to your BIDS-directory
 

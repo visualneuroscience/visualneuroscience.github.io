@@ -54,7 +54,7 @@ Additionally, it may occur, that additional files are included in this field (e.
 
 # Update "IntendedFor" field of the fmap's JSON file
 
-There is a dedicated script to update the contents of the fmap's .json file. It can be found at `/shared/update_json.py`. Of course, you can do the changes manually as well.
+There is a dedicated script to update the contents of the fmap's .json file. It can be found at `/shared/website/update_json.py`. Of course, you can do the changes manually as well.
 
 To start and use the script:
 

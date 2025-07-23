@@ -564,8 +564,6 @@ window.Quarto = {
 <p>Retinotopic mapping is used to individually identify subregions in the visual cortex (i.e V1, V2, V3 and sometimes higher areas as well). This is then used to better understand how visual information is processed in the brain by different regions.</p>
 <p>Normally, this is achieved by implementing dedicated “retinotopy-runs” in the experimental design. However, this is not always possible.</p>
 <p>The Benson2014 atlas allows to get a retinotopic mapping even without dedicated “retinotopy-runs” by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e.&nbsp;discrete labels for V1, V2, etc.; <code>varea</code>), the eccentricity (i.e.&nbsp;the distance from fixation in visual degrees; <code>eccen</code>) or the polar angle (<code>angle</code>)</p>
-<section id="the-script" class="level1">
-<h1>The script</h1>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -579,7 +577,10 @@ Important
 <p>To do the retinotopic mapping, you need <a href="../dicom_to_glm/run_fmriprep.html">preprocessed</a> data!</p>
 </div>
 </div>
+<section id="the-script" class="level1">
+<h1>The script</h1>
 <p>The script to run the probabilistic retinotopic mapping can be found on the server: <code>/shared/website/occatlas.sh</code></p>
+<p>(If you do surface based analysis, you can adapt the script <code>/shared/website/occatlas_surface_multipleSubs.sh</code> to run multiple subjects after each other.)</p>
 <p>Alternatively, you can copy/paste the code (after adapting it for your data! See below):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -671,7 +672,7 @@ Important
 <section id="necessary-adaptiation-steps" class="level1">
 <h1>Necessary adaptiation steps</h1>
 <ol type="1">
-<li><p>Change the variable <code>sid</code> to match the subject you want to process (<em>only the number is necessary</em>! In the script it will be implemented as <code>sub-sid</code>)</p></li>
+<li><p>Change the variable <code>sid</code> to match the subject you want to process (<em>only the number is necessary</em>! In the script it will be implemented as <code>sub-sid</code>). It has to match the directory name of your subjects!</p></li>
 <li><p>Change the variable <code>niidir</code> to match the path to your BIDS-directory</p></li>
 <li><p>Optional (you can look at the output later anyway): Change the variable <code>show</code> to see the intermediate steps (<span class="math inline">\(\to\)</span> <code>show=yes</code> vs.&nbsp;<code>show=no</code>)</p></li>
 <li><p>Indicate if you use volumentric (<code>do_volumetric=yes</code>) oder surface data (<code>do_volumentric=no</code>) in your later analysis</p></li>

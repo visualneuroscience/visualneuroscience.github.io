@@ -67,8 +67,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/dicom_to_glm/second_level_glm_nilearn.html",
       "/mri/mni-space/mni-space.html",
+      "/dicom_to_glm/second_level_glm_nilearn.html",
       "/mri/MRI-Studies_general/mri-studies_general-information.html",
       "/neurodesk/neurodesktop.html",
       "/dicom_to_glm/check_IntendedFor_field.html",

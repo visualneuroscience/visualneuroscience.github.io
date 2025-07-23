@@ -479,7 +479,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#surface-based-analysis" id="toc-surface-based-analysis" class="nav-link active" data-scroll-target="#surface-based-analysis"><span class="header-section-number">1</span> Surface-based Analysis</a></li>
+  <li><a href="#surface-based" id="toc-surface-based" class="nav-link active" data-scroll-target="#surface-based"><span class="header-section-number">1</span> Surface-based</a></li>
   <li><a href="#volume-based-analysis" id="toc-volume-based-analysis" class="nav-link" data-scroll-target="#volume-based-analysis"><span class="header-section-number">2</span> Volume-based Analysis</a></li>
   </ul>
 </nav>
@@ -530,59 +530,44 @@ window.Quarto = {
 </header>
 
 
-<p>After preprocessing your data, probably with <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>, it´s time to do your first level GLM (= general linear model).</p>
+<p>After preprocessing your data, it´s time to do your first level GLM (= general linear model).</p>
 <p>In this step, you will compute mean contrast-estimates for predefined contrasts for each subject individually. These estimations will be used later in the <a href="../dicom_to_glm/second_level_glm_nilearn.html">second level Analysis</a>, where you extract relevant (for your research question/hypothesis) values.</p>
-<p>For all cases described below, there are generally three things you have to change before running the cells in the jupyter notebook (or the python script):</p>
+<section id="surface-based" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Surface-based</h1>
+<p>This page describes the first level GLM for a previous master thesis. It included 1 localizer run and 8 experimental runs. The experimental runs differed in the used attention task (“L”etter vs.&nbsp;“C”olor) and the flicker-condition (“F”ull vs.&nbsp;“N”othing; = flickering against full circles or against the background). Every “attention task” x “flicker condition” combination was presented two times. For every task (Loc, LF, LN, CF, CN), a separate GLM had to be computed. To analyze this data, a surface-based approach was chosen. Important: This study only included one session! If you did multiple sessions, you have to adapt the script accordingly!</p>
+<p>You can find the example jupyter notebook here: <code>/shared/website/GLM_surface.ipynb</code></p>
+<p>Keep in mind, that some processes might take some time!</p>
+<p>Short explanation of the process (enumeration corresponds to the cell number in the notebook):</p>
 <ol type="1">
-<li><p>Change the directories</p></li>
-<li><p>Indicate the task, the number of sessions and the subject</p></li>
-<li><p>Implement your contrasts</p></li>
-</ol>
-<section id="surface-based-analysis" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Surface-based Analysis</h1>
-<p>To compute a first-level GLM you can adapt the following jupyter notebook: <code>/shared/nilearn_ffx.ipynb</code></p>
-<p>You can either run each cell separately (“Play”-Button at the top) after implementing the changes (if changes are needed), or first implement all changes and then run all cells automaticall (“Double-Play”-Button at the top)</p>
-<ol type="1">
-<li>In the second cell (indicated with <code>[2]:</code> at the left), change:</li>
-</ol>
-<!-- -->
-<ol type="a">
-<li><p><code>data_dir</code></p></li>
-<li><p><code>fmriprep_dir</code></p></li>
-<li><p><code>task_label</code> (this refers to how your files are named! <span class="math inline">\(\to\)</span> in your BIDS-valid naming of your file, what´s behind “task-” <span class="math inline">\(\to\)</span> For <code>sub-12002_ses-1_task-loc_run-1_space-T1w_desc-preproc_bold.nii.gz</code> the corresponding <code>task_label</code> would be <code>loc</code> <span class="math inline">\(\to\)</span> <code>task_label = "loc"</code>)</p></li>
-<li><p><code>sub_labels</code></p></li>
-<li><p>After the comment <code># Loop over sessions</code>: indicate the number of sessions, by “counting” from 1 to the number of sessions you did (if you did 4 sessions, the line should read <code>for ses in [1, 2, 3, 4]</code>)</p></li>
-</ol>
-<!-- -->
-<ol start="2" type="1">
-<li><p>In the third cell (indicated with <code>[3]:</code> at the left), change the number of sessions similar to step 1e)</p></li>
-<li><p>In the sixth cell (indicated with <code>[6]:</code> at the left):</p></li>
-</ol>
-<!-- -->
-<ol type="a">
-<li><p>Define your <code>constrasts</code>-dictionairy, by defining a name for each contrast (= key) and indicating how it is computed (= value)</p></li>
-<li><p>for indicating how a contrast is computed, you can access the columns of the design matrix (that should be printed above this cell). Keep in mind, that for <code>basic_contrasts[]</code> you indicate the actual name of the column, not the index!</p></li>
-<li><p>you can print the resulting contrasts matrices, but you don´t have to</p></li>
-</ol>
-<!-- -->
-<ol start="4" type="1">
-<li>In the seventh cell (indicated with <code>[7]:</code> at the left):</li>
-</ol>
-<!-- -->
-<ol type="a">
-<li><p>define empty lists for each of your contrasts</p></li>
-<li><p>change the respective names of the lists before the <code>.append</code> statement</p></li>
-<li><p>indicate the correct contrast names in the parameters of the <code>.compute_contrast</code> function</p></li>
-</ol>
-<!-- -->
-<ol start="5" type="1">
-<li><p>In the eighth cell (indicated with <code>[8]:</code> at the left): change <code>contrasts_dict</code> to match with your <strong>lists</strong></p></li>
-<li><p>In the second part of the eighth cell (somehow the enumeration is messed up there): comment out (using <code>#</code>) the line starting with <code>data_dir =</code> (since you should have writing access in your own directories and you already defined <code>data_dir</code> in the beginning of the script)</p></li>
+<li><p>Load necessary packages/modules</p></li>
+<li><p>Helper function to get SurfaceImages (can be ignored, hopefully not necessary in the future)</p></li>
+<li><p>Definition of paths, parameters and constants</p>
+<ul>
+<li>if you only have one task or one subject, enter the corresponding name/id, but make sure that it is within the squared brackets! (Subsequent processes loop over these lists! If there is only one entry, it just stops after one iteration)</li>
+</ul></li>
+<li><p>Extract the first level GLM from your BIDS structure (if everything is defined correctly in the cell before, you can simply run this without any changes)</p></li>
+<li><p>Optimal: Uncomment (= remove the <code>#</code>) and run to confirm for example the number of <code>FirstLevelModel</code> objects that were extracted</p></li>
+<li><p>Get the surface data with the workaround (if everything is/was defined correctly, you can simply run this without any changes)</p></li>
+<li><p>In this cell, the models are acutally fitted to the data. Again, if everything was defined correctly you can simply run this cell (Even though the processes are parallelized, this probably takes some time!)</p></li>
+<li><p>Now you define the contrasts.</p>
+<ul>
+<li>In this case, it loops through the tasks (definetely necessary) and subjects (could potentially be omitted if everything is the same for all participants) and defines the corresponding contrasts</li>
+<li>first a directory is set up to store the design matrix (<code>plot_design_matrix</code> immediately afterwards) and the contrast visualizations (<code>plot_contrast_matrix</code> at the end)</li>
+<li>You have to think through your task &amp; subject structure (influences how and how many objects you have for example in <code>fitted_models</code>) to ensure that the logic holds! (in this the GLM for the first task is stored for the 5 subjects, then for the second task, etc.; depending on your setup, you might need to change the for loops)</li>
+<li><code>basic_contrasts</code> is a dictionary with “column-name” as key and the column as value for each column of the design matrix (<span class="math inline">\(\to\)</span> has as many entries/key-value-pairs as the design matrix has columns)</li>
+<li><code>contrasts</code> is the actual definition of your contrasts and is implemented as a dictionary as well. The key is the name of your contrast (can be chosen freely, but it is advised to use a “descriptive” name, such that you later immediately know what the contrast is about). The value is the actual contrast, e.g.&nbsp;one condition vs.&nbsp;another. Make sure that the value in the squared brackets behind <code>basic_contrasts</code> corresponds <em>to the actual name</em> of the column in the design matrix (as <code>basic_contrasts</code> is a dictionary and with <code>basic_contrasts[key_name]</code>, it searches a key named <code>key_name</code> and returns its stored value)</li>
+</ul></li>
+<li><p>Now you actually run the contrasts (i.e.&nbsp;you compute the values for the subjects/tasks)</p>
+<ul>
+<li>change the name of the lists within the for loops. You need as many empty lists as you defined contrasts in the previous step</li>
+<li>for every contrast (and thus list) you need the <code>.compute_contrast</code> section with the corresponding name that you defined in the previous step</li>
+</ul></li>
+<li><p>Saves the activation maps (should run without any changes)</p></li>
+<li><p>Saves the activation maps (should run without any changes). These are the files with which you later work in the <a href="../dicom_to_glm/second_level_glm_nilearn.html">second level GLM</a></p></li>
 </ol>
 </section>
 <section id="volume-based-analysis" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Volume-based Analysis</h1>
-<p>There is also a script for Volume-based Analysis</p>
 
 
 </section>

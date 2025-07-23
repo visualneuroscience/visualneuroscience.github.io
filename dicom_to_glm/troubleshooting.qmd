@@ -14,9 +14,15 @@ This page is dedicated for Troubleshooting. Known errors and problems will be li
 
 # General
 
-If you encounter an error - Check the error message, maybe copy/paste it to google to get a first idea of what is wrong - Check if all necessary ressources are sourced (e.g. did you include `ml freesurfer` before [opening a volume to check for noise scans](RemoveNoiseScan.qmd#sec-OpenFreeview)) - Check if your working directory is set correctly, if not, correct that with `cd /desired/path/` (e.g. [when you try to remove the noise scans](RemoveNoiseScan.qmd#sec-RemoveDenoising)) - Check if the paths in your command are correct. In some scripts you define you path in a variable, like `$SUBJECTS_DIR` or `$niidir`. If you want to only run a specific line of code separately, you might have to write out the complete path
+If you encounter an error
 
-# [fmriprep](run_fmriprep.qmd) {#sec-TroublesFmriprep}
+-   Check the error message, maybe copy/paste it to Google/an AI to get a first idea of what is wrong
+-   Check if all necessary ressources are sourced (e.g. did you include `ml freesurfer` before [opening a volume to check for noise scans](RemoveNoiseScan.qmd#sec-OpenFreeview))
+-   Check if your working directory is set correctly, if not, correct that with `cd /desired/path/` (e.g. [when you try to remove the noise scans](RemoveNoiseScan.qmd#sec-RemoveDenoising))
+-   Check if the paths in your command are correct. In some scripts you define you path in a variable, like `$SUBJECTS_DIR` or `$niidir`. If you want to only run a specific line of code separately, you might have to write out the complete path
+
+
+# [fMRIprep](run_fmriprep.qmd) {#sec-TroublesFmriprep}
 
 ## I ran fMRIprep but no distortion correction happened
 
@@ -24,7 +30,7 @@ If you encounter an error - Check the error message, maybe copy/paste it to goog
 
 #### Error Message
 
-This problem might occur with a corresponding error message (and the fmriprep command stopping)![Error for IntendedFor Problems](./images/Troubleshooting/OtherIntendedFor_Error.png)
+This problem might occur with a corresponding error message (and the fMRIprep command stopping)![Error for IntendedFor Problems](./images/Troubleshooting/OtherIntendedFor_Error.png)
 
 #### Silent error
 
@@ -38,7 +44,7 @@ If the distortion correction failed silently (thus, without an explicit error th
 
 -   you might be using a wrong BIDS specification in the fmap's `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri), or the [corresponding wiki entry](check_IntendedFor_field.qmd).
 
--   If the content of the fmap's .json file uses a different naming convention than necessary for your version of [fmriPrep](run_fmriprep.qmd), no distortion correction is applie
+-   If the content of the fmap's .json file uses a different naming convention than necessary for your version of [fMRIprep](run_fmriprep.qmd), no distortion correction is applie
 
 $\to$ Follow [this wiki entry](check_IntendedFor_field.qmd) to check and update the entries of the fmap's .json file
 
@@ -46,7 +52,7 @@ $\to$ Follow [this wiki entry](check_IntendedFor_field.qmd) to check and update 
 
 This error sometimes occurs by chance, but should not appear regularly. It is caused by the coregistration algorithm of fmriprep itself. There are two options you can try:
 
-1.  Try a different version of [fmriprep](run_fmriprep.qmd)
+1.  Try a different version of [fMRIprep](run_fmriprep.qmd)
 
 2.  Transform your T1w scan
 
@@ -80,7 +86,7 @@ $\to$ In the directory that has the prerun `recon-all` there is a folder `script
 
 > This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven't been tested)
 
-## fmriprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan
+## fMRIprep fails silently (i.e. gives no error) on coregistering the functional to the structural scan
 
 $\to$ the solution is (if your structural and functional scans are from the same session) to add the following flag:
 

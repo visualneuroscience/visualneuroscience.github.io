@@ -73,8 +73,9 @@ This page gives an overview and brief information about the necessary steps to g
 
 # 6 - [fmriprep](run_fmriprep.qmd)
 
--   this is one of many [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html) (that require [a BIDS-valid Dataset](https://bids-standard.github.io/bids-validator/))
--   runs various preprocessing steps on it´s own
+-   one of many [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html) (that require [a BIDS-valid Dataset](https://bids-standard.github.io/bids-validator/))
+-   combines various anatomical and functional preprocessing steps within one tool
+-   necessary, time intense process
 
 # 7 - [Retinotopic Mapping](retinotopic_mapping.qmd)
 
@@ -84,4 +85,16 @@ This page gives an overview and brief information about the necessary steps to g
 
 # 8 - [first-level Analysis](first_level_glm_nilearn.qmd)
 
+- in the first level GLM you process the data of individual subjects
+- for each subject, you define/estimate a model that can explain your data
+- you define meaningful contrasts (e.g. your experimental conditions)
+- you account for potential confounds
+
 # 9 - [second-level Analysis](second_level_glm_nilearn.qmd)
+
+- in the second level GLM you extract the relevevant (for your reasearch questions/hypothesis) information from your first level GLM
+- you should save this information in a format that allows you to later run your statistical analysis
+
+# 10 - Statistical Analysis
+
+- with your extracted data, you can now run your statistical analysis

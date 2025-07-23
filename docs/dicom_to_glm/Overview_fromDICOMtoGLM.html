@@ -493,6 +493,7 @@ window.Quarto = {
   <li><a href="#retinotopic-mapping" id="toc-retinotopic-mapping" class="nav-link" data-scroll-target="#retinotopic-mapping"><span class="header-section-number">9</span> 7 - Retinotopic Mapping</a></li>
   <li><a href="#first-level-analysis" id="toc-first-level-analysis" class="nav-link" data-scroll-target="#first-level-analysis"><span class="header-section-number">10</span> 8 - first-level Analysis</a></li>
   <li><a href="#second-level-analysis" id="toc-second-level-analysis" class="nav-link" data-scroll-target="#second-level-analysis"><span class="header-section-number">11</span> 9 - second-level Analysis</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis"><span class="header-section-number">12</span> 10 - Statistical Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -619,8 +620,9 @@ DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
 <section id="fmriprep" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> 6 - <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
 <ul>
-<li>this is one of many <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a> (that require <a href="https://bids-standard.github.io/bids-validator/">a BIDS-valid Dataset</a>)</li>
-<li>runs various preprocessing steps on it´s own</li>
+<li>one of many <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a> (that require <a href="https://bids-standard.github.io/bids-validator/">a BIDS-valid Dataset</a>)</li>
+<li>combines various anatomical and functional preprocessing steps within one tool</li>
+<li>necessary, time intense process</li>
 </ul>
 </section>
 <section id="retinotopic-mapping" class="level1" data-number="9">
@@ -632,9 +634,25 @@ DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
 </section>
 <section id="first-level-analysis" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> 8 - <a href="../dicom_to_glm/first_level_glm_nilearn.html">first-level Analysis</a></h1>
+<ul>
+<li>in the first level GLM you process the data of individual subjects</li>
+<li>for each subject, you define/estimate a model that can explain your data</li>
+<li>you define meaningful contrasts (e.g.&nbsp;your experimental conditions)</li>
+<li>you account for potential confounds</li>
+</ul>
 </section>
 <section id="second-level-analysis" class="level1" data-number="11">
 <h1 data-number="11"><span class="header-section-number">11</span> 9 - <a href="../dicom_to_glm/second_level_glm_nilearn.html">second-level Analysis</a></h1>
+<ul>
+<li>in the second level GLM you extract the relevevant (for your reasearch questions/hypothesis) information from your first level GLM</li>
+<li>you should save this information in a format that allows you to later run your statistical analysis</li>
+</ul>
+</section>
+<section id="statistical-analysis" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> 10 - Statistical Analysis</h1>
+<ul>
+<li>with your extracted data, you can now run your statistical analysis</li>
+</ul>
 
 
 </section>

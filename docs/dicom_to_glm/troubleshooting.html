@@ -480,7 +480,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
-  <li><a href="#sec-TroublesFmriprep" id="toc-sec-TroublesFmriprep" class="nav-link" data-scroll-target="#sec-TroublesFmriprep"><span class="header-section-number">2</span> fmriprep</a>
+  <li><a href="#sec-TroublesFmriprep" id="toc-sec-TroublesFmriprep" class="nav-link" data-scroll-target="#sec-TroublesFmriprep"><span class="header-section-number">2</span> fMRIprep</a>
   <ul class="collapse">
   <li><a href="#i-ran-fmriprep-but-no-distortion-correction-happened" id="toc-i-ran-fmriprep-but-no-distortion-correction-happened" class="nav-link" data-scroll-target="#i-ran-fmriprep-but-no-distortion-correction-happened"><span class="header-section-number">2.1</span> I ran fMRIprep but no distortion correction happened</a>
   <ul class="collapse">
@@ -493,7 +493,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors" id="toc-if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors" class="nav-link" data-scroll-target="#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors"><span class="header-section-number">2.3</span> If using already run FreeSurfer <code>recon-all</code> output and have specified an <code>expert-opts</code> file then fMRIprep shows multiple errors</a></li>
   <li><a href="#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme" id="toc-i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme" class="nav-link" data-scroll-target="#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme"><span class="header-section-number">2.4</span> I ran fMRIprep and the distortion correction of the data is too extreme</a></li>
-  <li><a href="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" id="toc-fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" class="nav-link" data-scroll-target="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fmriprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</a></li>
+  <li><a href="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" id="toc-fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" class="nav-link" data-scroll-target="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fMRIprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -547,17 +547,23 @@ window.Quarto = {
 <p>This page is dedicated for Troubleshooting. Known errors and problems will be listed here with a possible solution for solving this issue. If you solved a problem that might be relevant for others as well, feel free to contact Maximilian (,Adam or Natalia) so that it can be added to this page as well.</p>
 <section id="general" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
-<p>If you encounter an error - Check the error message, maybe copy/paste it to google to get a first idea of what is wrong - Check if all necessary ressources are sourced (e.g.&nbsp;did you include <code>ml freesurfer</code> before <a href="../dicom_to_glm/RemoveNoiseScan.html#sec-OpenFreeview">opening a volume to check for noise scans</a>) - Check if your working directory is set correctly, if not, correct that with <code>cd /desired/path/</code> (e.g.&nbsp;<a href="../dicom_to_glm/RemoveNoiseScan.html#sec-RemoveDenoising">when you try to remove the noise scans</a>) - Check if the paths in your command are correct. In some scripts you define you path in a variable, like <code>$SUBJECTS_DIR</code> or <code>$niidir</code>. If you want to only run a specific line of code separately, you might have to write out the complete path</p>
+<p>If you encounter an error</p>
+<ul>
+<li>Check the error message, maybe copy/paste it to Google/an AI to get a first idea of what is wrong</li>
+<li>Check if all necessary ressources are sourced (e.g.&nbsp;did you include <code>ml freesurfer</code> before <a href="../dicom_to_glm/RemoveNoiseScan.html#sec-OpenFreeview">opening a volume to check for noise scans</a>)</li>
+<li>Check if your working directory is set correctly, if not, correct that with <code>cd /desired/path/</code> (e.g.&nbsp;<a href="../dicom_to_glm/RemoveNoiseScan.html#sec-RemoveDenoising">when you try to remove the noise scans</a>)</li>
+<li>Check if the paths in your command are correct. In some scripts you define you path in a variable, like <code>$SUBJECTS_DIR</code> or <code>$niidir</code>. If you want to only run a specific line of code separately, you might have to write out the complete path</li>
+</ul>
 </section>
 <section id="sec-TroublesFmriprep" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
+<h1 data-number="2"><span class="header-section-number">2</span> <a href="../dicom_to_glm/run_fmriprep.html">fMRIprep</a></h1>
 <section id="i-ran-fmriprep-but-no-distortion-correction-happened" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="i-ran-fmriprep-but-no-distortion-correction-happened"><span class="header-section-number">2.1</span> I ran fMRIprep but no distortion correction happened</h2>
 <section id="detection-of-this-problem" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="detection-of-this-problem"><span class="header-section-number">2.1.1</span> Detection of this Problem</h3>
 <section id="error-message" class="level4" data-number="2.1.1.1">
 <h4 data-number="2.1.1.1" class="anchored" data-anchor-id="error-message"><span class="header-section-number">2.1.1.1</span> Error Message</h4>
-<p>This problem might occur with a corresponding error message (and the fmriprep command stopping)<img src="./images/Troubleshooting/OtherIntendedFor_Error.png" class="img-fluid" alt="Error for IntendedFor Problems"></p>
+<p>This problem might occur with a corresponding error message (and the fMRIprep command stopping)<img src="./images/Troubleshooting/OtherIntendedFor_Error.png" class="img-fluid" alt="Error for IntendedFor Problems"></p>
 </section>
 <section id="silent-error" class="level4" data-number="2.1.1.2">
 <h4 data-number="2.1.1.2" class="anchored" data-anchor-id="silent-error"><span class="header-section-number">2.1.1.2</span> Silent error</h4>
@@ -570,7 +576,7 @@ window.Quarto = {
 <h3 data-number="2.1.2" class="anchored" data-anchor-id="solution"><span class="header-section-number">2.1.2</span> Solution</h3>
 <ul>
 <li><p>you might be using a wrong BIDS specification in the fmap’s <code>json</code> file. See <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri">Information about BIDS uri</a>, or the <a href="../dicom_to_glm/check_IntendedFor_field.html">corresponding wiki entry</a>.</p></li>
-<li><p>If the content of the fmap’s .json file uses a different naming convention than necessary for your version of <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a>, no distortion correction is applie</p></li>
+<li><p>If the content of the fmap’s .json file uses a different naming convention than necessary for your version of <a href="../dicom_to_glm/run_fmriprep.html">fMRIprep</a>, no distortion correction is applie</p></li>
 </ul>
 <p><span class="math inline">\(\to\)</span> Follow <a href="../dicom_to_glm/check_IntendedFor_field.html">this wiki entry</a> to check and update the entries of the fmap’s .json file</p>
 </section>
@@ -579,7 +585,7 @@ window.Quarto = {
 <h2 data-number="2.2" class="anchored" data-anchor-id="valueerror-reference-passed-is-not-aligned-with-spline-grids"><span class="header-section-number">2.2</span> ValueError: Reference passed is not aligned with spline grids</h2>
 <p>This error sometimes occurs by chance, but should not appear regularly. It is caused by the coregistration algorithm of fmriprep itself. There are two options you can try:</p>
 <ol type="1">
-<li><p>Try a different version of <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></p></li>
+<li><p>Try a different version of <a href="../dicom_to_glm/run_fmriprep.html">fMRIprep</a></p></li>
 <li><p>Transform your T1w scan</p></li>
 </ol>
 <section id="transform-your-t1w-scan" class="level3" data-number="2.2.1">
@@ -614,7 +620,7 @@ window.Quarto = {
 </blockquote>
 </section>
 <section id="fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fmriprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</h2>
+<h2 data-number="2.5" class="anchored" data-anchor-id="fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fMRIprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</h2>
 <p><span class="math inline">\(\to\)</span> the solution is (if your structural and functional scans are from the same session) to add the following flag:</p>
 <pre><code>`--bold2t1w-init header`</code></pre>
 
