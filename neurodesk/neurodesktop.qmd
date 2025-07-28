@@ -5,8 +5,8 @@ title: Neurodesktop access
 description: "How to use Neurodesktop on the server"
 image: images/clipboard-3609792068.png
 categories: [Neurodesk]
-author: NZ
-date: 07/10/2025
+author: NZ, MG
+date: 07/28/2025
 ---
 
 # General information
@@ -141,6 +141,27 @@ The overall resource usage on the server (all users) is displayed in the bottom 
 If you want to check how much resources is used by you, open the terminal and type "htop" (you can use F6 to sort processes by "percentage memory"):
 
 ![Example of "normal" memory usage for running fMRIprep.](images/clipboard-170336543.png)
+
+## Using notebooks and scripts in JupyterLab
+
+When you want to use python scrips or notebooks, you´ll probably set them up in JupyterLab. There are a few "nice-to-have" (e.g. changing the Theme at the section `Settings` at the menu bar) but also potentially crucial settings that are worth taking a look at:
+
+-   `Settings > Settings Editor`
+
+    a)  at the sidebar, go to `Notebook`. Here you have the option to individualize different aspects about your notebooks. Two potentially important/helpful adaptations:
+        1)  Enable "Auto Closing Brackets" (should be right at the top). When handling multiple brackets, this might be helpful to keep track of where you are.
+        2)  If you scroll down a bit, there should be "Shut down kernel". Even though unused kernels are shut down after 24h automatically, it might be a good practice to enable this option. This results in an automatic kernel-shutdown whenever you close a notebook. This helps to keep the RAM clean by avoiding active kernels that are not used.
+    b)  at the sidebar, go to `Code Completion`. Depending what you are used to when coding, you can activate the option `Enable autocompletion` here
+
+-   The ⏩ sign: $\to$ by clicking this button at the top of notebooks, it will restart the kernel and run the whole notebook sequentially (so all cells after each other)
+
+-   The ⏵ sign: run the current cell (Alternative: `Strg` + `Enter`)
+
+-   The ⏹ sign: interrups all current processes of the kernel
+
+-   The ⟳ sign: restarts the kernel (*all* variales are lost, everything is cleared from RAM)
+
+-   Ensuring limited strain on RAM for notebooks with high RAM demands: Sometimes you need to run notebooks that take some time and that require much RAM (e.g. analysis/processing with surface images of multiple subjects). First, you should figure out how many subjects are even possible at once (due to limited RAM). If you run a notebook that takes so much time that you potentially can´t look at the data immediately (as it may take an hour an you are not in the office then), it can be useful to add cell at the very end of your notebook with `os._exit(0)` (if you dodn´t use `os` in your notebook, you have to include `import os` before that line as well). Including this line and with using ⏩, your notebook runs through completely and automatically aborts the kernel afterwards. Thus, you free up the required RAM immediately after your notebook finished (obviously, you must make sure that the data you need is saved in the process)
 
 # Information for lab members with ssh access
 

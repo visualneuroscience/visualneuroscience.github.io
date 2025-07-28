@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-07-22">
+<meta name="dcterms.date" content="2025-07-28">
 <meta name="description" content="Example of second level GLM">
 
 <title>09- second level GLM – Visual Neuroscience Lab</title>
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -482,7 +511,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 22, 2025</p>
+      <p class="date">July 28, 2025</p>
     </div>
   </div>
   
@@ -494,7 +523,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In Progress</p>
+<p>Similar to the <a href="../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a>, an example is provided and described as a starting point to adapt your own work.</p>
+<p>In the second level GLM you want to take the necessary steps to make inferences beyond individual subjects (as out <a href="../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a> considered the subjects individually and tried to predict their activation). This is step is what leads you to the “actual” answers of your research questions and hypothesis.</p>
+<p>We continue with the example described in the <a href="../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a>. The goal now is, to extract contrast estimates for specific regions of interest. These regions of interest will be infered from the localizer data and <a href="../dicom_to_glm/retinotopic_mapping.html">retinotopic mapping</a> (We look for areas in the primary visual cortex that are specifically active for visual stimuli in a specific region of the visual field). The inferred mask will then be overlayed on the data of the functional runs, to get the contrast estimates within these regions of interest (these contrast estimates are the values that go into our statistical analysis at the end).</p>
+<p>Hint about the localizer: In different conditions, a flickering checkerboard was visible in specific areas of the screen. A simple example is to show a flickering checkerboard either in the left or the right half of the screen. By looking at the activation data a defining correct contrasts in the <a href="../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a>, this allows you to infer areas that show specific activation only for the left (or right) visual field.</p>
+<p>(e.g.&nbsp;when a flickering checkerboard is presented in the top right quadrant of the screen, we want to find areas that correspond only to this condition)</p>
+<p>You can find the example script here: <code>/shared/website/GLM_secondLevel.ipynb</code></p>
+<p>The general logic/structure is as follows:</p>
+<ol type="1">
+<li><p>Import necessary libraries and modules</p></li>
+<li><p>Define important variables:</p>
+<ul>
+<li>subjects and data directory</li>
+<li>subregions (= Regions of Interes): corresponding to your naming convention of the files from the <a href="../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a> for the localizer data</li>
+<li>contrast_names: corresponding to your naming convention of the files from the <a href="../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a> for the experimental data</li>
+<li>tasks: you don´t need to include this, but you might need to change subsequent code then</li>
+</ul></li>
+<li><p>Make a mask based on the data from the <a href="../dicom_to_glm/retinotopic_mapping.html">retinotopic mapping</a> for every subjects</p>
+<ol type="a">
+<li>get and load the data with the information about the specific regions (= <code>*_varea.mgz</code>) and about the eccentricity (= <code>*_eccen.mgz</code>)</li>
+<li>define a mask (for each hemisphere) that is “True” (=boolean value) for all vertices of the surface, where the <code>*_varea.mgz</code> file is 1 (<span class="math inline">\(\to\)</span> meaning that this vertex corresponds to V1), and “False” for all other vertices</li>
+<li>define a mask (for each hemisphere) that is “True” for all vertices, that have an eccentricity of &gt; 0 and &lt; 5 (<span class="math inline">\(\to\)</span> only the central visual field) and “False” for all other vertices (<span class="math inline">\(\to\)</span> that cover the periphery)</li>
+<li>combine both masks and save the resulting mask containing areas that are both in V1 <em>AND</em> have an eccentricity &lt; 5 (if you compare two boolean values with AND/&amp;, the result is only “True”, if <em>both</em> inputs that are compared are “True”)</li>
+</ol></li>
+<li><p>Make a mask based on the data from the localizer data for every subject</p>
+<p><span class="math inline">\(\to\)</span> We need a mask for every region of interest that we want to consider later</p>
+<p><span class="math inline">\(\to\)</span> “For-loop” over all subregions that we defined in step 2. Thus, for every of these regions (that also have a corresponding file from the first-level GML)</p>
+<ol type="a">
+<li>Get and load the maps containing the z-scores for the specific region of interest for both hemispheres</li>
+<li>Define and save a mask that is “True” for all vertices with a z-score &lt; 1.96 and “False” for all other vertices (<span class="math inline">\(\to\)</span> we want the vertices, that are <em>more</em> active when the respective area of the visual field was stimulated in the localizer)</li>
+</ol></li>
+<li><p>Make a combined mask for every subject</p>
+<p><span class="math inline">\(\to\)</span> our goal for the mask is to find vertices that</p>
+<ol type="a">
+<li>Are located in V1 and cover the central visual field (achieved by steo 3)</li>
+<li>Are <em>more</em> active in the specific condition of the localizer/visual field</li>
+</ol>
+<p><span class="math inline">\(\to\)</span> by combining these two masks (again with a AND/&amp; combination of two boolean martices), we get a resulting mask, that has the value “True” for all vertices that satify both condition a) &amp; b) and “False” for all other vertices (<span class="math inline">\(\to\)</span> that satify none of only one of the two requirements)</p></li>
+<li><p>Calculate and save the contrast estimates for every subject and every subregion</p>
+<ol type="a">
+<li>first we initialize an empty list to later store the results</li>
+<li>For every subject (first loop) we want to get estimates for every region of interest (second loop). Within every region of interest, we want the estimates for every task (third loop, defined in step 2 in the variable tasks; here you have to adapt the code if you chose to not use the variable!). Finally, we want the contrast estimate for every (relevant) contrast (fourth loop; also defined in step 2)</li>
+<li>Within each combination, we 1) get the statmap from the first level GLM containing the contrast estimates for each vertex 2) apply the combined mask from the previous steps to this data (<span class="math inline">\(\to\)</span> We apply the boolean values True/False of the mask to the numerical data of the statmap. Like this, we only consider the contrast estimates of vertices that also satisy the conditions that we defined in step 5!)</li>
+<li>we take the mean from the resulting values (so only those values corresponding to vertices that satisfy the conditions 5a and 5b) to get the “Mean Contrast Estimate” of a specific subject, for a specific contrast in a specific region of interest</li>
+<li>we save the estimate and the information about the condition</li>
+</ol></li>
+<li><p>After calculating the mean contrast estimate for all “Subject” x “Contrast” x “Region of Interst” combination, we save this information in a <code>.csv</code> file</p></li>
+<li><p>Optimal: We can already define some plots/visualizations here</p></li>
+</ol>
+<div class="callout-info">
+<p>This example of a second level GLM already includes a “control analysis”/sanity check by looking at the contrast estimates of the localizer data is well. It can be done easier, or in two notebooks!</p>
+</div>
 
 
 

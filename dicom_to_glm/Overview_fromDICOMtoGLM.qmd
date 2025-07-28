@@ -5,7 +5,7 @@ title: "00 - Overview"
 description: "Overview about how to get from DICOM files from the Scanner to your GLM Analysis"
 number-sections: true
 author: MG
-date: 04/16/2025
+date: 07/28/2025
 ---
 
 # General
@@ -29,7 +29,7 @@ This page gives an overview and brief information about the necessary steps to g
     -   ***IMPORTANT: Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
 :::
 
-# 0 - DICOM-Files
+# DICOM-Files
 
 -   the raw files from the scanner are DICOM-Files
 -   not really useful since we need `.nifti` files for our analysis $\qquad\to$ first step is to transform the `DICOM`- to `.nift`-files
@@ -41,12 +41,12 @@ This page gives an overview and brief information about the necessary steps to g
 ***Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
 :::
 
-# 1 - [DICOM to nifti](DICOMtoBIDS.qmd)
+# [DICOM to nifti](DICOMtoBIDS.qmd)
 
 -   using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/dcm2bids.sh`)
 -   results in `.nifti` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
 
-# 2 - [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
+# [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
 
 -   tells [fmriPrep](run_fmriprep.qmd) on what files distortion correction should be applied to
 
@@ -54,47 +54,47 @@ This page gives an overview and brief information about the necessary steps to g
 
 -   to avoid unnecessary problems and delays, it doesn´t harm to always check this field before running fMRIprep!
 
-# 3 - [Distribute the T1w files to participants?](ProvidingParticipantsWithTheirT1wFile.qmd)
+# [Distribute the T1w files to participants?](ProvidingParticipantsWithTheirT1wFile.qmd)
 
 -   if you promised participants that they will get their T1w images, you should make sure that they really get them
 -   this should be done before [defacing](defacing.qmd)
 -   You should delete the "non-defaced" files either after you distributed them to the respective participants, or after your study ended
 
-# 4 - [Defacing your data](defacing.qmd)
+# [Defacing your data](defacing.qmd)
 
 -   defaced data is necessary to savely run fMRIprep
 -   Save faced T1w-files to give to your participants (if you got the data during regular scanning times, there should be a `faced` directory, but you should still make sure, that you have the faced T1w files if you need them for your participants!)
 -   NEVER share data (e.g. on [open Neuro](https://openneuro.org/)) that was not defaced before!
 -   Defacing is done with `pydeface` (Docker; Version 2.0.2)
 
-# 5 - ([Remove denoising scan from your data](RemoveNoiseScan.qmd))
+# ([Remove denoising scan from your data](RemoveNoiseScan.qmd))
 
 -   if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you might have to remove the last volume of each scan (which basically is a noise scan) before continuing
 
-# 6 - [fmriprep](run_fmriprep.qmd)
+# [fmriprep](run_fmriprep.qmd)
 
 -   one of many [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html) (that require [a BIDS-valid Dataset](https://bids-standard.github.io/bids-validator/))
 -   combines various anatomical and functional preprocessing steps within one tool
 -   necessary, time intense process
 
-# 7 - [Retinotopic Mapping](retinotopic_mapping.qmd)
+# [Retinotopic Mapping](retinotopic_mapping.qmd)
 
 -   if you want to specifically test potential effects in specific visual areas (e.g. V1, V2, etc.), you might need to do retinotopic mapping
 
 -   this allows you to differentiate different visual areas, eccentricity and more
 
-# 8 - [first-level Analysis](first_level_glm_nilearn.qmd)
+# [first-level Analysis](first_level_glm_nilearn.qmd)
 
-- in the first level GLM you process the data of individual subjects
-- for each subject, you define/estimate a model that can explain your data
-- you define meaningful contrasts (e.g. your experimental conditions)
-- you account for potential confounds
+-   in the first level GLM you process the data of individual subjects
+-   for each subject, you define/estimate a model that can explain your data
+-   you define meaningful contrasts (e.g. your experimental conditions)
+-   you account for potential confounds
 
-# 9 - [second-level Analysis](second_level_glm_nilearn.qmd)
+# [second-level Analysis](second_level_glm_nilearn.qmd)
 
-- in the second level GLM you extract the relevevant (for your reasearch questions/hypothesis) information from your first level GLM
-- you should save this information in a format that allows you to later run your statistical analysis
+-   in the second level GLM you extract the relevevant (for your reasearch questions/hypothesis) information from your first level GLM
+-   you should save this information in a format that allows you to later run your statistical analysis
 
-# 10 - Statistical Analysis
+# Statistical Analysis
 
-- with your extracted data, you can now run your statistical analysis
+-   with your extracted data (that are saved in a .csv file), you can now run your statistical analysis

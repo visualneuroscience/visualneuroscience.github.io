@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="NZ">
-<meta name="dcterms.date" content="2025-07-10">
+<meta name="author" content="NZ, MG">
+<meta name="dcterms.date" content="2025-07-28">
 <meta name="description" content="How to use Neurodesktop on the server">
 
 <title>Neurodesktop access – Visual Neuroscience Lab</title>
@@ -532,6 +532,7 @@ window.Quarto = {
   <li><a href="#using-freesurfer" id="toc-using-freesurfer" class="nav-link" data-scroll-target="#using-freesurfer">Using FreeSurfer</a></li>
   <li><a href="#using-fitlins" id="toc-using-fitlins" class="nav-link" data-scroll-target="#using-fitlins">Using fitlins</a></li>
   <li><a href="#resource-esp.-ram-usage" id="toc-resource-esp.-ram-usage" class="nav-link" data-scroll-target="#resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</a></li>
+  <li><a href="#using-notebooks-and-scripts-in-jupyterlab" id="toc-using-notebooks-and-scripts-in-jupyterlab" class="nav-link" data-scroll-target="#using-notebooks-and-scripts-in-jupyterlab">Using notebooks and scripts in JupyterLab</a></li>
   </ul></li>
   <li><a href="#information-for-lab-members-with-ssh-access" id="toc-information-for-lab-members-with-ssh-access" class="nav-link" data-scroll-target="#information-for-lab-members-with-ssh-access">Information for lab members with ssh access</a>
   <ul class="collapse">
@@ -566,14 +567,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>NZ </p>
+             <p>NZ, MG </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 10, 2025</p>
+      <p class="date">July 28, 2025</p>
     </div>
   </div>
   
@@ -697,6 +698,26 @@ freeview</code></pre>
 <figcaption>Example of “normal” memory usage for running fMRIprep.</figcaption>
 </figure>
 </div>
+</section>
+<section id="using-notebooks-and-scripts-in-jupyterlab" class="level2">
+<h2 class="anchored" data-anchor-id="using-notebooks-and-scripts-in-jupyterlab">Using notebooks and scripts in JupyterLab</h2>
+<p>When you want to use python scrips or notebooks, you´ll probably set them up in JupyterLab. There are a few “nice-to-have” (e.g.&nbsp;changing the Theme at the section <code>Settings</code> at the menu bar) but also potentially crucial settings that are worth taking a look at:</p>
+<ul>
+<li><p><code>Settings &gt; Settings Editor</code></p>
+<ol type="a">
+<li>at the sidebar, go to <code>Notebook</code>. Here you have the option to individualize different aspects about your notebooks. Two potentially important/helpful adaptations:
+<ol type="1">
+<li>Enable “Auto Closing Brackets” (should be right at the top). When handling multiple brackets, this might be helpful to keep track of where you are.</li>
+<li>If you scroll down a bit, there should be “Shut down kernel”. Even though unused kernels are shut down after 24h automatically, it might be a good practice to enable this option. This results in an automatic kernel-shutdown whenever you close a notebook. This helps to keep the RAM clean by avoiding active kernels that are not used.</li>
+</ol></li>
+<li>at the sidebar, go to <code>Code Completion</code>. Depending what you are used to when coding, you can activate the option <code>Enable autocompletion</code> here</li>
+</ol></li>
+<li><p>The ⏩ sign: <span class="math inline">\(\to\)</span> by clicking this button at the top of notebooks, it will restart the kernel and run the whole notebook sequentially (so all cells after each other)</p></li>
+<li><p>The ⏵ sign: run the current cell (Alternative: <code>Strg</code> + <code>Enter</code>)</p></li>
+<li><p>The ⏹ sign: interrups all current processes of the kernel</p></li>
+<li><p>The ⟳ sign: restarts the kernel (<em>all</em> variales are lost, everything is cleared from RAM)</p></li>
+<li><p>Ensuring limited strain on RAM for notebooks with high RAM demands: Sometimes you need to run notebooks that take some time and that require much RAM (e.g.&nbsp;analysis/processing with surface images of multiple subjects). First, you should figure out how many subjects are even possible at once (due to limited RAM). If you run a notebook that takes so much time that you potentially can´t look at the data immediately (as it may take an hour an you are not in the office then), it can be useful to add cell at the very end of your notebook with <code>os._exit(0)</code> (if you dodn´t use <code>os</code> in your notebook, you have to include <code>import os</code> before that line as well). Including this line and with using ⏩, your notebook runs through completely and automatically aborts the kernel afterwards. Thus, you free up the required RAM immediately after your notebook finished (obviously, you must make sure that the data you need is saved in the process)</p></li>
+</ul>
 </section>
 </section>
 <section id="information-for-lab-members-with-ssh-access" class="level1">

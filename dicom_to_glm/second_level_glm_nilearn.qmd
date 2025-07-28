@@ -7,7 +7,69 @@ number-sections: true
 #image: ./images/04_fmriprep/00_OpenFmriprep.png
 categories: [MRI, Analysis, fmriPrep, Neurodesk, nilearn]
 author: MG
-date: 07/22/2025
+date: 07/28/2025
 ---
 
-In Progress
+Similar to the [first level GLM](./first_level_glm_nilearn.qmd), an example is provided and described as a starting point to adapt your own work.
+
+In the second level GLM you want to take the necessary steps to make inferences beyond individual subjects (as out [first level GLM](./first_level_glm_nilearn.qmd) considered the subjects individually and tried to predict their activation). This is step is what leads you to the "actual" answers of your research questions and hypothesis.
+
+We continue with the example described in the [first level GLM](./first_level_glm_nilearn.qmd). The goal now is, to extract contrast estimates for specific regions of interest. These regions of interest will be infered from the localizer data and [retinotopic mapping](./retinotopic_mapping.qmd) (We look for areas in the primary visual cortex that are specifically active for visual stimuli in a specific region of the visual field). The inferred mask will then be overlayed on the data of the functional runs, to get the contrast estimates within these regions of interest (these contrast estimates are the values that go into our statistical analysis at the end).
+
+Hint about the localizer: In different conditions, a flickering checkerboard was visible in specific areas of the screen. A simple example is to show a flickering checkerboard either in the left or the right half of the screen. By looking at the activation data a defining correct contrasts in the [first level GLM](./first_level_glm_nilearn.qmd), this allows you to infer areas that show specific activation only for the left (or right) visual field.
+
+(e.g. when a flickering checkerboard is presented in the top right quadrant of the screen, we want to find areas that correspond only to this condition)
+
+You can find the example script here: `/shared/website/GLM_secondLevel.ipynb`
+
+The general logic/structure is as follows:
+
+1.  Import necessary libraries and modules
+
+2.  Define important variables:
+
+    -   subjects and data directory
+    -   subregions (= Regions of Interes): corresponding to your naming convention of the files from the [first level GLM](./first_level_glm_nilearn.qmd) for the localizer data
+    -   contrast_names: corresponding to your naming convention of the files from the [first level GLM](./first_level_glm_nilearn.qmd) for the experimental data
+    -   tasks: you don´t need to include this, but you might need to change subsequent code then
+
+3.  Make a mask based on the data from the [retinotopic mapping](./retinotopic_mapping.qmd) for every subjects
+
+    a)  get and load the data with the information about the specific regions (= `*_varea.mgz`) and about the eccentricity (= `*_eccen.mgz`)
+    b)  define a mask (for each hemisphere) that is "True" (=boolean value) for all vertices of the surface, where the `*_varea.mgz` file is 1 ($\to$ meaning that this vertex corresponds to V1), and "False" for all other vertices
+    c)  define a mask (for each hemisphere) that is "True" for all vertices, that have an eccentricity of \> 0 and \< 5 ($\to$ only the central visual field) and "False" for all other vertices ($\to$ that cover the periphery)
+    d)  combine both masks and save the resulting mask containing areas that are both in V1 *AND* have an eccentricity \< 5 (if you compare two boolean values with AND/&, the result is only "True", if *both* inputs that are compared are "True")
+
+4.  Make a mask based on the data from the localizer data for every subject
+
+    $\to$ We need a mask for every region of interest that we want to consider later
+
+    $\to$ "For-loop" over all subregions that we defined in step 2. Thus, for every of these regions (that also have a corresponding file from the first-level GML)
+
+    a)  Get and load the maps containing the z-scores for the specific region of interest for both hemispheres
+    b)  Define and save a mask that is "True" for all vertices with a z-score \< 1.96 and "False" for all other vertices ($\to$ we want the vertices, that are *more* active when the respective area of the visual field was stimulated in the localizer)
+
+5.  Make a combined mask for every subject
+
+    $\to$ our goal for the mask is to find vertices that
+
+    a)  Are located in V1 and cover the central visual field (achieved by steo 3)
+    b)  Are *more* active in the specific condition of the localizer/visual field
+
+    $\to$ by combining these two masks (again with a AND/& combination of two boolean martices), we get a resulting mask, that has the value "True" for all vertices that satify both condition a) & b) and "False" for all other vertices ($\to$ that satify none of only one of the two requirements)
+
+6.  Calculate and save the contrast estimates for every subject and every subregion
+
+    a)  first we initialize an empty list to later store the results
+    b)  For every subject (first loop) we want to get estimates for every region of interest (second loop). Within every region of interest, we want the estimates for every task (third loop, defined in step 2 in the variable tasks; here you have to adapt the code if you chose to not use the variable!). Finally, we want the contrast estimate for every (relevant) contrast (fourth loop; also defined in step 2)
+    c)  Within each combination, we 1) get the statmap from the first level GLM containing the contrast estimates for each vertex 2) apply the combined mask from the previous steps to this data ($\to$ We apply the boolean values True/False of the mask to the numerical data of the statmap. Like this, we only consider the contrast estimates of vertices that also satisy the conditions that we defined in step 5!)
+    d)  we take the mean from the resulting values (so only those values corresponding to vertices that satisfy the conditions 5a and 5b) to get the "Mean Contrast Estimate" of a specific subject, for a specific contrast in a specific region of interest
+    e)  we save the estimate and the information about the condition
+
+7.  After calculating the mean contrast estimate for all "Subject" x "Contrast" x "Region of Interst" combination, we save this information in a `.csv` file
+
+8.  Optimal: We can already define some plots/visualizations here
+
+::: callout-info
+This example of a second level GLM already includes a "control analysis"/sanity check by looking at the contrast estimates of the localizer data is well. It can be done easier, or in two notebooks!
+:::

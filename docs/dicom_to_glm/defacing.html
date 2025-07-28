@@ -525,6 +525,8 @@ Ensure Defacing!
 <p>When acquiring data during regular scanner times, we already get nifti files. There should be a directory <code>rawdata</code>, which contains the data in BIDS-Format. Additionally there is a directory <code>faced</code>.</p>
 <p>In theory, the directory <code>faced</code> should contain the original T1w-niftis that you can <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">send to the participant</a> and the T1w-niftis within <code>rawdata</code> should already be defaced (and thus be ready to further work with them, e.g.&nbsp;<a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>).</p>
 <p>However, sometimes the automatic defacing at the MRI-Lab does not work as intended, potentially resulting in “non-defaced” T1w-niftis in the <code>rawdata</code> directory! Thus, you should <em>always</em> check the T1w-nifti in <code>rawdata</code> to ensure that it is defaced and avoid potential subsequent problems.</p>
+<p>To check the T1w files, you can just load them in freeview, MRIcroGL,…</p>
+<p>Alternatively you can also run <code>python /shared/website/showT1.py</code> in the terminal. When you indicate the path to your bids-directory and press enter, this script will open <em>all</em> (be aware of that! Depending on how many subjects are in the directory, this will take some time and open as many T1w files as you have participants!) T1w-files that are stored in the bids-directory.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

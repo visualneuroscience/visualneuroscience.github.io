@@ -535,7 +535,7 @@ window.Quarto = {
 <section id="surface-based" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Surface-based</h1>
 <p>This page describes the first level GLM for a previous master thesis. It included 1 localizer run and 8 experimental runs. The experimental runs differed in the used attention task (“L”etter vs.&nbsp;“C”olor) and the flicker-condition (“F”ull vs.&nbsp;“N”othing; = flickering against full circles or against the background). Every “attention task” x “flicker condition” combination was presented two times. For every task (Loc, LF, LN, CF, CN), a separate GLM had to be computed. To analyze this data, a surface-based approach was chosen. Important: This study only included one session! If you did multiple sessions, you have to adapt the script accordingly!</p>
-<p>You can find the example jupyter notebook here: <code>/shared/website/GLM_surface.ipynb</code></p>
+<p>You can find the example jupyter notebook here: <code>/shared/website/GLM_surface_Main.ipynb</code></p>
 <p>Keep in mind, that some processes might take some time!</p>
 <p>Short explanation of the process (enumeration corresponds to the cell number in the notebook):</p>
 <ol type="1">
@@ -565,9 +565,13 @@ window.Quarto = {
 <li><p>Saves the activation maps (should run without any changes)</p></li>
 <li><p>Saves the activation maps (should run without any changes). These are the files with which you later work in the <a href="../dicom_to_glm/second_level_glm_nilearn.html">second level GLM</a></p></li>
 </ol>
+<div class="callout-info">
+<p>The notebook <code>/shared/website/GLM_surface_Loc.ipynb</code> was used for the GLM of the localizer data. The structure and logic is the same is for the main experiment</p>
+</div>
 </section>
 <section id="volume-based-analysis" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Volume-based Analysis</h1>
+<p>If you do a volume-based Analysis, you can also do this with nilearn and a jupyter notebook. You can find an example here: <code>/shared/website/GLM_volume.ipynb</code>. The structure and logic again is similar, but some stepts have to be done differently compared to a surface-based analysis.</p>
 
 
 </section>

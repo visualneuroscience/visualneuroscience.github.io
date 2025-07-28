@@ -28,6 +28,11 @@ In theory, the directory `faced` should contain the original T1w-niftis that you
 
 However, sometimes the automatic defacing at the MRI-Lab does not work as intended, potentially resulting in "non-defaced" T1w-niftis in the `rawdata` directory! Thus, you should *always* check the T1w-nifti in `rawdata` to ensure that it is defaced and avoid potential subsequent problems.
 
+To check the T1w files, you can just load them in freeview, MRIcroGL,...
+
+Alternatively you can also run `python /shared/website/showT1.py` in the terminal. When you indicate the path to your bids-directory and press enter, this script will open *all* (be aware of that! Depending on how many subjects are in the directory, this will take some time and open as many T1w files as you have participants!) T1w-files that are stored in the bids-directory.
+
+
 ::: callout-important
 ## Don´t forget your participants!
 

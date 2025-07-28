@@ -125,7 +125,7 @@ Once you are happy with the naming of the files, run bidscoiner-command to do th
 
 ![](images/clipboard-2244027224.png){width="446"}
 
-Now you can view the nifti files with any suitable software
+Now you can view the nifti files with any suitable software (*Hint*: In the image above, you see a T1w scan that is already defaced! If you convert your DICOMs to niftis, the T1w-scan will probably look differently and you have to [deface](defacing.qmd) before continuing!)
 
 # From Dicom to nifti in BIDS format with Adam's script {#sec-script}
 
