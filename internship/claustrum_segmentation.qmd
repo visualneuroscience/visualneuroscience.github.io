@@ -1,0 +1,196 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Internship project - Automatic Claustrum Segmentation
+description: "Short summary of an internship about the investigation of different methods to do an automatic segmentation of the human claustrum"
+author: BK, MG
+categories: [Internship, Lab]
+date: 07/28/2025
+---
+
+# NextBrain (Histoatlas) Segmentierung
+
+![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
+
+**Voraussetzungen:**
+
+-   FreeSurfer als Neurodesk-Modul geladen
+-   Input: z. B. `sub-01_ses-01_7T_T1w_defaced.nii.gz`
+-   Output-Ordner: beliebig (z. B. `~/freesurfer-output`)
+
+**Befehl:**
+
+```         
+mri_histo_atlas_segment \
+/path/to/input.nii.gz \
+/path/to/output_folder \
+full \
+1 \
+-1
+```
+
+**Output:**
+
+```         
+- Struktursegmentierung `seg_right.mgz`, `seg_left.mgz`
+- .csv mit Volumina
+```
+
+**Visualisierung:** `freeview -v input.nii.gz -v seg_right.mgz:colormap=lut:lut=path/to/AllenAtlasLUT`
+
+**Troubleshooting:**
+
+```         
+- Stelle sicher, dass Lookup Table (AllenAtlasLUT) korrekt verlinkt ist
+- Bei Performanceproblemen: viel Zeit einplanen (v. a. bei 0.25 mm Auflösung)
+```
+
+# SynthSeg (Mauri et al.) Claustrum Segmentierung
+
+![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
+
+**Voraussetzungen:**
+
+```         
+- Python 3.8 Conda-Umgebung (z. B. synthseg_env)
+- FreeSurfer-Modul geladen (FREESURFER_HOME optional, aber hilfreich)
+- model.h5 vorhanden in claustrum_segmentation/model/
+```
+
+**Input:** hochaufgelöste T1-Datei (z. B. `T1.mgz` oder `.nii.gz`)
+
+**Befehl:**
+
+```         
+csh /home/jovyan/SynthSeg/claustrum_segmentation/mri_claustrum_seg \
+--i /path/to/input.nii.gz \
+--o /path/to/output_folder \
+--model /path/to/model.h5 \
+--threads 32 \
+--qc \
+--surf
+```
+
+**Output:**
+
+```         
+- `claustrum.lh.nii.gz`, `claustrum.rh.nii.gz`
+- Optional: .mgz-Konvertierung via mri_convert
+```
+
+**Troubleshooting:**
+
+```         
+- ![:x:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/274c.png) model.h5 zu klein? $\to$ Neu herunterladen
+- ![:x:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/274c.png) Kein seg.lh.mgz? $\to$ Crash durch fehlende LUT oder unvollständige Ausführung
+- ![:weißes_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Vorher export FREESURFER_HOME=/path/to/freesurfer_module setzen
+- ![:x:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/274c.png) TEMP-Ordner leer? $\to$ Python-Fehler oder Pfadproblem
+- Optional: Denoising vor Segmentierung vermeiden (Registrierungsfehler möglich)
+```
+
+# MezerLab Claustrum Segmentierung
+
+![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
+
+1.  Module laden (im LX-Terminal)
+
+```         
+module load matlab/2024b\
+module load spm12/r7771\
+module load fsl/6.0.7.16\
+module load mrtrix3/3.0.4
+```
+
+2.  T1-Scan vorbereiten
+
+```         
+mri_convert /home/jovyan/matlab/T1.mgz /home/jovyan/matlab/T1.nii.gz \
+bet /home/jovyan/matlab/T1.nii.gz /home/jovyan/matlab/T1_brain.nii.gz \
+fslreorient2std /home/jovyan/matlab/T1_brain.nii.gz /home/jovyan/matlab/T1_brain_std.nii.gz
+```
+
+3.  5TT-Datei erzeugen (voll aufgelöst)
+
+-   `5ttgen fsl /home/jovyan/matlab/T1_brain_std.nii.gz /home/jovyan/matlab/T1_5tt.nii.gz`
+-   Falls `T1_5tt.nii.gz` zu niedrige Auflösung hat $\to$ Erneut ausführen mit nicht zugeschnittenem Input: `5ttgen fsl /home/jovyan/matlab/T1.nii.gz /home/jovyan/matlab/T1_5tt_fixed.nii.gz`
+
+4.  FSL FIRST-Segmentierung
+
+```         
+run_first_all -i /home/jovyan/matlab/T1_brain_std.nii.gz -o /home/jovyan/matlab/first_output \
+cp /home/jovyan/matlab/first_output_all_fast_firstseg.nii.gz /home/jovyan/matlab/first_seg.nii.gz
+```
+
+5.  MATLAB starten: `matlab`
+
+6.  Pfade in MATLAB setzen
+
+``` matlab
+addpath(genpath('/home/jovyan/matlab/vistasoft')); \
+addpath(genpath('/home/jovyan/matlab/ClaustrumSegmentation')); \
+addpath(genpath('/home/jovyan/matlab/spm12')); \
+spm('defaults', 'fmri'); \
+spm_jobman('initcfg');
+```
+
+7.  Segmentierung ausführen
+
+``` matlab
+t1wFile = '/home/jovyan/matlab/T1_brain_std.nii.gz'; \
+tt5File = '/home/jovyan/matlab/T1_5tt_fixed.nii.gz'; % Verwende fixierte Datei \
+fslSegFile = '/home/jovyan/matlab/first_seg.nii.gz'; \
+
+segment_claustrum_rh(t1wFile, tt5File, fslSegFile, '/home/jovyan/matlab/claustrum_output/rh_claustrum.nii.gz'); \
+segment_claustrum_lh(t1wFile, tt5File, fslSegFile, '/home/jovyan/matlab/claustrum_output/lh_claustrum.nii.gz');
+```
+
+**Troubleshooting (kurz & präzise)**
+
+| Problem | Ursache | Lösung |
+|----------------------|--------------------|------------------------------|
+| Kein `lh_claustrum.nii.gz` | Falsches oder leeres `tt5File` | Nutze `T1_5tt_fixed.nii.gz` |
+| `kmeans: X must have more rows than clusters` | `candidate` enthält \<2 Werte | TT5 zu grob / CSF-Filter zu streng → TT5 neu erstellen |
+| `csfMask(find(tmp)) = 0;` Fehler | TT5-Auflösung unpassend | Mit `flirt` resamplen oder TT5 neu erzeugen |
+| FIRST-Output fehlt | `run_first_all` nicht korrekt ausgeführt | `-i` und `-o` prüfen |
+| `bet` oder `run_first_all` nicht gefunden | Modul nicht geladen | `module load fsl/...` |
+| Auflösungsfehler | Bildgrößen ungleich | Alle Inputs auf 1×1×1 mm prüfen (z. B. mit `mrinfo`, `fslhd`) |
+
+**Optional:**Visualisierung in FreeSurfer
+
+```         
+mri_convert /home/jovyan/matlab/claustrum_output/rh_claustrum.nii.gz /home/jovyan/matlab/claustrum_output/rh_claustrum.mgz \
+mri_convert /home/jovyan/matlab/claustrum_output/lh_claustrum.nii.gz /home/jovyan/matlab/claustrum_output/lh_claustrum.mgz \
+
+freeview -v /home/jovyan/matlab/T1.mgz \
+-v /home/jovyan/matlab/claustrum_output/rh_claustrum.mgz \
+-v /home/jovyan/matlab/claustrum_output/lh_claustrum.mgz
+```
+
+# Claustrum Segmentierung nach Li et al.
+
+![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
+
+1.  **Resampling**
+    -   Python-Skript aus dem GitHub-Repository nutzen (`resample.py`)
+    -   Eingabepfad, Zielauflösung (1 mm³), und Output-Pfad anpassen
+2.  **Skull-Stripping**
+    -   Mit FSL-BET
+3.  
+    z.  B.: `bet2 input_resampled.nii.gz output_ss.nii.gz -f 0.5 -g 0 -m`
+
+**Denoising**
+
+-   ANTs DenoiseImage verwenden
+-   
+    z.  B.: `DenoiseImage -d 3 -i output_ss.nii.gz -o output_ss_denoised.nii.gz`
+
+**Claustrum-Segmentierung mit Multi-View-Netz**
+
+-   GitHub Repository claustrum demo klonen (im read me)
+-   Verzeichnisstruktur beibehalten (z. B. `data/test/subjectID/subjectID_T1w_denoised.nii.gz`)
+-   Modelle in `models/` einfügen (axial und coronal)
+-   In Conda-Umgebung mit Python 3.8 und TensorFlow 2.3–2.5 arbeiten (außedem mit keras, Simple Itk, scipy, numpy, PIL)
+-   Alle Abhängigkeiten mit `pip install -r requirements.txt` installieren
+-   Ausführen mit: `python test_two_views.py`
+
+**Output:** Segmentierungsmaske wird in output/ gespeichert.

@@ -4,7 +4,7 @@ geometry: margin=3cm
 title: Internship Checklist
 description: "Information for starting as an intern"
 author: NZ
-categories: [People, Lab]
+categories: [Internship, Lab]
 date: 05/08/2025
 ---
 
@@ -45,6 +45,8 @@ Interns are an integral part of our team and are treated as equal colleagues. Ho
 
 ## Before leaving
 
--   [ ] Make sure you check out the [leaving](../leaving/index.qmd) section. It is made primarily for doctoral students, but some things in there will apply to you as well.
+-   [ ] Make sure you check out the [leaving](../people/leaving/index.qmd) section. It is made primarily for doctoral students, but some things in there will apply to you as well.
 
 -   [ ] Have the PI sign your documents.
+
+-   [ ] *Optional:* Provide a short summary of what you did and what you found out that can be uploaded to the website
