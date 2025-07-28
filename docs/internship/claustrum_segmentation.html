@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-07-08">
-<meta name="description" content="Description of how to check and potentially update the fmap’s JSON file">
+<meta name="author" content="BK, MG">
+<meta name="dcterms.date" content="2025-07-28">
+<meta name="description" content="Short summary of an internship about the investigation of different methods to do an automatic segmentation of the human claustrum">
 
-<title>02 - Check IntendedFor field of the fmap’s JSON – Visual Neuroscience Lab</title>
+<title>Internship project - Automatic Claustrum Segmentation – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -70,6 +104,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -141,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/check_IntendedFor_field.html">02 - Check IntendedFor field of the fmap’s JSON</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../internship.html">Internship</a></li><li class="breadcrumb-item"><a href="../internship/claustrum_segmentation.html">Internship project - Automatic Claustrum Segmentation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,11 +240,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../dicom_to_glm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
@@ -196,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link active">
+  <a href="../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02 - Check IntendedFor field of the fmap’s JSON</span></a>
   </div>
 </li>
@@ -395,11 +458,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../internship.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internship</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../internship/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
@@ -414,7 +477,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../internship/claustrum_segmentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../internship/claustrum_segmentation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Internship project - Automatic Claustrum Segmentation</span></a>
   </div>
 </li>
@@ -477,29 +540,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#check-the-content-of-the-json-file" id="toc-check-the-content-of-the-json-file" class="nav-link active" data-scroll-target="#check-the-content-of-the-json-file"><span class="header-section-number">1</span> Check the content of the JSON file</a></li>
-  <li><a href="#update-intendedfor-field-of-the-fmaps-json-file" id="toc-update-intendedfor-field-of-the-fmaps-json-file" class="nav-link" data-scroll-target="#update-intendedfor-field-of-the-fmaps-json-file"><span class="header-section-number">2</span> Update “IntendedFor” field of the fmap’s JSON file</a></li>
+  <li><a href="#nextbrain-histoatlas-segmentierung" id="toc-nextbrain-histoatlas-segmentierung" class="nav-link active" data-scroll-target="#nextbrain-histoatlas-segmentierung">NextBrain (Histoatlas) Segmentierung</a></li>
+  <li><a href="#synthseg-mauri-et-al.-claustrum-segmentierung" id="toc-synthseg-mauri-et-al.-claustrum-segmentierung" class="nav-link" data-scroll-target="#synthseg-mauri-et-al.-claustrum-segmentierung">SynthSeg (Mauri et al.) Claustrum Segmentierung</a></li>
+  <li><a href="#mezerlab-claustrum-segmentierung" id="toc-mezerlab-claustrum-segmentierung" class="nav-link" data-scroll-target="#mezerlab-claustrum-segmentierung">MezerLab Claustrum Segmentierung</a></li>
+  <li><a href="#claustrum-segmentierung-nach-li-et-al." id="toc-claustrum-segmentierung-nach-li-et-al." class="nav-link" data-scroll-target="#claustrum-segmentierung-nach-li-et-al.">Claustrum Segmentierung nach Li et al.</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/check_IntendedFor_field.html">02 - Check IntendedFor field of the fmap’s JSON</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../internship.html">Internship</a></li><li class="breadcrumb-item"><a href="../internship/claustrum_segmentation.html">Internship project - Automatic Claustrum Segmentation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">02 - Check IntendedFor field of the fmap’s JSON</h1>
+<h1 class="title">Internship project - Automatic Claustrum Segmentation</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">MRI</div>
-    <div class="quarto-category">Analysis</div>
-    <div class="quarto-category">fmriPrep</div>
-    <div class="quarto-category">Preprocessing</div>
-    <div class="quarto-category">Neurodesk</div>
+    <div class="quarto-category">Internship</div>
+    <div class="quarto-category">Lab</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Description of how to check and potentially update the fmap’s JSON file
+    Short summary of an internship about the investigation of different methods to do an automatic segmentation of the human claustrum
   </div>
 </div>
 
@@ -509,14 +571,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>MG </p>
+             <p>BK, MG </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 8, 2025</p>
+      <p class="date">July 28, 2025</p>
     </div>
   </div>
   
@@ -528,50 +590,222 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>With changing Versions of <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> and <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a>, slight changes occur in how and where you have to include specific information. One example for this is the <code>IntendedFor</code> information in the fmap’s <code>.json</code> file. It tells <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a> for which (functional) data the distortion correction should be applied to.</p>
-<p>Depending on the conversion method you used to <a href="../dicom_to_glm/DICOMtoBIDS.html">convert your DICOM to nifti files</a>, the contents will look differently.</p>
-<p>Additionally, depending on the version of <a href="../dicom_to_glm/run_fmriprep.html">fMRIprep</a> you plan to use for preprocessing, you need different naming conventions of the entries.</p>
-<p>In general, there are two naming conventions that might be used in the IntendedFor field:</p>
-<pre><code>BIDS uri spec necessary for fmriprep 24.0.0 or newer:
-
-``` json
-"IntendedFor": [
-    "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
-    "bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz", 
-    etc
-    ]
-```
-
-Older fmap spec necessary for fmriprep older than 24.0.0:
-
-``` json
-"IntendedFor": [
-    "ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz",
-    "ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz",
-    etc
-    ]
-```</code></pre>
-<p>Due to these differences and potential resulting problems (e.g.&nbsp;no distortion correction is applied), you should always check the content of the fmap’s “IntendedFor” field before <a href="../dicom_to_glm/run_fmriprep.html">running fMRIprep</a>.</p>
-<section id="check-the-content-of-the-json-file" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Check the content of the JSON file</h1>
-<p>Navigate to the <code>fmap</code> directory of a/each subject (<code>*/bids/sub-999/ses-1/fmap/</code>) and open the <code>.json</code> file<img src="./images/01_dcm2bids/28_Navigate_to_fmap_json.png" class="img-fluid" alt="Go to and open .json file"></p>
-<p>Scroll down to the very end of it. There should be a section that starts with <code>IntendedFor</code> and looks like this:<img src="./images/01_dcm2bids/29_json_initial.png" class="img-fluid" alt="Initial IntendedFor Section"></p>
-<p>In General, all entries should follow the same naming convention (either the new or the old one, see above). If the naming convention corresponds to the <a href="../dicom_to_glm/run_fmriprep.html">fMRIprep</a> version you want to use, you don´t have to change anything. If it does not correspond to the naming convention necessary for your version, you can follow the steps below to update the file.</p>
-<p>Additionally, it may occur, that additional files are included in this field (e.g.&nbsp;files named “*part-phase*”) where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, your should remove the entries of these files (see below)</p>
+<p>In diesem Projekt wurden verschiedene Methoden zur automatischen Segmentierung des menschlichen Claustrum untersucht. Dabei wurde ein hochauflösender 7T TI-gewichteter MRT scan verwendet.</p>
+<section id="nextbrain-histoatlas-segmentierung" class="level1">
+<h1>NextBrain (Histoatlas) Segmentierung</h1>
+<p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/39282320/">Casamitjana et al.&nbsp;(2024)</a></li>
+<li>verwendet bayesian Algorithmus und KI Methoden</li>
+<li>333 unterschiedliche Regions of Interest</li>
+<li>Methode: ~10000 serielle, histologische 3D Schnittbilder von 5 Hemispähren</li>
+<li>Verwendung unabhängig der Auflösung</li>
+<li>Verarbeitet das gesamte Gehirn, kann dementsprechend einige Tage laufen</li>
+</ul>
+<p><strong>Voraussetzungen:</strong></p>
+<ul>
+<li>FreeSurfer als Neurodesk-Modul geladen</li>
+<li>Input: z. B. <code>sub-01_ses-01_7T_T1w_defaced.nii.gz</code></li>
+<li>Output-Ordner: beliebig (z. B. <code>~/freesurfer-output</code>)</li>
+</ul>
+<p><strong>Befehl:</strong></p>
+<pre><code>mri_histo_atlas_segment \
+/path/to/input.nii.gz \
+/path/to/output_folder \
+full \
+1 \
+-1</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>- Struktursegmentierung `seg_right.mgz`, `seg_left.mgz`
+- .csv mit Volumina</code></pre>
+<p><strong>Visualisierung:</strong> <code>freeview -v input.nii.gz -v seg_right.mgz:colormap=lut:lut=path/to/AllenAtlasLUT</code></p>
+<p><strong>Troubleshooting:</strong></p>
+<pre><code>- Stelle sicher, dass Lookup Table (AllenAtlasLUT) korrekt verlinkt ist
+- Bei Performanceproblemen: viel Zeit einplanen (v. a. bei 0.25 mm Auflösung)</code></pre>
 </section>
-<section id="update-intendedfor-field-of-the-fmaps-json-file" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Update “IntendedFor” field of the fmap’s JSON file</h1>
-<p>There is a dedicated script to update the contents of the fmap’s .json file. It can be found at <code>/shared/website/update_json.py</code>. Of course, you can do the changes manually as well.</p>
-<p>To start and use the script:</p>
+<section id="synthseg-mauri-et-al.-claustrum-segmentierung" class="level1">
+<h1>SynthSeg (Mauri et al.) Claustrum Segmentierung</h1>
+<p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2411.15388v1#:~:text=In%20this%20paper%2C%20we%20propose%20a%20contrast-%20and,synthetic%20training%20intensity%20images%20to%20achieve%20excellent%20generalization.">Mauri et al.&nbsp;(2024)</a></li>
+<li>basiert auf Deep Learning (SynthSeg)</li>
+<li>verwendet syntethische Daten, die aus Label-Maps generiert werden</li>
+<li>Methode: an 18 ultra-hochauflösenden MRT scans mit manuellem Claustrum Label trainiert</li>
+<li>Verwendung unabhängig vom contrast (T1, T2)</li>
+<li>robust gegenüber Auflösung</li>
+</ul>
+<p><strong>Voraussetzungen:</strong></p>
+<pre><code>- Python 3.8 Conda-Umgebung (z. B. synthseg_env)
+- FreeSurfer-Modul geladen (FREESURFER_HOME optional, aber hilfreich)
+- model.h5 vorhanden in claustrum_segmentation/model/</code></pre>
+<p><strong>Input:</strong> hochaufgelöste T1-Datei (z. B. <code>T1.mgz</code> oder <code>.nii.gz</code>)</p>
+<p><strong>Befehl:</strong></p>
+<pre><code>csh /home/jovyan/SynthSeg/claustrum_segmentation/mri_claustrum_seg \
+--i /path/to/input.nii.gz \
+--o /path/to/output_folder \
+--model /path/to/model.h5 \
+--threads 32 \
+--qc \
+--surf</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>- `claustrum.lh.nii.gz`, `claustrum.rh.nii.gz`
+- Optional: .mgz-Konvertierung via mri_convert</code></pre>
+<p><strong>Troubleshooting:</strong></p>
+<pre><code>- ![:x:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/274c.png) model.h5 zu klein? $\to$ Neu herunterladen
+- ![:x:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/274c.png) Kein seg.lh.mgz? $\to$ Crash durch fehlende LUT oder unvollständige Ausführung
+- ![:weißes_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Vorher export FREESURFER_HOME=/path/to/freesurfer_module setzen
+- ![:x:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/274c.png) TEMP-Ordner leer? $\to$ Python-Fehler oder Pfadproblem
+- Optional: Denoising vor Segmentierung vermeiden (Registrierungsfehler möglich)</code></pre>
+</section>
+<section id="mezerlab-claustrum-segmentierung" class="level1">
+<h1>MezerLab Claustrum Segmentierung</h1>
+<p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/34296125/">Berman et al.&nbsp;(2020)</a></li>
+<li>nur dorsales Claustrum</li>
+<li>basierend auf dem <a href="http://www.humanconnectomeproject.org/">Human Connectome Project</a></li>
+<li>Methode: basierend auf 1068 bilateralen, dorsalen Claustrum Segmentierungen</li>
+<li>Validierung durch den Vergleich automatischer und manueller Claustrum Segmentierungen in 10 Datensätzen (2 Rater)</li>
+</ul>
 <ol type="1">
-<li><p>Open a terminal <img src="./images/01_dcm2bids/open_terminal.gif" class="img-fluid" alt="Open a Terminal"></p></li>
-<li><p>Type <code>python /shared/update_json.py</code></p></li>
-<li><p>Indicate if you want to change the naming convention (independent of the current version, the old naming convention is changed to the new one and vice versa if you select 1 (=Yes) here)</p></li>
-<li><p>Indicate if you want to remove entries from the field</p></li>
-<li><p>If you want to remove entries, indicate the keywords that identify an entry to be removed</p></li>
-<li><p>Provide the path to your bids directory</p></li>
+<li>Module laden (im LX-Terminal)</li>
 </ol>
-<p>After providing all the inputs, the indicated changes will be performed and saved in the file automatically. The original .json file will be saved as filename_orig.json (if the original entries are needed later again). Additionally, the changes are only applied, if a <code>fmap</code>-directory with a <code>.json</code> file doesn´t already have a <code>_orig.json</code>.</p>
+<pre><code>module load matlab/2024b\
+module load spm12/r7771\
+module load fsl/6.0.7.16\
+module load mrtrix3/3.0.4</code></pre>
+<ol start="2" type="1">
+<li>T1-Scan vorbereiten</li>
+</ol>
+<pre><code>mri_convert /home/jovyan/matlab/T1.mgz /home/jovyan/matlab/T1.nii.gz \
+bet /home/jovyan/matlab/T1.nii.gz /home/jovyan/matlab/T1_brain.nii.gz \
+fslreorient2std /home/jovyan/matlab/T1_brain.nii.gz /home/jovyan/matlab/T1_brain_std.nii.gz</code></pre>
+<ol start="3" type="1">
+<li>5TT-Datei erzeugen (voll aufgelöst)</li>
+</ol>
+<ul>
+<li><code>5ttgen fsl /home/jovyan/matlab/T1_brain_std.nii.gz /home/jovyan/matlab/T1_5tt.nii.gz</code></li>
+<li>Falls <code>T1_5tt.nii.gz</code> zu niedrige Auflösung hat <span class="math inline">\(\to\)</span> Erneut ausführen mit nicht zugeschnittenem Input: <code>5ttgen fsl /home/jovyan/matlab/T1.nii.gz /home/jovyan/matlab/T1_5tt_fixed.nii.gz</code></li>
+</ul>
+<ol start="4" type="1">
+<li>FSL FIRST-Segmentierung</li>
+</ol>
+<pre><code>run_first_all -i /home/jovyan/matlab/T1_brain_std.nii.gz -o /home/jovyan/matlab/first_output \
+cp /home/jovyan/matlab/first_output_all_fast_firstseg.nii.gz /home/jovyan/matlab/first_seg.nii.gz</code></pre>
+<ol start="5" type="1">
+<li><p>MATLAB starten: <code>matlab</code></p></li>
+<li><p>Pfade in MATLAB setzen</p></li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">addpath</span>(<span class="va">genpath</span>(<span class="ss">'/home/jovyan/matlab/vistasoft'</span>))<span class="op">;</span> <span class="op">\</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="va">addpath</span>(<span class="va">genpath</span>(<span class="ss">'/home/jovyan/matlab/ClaustrumSegmentation'</span>))<span class="op">;</span> <span class="op">\</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="va">addpath</span>(<span class="va">genpath</span>(<span class="ss">'/home/jovyan/matlab/spm12'</span>))<span class="op">;</span> <span class="op">\</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="va">spm</span>(<span class="ss">'defaults'</span><span class="op">,</span> <span class="ss">'fmri'</span>)<span class="op">;</span> <span class="op">\</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="va">spm_jobman</span>(<span class="ss">'initcfg'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="7" type="1">
+<li>Segmentierung ausführen</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="va">t1wFile</span> <span class="op">=</span> <span class="ss">'/home/jovyan/matlab/T1_brain_std.nii.gz'</span><span class="op">;</span> <span class="op">\</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="va">tt5File</span> <span class="op">=</span> <span class="ss">'/home/jovyan/matlab/T1_5tt_fixed.nii.gz'</span><span class="op">;</span> <span class="co">% Verwende fixierte Datei \</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="va">fslSegFile</span> <span class="op">=</span> <span class="ss">'/home/jovyan/matlab/first_seg.nii.gz'</span><span class="op">;</span> <span class="op">\</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="va">segment_claustrum_rh</span>(<span class="va">t1wFile</span><span class="op">,</span> <span class="va">tt5File</span><span class="op">,</span> <span class="va">fslSegFile</span><span class="op">,</span> <span class="ss">'/home/jovyan/matlab/claustrum_output/rh_claustrum.nii.gz'</span>)<span class="op">;</span> <span class="op">\</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="va">segment_claustrum_lh</span>(<span class="va">t1wFile</span><span class="op">,</span> <span class="va">tt5File</span><span class="op">,</span> <span class="va">fslSegFile</span><span class="op">,</span> <span class="ss">'/home/jovyan/matlab/claustrum_output/lh_claustrum.nii.gz'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Troubleshooting (kurz &amp; präzise)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Ursache</th>
+<th>Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kein <code>lh_claustrum.nii.gz</code></td>
+<td>Falsches oder leeres <code>tt5File</code></td>
+<td>Nutze <code>T1_5tt_fixed.nii.gz</code></td>
+</tr>
+<tr class="even">
+<td><code>kmeans: X must have more rows than clusters</code></td>
+<td><code>candidate</code> enthält &lt;2 Werte</td>
+<td>TT5 zu grob / CSF-Filter zu streng → TT5 neu erstellen</td>
+</tr>
+<tr class="odd">
+<td><code>csfMask(find(tmp)) = 0;</code> Fehler</td>
+<td>TT5-Auflösung unpassend</td>
+<td>Mit <code>flirt</code> resamplen oder TT5 neu erzeugen</td>
+</tr>
+<tr class="even">
+<td>FIRST-Output fehlt</td>
+<td><code>run_first_all</code> nicht korrekt ausgeführt</td>
+<td><code>-i</code> und <code>-o</code> prüfen</td>
+</tr>
+<tr class="odd">
+<td><code>bet</code> oder <code>run_first_all</code> nicht gefunden</td>
+<td>Modul nicht geladen</td>
+<td><code>module load fsl/...</code></td>
+</tr>
+<tr class="even">
+<td>Auflösungsfehler</td>
+<td>Bildgrößen ungleich</td>
+<td>Alle Inputs auf 1×1×1 mm prüfen (z. B. mit <code>mrinfo</code>, <code>fslhd</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Optional:</strong>Visualisierung in FreeSurfer</p>
+<pre><code>mri_convert /home/jovyan/matlab/claustrum_output/rh_claustrum.nii.gz /home/jovyan/matlab/claustrum_output/rh_claustrum.mgz \
+mri_convert /home/jovyan/matlab/claustrum_output/lh_claustrum.nii.gz /home/jovyan/matlab/claustrum_output/lh_claustrum.mgz \
+
+freeview -v /home/jovyan/matlab/T1.mgz \
+-v /home/jovyan/matlab/claustrum_output/rh_claustrum.mgz \
+-v /home/jovyan/matlab/claustrum_output/lh_claustrum.mgz</code></pre>
+</section>
+<section id="claustrum-segmentierung-nach-li-et-al." class="level1">
+<h1>Claustrum Segmentierung nach Li et al.</h1>
+<p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/34520080/">Li et al.&nbsp;(2021)</a></li>
+<li>multi-view Deep Learning</li>
+<li>Methode: 181 Versuchspersonen mit bilateralen, manuellen Segementierungen durch Fachperson in Neuroradiologie</li>
+<li>benötigt ~75 Testdatensätze um robuste Ergebnisse zu liefern</li>
+<li>funktioniert nur mit einer Auflösung von 1mm<span class="math inline">\(^3\)</span></li>
+</ul>
+<ol type="1">
+<li><strong>Resampling</strong>
+<ul>
+<li>Python-Skript aus dem GitHub-Repository nutzen (<code>resample.py</code>)</li>
+<li>Eingabepfad, Zielauflösung (1 mm³), und Output-Pfad anpassen</li>
+</ul></li>
+<li><strong>Skull-Stripping</strong>
+<ul>
+<li>Mit FSL-BET</li>
+</ul></li>
+<li><ol start="26" type="a">
+<li>B.: <code>bet2 input_resampled.nii.gz output_ss.nii.gz -f 0.5 -g 0 -m</code></li>
+</ol></li>
+</ol>
+<p><strong>Denoising</strong></p>
+<ul>
+<li>ANTs DenoiseImage verwenden</li>
+<li><ol start="26" type="a">
+<li>B.: <code>DenoiseImage -d 3 -i output_ss.nii.gz -o output_ss_denoised.nii.gz</code></li>
+</ol></li>
+</ul>
+<p><strong>Claustrum-Segmentierung mit Multi-View-Netz</strong></p>
+<ul>
+<li>GitHub Repository claustrum demo klonen (im read me)</li>
+<li>Verzeichnisstruktur beibehalten (z. B. <code>data/test/subjectID/subjectID_T1w_denoised.nii.gz</code>)</li>
+<li>Modelle in <code>models/</code> einfügen (axial und coronal)</li>
+<li>In Conda-Umgebung mit Python 3.8 und TensorFlow 2.3–2.5 arbeiten (außedem mit keras, Simple Itk, scipy, numpy, PIL)</li>
+<li>Alle Abhängigkeiten mit <code>pip install -r requirements.txt</code> installieren</li>
+<li>Ausführen mit: <code>python test_two_views.py</code></li>
+</ul>
+<p><strong>Output:</strong> Segmentierungsmaske wird in output/ gespeichert.</p>
 
 
 </section>

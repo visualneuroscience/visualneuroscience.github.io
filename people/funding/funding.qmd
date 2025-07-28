@@ -1,0 +1,80 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: project funding opportunities
+description: "Overview of programs to fund your projects"
+image: overview.png
+categories: [Funding]
+author: CY, MG
+date: 07/28/2025
+---
+
+# Overview
+
+![](./overview.png)
+
+# List
+
+1.  [DOC (ÖAW)](https://stipendien.oeaw.ac.at/en/fellowships/doc)
+
+-   max. 2 years after completion of diplom/Master
+-   duration: 24-36 months
+
+2.  [L'Oreal (ÖAW)](https://stipendien.oeaw.ac.at/en/fellowships/loreal-austria)
+
+-   for women
+-   to finish your PhD or to write a Post-Doc proposal
+-   duration: 6-12 months
+
+3.  [APART-MINT (ÖAW)](https://stipendien.oeaw.ac.at/en/fellowships/apart-mint)
+
+-   max. 3 years after completion of PhD
+-   duration: 12 months
+
+4.  [doc.funds (FWF)](https://www.fwf.ac.at/en/funding/portfolio/careers/docfunds)
+
+-   with 5 researchers
+-   duration: 4 years#
+
+5.  [doc.funds.connect (FWF)](https://www.fwf.ac.at/en/funding/portfolio/careers/docfundsconnect)
+
+-   with 5 researchers from different institutions
+-   duration: 4 years
+
+6.  [ESPRIT (FWF)](https://www.fwf.ac.at/en/funding/portfolio/careers/esprit)
+
+-   max. 5 years after completion of PhD
+-   duration: 36 months
+
+7.  [Max Kade (ÖAW)](https://stipendien.oeaw.ac.at/en/fellowships/max-kade)
+
+-   to visit the USA
+-   max. 5 years after completion of PhD
+-   duration: 12 months
+
+8.  [Erwin Schrödinger (FWF)](https://www.fwf.ac.at/en/funding/portfolio/careers/erwin-schroedinger)
+
+-   early stage post-docs
+-   duration: 36 months (10-24 months abroad)
+
+9.  [ASTRA Awards (FWF)](https://www.fwf.ac.at/en/funding/portfolio/careers/fwf-astra-awards)
+
+-   2-9 years after completion of PhD
+-   duration: 5 years
+
+10. [Science Communication](https://www.fwf.ac.at/en/funding/portfolio/communication/science-communication)
+
+-   ongoing FWF project of max. 3 years after completion of project
+-   duration: 24 months
+
+11. [Top Citizen Science](https://www.fwf.ac.at/en/funding/portfolio/communication/top-citizen-science)
+
+-   ongoing FWF project
+-   only by the project leader
+-   not for salary
+-   duration: 24 months
+
+# Other Links/Ressources
+
+-   [Uni Graz Research Management](https://forschungsmanagement.uni-graz.at/en/)
+-   [FWF calendar for workshops and webinars](https://www.fwf.ac.at/en/news/calendar)

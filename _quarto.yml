@@ -21,6 +21,8 @@ website:
         text: MRI
       - href: people.qmd
         text: People
+      - href: internship.qmd
+        text: Internship
       - href: other_topics.qmd
         text: Other Topics
       - href: archive.qmd
@@ -74,8 +76,13 @@ website:
           - people/compensation/compensation.qmd
           - people/leaving/index.qmd
           - people/writing/writing.qmd
-          - people/interns/index.qmd
-          - people/interns/pflichtpraktikum.qmd
+          - people/funding/funding.qmd
+      - section: "Internship"
+        href: internship.qmd
+        contents:
+          - internship/pflichtpraktikum.qmd
+          - internship/checklist.qmd
+          - internship/claustrum_segmentation.qmd
       - section: "Other Topics"
         href: other_topics.qmd
         contents:

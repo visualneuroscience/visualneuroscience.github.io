@@ -2,9 +2,8 @@
   {
     "listing": "/people.html",
     "items": [
-      "/people/interns/pflichtpraktikum.html",
+      "/people/funding/funding.html",
       "/people/talks/talks.html",
-      "/people/interns/index.html",
       "/people/compensation/compensation.html",
       "/people/leaving/index.html",
       "/people/writing/writing.html",
@@ -13,69 +12,39 @@
     ]
   },
   {
-    "listing": "/neurodesk.html",
+    "listing": "/other_topics.html",
     "items": [
-      "/neurodesk/neurodesktop.html"
+      "/OtherTopics/ContributeWithR.html",
+      "/OtherTopics/CalculatingAPrioriPower.html",
+      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
+      "/OtherTopics/displays/displays.html"
     ]
   },
   {
-    "listing": "/mri.html",
+    "listing": "/labmeeting.html",
     "items": [
-      "/mri/3D-prints/3d-prints.html",
-      "/mri/analysis/7t_analysis_on_neurodesk.html",
-      "/mri/analysis/bids.html",
-      "/mri/analysis/fmriprep.html",
-      "/mri/analysis/freesurfer FSFAST.html",
-      "/mri/mni-space/mni-space.html",
-      "/mri/mri-lab-setup-2023/index.html",
-      "/mri/mri-lab-setup-2024/index.html",
-      "/mri/MRI-Studies_general/mri-studies_general-information.html",
-      "/mri/physiology/index.html"
+      "/labmeeting/index.html"
     ]
   },
   {
-    "listing": "/dicom_to_glm.html",
+    "listing": "/internship.html",
     "items": [
-      "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
-      "/dicom_to_glm/second_level_glm_nilearn.html",
-      "/dicom_to_glm/check_IntendedFor_field.html",
-      "/dicom_to_glm/first_level_glm_nilearn.html",
-      "/dicom_to_glm/retinotopic_mapping.html",
-      "/dicom_to_glm/DICOMtoBIDS.html",
-      "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
-      "/dicom_to_glm/defacing.html",
-      "/dicom_to_glm/troubleshooting.html",
-      "/dicom_to_glm/RemoveNoiseScan.html",
-      "/dicom_to_glm/run_fmriprep.html"
-    ]
-  },
-  {
-    "listing": "/behavioral.html",
-    "items": [
-      "/behavioral/chinrests/chinrests.html",
-      "/behavioral/2024-05-23/index.html",
-      "/behavioral/2024-05-22/index.html"
-    ]
-  },
-  {
-    "listing": "/archive.html",
-    "items": [
-      "/archive/freesurfer FSFAST.html",
-      "/archive/dicom_to_bids.html"
+      "/internship/claustrum_segmentation.html",
+      "/internship/pflichtpraktikum.html",
+      "/internship/checklist.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
       "/mri/mni-space/mni-space.html",
+      "/people/funding/funding.html",
       "/neurodesk/neurodesktop.html",
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
       "/dicom_to_glm/second_level_glm_nilearn.html",
       "/mri/MRI-Studies_general/mri-studies_general-information.html",
       "/dicom_to_glm/check_IntendedFor_field.html",
-      "/people/interns/pflichtpraktikum.html",
       "/people/talks/talks.html",
-      "/people/interns/index.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
       "/dicom_to_glm/retinotopic_mapping.html",
       "/dicom_to_glm/DICOMtoBIDS.html",
@@ -108,18 +77,55 @@
     ]
   },
   {
-    "listing": "/labmeeting.html",
+    "listing": "/archive.html",
     "items": [
-      "/labmeeting/index.html"
+      "/archive/freesurfer FSFAST.html",
+      "/archive/dicom_to_bids.html"
     ]
   },
   {
-    "listing": "/other_topics.html",
+    "listing": "/behavioral.html",
     "items": [
-      "/OtherTopics/ContributeWithR.html",
-      "/OtherTopics/CalculatingAPrioriPower.html",
-      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
-      "/OtherTopics/displays/displays.html"
+      "/behavioral/chinrests/chinrests.html",
+      "/behavioral/2024-05-23/index.html",
+      "/behavioral/2024-05-22/index.html"
+    ]
+  },
+  {
+    "listing": "/dicom_to_glm.html",
+    "items": [
+      "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
+      "/dicom_to_glm/second_level_glm_nilearn.html",
+      "/dicom_to_glm/check_IntendedFor_field.html",
+      "/dicom_to_glm/first_level_glm_nilearn.html",
+      "/dicom_to_glm/retinotopic_mapping.html",
+      "/dicom_to_glm/DICOMtoBIDS.html",
+      "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
+      "/dicom_to_glm/defacing.html",
+      "/dicom_to_glm/troubleshooting.html",
+      "/dicom_to_glm/RemoveNoiseScan.html",
+      "/dicom_to_glm/run_fmriprep.html"
+    ]
+  },
+  {
+    "listing": "/mri.html",
+    "items": [
+      "/mri/3D-prints/3d-prints.html",
+      "/mri/analysis/7t_analysis_on_neurodesk.html",
+      "/mri/analysis/bids.html",
+      "/mri/analysis/fmriprep.html",
+      "/mri/analysis/freesurfer FSFAST.html",
+      "/mri/mni-space/mni-space.html",
+      "/mri/mri-lab-setup-2023/index.html",
+      "/mri/mri-lab-setup-2024/index.html",
+      "/mri/MRI-Studies_general/mri-studies_general-information.html",
+      "/mri/physiology/index.html"
+    ]
+  },
+  {
+    "listing": "/neurodesk.html",
+    "items": [
+      "/neurodesk/neurodesktop.html"
     ]
   }
 ]

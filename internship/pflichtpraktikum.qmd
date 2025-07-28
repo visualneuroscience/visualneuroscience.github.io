@@ -4,7 +4,7 @@ geometry: margin=3cm
 title: Pflichtpraktikum
 description: "Information for compulsory internship for bachelor students"
 author: HM, MG
-categories: [People, Lab]
+categories: [Internship, Lab]
 date: 07/02/2025
 ---
 
