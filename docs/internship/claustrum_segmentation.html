@@ -590,6 +590,7 @@ window.Quarto = {
 </header>
 
 
+<<<<<<< HEAD
 <p>In diesem Projekt wurden verschiedene Methoden zur automatischen Segmentierung des menschlichen Claustrum untersucht. Dabei wurde ein hochauflösender 7T TI-gewichteter MRT scan verwendet.</p>
 <section id="nextbrain-histoatlas-segmentierung" class="level1">
 <h1>NextBrain (Histoatlas) Segmentierung</h1>
@@ -602,6 +603,11 @@ window.Quarto = {
 <li>Verwendung unabhängig der Auflösung</li>
 <li>Verarbeitet das gesamte Gehirn, kann dementsprechend einige Tage laufen</li>
 </ul>
+=======
+<section id="nextbrain-histoatlas-segmentierung" class="level1">
+<h1>NextBrain (Histoatlas) Segmentierung</h1>
+<p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+>>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 <p><strong>Voraussetzungen:</strong></p>
 <ul>
 <li>FreeSurfer als Neurodesk-Modul geladen</li>
@@ -626,6 +632,7 @@ full \
 <section id="synthseg-mauri-et-al.-claustrum-segmentierung" class="level1">
 <h1>SynthSeg (Mauri et al.) Claustrum Segmentierung</h1>
 <p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+<<<<<<< HEAD
 <ul>
 <li><a href="https://arxiv.org/abs/2411.15388v1#:~:text=In%20this%20paper%2C%20we%20propose%20a%20contrast-%20and,synthetic%20training%20intensity%20images%20to%20achieve%20excellent%20generalization.">Mauri et al.&nbsp;(2024)</a></li>
 <li>basiert auf Deep Learning (SynthSeg)</li>
@@ -634,6 +641,8 @@ full \
 <li>Verwendung unabhängig vom contrast (T1, T2)</li>
 <li>robust gegenüber Auflösung</li>
 </ul>
+=======
+>>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 <p><strong>Voraussetzungen:</strong></p>
 <pre><code>- Python 3.8 Conda-Umgebung (z. B. synthseg_env)
 - FreeSurfer-Modul geladen (FREESURFER_HOME optional, aber hilfreich)
@@ -660,6 +669,7 @@ full \
 <section id="mezerlab-claustrum-segmentierung" class="level1">
 <h1>MezerLab Claustrum Segmentierung</h1>
 <p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+<<<<<<< HEAD
 <ul>
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/34296125/">Berman et al.&nbsp;(2020)</a></li>
 <li>nur dorsales Claustrum</li>
@@ -667,6 +677,8 @@ full \
 <li>Methode: basierend auf 1068 bilateralen, dorsalen Claustrum Segmentierungen</li>
 <li>Validierung durch den Vergleich automatischer und manueller Claustrum Segmentierungen in 10 Datensätzen (2 Rater)</li>
 </ul>
+=======
+>>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 <ol type="1">
 <li>Module laden (im LX-Terminal)</li>
 </ol>
@@ -713,9 +725,15 @@ cp /home/jovyan/matlab/first_output_all_fast_firstseg.nii.gz /home/jovyan/matlab
 <p><strong>Troubleshooting (kurz &amp; präzise)</strong></p>
 <table class="caption-top table">
 <colgroup>
+<<<<<<< HEAD
 <col style="width: 33%">
 <col style="width: 33%">
 <col style="width: 33%">
+=======
+<col style="width: 30%">
+<col style="width: 27%">
+<col style="width: 41%">
+>>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 </colgroup>
 <thead>
 <tr class="header">
@@ -768,6 +786,7 @@ freeview -v /home/jovyan/matlab/T1.mgz \
 <section id="claustrum-segmentierung-nach-li-et-al." class="level1">
 <h1>Claustrum Segmentierung nach Li et al.</h1>
 <p><img src="https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png" class="img-fluid"></p>
+<<<<<<< HEAD
 <ul>
 <li><a href="https://pubmed.ncbi.nlm.nih.gov/34520080/">Li et al.&nbsp;(2021)</a></li>
 <li>multi-view Deep Learning</li>
@@ -775,6 +794,8 @@ freeview -v /home/jovyan/matlab/T1.mgz \
 <li>benötigt ~75 Testdatensätze um robuste Ergebnisse zu liefern</li>
 <li>funktioniert nur mit einer Auflösung von 1mm<span class="math inline">\(^3\)</span></li>
 </ul>
+=======
+>>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 <ol type="1">
 <li><strong>Resampling</strong>
 <ul>
