@@ -1,5 +1,5 @@
 ---
-title: "MRI: from DICOMs to GLM"
+title: "All about internship"
 listing: 
   contents: internship # all Quarto docs in the `posts` directory will be included on your listing page
   type: grid # or `default` or `table`; each type has its own set of yaml options to include

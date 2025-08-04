@@ -1,0 +1,15 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Internship project list
+description: "This is a list of all completed internship projects with links to the corresponding presentations/reports/materials"
+author: NZ, MG
+categories: [Internship, Lab]
+date: 08/04/2025
+---
+
+| Year/Month | Title |
+|------------------------------------|------------------------------------|
+| 2025/08 | [FIR modelling of the hemodynamic response in the human claustrum](https://cloud.uni-graz.at/index.php/f/260558949) |
+| 2025/07 | [Optimal parameters for the first-level GLM analysis in Nilearn](https://cloud.uni-graz.at/index.php/f/260560098) |
+| 2025/07 | [Visual comparison of different claustrum segmentation methods](https://cloud.uni-graz.at/index.php/f/260108071) |

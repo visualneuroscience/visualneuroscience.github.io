@@ -8,16 +8,12 @@ categories: [Internship, Lab]
 date: 07/28/2025
 ---
 
-<<<<<<< HEAD
 In diesem Projekt wurden verschiedene Methoden zur automatischen Segmentierung des menschlichen Claustrum untersucht. Dabei wurde ein hochauflösender 7T TI-gewichteter MRT scan verwendet.
 
-=======
->>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 # NextBrain (Histoatlas) Segmentierung
 
 ![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
 
-<<<<<<< HEAD
 -   [Casamitjana et al. (2024)](https://pubmed.ncbi.nlm.nih.gov/39282320/)
 -   verwendet bayesian Algorithmus und KI Methoden
 -   333 unterschiedliche Regions of Interest
@@ -25,8 +21,6 @@ In diesem Projekt wurden verschiedene Methoden zur automatischen Segmentierung d
 -   Verwendung unabhängig der Auflösung
 -   Verarbeitet das gesamte Gehirn, kann dementsprechend einige Tage laufen
 
-=======
->>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 **Voraussetzungen:**
 
 -   FreeSurfer als Neurodesk-Modul geladen
@@ -64,7 +58,6 @@ full \
 
 ![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
 
-<<<<<<< HEAD
 -   [Mauri et al. (2024)](https://arxiv.org/abs/2411.15388v1#:~:text=In%20this%20paper%2C%20we%20propose%20a%20contrast-%20and,synthetic%20training%20intensity%20images%20to%20achieve%20excellent%20generalization.)
 -   basiert auf Deep Learning (SynthSeg)
 -   verwendet syntethische Daten, die aus Label-Maps generiert werden
@@ -72,8 +65,6 @@ full \
 -   Verwendung unabhängig vom contrast (T1, T2)
 -   robust gegenüber Auflösung
 
-=======
->>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 **Voraussetzungen:**
 
 ```         
@@ -117,15 +108,12 @@ csh /home/jovyan/SynthSeg/claustrum_segmentation/mri_claustrum_seg \
 
 ![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
 
-<<<<<<< HEAD
 -   [Berman et al. (2020)](https://pubmed.ncbi.nlm.nih.gov/34296125/)
 -   nur dorsales Claustrum
 -   basierend auf dem [Human Connectome Project](http://www.humanconnectomeproject.org/)
 -   Methode: basierend auf 1068 bilateralen, dorsalen Claustrum Segmentierungen
 -   Validierung durch den Vergleich automatischer und manueller Claustrum Segmentierungen in 10 Datensätzen (2 Rater)
 
-=======
->>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 1.  Module laden (im LX-Terminal)
 
 ```         
@@ -180,18 +168,14 @@ segment_claustrum_lh(t1wFile, tt5File, fslSegFile, '/home/jovyan/matlab/claustru
 
 **Troubleshooting (kurz & präzise)**
 
-| Problem | Ursache | Lösung |
-<<<<<<< HEAD
-|----|----|----|
-=======
-|----------------------|--------------------|------------------------------|
->>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
-| Kein `lh_claustrum.nii.gz` | Falsches oder leeres `tt5File` | Nutze `T1_5tt_fixed.nii.gz` |
-| `kmeans: X must have more rows than clusters` | `candidate` enthält \<2 Werte | TT5 zu grob / CSF-Filter zu streng → TT5 neu erstellen |
-| `csfMask(find(tmp)) = 0;` Fehler | TT5-Auflösung unpassend | Mit `flirt` resamplen oder TT5 neu erzeugen |
-| FIRST-Output fehlt | `run_first_all` nicht korrekt ausgeführt | `-i` und `-o` prüfen |
-| `bet` oder `run_first_all` nicht gefunden | Modul nicht geladen | `module load fsl/...` |
-| Auflösungsfehler | Bildgrößen ungleich | Alle Inputs auf 1×1×1 mm prüfen (z. B. mit `mrinfo`, `fslhd`) |
+| Problem \| Ursache \| Lösung \|
+| 
+| Kein `lh_claustrum.nii.gz` \| Falsches oder leeres `tt5File` \| Nutze `T1_5tt_fixed.nii.gz` \|
+| `kmeans: X must have more rows than clusters` \| `candidate` enthält \<2 Werte \| TT5 zu grob / CSF-Filter zu streng → TT5 neu erstellen \|
+| `csfMask(find(tmp)) = 0;` Fehler \| TT5-Auflösung unpassend \| Mit `flirt` resamplen oder TT5 neu erzeugen \|
+| FIRST-Output fehlt \| `run_first_all` nicht korrekt ausgeführt \| `-i` und `-o` prüfen \|
+| `bet` oder `run_first_all` nicht gefunden \| Modul nicht geladen \| `module load fsl/...` \|
+| Auflösungsfehler \| Bildgrößen ungleich \| Alle Inputs auf 1×1×1 mm prüfen (z. B. mit `mrinfo`, `fslhd`) \|
 
 **Optional:**Visualisierung in FreeSurfer
 
@@ -208,15 +192,12 @@ freeview -v /home/jovyan/matlab/T1.mgz \
 
 ![](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)
 
-<<<<<<< HEAD
 -   [Li et al. (2021)](https://pubmed.ncbi.nlm.nih.gov/34520080/)
 -   multi-view Deep Learning
 -   Methode: 181 Versuchspersonen mit bilateralen, manuellen Segementierungen durch Fachperson in Neuroradiologie
 -   benötigt \~75 Testdatensätze um robuste Ergebnisse zu liefern
 -   funktioniert nur mit einer Auflösung von 1mm$^3$
 
-=======
->>>>>>> 4f1eb82d34caf3aafd572958364906347c3d1654
 1.  **Resampling**
     -   Python-Skript aus dem GitHub-Repository nutzen (`resample.py`)
     -   Eingabepfad, Zielauflösung (1 mm³), und Output-Pfad anpassen
