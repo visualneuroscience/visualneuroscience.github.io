@@ -2,7 +2,7 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "Older ways to access the server"
-description: "This page out of date"
+description: "This page is out of date"
 author: NZ
 number-sections: true
 editor: visual
