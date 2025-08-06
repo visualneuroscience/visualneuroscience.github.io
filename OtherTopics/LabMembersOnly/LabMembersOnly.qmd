@@ -1,8 +1,8 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: "Lab Members Only!!!"
-description: "This site is dedicated only for members of the lab!"
+title: "Older ways to access the server"
+description: "This page out of date"
 author: NZ
 number-sections: true
 editor: visual
@@ -19,4 +19,4 @@ date: 01/24/2025
 
 ## Neurodesktop
 
-We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and those lab members who would like to use it. Please see the  [dedicated page](/neurodesk/neurodesktop.qmd).
+We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and those lab members who would like to use it. Please see the [dedicated page](/neurodesk/neurodesktop.qmd).
