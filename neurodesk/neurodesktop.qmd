@@ -105,7 +105,9 @@ There are currently two alternatives
 
     ![](images/clipboard-1030227267.png)
 
-## Using FreeSurfer
+## Software
+
+### Using FreeSurfer
 
 To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
 
@@ -121,7 +123,9 @@ To set up custom subject directory in a container, use the following (instead of
 export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]
 ```
 
-## Using fitlins
+### Using fitlins
+
+Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the ["DICOM to GLM"](dicom_to_glm.qmd) pipeline for details
 
 Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
 
@@ -129,6 +133,16 @@ Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
 `singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg` \[your fitlins commands\]
 
 Please note that we are abandoning fitlins usage and are switching to [nilearn](https://nilearn.github.io/stable/index.html) for GLM analysis
+
+### Other docker-based software
+
+If you would like to use some other software package that is not directly available through neruodesk, but is distributed as docker; you can use it by building a singularity image in the shared folder (so that it is available for everyone), e.g.:
+
+`singularity build /shared/singularity/deepprep/deepprep-25.1.0.simg docker://pbfslab/deepprep:25.1.0`
+
+and then run it as above:
+
+`singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg`
 
 ## Resource (esp. RAM) usage
 

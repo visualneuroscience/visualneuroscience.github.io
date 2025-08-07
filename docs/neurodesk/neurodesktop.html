@@ -476,11 +476,8 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../internship/claustrum_segmentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Internship project - Automatic Claustrum Segmentation</span></a>
-  </div>
-</li>
+ <span class="menu-text">internship/claustrum_segmentation.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -513,7 +510,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lab Members Only!!!</span></a>
+ <span class="menu-text">Older ways to access the server</span></a>
   </div>
 </li>
       </ul>
@@ -556,8 +553,12 @@ window.Quarto = {
   <li><a href="#storing-data" id="toc-storing-data" class="nav-link" data-scroll-target="#storing-data">Storing data</a></li>
   <li><a href="#sharing-data" id="toc-sharing-data" class="nav-link" data-scroll-target="#sharing-data">Sharing data</a></li>
   <li><a href="#data-transfer" id="toc-data-transfer" class="nav-link" data-scroll-target="#data-transfer">Data transfer</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a>
+  <ul class="collapse">
   <li><a href="#using-freesurfer" id="toc-using-freesurfer" class="nav-link" data-scroll-target="#using-freesurfer">Using FreeSurfer</a></li>
   <li><a href="#using-fitlins" id="toc-using-fitlins" class="nav-link" data-scroll-target="#using-fitlins">Using fitlins</a></li>
+  <li><a href="#other-docker-based-software" id="toc-other-docker-based-software" class="nav-link" data-scroll-target="#other-docker-based-software">Other docker-based software</a></li>
+  </ul></li>
   <li><a href="#resource-esp.-ram-usage" id="toc-resource-esp.-ram-usage" class="nav-link" data-scroll-target="#resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</a></li>
   <li><a href="#using-notebooks-and-scripts-in-jupyterlab" id="toc-using-notebooks-and-scripts-in-jupyterlab" class="nav-link" data-scroll-target="#using-notebooks-and-scripts-in-jupyterlab">Using notebooks and scripts in JupyterLab</a></li>
   </ul></li>
@@ -692,8 +693,10 @@ window.Quarto = {
 <p><img src="images/clipboard-1030227267.png" class="img-fluid"></p></li>
 </ol>
 </section>
-<section id="using-freesurfer" class="level2">
-<h2 class="anchored" data-anchor-id="using-freesurfer">Using FreeSurfer</h2>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<section id="using-freesurfer" class="level3">
+<h3 class="anchored" data-anchor-id="using-freesurfer">Using FreeSurfer</h3>
 <p>To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows</p>
 <pre><code>ml freesurfer/7.4.1
 cd /storage
@@ -701,12 +704,21 @@ freeview</code></pre>
 <p>To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)</p>
 <pre><code>export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]</code></pre>
 </section>
-<section id="using-fitlins" class="level2">
-<h2 class="anchored" data-anchor-id="using-fitlins">Using fitlins</h2>
+<section id="using-fitlins" class="level3">
+<h3 class="anchored" data-anchor-id="using-fitlins">Using fitlins</h3>
+<p>Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the <a href="dicom_to_glm.qmd">“DICOM to GLM”</a> pipeline for details</p>
 <p>Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:</p>
 <p><br>
 <code>singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg</code> [your fitlins commands]</p>
 <p>Please note that we are abandoning fitlins usage and are switching to <a href="https://nilearn.github.io/stable/index.html">nilearn</a> for GLM analysis</p>
+</section>
+<section id="other-docker-based-software" class="level3">
+<h3 class="anchored" data-anchor-id="other-docker-based-software">Other docker-based software</h3>
+<p>If you would like to use some other software package that is not directly available through neruodesk, but is distributed as docker; you can use it by building a singularity image in the shared folder (so that it is available for everyone), e.g.:</p>
+<p><code>singularity build /shared/singularity/deepprep/deepprep-25.1.0.simg docker://pbfslab/deepprep:25.1.0</code></p>
+<p>and then run it as above:</p>
+<p><code>singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg</code></p>
+</section>
 </section>
 <section id="resource-esp.-ram-usage" class="level2">
 <h2 class="anchored" data-anchor-id="resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</h2>
