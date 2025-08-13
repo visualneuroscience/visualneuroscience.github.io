@@ -6,7 +6,7 @@ description: "information about various MNI spaces and templates"
 image: ./images/clipboard-309090548.png
 categories: [MRI]
 author: NZ
-date: 15/07/2025
+date: 07/15/2025
 ---
 
 This is a summary of useful information about MNI spaces, collected by Carmen. This page should be extended at some point to incorporate lab-specific information.

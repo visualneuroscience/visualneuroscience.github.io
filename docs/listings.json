@@ -54,13 +54,13 @@
   {
     "listing": "/index.html",
     "items": [
-      "/mri/mni-space/mni-space.html",
       "/mri/oriented-bounding-box/calculating_oriented_bounding_box.html",
       "/people/funding/funding.html",
       "/neurodesk/neurodesktop.html",
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
       "/dicom_to_glm/second_level_glm_nilearn.html",
       "/mri/MRI-Studies_general/mri-studies_general-information.html",
+      "/mri/mni-space/mni-space.html",
       "/dicom_to_glm/check_IntendedFor_field.html",
       "/people/talks/talks.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
