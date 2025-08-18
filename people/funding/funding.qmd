@@ -1,8 +1,8 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: project funding opportunities
-description: "Overview of programs to fund your projects"
+title: Research funding opportunities
+description: "Overview of programs to fund your research projects from PhD onwards"
 image: overview.png
 categories: [Funding]
 author: CY, MG
