@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="AC">
+<meta name="dcterms.date" content="2025-08-18">
+<meta name="description" content="Calculating authorship of a manuscript according to the Elsevier CRediT author statement">
 
-<title>People-related information – Visual Neuroscience Lab</title>
+<title>Calculating authorship – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9d248d1e67369aa4925cfedaa4ef1eb3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9c3dec34e5088f18814ff86e4371ecab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,65 +72,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -138,7 +83,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
   </div>
@@ -149,43 +94,43 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./neurodesk/neurodesktop.html"> 
+    <a class="nav-link" href="../../neurodesk/neurodesktop.html"> 
 <span class="menu-text">Neurodesktop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./behavioral.html"> 
+    <a class="nav-link" href="../../behavioral.html"> 
 <span class="menu-text">Behavioral</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./labmeeting.html"> 
+    <a class="nav-link" href="../../labmeeting.html"> 
 <span class="menu-text">Labmeeting</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dicom_to_glm.html"> 
+    <a class="nav-link" href="../../dicom_to_glm.html"> 
 <span class="menu-text">DICOM to GLM</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri.html"> 
+    <a class="nav-link" href="../../mri.html"> 
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./people.html"> 
+    <a class="nav-link" href="../../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./internship.html"> 
+    <a class="nav-link" href="../../internship.html"> 
 <span class="menu-text">Internship</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./other_topics.html"> 
+    <a class="nav-link" href="../../other_topics.html"> 
 <span class="menu-text">Other Topics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./archive.html"> 
+    <a class="nav-link" href="../../archive.html"> 
 <span class="menu-text">Archive</span></a>
   </li>  
 </ul>
@@ -199,7 +144,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./people.html">People</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Calculating authorship</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -221,19 +166,19 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
+  <a href="../../neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neurodesktop</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dicom_to_glm.html" class="sidebar-item-text sidebar-link">
+            <a href="../../dicom_to_glm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -242,67 +187,67 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">00 - Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01 - DICOM to BIDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02 - Check IntendedFor field of the fmap’s JSON</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03 - T1w for PBn</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04 - Defacing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 - Removing Noise Scan</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06 - fMRIprep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">07 - Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">08 - first level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">09- second level GLM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
 </li>
@@ -310,7 +255,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./mri.html" class="sidebar-item-text sidebar-link">
+            <a href="../../mri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -319,55 +264,55 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/MRI-Studies_general/mri-studies_general-information.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/MRI-Studies_general/mri-studies_general-information.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI-Studies: General Information</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3D printing a brain</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">7T anatomical analysis on neurodesk</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI BIDS and OSF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Old MRI setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Update to the MRI lab setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/physiology/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/physiology/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Physiological noise correction</span></a>
   </div>
 </li>
@@ -375,7 +320,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./behavioral.html" class="sidebar-item-text sidebar-link">
+            <a href="../../behavioral.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -384,19 +329,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vision tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BIDS for behavioral studies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom-built chin rests</span></a>
   </div>
 </li>
@@ -404,46 +349,46 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./people.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../people.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">People</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/stipends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/stipends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stipends and prizes for master students</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/coffee/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/coffee/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coffee time</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Participant compensation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/leaving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/leaving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Things to do if you are leaving the lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/writing/writing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/writing/writing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scientific writing in practice</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/funding/funding.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/funding/funding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">project funding opportunities</span></a>
   </div>
 </li>
@@ -451,7 +396,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./internship.html" class="sidebar-item-text sidebar-link">
+            <a href="../../internship.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internship</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -460,13 +405,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./internship/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../internship/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pflichtpraktikum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./internship/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../internship/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internship Checklist</span></a>
   </div>
 </li>
@@ -477,7 +422,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./other_topics.html" class="sidebar-item-text sidebar-link">
+            <a href="../../other_topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Other Topics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -486,25 +431,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calculating a priori sample size using G Power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma correction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contribute to the website</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Older ways to access the server</span></a>
   </div>
 </li>
@@ -512,13 +457,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labmeeting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../labmeeting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labmeeting</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive</span></a>
   </div>
 </li>
@@ -528,21 +473,44 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Q29mZmVl">Coffee <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcGVuc2F0aW9u">Compensation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RnVuZGluZw==">Funding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFi">Lab <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#authorship-calculator" id="toc-authorship-calculator" class="nav-link active" data-scroll-target="#authorship-calculator">Authorship Calculator</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">People-related information</h1>
+<h1 class="title">Calculating authorship</h1>
 </div>
 
+<div>
+  <div class="description">
+    Calculating authorship of a manuscript according to the Elsevier CRediT author statement
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-body">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>AC </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 18, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -552,203 +520,444 @@ window.Quarto = {
 </header>
 
 
+<section id="authorship-calculator" class="level2">
+<h2 class="anchored" data-anchor-id="authorship-calculator">Authorship Calculator</h2>
+<ol type="1">
+<li>Select number of authors</li>
+<li>Adjust the weights of each role (this is up to you, however the weights below are default and can be adjusted as needed)</li>
+<li>For each author select which role they had
+<ul>
+<li>To select multiple roles hold down <kbd aria-hidden="true" data-linux="Ctrl" data-mac="Command" data-windows="Control"></kbd><span class="visually-hidden"></span></li>
+</ul></li>
+</ol>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Contribution Calculator with CRediT Weights</title>
+<!-- Tailwind CSS CDN for styling -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    /* Custom styles for Inter font and general body styling */
+    .authorship-calculator {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6; /* Light gray background */
+        padding: 2rem; /* Add some padding around the content */
+        box-sizing: border-box; /* Include padding in element's total width and height */
+    }
+    /* Style for the main container to center it and give it a nice background */
+    .authorship-calculator .container {
+        background-color: #ffffff;
+        padding: 2.5rem;
+        border-radius: 1rem; /* More rounded corners */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Soft shadow */
+        width: 100%;
+        max-width: 1200px; /* Increased max width for larger screens */
+        margin: 2rem auto; /* Center the container */
+    }
+    /* Style for table headers */
+    .authorship-calculator th {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        font-weight: 600;
+        color: #4b5563; /* Darker gray for text */
+        background-color: #e5e7eb; /* Light gray background for headers */
+        border-bottom: 1px solid #d1d5db; /* Border for separation */
+    }
+    /* Style for table cells */
+    .authorship-calculator td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e5e7eb; /* Light border for rows */
+    }
+    /* Input field styling */
+    .authorship-calculator input[type="number"],
+    .authorship-calculator input[type="text"],
+    .authorship-calculator select { /* Apply to select as well */
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem; /* Rounded input fields */
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding doesn't increase width */
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .authorship-calculator input[type="number"]:focus,
+    .authorship-calculator input[type="text"]:focus,
+    .authorship-calculator select:focus { /* Apply to select focus */
+        outline: none;
+        border-color: #3b82f6; /* Blue border on focus */
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Light blue shadow on focus */
+    }
+    /* Button styling */
+    .authorship-calculator button {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    }
+    .authorship-calculator button:hover {
+        transform: translateY(-1px); /* Slight lift on hover */
+    }
+    .authorship-calculator button:active {
+        transform: translateY(0); /* Return to normal on click */
+    }
+    .authorship-calculator .btn-primary {
+        background-color: #3b82f6; /* Blue background */
+        color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06);
+    }
+    .authorship-calculator .btn-primary:hover {
+        background-color: #2563eb; /* Darker blue on hover */
+    }
+    .authorship-calculator .btn-secondary {
+        background-color: #6b7280; /* Gray background */
+        color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(107, 114, 128, 0.1), 0 2px 4px -1px rgba(107, 114, 128, 0.06);
+    }
+    .authorship-calculator .btn-secondary:hover {
+        background-color: #4b5563; /* Darker gray on hover */
+    }
+    /* Message box styling */
+    .authorship-calculator .message-box {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        display: none; /* Hidden by default */
+        max-width: 400px;
+        text-align: center;
+    }
+    .authorship-calculator .message-box button {
+        margin-top: 1rem;
+    }
+    .authorship-calculator .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none; /* Hidden by default */
+    }
+</style>
+
+<div class="authorship-calculator">
+    <div class="container">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Author Contribution Calculator with CRediT Weights</h1>
+
+        <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <label for="numAuthors" class="block text-lg font-medium text-gray-700 mb-2">Number of Authors:</label>
+            <div class="flex items-center space-x-4">
+                <input type="number" id="numAuthors" min="1" value="1" class="flex-grow shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm border-gray-300 rounded-md">
+                <button id="generateBtn" class="btn-primary flex-shrink-0">Generate Rows</button>
+            </div>
+            <p id="errorMsg" class="text-red-600 text-sm mt-2 hidden">Please enter a valid number of authors (1 or more).</p>
+        </div>
+
+        <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 anchored">CRediT Role Weights (Adjust as Needed)</h2>
+            <div id="creditRoleWeights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- CRediT role weight inputs will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div id="authorTableContainer" class="overflow-x-auto rounded-lg shadow-md">
+            
+<table class="min-w-full divide-y divide-gray-200 caption-top" data-quarto-postprocess="true">
+<thead class="bg-gray-50">
+<tr class="header">
+<th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider" data-quarto-table-cell-role="th">Author Name</th>
+<th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider" data-quarto-table-cell-role="th">CRediT Roles</th>
+<th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider" data-quarto-table-cell-role="th">Adjusted %</th>
+</tr>
+</thead>
+<tbody id="authorRows" class="bg-white divide-y divide-gray-200">
+</tbody><tfoot class="bg-gray-50">
+<tr class="odd">
+<td colspan="2" class="px-6 py-3 text-right text-base font-bold text-gray-800">Total Adjusted Percentage:</td>
+<td id="totalAdjustedPercentage" class="px-6 py-3 text-left text-base font-bold text-gray-800">0.00%</td>
+</tr>
+</tfoot>
+
+</table>
+
+        </div>
+    </div>
+
+    <!-- Message Box HTML -->
+    <div id="messageBox" class="message-box">
+        <p id="messageText" class="text-gray-700 text-lg"></p>
+        <button id="messageBoxCloseBtn" class="btn-primary">OK</button>
+    </div>
+    <div id="overlay" class="overlay"></div>
+</div>
+
+<script>
+    // Get references to DOM elements
+    const numAuthorsInput = document.getElementById('numAuthors');
+    const generateBtn = document.getElementById('generateBtn');
+    const creditRoleWeightsContainer = document.getElementById('creditRoleWeights');
+    const authorRowsContainer = document.getElementById('authorRows');
+    const totalAdjustedPercentageSpan = document.getElementById('totalAdjustedPercentage');
+    const errorMsg = document.getElementById('errorMsg');
+    const messageBox = document.getElementById('messageBox');
+    const messageText = document.getElementById('messageText');
+    const messageBoxCloseBtn = document.getElementById('messageBoxCloseBtn');
+    const overlay = document.getElementById('overlay');
+
+    // CRediT Roles Taxonomy with default weights
+    const creditRoles = [
+        { name: "Conceptualization", defaultWeight: 6 }, // Increased
+        { name: "Methodology", defaultWeight: 5 },       // Increased
+        { name: "Software", defaultWeight: 3 },
+        { name: "Validation", defaultWeight: 3 },
+        { name: "Formal analysis", defaultWeight: 5 },   // Increased
+        { name: "Investigation", defaultWeight: 4 },     // Increased
+        { name: "Resources", defaultWeight: 2 },
+        { name: "Data Curation", defaultWeight: 2 },
+        { name: "Writing — original draft", defaultWeight: 6 }, // Increased
+        { name: "Writing — review & editing", defaultWeight: 3 },
+        { name: "Visualization", defaultWeight: 2 },
+        { name: "Supervision", defaultWeight: 5 },
+        { name: "Project administration", defaultWeight: 4 },
+        { name: "Funding acquisition", defaultWeight: 4 }
+    ];
+
+    // Store current role weights
+    const currentRoleWeights = {};
+
+    /**
+     * Displays a custom message box to the user.
+     * @param {string} message - The message to display.
+     */
+    function showMessageBox(message) {
+        messageText.textContent = message;
+        messageBox.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+
+    /**
+     * Hides the custom message box.
+     */
+    function hideMessageBox() {
+        messageBox.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+
+    // Event listener for the message box close button
+    messageBoxCloseBtn.addEventListener('click', hideMessageBox);
+    // Event listener for the overlay to close message box
+    overlay.addEventListener('click', hideMessageBox);
+
+    /**
+     * Initializes the CRediT role weight input fields.
+     */
+    function initializeCreditRoleWeights() {
+        creditRoleWeightsContainer.innerHTML = '';
+        creditRoles.forEach(role => {
+            currentRoleWeights[role.name] = role.defaultWeight; // Set initial weights
+            const div = document.createElement('div');
+            div.className = 'flex items-center space-x-2';
+            div.innerHTML = `
+                <label for="weight-${role.name.replace(/\s/g, '-')}" class="text-gray-700 text-sm flex-shrink-0">${role.name}:</label>
+                <input type="number" id="weight-${role.name.replace(/\s/g, '-')}"
+                       value="${role.defaultWeight}" min="0" step="1"
+                       class="credit-weight-input w-20 text-center bg-gray-50">
+            `;
+            creditRoleWeightsContainer.appendChild(div);
+
+            // Add event listener to update weights and recalculate
+            div.querySelector('.credit-weight-input').addEventListener('input', (event) => {
+                const weight = parseFloat(event.target.value);
+                if (!isNaN(weight) && weight >= 0) {
+                    currentRoleWeights[role.name] = weight;
+                    calculateAdjustedPercentages();
+                } else {
+                    event.target.value = currentRoleWeights[role.name]; // Revert to last valid
+                }
+            });
+        });
+    }
+
+    /**
+     * Generates author rows based on the number of authors input.
+     */
+    function generateRows() {
+        const numAuthors = parseInt(numAuthorsInput.value, 10);
+
+        // Input validation
+        if (isNaN(numAuthors) || numAuthors < 1) {
+            errorMsg.classList.remove('hidden');
+            showMessageBox('Please enter a valid number of authors (1 or more).');
+            return;
+        } else {
+            errorMsg.classList.add('hidden');
+        }
+
+        // Clear existing rows
+        authorRowsContainer.innerHTML = '';
+        totalAdjustedPercentageSpan.textContent = '0.00%';
+
+        for (let i = 0; i < numAuthors; i++) {
+            const row = document.createElement('tr');
+            // Construct options for the CRediT roles dropdown
+            const creditOptions = creditRoles.map(role => `<option value="${role.name}">${role.name}</option>`).join('');
+
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <input type="text" value="Author ${i + 1}" class="author-name bg-gray-50">
+                </td>
+                <td class="px-6 py-4">
+                    <select multiple class="credit-roles-select bg-gray-50 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm" style="min-width: 150px; height: 100px;">
+                        ${creditOptions}
+                    </select>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <span class="adjusted-percentage">0.00%</span>
+                </td>
+            `;
+            authorRowsContainer.appendChild(row);
+
+            // Add event listener to the CRediT roles select for real-time updates
+            row.querySelector('.credit-roles-select').addEventListener('change', calculateAdjustedPercentages);
+        }
+        calculateAdjustedPercentages(); // Calculate initial percentages
+    }
+
+    /**
+     * Calculates and updates the adjusted percentages for all authors,
+     * ensuring the total sums to 100% and no individual percentage is 0%.
+     */
+    function calculateAdjustedPercentages() {
+        const rows = Array.from(authorRowsContainer.children);
+        if (rows.length === 0) {
+            totalAdjustedPercentageSpan.textContent = '0.00%';
+            return;
+        }
+
+        let authorContributionScores = [];
+        let totalRawScore = 0;
+        const minPercentage = 0.01; // Minimum percentage to ensure no author has 0%
+        const tolerance = 0.01; // Tolerance for floating point comparisons
+
+        // Calculate raw contribution scores for each author
+        for (let i = 0; i < rows.length; i++) {
+            const selectElement = rows[i].querySelector('.credit-roles-select');
+            const selectedRoles = Array.from(selectElement.selectedOptions).map(option => option.value);
+            let score = 0;
+            selectedRoles.forEach(roleName => {
+                score += currentRoleWeights[roleName] || 0; // Add weight, default to 0 if not found
+            });
+            authorContributionScores.push(score);
+            totalRawScore += score;
+        }
+
+        let adjustedPercentages = [];
+
+        if (totalRawScore === 0) {
+            // If no roles are selected by anyone, distribute equally
+            const equalShare = 100 / rows.length;
+            for (let i = 0; i < rows.length; i++) {
+                adjustedPercentages.push(equalShare);
+            }
+        } else {
+            // Calculate percentages based on raw scores
+            for (let i = 0; i < rows.length; i++) {
+                let percentage = (authorContributionScores[i] / totalRawScore) * 100;
+
+                // Ensure no author gets 0% if they have some contribution
+                // If an author has a score of 0, they will get minPercentage, and this will be balanced later.
+                if (percentage < minPercentage && authorContributionScores[i] > 0) {
+                    percentage = minPercentage;
+                }
+                adjustedPercentages.push(percentage);
+            }
+
+            // Handle cases where an author has 0 score (no roles selected)
+            // Give them minPercentage and redistribute the difference from others
+            let currentSum = adjustedPercentages.reduce((sum, val) => sum + val, 0);
+            let zeroScoreIndices = [];
+            for (let i = 0; i < rows.length; i++) {
+                if (authorContributionScores[i] === 0 && adjustedPercentages[i] < minPercentage) { // If score is 0 and percentage is effectively 0
+                    zeroScoreIndices.push(i);
+                    adjustedPercentages[i] = minPercentage; // Assign minimum
+                    currentSum += minPercentage; // Add to sum for redistribution calculation
+                }
+                // Ensure that if a score is 0, the percentage is minPercentage, even if it was initially calculated as 0
+                if (authorContributionScores[i] === 0 && adjustedPercentages[i] === 0) {
+                    adjustedPercentages[i] = minPercentage;
+                    currentSum += minPercentage;
+                }
+            }
+
+            // Balance the total to 100%
+            let difference = 100 - currentSum;
+            
+
+            if (Math.abs(difference) > tolerance) {
+                let adjustableIndices = [];
+                for (let i = 0; i < rows.length; i++) {
+                    // Only adjust authors who are not 0-score authors that we just set to minPercentage
+                    // and are not already at 100%
+                    if (!zeroScoreIndices.includes(i) && adjustedPercentages[i] < 100) {
+                        adjustableIndices.push(i);
+                    }
+                }
+
+                if (adjustableIndices.length > 0) {
+                    const adjustmentPerAuthor = difference / adjustableIndices.length;
+                    for (const index of adjustableIndices) {
+                        adjustedPercentages[index] += adjustmentPerAuthor;
+                        // Ensure percentages stay within 0-100 bounds after adjustment
+                        adjustedPercentages[index] = Math.max(minPercentage, Math.min(100, adjustedPercentages[index]));
+                    }
+                } else if (zeroScoreIndices.length > 0) {
+                    // If only zero-score authors are left, distribute among them
+                    const adjustmentPerZeroAuthor = difference / zeroScoreIndices.length;
+                    for (const index of zeroScoreIndices) {
+                        adjustedPercentages[index] += adjustmentPerZeroAuthor;
+                        adjustedPercentages[index] = Math.max(minPercentage, Math.min(100, adjustedPercentages[index]));
+                    }
+                }
+            }
+        }
 
 
+        // Final update to the UI
+        let finalTotal = 0;
+        for (let i = 0; i < rows.length; i++) {
+            const adjustedPercentageSpan = rows[i].querySelector('.adjusted-percentage');
+            adjustedPercentageSpan.textContent = adjustedPercentages[i].toFixed(2) + '%';
+            finalTotal += adjustedPercentages[i];
+        }
+
+        totalAdjustedPercentageSpan.textContent = finalTotal.toFixed(2) + '%';
+
+        // Log a warning if the total is not exactly 100.00%
+        if (Math.abs(finalTotal - 100) > tolerance) {
+            console.warn(`Total is ${finalTotal.toFixed(2)}%, not exactly 100%. Minor floating point discrepancy.`);
+        }
+    }
+
+    // Event listener for the Generate Rows button
+    generateBtn.addEventListener('click', generateRows);
+
+    // Initial setup when the page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeCreditRoleWeights(); // Setup role weights first
+        generateRows(); // Then generate author rows
+    });
+</script>
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RnVuZGluZw==" data-listing-date-sort="1753653600000" data-listing-file-modified-sort="1755538382988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="225">
-<a href="./people/funding/funding.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./people/funding/overview.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-project funding opportunities
-</h5>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('RnVuZGluZw=='); return false;">Funding</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Overview of programs to fund your projects</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-CY, MG
-</div>
-<div class="listing-date">
-Jul 28, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1748124000000" data-listing-file-modified-sort="1755538382988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
-<a href="./people/talks/talks.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./people/talks/images/classroom-1297780_1280.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Advice on preparing and giving scientific talks
-</h5>
-<div class="card-text listing-description delink">
-<p>Practical recommendations for preparing and delivering sicentific talks</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-May 25, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="TGFi" data-listing-date-sort="1727042400000" data-listing-file-modified-sort="1755538382988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="473">
-<a href="./people/leaving/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./people/leaving/images/clipboard-4025791976.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Things to do if you are leaving the lab
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGFi'); return false;">Lab</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>How to provide your participants with money or course credit for experiment participation</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-Sep 23, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Q29tcGVuc2F0aW9u" data-listing-date-sort="1727042400000" data-listing-file-modified-sort="1755538382988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="589">
-<a href="./people/compensation/compensation.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./people/compensation/images/clipboard-516230918.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Participant compensation
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tcGVuc2F0aW9u'); return false;">Compensation</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>How to provide your participants with money or course credit for experiment participation</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-Sep 23, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-date-sort="1726610400000" data-listing-file-modified-sort="1755538382991" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="701">
-<a href="./people/writing/writing.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./people/writing/images/clipboard-2500482646.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Scientific writing in practice
-</h5>
-<div class="card-text listing-description delink">
-<p>Practical recommendations for preparing scientific manuscripts, thesis papers, reports, etc.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-Sep 18, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Q29mZmVlJTJDTGFi" data-listing-date-sort="1724623200000" data-listing-file-modified-sort="1755538382988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
-<a href="./people/coffee/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./people/coffee/images/clipboard-235917595.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Coffee time
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29mZmVl'); return false;">Coffee</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGFi'); return false;">Lab</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Coffee information</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-Aug 26, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-date-sort="1724623200000" data-listing-file-modified-sort="1740338854102" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
-<a href="./people/stipends/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Stipends and prizes for master students
-</h5>
-<div class="card-text listing-description delink">
-<p>This is a list of resources with stipends and prizes you can apply for</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-Aug 26, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,0 +1,441 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: "Calculating authorship"
+description: "Calculating authorship of a manuscript according to the Elsevier CRediT author statement"
+author: AC
+date: 08/18/2025
+---
+
+## Authorship Calculator 
+
+1. Select number of authors 
+2. Adjust the weights of each role (this is up to you, however the weights below are default and can be adjusted as needed)
+3. For each author select which role they had
+    - To select multiple roles hold down {{< kbd mac=Command win=Control linux=Ctrl >}}
+
+```{=html}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author Contribution Calculator with CRediT Weights</title>
+<!-- Tailwind CSS CDN for styling -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    /* Custom styles for Inter font and general body styling */
+    .authorship-calculator {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6; /* Light gray background */
+        padding: 2rem; /* Add some padding around the content */
+        box-sizing: border-box; /* Include padding in element's total width and height */
+    }
+    /* Style for the main container to center it and give it a nice background */
+    .authorship-calculator .container {
+        background-color: #ffffff;
+        padding: 2.5rem;
+        border-radius: 1rem; /* More rounded corners */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Soft shadow */
+        width: 100%;
+        max-width: 1200px; /* Increased max width for larger screens */
+        margin: 2rem auto; /* Center the container */
+    }
+    /* Style for table headers */
+    .authorship-calculator th {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        font-weight: 600;
+        color: #4b5563; /* Darker gray for text */
+        background-color: #e5e7eb; /* Light gray background for headers */
+        border-bottom: 1px solid #d1d5db; /* Border for separation */
+    }
+    /* Style for table cells */
+    .authorship-calculator td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e5e7eb; /* Light border for rows */
+    }
+    /* Input field styling */
+    .authorship-calculator input[type="number"],
+    .authorship-calculator input[type="text"],
+    .authorship-calculator select { /* Apply to select as well */
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem; /* Rounded input fields */
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding doesn't increase width */
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .authorship-calculator input[type="number"]:focus,
+    .authorship-calculator input[type="text"]:focus,
+    .authorship-calculator select:focus { /* Apply to select focus */
+        outline: none;
+        border-color: #3b82f6; /* Blue border on focus */
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Light blue shadow on focus */
+    }
+    /* Button styling */
+    .authorship-calculator button {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    }
+    .authorship-calculator button:hover {
+        transform: translateY(-1px); /* Slight lift on hover */
+    }
+    .authorship-calculator button:active {
+        transform: translateY(0); /* Return to normal on click */
+    }
+    .authorship-calculator .btn-primary {
+        background-color: #3b82f6; /* Blue background */
+        color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06);
+    }
+    .authorship-calculator .btn-primary:hover {
+        background-color: #2563eb; /* Darker blue on hover */
+    }
+    .authorship-calculator .btn-secondary {
+        background-color: #6b7280; /* Gray background */
+        color: #ffffff;
+        box-shadow: 0 4px 6px -1px rgba(107, 114, 128, 0.1), 0 2px 4px -1px rgba(107, 114, 128, 0.06);
+    }
+    .authorship-calculator .btn-secondary:hover {
+        background-color: #4b5563; /* Darker gray on hover */
+    }
+    /* Message box styling */
+    .authorship-calculator .message-box {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        display: none; /* Hidden by default */
+        max-width: 400px;
+        text-align: center;
+    }
+    .authorship-calculator .message-box button {
+        margin-top: 1rem;
+    }
+    .authorship-calculator .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none; /* Hidden by default */
+    }
+</style>
+
+<div class="authorship-calculator">
+    <div class="container">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Author Contribution Calculator with CRediT Weights</h1>
+
+        <div class="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <label for="numAuthors" class="block text-lg font-medium text-gray-700 mb-2">Number of Authors:</label>
+            <div class="flex items-center space-x-4">
+                <input type="number" id="numAuthors" min="1" value="1"
+                       class="flex-grow shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm border-gray-300 rounded-md">
+                <button id="generateBtn" class="btn-primary flex-shrink-0">Generate Rows</button>
+            </div>
+            <p id="errorMsg" class="text-red-600 text-sm mt-2 hidden">Please enter a valid number of authors (1 or more).</p>
+        </div>
+
+        <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">CRediT Role Weights (Adjust as Needed)</h2>
+            <div id="creditRoleWeights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- CRediT role weight inputs will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div id="authorTableContainer" class="overflow-x-auto rounded-lg shadow-md">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Author Name</th>
+                        <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">CRediT Roles</th>
+                        <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Adjusted %</th>
+                    </tr>
+                </thead>
+                <tbody id="authorRows" class="bg-white divide-y divide-gray-200">
+                    <!-- Author rows will be dynamically inserted here -->
+                </tbody>
+                <tfoot class="bg-gray-50">
+                    <tr>
+                        <td colspan="2" class="px-6 py-3 text-right text-base font-bold text-gray-800">Total Adjusted Percentage:</td>
+                        <td id="totalAdjustedPercentage" class="px-6 py-3 text-left text-base font-bold text-gray-800">0.00%</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Message Box HTML -->
+    <div id="messageBox" class="message-box">
+        <p id="messageText" class="text-gray-700 text-lg"></p>
+        <button id="messageBoxCloseBtn" class="btn-primary">OK</button>
+    </div>
+    <div id="overlay" class="overlay"></div>
+</div>
+
+<script>
+    // Get references to DOM elements
+    const numAuthorsInput = document.getElementById('numAuthors');
+    const generateBtn = document.getElementById('generateBtn');
+    const creditRoleWeightsContainer = document.getElementById('creditRoleWeights');
+    const authorRowsContainer = document.getElementById('authorRows');
+    const totalAdjustedPercentageSpan = document.getElementById('totalAdjustedPercentage');
+    const errorMsg = document.getElementById('errorMsg');
+    const messageBox = document.getElementById('messageBox');
+    const messageText = document.getElementById('messageText');
+    const messageBoxCloseBtn = document.getElementById('messageBoxCloseBtn');
+    const overlay = document.getElementById('overlay');
+
+    // CRediT Roles Taxonomy with default weights
+    const creditRoles = [
+        { name: "Conceptualization", defaultWeight: 6 }, // Increased
+        { name: "Methodology", defaultWeight: 5 },       // Increased
+        { name: "Software", defaultWeight: 3 },
+        { name: "Validation", defaultWeight: 3 },
+        { name: "Formal analysis", defaultWeight: 5 },   // Increased
+        { name: "Investigation", defaultWeight: 4 },     // Increased
+        { name: "Resources", defaultWeight: 2 },
+        { name: "Data Curation", defaultWeight: 2 },
+        { name: "Writing — original draft", defaultWeight: 6 }, // Increased
+        { name: "Writing — review & editing", defaultWeight: 3 },
+        { name: "Visualization", defaultWeight: 2 },
+        { name: "Supervision", defaultWeight: 5 },
+        { name: "Project administration", defaultWeight: 4 },
+        { name: "Funding acquisition", defaultWeight: 4 }
+    ];
+
+    // Store current role weights
+    const currentRoleWeights = {};
+
+    /**
+     * Displays a custom message box to the user.
+     * @param {string} message - The message to display.
+     */
+    function showMessageBox(message) {
+        messageText.textContent = message;
+        messageBox.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+
+    /**
+     * Hides the custom message box.
+     */
+    function hideMessageBox() {
+        messageBox.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+
+    // Event listener for the message box close button
+    messageBoxCloseBtn.addEventListener('click', hideMessageBox);
+    // Event listener for the overlay to close message box
+    overlay.addEventListener('click', hideMessageBox);
+
+    /**
+     * Initializes the CRediT role weight input fields.
+     */
+    function initializeCreditRoleWeights() {
+        creditRoleWeightsContainer.innerHTML = '';
+        creditRoles.forEach(role => {
+            currentRoleWeights[role.name] = role.defaultWeight; // Set initial weights
+            const div = document.createElement('div');
+            div.className = 'flex items-center space-x-2';
+            div.innerHTML = `
+                <label for="weight-${role.name.replace(/\s/g, '-')}" class="text-gray-700 text-sm flex-shrink-0">${role.name}:</label>
+                <input type="number" id="weight-${role.name.replace(/\s/g, '-')}"
+                       value="${role.defaultWeight}" min="0" step="1"
+                       class="credit-weight-input w-20 text-center bg-gray-50">
+            `;
+            creditRoleWeightsContainer.appendChild(div);
+
+            // Add event listener to update weights and recalculate
+            div.querySelector('.credit-weight-input').addEventListener('input', (event) => {
+                const weight = parseFloat(event.target.value);
+                if (!isNaN(weight) && weight >= 0) {
+                    currentRoleWeights[role.name] = weight;
+                    calculateAdjustedPercentages();
+                } else {
+                    event.target.value = currentRoleWeights[role.name]; // Revert to last valid
+                }
+            });
+        });
+    }
+
+    /**
+     * Generates author rows based on the number of authors input.
+     */
+    function generateRows() {
+        const numAuthors = parseInt(numAuthorsInput.value, 10);
+
+        // Input validation
+        if (isNaN(numAuthors) || numAuthors < 1) {
+            errorMsg.classList.remove('hidden');
+            showMessageBox('Please enter a valid number of authors (1 or more).');
+            return;
+        } else {
+            errorMsg.classList.add('hidden');
+        }
+
+        // Clear existing rows
+        authorRowsContainer.innerHTML = '';
+        totalAdjustedPercentageSpan.textContent = '0.00%';
+
+        for (let i = 0; i < numAuthors; i++) {
+            const row = document.createElement('tr');
+            // Construct options for the CRediT roles dropdown
+            const creditOptions = creditRoles.map(role => `<option value="${role.name}">${role.name}</option>`).join('');
+
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <input type="text" value="Author ${i + 1}" class="author-name bg-gray-50">
+                </td>
+                <td class="px-6 py-4">
+                    <select multiple class="credit-roles-select bg-gray-50 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 block sm:text-sm" style="min-width: 150px; height: 100px;">
+                        ${creditOptions}
+                    </select>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <span class="adjusted-percentage">0.00%</span>
+                </td>
+            `;
+            authorRowsContainer.appendChild(row);
+
+            // Add event listener to the CRediT roles select for real-time updates
+            row.querySelector('.credit-roles-select').addEventListener('change', calculateAdjustedPercentages);
+        }
+        calculateAdjustedPercentages(); // Calculate initial percentages
+    }
+
+    /**
+     * Calculates and updates the adjusted percentages for all authors,
+     * ensuring the total sums to 100% and no individual percentage is 0%.
+     */
+    function calculateAdjustedPercentages() {
+        const rows = Array.from(authorRowsContainer.children);
+        if (rows.length === 0) {
+            totalAdjustedPercentageSpan.textContent = '0.00%';
+            return;
+        }
+
+        let authorContributionScores = [];
+        let totalRawScore = 0;
+        const minPercentage = 0.01; // Minimum percentage to ensure no author has 0%
+        const tolerance = 0.01; // Tolerance for floating point comparisons
+
+        // Calculate raw contribution scores for each author
+        for (let i = 0; i < rows.length; i++) {
+            const selectElement = rows[i].querySelector('.credit-roles-select');
+            const selectedRoles = Array.from(selectElement.selectedOptions).map(option => option.value);
+            let score = 0;
+            selectedRoles.forEach(roleName => {
+                score += currentRoleWeights[roleName] || 0; // Add weight, default to 0 if not found
+            });
+            authorContributionScores.push(score);
+            totalRawScore += score;
+        }
+
+        let adjustedPercentages = [];
+
+        if (totalRawScore === 0) {
+            // If no roles are selected by anyone, distribute equally
+            const equalShare = 100 / rows.length;
+            for (let i = 0; i < rows.length; i++) {
+                adjustedPercentages.push(equalShare);
+            }
+        } else {
+            // Calculate percentages based on raw scores
+            for (let i = 0; i < rows.length; i++) {
+                let percentage = (authorContributionScores[i] / totalRawScore) * 100;
+
+                // Ensure no author gets 0% if they have some contribution
+                // If an author has a score of 0, they will get minPercentage, and this will be balanced later.
+                if (percentage < minPercentage && authorContributionScores[i] > 0) {
+                    percentage = minPercentage;
+                }
+                adjustedPercentages.push(percentage);
+            }
+
+            // Handle cases where an author has 0 score (no roles selected)
+            // Give them minPercentage and redistribute the difference from others
+            let currentSum = adjustedPercentages.reduce((sum, val) => sum + val, 0);
+            let zeroScoreIndices = [];
+            for (let i = 0; i < rows.length; i++) {
+                if (authorContributionScores[i] === 0 && adjustedPercentages[i] < minPercentage) { // If score is 0 and percentage is effectively 0
+                    zeroScoreIndices.push(i);
+                    adjustedPercentages[i] = minPercentage; // Assign minimum
+                    currentSum += minPercentage; // Add to sum for redistribution calculation
+                }
+                // Ensure that if a score is 0, the percentage is minPercentage, even if it was initially calculated as 0
+                if (authorContributionScores[i] === 0 && adjustedPercentages[i] === 0) {
+                    adjustedPercentages[i] = minPercentage;
+                    currentSum += minPercentage;
+                }
+            }
+
+            // Balance the total to 100%
+            let difference = 100 - currentSum;
+            
+
+            if (Math.abs(difference) > tolerance) {
+                let adjustableIndices = [];
+                for (let i = 0; i < rows.length; i++) {
+                    // Only adjust authors who are not 0-score authors that we just set to minPercentage
+                    // and are not already at 100%
+                    if (!zeroScoreIndices.includes(i) && adjustedPercentages[i] < 100) {
+                        adjustableIndices.push(i);
+                    }
+                }
+
+                if (adjustableIndices.length > 0) {
+                    const adjustmentPerAuthor = difference / adjustableIndices.length;
+                    for (const index of adjustableIndices) {
+                        adjustedPercentages[index] += adjustmentPerAuthor;
+                        // Ensure percentages stay within 0-100 bounds after adjustment
+                        adjustedPercentages[index] = Math.max(minPercentage, Math.min(100, adjustedPercentages[index]));
+                    }
+                } else if (zeroScoreIndices.length > 0) {
+                    // If only zero-score authors are left, distribute among them
+                    const adjustmentPerZeroAuthor = difference / zeroScoreIndices.length;
+                    for (const index of zeroScoreIndices) {
+                        adjustedPercentages[index] += adjustmentPerZeroAuthor;
+                        adjustedPercentages[index] = Math.max(minPercentage, Math.min(100, adjustedPercentages[index]));
+                    }
+                }
+            }
+        }
+
+
+        // Final update to the UI
+        let finalTotal = 0;
+        for (let i = 0; i < rows.length; i++) {
+            const adjustedPercentageSpan = rows[i].querySelector('.adjusted-percentage');
+            adjustedPercentageSpan.textContent = adjustedPercentages[i].toFixed(2) + '%';
+            finalTotal += adjustedPercentages[i];
+        }
+
+        totalAdjustedPercentageSpan.textContent = finalTotal.toFixed(2) + '%';
+
+        // Log a warning if the total is not exactly 100.00%
+        if (Math.abs(finalTotal - 100) > tolerance) {
+            console.warn(`Total is ${finalTotal.toFixed(2)}%, not exactly 100%. Minor floating point discrepancy.`);
+        }
+    }
+
+    // Event listener for the Generate Rows button
+    generateBtn.addEventListener('click', generateRows);
+
+    // Initial setup when the page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeCreditRoleWeights(); // Setup role weights first
+        generateRows(); // Then generate author rows
+    });
+</script>
+```
