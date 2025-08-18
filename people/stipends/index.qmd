@@ -1,8 +1,9 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: Stipends and prizes for master students
+title: Stipends and prizes for master and PhD students
 description: "This is a list of resources with stipends and prizes you can apply for"
+categories: [Funding]
 author: NZ
 date: 08/26/2024
 ---
@@ -31,15 +32,19 @@ No experience so far
 
 ### BioTechMed-Graz lab rotation program
 
-This is suitable if you would like to go to another lab and learn a new method to potentially check out PhD options elswhere
+This is suitable if you would like to go to another lab and learn a new method or to potentially check out PhD options elsewhere
 
 <https://biotechmedgraz.at/de/programme/lab-rotation-program/>
+
+Two of our students previously got a lab rotation stipend.
 
 ### If you would like to apply for a PhD stipend after finishing your Master's thesis
 
 There is a possibility to apply to the Austrian Academy of Sciences, but it has to be done well in advance:
 
 <https://stipendien.oeaw.ac.at/stipendien/doc>
+
+See the page on Funding for details.
 
 ## After finishing the thesis
 
