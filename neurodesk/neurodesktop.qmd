@@ -144,6 +144,16 @@ and then run it as above:
 
 `singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg`
 
+### DICOM viewer WEASIS
+
+[WEASIS](https://weasis.org/en/getting-started/download-dicom-viewer/) is a powerful free dicom viewer for Linux
+
+-   choose "neurodesktop-custom" when starting your jupyter server
+
+    ![](images/clipboard-2118237028.png)
+
+-   Weasis will appear in the application menue under "Graphics" section
+
 ## Resource (esp. RAM) usage
 
 Please keep an eye on your resource usage, especially RAM. If too much RAM is used up by users, the server will be slow and eventually unusable.

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9c3dec34e5088f18814ff86e4371ecab.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3f2066268bf2160d7f3b2c3b88ce6999.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -560,6 +560,7 @@ window.Quarto = {
   <li><a href="#using-freesurfer" id="toc-using-freesurfer" class="nav-link" data-scroll-target="#using-freesurfer">Using FreeSurfer</a></li>
   <li><a href="#using-fitlins" id="toc-using-fitlins" class="nav-link" data-scroll-target="#using-fitlins">Using fitlins</a></li>
   <li><a href="#other-docker-based-software" id="toc-other-docker-based-software" class="nav-link" data-scroll-target="#other-docker-based-software">Other docker-based software</a></li>
+  <li><a href="#dicom-viewer-weasis" id="toc-dicom-viewer-weasis" class="nav-link" data-scroll-target="#dicom-viewer-weasis">DICOM viewer WEASIS</a></li>
   </ul></li>
   <li><a href="#resource-esp.-ram-usage" id="toc-resource-esp.-ram-usage" class="nav-link" data-scroll-target="#resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</a></li>
   <li><a href="#using-notebooks-and-scripts-in-jupyterlab" id="toc-using-notebooks-and-scripts-in-jupyterlab" class="nav-link" data-scroll-target="#using-notebooks-and-scripts-in-jupyterlab">Using notebooks and scripts in JupyterLab</a></li>
@@ -720,6 +721,15 @@ freeview</code></pre>
 <p><code>singularity build /shared/singularity/deepprep/deepprep-25.1.0.simg docker://pbfslab/deepprep:25.1.0</code></p>
 <p>and then run it as above:</p>
 <p><code>singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg</code></p>
+</section>
+<section id="dicom-viewer-weasis" class="level3">
+<h3 class="anchored" data-anchor-id="dicom-viewer-weasis">DICOM viewer WEASIS</h3>
+<p><a href="https://weasis.org/en/getting-started/download-dicom-viewer/">WEASIS</a> is a powerful free dicom viewer for Linux</p>
+<ul>
+<li><p>choose “neurodesktop-custom” when starting your jupyter server</p>
+<p><img src="images/clipboard-2118237028.png" class="img-fluid"></p></li>
+<li><p>Weasis will appear in the application menue under “Graphics” section</p></li>
+</ul>
 </section>
 </section>
 <section id="resource-esp.-ram-usage" class="level2">
