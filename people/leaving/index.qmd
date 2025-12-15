@@ -2,11 +2,11 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Things to do if you are leaving the lab
-description: "How to provide your participants with money or course credit for experiment participation"
+description: "Listing of relevant steps and things to remember when leaving the lab"
 image: images/clipboard-4025791976.png
 categories: [Lab]
-author: NZ
-date: 09/23/2024
+author: NZ, MG
+date: 12/15/2025
 ---
 
 # Things to do if you are leaving the lab
@@ -22,7 +22,7 @@ Leaving can be sad. In addition, there is a ton of boring admin work to be done.
 ## Admin
 
 -   [ ] Return your key to Chrissy once you don't need a desk
--   [ ] Extend your UGOnline account if needed
+-   [ ] [Extend your UGOnline account if needed](#sec-extend)
 
 ## Data
 
@@ -82,6 +82,34 @@ For neurodesk users, the projects file can be in your home directory:
 8.  Latest version of the submitted manuscript with rebuttal: `/storage/natalia/projects/hexcite/manuscript/hexcite_CerCor_R1`
 9.  Posters and submitted conference abstracts related to the study `/storage/natalia/projects/hexcite/presentations`
 10. Paper - Corner office, rightmost drawer
+
+## Optional: Extend UGO Account {#sec-extend}
+
+It is possible to extend your UniGrazOnline account beyond the end of your contract. This might be necessary if there´s still work to do beyond your employment (e.g. planned publications). As you have to file a request, you should do this early enough to ensure it can be processed in time.
+
+To extend your access:
+
+-   [ ] 1. Go to the uni sharepoint (and log in with your account): <https://sharepoint.uni-graz.at/sites/602>
+
+-   [ ] 2. Go to "Information for Staff Members" (or "MitarbeiterInnen-Informationen" in german) in the menu bar at the top (or directly click [this for the english](https://sharepoint.uni-graz.at/sites/602/MitarbeiterInnenInformationen/Information%20for%20Staff%20Members.aspx) or [this link for the german](https://sharepoint.uni-graz.at/sites/602/MitarbeiterInnenInformationen/MitarbeiterInnen-Informationen.aspx) version)
+
+-   [ ] 3. Select the topic ["Leaving the department"](https://sharepoint.uni-graz.at/sites/602/MitarbeiterInnenInformationen/Account%20extension.aspx) (German: ["Ende des Dienstverhältnisses"](https://sharepoint.uni-graz.at/sites/602/MitarbeiterInnenInformationen/Accountverl%C3%A4ngerung.aspx))
+
+-   [ ] 4. At the last bulletpoint of the page, click on the [link embedded with the word "here"](https://sharepoint.uni-graz.at/sites/602/zentralbereich/service/Lists/Accountverlaengerungen/AllItems.aspx) (German: ["Accountverlängerung"](https://sharepoint.uni-graz.at/sites/602/zentralbereich/service/_layouts/15/start.aspx#/Lists/Accountverlaengerungen/AllItems.aspx))
+
+-   [ ] 5. On the final page (only showing in german language!), click "Neues Element", located directly under the title "Accountverlängerung"
+
+-   [ ] 6. Select your entry in the drop-down menu of the first field (= "Mitarbeiter\*in")
+
+-   [ ] 7. Provide the reason why you want to extend your contract in the field below (= "Begründung")
+
+-   [ ] 8. Select a date until when you want to extend your UGO access (= "Enddatum")
+
+-   [ ] 9. Indicate the reason why you would loose access to your account ("Grund"), either "end of contract" (= "Anstellungsende") or "retirement" (= "Pension")
+
+-   [ ] 10. Submit the request by saving it (= "Speichern")
+
+Subsequently, you should see your request in the list. After evaluation by the department head(s), the request will be processed by the deans office before the extension is implemented by the IT-Staff.
 
 # Reward
 

@@ -125,7 +125,7 @@ export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[
 
 ### Using fitlins
 
-Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the ["DICOM to GLM"](dicom_to_glm.qmd) pipeline for details
+Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the ["DICOM to GLM"](../dicom_to_glm.qmd) pipeline for details
 
 Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
 

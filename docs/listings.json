@@ -1,15 +1,30 @@
 [
   {
-    "listing": "/archive.html",
+    "listing": "/people.html",
     "items": [
-      "/archive/freesurfer FSFAST.html",
-      "/archive/dicom_to_bids.html"
+      "/people/leaving/index.html",
+      "/people/funding/funding.html",
+      "/people/talks/talks.html",
+      "/people/compensation/compensation.html",
+      "/people/writing/writing.html",
+      "/people/coffee/index.html",
+      "/people/stipends/index.html"
     ]
   },
   {
-    "listing": "/labmeeting.html",
+    "listing": "/other_topics.html",
     "items": [
-      "/labmeeting/index.html"
+      "/OtherTopics/AuthorshipCalculator/calculator.html",
+      "/OtherTopics/ContributeWithR.html",
+      "/OtherTopics/CalculatingAPrioriPower.html",
+      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
+      "/OtherTopics/displays/displays.html"
+    ]
+  },
+  {
+    "listing": "/neurodesk.html",
+    "items": [
+      "/neurodesk/neurodesktop.html"
     ]
   },
   {
@@ -29,28 +44,23 @@
     ]
   },
   {
-    "listing": "/people.html",
+    "listing": "/labmeeting.html",
     "items": [
-      "/people/funding/funding.html",
-      "/people/talks/talks.html",
-      "/people/compensation/compensation.html",
-      "/people/leaving/index.html",
-      "/people/writing/writing.html",
-      "/people/coffee/index.html",
-      "/people/stipends/index.html"
+      "/labmeeting/index.html"
     ]
   },
   {
-    "listing": "/behavioral.html",
+    "listing": "/internship.html",
     "items": [
-      "/behavioral/chinrests/chinrests.html",
-      "/behavioral/2024-05-23/index.html",
-      "/behavioral/2024-05-22/index.html"
+      "/internship/project_list.html",
+      "/internship/pflichtpraktikum.html",
+      "/internship/checklist.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/people/leaving/index.html",
       "/OtherTopics/AuthorshipCalculator/calculator.html",
       "/mri/oriented-bounding-box/calculating_oriented_bounding_box.html",
       "/people/funding/funding.html",
@@ -78,7 +88,6 @@
       "/mri/3D-prints/3d-prints.html",
       "/mri/mri-lab-setup-2024/index.html",
       "/people/compensation/compensation.html",
-      "/people/leaving/index.html",
       "/people/writing/writing.html",
       "/OtherTopics/displays/displays.html",
       "/people/coffee/index.html",
@@ -93,17 +102,18 @@
     ]
   },
   {
-    "listing": "/neurodesk.html",
+    "listing": "/archive.html",
     "items": [
-      "/neurodesk/neurodesktop.html"
+      "/archive/freesurfer FSFAST.html",
+      "/archive/dicom_to_bids.html"
     ]
   },
   {
-    "listing": "/internship.html",
+    "listing": "/behavioral.html",
     "items": [
-      "/internship/project_list.html",
-      "/internship/pflichtpraktikum.html",
-      "/internship/checklist.html"
+      "/behavioral/chinrests/chinrests.html",
+      "/behavioral/2024-05-23/index.html",
+      "/behavioral/2024-05-22/index.html"
     ]
   },
   {
@@ -112,24 +122,14 @@
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
       "/dicom_to_glm/second_level_glm_nilearn.html",
       "/dicom_to_glm/check_IntendedFor_field.html",
-      "/dicom_to_glm/retinotopic_mapping.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
+      "/dicom_to_glm/retinotopic_mapping.html",
       "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
       "/dicom_to_glm/defacing.html",
       "/dicom_to_glm/troubleshooting.html",
-      "/dicom_to_glm/run_fmriprep.html",
-      "/dicom_to_glm/RemoveNoiseScan.html"
-    ]
-  },
-  {
-    "listing": "/other_topics.html",
-    "items": [
-      "/OtherTopics/AuthorshipCalculator/calculator.html",
-      "/OtherTopics/ContributeWithR.html",
-      "/OtherTopics/CalculatingAPrioriPower.html",
-      "/OtherTopics/LabMembersOnly/LabMembersOnly.html",
-      "/OtherTopics/displays/displays.html"
+      "/dicom_to_glm/RemoveNoiseScan.html",
+      "/dicom_to_glm/run_fmriprep.html"
     ]
   }
 ]
