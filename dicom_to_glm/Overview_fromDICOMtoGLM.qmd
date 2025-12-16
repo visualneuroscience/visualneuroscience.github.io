@@ -10,30 +10,34 @@ date: 07/28/2025
 
 # General
 
-This page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.
+This page gives an overview and brief information about the necessary steps to get from your raw DICOM files to an Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.
 
-::: callout-hint
-## Two ways to your data
+# Get your data
+
+There are two ways how you get your data:
 
 1)  Regular scanning time:
 
     -   you get the data as nifti files
-    -   a few days later via `mri-dropoff` in the `J` drive
-    -   step 1 and 4 generally are already done for you then (but check the defacing anyway, sometimes this doesn´t work!)
+    -   a few days later via `mri-dropoff` in the `J` drive ([Subpage for accessing other networks](../neurodesk/neurodesktop.qmd#sec-mountNetwork))
+    -   [nifti conversion](#sec-convert) and [defacing](#sec-deface) generally are already done for you then (but check defacing anyway, sometimes this doesn´t work!)
 
 2)  Scanning with Natalia
 
     -   we have the raw DICOM files
-    -   conversion to niftis has to be done (see 1)
-    -   defacing has to be done (see 4)
-    -   ***IMPORTANT: Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
+    -   conversion to niftis has to be done ([see here](#sec-convert))
+    -   defacing has to be done ([see here](#sec-deface))
+
+:::callout-warning
+***IMPORTANT: Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
 :::
 
 # DICOM-Files
 
 -   the raw files from the scanner are DICOM-Files
--   not really useful since we need `.nifti` files for our analysis $\qquad\to$ first step is to transform the `DICOM`- to `.nift`-files
--   need to be converted to nifti files
+-   in general, we primarily use `.nifti` files for the subsequent steps
+
+$\to$ before we can continue, we need to convert `DICOM`- to `.nifti` files
 
 ::: callout-warning
 ## DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
@@ -41,16 +45,22 @@ This page gives an overview and brief information about the necessary steps to g
 ***Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
 :::
 
-# [DICOM to nifti](DICOMtoBIDS.qmd)
+# [DICOM to nifti](DICOMtoBIDS.qmd) {#sec-convert}
 
--   using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/dcm2bids.sh`)
--   results in `.nifti` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
+There are two options to convert DICOM to `.nifti` files:
+
+1)   Older approach: using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/website/dcm2bids_adam.sh`). All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-script)
+
+2)  Newer approach: use the [BIDScoin workflow](https://bidscoin.readthedocs.io/en/latest/workflow.html) implemented in `/shared/website/dcm2bids_coiner.sh`. All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-bidscoiner)
+
+
+both approaches should result in `.nifti` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
 
 # [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
 
--   tells [fmriPrep](run_fmriprep.qmd) on what files distortion correction should be applied to
+-   "tells" [fmriPrep](run_fmriprep.qmd) where to apply distortion correction
 
--   depending on the fMRIprep version you plan to use, the field has to look slightly different!
+-   ***depending on the fMRIprep version you plan to use, the field has to look slightly different!***
 
 -   to avoid unnecessary problems and delays, it doesn´t harm to always check this field before running fMRIprep!
 
@@ -60,7 +70,7 @@ This page gives an overview and brief information about the necessary steps to g
 -   this should be done before [defacing](defacing.qmd)
 -   You should delete the "non-defaced" files either after you distributed them to the respective participants, or after your study ended
 
-# [Defacing your data](defacing.qmd)
+# [Defacing your data](defacing.qmd) {#sec-deface}
 
 -   defaced data is necessary to savely run fMRIprep
 -   Save faced T1w-files to give to your participants (if you got the data during regular scanning times, there should be a `faced` directory, but you should still make sure, that you have the faced T1w files if you need them for your participants!)
@@ -69,7 +79,7 @@ This page gives an overview and brief information about the necessary steps to g
 
 # ([Remove denoising scan from your data](RemoveNoiseScan.qmd))
 
--   if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you might have to remove the last volume of each scan (which basically is a noise scan) before continuing
+-   if a denoising sequence was used, but you don´t use denoising data, you might have to remove the last volume of each scan before continuing
 
 # [fmriprep](run_fmriprep.qmd)
 
@@ -77,11 +87,10 @@ This page gives an overview and brief information about the necessary steps to g
 -   combines various anatomical and functional preprocessing steps within one tool
 -   necessary, time intense process
 
-# [Retinotopic Mapping](retinotopic_mapping.qmd)
+# [Probabilistic Retinotopic Mapping](retinotopic_mapping.qmd)
 
--   if you want to specifically test potential effects in specific visual areas (e.g. V1, V2, etc.), you might need to do retinotopic mapping
-
--   this allows you to differentiate different visual areas, eccentricity and more
+-   might be necessary to specifically test potential effects in specific visual areas (e.g. V1, V2, etc.)
+-   provides retinotopy information (visual areas, eccentricity, etc.) even in the absence of dedicated retinotopy runs
 
 # [first-level Analysis](first_level_glm_nilearn.qmd)
 
@@ -90,10 +99,10 @@ This page gives an overview and brief information about the necessary steps to g
 -   you define meaningful contrasts (e.g. your experimental conditions)
 -   you account for potential confounds
 
-# [second-level Analysis](second_level_glm_nilearn.qmd)
+# [Group-Level ROI Analysis](roi_analysis.qmd)
 
--   in the second level GLM you extract the relevevant (for your reasearch questions/hypothesis) information from your first level GLM
--   you should save this information in a format that allows you to later run your statistical analysis
+-   in the group-level ROI analysis, you extract relevevant (for your reasearch questions/hypothesis) information from your first level GLM
+-   you should save this information in a format that allows you to later run your statistical analysis (e.g. as a `.csv` file)
 
 # Statistical Analysis
 

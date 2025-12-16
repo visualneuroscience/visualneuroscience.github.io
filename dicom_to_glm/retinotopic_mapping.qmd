@@ -1,7 +1,7 @@
 ---
 fontsize: 12pt
 geometry: margin=3cm
-title: 07 - Retinotopic Mapping
+title: 07 - Probabilistic Retinotopic Mapping
 description: "Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas"
 #image: ./images/clipboard-3427974075.png
 categories: [MRI, Retinotopy]
@@ -9,23 +9,19 @@ author: MG
 date: 05/05/2025
 ---
 
-Retinotopic mapping is used to individually identify subregions in the visual cortex (i.e V1, V2, V3 and sometimes higher areas as well). This is then used to better understand how visual information is processed in the brain by different regions.
+Retinotopic mapping is used to identify subregions (e.g. V1, V2,...) and additional parameters like eccentricity or polar angle. Normally, this is achieved by implementing dedicated "retinotopy-runs" in the experimental design. However, this is not always possible.
 
-Normally, this is achieved by implementing dedicated "retinotopy-runs" in the experimental design. However, this is not always possible.
-
-The Benson2014 atlas allows to get a retinotopic mapping even without dedicated "retinotopy-runs" by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e. discrete labels for V1, V2, etc.; `varea`), the eccentricity (i.e. the distance from fixation in visual degrees; `eccen`) or the polar angle (`angle`)
+In the absence of dedicated retinotopy runs, the Benson2014 atlas allows to get the retinotopy information by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e. discrete labels for V1, V2, etc.; `varea`), the eccentricity (i.e. the distance from fixation in visual degrees; `eccen`) or the polar angle (`angle`)
 
 ::: callout-important
 To do the retinotopic mapping, you need [preprocessed](run_fmriprep.qmd) data!
 :::
-
 
 # The script
 
 The script to run the probabilistic retinotopic mapping can be found on the server: `/shared/website/occatlas.sh`
 
 (If you do surface based analysis, you can adapt the script `/shared/website/occatlas_surface_multipleSubs.sh` to run multiple subjects after each other.)
-
 
 Alternatively, you can copy/paste the code (after adapting it for your data! See below):
 

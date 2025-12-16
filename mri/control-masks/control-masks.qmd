@@ -1,0 +1,26 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Control Masks
+description: "Approach to generate dilated and shifted control masks"
+image: ./images/controlRegions.png
+categories: [MRI]
+author: MG
+date: 12/16/2025
+---
+
+In a previous project, we needed to provide evidence for the spacial specificity of the response captured in a (Claustrum) mask.
+
+To achieve this, we defined control masks by dilating and shifting the original mask, to cover brain areas surrounding the relevant structure.
+
+The corresponding script can be found here: `/shared/ClaustrumLabels/control/create_shifted_and_dilated_masks.ipynb`
+
+After specifying location and name of a given mask, this notebook creates (per Hemisphere!):
+
+1.  6 shifted control masks: the original mask is shifted by one voxel in one of (currently) six directions. This process is repeated until the shifted mask isn´t overlapping with the original mask anymore
+
+2.  1 mask combining the 6 shifted control regions
+
+3.  1 dilated mask: the original mask is dilated by a given number of voxels. By subsequently subtracting the original mask, this dilated control contains only voxels surrounding the original structure
+
+Finally, all newly computed masks are stored.

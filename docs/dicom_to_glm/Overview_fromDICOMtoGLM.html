@@ -257,7 +257,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,11 +267,8 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
@@ -323,6 +320,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -504,21 +507,19 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a>
-  <ul class="collapse">
-  <li><a href="#two-ways-to-your-data" id="toc-two-ways-to-your-data" class="nav-link" data-scroll-target="#two-ways-to-your-data"><span class="header-section-number">1.1</span> Two ways to your data</a></li>
-  </ul></li>
-  <li><a href="#dicom-files" id="toc-dicom-files" class="nav-link" data-scroll-target="#dicom-files"><span class="header-section-number">2</span> DICOM-Files</a></li>
-  <li><a href="#dicom-to-nifti" id="toc-dicom-to-nifti" class="nav-link" data-scroll-target="#dicom-to-nifti"><span class="header-section-number">3</span> DICOM to nifti</a></li>
-  <li><a href="#check-the-intendedfor-entry-of-the-fmaps-json-file" id="toc-check-the-intendedfor-entry-of-the-fmaps-json-file" class="nav-link" data-scroll-target="#check-the-intendedfor-entry-of-the-fmaps-json-file"><span class="header-section-number">4</span> Check the “IntendedFor” entry of the fmap’s JSON file</a></li>
-  <li><a href="#distribute-the-t1w-files-to-participants" id="toc-distribute-the-t1w-files-to-participants" class="nav-link" data-scroll-target="#distribute-the-t1w-files-to-participants"><span class="header-section-number">5</span> Distribute the T1w files to participants?</a></li>
-  <li><a href="#defacing-your-data" id="toc-defacing-your-data" class="nav-link" data-scroll-target="#defacing-your-data"><span class="header-section-number">6</span> Defacing your data</a></li>
-  <li><a href="#remove-denoising-scan-from-your-data" id="toc-remove-denoising-scan-from-your-data" class="nav-link" data-scroll-target="#remove-denoising-scan-from-your-data"><span class="header-section-number">7</span> (Remove denoising scan from your data)</a></li>
-  <li><a href="#fmriprep" id="toc-fmriprep" class="nav-link" data-scroll-target="#fmriprep"><span class="header-section-number">8</span> fmriprep</a></li>
-  <li><a href="#retinotopic-mapping" id="toc-retinotopic-mapping" class="nav-link" data-scroll-target="#retinotopic-mapping"><span class="header-section-number">9</span> Retinotopic Mapping</a></li>
-  <li><a href="#first-level-analysis" id="toc-first-level-analysis" class="nav-link" data-scroll-target="#first-level-analysis"><span class="header-section-number">10</span> first-level Analysis</a></li>
-  <li><a href="#second-level-analysis" id="toc-second-level-analysis" class="nav-link" data-scroll-target="#second-level-analysis"><span class="header-section-number">11</span> second-level Analysis</a></li>
-  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis"><span class="header-section-number">12</span> Statistical Analysis</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general"><span class="header-section-number">1</span> General</a></li>
+  <li><a href="#get-your-data" id="toc-get-your-data" class="nav-link" data-scroll-target="#get-your-data"><span class="header-section-number">2</span> Get your data</a></li>
+  <li><a href="#dicom-files" id="toc-dicom-files" class="nav-link" data-scroll-target="#dicom-files"><span class="header-section-number">3</span> DICOM-Files</a></li>
+  <li><a href="#sec-convert" id="toc-sec-convert" class="nav-link" data-scroll-target="#sec-convert"><span class="header-section-number">4</span> DICOM to nifti</a></li>
+  <li><a href="#check-the-intendedfor-entry-of-the-fmaps-json-file" id="toc-check-the-intendedfor-entry-of-the-fmaps-json-file" class="nav-link" data-scroll-target="#check-the-intendedfor-entry-of-the-fmaps-json-file"><span class="header-section-number">5</span> Check the “IntendedFor” entry of the fmap’s JSON file</a></li>
+  <li><a href="#distribute-the-t1w-files-to-participants" id="toc-distribute-the-t1w-files-to-participants" class="nav-link" data-scroll-target="#distribute-the-t1w-files-to-participants"><span class="header-section-number">6</span> Distribute the T1w files to participants?</a></li>
+  <li><a href="#sec-deface" id="toc-sec-deface" class="nav-link" data-scroll-target="#sec-deface"><span class="header-section-number">7</span> Defacing your data</a></li>
+  <li><a href="#remove-denoising-scan-from-your-data" id="toc-remove-denoising-scan-from-your-data" class="nav-link" data-scroll-target="#remove-denoising-scan-from-your-data"><span class="header-section-number">8</span> (Remove denoising scan from your data)</a></li>
+  <li><a href="#fmriprep" id="toc-fmriprep" class="nav-link" data-scroll-target="#fmriprep"><span class="header-section-number">9</span> fmriprep</a></li>
+  <li><a href="#probabilistic-retinotopic-mapping" id="toc-probabilistic-retinotopic-mapping" class="nav-link" data-scroll-target="#probabilistic-retinotopic-mapping"><span class="header-section-number">10</span> Probabilistic Retinotopic Mapping</a></li>
+  <li><a href="#first-level-analysis" id="toc-first-level-analysis" class="nav-link" data-scroll-target="#first-level-analysis"><span class="header-section-number">11</span> first-level Analysis</a></li>
+  <li><a href="#group-level-roi-analysis" id="toc-group-level-roi-analysis" class="nav-link" data-scroll-target="#group-level-roi-analysis"><span class="header-section-number">12</span> Group-Level ROI Analysis</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis"><span class="header-section-number">13</span> Statistical Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -563,33 +564,46 @@ window.Quarto = {
 
 <section id="general" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General</h1>
-<p>This page gives an overview and brief information about the necessary steps to get from the DICOM files to a GLM Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.</p>
-<section id="two-ways-to-your-data" class="level2 callout-hint" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="two-ways-to-your-data"><span class="header-section-number">1.1</span> Two ways to your data</h2>
+<p>This page gives an overview and brief information about the necessary steps to get from your raw DICOM files to an Analysis. You can find more detailed information by navigating to the sub-pages by clicking on the caption of the respective point.</p>
+</section>
+<section id="get-your-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Get your data</h1>
+<p>There are two ways how you get your data:</p>
 <ol type="1">
 <li><p>Regular scanning time:</p>
 <ul>
 <li>you get the data as nifti files</li>
-<li>a few days later via <code>mri-dropoff</code> in the <code>J</code> drive</li>
-<li>step 1 and 4 generally are already done for you then (but check the defacing anyway, sometimes this doesn´t work!)</li>
+<li>a few days later via <code>mri-dropoff</code> in the <code>J</code> drive (<a href="../neurodesk/neurodesktop.html#sec-mountNetwork">Subpage for accessing other networks</a>)</li>
+<li><a href="#sec-convert">nifti conversion</a> and <a href="#sec-deface">defacing</a> generally are already done for you then (but check defacing anyway, sometimes this doesn´t work!)</li>
 </ul></li>
 <li><p>Scanning with Natalia</p>
 <ul>
 <li>we have the raw DICOM files</li>
-<li>conversion to niftis has to be done (see 1)</li>
-<li>defacing has to be done (see 4)</li>
-<li><strong><em>IMPORTANT: Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!</em></strong></li>
+<li>conversion to niftis has to be done (<a href="#sec-convert">see here</a>)</li>
+<li>defacing has to be done (<a href="#sec-deface">see here</a>)</li>
 </ul></li>
 </ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><em>IMPORTANT: Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!</em></strong></p>
+</div>
+</div>
 </section>
-</section>
-<section id="dicom-files" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> DICOM-Files</h1>
+<section id="dicom-files" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> DICOM-Files</h1>
 <ul>
 <li>the raw files from the scanner are DICOM-Files</li>
-<li>not really useful since we need <code>.nifti</code> files for our analysis <span class="math inline">\(\qquad\to\)</span> first step is to transform the <code>DICOM</code>- to <code>.nift</code>-files</li>
-<li>need to be converted to nifti files</li>
+<li>in general, we primarily use <code>.nifti</code> files for the subsequent steps</li>
 </ul>
+<p><span class="math inline">\(\to\)</span> before we can continue, we need to convert <code>DICOM</code>- to <code>.nifti</code> files</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -604,31 +618,33 @@ DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
 </div>
 </div>
 </section>
-<section id="dicom-to-nifti" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <a href="../dicom_to_glm/DICOMtoBIDS.html">DICOM to nifti</a></h1>
-<ul>
-<li>using a script from Adam that can be <a href="https://github.com/adam-coates/dicom2bids">found here</a> (or here: <code>/shared/dcm2bids.sh</code>)</li>
-<li>results in <code>.nifti</code> files in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format</li>
-</ul>
+<section id="sec-convert" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> <a href="../dicom_to_glm/DICOMtoBIDS.html">DICOM to nifti</a></h1>
+<p>There are two options to convert DICOM to <code>.nifti</code> files:</p>
+<ol type="1">
+<li><p>Older approach: using a script from Adam that can be <a href="https://github.com/adam-coates/dicom2bids">found here</a> (or here: <code>/shared/website/dcm2bids_adam.sh</code>). All steps are also described in a <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-script">separate page</a></p></li>
+<li><p>Newer approach: use the <a href="https://bidscoin.readthedocs.io/en/latest/workflow.html">BIDScoin workflow</a> implemented in <code>/shared/website/dcm2bids_coiner.sh</code>. All steps are also described in a <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-bidscoiner">separate page</a></p></li>
+</ol>
+<p>both approaches should result in <code>.nifti</code> files in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format</p>
 </section>
-<section id="check-the-intendedfor-entry-of-the-fmaps-json-file" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> <a href="../dicom_to_glm/check_IntendedFor_field.html">Check the “IntendedFor” entry of the fmap’s JSON file</a></h1>
+<section id="check-the-intendedfor-entry-of-the-fmaps-json-file" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> <a href="../dicom_to_glm/check_IntendedFor_field.html">Check the “IntendedFor” entry of the fmap’s JSON file</a></h1>
 <ul>
-<li><p>tells <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a> on what files distortion correction should be applied to</p></li>
-<li><p>depending on the fMRIprep version you plan to use, the field has to look slightly different!</p></li>
+<li><p>“tells” <a href="../dicom_to_glm/run_fmriprep.html">fmriPrep</a> where to apply distortion correction</p></li>
+<li><p><strong><em>depending on the fMRIprep version you plan to use, the field has to look slightly different!</em></strong></p></li>
 <li><p>to avoid unnecessary problems and delays, it doesn´t harm to always check this field before running fMRIprep!</p></li>
 </ul>
 </section>
-<section id="distribute-the-t1w-files-to-participants" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">Distribute the T1w files to participants?</a></h1>
+<section id="distribute-the-t1w-files-to-participants" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">Distribute the T1w files to participants?</a></h1>
 <ul>
 <li>if you promised participants that they will get their T1w images, you should make sure that they really get them</li>
 <li>this should be done before <a href="../dicom_to_glm/defacing.html">defacing</a></li>
 <li>You should delete the “non-defaced” files either after you distributed them to the respective participants, or after your study ended</li>
 </ul>
 </section>
-<section id="defacing-your-data" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> <a href="../dicom_to_glm/defacing.html">Defacing your data</a></h1>
+<section id="sec-deface" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> <a href="../dicom_to_glm/defacing.html">Defacing your data</a></h1>
 <ul>
 <li>defaced data is necessary to savely run fMRIprep</li>
 <li>Save faced T1w-files to give to your participants (if you got the data during regular scanning times, there should be a <code>faced</code> directory, but you should still make sure, that you have the faced T1w files if you need them for your participants!)</li>
@@ -636,29 +652,29 @@ DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
 <li>Defacing is done with <code>pydeface</code> (Docker; Version 2.0.2)</li>
 </ul>
 </section>
-<section id="remove-denoising-scan-from-your-data" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> (<a href="../dicom_to_glm/RemoveNoiseScan.html">Remove denoising scan from your data</a>)</h1>
+<section id="remove-denoising-scan-from-your-data" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> (<a href="../dicom_to_glm/RemoveNoiseScan.html">Remove denoising scan from your data</a>)</h1>
 <ul>
-<li>if a denoising sequence was used in the scanner, but you don´t use denoising in your analysis, you might have to remove the last volume of each scan (which basically is a noise scan) before continuing</li>
+<li>if a denoising sequence was used, but you don´t use denoising data, you might have to remove the last volume of each scan before continuing</li>
 </ul>
 </section>
-<section id="fmriprep" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
+<section id="fmriprep" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a></h1>
 <ul>
 <li>one of many <a href="https://bids.neuroimaging.io//tools/bids-apps.html">BIDS-Apps</a> (that require <a href="https://bids-standard.github.io/bids-validator/">a BIDS-valid Dataset</a>)</li>
 <li>combines various anatomical and functional preprocessing steps within one tool</li>
 <li>necessary, time intense process</li>
 </ul>
 </section>
-<section id="retinotopic-mapping" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> <a href="../dicom_to_glm/retinotopic_mapping.html">Retinotopic Mapping</a></h1>
+<section id="probabilistic-retinotopic-mapping" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> <a href="../dicom_to_glm/retinotopic_mapping.html">Probabilistic Retinotopic Mapping</a></h1>
 <ul>
-<li><p>if you want to specifically test potential effects in specific visual areas (e.g.&nbsp;V1, V2, etc.), you might need to do retinotopic mapping</p></li>
-<li><p>this allows you to differentiate different visual areas, eccentricity and more</p></li>
+<li>might be necessary to specifically test potential effects in specific visual areas (e.g.&nbsp;V1, V2, etc.)</li>
+<li>provides retinotopy information (visual areas, eccentricity, etc.) even in the absence of dedicated retinotopy runs</li>
 </ul>
 </section>
-<section id="first-level-analysis" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> <a href="../dicom_to_glm/first_level_glm_nilearn.html">first-level Analysis</a></h1>
+<section id="first-level-analysis" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> <a href="../dicom_to_glm/first_level_glm_nilearn.html">first-level Analysis</a></h1>
 <ul>
 <li>in the first level GLM you process the data of individual subjects</li>
 <li>for each subject, you define/estimate a model that can explain your data</li>
@@ -666,15 +682,15 @@ DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
 <li>you account for potential confounds</li>
 </ul>
 </section>
-<section id="second-level-analysis" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> <a href="../dicom_to_glm/second_level_glm_nilearn.html">second-level Analysis</a></h1>
+<section id="group-level-roi-analysis" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> <a href="../dicom_to_glm/roi_analysis.html">Group-Level ROI Analysis</a></h1>
 <ul>
-<li>in the second level GLM you extract the relevevant (for your reasearch questions/hypothesis) information from your first level GLM</li>
-<li>you should save this information in a format that allows you to later run your statistical analysis</li>
+<li>in the group-level ROI analysis, you extract relevevant (for your reasearch questions/hypothesis) information from your first level GLM</li>
+<li>you should save this information in a format that allows you to later run your statistical analysis (e.g.&nbsp;as a <code>.csv</code> file)</li>
 </ul>
 </section>
-<section id="statistical-analysis" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Statistical Analysis</h1>
+<section id="statistical-analysis" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Statistical Analysis</h1>
 <ul>
 <li>with your extracted data (that are saved in a .csv file), you can now run your statistical analysis</li>
 </ul>

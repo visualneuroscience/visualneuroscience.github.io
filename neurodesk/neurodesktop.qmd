@@ -3,6 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Neurodesktop access
 description: "How to use Neurodesktop on the server"
+number-sections: true
 image: images/clipboard-3609792068.png
 categories: [Neurodesk]
 author: NZ, MG
@@ -204,7 +205,7 @@ You can create symbolic links in your home directory:
 
 `ln -s /storage/ /home/jovyan/storage`
 
-## Mount network shares
+## Mount network shares {#sec-mountNetwork}
 
 You can mount network shares with Lukas' helper script at `/shared/mount_network_share.sh` (i.e. you´ll see a directory through which you can access the network from within neurodesk)
 

@@ -257,7 +257,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,11 +267,8 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
@@ -323,6 +320,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -560,15 +563,15 @@ window.Quarto = {
 </header>
 
 
-<p>For this step, you need to already have nifti files! If you currently only have DICOM files, please <a href="../dicom_to_glm/DICOMtoBIDS.html">convert them to nifti’s first</a>!</p>
+<p>For this step, you need to already have <code>.nifti</code> files! If you currently only have DICOM files, please <a href="../dicom_to_glm/DICOMtoBIDS.html">convert them to nifti’s first</a>!</p>
 <p>Depending on the sequence used in the scanner session, you might have data that were acquired with a denoising sequence. This is sometimes done, since it doesn´t take much time in the scanner, but you have the ability to denoise the data if it turns out to be necessary.</p>
 <p>But by default, we don´t use this denoising information. Additionally, some applications (<a href="../dicom_to_glm/run_fmriprep.html">like fmriprep</a>) cannot process data with this additional information!</p>
-<p>Thus, before running our default pipeline with <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>, we have to remove this information from our scans!</p>
+<p>Thus, before running our <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a> pipeline, we have to remove this information from our scans!</p>
 <section id="check-for-noise-scan-in-nifti-file" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Check for noise scan in nifti file</h1>
 <section id="sec-OpenFreeview" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="sec-OpenFreeview"><span class="header-section-number">1.1</span> Open freeview</h2>
-<p>You can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:</p>
+<p>You can check if a denoising sequence was used for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:</p>
 <ol type="1">
 <li><p>Open a terminal (Monitor Icon at the bottom left on neurodesk) <img src="./images/01_dcm2bids/open_terminal.gif" class="img-fluid" alt="Open Terminal"></p></li>
 <li><p>Type <code>ml freesurfer</code> and press enter</p></li>
@@ -581,19 +584,19 @@ window.Quarto = {
 <p>Now you have to look at a functional scan to see if there is a denoising scan at the end.</p>
 <p>For this, select <code>File &gt; Load Volume</code> (top left corner in freeview): <img src="./images/02_RemoveDenoising/02_File_loadVolume.png" class="img-fluid" alt="File > Load Volume"></p>
 <p>A new window opens, asking you to <code>Select volume file</code>. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol <img src="./images/02_RemoveDenoising/03_folderSymbol.png" class="img-fluid" alt="Click on Folder Symbol"></p>
-<p>Navigate to your <code>func</code> directory in your <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-bidsdirectory">BIDS</a>, select one of the nifti files of one of the runs and press <code>Open</code> afterwards <img src="./images/02_RemoveDenoising/04_Navigate_to_functional_file.png" class="img-fluid" alt="Select functional nifti file of a run in your bids directory"></p>
-<p>Now, with the field <code>Select volume file</code> specified with the path(s) to the nifti file, you can click <code>Open</code><img src="./images/02_RemoveDenoising/05_confirm_Selection.png" class="img-fluid" alt="Open Volume"></p>
-<p>When the volume loaded, it should see some kind of data and something that looks like a brain: <img src="./images/02_RemoveDenoising/06_0_firstFrame.png" class="img-fluid" alt="First Frame of Functional Scan"></p>
+<p>Navigate to your <code>func</code> directory in your <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-bidsdirectory">BIDS</a> directory, select one of the <code>.nifti</code> files and press <code>Open</code> afterwards <img src="./images/02_RemoveDenoising/04_Navigate_to_functional_file.png" class="img-fluid" alt="Select functional nifti file of a run in your bids directory"></p>
+<p>Now, with the field <code>Select volume file</code> containing the correct path(s), you can click <code>Open</code><img src="./images/02_RemoveDenoising/05_confirm_Selection.png" class="img-fluid" alt="Open Volume"></p>
+<p>When the volume loaded, it should look similar to this: <img src="./images/02_RemoveDenoising/06_0_firstFrame.png" class="img-fluid" alt="First Frame of Functional Scan"></p>
 </section>
 <section id="sec-CheckDenoising" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="sec-CheckDenoising"><span class="header-section-number">1.3</span> Check for noise Scan</h2>
-<p>To check if a noise scan is included in you data, use the slider next to <code>Frames</code> (left side, roughly in the middle), to navigate <em>to the last frame</em>. If a denoising sequence was used during data acquisition in the scanner, this frame looks “empty”. Toggle between the last and second to last frame, to visualize the difference even more <img src="./images/02_RemoveDenoising/06_1_DenoisingScan_Confirmed.png" class="img-fluid" alt="Denoising Included in your Scan"></p>
+<p>To check if a noise scan is included in you data, use the slider next to <code>Frames</code> (left side, roughly in the middle), to navigate <em>to the last frame</em>. If a denoising sequence was used during data acquisition in the scanner, this frame looks “empty”. Toggle between the last and second to last frame, to visualize the difference <img src="./images/02_RemoveDenoising/06_1_DenoisingScan_Confirmed.png" class="img-fluid" alt="Denoising Included in your Scan"></p>
 <p>If you confirmed a noise-scan in one functional run, they will probably be there for all your runs. It might be good to check every run anyway.</p>
 </section>
 </section>
 <section id="sec-RemoveDenoising" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Remove noise scan from the data</h1>
-<p>You confirmed noise information being present in your data in the last section. To run <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>, we have to remove this information. To achieve this:</p>
+<p>You confirmed noise information being present in your data in the last section. Before running <a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>, we have to remove this information. To achieve this:</p>
 <ol type="1">
 <li><p>Get the following script and copy it to your own storage: <code>/shared/website/remove_noiseScan.sh</code></p></li>
 <li><p>Open the script (left-click + <code>gedit</code>)</p></li>

@@ -59,6 +59,7 @@ website:
           - mri/analysis/bids.qmd
           - mri/analysis/fmriprep.qmd
           - mri/mni-space/mni-space.qmd
+          - mri/control-masks/control-masks.qmd
           - mri/mri-lab-setup-2023/index.qmd
           - mri/mri-lab-setup-2024/index.qmd
           - mri/physiology/index.qmd

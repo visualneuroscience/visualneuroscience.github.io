@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-05-05">
+<meta name="dcterms.date" content="2026-03-12">
 <meta name="description" content="Several approaches to run a first level GLM using nilearn">
 
 <title>08 - first level GLM – Visual Neuroscience Lab</title>
@@ -257,7 +257,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,11 +267,8 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
@@ -323,6 +320,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -543,7 +546,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 5, 2025</p>
+      <p class="date">March 12, 2026</p>
     </div>
   </div>
   
@@ -555,14 +558,14 @@ window.Quarto = {
 </header>
 
 
-<p>After preprocessing your data, it´s time to do your first level GLM (= general linear model).</p>
-<p>In this step, you will compute mean contrast-estimates for predefined contrasts for each subject individually. These estimations will be used later in the <a href="../dicom_to_glm/second_level_glm_nilearn.html">second level Analysis</a>, where you extract relevant (for your research question/hypothesis) values.</p>
+<p>After <a href="../dicom_to_glm/run_fmriprep.html">preprocessing</a> your data, it´s time to do your first level GLM (= general linear model).</p>
+<p>In this step, you will fit a model to your data (for each subject individually) and compute your contrasts. The output will be used later in the analysis (e.g.&nbsp;<a href="../dicom_to_glm/roi_analysis.html">group-level ROI analysis</a>), where you extract relevant (for your research question/hypothesis) values.</p>
 <section id="surface-based" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Surface-based</h1>
-<p>This page describes the first level GLM for a previous master thesis. It included 1 localizer run and 8 experimental runs. The experimental runs differed in the used attention task (“L”etter vs.&nbsp;“C”olor) and the flicker-condition (“F”ull vs.&nbsp;“N”othing; = flickering against full circles or against the background). Every “attention task” x “flicker condition” combination was presented two times. For every task (Loc, LF, LN, CF, CN), a separate GLM had to be computed. To analyze this data, a surface-based approach was chosen. Important: This study only included one session! If you did multiple sessions, you have to adapt the script accordingly!</p>
-<p>You can find the example jupyter notebook here: <code>/shared/website/GLM_surface_Main.ipynb</code></p>
+<p>This page describes the first level GLM for a previous master thesis. It included 1 localizer run and 8 experimental runs. The experimental runs differed in the used attention task (“L”etter vs.&nbsp;“C”olor) and the flicker-condition (“F”ull vs.&nbsp;“N”othing; = flickering against full circles or against the background). Every “attention task” x “flicker condition” combination was presented two times. For every task (Loc, LF, LN, CF, CN), a separate GLM had to be computed. To analyze this data, a surface-based approach was chosen. Important: This study only included one session! If you did multiple sessions, you have to adapt the script!</p>
+<p>Example jupyter notebooks can be found on the server for the main experimental runs (<code>/shared/website/GLM_surface_Main.ipynb</code>) and the localizer (<code>/shared/website/GLM_surface_Loc.ipynb</code>)</p>
 <p>Keep in mind, that some processes might take some time!</p>
-<p>Short explanation of the process (enumeration corresponds to the cell number in the notebook):</p>
+<p>Short explanation of the process:</p>
 <ol type="1">
 <li><p>Load necessary packages/modules</p></li>
 <li><p>Helper function to get SurfaceImages (can be ignored, hopefully not necessary in the future)</p></li>
@@ -570,33 +573,32 @@ window.Quarto = {
 <ul>
 <li>if you only have one task or one subject, enter the corresponding name/id, but make sure that it is within the squared brackets! (Subsequent processes loop over these lists! If there is only one entry, it just stops after one iteration)</li>
 </ul></li>
-<li><p>Extract the first level GLM from your BIDS structure (if everything is defined correctly in the cell before, you can simply run this without any changes)</p></li>
-<li><p>Optimal: Uncomment (= remove the <code>#</code>) and run to confirm for example the number of <code>FirstLevelModel</code> objects that were extracted</p></li>
-<li><p>Get the surface data with the workaround (if everything is/was defined correctly, you can simply run this without any changes)</p></li>
-<li><p>In this cell, the models are acutally fitted to the data. Again, if everything was defined correctly you can simply run this cell (Even though the processes are parallelized, this probably takes some time!)</p></li>
-<li><p>Now you define the contrasts.</p>
+<li><p>Compute the first level GLM (if everything was defined correctly in the cell before, you can simply run this without any changes)</p></li>
+<li><p>Get the surface data with the workaround (if everything was defined correctly, you can simply run this without any changes)</p></li>
+<li><p>Fit the models (if everything was defined correctly you can simply run this cell). <strong>This will take some time, be patient!</strong></p></li>
+<li><p>Define contrasts.</p>
 <ul>
-<li>In this case, it loops through the tasks (definetely necessary) and subjects (could potentially be omitted if everything is the same for all participants) and defines the corresponding contrasts</li>
+<li>In the example notebooks, it loops through the tasks (definetely necessary) and subjects (could potentially be omitted if everything is the same for all participants) and defines the corresponding contrasts</li>
 <li>first a directory is set up to store the design matrix (<code>plot_design_matrix</code> immediately afterwards) and the contrast visualizations (<code>plot_contrast_matrix</code> at the end)</li>
-<li>You have to think through your task &amp; subject structure (influences how and how many objects you have for example in <code>fitted_models</code>) to ensure that the logic holds! (in this the GLM for the first task is stored for the 5 subjects, then for the second task, etc.; depending on your setup, you might need to change the for loops)</li>
+<li>You have to think through your task &amp; subject structure (influences how and how many objects you have for example in <code>fitted_models</code>) to ensure that the logic holds! (in this case, the GLM for the first task is stored for the 5 subjects, then for the second task, etc.; depending on your setup, you might need to change the for-loops)</li>
 <li><code>basic_contrasts</code> is a dictionary with “column-name” as key and the column as value for each column of the design matrix (<span class="math inline">\(\to\)</span> has as many entries/key-value-pairs as the design matrix has columns)</li>
-<li><code>contrasts</code> is the actual definition of your contrasts and is implemented as a dictionary as well. The key is the name of your contrast (can be chosen freely, but it is advised to use a “descriptive” name, such that you later immediately know what the contrast is about). The value is the actual contrast, e.g.&nbsp;one condition vs.&nbsp;another. Make sure that the value in the squared brackets behind <code>basic_contrasts</code> corresponds <em>to the actual name</em> of the column in the design matrix (as <code>basic_contrasts</code> is a dictionary and with <code>basic_contrasts[key_name]</code>, it searches a key named <code>key_name</code> and returns its stored value)</li>
+<li><code>contrasts</code> is the actual definition of your contrasts and is implemented as a dictionary as well. The key is the name of your contrast (can be chosen freely, but it is advisable to use a “descriptive” name, such that you later immediately know what the contrast is about). The value is the actual contrast, e.g.&nbsp;one condition vs.&nbsp;another. Make sure that the value in the squared brackets behind <code>basic_contrasts</code> corresponds <em>to the actual name</em> of the column in the design matrix (as <code>basic_contrasts</code> is a dictionary and with <code>basic_contrasts[key_name]</code>, it searches a key named <code>key_name</code> and returns its stored value)</li>
 </ul></li>
-<li><p>Now you actually run the contrasts (i.e.&nbsp;you compute the values for the subjects/tasks)</p>
+<li><p>Compute contrasts.</p>
 <ul>
-<li>change the name of the lists within the for loops. You need as many empty lists as you defined contrasts in the previous step</li>
+<li>change the name of the lists within the for-loops. You need as many empty lists as you defined contrasts in the previous step</li>
 <li>for every contrast (and thus list) you need the <code>.compute_contrast</code> section with the corresponding name that you defined in the previous step</li>
 </ul></li>
-<li><p>Saves the activation maps (should run without any changes)</p></li>
-<li><p>Saves the activation maps (should run without any changes). These are the files with which you later work in the <a href="../dicom_to_glm/second_level_glm_nilearn.html">second level GLM</a></p></li>
+<li><p>Optional: Saves activation maps (should run without any changes)</p></li>
+<li><p>Save your results (should run without any changes). These are the files with which you later work in the <a href="../dicom_to_glm/roi_analysis.html">ROI analysis</a></p></li>
 </ol>
 <div class="callout-info">
-<p>The notebook <code>/shared/website/GLM_surface_Loc.ipynb</code> was used for the GLM of the localizer data. The structure and logic is the same is for the main experiment</p>
+<p>The notebook <code>/shared/website/GLM_surface_Loc.ipynb</code> was used for the GLM of the localizer data. The structure and logic is the same as for the main experiment</p>
 </div>
 </section>
 <section id="volume-based-analysis" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Volume-based Analysis</h1>
-<p>If you do a volume-based Analysis, you can also do this with nilearn and a jupyter notebook. You can find an example here: <code>/shared/website/GLM_volume.ipynb</code>. The structure and logic again is similar, but some stepts have to be done differently compared to a surface-based analysis.</p>
+<p>If you do a volume-based Analysis, you can also do this with nilearn and a jupyter notebook. You can find an example here: <code>/shared/website/GLM_volume.ipynb</code>. The structure and logic are similar, but some steps need to be done differently compared to a surface-based analysis. In this notebook you can also find an example on how to compute <em>fixed-effect-results</em>.</p>
 
 
 </section>

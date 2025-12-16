@@ -1,0 +1,67 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: "09 - ROI Analysis"
+description: "Example of ROI Analysis"
+number-sections: true
+#image: ./images/04_fmriprep/00_OpenFmriprep.png
+categories: [MRI, Analysis, fmriPrep, Neurodesk, nilearn]
+author: MG
+date: 12/16/2025
+---
+
+Similar to the [first level GLM](./first_level_glm_nilearn.qmd), an example is provided and described as a starting point to adapt your own work.
+
+In the ROI (= Regions of Interest) analysis you want to extract the relevant information from your data. In this case, the goal was to extract mean values for a specific contrast in different regions of interest. This step is where you get the "actual" values for your statistical analysis. In a ROI analysis, the regions are defined as masks that are applied to your functional data, resulting in contrast estimates specific to this region(s).
+
+You can find an example notebook to adapt on the server (`/shared/website/ROI_analysis.ipynb`). It follows the logic and structure below:
+
+1.  Import necessary libraries and modules
+
+2.  Define important variables and constants:
+
+    -   subjects and data directory
+    -   subregions: contrasts from the [first level GLM](./first_level_glm_nilearn.qmd) data of the functional localizer.
+    -   contrast_names: contrasts from the [first level GLM](./first_level_glm_nilearn.qmd) data of the main experiment
+    -   tasks (optional): you don´t need to include this, but you might need to change subsequent code then
+
+3.  Define an initial mask based on the [retinotopy data](./retinotopic_mapping.qmd) (for every subject individually):
+
+    a)  get and load the data with the information about the specific regions (= `*_varea.mgz`) and about the eccentricity (= `*_eccen.mgz`)
+    b)  define a mask (for each hemisphere) that is "True" (=boolean value) for all vertices of the surface, where the `*_varea.mgz` file is 1 ($\to$ meaning that this vertex corresponds to V1), and "False" for all other vertices
+    c)  define a mask (for each hemisphere) that is "True" for all vertices, that have an eccentricity of \> 0 and \< 5 ($\to$ only the central visual field) and "False" for all other vertices ($\to$ that cover the periphery)
+    d)  combine both masks and save the resulting mask. This combined mask therefore contains vertices that are both in V1 *AND* have an eccentricity \< 5 (if you compare two boolean values with AND/&, the result is only "True", if *both* inputs that are compared are "True")
+
+4.  Define a second mask based on the data from the localizer data (for every subject individually):
+
+    $\to$ We need a mask for every region of interest that we want to consider later
+
+    $\to$ "For-loop" over all subregions that we defined in step 2. Thus, for every of these regions (that also have a corresponding file from the first-level GML):
+
+    a)  Get and load the maps containing the z-scores for the specific region of interest for both hemispheres
+    b)  Define and save a mask that is "True" for all vertices with a z-score \< 1.96 and "False" for all other vertices ($\to$ we want vertices that are *selectively* responsive when the respective area of the visual field was stimulated in the localizer)
+
+5.  Make a combined mask for every subject
+
+    $\to$ our goal for the mask is to find vertices that
+
+    a)  Are located in V1 and cover the central visual field (achieved by step 3)
+    b)  Are *selectively* responsive in the specific condition of the localizer/visual field
+
+    $\to$ by combining our two masks from before (again with a AND/& combination of two boolean martices of the same size), we get a resulting mask, that has the value "True" for all vertices that satisfys both condition a) & b) and "False" for all other vertices ($\to$ that satisfy none or only one of the two requirements)
+
+6.  Calculate and save the mean contrast estimate for every subject, ROI, and task combination:
+
+    a)  Initialize an empty list to later store the results
+    b)  For every subject (first loop) we want to get estimates for every ROI (second loop). Within every ROI, we want the estimates for every task (third loop, defined in step 2 in the variable tasks; here you have to adapt the code if you chose to not use the variable!). Finally, we want the contrast estimate for every (relevant) contrast (fourth loop; also defined in step 2)
+    c)  Within each combination, we
+        1)  get the statmap from the first level GLM containing the contrast estimates for each vertex
+        2)  apply the combined mask from the previous steps to this data ($\to$ We apply the boolean values True/False of the mask to the numerical data of the statmap. Therefore, we only consider the contrast estimates of vertices that also satisfy the conditions that we defined in step 5!)
+    d)  we take the mean from the resulting values (so only those values corresponding to vertices that satisfy the conditions 5a and 5b) to get the "Mean Contrast Estimate" of a specific subject, for a specific region of interest, for a specific task and for a specific contrast
+    e)  we save the estimated mean value and all the "identifying" information
+
+7.  Finally, we save the computed results in a `.csv` file
+
+::: callout-info
+This example of a ROI analysis already includes a "control analysis"/sanity check by looking at the contrast estimates of the localizer data is well. It can be done easier, or in two notebooks!
+:::
