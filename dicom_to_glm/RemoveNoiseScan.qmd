@@ -10,19 +10,19 @@ author: MG
 date: 03/08/2025
 ---
 
-For this step, you need to already have nifti files! If you currently only have DICOM files, please [convert them to nifti's first](DICOMtoBIDS.qmd)!
+For this step, you need to already have `.nifti` files! If you currently only have DICOM files, please [convert them to nifti's first](DICOMtoBIDS.qmd)!
 
 Depending on the sequence used in the scanner session, you might have data that were acquired with a denoising sequence. This is sometimes done, since it doesn´t take much time in the scanner, but you have the ability to denoise the data if it turns out to be necessary.
 
 But by default, we don´t use this denoising information. Additionally, some applications ([like fmriprep](run_fmriprep.qmd)) cannot process data with this additional information!
 
-Thus, before running our default pipeline with [fmriprep](run_fmriprep.qmd), we have to remove this information from our scans!
+Thus, before running our [fmriprep](run_fmriprep.qmd) pipeline, we have to remove this information from our scans!
 
 # Check for noise scan in nifti file
 
 ## Open freeview {#sec-OpenFreeview}
 
-You can check if the denoising sequence was used in for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:
+You can check if a denoising sequence was used for your data, by checking the functional scans in freeview. For this, you first have to source freesurfer and then open freeview:
 
 1.  Open a terminal (Monitor Icon at the bottom left on neurodesk) ![Open Terminal](./images/01_dcm2bids/open_terminal.gif)
 
@@ -40,21 +40,21 @@ For this, select `File > Load Volume` (top left corner in freeview): ![File \> L
 
 A new window opens, asking you to `Select volume file`. Either type in the path(s) to your/a functional scan manually, or start by clicking on the folder symbol ![Click on Folder Symbol](./images/02_RemoveDenoising/03_folderSymbol.png)
 
-Navigate to your `func` directory in your [BIDS](DICOMtoBIDS.qmd#sec-bidsdirectory), select one of the nifti files of one of the runs and press `Open` afterwards ![Select functional nifti file of a run in your bids directory](./images/02_RemoveDenoising/04_Navigate_to_functional_file.png)
+Navigate to your `func` directory in your [BIDS](DICOMtoBIDS.qmd#sec-bidsdirectory) directory, select one of the `.nifti` files and press `Open` afterwards ![Select functional nifti file of a run in your bids directory](./images/02_RemoveDenoising/04_Navigate_to_functional_file.png)
 
-Now, with the field `Select volume file` specified with the path(s) to the nifti file, you can click `Open`![Open Volume](./images/02_RemoveDenoising/05_confirm_Selection.png)
+Now, with the field `Select volume file` containing the correct path(s), you can click `Open`![Open Volume](./images/02_RemoveDenoising/05_confirm_Selection.png)
 
-When the volume loaded, it should see some kind of data and something that looks like a brain: ![First Frame of Functional Scan](./images/02_RemoveDenoising/06_0_firstFrame.png)
+When the volume loaded, it should look similar to this: ![First Frame of Functional Scan](./images/02_RemoveDenoising/06_0_firstFrame.png)
 
 ## Check for noise Scan {#sec-CheckDenoising}
 
-To check if a noise scan is included in you data, use the slider next to `Frames` (left side, roughly in the middle), to navigate *to the last frame*. If a denoising sequence was used during data acquisition in the scanner, this frame looks "empty". Toggle between the last and second to last frame, to visualize the difference even more ![Denoising Included in your Scan](./images/02_RemoveDenoising/06_1_DenoisingScan_Confirmed.png)
+To check if a noise scan is included in you data, use the slider next to `Frames` (left side, roughly in the middle), to navigate *to the last frame*. If a denoising sequence was used during data acquisition in the scanner, this frame looks "empty". Toggle between the last and second to last frame, to visualize the difference ![Denoising Included in your Scan](./images/02_RemoveDenoising/06_1_DenoisingScan_Confirmed.png)
 
 If you confirmed a noise-scan in one functional run, they will probably be there for all your runs. It might be good to check every run anyway.
 
 # Remove noise scan from the data {#sec-RemoveDenoising}
 
-You confirmed noise information being present in your data in the last section. To run [fmriprep](run_fmriprep.qmd), we have to remove this information. To achieve this:
+You confirmed noise information being present in your data in the last section. Before running [fmriprep](run_fmriprep.qmd), we have to remove this information. To achieve this:
 
 1.  Get the following script and copy it to your own storage: `/shared/website/remove_noiseScan.sh`
 

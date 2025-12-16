@@ -12,14 +12,16 @@ date: 07/08/2025
 
 With changing Versions of [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) and [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html), slight changes occur in how and where you have to include specific information. One example for this is the `IntendedFor` information in the fmap's `.json` file. It tells [fmriPrep](run_fmriprep.qmd) for which (functional) data the distortion correction should be applied to.
 
-Depending on the conversion method you used to [convert your DICOM to nifti files](DICOMtoBIDS.qmd), the contents will look differently.
+Depending on the conversion method you used to [convert your DICOM to nifti files](DICOMtoBIDS.qmd), the contents will look differently!
 
-Additionally, depending on the version of [fMRIprep](run_fmriprep.qmd) you plan to use for preprocessing, you need different naming conventions of the entries.
+::: callout-warning
+Depending on the version of [fMRIprep](run_fmriprep.qmd) you plan to use for preprocessing, you need different naming conventions of the entries!!!!
+:::
 
 In general, there are two naming conventions that might be used in the IntendedFor field:
 
 ````         
-BIDS uri spec necessary for fmriprep 24.0.0 or newer:
+BIDS URI specification (= absolute path) necessary for fmriprep 24.0.0 or newer:
 
 ``` json
 "IntendedFor": [
@@ -29,7 +31,7 @@ BIDS uri spec necessary for fmriprep 24.0.0 or newer:
     ]
 ```
 
-Older fmap spec necessary for fmriprep older than 24.0.0:
+Older fmap specification (= relative path) necessary for fmriprep older than 24.0.0:
 
 ``` json
 "IntendedFor": [
@@ -40,7 +42,9 @@ Older fmap spec necessary for fmriprep older than 24.0.0:
 ```
 ````
 
-Due to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap's "IntendedFor" field before [running fMRIprep](run_fmriprep.qmd).
+::: callout-hint
+Due to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap's "IntendedFor" field before [running fMRIprep](run_fmriprep.qmd). If distortion correction is not applied, the IntendedFor field of the fmap´s `.json` file is generally the first approach to solve the problem!
+:::
 
 # Check the content of the JSON file
 
@@ -50,11 +54,11 @@ Scroll down to the very end of it. There should be a section that starts with `I
 
 In General, all entries should follow the same naming convention (either the new or the old one, see above). If the naming convention corresponds to the [fMRIprep](run_fmriprep.qmd) version you want to use, you don´t have to change anything. If it does not correspond to the naming convention necessary for your version, you can follow the steps below to update the file.
 
-Additionally, it may occur, that additional files are included in this field (e.g. files named "\*part-phase\*") where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, your should remove the entries of these files (see below)
+Additionally, it may occur, that additional files are included in this field (e.g. files named "\*part-phase\*") where no distortion correction should be applied to. Even if the naming convention is correct for your planned version of fmriprep, you should remove the entries of these files (see below)
 
-# Update "IntendedFor" field of the fmap's JSON file
+# Update "IntendedFor" field of the fmap's .json file
 
-There is a dedicated script to update the contents of the fmap's .json file. It can be found at `/shared/website/update_json.py`. Of course, you can do the changes manually as well.
+There is a script to automatically update all "IntendedFor" contents of the fmap's .json file. It can be found at `/shared/website/update_json.py`. Of course, you can also implement the changes manually.
 
 To start and use the script:
 
@@ -66,8 +70,8 @@ To start and use the script:
 
 4.  Indicate if you want to remove entries from the field
 
-5.  If you want to remove entries, indicate the keywords that identify an entry to be removed
+5.  If you want to remove entries, indicate the keywords that identify an entry to be removed (e.g. `part-phase`)
 
 6.  Provide the path to your bids directory
 
-After providing all the inputs, the indicated changes will be performed and saved in the file automatically. The original .json file will be saved as filename_orig.json (if the original entries are needed later again). Additionally, the changes are only applied, if a `fmap`-directory with a `.json` file doesn´t already have a `_orig.json`.
+After providing all the inputs, the indicated changes will be performed and saved in the file automatically. The original .json file will be saved as `filename_orig.json` (if the original entries are needed later again). Additionally, the changes are only applied, if a `fmap`-directory with a `.json` file doesn´t already contain a file ending in `_orig.json`.

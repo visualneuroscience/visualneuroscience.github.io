@@ -13,13 +13,16 @@ date: 04/30/2025
 # DICOM-Files
 
 -   the raw files from the scanner are DICOM-Files
--   not really useful as we need .nifti files for our analysis ![DICOM-Files](./images/01_dcm2bids/001_1_DICOMS.png)
+-   directory `DICOM` with several subdirectories with numeric names containing DICOM images
+-   but we generally need .nifti files for preprocessing and the subsequent analysis
+-   Example of a DICOM folder:
+![DICOM-Files](./images/01_dcm2bids/001_1_DICOMS.png)
 
-$\qquad\to$ first step is to transform the DICOM- to nifti-files
+$\qquad\to$ first step is to convert the DICOM- to nifti-files
 
 # From Dicom to nifti in BIDS format
 
-Even though we often get the data from the scanner already in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, there can be cases when you have to do this conversion by yourself. For this, you can either use [bidscoiner](#sec-bidscoiner), or a [script from Adam](#sec-script): `dcm2bids.sh` (You can find this script here: `/shared/website/dcm2bids.sh`).
+Even though we often get the data from the scanner already in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, there can be cases when you have to do this conversion by yourself. For this, you can either use [bidscoiner](#sec-bidscoiner), or a [script from Adam](#sec-script).
 
 *For both, you need access to [Neurodesk](/neurodesk/neurodesktop.qmd)!*
 
@@ -31,7 +34,7 @@ Apart from a clear structure that is understandable (for other researchers as we
 
 ## bidscoin
 
-First, you need to start through the bird-icon on the bottom left of neurodesk, navigate to `Neurodesk > All Applications > bidscoin` and select a version (the process has been tested with v4.6.0 & v4.6.1)
+First, you need to start through the bird-icon on the bottom left of neurodesk, navigate to `Neurodesk > All Applications > bidscoin` and select a version (the process has been tested with v4.6.0 & v4.6.1):
 
 ![](images/clipboard-404437105.png)
 
@@ -41,7 +44,17 @@ After some time to load, it should look like this:
 
 ![](images/clipboard-1623492321.png)
 
-Then you can follow this script (running the lines separately can help you find/fix potential problems! For potential problems also see the subsections below!):
+Subsequently, it can be easier to first copy/paste the directory `/shared/dicomsort` to your own directory, before following the script below (= `/shared/website/dcm2bids_coiner.sh`). You can either adapt it once and run the whole script, or run the lines in the bidscoiner-terminal step-by-step (potentially helpful to find problems).
+
+Quick explanations:
+1) `sourceFolder` = the directory "DICOM" that contains the various subdirectories containing the DICOM files
+2) `sortedFolder` = *initally empty folder* where the sorted DICOMs will be stored in
+3) `./dicomsort` the directory containing the scripts `dicomsort.py` & `DICOMsort.sh`
+
+:::callout-hint
+After running the second to last line (starting with `bidsmapper`) you might have to do additional steps described below!!!
+:::
+
 
 ``` bash
 #!/bin/bash
@@ -79,23 +92,23 @@ bidscoiner $sortedFolder /home/jovyan/completion2/bids
 
 ![](images/clipboard-3995624064.png){width="32%"}
 
-Currently, to discover the data we need to delete the content of the "subprefix" field and then save the bids map in the default location. After this, run the same bidsmapper command again.
+After running the bidsmapper command, a window as in the image above should open. Currently, to discover the data we need to first delete the content of the "subprefix" field and then save the bids map in the default location. *After this, run the same bidsmapper command again and continue below.*
 
 ### Subject and session
 
 ![](images/clipboard-325791456.png){width="50%"}
 
-Now the bidsmapper discovered everything, but the files are not named correctly.
+Now bidsmapper discovered everything, but the files are not named correctly.
 
-Edit subject and session first.
+$\to$ Edit subject and session ("Metadata") first
 
-Now we need to rename the files by clicking "Edit" next to every file.
+Afterwards you need to rename the individual files by clicking "Edit" next to every file.
 
 ### Editing file names: anatomical
 
 ![](images/clipboard-1483139836.png){width="50%"}
 
-anatmprage -\> mprage in the "acq" filed
+anatmprage $\to$ `mprage` in the "acq" filed
 
 ### Editing file names: functional
 
@@ -103,19 +116,21 @@ anatmprage -\> mprage in the "acq" filed
 
 Edit the task name and acq field
 
-Do this for every functional file
+:::callout-warning
+You need to do this for every functional file!!
+:::
 
 ### Editing file names: fieldmap
 
 ![](images/bidsmapper_fmap.png){width="50%"}
 
-Keep in mind, that we often need the option "epi" in the selection field of "suffix" (and not the "fieldmap" option)!
+We often need the option "epi" in the selection field of "suffix" (and not the "fieldmap" option)!
 
-In the section "Metadata" you have to add which files should be selected for the "IntendedFor" field of the fieldmap. You can use a wildcard (\*) to select all respective functional runs: "func/sub-001\*\_bold.\*". This includes all files in the directory "func" that start with "sub-001" and somewhere in the filename include "\_bold.". Watch out if you have more than one session! Then you might need to specify the respective session as well, e.g. "func/sub-001_ses-3\*\_bold.\*"
+In the section "Metadata" you have to add which files should be selected for the "IntendedFor" field of the fieldmap. You can use a wildcard (\*) to select all respective functional runs: `func/sub-001*_bold.*`. This includes all files in the directory `func` that start with `sub-001` and somewhere in the filename include `_bold.`. *Watch out if you have more than one session!* Then you might need to specify the respective session as well, e.g. `func/sub-001_ses-3*_bold.*`
 
-## bidscoiner after renaming all files
+## run the bidscoiner command after renaming all files
 
-Once you are happy with the naming of the files, run bidscoiner-command to do the actual conversion
+Once you are happy with the naming of the files, run the bidscoiner-command to do the actual conversion
 
 ## View files
 
@@ -133,7 +148,7 @@ Now you can view the nifti files with any suitable software (*Hint*: In the imag
 
 ### Setting up the directory structure {#sec-structure}
 
-First, you need to set up the correct structure for the script to run properly later. For this, you:
+First, you need to set up the correct structure for the script to run properly. For this, you:
 
 1.  Create an empty directory named `bids` (right-click, `Create New... > Folder`)
 
@@ -147,11 +162,11 @@ The directory `scrips` is not necessary for the script to run, but it may be hel
 
 ### Naming of the nifti files
 
-It is curcial for the [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, that the resulting nifti-files are named properly ([see here for the naming convention(s)](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)).
+It is curcial for the [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, that the resulting `.nifti`-files are named properly ([see here for the naming convention(s)](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)).
 
-To ensure that [later](#sec-filename), it might be helpful to write down the proper names for the files *before* you start the process. This could be done in a simple .txt file, where you specify all the file-names. You can then just open this .txt file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your `scripts` folder as well.
+To ensure that [later](#sec-filename), it might be helpful to write down the proper names for the files *before* you start the process. This could be done in a simple `.txt` file, where you specify all the file-names. You can then just open this `.txt` file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your `scripts` folder as well.
 
-#### Create a naming.txt {#sec-naming}
+#### Create a naming.txt file {#sec-naming}
 
 a)  navigate to your `scripts` folder, right-click, select `Create New > Empty File`![Create Empty File](./images/01_dcm2bids/14_0_CreateEmptyFile.png)
 
@@ -161,7 +176,7 @@ c)  fill this text file with the proper, [BIDS-conform](https://bids-specificati
 
 ## Starting the script {#sec-start}
 
-a)  To start the script, you first need to know where the script `dcm2bids.sh` is. In this case it is here: `/home/jovyan/Website/scripts/dcm2bids.sh` (you can copy/paste this file to your directory from `/shared/website/dcm2bids.sh`, or directly access) ![Location of the Script](./images/01_dcm2bids/03_Script_dcm2bids.png)
+a)  Optional: copy/paste the script `/shared/website/dcm2bids_adam.sh` to your own directory. You can alternatively access the script directly.
 
 b)  Navigate to the location of the script, right-click it, and select `Copy Path(s)` ![Copy Path(s)](./images/01_dcm2bids/04_CopyScriptPath.png)
 
@@ -173,7 +188,7 @@ e)  Type `bash`, add a space, then right-click and select `Paste` to fill in the
 
 ## (Installing all necessary packages)
 
-It is possible (especially if you start the script for the first time), that some necessary packages are not installed. If this is the case, **the script will tell you**! If something is missing you´ll be asked, if you want to install these packages. By typing in `y` and pressing `enter`, the package will get installed (you might have to do this for more than one package):![Missing Packages](./images/01_dcm2bids/06_1_packagesMissing.png)
+It is possible (first time usage or after a server restart), that  necessary packages are not installed. If this is the case, **the script will tell you**! If something is missing you´ll be asked, if you want to install these packages. By typing in `y` and pressing `enter`, the package will get installed (you might have to do this for more than one package):![Missing Packages](./images/01_dcm2bids/06_1_packagesMissing.png)
 
 If there is still a missing package after all "automatic" suggestions of packages to install, it is probably related to `dcm2bids_scaffold` (*but again, the script will "show" you that there is something missing*). In this case, type `pip install dcm2bids` and press *enter*![Install dcm2bids manually](./images/01_dcm2bids/06_2_installManually.png)
 
@@ -207,11 +222,11 @@ If the suggested name is correct, type in `y` and press `enter`.
 
 If it is not correct, type in `n`, press `enter` and type in a/the correct subject id![Enter correct subject id](./images/01_dcm2bids/11_ChangeName.png) Once again, press `enter`
 
-As a last preparative step, you are asked, if you would like to change the session folder from `ses-1` to another session. If you only have one session, type `n` and press `enter`![Keep Ses-1](./images/01_dcm2bids/12_SelectSession.png)
+As a last preparation step, you are asked, if you would like to change the session folder from `ses-1` to another session. If you only have one session, type `n` and press `enter`![Keep Ses-1](./images/01_dcm2bids/12_SelectSession.png)
 
 If you want to change the session, type `y` and provide the name of the sessions (*Important*: to have/get a [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) structure at the end, subdirectories for sessions have to be named `ses-x` with `x` being a number)
 
-Subsequently, you get a short reminder in which directories your files should be stored.![Reminder before Start](./images/01_dcm2bids/13_Start.png)
+Subsequently, you get a short reminder in which directories your files should be stored to get a BIDS-conform structure.![Reminder before Start](./images/01_dcm2bids/13_Start.png)
 
 By pressing `enter`, the script starts to convert your dicom files to nifti's. *This can take a few seconds - be patient!*
 
@@ -261,7 +276,9 @@ Each of these sub-directories contains all the files that you assigned, includin
 
 # Congratuliations, you did it!
 
-***Congratulations***! You successfully finished the process of converting your DICOM to nifti files in BIDS-Format and you are one step closer to analyzing your data!
+***Congratulations***!
+
+You successfully finished the process of converting your DICOM to nifti files in BIDS-Format and you are one step closer to analyzing your data!
 
 Please return to the [Overview-Page](Overview_fromDICOMtoGLM.qmd) to check what to do next.
 

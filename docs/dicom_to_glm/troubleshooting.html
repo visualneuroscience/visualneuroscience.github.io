@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="MG">
-<meta name="dcterms.date" content="2025-03-27">
+<meta name="dcterms.date" content="2025-12-15">
 <meta name="description" content="Collection of known potential problems and their solutions">
 
 <title>Troubleshooting – Visual Neuroscience Lab</title>
@@ -257,21 +257,18 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">08 - first level GLM</span></a>
+  <a href="../dicom_to_glm/roi_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 - ROI Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link active">
@@ -323,6 +320,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -519,6 +522,7 @@ window.Quarto = {
   <li><a href="#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors" id="toc-if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors" class="nav-link" data-scroll-target="#if-using-already-run-freesurfer-recon-all-output-and-have-specified-an-expert-opts-file-then-fmriprep-shows-multiple-errors"><span class="header-section-number">2.3</span> If using already run FreeSurfer <code>recon-all</code> output and have specified an <code>expert-opts</code> file then fMRIprep shows multiple errors</a></li>
   <li><a href="#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme" id="toc-i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme" class="nav-link" data-scroll-target="#i-ran-fmriprep-and-the-distortion-correction-of-the-data-is-too-extreme"><span class="header-section-number">2.4</span> I ran fMRIprep and the distortion correction of the data is too extreme</a></li>
   <li><a href="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" id="toc-fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan" class="nav-link" data-scroll-target="#fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fMRIprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</a></li>
+  <li><a href="#sec-coreg" id="toc-sec-coreg" class="nav-link" data-scroll-target="#sec-coreg"><span class="header-section-number">2.6</span> Bad Coregistration</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -557,7 +561,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 27, 2025</p>
+      <p class="date">December 15, 2025</p>
     </div>
   </div>
   
@@ -648,6 +652,12 @@ window.Quarto = {
 <h2 data-number="2.5" class="anchored" data-anchor-id="fmriprep-fails-silently-i.e.-gives-no-error-on-coregistering-the-functional-to-the-structural-scan"><span class="header-section-number">2.5</span> fMRIprep fails silently (i.e.&nbsp;gives no error) on coregistering the functional to the structural scan</h2>
 <p><span class="math inline">\(\to\)</span> the solution is (if your structural and functional scans are from the same session) to add the following flag:</p>
 <pre><code>`--bold2t1w-init header`</code></pre>
+</section>
+<section id="sec-coreg" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-coreg"><span class="header-section-number">2.6</span> Bad Coregistration</h2>
+<p>Sometimes the automatic coregistration of functional and structural data does not work properly. If this happened, you will see it in the <code>.html</code> summary file provided by fMRIPrep.</p>
+<p>One potential way to fix this issue is to perform manual coregistration <em>before</em> running <a href="../dicom_to_glm/run_fmriprep.html">fMRIPrep</a> again. The necessary steps using <code>mri_coreg</code> or <code>bb_register</code> can be found in the following notebook: <code>/shared/website/pre-fmriprep.ipynb</code></p>
+<p>(The first part of this notebook describes how to remove/replace the first 3 frames of a <code>.nifti</code> file, which provided a solution for coregistration problems in a case with extensive movement during the first 3 volumes)</p>
 
 
 </section>

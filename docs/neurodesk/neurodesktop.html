@@ -292,21 +292,18 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">08 - first level GLM</span></a>
+  <a href="../dicom_to_glm/roi_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 - ROI Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
@@ -358,6 +355,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -539,38 +542,38 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general-information" id="toc-general-information" class="nav-link active" data-scroll-target="#general-information">General information</a>
+  <li><a href="#general-information" id="toc-general-information" class="nav-link active" data-scroll-target="#general-information"><span class="header-section-number">1</span> General information</a>
   <ul class="collapse">
-  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access"><span class="header-section-number">1.1</span> Access</a>
   <ul class="collapse">
-  <li><a href="#employees" id="toc-employees" class="nav-link" data-scroll-target="#employees">Employees</a></li>
-  <li><a href="#non-employees-students-and-interns" id="toc-non-employees-students-and-interns" class="nav-link" data-scroll-target="#non-employees-students-and-interns">Non-employees (students and interns)</a></li>
+  <li><a href="#employees" id="toc-employees" class="nav-link" data-scroll-target="#employees"><span class="header-section-number">1.1.1</span> Employees</a></li>
+  <li><a href="#non-employees-students-and-interns" id="toc-non-employees-students-and-interns" class="nav-link" data-scroll-target="#non-employees-students-and-interns"><span class="header-section-number">1.1.2</span> Non-employees (students and interns)</a></li>
   </ul></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">1.2</span> Resources</a></li>
   </ul></li>
-  <li><a href="#getting-an-account" id="toc-getting-an-account" class="nav-link" data-scroll-target="#getting-an-account">Getting an account</a></li>
-  <li><a href="#using-neurodesk" id="toc-using-neurodesk" class="nav-link" data-scroll-target="#using-neurodesk">Using Neurodesk</a>
+  <li><a href="#getting-an-account" id="toc-getting-an-account" class="nav-link" data-scroll-target="#getting-an-account"><span class="header-section-number">2</span> Getting an account</a></li>
+  <li><a href="#using-neurodesk" id="toc-using-neurodesk" class="nav-link" data-scroll-target="#using-neurodesk"><span class="header-section-number">3</span> Using Neurodesk</a>
   <ul class="collapse">
-  <li><a href="#first-usage" id="toc-first-usage" class="nav-link" data-scroll-target="#first-usage">First usage</a></li>
-  <li><a href="#storing-data" id="toc-storing-data" class="nav-link" data-scroll-target="#storing-data">Storing data</a></li>
-  <li><a href="#sharing-data" id="toc-sharing-data" class="nav-link" data-scroll-target="#sharing-data">Sharing data</a></li>
-  <li><a href="#data-transfer" id="toc-data-transfer" class="nav-link" data-scroll-target="#data-transfer">Data transfer</a></li>
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a>
+  <li><a href="#first-usage" id="toc-first-usage" class="nav-link" data-scroll-target="#first-usage"><span class="header-section-number">3.1</span> First usage</a></li>
+  <li><a href="#storing-data" id="toc-storing-data" class="nav-link" data-scroll-target="#storing-data"><span class="header-section-number">3.2</span> Storing data</a></li>
+  <li><a href="#sharing-data" id="toc-sharing-data" class="nav-link" data-scroll-target="#sharing-data"><span class="header-section-number">3.3</span> Sharing data</a></li>
+  <li><a href="#data-transfer" id="toc-data-transfer" class="nav-link" data-scroll-target="#data-transfer"><span class="header-section-number">3.4</span> Data transfer</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">3.5</span> Software</a>
   <ul class="collapse">
-  <li><a href="#using-freesurfer" id="toc-using-freesurfer" class="nav-link" data-scroll-target="#using-freesurfer">Using FreeSurfer</a></li>
-  <li><a href="#using-fitlins" id="toc-using-fitlins" class="nav-link" data-scroll-target="#using-fitlins">Using fitlins</a></li>
-  <li><a href="#other-docker-based-software" id="toc-other-docker-based-software" class="nav-link" data-scroll-target="#other-docker-based-software">Other docker-based software</a></li>
-  <li><a href="#dicom-viewer-weasis" id="toc-dicom-viewer-weasis" class="nav-link" data-scroll-target="#dicom-viewer-weasis">DICOM viewer WEASIS</a></li>
+  <li><a href="#using-freesurfer" id="toc-using-freesurfer" class="nav-link" data-scroll-target="#using-freesurfer"><span class="header-section-number">3.5.1</span> Using FreeSurfer</a></li>
+  <li><a href="#using-fitlins" id="toc-using-fitlins" class="nav-link" data-scroll-target="#using-fitlins"><span class="header-section-number">3.5.2</span> Using fitlins</a></li>
+  <li><a href="#other-docker-based-software" id="toc-other-docker-based-software" class="nav-link" data-scroll-target="#other-docker-based-software"><span class="header-section-number">3.5.3</span> Other docker-based software</a></li>
+  <li><a href="#dicom-viewer-weasis" id="toc-dicom-viewer-weasis" class="nav-link" data-scroll-target="#dicom-viewer-weasis"><span class="header-section-number">3.5.4</span> DICOM viewer WEASIS</a></li>
   </ul></li>
-  <li><a href="#resource-esp.-ram-usage" id="toc-resource-esp.-ram-usage" class="nav-link" data-scroll-target="#resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</a></li>
-  <li><a href="#using-notebooks-and-scripts-in-jupyterlab" id="toc-using-notebooks-and-scripts-in-jupyterlab" class="nav-link" data-scroll-target="#using-notebooks-and-scripts-in-jupyterlab">Using notebooks and scripts in JupyterLab</a></li>
+  <li><a href="#resource-esp.-ram-usage" id="toc-resource-esp.-ram-usage" class="nav-link" data-scroll-target="#resource-esp.-ram-usage"><span class="header-section-number">3.6</span> Resource (esp.&nbsp;RAM) usage</a></li>
+  <li><a href="#using-notebooks-and-scripts-in-jupyterlab" id="toc-using-notebooks-and-scripts-in-jupyterlab" class="nav-link" data-scroll-target="#using-notebooks-and-scripts-in-jupyterlab"><span class="header-section-number">3.7</span> Using notebooks and scripts in JupyterLab</a></li>
   </ul></li>
-  <li><a href="#information-for-lab-members-with-ssh-access" id="toc-information-for-lab-members-with-ssh-access" class="nav-link" data-scroll-target="#information-for-lab-members-with-ssh-access">Information for lab members with ssh access</a>
+  <li><a href="#information-for-lab-members-with-ssh-access" id="toc-information-for-lab-members-with-ssh-access" class="nav-link" data-scroll-target="#information-for-lab-members-with-ssh-access"><span class="header-section-number">4</span> Information for lab members with ssh access</a>
   <ul class="collapse">
-  <li><a href="#folder-mappings" id="toc-folder-mappings" class="nav-link" data-scroll-target="#folder-mappings">Folder mappings:</a></li>
-  <li><a href="#for-interfacing-with-the-folders-on-storage" id="toc-for-interfacing-with-the-folders-on-storage" class="nav-link" data-scroll-target="#for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</a></li>
-  <li><a href="#mount-network-shares" id="toc-mount-network-shares" class="nav-link" data-scroll-target="#mount-network-shares">Mount network shares</a></li>
-  <li><a href="#checking-resource-usage-directly-on-the-server" id="toc-checking-resource-usage-directly-on-the-server" class="nav-link" data-scroll-target="#checking-resource-usage-directly-on-the-server">Checking resource usage directly on the server</a></li>
+  <li><a href="#folder-mappings" id="toc-folder-mappings" class="nav-link" data-scroll-target="#folder-mappings"><span class="header-section-number">4.1</span> Folder mappings:</a></li>
+  <li><a href="#for-interfacing-with-the-folders-on-storage" id="toc-for-interfacing-with-the-folders-on-storage" class="nav-link" data-scroll-target="#for-interfacing-with-the-folders-on-storage"><span class="header-section-number">4.2</span> For interfacing with the folders on storage</a></li>
+  <li><a href="#sec-mountNetwork" id="toc-sec-mountNetwork" class="nav-link" data-scroll-target="#sec-mountNetwork"><span class="header-section-number">4.3</span> Mount network shares</a></li>
+  <li><a href="#checking-resource-usage-directly-on-the-server" id="toc-checking-resource-usage-directly-on-the-server" class="nav-link" data-scroll-target="#checking-resource-usage-directly-on-the-server"><span class="header-section-number">4.4</span> Checking resource usage directly on the server</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -617,31 +620,31 @@ window.Quarto = {
 </header>
 
 
-<section id="general-information" class="level1">
-<h1>General information</h1>
+<section id="general-information" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> General information</h1>
 <p>Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see <a href="https://www.neurodesk.org" class="uri">https://www.neurodesk.org</a></p>
 <p>This page provides information and instructions on how to use neurodesktop on our lab’s server.</p>
-<section id="access" class="level2">
-<h2 class="anchored" data-anchor-id="access">Access</h2>
-<section id="employees" class="level3">
-<h3 class="anchored" data-anchor-id="employees">Employees</h3>
+<section id="access" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="access"><span class="header-section-number">1.1</span> Access</h2>
+<section id="employees" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="employees"><span class="header-section-number">1.1.1</span> Employees</h3>
 <p>Office computers and VPN with an employee account</p>
 </section>
-<section id="non-employees-students-and-interns" class="level3">
-<h3 class="anchored" data-anchor-id="non-employees-students-and-interns">Non-employees (students and interns)</h3>
+<section id="non-employees-students-and-interns" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="non-employees-students-and-interns"><span class="header-section-number">1.1.2</span> Non-employees (students and interns)</h3>
 <ul>
 <li><p>Office computers</p></li>
 <li><p>Student PC room</p></li>
 </ul>
 </section>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<section id="resources" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="resources"><span class="header-section-number">1.2</span> Resources</h2>
 <p>Each neurodesktop user is limited to 256GB RAM&nbsp;out of 504GB and to 20 out of 32 CPU cores.</p>
 </section>
 </section>
-<section id="getting-an-account" class="level1">
-<h1>Getting an account</h1>
+<section id="getting-an-account" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Getting an account</h1>
 <ol type="1">
 <li><p>Use a computer with server access (described in <a href="#access">Access</a> section)</p></li>
 <li><p>Open a browser and type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a></p></li>
@@ -658,8 +661,8 @@ window.Quarto = {
 <li><p>Once your account is authorized, you should be able to log in with your credentials (you won’t get a any special notifications, so please just check regularly)</p></li>
 </ol>
 </section>
-<section id="using-neurodesk" class="level1">
-<h1>Using Neurodesk</h1>
+<section id="using-neurodesk" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Using Neurodesk</h1>
 <p>Once your account has been authorized</p>
 <ol type="1">
 <li><p>Open a browser and type <a href="https://pslg-nv1.uni-graz.at/">https://pslg-nv1.uni-graz.at</a></p></li>
@@ -674,20 +677,20 @@ window.Quarto = {
 </ol>
 <p>You can use <a href="https://pslg-nv1.uni-graz.at/hub/home" class="uri">https://pslg-nv1.uni-graz.at/hub/home</a> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -&gt; Hub Control Panel from the menue.</p>
 <p><img src="images/clipboard-2628836406.png" class="img-fluid"></p>
-<section id="first-usage" class="level2">
-<h2 class="anchored" data-anchor-id="first-usage">First usage</h2>
+<section id="first-usage" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="first-usage"><span class="header-section-number">3.1</span> First usage</h2>
 <p>The first time you start the neurodesk or a specific neurodesktop application, it may take a while until it opens. Be patient! This is because the first time everything gets downloaded in the background. It will be much faster when you perform the same operations repeatedly (until the next server reboot).</p>
 </section>
-<section id="storing-data" class="level2">
-<h2 class="anchored" data-anchor-id="storing-data">Storing data</h2>
+<section id="storing-data" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="storing-data"><span class="header-section-number">3.2</span> Storing data</h2>
 <p>If working via neurodesk, you SHOULD store data in your home directory. This data is kept after server restart and is backed up.</p>
 </section>
-<section id="sharing-data" class="level2">
-<h2 class="anchored" data-anchor-id="sharing-data">Sharing data</h2>
+<section id="sharing-data" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sharing-data"><span class="header-section-number">3.3</span> Sharing data</h2>
 <p>All neurodesk users have read and write permissions to <code>/shared</code> neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)</p>
 </section>
-<section id="data-transfer" class="level2">
-<h2 class="anchored" data-anchor-id="data-transfer">Data transfer</h2>
+<section id="data-transfer" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="data-transfer"><span class="header-section-number">3.4</span> Data transfer</h2>
 <p>There are currently two alternatives</p>
 <ol type="1">
 <li><p>You can transfer the data via nextcloud client, which is included in neurodsktop</p>
@@ -696,10 +699,10 @@ window.Quarto = {
 <p><img src="images/clipboard-1030227267.png" class="img-fluid"></p></li>
 </ol>
 </section>
-<section id="software" class="level2">
-<h2 class="anchored" data-anchor-id="software">Software</h2>
-<section id="using-freesurfer" class="level3">
-<h3 class="anchored" data-anchor-id="using-freesurfer">Using FreeSurfer</h3>
+<section id="software" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="software"><span class="header-section-number">3.5</span> Software</h2>
+<section id="using-freesurfer" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="using-freesurfer"><span class="header-section-number">3.5.1</span> Using FreeSurfer</h3>
 <p>To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows</p>
 <pre><code>ml freesurfer/7.4.1
 cd /storage
@@ -707,23 +710,23 @@ freeview</code></pre>
 <p>To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)</p>
 <pre><code>export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]</code></pre>
 </section>
-<section id="using-fitlins" class="level3">
-<h3 class="anchored" data-anchor-id="using-fitlins">Using fitlins</h3>
+<section id="using-fitlins" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="using-fitlins"><span class="header-section-number">3.5.2</span> Using fitlins</h3>
 <p>Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the <a href="../dicom_to_glm.html">“DICOM to GLM”</a> pipeline for details</p>
 <p>Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:</p>
 <p><br>
 <code>singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg</code> [your fitlins commands]</p>
 <p>Please note that we are abandoning fitlins usage and are switching to <a href="https://nilearn.github.io/stable/index.html">nilearn</a> for GLM analysis</p>
 </section>
-<section id="other-docker-based-software" class="level3">
-<h3 class="anchored" data-anchor-id="other-docker-based-software">Other docker-based software</h3>
+<section id="other-docker-based-software" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="other-docker-based-software"><span class="header-section-number">3.5.3</span> Other docker-based software</h3>
 <p>If you would like to use some other software package that is not directly available through neruodesk, but is distributed as docker; you can use it by building a singularity image in the shared folder (so that it is available for everyone), e.g.:</p>
 <p><code>singularity build /shared/singularity/deepprep/deepprep-25.1.0.simg docker://pbfslab/deepprep:25.1.0</code></p>
 <p>and then run it as above:</p>
 <p><code>singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg</code></p>
 </section>
-<section id="dicom-viewer-weasis" class="level3">
-<h3 class="anchored" data-anchor-id="dicom-viewer-weasis">DICOM viewer WEASIS</h3>
+<section id="dicom-viewer-weasis" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="dicom-viewer-weasis"><span class="header-section-number">3.5.4</span> DICOM viewer WEASIS</h3>
 <p><a href="https://weasis.org/en/getting-started/download-dicom-viewer/">WEASIS</a> is a powerful free dicom viewer for Linux</p>
 <ul>
 <li><p>choose “neurodesktop-custom” when starting your jupyter server</p>
@@ -732,8 +735,8 @@ freeview</code></pre>
 </ul>
 </section>
 </section>
-<section id="resource-esp.-ram-usage" class="level2">
-<h2 class="anchored" data-anchor-id="resource-esp.-ram-usage">Resource (esp.&nbsp;RAM) usage</h2>
+<section id="resource-esp.-ram-usage" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="resource-esp.-ram-usage"><span class="header-section-number">3.6</span> Resource (esp.&nbsp;RAM) usage</h2>
 <p>Please keep an eye on your resource usage, especially RAM. If too much RAM is used up by users, the server will be slow and eventually unusable.</p>
 <p>The overall resource usage on the server (all users) is displayed in the bottom left of the neurodesktop interface as blue and red bars:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -750,8 +753,8 @@ freeview</code></pre>
 </figure>
 </div>
 </section>
-<section id="using-notebooks-and-scripts-in-jupyterlab" class="level2">
-<h2 class="anchored" data-anchor-id="using-notebooks-and-scripts-in-jupyterlab">Using notebooks and scripts in JupyterLab</h2>
+<section id="using-notebooks-and-scripts-in-jupyterlab" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="using-notebooks-and-scripts-in-jupyterlab"><span class="header-section-number">3.7</span> Using notebooks and scripts in JupyterLab</h2>
 <p>When you want to use python scrips or notebooks, you´ll probably set them up in JupyterLab. There are a few “nice-to-have” (e.g.&nbsp;changing the Theme at the section <code>Settings</code> at the menu bar) but also potentially crucial settings that are worth taking a look at:</p>
 <ul>
 <li><p><code>Settings &gt; Settings Editor</code></p>
@@ -771,23 +774,23 @@ freeview</code></pre>
 </ul>
 </section>
 </section>
-<section id="information-for-lab-members-with-ssh-access" class="level1">
-<h1>Information for lab members with ssh access</h1>
-<section id="folder-mappings" class="level2">
-<h2 class="anchored" data-anchor-id="folder-mappings">Folder mappings:</h2>
+<section id="information-for-lab-members-with-ssh-access" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Information for lab members with ssh access</h1>
+<section id="folder-mappings" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="folder-mappings"><span class="header-section-number">4.1</span> Folder mappings:</h2>
 <p>(left is server right is neurodesk)<br>
 <code>/storage -&gt; /storage</code><br>
 <code>/storage/neurodesk/shared -&gt; /shared</code><br>
 <code>/storage/neurodesk/users/{username} -&gt; /home/jovyan</code></p>
 <p>Only these three folders are persistent.</p>
 </section>
-<section id="for-interfacing-with-the-folders-on-storage" class="level2">
-<h2 class="anchored" data-anchor-id="for-interfacing-with-the-folders-on-storage">For interfacing with the folders on storage</h2>
+<section id="for-interfacing-with-the-folders-on-storage" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="for-interfacing-with-the-folders-on-storage"><span class="header-section-number">4.2</span> For interfacing with the folders on storage</h2>
 <p>You can create symbolic links in your home directory:</p>
 <p><code>ln -s /storage/ /home/jovyan/storage</code></p>
 </section>
-<section id="mount-network-shares" class="level2">
-<h2 class="anchored" data-anchor-id="mount-network-shares">Mount network shares</h2>
+<section id="sec-mountNetwork" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-mountNetwork"><span class="header-section-number">4.3</span> Mount network shares</h2>
 <p>You can mount network shares with Lukas’ helper script at <code>/shared/mount_network_share.sh</code> (i.e.&nbsp;you´ll see a directory through which you can access the network from within neurodesk)</p>
 <ol type="1">
 <li><p>Usage: <code>/shared/mount_network_share.sh &lt;mount_point&gt; &lt;share_choice|full_share_path&gt;</code></p></li>
@@ -804,8 +807,8 @@ freeview</code></pre>
 </ul></li>
 </ol>
 </section>
-<section id="checking-resource-usage-directly-on-the-server" class="level2">
-<h2 class="anchored" data-anchor-id="checking-resource-usage-directly-on-the-server">Checking resource usage directly on the server</h2>
+<section id="checking-resource-usage-directly-on-the-server" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="checking-resource-usage-directly-on-the-server"><span class="header-section-number">4.4</span> Checking resource usage directly on the server</h2>
 <ul>
 <li>resource usage per neurodesk container</li>
 </ul>

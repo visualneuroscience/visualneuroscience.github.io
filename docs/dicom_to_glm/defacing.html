@@ -228,21 +228,18 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">08 - first level GLM</span></a>
+  <a href="../dicom_to_glm/roi_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 - ROI Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
@@ -294,6 +291,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -547,11 +550,11 @@ Ensure Defacing!
 <section id="general-information" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General Information</h1>
 <p>When we acquired data “ourselves”, we definetely have to deface the T1w-scan (<a href="../dicom_to_glm/DICOMtoBIDS.html">after converting the DICOMs to niftis</a>) before we can continue!</p>
-<p>When acquiring data during regular scanner times, we already get nifti files. There should be a directory <code>rawdata</code>, which contains the data in BIDS-Format. Additionally there is a directory <code>faced</code>.</p>
+<p>When acquiring data during regular scanner times, we already get <code>.nifti</code> files. There should be a directory <code>rawdata</code>, which contains the data in BIDS-Format. Additionally there is a directory <code>faced</code>.</p>
 <p>In theory, the directory <code>faced</code> should contain the original T1w-niftis that you can <a href="../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html">send to the participant</a> and the T1w-niftis within <code>rawdata</code> should already be defaced (and thus be ready to further work with them, e.g.&nbsp;<a href="../dicom_to_glm/run_fmriprep.html">fmriprep</a>).</p>
 <p>However, sometimes the automatic defacing at the MRI-Lab does not work as intended, potentially resulting in “non-defaced” T1w-niftis in the <code>rawdata</code> directory! Thus, you should <em>always</em> check the T1w-nifti in <code>rawdata</code> to ensure that it is defaced and avoid potential subsequent problems.</p>
 <p>To check the T1w files, you can just load them in freeview, MRIcroGL,…</p>
-<p>Alternatively you can also run <code>python /shared/website/showT1.py</code> in the terminal. When you indicate the path to your bids-directory and press enter, this script will open <em>all</em> (be aware of that! Depending on how many subjects are in the directory, this will take some time and open as many T1w files as you have participants!) T1w-files that are stored in the bids-directory.</p>
+<p>Alternatively you can also run <code>python /shared/website/showT1.py</code> in the terminal. After indicating the path to your bids-directory, this script will open <em>all</em> (be aware of that! Depending on how many subjects are in the directory, this will take some time and open as many T1w files as you have participants!) T1w-files that are stored in the bids-directory.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -570,23 +573,21 @@ Don´t forget your participants!
 <h1 data-number="2"><span class="header-section-number">2</span> Defacing your T1w-Scan</h1>
 <section id="sec-startPydeface" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="sec-startPydeface"><span class="header-section-number">2.1</span> Start Pydeface (v.2.0.2)</h2>
-<p>To deface your t1w, you first have to open <code>pydeface</code>:</p>
+<p>To deface a T1w image, you first have to open <code>pydeface</code>:</p>
 <ol type="1">
-<li><p>Click on the Birds-Symbol at the bottom left</p></li>
-<li><p>Hover <code>Neurodesk</code></p></li>
-<li><p>Hover <code>All Applications</code></p></li>
+<li><p>Click on the Birds-Symbol at the bottom left and navigate to <code>Neurodesk &gt; All Applications</code></p></li>
 <li><p>Scroll down until you find <code>pydeface</code></p></li>
 <li><p>Click on <code>pydeface 2.0.2</code> <img src="./images/03_Defacing/01_open_Pydeface.png" class="img-fluid" alt="Pydeface 2.0.2"></p></li>
 </ol>
-<p>After it opens, it may need some time to load everything - be patient!</p>
+<p>It may take some time until everything is loaded - be patient!</p>
 <p>Finally, it should look like this: <img src="./images/03_Defacing/02_pydeface_opened.png" class="img-fluid" alt="Pydeface Started"></p>
 </section>
 <section id="get-the-path-to-your-original-t1w-scan" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="get-the-path-to-your-original-t1w-scan"><span class="header-section-number">2.2</span> Get the path to your original T1w scan</h2>
 <ol type="1">
 <li><p>Navigate to the anatomical scan of the participant within your <a href="../dicom_to_glm/DICOMtoBIDS.html">BIDS</a> directory</p></li>
-<li><p>Right-click on the anatomical nifti file</p></li>
-<li><p>Select `Copy Path(s) <img src="./images/03_Defacing/03_Path_to_T1w.png" class="img-fluid" alt="Get Path(s) of anat-scan"></p></li>
+<li><p>Right-click on the anatomical <code>.nifti</code> file</p></li>
+<li><p>Select <code>Copy Path(s)</code> <img src="./images/03_Defacing/03_Path_to_T1w.png" class="img-fluid" alt="Get Path(s) of anat-scan"></p></li>
 </ol>
 </section>
 <section id="the-pydeface-command" class="level2" data-number="2.3">
@@ -596,12 +597,14 @@ Don´t forget your participants!
 <li><p>Type <code>pydeface</code></p></li>
 <li><p>Enter the path to your T1w scan (right-click + <code>paste</code> or type in the path)</p></li>
 <li><p>Type <code>--outfile</code></p></li>
-<li><p>Repeat Step 3 (with this approach, you “overwrite” the initial T1w with the then defaced T1w file)</p></li>
+<li><p>Repeat Step 3 (with this approach, you “overwrite” the initial T1w with the then defaced T1w file) or define a new file.</p></li>
 <li><p>Type <code>--force</code></p></li>
 </ol>
-<p>It should look like this: <img src="./images/03_Defacing/04_pydeface_command.png" class="img-fluid" alt="Pydeface Command"></p>
+<p>An example command would be:</p>
 <pre><code>pydeface /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --outfile /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --force</code></pre>
-<p>Then, press enter. Again, it might take a few moments, until pydeface finishes, be patient! At the end, it should look like this: <img src="./images/03_Defacing/05_defacing_finished.png" class="img-fluid" alt="Pydeface Finished"></p>
+<p>and it should look like this: <img src="./images/03_Defacing/04_pydeface_command.png" class="img-fluid" alt="Pydeface Command"></p>
+<p>Press enter to start the process. Again, it might take a few moments until pydeface finishes, be patient!</p>
+<p>At the end, it should look like this: <img src="./images/03_Defacing/05_defacing_finished.png" class="img-fluid" alt="Pydeface Finished"></p>
 </section>
 <section id="the-next-steps" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="the-next-steps"><span class="header-section-number">2.4</span> The next steps</h2>

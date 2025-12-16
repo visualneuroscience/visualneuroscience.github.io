@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-05-05">
 <meta name="description" content="Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas">
 
-<title>07 - Retinotopic Mapping – Visual Neuroscience Lab</title>
+<title>07 - Probabilistic Retinotopic Mapping – Visual Neuroscience Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -206,7 +206,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/retinotopic_mapping.html">07 - Retinotopic Mapping</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/retinotopic_mapping.html">07 - Probabilistic Retinotopic Mapping</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -292,21 +292,18 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">08 - first level GLM</span></a>
+  <a href="../dicom_to_glm/roi_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 - ROI Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
@@ -358,6 +355,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -547,9 +550,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/retinotopic_mapping.html">07 - Retinotopic Mapping</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dicom_to_glm.html">MRI: from DICOM to GLM Analysis</a></li><li class="breadcrumb-item"><a href="../dicom_to_glm/retinotopic_mapping.html">07 - Probabilistic Retinotopic Mapping</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">07 - Retinotopic Mapping</h1>
+<h1 class="title">07 - Probabilistic Retinotopic Mapping</h1>
   <div class="quarto-categories">
     <div class="quarto-category">MRI</div>
     <div class="quarto-category">Retinotopy</div>
@@ -587,9 +590,8 @@ window.Quarto = {
 </header>
 
 
-<p>Retinotopic mapping is used to individually identify subregions in the visual cortex (i.e V1, V2, V3 and sometimes higher areas as well). This is then used to better understand how visual information is processed in the brain by different regions.</p>
-<p>Normally, this is achieved by implementing dedicated “retinotopy-runs” in the experimental design. However, this is not always possible.</p>
-<p>The Benson2014 atlas allows to get a retinotopic mapping even without dedicated “retinotopy-runs” by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e.&nbsp;discrete labels for V1, V2, etc.; <code>varea</code>), the eccentricity (i.e.&nbsp;the distance from fixation in visual degrees; <code>eccen</code>) or the polar angle (<code>angle</code>)</p>
+<p>Retinotopic mapping is used to identify subregions (e.g.&nbsp;V1, V2,…) and additional parameters like eccentricity or polar angle. Normally, this is achieved by implementing dedicated “retinotopy-runs” in the experimental design. However, this is not always possible.</p>
+<p>In the absence of dedicated retinotopy runs, the Benson2014 atlas allows to get the retinotopy information by using structural features and probabilistic maps. Generally, it gives you information (in dedicated files) about specific regions (i.e.&nbsp;discrete labels for V1, V2, etc.; <code>varea</code>), the eccentricity (i.e.&nbsp;the distance from fixation in visual degrees; <code>eccen</code>) or the polar angle (<code>angle</code>)</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

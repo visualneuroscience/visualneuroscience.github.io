@@ -292,21 +292,18 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">07 - Retinotopic Mapping</span></a>
+ <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/first_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">08 - first level GLM</span></a>
+  <a href="../dicom_to_glm/roi_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">09 - ROI Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dicom_to_glm/second_level_glm_nilearn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">09- second level GLM</span></a>
-  </div>
-</li>
+ <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
@@ -358,6 +355,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -555,7 +558,7 @@ window.Quarto = {
   <li><a href="#editing-file-names-functional" id="toc-editing-file-names-functional" class="nav-link" data-scroll-target="#editing-file-names-functional"><span class="header-section-number">3.3.3</span> Editing file names: functional</a></li>
   <li><a href="#editing-file-names-fieldmap" id="toc-editing-file-names-fieldmap" class="nav-link" data-scroll-target="#editing-file-names-fieldmap"><span class="header-section-number">3.3.4</span> Editing file names: fieldmap</a></li>
   </ul></li>
-  <li><a href="#bidscoiner-after-renaming-all-files" id="toc-bidscoiner-after-renaming-all-files" class="nav-link" data-scroll-target="#bidscoiner-after-renaming-all-files"><span class="header-section-number">3.4</span> bidscoiner after renaming all files</a></li>
+  <li><a href="#run-the-bidscoiner-command-after-renaming-all-files" id="toc-run-the-bidscoiner-command-after-renaming-all-files" class="nav-link" data-scroll-target="#run-the-bidscoiner-command-after-renaming-all-files"><span class="header-section-number">3.4</span> run the bidscoiner command after renaming all files</a></li>
   <li><a href="#view-files" id="toc-view-files" class="nav-link" data-scroll-target="#view-files"><span class="header-section-number">3.5</span> View files</a></li>
   <li><a href="#mricron" id="toc-mricron" class="nav-link" data-scroll-target="#mricron"><span class="header-section-number">3.6</span> MRICron</a></li>
   </ul></li>
@@ -631,13 +634,15 @@ window.Quarto = {
 <h1 data-number="1"><span class="header-section-number">1</span> DICOM-Files</h1>
 <ul>
 <li>the raw files from the scanner are DICOM-Files</li>
-<li>not really useful as we need .nifti files for our analysis <img src="./images/01_dcm2bids/001_1_DICOMS.png" class="img-fluid" alt="DICOM-Files"></li>
+<li>directory <code>DICOM</code> with several subdirectories with numeric names containing DICOM images</li>
+<li>but we generally need .nifti files for preprocessing and the subsequent analysis</li>
+<li>Example of a DICOM folder: <img src="./images/01_dcm2bids/001_1_DICOMS.png" class="img-fluid" alt="DICOM-Files"></li>
 </ul>
-<p><span class="math inline">\(\qquad\to\)</span> first step is to transform the DICOM- to nifti-files</p>
+<p><span class="math inline">\(\qquad\to\)</span> first step is to convert the DICOM- to nifti-files</p>
 </section>
 <section id="from-dicom-to-nifti-in-bids-format" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> From Dicom to nifti in BIDS format</h1>
-<p>Even though we often get the data from the scanner already in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, there can be cases when you have to do this conversion by yourself. For this, you can either use <a href="#sec-bidscoiner">bidscoiner</a>, or a <a href="#sec-script">script from Adam</a>: <code>dcm2bids.sh</code> (You can find this script here: <code>/shared/website/dcm2bids.sh</code>).</p>
+<p>Even though we often get the data from the scanner already in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, there can be cases when you have to do this conversion by yourself. For this, you can either use <a href="#sec-bidscoiner">bidscoiner</a>, or a <a href="#sec-script">script from Adam</a>.</p>
 <p><em>For both, you need access to <a href="../neurodesk/neurodesktop.html">Neurodesk</a>!</em></p>
 <section id="about-bids" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="about-bids"><span class="header-section-number">2.1</span> About BIDS</h2>
@@ -648,14 +653,18 @@ window.Quarto = {
 <h1 data-number="3"><span class="header-section-number">3</span> From Dicom to nifti in BIDS using bidscoiner</h1>
 <section id="bidscoin" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="bidscoin"><span class="header-section-number">3.1</span> bidscoin</h2>
-<p>First, you need to start through the bird-icon on the bottom left of neurodesk, navigate to <code>Neurodesk &gt; All Applications &gt; bidscoin</code> and select a version (the process has been tested with v4.6.0 &amp; v4.6.1)</p>
+<p>First, you need to start through the bird-icon on the bottom left of neurodesk, navigate to <code>Neurodesk &gt; All Applications &gt; bidscoin</code> and select a version (the process has been tested with v4.6.0 &amp; v4.6.1):</p>
 <p><img src="images/clipboard-404437105.png" class="img-fluid"></p>
 </section>
 <section id="shell-commands" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="shell-commands"><span class="header-section-number">3.2</span> Shell commands</h2>
 <p>After some time to load, it should look like this:</p>
 <p><img src="images/clipboard-1623492321.png" class="img-fluid"></p>
-<p>Then you can follow this script (running the lines separately can help you find/fix potential problems! For potential problems also see the subsections below!):</p>
+<p>Subsequently, it can be easier to first copy/paste the directory <code>/shared/dicomsort</code> to your own directory, before following the script below (= <code>/shared/website/dcm2bids_coiner.sh</code>). You can either adapt it once and run the whole script, or run the lines in the bidscoiner-terminal step-by-step (potentially helpful to find problems).</p>
+<p>Quick explanations: 1) <code>sourceFolder</code> = the directory “DICOM” that contains the various subdirectories containing the DICOM files 2) <code>sortedFolder</code> = <em>initally empty folder</em> where the sorted DICOMs will be stored in 3) <code>./dicomsort</code> the directory containing the scripts <code>dicomsort.py</code> &amp; <code>DICOMsort.sh</code></p>
+<div class="callout-hint">
+<p>After running the second to last line (starting with <code>bidsmapper</code>) you might have to do additional steps described below!!!</p>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># you can copypaste the following commands into the terminal window that is opened by BIDSCOINER</span></span>
@@ -689,35 +698,47 @@ window.Quarto = {
 <section id="bismapper" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="bismapper"><span class="header-section-number">3.3</span> bismapper</h2>
 <p><img src="images/clipboard-3995624064.png" class="img-fluid" style="width:32.0%"></p>
-<p>Currently, to discover the data we need to delete the content of the “subprefix” field and then save the bids map in the default location. After this, run the same bidsmapper command again.</p>
+<p>After running the bidsmapper command, a window as in the image above should open. Currently, to discover the data we need to first delete the content of the “subprefix” field and then save the bids map in the default location. <em>After this, run the same bidsmapper command again and continue below.</em></p>
 <section id="subject-and-session" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="subject-and-session"><span class="header-section-number">3.3.1</span> Subject and session</h3>
 <p><img src="images/clipboard-325791456.png" class="img-fluid" style="width:50.0%"></p>
-<p>Now the bidsmapper discovered everything, but the files are not named correctly.</p>
-<p>Edit subject and session first.</p>
-<p>Now we need to rename the files by clicking “Edit” next to every file.</p>
+<p>Now bidsmapper discovered everything, but the files are not named correctly.</p>
+<p><span class="math inline">\(\to\)</span> Edit subject and session (“Metadata”) first</p>
+<p>Afterwards you need to rename the individual files by clicking “Edit” next to every file.</p>
 </section>
 <section id="editing-file-names-anatomical" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="editing-file-names-anatomical"><span class="header-section-number">3.3.2</span> Editing file names: anatomical</h3>
 <p><img src="images/clipboard-1483139836.png" class="img-fluid" style="width:50.0%"></p>
-<p>anatmprage -&gt; mprage in the “acq” filed</p>
+<p>anatmprage <span class="math inline">\(\to\)</span> <code>mprage</code> in the “acq” filed</p>
 </section>
 <section id="editing-file-names-functional" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="editing-file-names-functional"><span class="header-section-number">3.3.3</span> Editing file names: functional</h3>
 <p><img src="images/clipboard-103624418.png" class="img-fluid" style="width:50.0%"></p>
 <p>Edit the task name and acq field</p>
-<p>Do this for every functional file</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You need to do this for every functional file!!</p>
+</div>
+</div>
 </section>
 <section id="editing-file-names-fieldmap" class="level3" data-number="3.3.4">
 <h3 data-number="3.3.4" class="anchored" data-anchor-id="editing-file-names-fieldmap"><span class="header-section-number">3.3.4</span> Editing file names: fieldmap</h3>
 <p><img src="images/bidsmapper_fmap.png" class="img-fluid" style="width:50.0%"></p>
-<p>Keep in mind, that we often need the option “epi” in the selection field of “suffix” (and not the “fieldmap” option)!</p>
-<p>In the section “Metadata” you have to add which files should be selected for the “IntendedFor” field of the fieldmap. You can use a wildcard (*) to select all respective functional runs: “func/sub-001*_bold.*”. This includes all files in the directory “func” that start with “sub-001” and somewhere in the filename include “_bold.”. Watch out if you have more than one session! Then you might need to specify the respective session as well, e.g.&nbsp;“func/sub-001_ses-3*_bold.*”</p>
+<p>We often need the option “epi” in the selection field of “suffix” (and not the “fieldmap” option)!</p>
+<p>In the section “Metadata” you have to add which files should be selected for the “IntendedFor” field of the fieldmap. You can use a wildcard (*) to select all respective functional runs: <code>func/sub-001*_bold.*</code>. This includes all files in the directory <code>func</code> that start with <code>sub-001</code> and somewhere in the filename include <code>_bold.</code>. <em>Watch out if you have more than one session!</em> Then you might need to specify the respective session as well, e.g.&nbsp;<code>func/sub-001_ses-3*_bold.*</code></p>
 </section>
 </section>
-<section id="bidscoiner-after-renaming-all-files" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="bidscoiner-after-renaming-all-files"><span class="header-section-number">3.4</span> bidscoiner after renaming all files</h2>
-<p>Once you are happy with the naming of the files, run bidscoiner-command to do the actual conversion</p>
+<section id="run-the-bidscoiner-command-after-renaming-all-files" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="run-the-bidscoiner-command-after-renaming-all-files"><span class="header-section-number">3.4</span> run the bidscoiner command after renaming all files</h2>
+<p>Once you are happy with the naming of the files, run the bidscoiner-command to do the actual conversion</p>
 </section>
 <section id="view-files" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="view-files"><span class="header-section-number">3.5</span> View files</h2>
@@ -735,7 +756,7 @@ window.Quarto = {
 <h2 data-number="4.1" class="anchored" data-anchor-id="preparations"><span class="header-section-number">4.1</span> Preparations</h2>
 <section id="sec-structure" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-structure"><span class="header-section-number">4.1.1</span> Setting up the directory structure</h3>
-<p>First, you need to set up the correct structure for the script to run properly later. For this, you:</p>
+<p>First, you need to set up the correct structure for the script to run properly. For this, you:</p>
 <ol type="1">
 <li><p>Create an empty directory named <code>bids</code> (right-click, <code>Create New... &gt; Folder</code>)</p></li>
 <li><p>Create a directory (name can be anything, for example <code>dicoms</code>) and copy/paste your folder with the DICOM-Files in this directory<img src="./images/01_dcm2bids/02_dicomsFolder.png" class="img-fluid" alt="DICOM-Folder"></p></li>
@@ -746,10 +767,10 @@ window.Quarto = {
 </section>
 <section id="naming-of-the-nifti-files" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="naming-of-the-nifti-files"><span class="header-section-number">4.1.2</span> Naming of the nifti files</h3>
-<p>It is curcial for the <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, that the resulting nifti-files are named properly (<a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">see here for the naming convention(s)</a>).</p>
-<p>To ensure that <a href="#sec-filename">later</a>, it might be helpful to write down the proper names for the files <em>before</em> you start the process. This could be done in a simple .txt file, where you specify all the file-names. You can then just open this .txt file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your <code>scripts</code> folder as well.</p>
+<p>It is curcial for the <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format, that the resulting <code>.nifti</code>-files are named properly (<a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">see here for the naming convention(s)</a>).</p>
+<p>To ensure that <a href="#sec-filename">later</a>, it might be helpful to write down the proper names for the files <em>before</em> you start the process. This could be done in a simple <code>.txt</code> file, where you specify all the file-names. You can then just open this <code>.txt</code> file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your <code>scripts</code> folder as well.</p>
 <section id="sec-naming" class="level4" data-number="4.1.2.1">
-<h4 data-number="4.1.2.1" class="anchored" data-anchor-id="sec-naming"><span class="header-section-number">4.1.2.1</span> Create a naming.txt</h4>
+<h4 data-number="4.1.2.1" class="anchored" data-anchor-id="sec-naming"><span class="header-section-number">4.1.2.1</span> Create a naming.txt file</h4>
 <ol type="a">
 <li><p>navigate to your <code>scripts</code> folder, right-click, select <code>Create New &gt; Empty File</code><img src="./images/01_dcm2bids/14_0_CreateEmptyFile.png" class="img-fluid" alt="Create Empty File"></p></li>
 <li><p>assign a name (in this case <code>naming.txt</code>)<img src="./images/01_dcm2bids/14_1_AssignFileName.png" class="img-fluid" alt="Assign Filename"></p></li>
@@ -761,7 +782,7 @@ window.Quarto = {
 <section id="sec-start" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-start"><span class="header-section-number">4.2</span> Starting the script</h2>
 <ol type="a">
-<li><p>To start the script, you first need to know where the script <code>dcm2bids.sh</code> is. In this case it is here: <code>/home/jovyan/Website/scripts/dcm2bids.sh</code> (you can copy/paste this file to your directory from <code>/shared/website/dcm2bids.sh</code>, or directly access) <img src="./images/01_dcm2bids/03_Script_dcm2bids.png" class="img-fluid" alt="Location of the Script"></p></li>
+<li><p>Optional: copy/paste the script <code>/shared/website/dcm2bids_adam.sh</code> to your own directory. You can alternatively access the script directly.</p></li>
 <li><p>Navigate to the location of the script, right-click it, and select <code>Copy Path(s)</code> <img src="./images/01_dcm2bids/04_CopyScriptPath.png" class="img-fluid" alt="Copy Path(s)"></p></li>
 <li><p>Open a Terminal (icon of a monitor at the bottom left of your screen):<img src="./images/01_dcm2bids/open_terminal.gif" class="img-fluid" alt="Open a Terminal"></p></li>
 <li><p>Type <code>ml freesurfer</code> and press enter</p></li>
@@ -770,7 +791,7 @@ window.Quarto = {
 </section>
 <section id="installing-all-necessary-packages" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="installing-all-necessary-packages"><span class="header-section-number">4.3</span> (Installing all necessary packages)</h2>
-<p>It is possible (especially if you start the script for the first time), that some necessary packages are not installed. If this is the case, <strong>the script will tell you</strong>! If something is missing you´ll be asked, if you want to install these packages. By typing in <code>y</code> and pressing <code>enter</code>, the package will get installed (you might have to do this for more than one package):<img src="./images/01_dcm2bids/06_1_packagesMissing.png" class="img-fluid" alt="Missing Packages"></p>
+<p>It is possible (first time usage or after a server restart), that necessary packages are not installed. If this is the case, <strong>the script will tell you</strong>! If something is missing you´ll be asked, if you want to install these packages. By typing in <code>y</code> and pressing <code>enter</code>, the package will get installed (you might have to do this for more than one package):<img src="./images/01_dcm2bids/06_1_packagesMissing.png" class="img-fluid" alt="Missing Packages"></p>
 <p>If there is still a missing package after all “automatic” suggestions of packages to install, it is probably related to <code>dcm2bids_scaffold</code> (<em>but again, the script will “show” you that there is something missing</em>). In this case, type <code>pip install dcm2bids</code> and press <em>enter</em><img src="./images/01_dcm2bids/06_2_installManually.png" class="img-fluid" alt="Install dcm2bids manually"></p>
 <p>Now “restart” the script (<a href="#sec-start">see 2.d + 2.e</a>): <img src="./images/01_dcm2bids/06_3_restartScript.png" class="img-fluid" alt="Restart the Script"></p>
 </section>
@@ -791,9 +812,9 @@ window.Quarto = {
 <p>For your data to be <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform</a> at the end, the “subject id” has to have a structure like this: sub-001, sub-002,… (All necessary information about BIDS can be found <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">here</a>)</p>
 <p>If the suggested name is correct, type in <code>y</code> and press <code>enter</code>.</p>
 <p>If it is not correct, type in <code>n</code>, press <code>enter</code> and type in a/the correct subject id<img src="./images/01_dcm2bids/11_ChangeName.png" class="img-fluid" alt="Enter correct subject id"> Once again, press <code>enter</code></p>
-<p>As a last preparative step, you are asked, if you would like to change the session folder from <code>ses-1</code> to another session. If you only have one session, type <code>n</code> and press <code>enter</code><img src="./images/01_dcm2bids/12_SelectSession.png" class="img-fluid" alt="Keep Ses-1"></p>
+<p>As a last preparation step, you are asked, if you would like to change the session folder from <code>ses-1</code> to another session. If you only have one session, type <code>n</code> and press <code>enter</code><img src="./images/01_dcm2bids/12_SelectSession.png" class="img-fluid" alt="Keep Ses-1"></p>
 <p>If you want to change the session, type <code>y</code> and provide the name of the sessions (<em>Important</em>: to have/get a <a href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames">BIDS-conform</a> structure at the end, subdirectories for sessions have to be named <code>ses-x</code> with <code>x</code> being a number)</p>
-<p>Subsequently, you get a short reminder in which directories your files should be stored.<img src="./images/01_dcm2bids/13_Start.png" class="img-fluid" alt="Reminder before Start"></p>
+<p>Subsequently, you get a short reminder in which directories your files should be stored to get a BIDS-conform structure.<img src="./images/01_dcm2bids/13_Start.png" class="img-fluid" alt="Reminder before Start"></p>
 <p>By pressing <code>enter</code>, the script starts to convert your dicom files to nifti’s. <em>This can take a few seconds - be patient!</em></p>
 </section>
 <section id="assigning-niftis-to-directories-and-adjusting-file-names" class="level2" data-number="4.5">
@@ -840,7 +861,8 @@ window.Quarto = {
 </section>
 <section id="congratuliations-you-did-it" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Congratuliations, you did it!</h1>
-<p><strong><em>Congratulations</em></strong>! You successfully finished the process of converting your DICOM to nifti files in BIDS-Format and you are one step closer to analyzing your data!</p>
+<p><strong><em>Congratulations</em></strong>!</p>
+<p>You successfully finished the process of converting your DICOM to nifti files in BIDS-Format and you are one step closer to analyzing your data!</p>
 <p>Please return to the <a href="../dicom_to_glm/Overview_fromDICOMtoGLM.html">Overview-Page</a> to check what to do next.</p>
 <p>Alternatively, here is a list of potential next steps to continue with</p>
 <ol type="1">
