@@ -302,9 +302,6 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">dicom_to_glm/second_level_glm_nilearn.qmd</span>
-  </li>
-          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
@@ -766,93 +763,48 @@ URL: http://psychstat.org/rmanova</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Power and Effect sizes for ANOVA tests
                          power effect_size
-<<<<<<< HEAD
-anova_Stimulus            92.8     0.21548
-anova_Condition          100.0     0.50740
-anova_Stimulus:Condition   5.0     0.03321
+anova_Stimulus            92.3      0.2160
+anova_Condition          100.0      0.5045
+anova_Stimulus:Condition   4.8      0.0332
 
 Power and Effect sizes for pairwise comparisons (t-tests)
                                                 power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  55.4    0.405340
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.2    0.816916
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.8   -0.207465
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  16.2    0.197415
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  90.0    0.618869
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  59.2   -0.417577
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.2    0.001118
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.8    0.414034
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  58.0    0.420065
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.0   -0.616661
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  18.9   -0.208032
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.2    0.218081
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.8   -0.827886
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  55.5   -0.404004
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   4.6    0.009357
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.035222
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.4   -0.627463
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  18.8   -0.200285
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.240344
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.7   -0.813337
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  54.3   -0.408493
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.5    0.408432
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.6    0.833951
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.5   -0.210179
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.8    0.209186
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.8    0.624421
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  58.2    0.427982
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  90.0   -0.615250
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.8   -0.195688
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.6    0.217353
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.044113
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.6   -0.619437
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.8   -0.208859
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.7    0.417462
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.4    0.832738
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  56.4    0.412706
-=======
-anova_Stimulus            94.3     0.22096
-anova_Condition          100.0     0.50327
-anova_Stimulus:Condition   5.1     0.03274
-
-Power and Effect sizes for pairwise comparisons (t-tests)
-                                                power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  57.3   0.4212572
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.0   0.8289936
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.4  -0.2022365
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  18.0   0.2021685
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.3   0.6162226
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  56.1  -0.4121194
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   6.2  -0.0005472
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  56.8   0.4124043
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.4   0.4081977
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.6  -0.6230640
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  20.0  -0.2160757
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  16.7   0.1999815
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.0  -0.8303495
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  58.3  -0.4209462
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   4.5  -0.0056128
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1  99.9  -1.0319040
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.6  -0.6296408
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.4  -0.2093655
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0  -1.2434731
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.5  -0.8321947
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.3  -0.4146712
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.9   0.4023403
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.5   0.8202094
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.2  -0.2090734
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  17.5   0.2003686
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3   0.6151168
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  55.7   0.4164887
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  88.8  -0.6099558
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  16.7  -0.2017832
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.5   0.2108433
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.9  -1.0217674
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.8  -0.6187543
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.1  -0.2034091
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.8   0.4091888
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.1   0.8212295
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  55.4   0.4106146
->>>>>>> 9c15005b87e84daa17b3768e2bab3c08cdd82d66
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.6    0.407579
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.0    0.825688
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.8   -0.206524
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.7    0.200989
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.9    0.618376
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  52.6   -0.400055
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.5   -0.008101
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.7    0.415887
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  58.0    0.420773
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.7   -0.612986
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  17.9   -0.206267
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.7    0.210665
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.4   -0.803807
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  59.7   -0.413294
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.6    0.007315
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.037488
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.2   -0.631178
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  21.3   -0.211805
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.219561
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.0   -0.839966
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  57.1   -0.415894
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  55.2    0.410062
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.5    0.832630
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.8   -0.193695
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.2    0.200577
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  90.4    0.627945
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  59.3    0.421093
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.3   -0.602260
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.1   -0.208320
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.4    0.214285
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.022809
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.6   -0.628362
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.2   -0.204809
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  51.9    0.392321
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.1    0.814035
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  58.9    0.425240
 
 
 Within-Subject Factors Included: Check MANOVA Results</code></pre>
@@ -860,93 +812,48 @@ Within-Subject Factors Included: Check MANOVA Results</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Power and Effect sizes for ANOVA tests
                          power effect_size
-<<<<<<< HEAD
-anova_Stimulus            92.8     0.21548
-anova_Condition          100.0     0.50740
-anova_Stimulus:Condition   5.0     0.03321
+anova_Stimulus            92.3      0.2160
+anova_Condition          100.0      0.5045
+anova_Stimulus:Condition   4.8      0.0332
 
 Power and Effect sizes for pairwise comparisons (t-tests)
                                                 power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  55.4    0.405340
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.2    0.816916
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.8   -0.207465
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  16.2    0.197415
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  90.0    0.618869
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  59.2   -0.417577
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.2    0.001118
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.8    0.414034
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  58.0    0.420065
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  88.0   -0.616661
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  18.9   -0.208032
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.2    0.218081
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.8   -0.827886
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  55.5   -0.404004
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   4.6    0.009357
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.035222
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.4   -0.627463
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  18.8   -0.200285
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.240344
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.7   -0.813337
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  54.3   -0.408493
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.5    0.408432
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.6    0.833951
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.5   -0.210179
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.8    0.209186
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.8    0.624421
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  58.2    0.427982
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  90.0   -0.615250
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.8   -0.195688
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.6    0.217353
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.044113
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  88.6   -0.619437
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.8   -0.208859
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.7    0.417462
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.4    0.832738
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  56.4    0.412706</code></pre>
-=======
-anova_Stimulus            94.3     0.22096
-anova_Condition          100.0     0.50327
-anova_Stimulus:Condition   5.1     0.03274
-
-Power and Effect sizes for pairwise comparisons (t-tests)
-                                                power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  57.3   0.4212572
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.0   0.8289936
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.4  -0.2022365
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  18.0   0.2021685
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  89.3   0.6162226
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  56.1  -0.4121194
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   6.2  -0.0005472
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  56.8   0.4124043
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.4   0.4081977
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.6  -0.6230640
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  20.0  -0.2160757
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  16.7   0.1999815
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.0  -0.8303495
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  58.3  -0.4209462
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   4.5  -0.0056128
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1  99.9  -1.0319040
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.6  -0.6296408
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  20.4  -0.2093655
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0  -1.2434731
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.5  -0.8321947
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  56.3  -0.4146712
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  54.9   0.4023403
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.5   0.8202094
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.2  -0.2090734
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  17.5   0.2003686
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3   0.6151168
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  55.7   0.4164887
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  88.8  -0.6099558
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  16.7  -0.2017832
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  19.5   0.2108433
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.9  -1.0217674
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.8  -0.6187543
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.1  -0.2034091
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  56.8   0.4091888
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.1   0.8212295
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  55.4   0.4106146</code></pre>
->>>>>>> 9c15005b87e84daa17b3768e2bab3c08cdd82d66
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.6    0.407579
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.0    0.825688
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.8   -0.206524
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.7    0.200989
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.9    0.618376
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  52.6   -0.400055
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.5   -0.008101
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.7    0.415887
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  58.0    0.420773
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.7   -0.612986
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  17.9   -0.206267
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.7    0.210665
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.4   -0.803807
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  59.7   -0.413294
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.6    0.007315
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.037488
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.2   -0.631178
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  21.3   -0.211805
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.219561
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.0   -0.839966
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  57.1   -0.415894
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  55.2    0.410062
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.5    0.832630
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.8   -0.193695
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.2    0.200577
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  90.4    0.627945
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  59.3    0.421093
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.3   -0.602260
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.1   -0.208320
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.4    0.214285
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.022809
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.6   -0.628362
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.2   -0.204809
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  51.9    0.392321
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.1    0.814035
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  58.9    0.425240</code></pre>
 </div>
 </div>
 
