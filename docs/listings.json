@@ -49,13 +49,20 @@
     "items": [
       "/dicom_to_glm/first_level_glm_nilearn.html",
       "/dicom_to_glm/roi_analysis.html",
+<<<<<<< HEAD
       "/dicom_to_glm/troubleshooting.html",
+=======
+>>>>>>> 9c15005b87e84daa17b3768e2bab3c08cdd82d66
       "/dicom_to_glm/Overview_fromDICOMtoGLM.html",
       "/dicom_to_glm/check_IntendedFor_field.html",
       "/dicom_to_glm/retinotopic_mapping.html",
       "/dicom_to_glm/DICOMtoBIDS.html",
       "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html",
       "/dicom_to_glm/defacing.html",
+<<<<<<< HEAD
+=======
+      "/dicom_to_glm/troubleshooting.html",
+>>>>>>> 9c15005b87e84daa17b3768e2bab3c08cdd82d66
       "/dicom_to_glm/RemoveNoiseScan.html",
       "/dicom_to_glm/run_fmriprep.html"
     ]

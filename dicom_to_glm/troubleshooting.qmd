@@ -93,6 +93,7 @@ $\to$ the solution is (if your structural and functional scans are from the same
 `--bold2t1w-init header`
 ```
 
+<<<<<<< HEAD
 ## Bad Coregistration {#sec-coreg}
 
 Sometimes the automatic coregistration of functional and structural data does not work properly. If this happened, you will see it in the `.html` summary file provided by fMRIPrep.
@@ -100,3 +101,13 @@ Sometimes the automatic coregistration of functional and structural data does no
 One potential way to fix this issue is to perform manual coregistration *before* running [fMRIPrep](run_fmriprep.qmd) again. The necessary steps using `mri_coreg` or `bb_register` can be found in the following notebook: `/shared/website/pre-fmriprep.ipynb`
 
 (The first part of this notebook describes how to remove/replace the first 3 frames of a `.nifti` file, which provided a solution for coregistration problems in a case with extensive movement during the first 3 volumes)
+=======
+## Bad Coregistration {sec-coreg}
+
+Sometimes the automatic coregistration of functional and structural data does not work properly. If this happened, you will see it in the `.html` summary file provided by fMRIPrep.
+
+One potential way to fix this issue is to perform manual coregistration *before* running [fMRIPrep](run_fmriprep.qmd) again. The necessary steps using `mri_coreg` or `bb_register` can be found in the following notebook: `/shared/website/pre-fmriprep.ipynb` 
+
+(The first part of this notebook describes how to remove/replace the first 3 frames of a `.nifti` file, which provided a solution for coregistration problems in a case with extensive movement during the first 3 volumes)
+
+>>>>>>> 9c15005b87e84daa17b3768e2bab3c08cdd82d66
