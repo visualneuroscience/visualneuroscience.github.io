@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3f2066268bf2160d7f3b2c3b88ce6999.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3295de2492aa6991a8f9e8eb11d7df20.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -120,7 +121,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -136,6 +137,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -677,13 +679,13 @@ The program is user-friendly, allowing both beginners and experienced users to c
 <h2 data-number="3.1" class="anchored" data-anchor-id="pwr"><span class="header-section-number">3.1</span> pwr</h2>
 <p>This is the most common and basic package for power analysis. However, it is not suitable for complex statistical tests such as repeated measures ANOVA.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pwr<span class="sc">:::</span><span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="cn">NULL</span>,  <span class="co"># NULL to calculate a priori sample size</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pwr<span class="sc">:::</span><span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="cn">NULL</span>,  <span class="co"># NULL to calculate a priori sample size</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">d =</span> <span class="fl">0.4</span>,  <span class="co"># Cohen's d, effect size</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">sig.level =</span> <span class="fl">0.05</span>,  <span class="co"># alpha value</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">power =</span> <span class="fl">0.80</span>,  <span class="co"># desired power level</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"paired"</span>,  <span class="co"># type of t test</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">alternative =</span> <span class="st">"two.sided"</span>  <span class="co"># alternative hypothesis</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      Paired t test power calculation 
@@ -702,7 +704,7 @@ NOTE: n is number of *pairs*</code></pre>
 <h2 data-number="3.2" class="anchored" data-anchor-id="webpower"><span class="header-section-number">3.2</span> WebPower</h2>
 <p>This is a strong tool for different types of ANOVA.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>WebPower<span class="sc">::</span><span class="fu">wp.rmanova</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>WebPower<span class="sc">::</span><span class="fu">wp.rmanova</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="cn">NULL</span>,  <span class="co"># Compute required sample size</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ng =</span> <span class="dv">1</span>,   <span class="co"># Only one group if it's a within-subjects design</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">nm =</span> <span class="dv">3</span><span class="sc">*</span><span class="dv">3</span>,  <span class="co"># Number of measurements (n*m for n x m design)</span></span>
@@ -711,7 +713,7 @@ NOTE: n is number of *pairs*</code></pre>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">alpha =</span> <span class="fl">0.05</span>,  <span class="co"># significance level, aka alpha value</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">power =</span> <span class="fl">0.80</span>,  <span class="co"># desired power </span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="dv">1</span> <span class="co"># 0: between-effect; 1: within-effect; 2: interaction effect</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Repeated-measures ANOVA analysis
 
@@ -727,7 +729,7 @@ URL: http://psychstat.org/rmanova</code></pre>
 <h2 data-number="3.3" class="anchored" data-anchor-id="superpower"><span class="header-section-number">3.3</span> Superpower</h2>
 <p>As the name suggests, it is super for power analysis :) However, you need to simulate your data to calculate required sample size. It might be useful to calculate actual power level. However, it is hard to create simulations in general for our studies in Visual Neuroscience Lab.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Experimental design</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Experimental design</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>design_result <span class="ot">&lt;-</span> Superpower<span class="sc">::</span><span class="fu">ANOVA_design</span>(</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">design =</span> <span class="st">"3w*3w"</span>,  <span class="co"># 3x2 within-subjects </span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="dv">30</span>,  <span class="co"># as a start point to find the required sample size</span></span>
@@ -735,7 +737,7 @@ URL: http://psychstat.org/rmanova</code></pre>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sd =</span> <span class="dv">50</span>,  <span class="co"># estimated standard deviation</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">r =</span> <span class="fl">0.5</span>,  <span class="co"># correlation between repeated measures</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">labelnames =</span> <span class="fu">c</span>(<span class="st">"Stimulus"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"Condition"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: `aes_string()` was deprecated in ggplot2 3.0.0.
 ℹ Please use tidy evaluation idioms with `aes()`.
@@ -758,53 +760,53 @@ URL: http://psychstat.org/rmanova</code></pre>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># simulation for power analysis</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Superpower<span class="sc">::</span><span class="fu">ANOVA_power</span>(design_result, <span class="at">nsims =</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># simulation for power analysis</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Superpower<span class="sc">::</span><span class="fu">ANOVA_power</span>(design_result, <span class="at">nsims =</span> <span class="dv">1000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Power and Effect sizes for ANOVA tests
                          power effect_size
-anova_Stimulus            92.3      0.2160
-anova_Condition          100.0      0.5045
-anova_Stimulus:Condition   4.8      0.0332
+anova_Stimulus            93.7     0.21911
+anova_Condition          100.0     0.50286
+anova_Stimulus:Condition   6.7     0.03486
 
 Power and Effect sizes for pairwise comparisons (t-tests)
                                                 power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.6    0.407579
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.0    0.825688
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.8   -0.206524
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.7    0.200989
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.9    0.618376
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  52.6   -0.400055
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.5   -0.008101
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.7    0.415887
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  58.0    0.420773
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.7   -0.612986
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  17.9   -0.206267
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.7    0.210665
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.4   -0.803807
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  59.7   -0.413294
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.6    0.007315
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.037488
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.2   -0.631178
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  21.3   -0.211805
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.219561
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.0   -0.839966
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  57.1   -0.415894
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  55.2    0.410062
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.5    0.832630
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.8   -0.193695
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.2    0.200577
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  90.4    0.627945
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  59.3    0.421093
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.3   -0.602260
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.1   -0.208320
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.4    0.214285
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.022809
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.6   -0.628362
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.2   -0.204809
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  51.9    0.392321
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.1    0.814035
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  58.9    0.425240
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  57.0    0.419468
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.4    0.818013
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.5   -0.207922
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  18.6    0.203373
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  87.8    0.615393
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  56.6   -0.416992
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.3    0.006067
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.1    0.406489
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.0    0.398324
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  90.1   -0.628923
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  20.4   -0.213438
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.1    0.196510
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.1   -0.834689
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  57.4   -0.413074
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.5   -0.010635
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.029566
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.5   -0.618327
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  19.9   -0.203607
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.233029
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.5   -0.818365
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.1   -0.407476
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  57.3    0.412119
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  99.3    0.824506
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  19.6   -0.211083
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  20.0    0.213593
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3    0.615985
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  55.5    0.411247
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  88.7   -0.616220
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.4   -0.199642
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.5    0.205218
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.9   -1.031385
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  87.2   -0.608318
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.8   -0.205820
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  57.1    0.422771
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.6    0.821637
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  53.2    0.400419
 
 
 Within-Subject Factors Included: Check MANOVA Results</code></pre>
@@ -812,48 +814,48 @@ Within-Subject Factors Included: Check MANOVA Results</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>Power and Effect sizes for ANOVA tests
                          power effect_size
-anova_Stimulus            92.3      0.2160
-anova_Condition          100.0      0.5045
-anova_Stimulus:Condition   4.8      0.0332
+anova_Stimulus            93.7     0.21911
+anova_Condition          100.0     0.50286
+anova_Stimulus:Condition   6.7     0.03486
 
 Power and Effect sizes for pairwise comparisons (t-tests)
                                                 power effect_size
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  56.6    0.407579
-p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  99.0    0.825688
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.8   -0.206524
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  17.7    0.200989
-p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  88.9    0.618376
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  52.6   -0.400055
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.5   -0.008101
-p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  57.7    0.415887
-p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  58.0    0.420773
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  89.7   -0.612986
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  17.9   -0.206267
-p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  19.7    0.210665
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  98.4   -0.803807
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  59.7   -0.413294
-p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.6    0.007315
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.037488
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.2   -0.631178
-p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  21.3   -0.211805
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.219561
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  99.0   -0.839966
-p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  57.1   -0.415894
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  55.2    0.410062
-p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  98.5    0.832630
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  18.8   -0.193695
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  19.2    0.200577
-p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  90.4    0.627945
-p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  59.3    0.421093
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  87.3   -0.602260
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.1   -0.208320
-p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.4    0.214285
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_1 100.0   -1.022809
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  89.6   -0.628362
-p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  19.2   -0.204809
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  51.9    0.392321
-p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  99.1    0.814035
-p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  58.9    0.425240</code></pre>
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_2  57.0    0.419468
+p_Stimulus_A_Condition_1_Stimulus_A_Condition_3  98.4    0.818013
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_1  18.5   -0.207922
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_2  18.6    0.203373
+p_Stimulus_A_Condition_1_Stimulus_B_Condition_3  87.8    0.615393
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_1  56.6   -0.416992
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_2   4.3    0.006067
+p_Stimulus_A_Condition_1_Stimulus_C_Condition_3  55.1    0.406489
+p_Stimulus_A_Condition_2_Stimulus_A_Condition_3  55.0    0.398324
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_1  90.1   -0.628923
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_2  20.4   -0.213438
+p_Stimulus_A_Condition_2_Stimulus_B_Condition_3  17.1    0.196510
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_1  99.1   -0.834689
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_2  57.4   -0.413074
+p_Stimulus_A_Condition_2_Stimulus_C_Condition_3   5.5   -0.010635
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_1 100.0   -1.029566
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_2  89.5   -0.618327
+p_Stimulus_A_Condition_3_Stimulus_B_Condition_3  19.9   -0.203607
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_1 100.0   -1.233029
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_2  98.5   -0.818365
+p_Stimulus_A_Condition_3_Stimulus_C_Condition_3  55.1   -0.407476
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_2  57.3    0.412119
+p_Stimulus_B_Condition_1_Stimulus_B_Condition_3  99.3    0.824506
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_1  19.6   -0.211083
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_2  20.0    0.213593
+p_Stimulus_B_Condition_1_Stimulus_C_Condition_3  88.3    0.615985
+p_Stimulus_B_Condition_2_Stimulus_B_Condition_3  55.5    0.411247
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_1  88.7   -0.616220
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_2  18.4   -0.199642
+p_Stimulus_B_Condition_2_Stimulus_C_Condition_3  20.5    0.205218
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_1  99.9   -1.031385
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_2  87.2   -0.608318
+p_Stimulus_B_Condition_3_Stimulus_C_Condition_3  18.8   -0.205820
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_2  57.1    0.422771
+p_Stimulus_C_Condition_1_Stimulus_C_Condition_3  98.6    0.821637
+p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  53.2    0.400419</code></pre>
 </div>
 </div>
 
@@ -913,13 +915,14 @@ p_Stimulus_C_Condition_2_Stimulus_C_Condition_3  58.9    0.425240</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

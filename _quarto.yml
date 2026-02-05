@@ -105,6 +105,7 @@ format:
     page-layout: full
     theme:
       light: main_theme.scss
+    css: style.css
     toc: true
 
 editor: visual

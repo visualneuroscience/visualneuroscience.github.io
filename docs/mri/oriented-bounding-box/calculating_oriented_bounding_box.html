@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3f2066268bf2160d7f3b2c3b88ce6999.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3295de2492aa6991a8f9e8eb11d7df20.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,6 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="../../style.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -625,7 +627,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>&nbsp;</p>
 <section id="get-the-statistics-of-the-segmentation-first" class="level3">
 <h3 class="anchored" data-anchor-id="get-the-statistics-of-the-segmentation-first">1. Get the statistics of the segmentation first</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>segmentationNode <span class="op">=</span> getNode(<span class="st">"Name of the segmentation"</span>) <span class="co"># here change the name of the segmentation to the name of the segmentation</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>segmentationNode <span class="op">=</span> getNode(<span class="st">"Name of the segmentation"</span>) <span class="co"># here change the name of the segmentation to the name of the segmentation</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute bounding boxes</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> SegmentStatistics</span>
@@ -637,7 +639,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>segStatLogic.getParameterNode().SetParameter(<span class="st">"LabelmapSegmentStatisticsPlugin.obb_direction_ras_y.enabled"</span>,<span class="bu">str</span>(<span class="va">True</span>))</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>segStatLogic.getParameterNode().SetParameter(<span class="st">"LabelmapSegmentStatisticsPlugin.obb_direction_ras_z.enabled"</span>,<span class="bu">str</span>(<span class="va">True</span>))</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>segStatLogic.computeStatistics()</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>stats <span class="op">=</span> segStatLogic.getStatistics()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>stats <span class="op">=</span> segStatLogic.getStatistics()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>After this step run <code>print(stats)</code> to ensure that it actually worked and that you can see all the “segmentIds” printed out</li>
 </ul>
@@ -647,7 +649,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Paste this into the python subshell</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> segmentId <span class="kw">in</span> stats[<span class="st">"SegmentIDs"</span>]:</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Get bounding box</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  obb_origin_ras <span class="op">=</span> np.array(stats[segmentId,<span class="st">"LabelmapSegmentStatisticsPlugin.obb_origin_ras"</span>])</span>
@@ -665,7 +667,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  obb_center_ras <span class="op">=</span> obb_origin_ras<span class="op">+</span><span class="fl">0.5</span><span class="op">*</span>(obb_diameter_mm[<span class="dv">0</span>] <span class="op">*</span> obb_direction_ras_x <span class="op">+</span> obb_diameter_mm[<span class="dv">1</span>] <span class="op">*</span> obb_direction_ras_y <span class="op">+</span> obb_diameter_mm[<span class="dv">2</span>] <span class="op">*</span> obb_direction_ras_z)</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  boundingBoxToRasTransform <span class="op">=</span> np.row_stack((np.column_stack((obb_direction_ras_x, obb_direction_ras_y, obb_direction_ras_z, obb_center_ras)), (<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>)))</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  boundingBoxToRasTransformMatrix <span class="op">=</span> slicer.util.vtkMatrixFromArray(boundingBoxToRasTransform)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  roi.SetAndObserveObjectToNodeMatrix(boundingBoxToRasTransformMatrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  roi.SetAndObserveObjectToNodeMatrix(boundingBoxToRasTransformMatrix)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>&nbsp;</p>
 </section>
 <section id="make-it-prettier" class="level3">
@@ -795,13 +797,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

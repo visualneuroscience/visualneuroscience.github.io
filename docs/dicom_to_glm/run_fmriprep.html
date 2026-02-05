@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3f2066268bf2160d7f3b2c3b88ce6999.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3295de2492aa6991a8f9e8eb11d7df20.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -120,7 +121,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -136,6 +137,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -640,10 +642,10 @@ window.Quarto = {
 <section id="sec-fmriprepSetup" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="sec-fmriprepSetup"><span class="header-section-number">2.2</span> Setting up necessary directories and defining “SUBJECTS_DIR”</h2>
 <p>First, you need to create some new directories that are necessary for fMRIprep to run properly. For this, enter the following command (adapt the path(s)!)</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>By confirming your command with Enter, you´ll find the new directory structure within you derivatives directory<img src="./images/04_fmriprep/02_newDirectories.png" class="img-fluid" alt="New Directories"></p>
 <p>Then, we need to specify where fMRIprep should store the resulting files (again, adapt the path(s) if necessary):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">SUBJECTS_DIR</span><span class="op">=</span>/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">SUBJECTS_DIR</span><span class="op">=</span>/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./images/04_fmriprep/03_setSUBJECTS_DIR.png" class="img-fluid figure-img"></p>
@@ -670,7 +672,7 @@ Warning
 </div>
 </div>
 <p>With the setup done, you can now run the command (for more information about the commands/flags, please refer to the <a href="https://fmriprep.org/en/stable/usage.html">fMRIprep documentation</a>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fmriprep</span> /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant <span class="at">--bold2t1w-init</span> header <span class="at">--force-bbr</span> <span class="at">-w</span> /home/jovyan/website/fmriprep_tmp <span class="at">--output-spaces</span> T1w fsaverage fsnative <span class="at">--participant-label</span> sub-999 <span class="at">--nprocs</span> 8 <span class="at">--mem</span> 10000 <span class="at">--skip_bids_validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">-v</span> <span class="at">--fs-license-file</span> /home/jovyan/website/freesurferlicense/license.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fmriprep</span> /home/jovyan/website/bids /home/jovyan/website/bids/derivatives/fmriprep participant <span class="at">--bold2t1w-init</span> header <span class="at">--force-bbr</span> <span class="at">-w</span> /home/jovyan/website/fmriprep_tmp <span class="at">--output-spaces</span> T1w fsaverage fsnative <span class="at">--participant-label</span> sub-999 <span class="at">--nprocs</span> 8 <span class="at">--mem</span> 10000 <span class="at">--skip_bids_validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">-v</span> <span class="at">--fs-license-file</span> /home/jovyan/website/freesurferlicense/license.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Important:</strong> adapt the flag <code>--participant-label sub-999</code> accordingly, so that you state the subject you want to preprocess</p>
 <p><strong>Hint:</strong> same as before, you could run this command simultaneously with the two commands above for the setup. The only important thing is the order: first the command for making the directories, then defining <code>SUBJECTS_DIR</code> and finally the fMRIprep command.</p>
 </section>
@@ -690,7 +692,7 @@ Warning
 <li><p>Adapt the line <code>ml fmriprep/23.0.0</code>: you can select any version of fMRIprep that is available on neurodesk (see <a href="#sec-fmriprepStart" class="quarto-xref">Section&nbsp;2.1</a> for how to check which version are available). If you want to use a different version, you have to use Singularity (you need a singularity image and basically replace the word <code>fmriprep</code> in the command with <code>singularity run --cleanenv /Path/to/fmriprep-&lt;&lt;Version&gt;&gt;.simg</code>; <a href="https://fmriprep.org/en/1.1.4/installation.html">see the documentation</a></p></li>
 <li><p>Adapt the path to your data (and the building of the corresponding necessary directories)</p></li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">participant_labels</span><span class="op">=</span><span class="va">(</span>01 02 03 04 05<span class="va">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash copy-code code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">participant_labels</span><span class="op">=</span><span class="va">(</span>01 02 03 04 05<span class="va">)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ml</span> fmriprep/23.0.0</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -702,7 +704,7 @@ Warning
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> label <span class="kw">in</span> <span class="st">"</span><span class="va">${participant_labels</span><span class="op">[@]</span><span class="va">}</span><span class="st">"</span><span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">fmriprep</span> /home/jovyan/thesis_data/bids /home/jovyan/thesis_data/bids/derivatives/fmriprep participant <span class="at">--bold2t1w-init</span> header <span class="at">-w</span> /home/jovyan/thesis_data/fmriprep_tmp/sub-1400<span class="va">$label</span> <span class="at">--output-spaces</span> T1w fsaverage fsnative <span class="at">--participant-label</span> sub-1400<span class="va">$label</span> <span class="at">--nprocs</span> 8 <span class="at">--mem</span> 20000 <span class="at">--skip_bids_validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">-v</span> <span class="at">--fs-license-file</span> /home/jovyan/completion/freesurferlicense/license.txt</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Keep in mind, that with running fMRIprep for multiple subjects subsequently, the runtime scales with the number of subjects. Be aware of potential server restarts and other running processes!</p>
 </section>
 <section id="troubleshooting" class="level1" data-number="4">
@@ -718,7 +720,7 @@ Warning
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-IMPORTANT
+<span class="screen-reader-only">Warning</span>IMPORTANT
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -789,13 +791,14 @@ IMPORTANT
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

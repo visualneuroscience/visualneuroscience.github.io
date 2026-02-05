@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3f2066268bf2160d7f3b2c3b88ce6999.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3295de2492aa6991a8f9e8eb11d7df20.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,6 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="../../style.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -589,8 +591,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol></li>
 <li><p>To create the folders first run the following:</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$niidir</span>/../fmriprep_tmp</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$niidir</span>/derivatives/fmriprep</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$niidir</span>/../fmriprep_tmp</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="va">$niidir</span>/derivatives/fmriprep</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><p>To avoid the output folders of fMRIprep being owned by <code>root</code> you can run fMRIprep with the following flags:</p>
 <p><code>docker run -u $(id -u):$(id -g) ...</code></p></li>
@@ -604,7 +606,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="fmriprep-without-prerun-freesurfer" class="level3">
 <h3 class="anchored" data-anchor-id="fmriprep-without-prerun-freesurfer">fMRIprep without prerun FreeSurfer</h3>
 <p>An example script of fMRIprep when there is no prerun FreeSurfer</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span>~/local/python2/:<span class="va">$PATH</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span>~/local/python2/:<span class="va">$PATH</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">FREESURFER_HOME</span><span class="op">=</span>/usr/local/freesurfer_7.3.2</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MATLAB</span><span class="op">=</span>/usr/bin/matlab</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">FSL_DIR</span><span class="op">=</span>/usr/local/fsl</span>
@@ -637,13 +639,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        <span class="at">-v</span> <span class="va">$niidir</span>/derivatives/fmriprep:/out <span class="dt">\</span></span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        <span class="at">-v</span> <span class="va">$niidir</span>/derivatives/freesurfer:/sub-dir nipreps/fmriprep:21.0.1 <span class="dt">\</span></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>        /data /out participant <span class="at">--participant-label</span> <span class="va">$subject</span> <span class="dt">\</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        <span class="at">--md-only-boilerplate</span> <span class="at">--skip-bids-validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">--nthreads</span> 4 <span class="at">-w</span> /scratch <span class="at">--output-spaces</span> T1w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        <span class="at">--md-only-boilerplate</span> <span class="at">--skip-bids-validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">--nthreads</span> 4 <span class="at">-w</span> /scratch <span class="at">--output-spaces</span> T1w</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>&nbsp;</p>
 </section>
 <section id="fmriprep-prerun-freesurfer-no-hires" class="level3">
 <h3 class="anchored" data-anchor-id="fmriprep-prerun-freesurfer-no-hires">fMRIprep prerun FreeSurfer (no hires)</h3>
 <p>An example script with prerun FreeSurfer (without hires options and biascorrecing the anatomical scan):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span>~/local/python2/:<span class="va">$PATH</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span>~/local/python2/:<span class="va">$PATH</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">FREESURFER_HOME</span><span class="op">=</span>/usr/local/freesurfer_7.3.2</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">MATLAB</span><span class="op">=</span>/usr/bin/matlab</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">FSL_DIR</span><span class="op">=</span>/usr/local/fsl</span>
@@ -680,7 +682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="at">-v</span> <span class="va">$niidir</span>/derivatives/fmriprep:/out <span class="dt">\</span></span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="at">-v</span> <span class="va">$niidir</span>/derivatives/freesurfer:/sub-dir nipreps/fmriprep:21.0.1 <span class="dt">\</span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        /data /out participant <span class="at">--fs-subjects-dir</span> /sub-dir <span class="at">--participant-label</span> <span class="va">$subject</span> <span class="dt">\</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        <span class="at">--md-only-boilerplate</span> <span class="at">--skip-bids-validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">--nthreads</span> 4 <span class="at">-w</span> /scratch <span class="at">--output-spaces</span> T1w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        <span class="at">--md-only-boilerplate</span> <span class="at">--skip-bids-validation</span> <span class="at">--stop-on-first-crash</span> <span class="at">--nthreads</span> 4 <span class="at">-w</span> /scratch <span class="at">--output-spaces</span> T1w</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </section>
@@ -696,17 +698,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>If your fmap .json file is using the BIDS uri specification in the <code>IntendedFor</code> field and you are using an older fMRIprep version then this will need to be changed to the older path specification e.g.</li>
 </ul>
 <p>BIDS uri spec:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz"</span><span class="ot">,</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bids::sub-1181001/ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz"</span><span class="ot">,</span> </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">etc</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Older fmap spec:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="er">"IntendedFor":</span> <span class="ot">[</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ses-1/func/sub-1181001_ses-1_task-movie_run-1_bold.nii.gz"</span><span class="ot">,</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ses-1/func/sub-1181001_ses-1_task-movie_run-2_bold.nii.gz"</span><span class="ot">,</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">etc</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <p>&nbsp;</p>
 <hr>
@@ -795,13 +797,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

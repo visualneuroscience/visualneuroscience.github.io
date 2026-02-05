@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-61d1a3051439d838d615f658ddee4de9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-96a5a061f728f1c61ead3b3ef8c4fdbb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,7 +114,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -129,6 +130,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -558,7 +560,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ05ldXJvZGVzayUyQ25pbGVhcm4=" data-listing-date-sort="1773270000000" data-listing-file-modified-sort="1765896854773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="776">
+<div class="g-col-1" data-index="0" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ05ldXJvZGVzayUyQ25pbGVhcm4=" data-listing-date-sort="1773270000000" data-listing-file-modified-sort="1770293968256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="776">
 <a href="./dicom_to_glm/first_level_glm_nilearn.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -593,7 +595,7 @@ Mar 12, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ05ldXJvZGVzayUyQ25pbGVhcm4=" data-listing-date-sort="1765839600000" data-listing-file-modified-sort="1765896849572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="927">
+<div class="g-col-1" data-index="1" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ05ldXJvZGVzayUyQ25pbGVhcm4=" data-listing-date-sort="1765839600000" data-listing-file-modified-sort="1770293968342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="927">
 <a href="./dicom_to_glm/roi_analysis.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -628,7 +630,7 @@ Dec 16, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ1ByZXByb2Nlc3NpbmclMkNOZXVyb2Rlc2s=" data-listing-date-sort="1765753200000" data-listing-file-modified-sort="1765969319241" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="934">
+<div class="g-col-1" data-index="2" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ1ByZXByb2Nlc3NpbmclMkNOZXVyb2Rlc2s=" data-listing-date-sort="1765753200000" data-listing-file-modified-sort="1770293968342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="934">
 <a href="./dicom_to_glm/troubleshooting.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -665,7 +667,7 @@ Dec 15, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1753653600000" data-listing-file-modified-sort="1765891398345" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="736">
+<div class="g-col-1" data-index="3" data-listing-date-sort="1753653600000" data-listing-file-modified-sort="1770293968256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="736">
 <a href="./dicom_to_glm/Overview_fromDICOMtoGLM.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -687,7 +689,7 @@ Jul 28, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ1ByZXByb2Nlc3NpbmclMkNOZXVyb2Rlc2s=" data-listing-date-sort="1751925600000" data-listing-file-modified-sort="1765896816321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="543">
+<div class="g-col-1" data-index="4" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ1ByZXByb2Nlc3NpbmclMkNOZXVyb2Rlc2s=" data-listing-date-sort="1751925600000" data-listing-file-modified-sort="1770293968256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="543">
 <a href="./dicom_to_glm/check_IntendedFor_field.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -724,7 +726,7 @@ Jul 8, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="TVJJJTJDUmV0aW5vdG9weQ==" data-listing-date-sort="1746396000000" data-listing-file-modified-sort="1765889636735" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="708">
+<div class="g-col-1" data-index="5" data-categories="TVJJJTJDUmV0aW5vdG9weQ==" data-listing-date-sort="1746396000000" data-listing-file-modified-sort="1770293968342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="708">
 <a href="./dicom_to_glm/retinotopic_mapping.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -753,7 +755,7 @@ May 5, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="TVJJJTJDRElDT00lMkNCSURTJTJDUHJlcHJvY2Vzc2luZyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1745964000000" data-listing-file-modified-sort="1765883277394" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2368">
+<div class="g-col-1" data-index="6" data-categories="TVJJJTJDRElDT00lMkNCSURTJTJDUHJlcHJvY2Vzc2luZyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1745964000000" data-listing-file-modified-sort="1770293968255" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2368">
 <a href="./dicom_to_glm/DICOMtoBIDS.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -790,7 +792,7 @@ Apr 30, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="TVJJ" data-listing-date-sort="1744668000000" data-listing-file-modified-sort="1765885981806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="247">
+<div class="g-col-1" data-index="7" data-categories="TVJJ" data-listing-date-sort="1744668000000" data-listing-file-modified-sort="1770293968256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="247">
 <a href="./dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -819,7 +821,7 @@ Apr 15, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="TVJJJTJDUHJlcHJvY2Vzc2luZyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1744495200000" data-listing-file-modified-sort="1765886406615" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="584">
+<div class="g-col-1" data-index="8" data-categories="TVJJJTJDUHJlcHJvY2Vzc2luZyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1744495200000" data-listing-file-modified-sort="1770293968256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="584">
 <a href="./dicom_to_glm/defacing.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -852,7 +854,7 @@ Apr 13, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="TVJJJTJDUHJlcHJvY2Vzc2luZyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1741388400000" data-listing-file-modified-sort="1765886837999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
+<div class="g-col-1" data-index="9" data-categories="TVJJJTJDUHJlcHJvY2Vzc2luZyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1741388400000" data-listing-file-modified-sort="1770293968256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="809">
 <a href="./dicom_to_glm/RemoveNoiseScan.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -885,7 +887,7 @@ Mar 8, 2025
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmTVJJcHJlcCUyQ05ldXJvZGVzaw==" data-listing-date-sort="1741388400000" data-listing-file-modified-sort="1765896225161" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1042">
+<div class="g-col-1" data-index="10" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmTVJJcHJlcCUyQ05ldXJvZGVzaw==" data-listing-date-sort="1741388400000" data-listing-file-modified-sort="1770293968342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1042">
 <a href="./dicom_to_glm/run_fmriprep.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -974,13 +976,14 @@ Mar 8, 2025
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

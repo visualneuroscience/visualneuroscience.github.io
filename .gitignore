@@ -7,3 +7,5 @@ visualneuroscience.github.io.Rproj
 .Rdata
 .httr-oauth
 .quarto
+
+**/*.quarto_ipynb
