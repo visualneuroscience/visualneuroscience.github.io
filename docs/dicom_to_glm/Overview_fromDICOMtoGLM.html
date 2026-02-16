@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -40,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-3295de2492aa6991a8f9e8eb11d7df20.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -112,6 +147,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
@@ -186,6 +223,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -572,10 +613,10 @@ window.Quarto = {
 <li><p>Regular scanning time:</p>
 <ul>
 <li>you get the data as nifti files</li>
-<li>a few days later via <code>mri-dropoff</code> in the <code>J</code> drive (<a href="../neurodesk/neurodesktop.html#sec-mountNetwork">Subpage for accessing other networks</a>)</li>
+<li>a few days later via <code>mri_dropoff</code> in the <code>J</code> drive (<a href="../neurodesk/neurodesktop.html#sec-mountNetwork">Subpage for accessing other networks</a>)</li>
 <li><a href="#sec-convert">nifti conversion</a> and <a href="#sec-deface">defacing</a> generally are already done for you then (but check defacing anyway, sometimes this doesn´t work!)</li>
 </ul></li>
-<li><p>Scanning with Natalia</p>
+<li><p>Scanning with Natalia or piloting with Thomas</p>
 <ul>
 <li>we have the raw DICOM files</li>
 <li>conversion to niftis has to be done (<a href="#sec-convert">see here</a>)</li>
@@ -600,9 +641,9 @@ Warning
 <h1 data-number="3"><span class="header-section-number">3</span> DICOM-Files</h1>
 <ul>
 <li>the raw files from the scanner are DICOM-Files</li>
-<li>in general, we primarily use <code>.nifti</code> files for the subsequent steps</li>
+<li>in general, we primarily use <code>.nii.gz/.nii</code> (NIFTI) files for the subsequent steps</li>
 </ul>
-<p><span class="math inline">\(\to\)</span> before we can continue, we need to convert <code>DICOM</code>- to <code>.nifti</code> files</p>
+<p><span class="math inline">\(\to\)</span> before we can continue, we need to convert <code>DICOM</code>- to <code>.nii.gz</code> files</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -619,12 +660,27 @@ Warning
 </section>
 <section id="sec-convert" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> <a href="../dicom_to_glm/DICOMtoBIDS.html">DICOM to nifti</a></h1>
-<p>There are two options to convert DICOM to <code>.nifti</code> files:</p>
+<p>There are multiple options to convert DICOM to <code>.nii.gz</code> files:</p>
 <ol type="1">
+<li><p>Newerst approach (recommended): use the BIDScoin workfolw</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode .bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># call bidscoiner module</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared/</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ml</span> bidscoin</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># sort dicoms (otherwise not all the data will be discoverable)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">dcm2niix</span> <span class="at">-o</span> <span class="pp">[</span><span class="ss">YOUR_SORTED_DICOM_DIR</span><span class="pp">]</span> <span class="at">-r</span> y <span class="pp">[</span><span class="ss">YOUR_ORIGINAL_DICOM_DIR</span><span class="pp">]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to bids</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># edit following the instructions on</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># https://visualneuroscience.github.io/dicom_to_glm/DICOMtoBIDS.html#sec-bidscoiner</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">bidsmapper</span> <span class="pp">[</span><span class="ss">YOUR_SORTED_DICOM_DIR</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">YOUR_BIDS_DIR</span><span class="pp">]</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># convert</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">bidscoiner</span> <span class="pp">[</span><span class="ss">YOUR_SORTED_DICOM_DIR</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">YOUR_BIDS_DIR</span><span class="pp">]</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Older approach: using a script from Adam that can be <a href="https://github.com/adam-coates/dicom2bids">found here</a> (or here: <code>/shared/website/dcm2bids_adam.sh</code>). All steps are also described in a <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-script">separate page</a></p></li>
-<li><p>Newer approach: use the <a href="https://bidscoin.readthedocs.io/en/latest/workflow.html">BIDScoin workflow</a> implemented in <code>/shared/website/dcm2bids_coiner.sh</code>. All steps are also described in a <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-bidscoiner">separate page</a></p></li>
+<li><p>Older bidscoin approach: use the <a href="https://bidscoin.readthedocs.io/en/latest/workflow.html">BIDScoin workflow</a> implemented in <code>/shared/website/dcm2bids_coiner.sh</code>. All steps are also described in a <a href="../dicom_to_glm/DICOMtoBIDS.html#sec-bidscoiner">separate page</a></p></li>
 </ol>
-<p>both approaches should result in <code>.nifti</code> files in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format</p>
+<p>all approaches should result in <code>.nii.gz</code> files in <a href="https://bids-specification.readthedocs.io/en/stable/introduction.html">BIDS</a> format</p>
 </section>
 <section id="check-the-intendedfor-entry-of-the-fmaps-json-file" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> <a href="../dicom_to_glm/check_IntendedFor_field.html">Check the “IntendedFor” entry of the fmap’s JSON file</a></h1>

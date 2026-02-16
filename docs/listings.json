@@ -109,7 +109,6 @@
     "listing": "/mri.html",
     "items": [
       "/mri/3D-prints/3d-prints.html",
-      "/mri/MRI-Studies_general/mri-studies_general-information.html",
       "/mri/analysis/7t_analysis_on_neurodesk.html",
       "/mri/analysis/bids.html",
       "/mri/analysis/fmriprep.html",
@@ -118,6 +117,7 @@
       "/mri/mni-space/mni-space.html",
       "/mri/mri-lab-setup-2023/index.html",
       "/mri/mri-lab-setup-2024/index.html",
+      "/mri/MRI-Studies_general/mri-studies_general-information.html",
       "/mri/oriented-bounding-box/calculating_oriented_bounding_box.html",
       "/mri/physiology/index.html"
     ]

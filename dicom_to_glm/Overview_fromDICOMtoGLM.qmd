@@ -19,25 +19,25 @@ There are two ways how you get your data:
 1)  Regular scanning time:
 
     -   you get the data as nifti files
-    -   a few days later via `mri-dropoff` in the `J` drive ([Subpage for accessing other networks](../neurodesk/neurodesktop.qmd#sec-mountNetwork))
+    -   a few days later via `mri_dropoff` in the `J` drive ([Subpage for accessing other networks](../neurodesk/neurodesktop.qmd#sec-mountNetwork))
     -   [nifti conversion](#sec-convert) and [defacing](#sec-deface) generally are already done for you then (but check defacing anyway, sometimes this doesn´t work!)
 
-2)  Scanning with Natalia
+2)  Scanning with Natalia or piloting with Thomas
 
     -   we have the raw DICOM files
     -   conversion to niftis has to be done ([see here](#sec-convert))
     -   defacing has to be done ([see here](#sec-deface))
 
-:::callout-warning
+::: callout-warning
 ***IMPORTANT: Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
 :::
 
 # DICOM-Files
 
 -   the raw files from the scanner are DICOM-Files
--   in general, we primarily use `.nifti` files for the subsequent steps
+-   in general, we primarily use `.nii.gz/.nii` (NIFTI) files for the subsequent steps
 
-$\to$ before we can continue, we need to convert `DICOM`- to `.nifti` files
+$\to$ before we can continue, we need to convert `DICOM`- to `.nii.gz` files
 
 ::: callout-warning
 ## DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
@@ -47,14 +47,32 @@ $\to$ before we can continue, we need to convert `DICOM`- to `.nifti` files
 
 # [DICOM to nifti](DICOMtoBIDS.qmd) {#sec-convert}
 
-There are two options to convert DICOM to `.nifti` files:
+There are multiple options to convert DICOM to `.nii.gz` files:
 
-1)   Older approach: using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/website/dcm2bids_adam.sh`). All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-script)
+1)  Newerst approach (recommended): use the BIDScoin workfolw
 
-2)  Newer approach: use the [BIDScoin workflow](https://bidscoin.readthedocs.io/en/latest/workflow.html) implemented in `/shared/website/dcm2bids_coiner.sh`. All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-bidscoiner)
+    ``` .bash
+    # call bidscoiner module
+    cd /shared/
+    ml bidscoin
 
+    # sort dicoms (otherwise not all the data will be discoverable)
+    dcm2niix -o [YOUR_SORTED_DICOM_DIR] -r y [YOUR_ORIGINAL_DICOM_DIR]
 
-both approaches should result in `.nifti` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
+    # convert to bids
+    # edit following the instructions on
+    # https://visualneuroscience.github.io/dicom_to_glm/DICOMtoBIDS.html#sec-bidscoiner
+    bidsmapper [YOUR_SORTED_DICOM_DIR] [YOUR_BIDS_DIR]
+
+    # convert
+    bidscoiner [YOUR_SORTED_DICOM_DIR] [YOUR_BIDS_DIR] 
+    ```
+
+2)  Older approach: using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/website/dcm2bids_adam.sh`). All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-script)
+
+3)  Older bidscoin approach: use the [BIDScoin workflow](https://bidscoin.readthedocs.io/en/latest/workflow.html) implemented in `/shared/website/dcm2bids_coiner.sh`. All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-bidscoiner)
+
+all approaches should result in `.nii.gz` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
 
 # [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
 
