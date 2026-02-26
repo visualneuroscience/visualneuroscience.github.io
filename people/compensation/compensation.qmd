@@ -47,3 +47,11 @@ When you reimburse participants with money and get their information (see below)
     -   Innenauftrag: Ask Natalia for the correct value of the Innenauftrag field, since this varies from study to study.
     -   Leave the fields "Zahlweg" and "Kostenstelle" empty
 3.  Once you collect a sufficient number of participants, or once every 1-2 weeks, send this sheet to the secretary's office of the general psychology section (NOT the institute's secretary!), and they will take care of the rest.
+
+# Brain scans
+
+If you did an MRI experiment you can provide your participants with a nifti file of their anatomical scan (prior to [defacing](https://visualneuroscience.github.io/dicom_to_glm/defacing.html)). Please send the scans via the university email/ official university sharing tools to comply with data protection policies.
+
+For viewing the scans, participants can use the browser-based nifti viewer [FreeBrowse](https://freesurfer.github.io/freebrowse/).
+
+If the subject is technically savvy you can also share the instructions for creating surface models for 3D printing (see [3D printing a brain – Visual Neuroscience Lab](https://visualneuroscience.github.io/mri/3D-prints/3d-prints.html)).

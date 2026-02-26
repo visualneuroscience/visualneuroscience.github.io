@@ -49,14 +49,14 @@ $\to$ before we can continue, we need to convert `DICOM`- to `.nii.gz` files
 
 There are multiple options to convert DICOM to `.nii.gz` files:
 
-1)  Newerst approach (recommended): use the BIDScoin workfolw
+1)  Newest approach (recommended): use the BIDScoin workfolw
 
-    ``` .bash
+    ``` bash
     # call bidscoiner module
     cd /shared/
     ml bidscoin
 
-    # sort dicoms (otherwise not all the data will be discoverable)
+    # sort dicoms (otherwise not all the data will be discoverable by bidscoiner)
     dcm2niix -o [YOUR_SORTED_DICOM_DIR] -r y [YOUR_ORIGINAL_DICOM_DIR]
 
     # convert to bids

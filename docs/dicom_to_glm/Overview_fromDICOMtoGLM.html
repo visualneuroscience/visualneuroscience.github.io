@@ -662,12 +662,12 @@ Warning
 <h1 data-number="4"><span class="header-section-number">4</span> <a href="../dicom_to_glm/DICOMtoBIDS.html">DICOM to nifti</a></h1>
 <p>There are multiple options to convert DICOM to <code>.nii.gz</code> files:</p>
 <ol type="1">
-<li><p>Newerst approach (recommended): use the BIDScoin workfolw</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode .bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># call bidscoiner module</span></span>
+<li><p>Newest approach (recommended): use the BIDScoin workfolw</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># call bidscoiner module</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared/</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ml</span> bidscoin</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># sort dicoms (otherwise not all the data will be discoverable)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># sort dicoms (otherwise not all the data will be discoverable by bidscoiner)</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">dcm2niix</span> <span class="at">-o</span> <span class="pp">[</span><span class="ss">YOUR_SORTED_DICOM_DIR</span><span class="pp">]</span> <span class="at">-r</span> y <span class="pp">[</span><span class="ss">YOUR_ORIGINAL_DICOM_DIR</span><span class="pp">]</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to bids</span></span>
