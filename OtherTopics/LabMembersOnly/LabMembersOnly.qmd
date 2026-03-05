@@ -9,14 +9,12 @@ editor: visual
 date: 01/24/2025
 ---
 
-# Server
-
 ## X2go
+
+We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and lab members. This is now the default way to access the server. Please see the [dedicated page](/neurodesk/neurodesktop.qmd).
+
+This page describes access via x2go, which was in place until 2024
 
 ![](images/clipboard-2910869127.png)
 
 <https://cloud.uni-graz.at/index.php/f/220686861>
-
-## Neurodesktop
-
-We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and those lab members who would like to use it. Please see the [dedicated page](/neurodesk/neurodesktop.qmd).
