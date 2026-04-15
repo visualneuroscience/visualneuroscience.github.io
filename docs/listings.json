@@ -18,12 +18,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/OtherTopics/AuthorshipCalculator/calculator.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
       "/mri/control-masks/control-masks.html",
       "/dicom_to_glm/roi_analysis.html",
       "/people/leaving/index.html",
       "/dicom_to_glm/troubleshooting.html",
-      "/OtherTopics/AuthorshipCalculator/calculator.html",
       "/mri/oriented-bounding-box/calculating_oriented_bounding_box.html",
       "/people/funding/funding.html",
       "/neurodesk/neurodesktop.html",

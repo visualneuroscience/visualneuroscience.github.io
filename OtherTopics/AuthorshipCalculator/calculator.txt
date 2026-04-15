@@ -3,14 +3,19 @@ fontsize: 12pt
 geometry: margin=3cm
 title: "Calculating authorship"
 description: "Calculating authorship of a manuscript according to the Elsevier CRediT author statement"
-author: AC, NZ
-date: 04/15/2026
+author: AC
+date: 08/18/2025
 ---
 
+## Authorship Calculator
+
+1.  Select number of authors
+2.  Adjust the weights of each role (this is up to you, however the weights below are default and can be adjusted as needed)
+3.  For each author select which role they had
+    -   To select multiple roles hold down {{< kbd mac=Command win=Control linux=Ctrl >}}
 
 ```{=html}
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>CRediT Authorship Calculator</title>
@@ -52,10 +57,10 @@ date: 04/15/2026
 <tbody></tbody>
 </table>
 
-<h3>Rubric contribution validation (Each rubric should sum to 100 across authors)</h3>
+<h3>Validation (Rubrics should sum to 100)</h3>
 <div id="validation"></div>
 
-<h3>Rubric Weight Validation (all rubric weights shoudl sum up to 1)</h3>
+<h3>Weight Validation (sum = 1)</h3>
 <div id="weightValidation"></div>
 
 <!-- charts -->
@@ -211,7 +216,4 @@ function exportCSV() {
 
 initTable();
 </script>
-
-</body>
-</html>
 ```

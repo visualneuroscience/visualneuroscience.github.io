@@ -196,7 +196,7 @@
     "href": "other_topics.html",
     "title": "Other Topics",
     "section": "",
-    "text": "Calculating authorship\n\n\nCalculating authorship of a manuscript according to the Elsevier CRediT author statement\n\n\n\nAC\n\n\nAug 18, 2025\n\n\n\n\n\n\n\n\n\n\n\nContribute to the website\n\n\n\nWebsite\n\n\n\nInformation about how to contribute and edit the website\n\n\n\nNZ, MG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nCalculating a priori sample size using G Power\n\n\n\nPower\n\nAnalysis\n\n\n\nInformation and descriptions of how to calculate a priori sample size using G Power\n\n\n\nCY\n\n\nMar 21, 2025\n\n\n\n\n\n\n\n\n\n\n\nOlder ways to access the server\n\n\nThis page is out of date\n\n\n\nNZ\n\n\nJan 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nGamma correction\n\n\nHow to measure monitor gamma and apply it in visual experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\nNo matching items\n Back to top",
+    "text": "Calculating authorship\n\n\nCalculating authorship of a manuscript according to the Elsevier CRediT author statement\n\n\n\nAC, NZ\n\n\nApr 15, 2026\n\n\n\n\n\n\n\n\n\n\n\nContribute to the website\n\n\n\nWebsite\n\n\n\nInformation about how to contribute and edit the website\n\n\n\nNZ, MG\n\n\nApr 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nCalculating a priori sample size using G Power\n\n\n\nPower\n\nAnalysis\n\n\n\nInformation and descriptions of how to calculate a priori sample size using G Power\n\n\n\nCY\n\n\nMar 21, 2025\n\n\n\n\n\n\n\n\n\n\n\nOlder ways to access the server\n\n\nThis page is out of date\n\n\n\nNZ\n\n\nJan 24, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nGamma correction\n\n\nHow to measure monitor gamma and apply it in visual experiments\n\n\n\nNZ\n\n\nAug 26, 2024\n\n\n\n\n\n\nNo matching items\n Back to top",
     "crumbs": [
       "Home",
       "Other Topics"
@@ -534,7 +534,7 @@
     "href": "index.html",
     "title": "Visual Neuroscience lab",
     "section": "",
-    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\n08 - first level GLM\n\n\nSeveral approaches to run a first level GLM using nilearn\n\n\n\nMG\n\n\nMar 12, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nControl Masks\n\n\nApproach to generate dilated and shifted control masks\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n09 - ROI Analysis\n\n\nExample of ROI Analysis\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nThings to do if you are leaving the lab\n\n\nListing of relevant steps and things to remember when leaving the lab\n\n\n\nNZ, MG\n\n\nDec 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\nCollection of known potential problems and their solutions\n\n\n\nMG\n\n\nDec 15, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\n\n Back to top",
+    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\nCalculating authorship\n\n\nCalculating authorship of a manuscript according to the Elsevier CRediT author statement\n\n\n\nAC, NZ\n\n\nApr 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n08 - first level GLM\n\n\nSeveral approaches to run a first level GLM using nilearn\n\n\n\nMG\n\n\nMar 12, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nControl Masks\n\n\nApproach to generate dilated and shifted control masks\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n09 - ROI Analysis\n\n\nExample of ROI Analysis\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nThings to do if you are leaving the lab\n\n\nListing of relevant steps and things to remember when leaving the lab\n\n\n\nNZ, MG\n\n\nDec 15, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\n\n Back to top",
     "crumbs": [
       "Home"
     ]
@@ -911,7 +911,7 @@
     "href": "OtherTopics/AuthorshipCalculator/calculator.html",
     "title": "Calculating authorship",
     "section": "",
-    "text": "Select number of authors\nAdjust the weights of each role (this is up to you, however the weights below are default and can be adjusted as needed)\nFor each author select which role they had\n\nTo select multiple roles hold down \n\n\n\n\nAuthor Contribution Calculator with CRediT Weights\n\n\n\n\n\n    \n        \n\n        \n            Number of Authors:\n            \n                \n                Generate Rows\n            \n            Please enter a valid number of authors (1 or more).\n        \n\n        \n            \n            \n                \n            \n        \n\n        \n            \n\n\n\nAuthor Name\nCRediT Roles\nAdjusted %\n\n\n\n\n\nTotal Adjusted Percentage:\n0.00%\n\n\n\n\n\n        \n    \n\n    \n    \n        \n        OK"
+    "text": "CRediT Authorship Calculator\n\n\n\n\n\nCRediT Authorship Calculator\n\nAdd Author\nCalculate\nExport CSV\n\n\n\n\n\nAuthor\n\n\n\n\n\n\n\nValidation (Rubrics should sum to 100)\n\n\nWeight Validation (sum = 1)\n\n\n\n\n  \n\n\n\n  \n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "OtherTopics/AuthorshipCalculator/calculator.html#authorship-calculator",
