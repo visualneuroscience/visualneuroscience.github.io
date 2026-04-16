@@ -52,10 +52,10 @@ date: 04/15/2026
 <tbody></tbody>
 </table>
 
-<h3>Rubric contribution validation (Each rubric should sum to 100 across authors)</h3>
+<h3>Rubric contribution validation (each rubric should sum to 100% across authors)</h3>
 <div id="validation"></div>
 
-<h3>Rubric Weight Validation (all rubric weights shoudl sum up to 1)</h3>
+<h3>Rubric weight validation (all rubric weights should sum up to 1)</h3>
 <div id="weightValidation"></div>
 
 <!-- charts -->

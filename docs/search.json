@@ -911,7 +911,7 @@
     "href": "OtherTopics/AuthorshipCalculator/calculator.html",
     "title": "Calculating authorship",
     "section": "",
-    "text": "CRediT Authorship Calculator\n\n\n\n\n\nCRediT Authorship Calculator\n\nAdd Author\nCalculate\nExport CSV\n\n\n\n\n\nAuthor\n\n\n\n\n\n\n\nRubric contribution validation (Each rubric should sum to 100 across authors)\n\n\nRubric Weight Validation (all rubric weights shoudl sum up to 1)\n\n\n\n\n  \n\n\n\n  \n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "CRediT Authorship Calculator\n\n\n\n\n\nCRediT Authorship Calculator\n\nAdd Author\nCalculate\nExport CSV\n\n\n\n\n\nAuthor\n\n\n\n\n\n\n\nRubric contribution validation (each rubric should sum to 100% across authors)\n\n\nRubric weight validation (all rubric weights should sum up to 1)\n\n\n\n\n  \n\n\n\n  \n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "OtherTopics/AuthorshipCalculator/calculator.html#authorship-calculator",
