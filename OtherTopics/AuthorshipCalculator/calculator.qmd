@@ -5,8 +5,10 @@ title: "Calculating authorship"
 description: "Calculating authorship of a manuscript according to the Elsevier CRediT author statement"
 author: AC, NZ
 date: 04/15/2026
+bibliography: references.bib
 ---
 
+See also: @mcnutt2018a
 
 ```{=html}
 <!DOCTYPE html>
