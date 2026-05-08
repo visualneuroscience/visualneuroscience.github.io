@@ -15,6 +15,7 @@ date: 09/18/2024
 -   Pasting graphs into the text
     -   as graphics (bitmap, png, jpeg, eps), not as an Microsoft graphical object
     -   with "In line with text" option (to prevent figures/graphs from moving around when text is being edited)
+    -   keep the original for high-resolution export
 
 # Text
 
@@ -62,7 +63,7 @@ Discussion has the following sections.
 
 # Formatting checklist
 
--   [ ] Use headings and subheadings function in MS Word
+-   [ ] Use Styles of your word processor, especially for headings
 
     -   Useful for navigation
 
@@ -75,6 +76,28 @@ Discussion has the following sections.
 -   [ ] For article manuscripts: also add line numbers (if the journal submission system does not add them automatically when you upload a PDF)
 
 -   [ ] Use a reference manager software. Currently Zotero is everyone's favourite. It has the "groups" function where you can add collaborators: <https://www.zotero.org/groups/>.
+
+# Manuscript life cycle (first author persepctive)
+
+-   Create the intial draft which you and your PI are happy with. Decide on a target journal and the list of potential reviewers.
+
+    -   At this stage the manuscript undergoes several rounds of going back and froth between you and your PI. This is normal.
+
+-   Once both of you are happy with the initial draft, send this draft to the other co-authors and wait for their feedback.
+
+-   Create the final version of the manuscript for submission which incorporates co-authors feedback (potentially also discussing with the PI).
+
+-   Submit the manuscript. Important: make note of the reviewers you indicated during the submission.
+
+-   If agreed with the PI, publish the submitted version on bioRxives or similar preprint server. Send the preprint link to the co-authors. If not publishing a preprint, send a submitted copy to the co-authors for the record, notifying them about the submission.
+
+-   Once you receive the reviews, forward them to the co-authors (even if they received a copy).
+
+-   Work on the revision with the PI.
+
+-   Once both of you are happy with the revised manuscript, supplementary material and the Response letter, send all documents to the co-authors for reviewing.
+
+-   Once you heard back from the co-authors, incorporate their changes (potentially also discussing with the PI) and submit the revision.
 
 # Reading recommendation
 

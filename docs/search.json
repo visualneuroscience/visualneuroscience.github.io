@@ -4,7 +4,7 @@
     "href": "people/writing/writing.html",
     "title": "Scientific writing in practice",
     "section": "",
-    "text": "Software for making artwork for figures: PowerPoint (simple), Inkscape (advanced functionality, especially relevant for article manuscripts)\nGraphs: R and python packages (especially seaborn)\nPasting graphs into the text\n\nas graphics (bitmap, png, jpeg, eps), not as an Microsoft graphical object\nwith “In line with text” option (to prevent figures/graphs from moving around when text is being edited)",
+    "text": "Software for making artwork for figures: PowerPoint (simple), Inkscape (advanced functionality, especially relevant for article manuscripts)\nGraphs: R and python packages (especially seaborn)\nPasting graphs into the text\n\nas graphics (bitmap, png, jpeg, eps), not as an Microsoft graphical object\nwith “In line with text” option (to prevent figures/graphs from moving around when text is being edited)\nkeep the original for high-resolution export",
     "crumbs": [
       "Home",
       "People",
