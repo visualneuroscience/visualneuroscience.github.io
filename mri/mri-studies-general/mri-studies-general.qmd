@@ -1,0 +1,103 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: "MRI studies: general information"
+description: "Useful information to consider before and while doing a (f)MRI study"
+number-sections: true
+#image: ./images/04_fmriprep/00_OpenFmriprep.png
+categories: [MRI]
+author: MG, NZ
+date: 07/21/2025
+bibliography: references.bib
+---
+
+This page is a constant work-in-progress file. The goal is to gather and provide necessary/useful/helpful information regarding (f)MRI studies. It can serve as a helpful guide when starting to plan an experiment and while doing it. If you already acquired your data, you can refer to [this page](../../dicom_to_glm/Overview_fromDICOMtoGLM.qmd) for information about the processing and analysis of your data.
+
+If you realize something that is missing, please let us know, so we can add it here!
+
+# Planning a study
+
+## Sample planning
+
+When planning a study you should get a clear idea of how much MRI data you will need per participant and how many participants you will need to test. For guidelines, see the following papers: [@poldrack2017; @baker2021]
+
+## Ethics application and approval
+
+Should be present at the start of the actual study the latest. Pilot experiments with colleagues that are employed at the institute can be done before the ethics approval, but external subjects can only be invited once the ethics application is through.
+
+## MRI study application
+
+This step is done only once you are done piloting and are sure that everything works (or once you are sure that it will work in the near future). The application is done through the [MRI lab website](https://mri-lab.uni-graz.at/en/).
+
+## events.tsv files
+
+- to save time later, keep in mind that you often need `*_events.tsv` files for your analysis! [see here](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/task-events.html)
+
+- In our fMRI sttudies, the bare minimum generally is that these files should include is the `Onset`, `duration` and `trial_type` (e.g. the condition that was shown). This is later used to build your contrasts, e.g. in the [first level GLM](../../dicom_to_glm/first_level_glm_nilearn.qmd)
+
+- `*_events.tsv` files have to be named exactly like the functional run they are referring to (except the ending). E.g. for the functional scan `sub-140001_ses-1_task-loc_run-01_bold.nii.gz`, the corresponding file has to be named `sub-140001_ses-1_task-loc_run-01_events.tsv`
+
+Example of a rudimentary .tsv file:
+
+```         
+onset   duration    trial_type
+0.5     1.0         Condition A
+2.0     1.0         Condition B
+4.0     1.5         Condition A
+```
+
+- These files can be generated on the fly by the [psychopy BIDS plugin](https://psychopy-bids.readthedocs.io/en/stable/) or creted post-hoc from
+
+  - matlab/octave workspace content (ask BU or MG for example code)
+
+  - from a psychopy \*.csv files saved in data/ of your psychopy project (ask NZ for example code)
+
+# Piloting a study
+
+- Before running a pilot with a subject inside an MRI, find the time to go to the MRI lab and test your scripts on the stimulation computer without a subject.
+  - Start your script for one run, trigger it (e.g. by pressing a button the subjects' button box), and wait the whole run duration until the end to make sure it finishes. You can occasionally do the task as a subject and press some buttons
+  - Make sure everything is saved as you expect it to be (check e.g. if button presses have been recoreded). Also check the timings of the script (dropped frames; any delays).
+  - Test a few other runs (not just the first one).
+  - For the Psychtoolbox keyboard events make sure the script reads the subject responses and the scanner trigger from the correct keyboard device.
+  - Only after you made sure everything works without the scanner you can plan a real MRI session.
+- When you do a pilot run with Natalia, you might get the raw DICOM files. ***Load them to the server and delete them as soon as possible from any external device (USB-Stick, local storage of your computer, etc.)*** After conversion to nifti immediately delete the dicoms as well. Main rule: no dicoms anywhere from our 3T Vida (7T is an exception).
+
+# Recruiting participants
+
+## Screening
+
+When doing participant recruitment for MRI, it is useful to inform them ahead of time about the prerequisites for participation. You can use the prescreening document available on the MRI lab [website](https://mri-lab.uni-graz.at/de/forscherinnen/downloads/) (different from MRI safety, see below).
+
+If a subject has anything that can pause a risk (titanium implants, contraceptive spiral, tattoos in the head/neck area), RTs will require a document/medical certificate confirming the safety of the object for 3T MRI. At least for modern medical implants such documents is routine. Tattoo studios will have to provide a written statement that their ink is metal-free.
+
+## Scheduling
+
+- Attention! Data protection!!! The slot booking should be dome via [Termino](https://www.termino.gv.at/). The correspondence for subject appointments through the university email.
+
+- Do not rush scheduling your best friends and partners that are flexible easily available. Keep them in your back pocket as an emergency solution, e.g., when a subject cancels on short notice. These people will save your day!
+
+# Running a study
+
+## Before each session
+
+### Paperwork
+
+There are two forms the participants have to sign before they go into the scanner:
+
+- MRI safety and data protection form of the MRI lab (can be found [here](https://mri-lab.uni-graz.at/de/forscherinnen/downloads/) in your favorite langauge). This form is the same for all fMRI studies. It stays with RTAs in the MRI lab.
+
+- Informed consent form (can be found among your ethics votum documents). This form is study-specific you will take it with you to the office. If it is electronic, please save it on the network location relevant to your study (e.g. Y-drive).
+
+### Instruction
+
+***Make sure that your participants completely understand what will happen and what they´ll have to do in the scanner!!!*** If participants have to do a task while they are in the scanner, explain to them in detail what they have to do! Reassure that everything is clear by asking back! Include short reminders of the task before each run (if applicable). Only if participants understand what they have to do, we can get the data that you want (or what the study was designed for). It can also help to have a demo-run ready on your laptop to show participants what will happen (there are also computers at the MRI-Lab that could be used for this. If you want to use them, test it first!)
+
+## During the scanning
+
+- At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual "assessment" of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals, that participants moved too much, you can re-instruct them to don´t move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC)
+
+## General todo
+
+- When a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask the RTs to save the sequence as a PDF. If you have access, save this PDF to `storage/nv_shared/Neurovision_Protocols` (if you don´t have access, send it to NZ)
+
+- If you compensate participants, carefully read the [corresponding entry](../../people/compensation/compensation.qmd)

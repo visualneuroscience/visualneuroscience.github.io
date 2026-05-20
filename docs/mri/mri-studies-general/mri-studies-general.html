@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="MG, NZ">
+<meta name="dcterms.date" content="2025-07-21">
+<meta name="description" content="Useful information to consider before and while doing a (f)MRI study">
 
-<title>MRI – Visual Neuroscience Lab</title>
+<title>MRI studies: general information – Visual Neuroscience Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,28 +26,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3a2dbdce7c4dc95f55a699630cb7cb40.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1aad147b61a856f03db3b3f12b962af6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,67 +92,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../style.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -142,7 +104,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
   </div>
@@ -153,43 +115,43 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./neurodesk/neurodesktop.html"> 
+    <a class="nav-link" href="../../neurodesk/neurodesktop.html"> 
 <span class="menu-text">Neurodesktop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./behavioral.html"> 
+    <a class="nav-link" href="../../behavioral.html"> 
 <span class="menu-text">Behavioral</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./labmeeting.html"> 
+    <a class="nav-link" href="../../labmeeting.html"> 
 <span class="menu-text">Labmeeting</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dicom_to_glm.html"> 
+    <a class="nav-link" href="../../dicom_to_glm.html"> 
 <span class="menu-text">DICOM to GLM</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./mri.html"> 
+    <a class="nav-link" href="../../mri.html"> 
 <span class="menu-text">MRI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./people.html"> 
+    <a class="nav-link" href="../../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./internship.html"> 
+    <a class="nav-link" href="../../internship.html"> 
 <span class="menu-text">Internship</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./other_topics.html"> 
+    <a class="nav-link" href="../../other_topics.html"> 
 <span class="menu-text">Other Topics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./archive.html"> 
+    <a class="nav-link" href="../../archive.html"> 
 <span class="menu-text">Archive</span></a>
   </li>  
 </ul>
@@ -203,7 +165,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mri.html">MRI</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">MRI studies: general information</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -225,19 +187,19 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
+  <a href="../../neurodesk/neurodesktop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neurodesktop</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dicom_to_glm.html" class="sidebar-item-text sidebar-link">
+            <a href="../../dicom_to_glm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI: from DICOM to GLM Analysis</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -246,61 +208,61 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/Overview_fromDICOMtoGLM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">00 - Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/DICOMtoBIDS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">01 - DICOM to BIDS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/check_IntendedFor_field.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02 - Check IntendedFor field of the fmap’s JSON</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">03 - T1w for PBn</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/defacing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">04 - Defacing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/RemoveNoiseScan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">05 - Removing Noise Scan</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/run_fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">06 - fMRIprep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/retinotopic_mapping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">07 - Probabilistic Retinotopic Mapping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/roi_analysis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/roi_analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">09 - ROI Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dicom_to_glm/troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
 </li>
@@ -308,67 +270,67 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./mri.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../mri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
  <span class="menu-text">mri/MRI-Studies_general/mri-studies_general-information.qmd</span>
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/3D-prints/3d-prints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3D printing a brain</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/7t_analysis_on_neurodesk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">7T anatomical analysis on neurodesk</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/bids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MRI BIDS and OSF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/analysis/fmriprep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fMRIprep analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mni-space/mni-space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MNI space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/control-masks/control-masks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control Masks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mri-lab-setup-2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Old MRI setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/mri-lab-setup-2024/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Update to the MRI lab setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./mri/physiology/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../mri/physiology/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Physiological noise correction</span></a>
   </div>
 </li>
@@ -376,7 +338,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./behavioral.html" class="sidebar-item-text sidebar-link">
+            <a href="../../behavioral.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Behavioral</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -385,19 +347,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/2024-05-22/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vision tests</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/2024-05-23/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BIDS for behavioral studies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
+  <a href="../../behavioral/chinrests/chinrests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom-built chin rests</span></a>
   </div>
 </li>
@@ -405,7 +367,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./people.html" class="sidebar-item-text sidebar-link">
+            <a href="../../people.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">People</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -414,37 +376,37 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/stipends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/stipends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Stipends and prizes for master and PhD students</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/coffee/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/coffee/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coffee time</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/compensation/compensation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Participant compensation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/leaving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/leaving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Things to do if you are leaving the lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/writing/writing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/writing/writing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scientific writing in practice</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./people/funding/funding.html" class="sidebar-item-text sidebar-link">
+  <a href="../../people/funding/funding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research funding opportunities</span></a>
   </div>
 </li>
@@ -452,7 +414,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./internship.html" class="sidebar-item-text sidebar-link">
+            <a href="../../internship.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internship</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -461,13 +423,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./internship/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../internship/pflichtpraktikum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pflichtpraktikum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./internship/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../internship/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internship Checklist</span></a>
   </div>
 </li>
@@ -478,7 +440,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./other_topics.html" class="sidebar-item-text sidebar-link">
+            <a href="../../other_topics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Other Topics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -487,25 +449,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/CalculatingAPrioriPower.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calculating a priori sample size using G Power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/displays/displays.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma correction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/ContributeWithR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contribute to the website</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
+  <a href="../../OtherTopics/LabMembersOnly/LabMembersOnly.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Older ways to access the server</span></a>
   </div>
 </li>
@@ -513,13 +475,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labmeeting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../labmeeting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labmeeting</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive</span></a>
   </div>
 </li>
@@ -529,21 +491,69 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="M0QtUHJpbnQ=">3D-Print <span class="quarto-category-count">(1)</span></div><div class="category" data-category="N1Q=">7T <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QW5hbHlzaXM=">Analysis <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QklEUw==">BIDS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Zm1yaVByZXA=">fmriPrep <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TVJJ">MRI <span class="quarto-category-count">(11)</span></div><div class="category" data-category="TmV1cm9kZXNr">Neurodesk <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Tk5MLUdvZ2dsZXM=">NNL-Goggles <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T1NG">OSF <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGh5c2lvbG9neQ==">Physiology <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#planning-a-study" id="toc-planning-a-study" class="nav-link active" data-scroll-target="#planning-a-study"><span class="header-section-number">1</span> Planning a study</a>
+  <ul class="collapse">
+  <li><a href="#sample-planning" id="toc-sample-planning" class="nav-link" data-scroll-target="#sample-planning"><span class="header-section-number">1.1</span> Sample planning</a></li>
+  <li><a href="#ethics-application-and-approval" id="toc-ethics-application-and-approval" class="nav-link" data-scroll-target="#ethics-application-and-approval"><span class="header-section-number">1.2</span> Ethics application and approval</a></li>
+  <li><a href="#mri-study-application" id="toc-mri-study-application" class="nav-link" data-scroll-target="#mri-study-application"><span class="header-section-number">1.3</span> MRI study application</a></li>
+  <li><a href="#events.tsv-files" id="toc-events.tsv-files" class="nav-link" data-scroll-target="#events.tsv-files"><span class="header-section-number">1.4</span> events.tsv files</a></li>
+  </ul></li>
+  <li><a href="#piloting-a-study" id="toc-piloting-a-study" class="nav-link" data-scroll-target="#piloting-a-study"><span class="header-section-number">2</span> Piloting a study</a></li>
+  <li><a href="#recruiting-participants" id="toc-recruiting-participants" class="nav-link" data-scroll-target="#recruiting-participants"><span class="header-section-number">3</span> Recruiting participants</a>
+  <ul class="collapse">
+  <li><a href="#screening" id="toc-screening" class="nav-link" data-scroll-target="#screening"><span class="header-section-number">3.1</span> Screening</a></li>
+  <li><a href="#scheduling" id="toc-scheduling" class="nav-link" data-scroll-target="#scheduling"><span class="header-section-number">3.2</span> Scheduling</a></li>
+  </ul></li>
+  <li><a href="#running-a-study" id="toc-running-a-study" class="nav-link" data-scroll-target="#running-a-study"><span class="header-section-number">4</span> Running a study</a>
+  <ul class="collapse">
+  <li><a href="#before-each-session" id="toc-before-each-session" class="nav-link" data-scroll-target="#before-each-session"><span class="header-section-number">4.1</span> Before each session</a>
+  <ul class="collapse">
+  <li><a href="#paperwork" id="toc-paperwork" class="nav-link" data-scroll-target="#paperwork"><span class="header-section-number">4.1.1</span> Paperwork</a></li>
+  <li><a href="#instruction" id="toc-instruction" class="nav-link" data-scroll-target="#instruction"><span class="header-section-number">4.1.2</span> Instruction</a></li>
+  </ul></li>
+  <li><a href="#during-the-scanning" id="toc-during-the-scanning" class="nav-link" data-scroll-target="#during-the-scanning"><span class="header-section-number">4.2</span> During the scanning</a></li>
+  <li><a href="#general-todo" id="toc-general-todo" class="nav-link" data-scroll-target="#general-todo"><span class="header-section-number">4.3</span> General todo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MRI</h1>
-</div>
+<h1 class="title">MRI studies: general information</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MRI</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Useful information to consider before and while doing a (f)MRI study
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-body">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>MG, NZ </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 21, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -553,385 +563,115 @@ window.Quarto = {
 </header>
 
 
+<p>This page is a constant work-in-progress file. The goal is to gather and provide necessary/useful/helpful information regarding (f)MRI studies. It can serve as a helpful guide when starting to plan an experiment and while doing it. If you already acquired your data, you can refer to <a href="../../dicom_to_glm/Overview_fromDICOMtoGLM.html">this page</a> for information about the processing and analysis of your data.</p>
+<p>If you realize something that is missing, please let us know, so we can add it here!</p>
+<section id="planning-a-study" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Planning a study</h1>
+<section id="sample-planning" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sample-planning"><span class="header-section-number">1.1</span> Sample planning</h2>
+<p>When planning a study you should get a clear idea of how much MRI data you will need per participant and how many participants you will need to test. For guidelines, see the following papers: <span class="citation" data-cites="poldrack2017 baker2021">(<a href="#ref-poldrack2017" role="doc-biblioref">Poldrack et al. 2017</a>; <a href="#ref-baker2021" role="doc-biblioref">Baker et al. 2021</a>)</span></p>
+</section>
+<section id="ethics-application-and-approval" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="ethics-application-and-approval"><span class="header-section-number">1.2</span> Ethics application and approval</h2>
+<p>Should be present at the start of the actual study the latest. Pilot experiments with colleagues that are employed at the institute can be done before the ethics approval, but external subjects can only be invited once the ethics application is through.</p>
+</section>
+<section id="mri-study-application" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="mri-study-application"><span class="header-section-number">1.3</span> MRI study application</h2>
+<p>This step is done only once you are done piloting and are sure that everything works (or once you are sure that it will work in the near future). The application is done through the <a href="https://mri-lab.uni-graz.at/en/">MRI lab website</a>.</p>
+</section>
+<section id="events.tsv-files" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="events.tsv-files"><span class="header-section-number">1.4</span> events.tsv files</h2>
+<ul>
+<li><p>to save time later, keep in mind that you often need <code>*_events.tsv</code> files for your analysis! <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/task-events.html">see here</a></p></li>
+<li><p>In our fMRI sttudies, the bare minimum generally is that these files should include is the <code>Onset</code>, <code>duration</code> and <code>trial_type</code> (e.g.&nbsp;the condition that was shown). This is later used to build your contrasts, e.g.&nbsp;in the <a href="../../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a></p></li>
+<li><p><code>*_events.tsv</code> files have to be named exactly like the functional run they are referring to (except the ending). E.g. for the functional scan <code>sub-140001_ses-1_task-loc_run-01_bold.nii.gz</code>, the corresponding file has to be named <code>sub-140001_ses-1_task-loc_run-01_events.tsv</code></p></li>
+</ul>
+<p>Example of a rudimentary .tsv file:</p>
+<pre><code>onset   duration    trial_type
+0.5     1.0         Condition A
+2.0     1.0         Condition B
+4.0     1.5         Condition A</code></pre>
+<ul>
+<li><p>These files can be generated on the fly by the <a href="https://psychopy-bids.readthedocs.io/en/stable/">psychopy BIDS plugin</a> or creted post-hoc from</p>
+<ul>
+<li><p>matlab/octave workspace content (ask BU or MG for example code)</p></li>
+<li><p>from a psychopy *.csv files saved in data/ of your psychopy project (ask NZ for example code)</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="piloting-a-study" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Piloting a study</h1>
+<ul>
+<li>Before running a pilot with a subject inside an MRI, find the time to go to the MRI lab and test your scripts on the stimulation computer without a subject.
+<ul>
+<li>Start your script for one run, trigger it (e.g.&nbsp;by pressing a button the subjects’ button box), and wait the whole run duration until the end to make sure it finishes. You can occasionally do the task as a subject and press some buttons</li>
+<li>Make sure everything is saved as you expect it to be (check e.g.&nbsp;if button presses have been recoreded). Also check the timings of the script (dropped frames; any delays).</li>
+<li>Test a few other runs (not just the first one).</li>
+<li>For the Psychtoolbox keyboard events make sure the script reads the subject responses and the scanner trigger from the correct keyboard device.</li>
+<li>Only after you made sure everything works without the scanner you can plan a real MRI session.</li>
+</ul></li>
+<li>When you do a pilot run with Natalia, you might get the raw DICOM files. <strong><em>Load them to the server and delete them as soon as possible from any external device (USB-Stick, local storage of your computer, etc.)</em></strong> After conversion to nifti immediately delete the dicoms as well. Main rule: no dicoms anywhere from our 3T Vida (7T is an exception).</li>
+</ul>
+</section>
+<section id="recruiting-participants" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Recruiting participants</h1>
+<section id="screening" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="screening"><span class="header-section-number">3.1</span> Screening</h2>
+<p>When doing participant recruitment for MRI, it is useful to inform them ahead of time about the prerequisites for participation. You can use the prescreening document available on the MRI lab <a href="https://mri-lab.uni-graz.at/de/forscherinnen/downloads/">website</a> (different from MRI safety, see below).</p>
+<p>If a subject has anything that can pause a risk (titanium implants, contraceptive spiral, tattoos in the head/neck area), RTs will require a document/medical certificate confirming the safety of the object for 3T MRI. At least for modern medical implants such documents is routine. Tattoo studios will have to provide a written statement that their ink is metal-free.</p>
+</section>
+<section id="scheduling" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="scheduling"><span class="header-section-number">3.2</span> Scheduling</h2>
+<ul>
+<li><p>Attention! Data protection!!! The slot booking should be dome via <a href="https://www.termino.gv.at/">Termino</a>. The correspondence for subject appointments through the university email.</p></li>
+<li><p>Do not rush scheduling your best friends and partners that are flexible easily available. Keep them in your back pocket as an emergency solution, e.g., when a subject cancels on short notice. These people will save your day!</p></li>
+</ul>
+</section>
+</section>
+<section id="running-a-study" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Running a study</h1>
+<section id="before-each-session" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="before-each-session"><span class="header-section-number">4.1</span> Before each session</h2>
+<section id="paperwork" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="paperwork"><span class="header-section-number">4.1.1</span> Paperwork</h3>
+<p>There are two forms the participants have to sign before they go into the scanner:</p>
+<ul>
+<li><p>MRI safety and data protection form of the MRI lab (can be found <a href="https://mri-lab.uni-graz.at/de/forscherinnen/downloads/">here</a> in your favorite langauge). This form is the same for all fMRI studies. It stays with RTAs in the MRI lab.</p></li>
+<li><p>Informed consent form (can be found among your ethics votum documents). This form is study-specific you will take it with you to the office. If it is electronic, please save it on the network location relevant to your study (e.g.&nbsp;Y-drive).</p></li>
+</ul>
+</section>
+<section id="instruction" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="instruction"><span class="header-section-number">4.1.2</span> Instruction</h3>
+<p><strong><em>Make sure that your participants completely understand what will happen and what they´ll have to do in the scanner!!!</em></strong> If participants have to do a task while they are in the scanner, explain to them in detail what they have to do! Reassure that everything is clear by asking back! Include short reminders of the task before each run (if applicable). Only if participants understand what they have to do, we can get the data that you want (or what the study was designed for). It can also help to have a demo-run ready on your laptop to show participants what will happen (there are also computers at the MRI-Lab that could be used for this. If you want to use them, test it first!)</p>
+</section>
+</section>
+<section id="during-the-scanning" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="during-the-scanning"><span class="header-section-number">4.2</span> During the scanning</h2>
+<ul>
+<li>At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual “assessment” of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals, that participants moved too much, you can re-instruct them to don´t move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC)</li>
+</ul>
+</section>
+<section id="general-todo" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="general-todo"><span class="header-section-number">4.3</span> General todo</h2>
+<ul>
+<li><p>When a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask the RTs to save the sequence as a PDF. If you have access, save this PDF to <code>storage/nv_shared/Neurovision_Protocols</code> (if you don´t have access, send it to NZ)</p></li>
+<li><p>If you compensate participants, carefully read the <a href="../../people/compensation/compensation.html">corresponding entry</a></p></li>
+</ul>
 
 
 
+</section>
+</section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="TVJJJTJDM0QtUHJpbnQ=" data-listing-date-sort="1728511200000" data-listing-file-modified-sort="1764322427855" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
-<a href="./mri/3D-prints/3d-prints.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/3D-prints/images/clipboard-3427974075.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-3D printing a brain
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('M0QtUHJpbnQ='); return false;">3D-Print</div>
-
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-baker2021" class="csl-entry" role="listitem">
+Baker, Daniel H., Greta Vilidaite, Freya A. Lygo, et al. 2021. <span>“Power Contours: Optimising Sample Size and Precision in Experimental Psychology and Human Neuroscience.”</span> <em>Psychological Methods</em> 26 (3): 295–314. <a href="https://doi.org/10.1037/met0000337">https://doi.org/10.1037/met0000337</a>.
 </div>
-<div class="card-text listing-description delink">
-<p>current procedure for 3d printing brains</p>
+<div id="ref-poldrack2017" class="csl-entry" role="listitem">
+Poldrack, Russell A., Chris I. Baker, Joke Durnez, et al. 2017. <span>“Scanning the Horizon: Towards Transparent and Reproducible Neuroimaging Research.”</span> <em>Nature Reviews Neuroscience</em> 18 (2): 115–26. <a href="https://doi.org/10.1038/nrn.2016.167">https://doi.org/10.1038/nrn.2016.167</a>.
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-Oct 10, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="TVJJJTJDN1QlMkNBbmFseXNpcyUyQ05ldXJvZGVzaw==" data-listing-date-sort="1737932400000" data-listing-file-modified-sort="1764322427855" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="634">
-<a href="./mri/analysis/7t_analysis_on_neurodesk.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/analysis/presurfer_result.gif" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-7T anatomical analysis on neurodesk
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('N1Q='); return false;">7T</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QW5hbHlzaXM='); return false;">Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV1cm9kZXNr'); return false;">Neurodesk</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>How to run 7 Tesla anatomy analysis on neurodesk</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-AC
-</div>
-<div class="listing-date">
-Jan 27, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="QklEUyUyQ09TRg==" data-listing-date-sort="1716415200000" data-listing-file-modified-sort="1764322427855" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
-<a href="./mri/analysis/bids.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-MRI BIDS and OSF
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QklEUw=='); return false;">BIDS</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T1NG'); return false;">OSF</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Information about BIDS and OSF</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-AA
-</div>
-<div class="listing-date">
-May 23, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="TVJJJTJDQW5hbHlzaXMlMkNOZXVyb2Rlc2slMkNmbXJpUHJlcA==" data-listing-date-sort="1720389600000" data-listing-file-modified-sort="1764322427889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="869">
-<a href="./mri/analysis/fmriprep.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/analysis/fMRIprep_pr.gif" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-fMRIprep analysis
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QW5hbHlzaXM='); return false;">Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV1cm9kZXNr'); return false;">Neurodesk</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Zm1yaVByZXA='); return false;">fmriPrep</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Information about using fMRIprep to preprocess fMRI data</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-AC
-</div>
-<div class="listing-date">
-Jul 8, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="TVJJJTJDQW5hbHlzaXMlMkNOZXVyb2Rlc2s=" data-listing-date-sort="1736982000000" data-listing-file-modified-sort="1764322427889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="491">
-<a href="./mri/analysis/freesurfer FSFAST.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/analysis/neurodesk.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-FreeSurfer FSFAST
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QW5hbHlzaXM='); return false;">Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV1cm9kZXNr'); return false;">Neurodesk</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Information about running an FSFAST analysis on Neurodesk</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-AC
-</div>
-<div class="listing-date">
-Jan 16, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="TVJJ" data-listing-date-sort="1765839600000" data-listing-file-modified-sort="1771252737028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="142">
-<a href="./mri/control-masks/control-masks.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/control-masks/images/controlRegions.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Control Masks
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Approach to generate dilated and shifted control masks</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-MG
-</div>
-<div class="listing-date">
-Dec 16, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="TVJJ" data-listing-date-sort="1752530400000" data-listing-file-modified-sort="1764322427903" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
-<a href="./mri/mni-space/mni-space.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/mni-space/images/clipboard-309090548.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-MNI space
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>information about various MNI spaces and templates</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-NZ
-</div>
-<div class="listing-date">
-Jul 15, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="TVJJ" data-listing-date-sort="1672527600000" data-listing-file-modified-sort="1764322427907" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
-<a href="./mri/mri-lab-setup-2023/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/mri-lab-setup-2023/316895640-7f4fa294-89fc-4fe1-a430-589a4f116768.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Old MRI setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Information about running experiments in the MRI lab (before the new computer arrived!)</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-AA
-</div>
-<div class="listing-date">
-Jan 1, 2023
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="TVJJJTJDTk5MLUdvZ2dsZXM=" data-listing-date-sort="1728252000000" data-listing-file-modified-sort="1764322427958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1066">
-<a href="./mri/mri-lab-setup-2024/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="mri\mri-lab-setup-2024\goggle_box.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Update to the MRI lab setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Tk5MLUdvZ2dsZXM='); return false;">NNL-Goggles</div>
-
-</div>
-<div class="card-text listing-description delink">
-The MRI lab has had some upgrades in 2024 including:
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-AC
-</div>
-<div class="listing-date">
-Oct 7, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="TVJJ" data-listing-date-sort="1753048800000" data-listing-file-modified-sort="1779286190035" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1165">
-<a href="./mri/mri-studies-general/mri-studies-general.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-MRI studies: general information
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Useful information to consider before and while doing a (f)MRI study</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-MG, NZ
-</div>
-<div class="listing-date">
-Jul 21, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="TVJJJTJDQW5hbHlzaXMlMkNOZXVyb2Rlc2s=" data-listing-date-sort="1755036000000" data-listing-file-modified-sort="1764322427972" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="663">
-<a href="./mri/oriented-bounding-box/calculating_oriented_bounding_box.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/oriented-bounding-box/images/3d_slicer.PNG" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Calculating oriented bounding box
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QW5hbHlzaXM='); return false;">Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV1cm9kZXNr'); return false;">Neurodesk</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>How to use 3D Slicer to calcualte oriented bounding box</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-AC
-</div>
-<div class="listing-date">
-Aug 13, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="TVJJJTJDUGh5c2lvbG9neQ==" data-listing-date-sort="1698271200000" data-listing-file-modified-sort="1764322427999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="541">
-<a href="./mri/physiology/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./mri/physiology/Picture4.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Physiological noise correction
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TVJJ'); return false;">MRI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGh5c2lvbG9neQ=='); return false;">Physiology</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Creating physiology regressors using the PhysIO toolbox</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-MW
-</div>
-<div class="listing-date">
-Oct 26, 2023
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

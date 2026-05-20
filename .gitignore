@@ -9,3 +9,4 @@ visualneuroscience.github.io.Rproj
 .quarto
 
 **/*.quarto_ipynb
+.positai
