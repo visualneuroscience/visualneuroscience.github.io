@@ -503,7 +503,8 @@ div.csl-indent {
   <li><a href="#sample-planning" id="toc-sample-planning" class="nav-link" data-scroll-target="#sample-planning"><span class="header-section-number">1.1</span> Sample planning</a></li>
   <li><a href="#ethics-application-and-approval" id="toc-ethics-application-and-approval" class="nav-link" data-scroll-target="#ethics-application-and-approval"><span class="header-section-number">1.2</span> Ethics application and approval</a></li>
   <li><a href="#mri-study-application" id="toc-mri-study-application" class="nav-link" data-scroll-target="#mri-study-application"><span class="header-section-number">1.3</span> MRI study application</a></li>
-  <li><a href="#events.tsv-files" id="toc-events.tsv-files" class="nav-link" data-scroll-target="#events.tsv-files"><span class="header-section-number">1.4</span> events.tsv files</a></li>
+  <li><a href="#preregistration" id="toc-preregistration" class="nav-link" data-scroll-target="#preregistration"><span class="header-section-number">1.4</span> Preregistration</a></li>
+  <li><a href="#events.tsv-files" id="toc-events.tsv-files" class="nav-link" data-scroll-target="#events.tsv-files"><span class="header-section-number">1.5</span> events.tsv files</a></li>
   </ul></li>
   <li><a href="#piloting-a-study" id="toc-piloting-a-study" class="nav-link" data-scroll-target="#piloting-a-study"><span class="header-section-number">2</span> Piloting a study</a></li>
   <li><a href="#recruiting-participants" id="toc-recruiting-participants" class="nav-link" data-scroll-target="#recruiting-participants"><span class="header-section-number">3</span> Recruiting participants</a>
@@ -519,7 +520,8 @@ div.csl-indent {
   <li><a href="#instruction" id="toc-instruction" class="nav-link" data-scroll-target="#instruction"><span class="header-section-number">4.1.2</span> Instruction</a></li>
   </ul></li>
   <li><a href="#during-the-scanning" id="toc-during-the-scanning" class="nav-link" data-scroll-target="#during-the-scanning"><span class="header-section-number">4.2</span> During the scanning</a></li>
-  <li><a href="#general-todo" id="toc-general-todo" class="nav-link" data-scroll-target="#general-todo"><span class="header-section-number">4.3</span> General todo</a></li>
+  <li><a href="#after-the-scanning" id="toc-after-the-scanning" class="nav-link" data-scroll-target="#after-the-scanning"><span class="header-section-number">4.3</span> After the scanning</a></li>
+  <li><a href="#general-todo" id="toc-general-todo" class="nav-link" data-scroll-target="#general-todo"><span class="header-section-number">4.4</span> General todo</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -582,8 +584,19 @@ div.csl-indent {
 <h2 data-number="1.3" class="anchored" data-anchor-id="mri-study-application"><span class="header-section-number">1.3</span> MRI study application</h2>
 <p>This step is done only once you are done piloting and are sure that everything works (or once you are sure that it will work in the near future). The application is done through the <a href="https://mri-lab.uni-graz.at/en/">MRI lab website</a>.</p>
 </section>
-<section id="events.tsv-files" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="events.tsv-files"><span class="header-section-number">1.4</span> events.tsv files</h2>
+<section id="preregistration" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="preregistration"><span class="header-section-number">1.4</span> Preregistration</h2>
+<p>Typically we do this on <a href="https://osf.io/">OSF</a> using a the AsPredicted template.</p>
+<ul>
+<li><p>Create an account on osf if you don’t have one</p></li>
+<li><p>Create a project</p></li>
+<li><p>Important: Add the PI as a project contributor with admin rights</p></li>
+<li><p>Create a draft document with preregistration information and send it to the PI</p></li>
+<li><p>Once the PI and you are happy with the draft, paste it to OSF</p></li>
+</ul>
+</section>
+<section id="events.tsv-files" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="events.tsv-files"><span class="header-section-number">1.5</span> events.tsv files</h2>
 <ul>
 <li><p>to save time later, keep in mind that you often need <code>*_events.tsv</code> files for your analysis! <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/task-events.html">see here</a></p></li>
 <li><p>In our fMRI sttudies, the bare minimum generally is that these files should include is the <code>Onset</code>, <code>duration</code> and <code>trial_type</code> (e.g.&nbsp;the condition that was shown). This is later used to build your contrasts, e.g.&nbsp;in the <a href="../../dicom_to_glm/first_level_glm_nilearn.html">first level GLM</a></p></li>
@@ -652,11 +665,19 @@ div.csl-indent {
 <section id="during-the-scanning" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="during-the-scanning"><span class="header-section-number">4.2</span> During the scanning</h2>
 <ul>
-<li>At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual “assessment” of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals, that participants moved too much, you can re-instruct them to don´t move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC)</li>
+<li>At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual “assessment” of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals that participants moved too much, you can remind them not to move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC).</li>
 </ul>
 </section>
-<section id="general-todo" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="general-todo"><span class="header-section-number">4.3</span> General todo</h2>
+<section id="after-the-scanning" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="after-the-scanning"><span class="header-section-number">4.3</span> After the scanning</h2>
+<ul>
+<li><p>Run quality assurance using MRQC tools and/or inspect the data visually</p></li>
+<li><p>Inspect the anatomical scan; if you suspect anatomical irregularity, inform RT immediately to handle potential incidental findings</p></li>
+<li><p>If the scan looks o.k. provide subjects with a NIFTI of their brain (if they requested it). You can point them to the web-based version of freeview for viewing it <a href="https://freesurfer.github.io/freebrowse/">FreeBrowse</a>. You can also point them to our recommended procedure for <a href="mri/3d-prints.qmd">3D printing</a>.</p></li>
+</ul>
+</section>
+<section id="general-todo" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="general-todo"><span class="header-section-number">4.4</span> General todo</h2>
 <ul>
 <li><p>When a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask the RTs to save the sequence as a PDF. If you have access, save this PDF to <code>storage/nv_shared/Neurovision_Protocols</code> (if you don´t have access, send it to NZ)</p></li>
 <li><p>If you compensate participants, carefully read the <a href="../../people/compensation/compensation.html">corresponding entry</a></p></li>

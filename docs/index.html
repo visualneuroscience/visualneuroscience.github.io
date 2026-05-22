@@ -81,9 +81,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: [],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 18,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -554,6 +555,120 @@ window.Quarto = {
 <h3 data-anchor-id="recent-changes">Recent Changes</h3>
 <div id="listing-recent-posts" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="TVJJ" data-listing-date-sort="1779314400000" data-listing-file-modified-sort="1779452183405" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1301">
+<a href="./mri/mri-studies-general/mri-studies-general.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./mri/mri-studies-general/images/scanner-with-monitor.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+MRI studies: general information
+</h5>
+<div class="card-text listing-description delink">
+<p>Useful information to consider before and while doing a (f)MRI study</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+MG, NZ
+</div>
+<div class="listing-date">
+May 21, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1776204000000" data-listing-file-modified-sort="1778063171622" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="647">
+<a href="./OtherTopics/AuthorshipCalculator/calculator.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Calculating authorship
+</h5>
+<div class="card-text listing-description delink">
+<p>Calculating authorship of a manuscript according to the Elsevier CRediT author statement</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+AC, NZ
+</div>
+<div class="listing-date">
+Apr 15, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ05ldXJvZGVzayUyQ25pbGVhcm4=" data-listing-date-sort="1773270000000" data-listing-file-modified-sort="1771252736953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="776">
+<a href="./dicom_to_glm/first_level_glm_nilearn.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+08 - first level GLM
+</h5>
+<div class="card-text listing-description delink">
+<p>Several approaches to run a first level GLM using nilearn</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+MG
+</div>
+<div class="listing-date">
+Mar 12, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="TVJJ" data-listing-date-sort="1765839600000" data-listing-file-modified-sort="1771252737028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="142">
+<a href="./mri/control-masks/control-masks.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./mri/control-masks/images/controlRegions.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Control Masks
+</h5>
+<div class="card-text listing-description delink">
+<p>Approach to generate dilated and shifted control masks</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+MG
+</div>
+<div class="listing-date">
+Dec 16, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="TVJJJTJDQW5hbHlzaXMlMkNmbXJpUHJlcCUyQ05ldXJvZGVzayUyQ25pbGVhcm4=" data-listing-date-sort="1765839600000" data-listing-file-modified-sort="1771252736953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="927">
+<a href="./dicom_to_glm/roi_analysis.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+09 - ROI Analysis
+</h5>
+<div class="card-text listing-description delink">
+<p>Example of ROI Analysis</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+MG
+</div>
+<div class="listing-date">
+Dec 16, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>

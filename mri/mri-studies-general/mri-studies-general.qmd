@@ -4,7 +4,7 @@ geometry: margin=3cm
 title: "MRI studies: general information"
 description: "Useful information to consider before and while doing a (f)MRI study"
 number-sections: true
-#image: ./images/04_fmriprep/00_OpenFmriprep.png
+image: ./images/scanner-with-monitor.jpg
 categories: [MRI]
 author: MG, NZ
 date: 05/21/2026
@@ -28,6 +28,20 @@ Should be present at the start of the actual study the latest. Pilot experiments
 ## MRI study application
 
 This step is done only once you are done piloting and are sure that everything works (or once you are sure that it will work in the near future). The application is done through the [MRI lab website](https://mri-lab.uni-graz.at/en/).
+
+## Preregistration
+
+Typically we do this on [OSF](https://osf.io/) using a the AsPredicted template.
+
+- Create an account on osf if you don't have one
+
+- Create a project
+
+- Important: Add the PI as a project contributor with admin rights
+
+- Create a draft document with preregistration information and send it to the PI
+
+- Once the PI and you are happy with the draft, paste it to OSF
 
 ## events.tsv files
 
@@ -94,7 +108,15 @@ There are two forms the participants have to sign before they go into the scanne
 
 ## During the scanning
 
-- At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual "assessment" of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals, that participants moved too much, you can re-instruct them to don´t move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC)
+- At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual "assessment" of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals that participants moved too much, you can remind them not to move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC).
+
+## After the scanning
+
+- Run quality assurance using MRQC tools and/or inspect the data visually
+
+- Inspect the anatomical scan; if you suspect anatomical irregularity, inform RT immediately to handle potential incidental findings
+
+- If the scan looks o.k. provide subjects with a NIFTI of their brain (if they requested it). You can point them to the web-based version of freeview for viewing it [FreeBrowse](https://freesurfer.github.io/freebrowse/). You can also point them to our recommended procedure for [3D printing](mri/3d-prints.qmd).
 
 ## General todo
 

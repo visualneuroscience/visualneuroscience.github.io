@@ -534,7 +534,7 @@
     "href": "index.html",
     "title": "Visual Neuroscience lab",
     "section": "",
-    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\nNo matching items\n\n\n\n\n Back to top",
+    "text": "About\n\nWe investigate how subjective experience arises from sensory input and how this is represented in the brain.\nPI: Natalia Zaretskaya\n\n\n\n\nRecent Changes\n\n\n\n\n\n\n\n\n\n\nMRI studies: general information\n\n\nUseful information to consider before and while doing a (f)MRI study\n\n\n\nMG, NZ\n\n\nMay 21, 2026\n\n\n\n\n\n\n\n\n\n\n\nCalculating authorship\n\n\nCalculating authorship of a manuscript according to the Elsevier CRediT author statement\n\n\n\nAC, NZ\n\n\nApr 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n08 - first level GLM\n\n\nSeveral approaches to run a first level GLM using nilearn\n\n\n\nMG\n\n\nMar 12, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nControl Masks\n\n\nApproach to generate dilated and shifted control masks\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n09 - ROI Analysis\n\n\nExample of ROI Analysis\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\nNo matching items\n\n\n\n\n Back to top",
     "crumbs": [
       "Home"
     ]
@@ -1445,7 +1445,7 @@
     "href": "mri.html",
     "title": "MRI",
     "section": "",
-    "text": "3D printing a brain\n\n\n\nMRI\n\n3D-Print\n\n\n\ncurrent procedure for 3d printing brains\n\n\n\nNZ\n\n\nOct 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n7T anatomical analysis on neurodesk\n\n\n\nMRI\n\n7T\n\nAnalysis\n\nNeurodesk\n\n\n\nHow to run 7 Tesla anatomy analysis on neurodesk\n\n\n\nAC\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\nMRI BIDS and OSF\n\n\n\nBIDS\n\nOSF\n\n\n\nInformation about BIDS and OSF\n\n\n\nAA\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nfMRIprep analysis\n\n\n\nMRI\n\nAnalysis\n\nNeurodesk\n\nfmriPrep\n\n\n\nInformation about using fMRIprep to preprocess fMRI data\n\n\n\nAC\n\n\nJul 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeSurfer FSFAST\n\n\n\nMRI\n\nAnalysis\n\nNeurodesk\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nControl Masks\n\n\n\nMRI\n\n\n\nApproach to generate dilated and shifted control masks\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNI space\n\n\n\nMRI\n\n\n\ninformation about various MNI spaces and templates\n\n\n\nNZ\n\n\nJul 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nOld MRI setup\n\n\n\nMRI\n\n\n\nInformation about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nAA\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\nUpdate to the MRI lab setup\n\n\n\nMRI\n\nNNL-Goggles\n\n\n\n\n\n\n\nAC\n\n\nOct 7, 2024\n\n\n\n\n\n\n\n\n\n\n\nMRI studies: general information\n\n\n\nMRI\n\n\n\nUseful information to consider before and while doing a (f)MRI study\n\n\n\nMG, NZ\n\n\nMay 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalculating oriented bounding box\n\n\n\nMRI\n\nAnalysis\n\nNeurodesk\n\n\n\nHow to use 3D Slicer to calcualte oriented bounding box\n\n\n\nAC\n\n\nAug 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhysiological noise correction\n\n\n\nMRI\n\nPhysiology\n\n\n\nCreating physiology regressors using the PhysIO toolbox\n\n\n\nMW\n\n\nOct 26, 2023\n\n\n\n\n\n\nNo matching items\n Back to top",
+    "text": "3D printing a brain\n\n\n\nMRI\n\n3D-Print\n\n\n\ncurrent procedure for 3d printing brains\n\n\n\nNZ\n\n\nOct 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n7T anatomical analysis on neurodesk\n\n\n\nMRI\n\n7T\n\nAnalysis\n\nNeurodesk\n\n\n\nHow to run 7 Tesla anatomy analysis on neurodesk\n\n\n\nAC\n\n\nJan 27, 2025\n\n\n\n\n\n\n\n\n\n\n\nMRI BIDS and OSF\n\n\n\nBIDS\n\nOSF\n\n\n\nInformation about BIDS and OSF\n\n\n\nAA\n\n\nMay 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nfMRIprep analysis\n\n\n\nMRI\n\nAnalysis\n\nNeurodesk\n\nfmriPrep\n\n\n\nInformation about using fMRIprep to preprocess fMRI data\n\n\n\nAC\n\n\nJul 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeSurfer FSFAST\n\n\n\nMRI\n\nAnalysis\n\nNeurodesk\n\n\n\nInformation about running an FSFAST analysis on Neurodesk\n\n\n\nAC\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nControl Masks\n\n\n\nMRI\n\n\n\nApproach to generate dilated and shifted control masks\n\n\n\nMG\n\n\nDec 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNI space\n\n\n\nMRI\n\n\n\ninformation about various MNI spaces and templates\n\n\n\nNZ\n\n\nJul 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nOld MRI setup\n\n\n\nMRI\n\n\n\nInformation about running experiments in the MRI lab (before the new computer arrived!)\n\n\n\nAA\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\n\n\n\nUpdate to the MRI lab setup\n\n\n\nMRI\n\nNNL-Goggles\n\n\n\n\n\n\n\nAC\n\n\nOct 7, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nMRI studies: general information\n\n\n\nMRI\n\n\n\nUseful information to consider before and while doing a (f)MRI study\n\n\n\nMG, NZ\n\n\nMay 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nCalculating oriented bounding box\n\n\n\nMRI\n\nAnalysis\n\nNeurodesk\n\n\n\nHow to use 3D Slicer to calcualte oriented bounding box\n\n\n\nAC\n\n\nAug 13, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPhysiological noise correction\n\n\n\nMRI\n\nPhysiology\n\n\n\nCreating physiology regressors using the PhysIO toolbox\n\n\n\nMW\n\n\nOct 26, 2023\n\n\n\n\n\n\nNo matching items\n Back to top",
     "crumbs": [
       "Home",
       "MRI"
@@ -1947,8 +1947,8 @@
     "objectID": "mri/mri-studies-general/mri-studies-general.html#events.tsv-files",
     "href": "mri/mri-studies-general/mri-studies-general.html#events.tsv-files",
     "title": "MRI studies: general information",
-    "section": "1.4 events.tsv files",
-    "text": "1.4 events.tsv files\n\nto save time later, keep in mind that you often need *_events.tsv files for your analysis! see here\nIn our fMRI sttudies, the bare minimum generally is that these files should include is the Onset, duration and trial_type (e.g. the condition that was shown). This is later used to build your contrasts, e.g. in the first level GLM\n*_events.tsv files have to be named exactly like the functional run they are referring to (except the ending). E.g. for the functional scan sub-140001_ses-1_task-loc_run-01_bold.nii.gz, the corresponding file has to be named sub-140001_ses-1_task-loc_run-01_events.tsv\n\nExample of a rudimentary .tsv file:\nonset   duration    trial_type\n0.5     1.0         Condition A\n2.0     1.0         Condition B\n4.0     1.5         Condition A\n\nThese files can be generated on the fly by the psychopy BIDS plugin or creted post-hoc from\n\nmatlab/octave workspace content (ask BU or MG for example code)\nfrom a psychopy *.csv files saved in data/ of your psychopy project (ask NZ for example code)",
+    "section": "1.5 events.tsv files",
+    "text": "1.5 events.tsv files\n\nto save time later, keep in mind that you often need *_events.tsv files for your analysis! see here\nIn our fMRI sttudies, the bare minimum generally is that these files should include is the Onset, duration and trial_type (e.g. the condition that was shown). This is later used to build your contrasts, e.g. in the first level GLM\n*_events.tsv files have to be named exactly like the functional run they are referring to (except the ending). E.g. for the functional scan sub-140001_ses-1_task-loc_run-01_bold.nii.gz, the corresponding file has to be named sub-140001_ses-1_task-loc_run-01_events.tsv\n\nExample of a rudimentary .tsv file:\nonset   duration    trial_type\n0.5     1.0         Condition A\n2.0     1.0         Condition B\n4.0     1.5         Condition A\n\nThese files can be generated on the fly by the psychopy BIDS plugin or creted post-hoc from\n\nmatlab/octave workspace content (ask BU or MG for example code)\nfrom a psychopy *.csv files saved in data/ of your psychopy project (ask NZ for example code)",
     "crumbs": [
       "Home",
       "MRI",
@@ -1996,7 +1996,7 @@
     "href": "mri/mri-studies-general/mri-studies-general.html#during-the-scanning",
     "title": "MRI studies: general information",
     "section": "4.2 During the scanning",
-    "text": "4.2 During the scanning\n\nAt least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual “assessment” of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals, that participants moved too much, you can re-instruct them to don´t move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC)",
+    "text": "4.2 During the scanning\n\nAt least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual “assessment” of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals that participants moved too much, you can remind them not to move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC).",
     "crumbs": [
       "Home",
       "MRI",
@@ -2007,8 +2007,32 @@
     "objectID": "mri/mri-studies-general/mri-studies-general.html#general-todo",
     "href": "mri/mri-studies-general/mri-studies-general.html#general-todo",
     "title": "MRI studies: general information",
-    "section": "4.3 General todo",
-    "text": "4.3 General todo\n\nWhen a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask the RTs to save the sequence as a PDF. If you have access, save this PDF to storage/nv_shared/Neurovision_Protocols (if you don´t have access, send it to NZ)\nIf you compensate participants, carefully read the corresponding entry",
+    "section": "4.4 General todo",
+    "text": "4.4 General todo\n\nWhen a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask the RTs to save the sequence as a PDF. If you have access, save this PDF to storage/nv_shared/Neurovision_Protocols (if you don´t have access, send it to NZ)\nIf you compensate participants, carefully read the corresponding entry",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "MRI studies: general information"
+    ]
+  },
+  {
+    "objectID": "mri/mri-studies-general/mri-studies-general.html#preregistration",
+    "href": "mri/mri-studies-general/mri-studies-general.html#preregistration",
+    "title": "MRI studies: general information",
+    "section": "1.4 Preregistration",
+    "text": "1.4 Preregistration\nTypically we do this on OSF using a the AsPredicted template.\n\nCreate an account on osf if you don’t have one\nCreate a project\nImportant: Add the PI as a project contributor with admin rights\nCreate a draft document with preregistration information and send it to the PI\nOnce the PI and you are happy with the draft, paste it to OSF",
+    "crumbs": [
+      "Home",
+      "MRI",
+      "MRI studies: general information"
+    ]
+  },
+  {
+    "objectID": "mri/mri-studies-general/mri-studies-general.html#after-the-scanning",
+    "href": "mri/mri-studies-general/mri-studies-general.html#after-the-scanning",
+    "title": "MRI studies: general information",
+    "section": "4.3 After the scanning",
+    "text": "4.3 After the scanning\n\nRun quality assurance using MRQC tools and/or inspect the data visually\nInspect the anatomical scan; if you suspect anatomical irregularity, inform RT immediately to handle potential incidental findings\nIf the scan looks o.k. provide subjects with a NIFTI of their brain (if they requested it). You can point them to the web-based version of freeview for viewing it FreeBrowse. You can also point them to our recommended procedure for 3D printing.",
     "crumbs": [
       "Home",
       "MRI",
