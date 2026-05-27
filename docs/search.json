@@ -205,7 +205,7 @@
   {
     "objectID": "neurodesk.html",
     "href": "neurodesk.html",
-    "title": "Neurodesktop",
+    "title": "Neurodesk",
     "section": "",
     "text": "Neurodesktop access\n\n\n\nNeurodesk\n\n\n\nHow to use Neurodesktop on the server\n\n\n\nNZ, MG\n\n\nJul 28, 2025\n\n\n\n\n\n\nNo matching items\n Back to top"
   },
@@ -1628,7 +1628,7 @@
     "href": "neurodesk/neurodesktop.html",
     "title": "Neurodesktop access",
     "section": "",
-    "text": "Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see https://www.neurodesk.org\nThis page provides information and instructions on how to use neurodesktop on our lab’s server.\n\n\n\n\nOffice computers and VPN with an employee account\n\n\n\n\nOffice computers\nStudent PC room\n\n\n\n\n\nEach neurodesktop user is limited to 256GB RAM out of 504GB and to 20 out of 32 CPU cores.",
+    "text": "Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see https://www.neurodesk.org.\nThis page provides information and instructions on how to use Neurodesk and Neurodesktop on our lab’s server.\n\n\n\n\nOffice computers and VPN with an employee account\n\n\n\n\nOffice computers\nStudent PC room\n\n\n\n\n\nEach neurodesktop user is limited to 256GB RAM out of 504GB and to 20 out of 32 CPU cores.",
     "crumbs": [
       "Home",
       "Neurodesktop"
@@ -1771,7 +1771,7 @@
     "href": "neurodesk/neurodesktop.html#checking-resource-usage-directly-on-the-server",
     "title": "Neurodesktop access",
     "section": "4.4 Checking resource usage directly on the server",
-    "text": "4.4 Checking resource usage directly on the server\n\nresource usage per neurodesk container\n\ndocker stats\n\nper user and process\n\nhtop\n(all student containers are assigned to one user “allg_user”)",
+    "text": "4.4 Checking resource usage directly on the server\n\n4.4.1 General\n\nresource usage per neurodesk container\n\ndocker stats\n\nper user and process\n\nhtop\n(all student containers are assigned to one user “allg_user”)\n\n\n4.4.2 Storage\ndf -h",
     "crumbs": [
       "Home",
       "Neurodesktop"

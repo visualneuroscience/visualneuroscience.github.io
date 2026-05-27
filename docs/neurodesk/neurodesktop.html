@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,6 +12,9 @@
 
 <title>Neurodesktop access – Visual Neuroscience Lab</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -70,15 +73,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3295de2492aa6991a8f9e8eb11d7df20.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1aad147b61a856f03db3b3f12b962af6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -147,8 +149,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Visual Neuroscience Lab</span>
     </a>
@@ -223,10 +223,6 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -328,8 +324,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../mri/MRI-Studies_general/mri-studies_general-information.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">MRI-Studies: General Information</span></a>
+  <a href="../mri/mri-studies-general/mri-studies-general.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MRI studies: general information</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -578,7 +574,11 @@ window.Quarto = {
   <li><a href="#folder-mappings" id="toc-folder-mappings" class="nav-link" data-scroll-target="#folder-mappings"><span class="header-section-number">4.1</span> Folder mappings:</a></li>
   <li><a href="#for-interfacing-with-the-folders-on-storage" id="toc-for-interfacing-with-the-folders-on-storage" class="nav-link" data-scroll-target="#for-interfacing-with-the-folders-on-storage"><span class="header-section-number">4.2</span> For interfacing with the folders on storage</a></li>
   <li><a href="#sec-mountNetwork" id="toc-sec-mountNetwork" class="nav-link" data-scroll-target="#sec-mountNetwork"><span class="header-section-number">4.3</span> Mount network shares</a></li>
-  <li><a href="#checking-resource-usage-directly-on-the-server" id="toc-checking-resource-usage-directly-on-the-server" class="nav-link" data-scroll-target="#checking-resource-usage-directly-on-the-server"><span class="header-section-number">4.4</span> Checking resource usage directly on the server</a></li>
+  <li><a href="#checking-resource-usage-directly-on-the-server" id="toc-checking-resource-usage-directly-on-the-server" class="nav-link" data-scroll-target="#checking-resource-usage-directly-on-the-server"><span class="header-section-number">4.4</span> Checking resource usage directly on the server</a>
+  <ul class="collapse">
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general"><span class="header-section-number">4.4.1</span> General</a></li>
+  <li><a href="#storage" id="toc-storage" class="nav-link" data-scroll-target="#storage"><span class="header-section-number">4.4.2</span> Storage</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -627,8 +627,8 @@ window.Quarto = {
 
 <section id="general-information" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> General information</h1>
-<p>Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see <a href="https://www.neurodesk.org" class="uri">https://www.neurodesk.org</a></p>
-<p>This page provides information and instructions on how to use neurodesktop on our lab’s server.</p>
+<p>Neurodesktop is a Linux environment specifically developed for open and reproducible neuroimaging. For details, see <a href="https://www.neurodesk.org" class="uri">https://www.neurodesk.org</a>.</p>
+<p>This page provides information and instructions on how to use Neurodesk and Neurodesktop on our lab’s server.</p>
 <section id="access" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="access"><span class="header-section-number">1.1</span> Access</h2>
 <section id="employees" class="level3" data-number="1.1.1">
@@ -814,6 +814,8 @@ freeview</code></pre>
 </section>
 <section id="checking-resource-usage-directly-on-the-server" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="checking-resource-usage-directly-on-the-server"><span class="header-section-number">4.4</span> Checking resource usage directly on the server</h2>
+<section id="general" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="general"><span class="header-section-number">4.4.1</span> General</h3>
 <ul>
 <li>resource usage per neurodesk container</li>
 </ul>
@@ -823,8 +825,13 @@ freeview</code></pre>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">htop</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(all student containers are assigned to one user “allg_user”)</p>
+</section>
+<section id="storage" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="storage"><span class="header-section-number">4.4.2</span> Storage</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
+</section>
 </section>
 </section>
 
