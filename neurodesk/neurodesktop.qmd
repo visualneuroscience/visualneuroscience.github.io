@@ -242,6 +242,14 @@ htop
 
 ### Storage
 
+Check for available storage space
+
 ``` bash
 df -h
+```
+
+Identify large files and folders
+
+``` bash
+ncdu -f "$(ls -1t /var/log/ncdu/root-*.ncdu | head -n1)"
 ```
