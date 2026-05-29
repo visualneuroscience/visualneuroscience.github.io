@@ -1,0 +1,50 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Free to use Fonts
+description: "A list of free to use fonts that are combatible with all operating systems"
+image: images/clipboard-2500482646.png
+author: AC
+date: 2026-05-29
+---
+
+## 
+
+In the age of open science, it is often forgotten about, that most tools that are used, beyond analysis of data, are also included in open source and open science practises. Even down to the operating system. Microsoft windows is not an open-source software and is paid for, indeed most Microsoft products are paid for and propriety. 
+
+With the above in mind, there are also fonts that Microsoft uses that are part of this paid-for package. These paid-for fonts are not open-source and therefore it is not possible to obtain these fonts legally without paying for Microsoft office (for example). Moreover, Microsoft office products are not compatible across other operating systems, like Linux. 
+
+Therefore, using paid-for fonts becomes a problem when sending manuscripts to fellow collaborators who may not be using Microsoft products. As a result of this, while the manuscript document may look perfectly *"fine"* for you, for your collaborators they may see something entirely different. 
+
+### Open source fonts
+
+Open source fonts are useful to use in manuscript writing (no matter which software you use to actually write the manuscript in), this is because collaborators are able to view the document in almost an identical way without relying on illegal means to obtain Microsoft fonts. 
+
+### What fonts are free and open-source? and how do I find them?
+
+
+Below are some websites, that you can use to download free to use fonts. 
+
+
+[Comprehensive list of free and open source fonts](https://github.com/subidit/typophilia#notable-free-fonts)
+
+[A smaller list of some of the well-known open-source fonts](https://github.com/menozero/usable-fonts)
+
+[Open foundry](https://open-foundry.com/about)
+
+
+To install a font on windows, download the font (if it's a `.zip` file unzip the folder. Then double click on the `.ttf`/ `.otf` `.woff`. This should install the font for you. Restart Microsoft office products and you can, now, use the font :tada:
+
+### I want to use a free font, how do I do that?
+
+
+
+- **If** you used a font you think isn't common, I would be great to let collaborators know about it. 
+
+    - Either you let collaborators know when you send the manuscript by email that you used font `x` to generate the manuscript that is downloadable from:
+    - At the top of the manuscript, put in brackets the name of the font used.
+        > (to aid readibility this manuscript was made using font `x` obtained from `y`
+
+
+
+
