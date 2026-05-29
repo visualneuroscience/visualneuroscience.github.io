@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -532,7 +567,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="section"></h2>
 <p>In the age of open science, it is often forgotten about, that most tools that are used, beyond analysis of data, are also included in open source and open science practises. Even down to the operating system. Microsoft windows is not an open-source software and is paid for, indeed most Microsoft products are paid for and propriety.</p>
 <p>With the above in mind, there are also fonts that Microsoft uses that are part of this paid-for package. These paid-for fonts are not open-source and therefore it is not possible to obtain these fonts legally without paying for Microsoft office (for example). Moreover, Microsoft office products are not compatible across other operating systems, like Linux.</p>
-<p>Therefore, using paid-for fonts becomes a problem when sending manuscripts to fellow collaborators who may not be using Microsoft products. As a result of this, while the manuscript document may look perfectly <em>“fine”</em> for you, for your collaborators they may see something entirely different.</p>
+<p>Therefore, using paid-for or proprietary fonts (owned by Microsoft) becomes a problem when sending manuscripts to fellow collaborators who may not be using Microsoft products. As a result of this, while the manuscript document may look perfectly <em>“fine”</em> for you, for your collaborators they may see something entirely different.</p>
 <section id="open-source-fonts" class="level3">
 <h3 class="anchored" data-anchor-id="open-source-fonts">Open source fonts</h3>
 <p>Open source fonts are useful to use in manuscript writing (no matter which software you use to actually write the manuscript in), this is because collaborators are able to view the document in almost an identical way without relying on illegal means to obtain Microsoft fonts.</p>
@@ -543,7 +578,22 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://github.com/subidit/typophilia#notable-free-fonts">Comprehensive list of free and open source fonts</a></p>
 <p><a href="https://github.com/menozero/usable-fonts">A smaller list of some of the well-known open-source fonts</a></p>
 <p><a href="https://open-foundry.com/about">Open foundry</a></p>
-<p>To install a font on windows, download the font (if it’s a <code>.zip</code> file unzip the folder. Then double click on the <code>.ttf</code>/ <code>.otf</code> <code>.woff</code>. This should install the font for you. Restart Microsoft office products and you can, now, use the font :tada:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Winodws</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>To install a font on Windows, download the font (if it’s a <code>.zip</code> file unzip the folder. Then double-click on the <code>.ttf</code>/ <code>.otf</code> <code>.woff</code>. This should install the font for you. Restart Microsoft Office products, and you can, now, use the font :tada:</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Double-click the font file in the Finder, then click Install in the dialogue that appears.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Move the font to the <code>.local/font</code> folder.</p>
+<p>Run the following to rebuild the font cache</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fc-cache</span> <span class="at">-fv</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
 <section id="i-want-to-use-a-free-font-how-do-i-do-that" class="level3">
 <h3 class="anchored" data-anchor-id="i-want-to-use-a-free-font-how-do-i-do-that">I want to use a free font, how do I do that?</h3>
@@ -551,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>If</strong> you used a font you think isn’t common, I would be great to let collaborators know about it.</p>
 <ul>
 <li>Either you let collaborators know when you send the manuscript by email that you used font <code>x</code> to generate the manuscript that is downloadable from:</li>
-<li>At the top of the manuscript, put in brackets the name of the font used. &gt; (to aid readibility this manuscript was made using font <code>x</code> obtained from <code>y</code></li>
+<li>At the top of the manuscript, put in brackets the name of the font used. &gt; (to aid readability this manuscript was made using font <code>x</code> obtained from <code>y</code></li>
 </ul></li>
 </ul>
 

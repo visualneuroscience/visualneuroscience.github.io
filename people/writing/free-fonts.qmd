@@ -3,7 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Free to use Fonts
 description: "A list of free to use fonts that are combatible with all operating systems"
-image: images/clipboard-2500482646.png
+image: ""
 author: AC
 date: 2026-05-29
 ---
@@ -14,7 +14,7 @@ In the age of open science, it is often forgotten about, that most tools that ar
 
 With the above in mind, there are also fonts that Microsoft uses that are part of this paid-for package. These paid-for fonts are not open-source and therefore it is not possible to obtain these fonts legally without paying for Microsoft office (for example). Moreover, Microsoft office products are not compatible across other operating systems, like Linux. 
 
-Therefore, using paid-for fonts becomes a problem when sending manuscripts to fellow collaborators who may not be using Microsoft products. As a result of this, while the manuscript document may look perfectly *"fine"* for you, for your collaborators they may see something entirely different. 
+Therefore, using paid-for or proprietary fonts (owned by Microsoft) becomes a problem when sending manuscripts to fellow collaborators who may not be using Microsoft products. As a result of this, while the manuscript document may look perfectly *"fine"* for you, for your collaborators they may see something entirely different. 
 
 ### Open source fonts
 
@@ -33,7 +33,27 @@ Below are some websites, that you can use to download free to use fonts.
 [Open foundry](https://open-foundry.com/about)
 
 
-To install a font on windows, download the font (if it's a `.zip` file unzip the folder. Then double click on the `.ttf`/ `.otf` `.woff`. This should install the font for you. Restart Microsoft office products and you can, now, use the font :tada:
+::: {.panel-tabset}
+
+### Winodws
+
+To install a font on Windows, download the font (if it's a `.zip` file unzip the folder. Then double-click on the `.ttf`/ `.otf` `.woff`. This should install the font for you. Restart Microsoft Office products, and you can, now, use the font :tada:
+
+### MacOS
+
+Double-click the font file in the Finder, then click Install in the dialogue that appears.
+
+### Linux
+
+Move the font to the `.local/font` folder.
+
+Run the following to rebuild the font cache
+
+```bash
+fc-cache -fv
+```
+
+:::
 
 ### I want to use a free font, how do I do that?
 
@@ -43,7 +63,7 @@ To install a font on windows, download the font (if it's a `.zip` file unzip the
 
     - Either you let collaborators know when you send the manuscript by email that you used font `x` to generate the manuscript that is downloadable from:
     - At the top of the manuscript, put in brackets the name of the font used.
-        > (to aid readibility this manuscript was made using font `x` obtained from `y`
+        > (to aid readability this manuscript was made using font `x` obtained from `y`
 
 
 

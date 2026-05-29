@@ -18,6 +18,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/people/writing/free-fonts.html",
       "/mri/mri-studies-general/mri-studies-general.html",
       "/OtherTopics/AuthorshipCalculator/calculator.html",
       "/dicom_to_glm/first_level_glm_nilearn.html",
@@ -108,23 +109,24 @@
   {
     "listing": "/mri.html",
     "items": [
-      "/mri/3D-prints/3d-prints.html",
-      "/mri/analysis/7t_analysis_on_neurodesk.html",
-      "/mri/analysis/bids.html",
-      "/mri/analysis/fmriprep.html",
-      "/mri/analysis/freesurfer FSFAST.html",
-      "/mri/control-masks/control-masks.html",
-      "/mri/mni-space/mni-space.html",
       "/mri/mri-lab-setup-2023/index.html",
       "/mri/mri-lab-setup-2024/index.html",
+      "/mri/analysis/freesurfer FSFAST.html",
+      "/mri/analysis/fmriprep.html",
+      "/mri/analysis/7t_analysis_on_neurodesk.html",
+      "/mri/analysis/bids.html",
+      "/mri/physiology/index.html",
       "/mri/mri-studies-general/mri-studies-general.html",
+      "/mri/3D-prints/3d-prints.html",
+      "/mri/control-masks/control-masks.html",
       "/mri/oriented-bounding-box/calculating_oriented_bounding_box.html",
-      "/mri/physiology/index.html"
+      "/mri/mni-space/mni-space.html"
     ]
   },
   {
     "listing": "/people.html",
     "items": [
+      "/people/writing/free-fonts.html",
       "/people/leaving/index.html",
       "/people/funding/funding.html",
       "/people/talks/talks.html",
