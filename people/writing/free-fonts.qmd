@@ -3,7 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Free to use Fonts
 description: "A list of free to use fonts that are combatible with all operating systems"
-image: ""
+image: "./images/font_pr.png"
 author: AC
 date: 2026-05-29
 ---
