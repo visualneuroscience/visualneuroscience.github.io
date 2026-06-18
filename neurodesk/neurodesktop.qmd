@@ -30,7 +30,10 @@ Office computers and VPN with an employee account
 
 ## Resources
 
-Each neurodesktop user is limited to 256GB RAM out of 504GB and to 20 out of 32 CPU cores.
+Resource limits depend on your role:
+
+-   **Instructor / Researcher**: up to 256GB RAM and 20 CPU cores
+-   **Student**: up to 64GB RAM and 6 CPU cores
 
 # Getting an account
 
@@ -92,7 +95,11 @@ If working via neurodesk, you SHOULD store data in your home directory. This dat
 
 ## Sharing data
 
-All neurodesk users have read and write permissions to `/shared` neurodesktop folder, which should be used to store things used by everyone (like atlases, software, shared data)
+Access to shared folders depends on your role, which is automatically assigned based on your server login:
+
+-   **Instructor** (manually assigned by admin): full read/write access to all shared folders, including `/shared/teaching`
+-   **Researcher** (server account, or manually assigned): full access to `/shared/research` and `/shared/scratch`; read-only access to `/shared/teaching` and `/shared/licenses`; access to `/storage` for those with a server account only
+-   **Student**: read-only access to `/shared/teaching`
 
 ## Data transfer
 
@@ -124,17 +131,6 @@ To set up custom subject directory in a container, use the following (instead of
 export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]
 ```
 
-### Using fitlins
-
-Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the ["DICOM to GLM"](../dicom_to_glm.qmd) pipeline for details
-
-Using FitLins (not a part of neurodesktop basic set of tools) with Singularity:
-
-\
-`singularity run /shared/poldracklab_fitlins_latest-2022-10-17-32670dc66bf7.simg` \[your fitlins commands\]
-
-Please note that we are abandoning fitlins usage and are switching to [nilearn](https://nilearn.github.io/stable/index.html) for GLM analysis
-
 ### Other docker-based software
 
 If you would like to use some other software package that is not directly available through neruodesk, but is distributed as docker; you can use it by building a singularity image in the shared folder (so that it is available for everyone), e.g.:
@@ -144,6 +140,12 @@ If you would like to use some other software package that is not directly availa
 and then run it as above:
 
 `singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg`
+
+#### Using fitlins
+
+Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the ["DICOM to GLM"](../dicom_to_glm.qmd) pipeline for details
+
+FitLins(not a part of neurodesktop basic set of tools) can be used with Singularity.
 
 ### DICOM viewer WEASIS
 
@@ -193,11 +195,14 @@ When you want to use python scrips or notebooks, you´ll probably set them up in
 ## Folder mappings:
 
 (left is server right is neurodesk)\
-`/storage -> /storage`\
-`/storage/neurodesk/shared -> /shared`\
-`/storage/neurodesk/users/{username} -> /home/jovyan`
+`/storage/neurodesk/users/{username}` → `/home/jovyan`\
+`/storage/neurodesk/shared/research` → `/shared/research`\
+`/storage/neurodesk/shared/teaching` → `/shared/teaching`\
+`/storage/neurodesk/shared/scratch` → `/shared/scratch` ⚠ Content is deleted after 2 weeks\
+`/storage/neurodesk/shared/licenses` → `/shared/licenses` (read-only)\
+`/storage` → `/storage` (server accounts only)
 
-Only these three folders are persistent.
+Only `/home/jovyan`, `/shared/*`, and `/storage` are persistent in the container.
 
 ## For interfacing with the folders on storage
 
@@ -207,9 +212,9 @@ You can create symbolic links in your home directory:
 
 ## Mount network shares {#sec-mountNetwork}
 
-You can mount network shares with Lukas' helper script at `/shared/mount_network_share.sh` (i.e. you´ll see a directory through which you can access the network from within neurodesk)
+You can mount network shares with Lukas' helper script at `/shared/research/mount_network_share.sh` (i.e. you´ll see a directory through which you can access the network from within neurodesk)
 
-1.  Usage: `/shared/mount_network_share.sh <mount_point> <share_choice|full_share_path>`
+1.  Usage: `/shared/research/mount_network_share.sh <mount_point> <share_choice|full_share_path>`
 
 2.  Share choices
 
@@ -219,8 +224,8 @@ You can mount network shares with Lukas' helper script at `/shared/mount_network
 
 3.  Examples:
 
-    - `/shared/mount_network_share.sh /home/jovyan/allg_j J`<br>$\to$ mounts the J network to `/home/jovyan/allg_j` (i.e. there will be a directory `allg_j` within your `/home/jovyan/` directory that accesses the J network)
-    - `shared/mount_network_share.sh /home/jovyan/allg_y Y`<br>$\to$ mounts the Y network to `/home/jovyan/allg_y` (i.e. there will be a directory `allg_y` within your `/home/jovyan/` directory that accesses the Y network)
+    - `/shared/research/mount_network_share.sh /home/jovyan/allg_j J`<br>$\to$ mounts the J network to `/home/jovyan/allg_j` (i.e. there will be a directory `allg_j` within your `/home/jovyan/` directory that accesses the J network)
+    - `/shared/research/mount_network_share.sh /home/jovyan/allg_y Y`<br>$\to$ mounts the Y network to `/home/jovyan/allg_y` (i.e. there will be a directory `allg_y` within your `/home/jovyan/` directory that accesses the Y network)
 
 ## Checking resource usage directly on the server
 
