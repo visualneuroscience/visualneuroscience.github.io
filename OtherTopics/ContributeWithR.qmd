@@ -30,7 +30,7 @@ This has an advantage that you can edit .qmd files in visual mode and paste scre
 
 4.  Edit the local version as you wish
 
-5.  When finished editing, go to "Build" tab and press "Render Website". This will render htmls and other aspects of the website structure, and open the current page in the browser.
+5.  To preview your changes locally, go to "Build" tab and press "Render Website". This opens the site in your browser.
 
     ![](images/clipboard-884733564.png)
 
