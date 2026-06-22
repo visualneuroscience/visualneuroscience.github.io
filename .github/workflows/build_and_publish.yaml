@@ -23,7 +23,7 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          install-tinytex: false
+          tinytex: false
 
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
