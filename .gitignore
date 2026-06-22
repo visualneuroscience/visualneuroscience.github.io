@@ -17,4 +17,4 @@ site_libs/
 *-listing.json
 **/*_files/
 *.html
-
+_freeze/
