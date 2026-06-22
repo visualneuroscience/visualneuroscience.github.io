@@ -14,7 +14,7 @@
 
 % note: on windows, all devices are registered as one keyboard (so only index 1 or end will work)
 % ================================================================ %
-KbName('UnifyKeyNames'); % for compability between diff OSs
+KbName('UnifyKeyNames'); % for compatibility between diff OSs
 
 % get indices of recognized external devices
 [keyboardIndices, productNames, allInfos] = GetKeyboardIndices;

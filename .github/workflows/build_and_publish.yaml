@@ -20,6 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - name: Check spelling
+        uses: crate-ci/typos-action@v1
+        continue-on-error: true
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:

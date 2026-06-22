@@ -2,7 +2,7 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "Calculating oriented bounding box"
-description: "How to use 3D Slicer to calcualte oriented bounding box"
+description: "How to use 3D Slicer to calculate oriented bounding box"
 image: ./images/3d_slicer.PNG
 categories: [MRI, Analysis, Neurodesk]
 author: AC
@@ -53,7 +53,7 @@ date: 08/13/2025
 
 
 
-- To add more stats click on the opitions next to "Labelmap Statistics" 
+- To add more stats click on the options next to "Labelmap Statistics" 
     - Here you can add stats for different measuring 
 
 - Click apply
@@ -166,7 +166,7 @@ for segmentId in stats["SegmentIDs"]:
     4. Screenshots
     5. A `.mrml` file
 
-![In the data tab you should see Table, oriented bounding box markup and screenshots (axial, coronal, saggital)](./images/list_of_data.PNG)
+![In the data tab you should see Table, oriented bounding box markup and screenshots (axial, coronal, sagittal)](./images/list_of_data.PNG)
 
 &nbsp;
 

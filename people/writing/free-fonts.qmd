@@ -2,7 +2,7 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Free to use Fonts
-description: "A list of free to use fonts that are combatible with all operating systems"
+description: "A list of free to use fonts that are compatible with all operating systems"
 image: "./images/font_pr.png"
 author: AC
 date: 2026-05-29
@@ -35,7 +35,7 @@ Below are some websites, that you can use to download free to use fonts.
 
 ::: {.panel-tabset}
 
-### Winodws
+### Windows
 
 To install a font on Windows, download the font (if it's a `.zip` file unzip the folder. Then double-click on the `.ttf`/ `.otf` `.woff`. This should install the font for you. Restart Microsoft Office products, and you can, now, use the font :tada:
 

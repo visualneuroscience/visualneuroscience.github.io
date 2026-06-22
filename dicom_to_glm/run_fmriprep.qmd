@@ -10,7 +10,7 @@ author: MG
 date: 03/08/2025
 ---
 
-fMRIprep is a helpful and stardardized preprocessing pipeline for BIDS-valid datsets. By combining various neuroimaging software packages (FSL, ANTs, FreeSurfer,...) it allows us to run various preprocessing steps automatically:
+fMRIprep is a helpful and standardized preprocessing pipeline for BIDS-valid datasets. By combining various neuroimaging software packages (FSL, ANTs, FreeSurfer,...) it allows us to run various preprocessing steps automatically:
 
 1.  Anatomical (T1w) preprocessing
     -   Bias field correction
