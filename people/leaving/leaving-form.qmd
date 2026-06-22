@@ -1,0 +1,381 @@
+---
+# ================================================================
+# LEAVING LAB FORM — edit only the top section
+# ================================================================
+#
+# lab_name        shown in the form title and email subject line
+# recipient_email address the completed form is sent to
+#
+# submitter_fields  "About You" inputs (name, email, …)
+# checklist         required tick-boxes before submission
+#
+# project_groups → fields:
+#   key           internal ID, no spaces, must be unique within a group
+#   label         text shown above the input
+#   placeholder   example path shown inside the input field (greyed out)
+#   hint          optional note shown below the field (omit if not needed)
+#   required      true / false
+#   full          true = spans the full width instead of half (optional)
+
+title: "Leaving Lab Form"
+params:
+  lab_name: "Visual Neuroscience Lab"
+  recipient_email: "natalia.zaretskaya@uni-graz.at"
+  submitter_fields:
+    value:
+      - key: name
+        label: "Name"
+        required: true
+      - key: email
+        label: "E-mail"
+        required: true
+        type: email
+        hint: "e.g. you@uni-graz.at"
+  checklist:
+    value:
+      - key: data_private_deleted
+        label: "All subjects' private data irrelevant for research (e.g. bank account info) deleted from server, institute computers, and personal devices"
+        required: true
+      - key: data_incidental
+        label: "All incidental findings have been clarified; subjects' contact information deleted"
+        required: true
+  project_groups:
+    value:
+      - label: Stimulus
+        fields:
+          - key: stimulus_script
+            label: "Stimulus script"
+            full: true
+            placeholder: "/storage/yourname/project/stim.m"
+            hint: "Server path to the final version used in the MRI/behavioral lab"
+      - label: "Raw data"
+        fields:
+          - key: data_behavioral
+            label: Behavioral
+            placeholder: "/storage/nv_shared/projects/yourproject/matfiles/"
+          - key: data_eyetracking
+            label: Eyetracking
+            placeholder: "/storage/nv_shared/projects/yourproject/eyetracking/"
+          - key: data_physiology
+            label: Physiology
+            placeholder: "/storage/nv_shared/projects/yourproject/physiology/"
+          - key: data_mri
+            label: "(f)MRI"
+            placeholder: "/storage/nv_shared/projects/yourproject/bids/"
+          - key: data_mri_protocol
+            label: "MRI protocol PDF"
+            placeholder: "/storage/nv_shared/projects/yourproject/protocol.pdf"
+      - label: Analysis
+        fields:
+          - key: analysis_scripts
+            label: "Subject-level scripts"
+            placeholder: "/storage/yourname/project/analyze_struc.sh"
+            hint: "Including preprocessing"
+          - key: subject_results
+            label: "Subject-level results"
+            placeholder: "/storage/yourname/project/bids/derivatives/"
+          - key: group_scripts
+            label: "Group analysis scripts"
+            placeholder: "/storage/yourname/project/bids/code/analyze_final.m"
+          - key: group_results
+            label: "Group results"
+            placeholder: "/storage/yourname/project/group_results/"
+      - label: Outputs
+        fields:
+          - key: manuscript
+            label: "Manuscript / thesis"
+            placeholder: "/storage/yourname/project/manuscript/"
+            hint: "Latest submitted version with rebuttal. Master students: UGOnline-submitted thesis (Word preferred)"
+          - key: posters
+            label: "Posters & conference abstracts"
+            placeholder: "/storage/yourname/project/presentations/"
+          - key: consent_forms
+            label: "Consent forms location"
+            placeholder: "Paper – corner office, rightmost drawer"
+            hint: "Server path if electronic, or physical location"
+# ================================================================
+# STOP editing here
+# ================================================================
+---
+
+Fill in all fields for each project, then click **Prepare submission** to download your form or send it directly via email.
+
+```{r}
+#| echo: false
+#| results: asis
+cat(paste0('<script>\nconst CONFIG = ', jsonlite::toJSON(params, auto_unbox = TRUE), ';\n</script>\n'))
+```
+
+```{=html}
+<div id="lf-root"></div>
+
+<div id="lf-actions" style="display:none" class="mt-4">
+  <div class="card shadow-sm" style="border-left: 4px solid #2c6fad">
+    <div class="card-body">
+      <h5 class="card-title mb-2">Your form is ready to send</h5>
+      <p class="mb-3" style="font-size:.9rem">
+        Send your submission to <span id="lf-recipient"></span>: download and attach the <code>.md</code> file, or use <strong>Open email client</strong> to send the content directly as email text.
+      </p>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="lf-btn lf-btn-primary" onclick="lfDownload()">Download .md</button>
+        <button class="lf-btn lf-btn-outline" onclick="lfEmail()">Open email client</button>
+      </div>
+      <textarea id="lf-preview" style="display:none" readonly></textarea>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<style>
+/* Project blocks and group labels — everything else is Bootstrap */
+.lf-project {
+  border: 2px solid #dee2e6;
+  border-radius: .5rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  background: #f8f9fa;
+  position: relative;
+}
+.lf-project h3 {
+  font-size: .85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin: 0 0 .75rem;
+}
+.lf-group-label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #2c6fad;
+  margin: 1.1rem 0 .4rem;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid #dee2e6;
+}
+.lf-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem .75rem; }
+.lf-two-col .lf-full { grid-column: 1/-1; }
+@media (max-width: 560px) { .lf-two-col { grid-template-columns: 1fr; } }
+.lf-add-btn {
+  width: 100%; padding: .6rem;
+  border: 2px dashed #adb5bd; border-radius: .4rem;
+  background: none; color: #6c757d; cursor: pointer; font-size: .88rem;
+  margin-top: .25rem;
+}
+.lf-add-btn:hover { border-color: #2c6fad; color: #2c6fad; }
+/* Buttons — bypass Bootstrap's primary color which may be themed */
+.lf-btn {
+  display: inline-block;
+  padding: .45rem 1.2rem;
+  font-size: .9rem;
+  font-weight: 600;
+  border-radius: .375rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  line-height: 1.5;
+}
+.lf-btn-primary { background: #2c6fad; color: #fff; border-color: #2c6fad; }
+.lf-btn-primary:hover { background: #245d96; border-color: #245d96; color: #fff; }
+.lf-btn-outline { background: transparent; color: #2c6fad; border-color: #2c6fad; }
+.lf-btn-outline:hover { background: #2c6fad; color: #fff; }
+/* Input visibility: blue-grey bg in white cards, white in grey project blocks */
+#lf-root .card .form-control {
+  background-color: #eef1f5;
+  border-color: #8a9ab0;
+}
+#lf-root .card .form-control:focus {
+  background-color: #fff;
+  border-color: #2c6fad;
+  box-shadow: 0 0 0 .25rem rgba(44,111,173,.15);
+}
+.lf-project .form-control-sm {
+  background-color: #fff;
+  border-color: #8a9ab0;
+}
+.lf-project .form-control-sm:focus {
+  border-color: #2c6fad;
+  box-shadow: 0 0 0 .2rem rgba(44,111,173,.15);
+}
+#lf-root .form-check-input {
+  border-color: #8a9ab0;
+}
+#lf-root .form-check-input:not(:checked) {
+  background-color: #eef1f5;
+}
+</style>
+```
+
+```{=html}
+<script>
+let lfContainerEl = null;
+
+function lfEsc(s) {
+  return String(s ?? '')
+    .replace(/&/g,'&amp;').replace(/"/g,'&quot;')
+    .replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function lfClickAnchor(href, download) {
+  const a = Object.assign(document.createElement('a'), {href});
+  if (download) a.download = download;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+function lfCard(title, inner) {
+  return '<div class="card mb-4"><div class="card-body">'
+    + `<h5 class="card-title border-bottom pb-2 mb-3 text-uppercase fw-bold" style="font-size:.85rem;letter-spacing:.06em">${title}</h5>`
+    + inner + '</div></div>';
+}
+
+function lfField(idx, f, values) {
+  const val = lfEsc(values[f.key] || '');
+  const ph = f.placeholder ? ` placeholder="${lfEsc(f.placeholder)}"` : '';
+  const input = f.type === 'textarea'
+    ? `<textarea class="form-control form-control-sm" name="projects[${idx}][${f.key}]" rows="2"${ph}>${val}</textarea>`
+    : `<input class="form-control form-control-sm" type="text" name="projects[${idx}][${f.key}]" value="${val}"${ph}>`;
+  return `<div class="mb-2${f.full ? ' lf-full' : ''}">
+    <label class="form-label fw-semibold mb-1" style="font-size:.83rem">
+      ${lfEsc(f.label)}${f.required ? ' <span class="text-danger">*</span>' : ''}
+    </label>
+    ${input}
+    ${f.hint ? `<div class="form-text">${lfEsc(f.hint)}</div>` : ''}
+  </div>`;
+}
+
+function lfAddProject(values = {}) {
+  const idx = lfContainerEl.querySelectorAll('.lf-project').length;
+  const block = document.createElement('div');
+  block.className = 'lf-project';
+  let html = idx > 0
+    ? `<button type="button" class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2"
+         onclick="this.closest('.lf-project').remove(); lfRenumber()">Remove</button>`
+    : '';
+  html += `<h3>Project ${idx + 1}</h3>
+  <div class="mb-2">
+    <label class="form-label fw-semibold mb-1" style="font-size:.83rem">
+      Project nickname <span class="text-danger">*</span>
+    </label>
+    <input class="form-control form-control-sm" type="text"
+      name="projects[${idx}][nickname]" required placeholder="e.g. hexcite"
+      value="${lfEsc(values.nickname || '')}">
+  </div>`;
+  for (const group of CONFIG.project_groups) {
+    html += `<div class="lf-group-label">${lfEsc(group.label)}`;
+    if (group.note) html += ` <span class="fw-normal text-muted" style="font-size:.75rem;text-transform:none;letter-spacing:0">${lfEsc(group.note)}</span>`;
+    html += `</div><div class="lf-two-col">`;
+    for (const f of group.fields) html += lfField(idx, f, values);
+    html += `</div>`;
+  }
+  block.innerHTML = html;
+  lfContainerEl.appendChild(block);
+}
+
+function lfRenumber() {
+  lfContainerEl.querySelectorAll('.lf-project').forEach((block, i) => {
+    block.querySelector('h3').textContent = `Project ${i + 1}`;
+    block.querySelectorAll('[name^="projects["]').forEach(el => {
+      el.name = el.name.replace(/^projects\[\d+\]/, `projects[${i}]`);
+    });
+  });
+}
+
+function lfBuildMarkdown(form) {
+  const date = new Date().toLocaleDateString('en-GB', {year:'numeric', month:'long', day:'numeric'});
+  let md = `# ${CONFIG.lab_name}: Leaving Submission\n\n`;
+  md += `**Date:** ${date}  \n`;
+  CONFIG.submitter_fields.forEach(sf => {
+    const val = form.querySelector(`[name="submitter[${sf.key}]"]`)?.value?.trim() || '';
+    md += `**${sf.label}:** ${val}  \n`;
+  });
+  md += '\n## Data Checklist\n\n';
+  CONFIG.checklist.forEach(item => {
+    if (item.title) { md += `\n**${item.title}**\n\n`; return; }
+    const checked = form.querySelector(`#lf_chk_${item.key}`)?.checked;
+    md += `- [${checked ? 'x' : ' '}] ${item.label}\n`;
+  });
+  form.querySelectorAll('.lf-project').forEach((block, i) => {
+    const nick = block.querySelector(`[name="projects[${i}][nickname]"]`)?.value?.trim() || '';
+    md += `\n## Project ${i + 1}${nick ? ': ' + nick : ''}\n`;
+    CONFIG.project_groups.forEach(group => {
+      md += `\n### ${group.label}\n\n`;
+      md += `| Field | Path / Location |\n| --- | --- |\n`;
+      group.fields.forEach(field => {
+        const val = block.querySelector(`[name="projects[${i}][${field.key}]"]`)?.value?.trim() || '';
+        md += `| ${field.label} | ${val} |\n`;
+      });
+    });
+  });
+  return md;
+}
+
+function lfDownload() {
+  const url = URL.createObjectURL(new Blob([document.getElementById('lf-preview').value], {type: 'text/markdown'}));
+  lfClickAnchor(url, 'leaving-lab-form.md');
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function lfEmail() {
+  lfClickAnchor(
+    `mailto:${CONFIG.recipient_email}`
+      + `?subject=${encodeURIComponent('[' + CONFIG.lab_name + '] Leaving submission')}`
+      + `&body=${encodeURIComponent(document.getElementById('lf-preview').value)}`
+  );
+}
+
+function lfHandleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('lf-preview').value = lfBuildMarkdown(e.target);
+  const el = document.getElementById('lf-actions');
+  el.style.display = 'block';
+  el.scrollIntoView({behavior: 'smooth'});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.getElementById('lf-root');
+
+  let submitterHtml = '';
+  CONFIG.submitter_fields.forEach(sf => {
+    submitterHtml += `<div class="mb-3">
+      <label class="form-label fw-semibold mb-1" style="font-size:.85rem">
+        ${lfEsc(sf.label)}${sf.required ? ' <span class="text-danger">*</span>' : ''}
+      </label>
+      <input type="${sf.type || 'text'}" class="form-control" name="submitter[${sf.key}]" ${sf.required ? 'required' : ''}>
+      ${sf.hint ? `<div class="form-text">${lfEsc(sf.hint)}</div>` : ''}
+    </div>`;
+  });
+
+  let checklistHtml = '';
+  CONFIG.checklist.forEach(item => {
+    if (item.title) {
+      checklistHtml += `<p class="text-uppercase fw-bold text-secondary mt-3 mb-1" style="font-size:.75rem;letter-spacing:.07em">${lfEsc(item.title)}</p>`;
+    } else {
+      const k = lfEsc(item.key);
+      checklistHtml += `<div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="lf_chk_${k}" ${item.required ? 'required' : ''}>
+        <label class="form-check-label small" for="lf_chk_${k}">${lfEsc(item.label)}${item.required ? ' <span class="text-danger">*</span>' : ''}</label>
+      </div>`;
+    }
+  });
+
+  root.innerHTML = '<form id="lf-form">'
+    + lfCard('About You', submitterHtml)
+    + lfCard('Data Checklist', checklistHtml)
+    + lfCard('Projects', '<div id="lf-projects-container"></div>'
+        + '<button type="button" class="lf-add-btn" onclick="lfAddProject()">+ Add another project</button>')
+    + '<div class="text-end mt-3"><button type="submit" class="lf-btn lf-btn-primary" style="font-size:1rem;padding:.55rem 2rem">Prepare submission &rarr;</button></div>'
+    + '</form>';
+
+  lfContainerEl = document.getElementById('lf-projects-container');
+  lfAddProject();
+  document.getElementById('lf-form').addEventListener('submit', lfHandleSubmit);
+
+  const recipientEl = document.getElementById('lf-recipient');
+  if (recipientEl) {
+    recipientEl.innerHTML = `<a href="mailto:${CONFIG.recipient_email}">${lfEsc(CONFIG.recipient_email)}</a>`;
+  }
+});
+</script>
+```
