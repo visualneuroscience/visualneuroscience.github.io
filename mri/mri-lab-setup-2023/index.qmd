@@ -9,7 +9,7 @@ categories: [MRI]
 date: 01/01/2023
 ---
 
-## General setup information:
+## General setup information
 
 -   Make sure to switch to the Linux computer (the button number 2 under the monitor)
 -   Login with credentials you received

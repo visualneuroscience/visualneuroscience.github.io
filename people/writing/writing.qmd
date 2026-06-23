@@ -57,9 +57,11 @@ Discussion has the following sections.
 
     -   Listings of different things should have identical and parallel grammatical structure.
 
+<!-- markdownlint-disable MD060 -->
         | Original | Improved |
         |------------------------------------|------------------------------------|
         | *"The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape.  The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape"* | *"**Brain activity at the location of the illusory surface was increased** when the inducers formed an illusory shape **compared to when the inducers did not form an illusory shape.Brain activity at the location of** the inducers forming an illusory shape was inhibited **compared to when the inducers did not form an illusory shape**. Finally, **brain activity at the location of the background was not modulated** by the presence of an illusory shape".* |
+<!-- markdownlint-enable MD060 -->
 
 # Formatting checklist
 

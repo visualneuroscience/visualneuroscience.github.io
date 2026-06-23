@@ -50,4 +50,4 @@ Practice your talk many times, memorizing your text by heart. This is important,
 
 While practicing, you will notice that you may want to change the wording/adapt the text. Do this and practice again. This is an iterative process.
 
-An example of an excellent speaker in neuroscience is Leslie Ungerleider: https://www.youtube.com/watch?v=mzCl7zMOPYo
+An example of an excellent speaker in neuroscience is Leslie Ungerleider: <https://www.youtube.com/watch?v=mzCl7zMOPYo>

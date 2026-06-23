@@ -12,7 +12,7 @@ date: 05/23/2024
 
 [Behavioral experiments (with no neural recordings) - Brain Imaging Data Structure v1.9.0](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/behavioral-experiments.html)
 
-## Software:
+## Software
 
 [bids-matlab](https://github.com/bids-standard/bids-matlab) \|
 
@@ -24,11 +24,11 @@ date: 05/23/2024
 
 You may use the template in the BIDS starter kit (bids-starter-kit/general). Simply copy the corresponding mat file and modify the variables for your project.
 
-### After preprocessing:
+### After preprocessing
 
 create_events_tsv_json_full.m
 
-### Before finalizing everything:
+### Before finalizing everything
 
 createBIDS_participants_tsv.m
 
@@ -48,7 +48,7 @@ createBIDS_dataset_description_json.m
 
 The folder structure based on BIDS:
 
-```         
+```text
 root_dir
   └─ ‘transriv’
         ├─ participants.xlsx

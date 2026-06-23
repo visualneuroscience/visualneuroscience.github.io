@@ -19,9 +19,7 @@ Link to [fMRIprep github](https://github.com/nipreps/fmriprep) (Useful informati
 
 -   Where possible fMRIprep should be used in preprocessing to limit the variability involved in preprocessing data
 
--   fMRIprep follows the BIDS format see [here](https://visualneuroscience.github.io/mri/analysis/bids.html) on how to validate bids
-
- 
+-   fMRIprep follows the BIDS format, see [how to validate BIDS](https://visualneuroscience.github.io/mri/analysis/bids.html)
 
 ### Permissions
 
@@ -44,8 +42,6 @@ mkdir $niidir/derivatives/fmriprep
     `docker run -u $(id -u):$(id -g) ...`
 
 <font size="-1">NOTE: using `fitlins` does not currently work using the flag `-u $(id -u):$(id -g)` the user must specify their user id directly e.g. `-u 1087:1092` see post about fitlins</font>
-
- 
 
 ## Example fMRIprep scripts
 
@@ -89,8 +85,6 @@ docker run -u $(id -u):$(id -g) --rm -it \
         /data /out participant --participant-label $subject \
         --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w
 ```
-
- 
 
 ### fMRIprep prerun FreeSurfer (no hires)
 
@@ -137,10 +131,6 @@ docker run -u $(id -u):$(id -g) --rm -it \
         --md-only-boilerplate --skip-bids-validation --stop-on-first-crash --nthreads 4 -w /scratch --output-spaces T1w
 ```
 
- 
-
- 
-
 ## Troubleshooting
 
 1.  I ran fMRIprep but no distortion correction happened
@@ -169,11 +159,7 @@ docker run -u $(id -u):$(id -g) --rm -it \
         ]
     ```
 
- 
-
 ------------------------------------------------------------------------
-
- 
 
 2.  I ran fMRIprep and the distortion correction of the data is too extreme
 
@@ -185,11 +171,7 @@ docker run -u $(id -u):$(id -g) --rm -it \
 
 > This is an issue with certain issues of fMRIprep. Using fMRIprep version 20.2.7 may be needed to avoid the extreme distortion correction (newer versions of fMRIprep haven't been tested)
 
- 
-
 ------------------------------------------------------------------------
-
- 
 
 3.  If using already run FreeSurfer `recon-all` output and have specified an `expert-opts` file then fMRIprep shows multiple errors
 

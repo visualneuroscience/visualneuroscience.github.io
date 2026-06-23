@@ -24,7 +24,7 @@ This has an advantage that you can edit .qmd files in visual mode and paste scre
 
 3.  Paste the git repo http path:
 
-    ```         
+    ```text
     https://github.com/visualneuroscience/visualneuroscience.github.io.git
     ```
 

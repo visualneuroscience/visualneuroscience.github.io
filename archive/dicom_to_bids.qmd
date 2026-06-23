@@ -31,8 +31,6 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 [matlab dicom to nifti tool converter](https://www.mathworks.com/matlabcentral/fileexchange/42997-dicom-to-nifti-converter--nifti-tool-and-viewer)
 
- 
-
 # Dicoms
 
 -   Dicoms are the raw files that are collected after an MRI session and are aren't too useful to us because analyses use the `.nifti` format
@@ -40,8 +38,6 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 -   The script aims to get the dicoms into BIDS format ready for fMRIprep
 
 -   The script is intended to be a useful for those first starting an fMRI analysis
-
- 
 
 ## Script
 
@@ -51,35 +47,25 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 -   Here I wanted the script to be as easy as possible for a number of reasons but primarily so that anyone can run it (even without using `.json` files)
 
- 
-
 ## How to use the script
 
 -   The script will guide you through the process of converting from dicoms to BIDS
 
 -   What's important to know is that the script is not always accurate and will require some input to correct some things
 
- 
-
 ### 1. Choose the name of the dicom folder in which to convert
 
 ![](./dicom2bids_start.PNG)
 
- 
-
 ### 2. Optional: If there are subdirectories in the dicom folder (e.g. ses-1 or ses-2) pick one
 
 ![](./dicom2bids_subdirs.PNG)
-
- 
 
 ### 3. Get the name of BIDS subject
 
 ![](./dicom2bids_bidsname.PNG)
 
 -   What is often the case for us is that the dicoms folder for each participant is named differently to how we want out subject/ BIDS name to be.
-
- 
 
 ### 4. DICOM search. This will either use pydicom or dcmunpack
 
@@ -89,22 +75,18 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 ![](./dicom2bids_dicomsearch_pybids.PNG)
 
- 
-
 ### 5. Information about the renaming and BIDS conventions
 
 > pydicom and dcmunpack don't get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format
-
+>
 > The option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS
 
 ![](./dicom2bids_renameinfo.PNG)
 
- 
-
 ### 6. Keep/ modify/ delete
 
 > Choose to keep the dicom and the name of the dicom, modify it or delete it (ie don't convert)
-
+>
 > Any action here will apply to the `.nii.gz` and the `.json`
 
 ![](./dicom2bids_keepmodifydelete.PNG)
@@ -112,8 +94,6 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 -   If you want to modify the name of the BIDS file then choose modify and rename according to the BIDS naming convention
 
 ![](./dicom2bids_modify.PNG)
-
- 
 
 ------------------------------------------------------------------------
 
@@ -130,8 +110,6 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 ![](./dicom2bids_foldername_renameanat.PNG)
 
 -   Often times the anat folder name is wrong. Here the name should just be `anat`
-
- 
 
 ### 7. Adding `IntendedFor` field to fmap json
 

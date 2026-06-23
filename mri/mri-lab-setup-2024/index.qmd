@@ -15,7 +15,7 @@ editor: visual
 
 -   This document details some information about the new setup
 
-## General setup information:
+## General setup information
 
 ### Starting
 
@@ -29,7 +29,7 @@ editor: visual
 
 > When logging into the stimulus PC it might be that you actually don't see anything on the screen yet if there are other screens connected to the stimulus PC, therefore the sequence of keystrokes when starting the PC is:
 
-```         
+```text
     1. Enter decryption password 
 
     2. Press enter 

@@ -25,7 +25,8 @@ Participants can always be compensated with course credit (=Versuchsscheine) if 
 Reimbursement is done via the bank transfer by the University to participants' bank accounts. Therefore, it is useful to warn them that it will take some weeks until they receive the money. To start the reimbursement process, follow these steps.
 
 ::: callout-warning
-## Dataprotection!
+
+## Dataprotection
 
 When you reimburse participants with money and get their information (see below), make sure that participants don´t see the information of others!! In excel this can be achieved by hiding the rows. Additionally, you should save the file where you gather the information on a university server/cloud (e.g. your nextcloud)
 :::

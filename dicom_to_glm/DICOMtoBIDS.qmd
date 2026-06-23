@@ -47,6 +47,7 @@ After some time to load, it should look like this:
 Subsequently, it can be easier to first copy/paste the directory `/shared/dicomsort` to your own directory, before following the script below (= `/shared/website/dcm2bids_coiner.sh`). You can either adapt it once and run the whole script, or run the lines in the bidscoiner-terminal step-by-step (potentially helpful to find problems).
 
 Quick explanations:
+
 1) `sourceFolder` = the directory "DICOM" that contains the various subdirectories containing the DICOM files
 2) `sortedFolder` = *initially empty folder* where the sorted DICOMs will be stored in
 3) `./dicomsort` the directory containing the scripts `dicomsort.py` & `DICOMsort.sh`
@@ -54,7 +55,6 @@ Quick explanations:
 :::callout-hint
 After running the second to last line (starting with `bidsmapper`) you might have to do additional steps described below!!!
 :::
-
 
 ``` bash
 #!/bin/bash
@@ -216,7 +216,7 @@ When both paths are set, you are asked to choose a dicom name (basically the fil
 
 After selecting a subject/dicom name (Press `enter`), the script automatically suggest a BIDS "subject id" and asks if it is correct (*Watch out!* Generally the suggested ID is not [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)!)![Suggested Subject Name](./images/01_dcm2bids/10_IncorrectSubjName.png)
 
-For your data to be [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) at the end, the "subject id" has to have a structure like this: sub-001, sub-002,... (All necessary information about BIDS can be found [here](https://bids-specification.readthedocs.io/en/stable/introduction.html))
+For your data to be [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) at the end, the "subject id" has to have a structure like this: sub-001, sub-002,... (All necessary information about BIDS can be found in the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/introduction.html))
 
 If the suggested name is correct, type in `y` and press `enter`.
 
@@ -274,7 +274,7 @@ When you enter the `sub-999` directory, you´ll find the sub-directory `ses-1` (
 
 Each of these sub-directories contains all the files that you assigned, including the `.nii.gz` and a `.json` file![Content of the func directory](./images/01_dcm2bids/22_BIDS_funcs.png)![Content of the fmap directory](./images/01_dcm2bids/23_BIDS_fmap.png)![Content of the anat directory](./images/01_dcm2bids/24_BIDS_anat.png)![Content of the extra directory](./images/01_dcm2bids/25_BIDS_extra.png)
 
-# Congratuliations, you did it!
+# Congratuliations, you did it
 
 ***Congratulations***!
 

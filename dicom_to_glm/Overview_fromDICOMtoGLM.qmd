@@ -40,6 +40,7 @@ There are two ways how you get your data:
 $\to$ before we can continue, we need to convert `DICOM`- to `.nii.gz` files
 
 ::: callout-warning
+
 ## DELETE DICOMS FROM YOUR OWN DEVICES AS SOON AS POSSIBLE
 
 ***Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***

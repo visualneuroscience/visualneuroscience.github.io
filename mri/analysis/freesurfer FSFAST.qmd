@@ -22,15 +22,11 @@ The FSFAST glm can be run instead of using [fitlins](link%20to%20fitlins)
 Link to [FreeSurfers FSFAST tutorial](https://surfer.nmr.mgh.harvard.edu/fswiki/FsFastTutorialV5.1/FsFastFirstLevel)
 :::
 
- 
-
 ## Reasons to use FreeSurfers FSFAST
 
 -   If fitlins does not have a particular option for you that you would like to use i.e. different
 
 -   Potentially easier when working with surface space data (FSFAST was originally designed for surface space data)
-
- 
 
 ## Neurodesk
 
@@ -48,9 +44,8 @@ Link to [FreeSurfers FSFAST tutorial](https://surfer.nmr.mgh.harvard.edu/fswiki/
 
 -   [MATLAB]{style="background-color: #ffec99;"}, [fMRIprep]{style="background-color: #b2f2bb;"} and [SPM]{style="background-color: #d0bfff;"} would not be available to you
 
- 
-
 ::: callout-note
+
 ## Note: MATLAB runtime environment
 
 However, FreeSurfer uses something called a **MATLAB runtime environment**
@@ -60,11 +55,7 @@ However, FreeSurfer uses something called a **MATLAB runtime environment**
 -   FreeSurfer commands can be run without the **whole** of MATLAB directly and instead use this "MATLAB runtime environment"
 :::
 
- 
-
 ------------------------------------------------------------------------
-
- 
 
 ## FreeSurfer commands that do rely on the MATLAB runtime environment
 
@@ -80,15 +71,11 @@ However, FreeSurfer uses something called a **MATLAB runtime environment**
 
         > This is because the MATLAB runtime environment is installed in a folder somewhere
 
- 
-
 ## Steps to run FreeSurfer commands
 
 **1. Start a FreeSurfer container:**
 
 ![](./start_freesurfer.PNG){fig-align="center"}
-
- 
 
 **2. Set up your environment variables:**
 
@@ -100,15 +87,11 @@ For example:
 
 `export SUBJECTS_DIR=$TUTORIAL_DATA/buckner_data/tutorial_subjs`
 
- 
-
 **3. Change directory to where your data is:**
 
 For example:
 
 `cd data`
-
- 
 
 **4. Try and run the command first:**
 
@@ -121,8 +104,6 @@ For example:
 `mri_vol2vol` ← this doesn't rely on MATLAB so should also work
 
 `mkcontrast-sess` ← this does rely on MATLAB runtime environment
-
- 
 
 **5. What to do if your command doesn't work?**
 
@@ -138,11 +119,9 @@ And then see an error like so:
 
 `export FS_MCRROOT=/opt/MCR2019b/v97/`
 
-**The command above is important to tell FreeSurfer where the MATLAB runtime environment is**
+### The command above is important to tell FreeSurfer where the MATLAB runtime environment is
 
- 
-
-**6. Re-run the command again**
+### 6. Re-run the command again
 
 > If you fall into the error as above @fig-error : then run the command using `-mcr 1`
 

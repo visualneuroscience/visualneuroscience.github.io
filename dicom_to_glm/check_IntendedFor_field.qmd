@@ -20,7 +20,7 @@ Depending on the version of [fMRIprep](run_fmriprep.qmd) you plan to use for pre
 
 In general, there are two naming conventions that might be used in the IntendedFor field:
 
-````         
+````text
 BIDS URI specification (= absolute path) necessary for fmriprep 24.0.0 or newer:
 
 ``` json
