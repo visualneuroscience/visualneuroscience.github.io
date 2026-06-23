@@ -48,7 +48,7 @@ Subsequently, it can be easier to first copy/paste the directory `/shared/dicoms
 
 Quick explanations:
 1) `sourceFolder` = the directory "DICOM" that contains the various subdirectories containing the DICOM files
-2) `sortedFolder` = *initally empty folder* where the sorted DICOMs will be stored in
+2) `sortedFolder` = *initially empty folder* where the sorted DICOMs will be stored in
 3) `./dicomsort` the directory containing the scripts `dicomsort.py` & `DICOMsort.sh`
 
 :::callout-hint
@@ -162,7 +162,7 @@ The directory `scrips` is not necessary for the script to run, but it may be hel
 
 ### Naming of the nifti files
 
-It is curcial for the [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, that the resulting `.nifti`-files are named properly ([see here for the naming convention(s)](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)).
+It is crucial for the [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format, that the resulting `.nifti`-files are named properly ([see here for the naming convention(s)](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)).
 
 To ensure that [later](#sec-filename), it might be helpful to write down the proper names for the files *before* you start the process. This could be done in a simple `.txt` file, where you specify all the file-names. You can then just open this `.txt` file and copy/paste the file-names whenever you need them. To have everything at one place, you could save this file in your `scripts` folder as well.
 
@@ -242,7 +242,7 @@ You can select one of three options for any dicom file (*use up-/down arrow key 
 
 a)  `Keep`: By selecting this option, you tell the script that the suggested name is correct and that you want to assign this file with the shown name to a directory (*Since BIDS uses a specific* [naming convention](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)*, you´ll probably need this option only for "additional files", like files related to denoising, that will be placed in a directory that is more or less independent of the BIDS-Format*; see @sec-extra\*)
 
-b)  `Modify Name`: This option tells the script that you want to change the suggested name. This is needed, when the suggested name is not [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames). After selecting this option (by pressing `enter`), you are asked to edit the name. Change the name (first delete the suggested one) to a [BIDS-conform filename](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) (*Hint: the initially suggested name implies what type of scan it was, so you should be able to easily determine if it was an anatomical scan, which run of a functional scan, or the fieldmap*). Using a [previously created file with bids-conform names](#sec-naming) can help avoiding errors and typos here, by just copy/pasting the prepared filenames! After you changed the name, press `enter` to confirm![Modyfing the Filename](./images/01_dcm2bids/15_modifyNames.png)
+b)  `Modify Name`: This option tells the script that you want to change the suggested name. This is needed, when the suggested name is not [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames). After selecting this option (by pressing `enter`), you are asked to edit the name. Change the name (first delete the suggested one) to a [BIDS-conform filename](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) (*Hint: the initially suggested name implies what type of scan it was, so you should be able to easily determine if it was an anatomical scan, which run of a functional scan, or the fieldmap*). Using a [previously created file with bids-conform names](#sec-naming) can help avoiding errors and typos here, by just copy/pasting the prepared filenames! After you changed the name, press `enter` to confirm![Modifying the Filename](./images/01_dcm2bids/15_modifyNames.png)
 
 c)  `Delete (Do not convert)`: As the name suggests, selecting this option deletes the mentioned file (thus, there will be no corresponding nifti-file!). One case when this is generally used is for the `anat-scout` scan that is irrelevant for the preprocessing and analysis, since it is a short scan at the beginning of a scanning session to ensure a proper position of the participant and to adjust the parameters for the actual scans.
 

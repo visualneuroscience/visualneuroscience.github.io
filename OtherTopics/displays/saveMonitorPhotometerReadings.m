@@ -27,7 +27,7 @@ function vals = saveMonitorPhotometerReadings(numMeasures, screenid, colorID)
 %  4.09.2012 mk Use Screen('ColorRange') to adapt number/max of intensity
 %               level to given range of framebuffer.
 % Extended 22.03.2019 Natalia Zaretskaya to use with specific RGB values
-% Shrinked 22.05.2024 Cemre Yilmaz only to measure and save the luminance
+% Shrunk 22.05.2024 Cemre Yilmaz only to measure and save the luminance
 % readings. The fitting was separated.
 
 KbName('UnifyKeyNames');

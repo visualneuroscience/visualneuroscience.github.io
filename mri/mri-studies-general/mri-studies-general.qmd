@@ -60,7 +60,7 @@ onset   duration    trial_type
 4.0     1.5         Condition A
 ```
 
-- These files can be generated on the fly by the [psychopy BIDS plugin](https://psychopy-bids.readthedocs.io/en/stable/) or creted post-hoc from
+- These files can be generated on the fly by the [psychopy BIDS plugin](https://psychopy-bids.readthedocs.io/en/stable/) or created post-hoc from
 
   - matlab/octave workspace content (ask BU or MG for example code)
 
@@ -70,7 +70,7 @@ onset   duration    trial_type
 
 - Before running a pilot with a subject inside an MRI, find the time to go to the MRI lab and test your scripts on the stimulation computer without a subject.
   - Start your script for one run, trigger it (e.g. by pressing a button the subjects' button box), and wait the whole run duration until the end to make sure it finishes. You can occasionally do the task as a subject and press some buttons
-  - Make sure everything is saved as you expect it to be (check e.g. if button presses have been recoreded). Also check the timings of the script (dropped frames; any delays).
+  - Make sure everything is saved as you expect it to be (check e.g. if button presses have been recorded). Also check the timings of the script (dropped frames; any delays).
   - Test a few other runs (not just the first one).
   - For the Psychtoolbox keyboard events make sure the script reads the subject responses and the scanner trigger from the correct keyboard device.
   - Only after you made sure everything works without the scanner you can plan a real MRI session.
@@ -98,7 +98,7 @@ If a subject has anything that can pause a risk (titanium implants, contraceptiv
 
 There are two forms the participants have to sign before they go into the scanner:
 
-- MRI safety and data protection form of the MRI lab (can be found [here](https://mri-lab.uni-graz.at/de/forscherinnen/downloads/) in your favorite langauge). This form is the same for all fMRI studies. It stays with RTAs in the MRI lab.
+- MRI safety and data protection form of the MRI lab (can be found [here](https://mri-lab.uni-graz.at/de/forscherinnen/downloads/) in your favorite language). This form is the same for all fMRI studies. It stays with RTAs in the MRI lab.
 
 - Informed consent form (can be found among your ethics votum documents). This form is study-specific you will take it with you to the office. If it is electronic, please save it on the network location relevant to your study (e.g. Y-drive).
 
@@ -108,7 +108,7 @@ There are two forms the participants have to sign before they go into the scanne
 
 ## During the scanning
 
-- At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual "assessment" of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals that participants moved too much, you can remind them not to move. This can potentially avoid getting data at the end, that are unusuable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC).
+- At least after the first functional run (or after every run) of your experiment (or after the anatomical scan), do a visual "assessment" of the participants movement. Just ask Thomas/Alex to do this, they should know what you mean. If this inspection reveals that participants moved too much, you can remind them not to move. This can potentially avoid getting data at the end, that are unusable due to huge movement artifacts. (You may do a detailed quality control at the end with MRI QC).
 
 ## After the scanning
 

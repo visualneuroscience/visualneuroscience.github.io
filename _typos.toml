@@ -1,0 +1,18 @@
+[files]
+extend-exclude = [
+    "internship/claustrum_segmentation.txt",
+    "internship/pflichtpraktikum.qmd",
+]
+
+[default.extend-words]
+# FitLins is a neuroimaging software package
+Lins = "Lins"
+# .puls / Puls: Siemens MRI physiological recording file extension
+puls = "puls"
+Puls = "Puls"
+# ttest: identifier in R code (paired.ttest)
+ttest = "ttest"
+# Ende, oder: German words in otherwise-English files (link labels, mixed content)
+Ende = "Ende"
+oder = "oder"
+claus = "claus"

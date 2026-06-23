@@ -40,7 +40,7 @@ Short explanation of the process:
 
 7.  Define contrasts.
 
-    -   In the example notebooks, it loops through the tasks (definetely necessary) and subjects (could potentially be omitted if everything is the same for all participants) and defines the corresponding contrasts
+    -   In the example notebooks, it loops through the tasks (definitely necessary) and subjects (could potentially be omitted if everything is the same for all participants) and defines the corresponding contrasts
     -   first a directory is set up to store the design matrix (`plot_design_matrix` immediately afterwards) and the contrast visualizations (`plot_contrast_matrix` at the end)
     -   You have to think through your task & subject structure (influences how and how many objects you have for example in `fitted_models`) to ensure that the logic holds! (in this case, the GLM for the first task is stored for the 5 subjects, then for the second task, etc.; depending on your setup, you might need to change the for-loops)
     -   `basic_contrasts` is a dictionary with "column-name" as key and the column as value for each column of the design matrix ($\to$ has as many entries/key-value-pairs as the design matrix has columns)

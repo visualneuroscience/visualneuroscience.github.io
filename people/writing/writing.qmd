@@ -77,9 +77,9 @@ Discussion has the following sections.
 
 -   [ ] Use a reference manager software. Currently Zotero is everyone's favourite. It has the "groups" function where you can add collaborators: <https://www.zotero.org/groups/>.
 
-# Manuscript life cycle (first author persepctive)
+# Manuscript life cycle (first author perspective)
 
--   Create the intial draft which you and your PI are happy with. Decide on a target journal and the list of potential reviewers.
+-   Create the initial draft which you and your PI are happy with. Decide on a target journal and the list of potential reviewers.
 
     -   At this stage the manuscript undergoes several rounds of going back and froth between you and your PI. This is normal.
 

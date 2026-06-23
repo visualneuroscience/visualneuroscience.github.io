@@ -20,7 +20,7 @@ BUT: don´t run the defacing by default! You should always check first if the T1
 
 # General Information
 
-When we acquired data "ourselves", we definetely have to deface the T1w-scan ([after converting the DICOMs to niftis](DICOMtoBIDS.qmd)) before we can continue!
+When we acquired data "ourselves", we definitely have to deface the T1w-scan ([after converting the DICOMs to niftis](DICOMtoBIDS.qmd)) before we can continue!
 
 When acquiring data during regular scanner times, we already get `.nifti` files. There should be a directory `rawdata`, which contains the data in BIDS-Format. Additionally there is a directory `faced`.
 

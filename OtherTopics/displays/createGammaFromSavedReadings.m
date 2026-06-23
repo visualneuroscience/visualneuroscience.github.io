@@ -12,7 +12,7 @@ function [displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFr
 % CY 05/24
 %
 % NZ 07/24:
-% updated to aslo work with Octave and
+% updated to also work with Octave and
 % ptb's function FitGamma
 % you may need to install the following packages
 % for it to work:

@@ -90,7 +90,7 @@ all approaches should result in `.nii.gz` files in [BIDS](https://bids-specifica
 
 # [Defacing your data](defacing.qmd) {#sec-deface}
 
--   defaced data is necessary to savely run fMRIprep
+-   defaced data is necessary to safely run fMRIprep
 -   Save faced T1w-files to give to your participants (if you got the data during regular scanning times, there should be a `faced` directory, but you should still make sure, that you have the faced T1w files if you need them for your participants!)
 -   NEVER share data (e.g. on [open Neuro](https://openneuro.org/)) that was not defaced before!
 -   Defacing is done with `pydeface` (Docker; Version 2.0.2)
@@ -119,7 +119,7 @@ all approaches should result in `.nii.gz` files in [BIDS](https://bids-specifica
 
 # [Group-Level ROI Analysis](roi_analysis.qmd)
 
--   in the group-level ROI analysis, you extract relevevant (for your reasearch questions/hypothesis) information from your first level GLM
+-   in the group-level ROI analysis, you extract relevevant (for your research questions/hypothesis) information from your first level GLM
 -   you should save this information in a format that allows you to later run your statistical analysis (e.g. as a `.csv` file)
 
 # Statistical Analysis

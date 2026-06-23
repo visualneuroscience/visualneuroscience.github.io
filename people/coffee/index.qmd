@@ -43,7 +43,7 @@ When the red light is blinking, it is time to decalcify. Do it right away, do no
 7.  Empty the grey bowl and place it back
 8.  Fill the water container with water until section "MAX"
 9.  Turn the small handle to I
-10. Once the water indictor is blinking red, return the handle from I to 0
+10. Once the water indicator is blinking red, return the handle from I to 0
 11. Repeat from step 8 onwards
 12. After the second loop the red light that was originally blinking should extinguish
 13. Enjoy your coffee :-)

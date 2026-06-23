@@ -17,7 +17,7 @@ date: 08/12/2024
     -   [pydicom](https://pydicom.github.io/)
     -   [dcmunpack](https://surfer.nmr.mgh.harvard.edu/fswiki/dcmunpack)
 
-See also [BIDS specificiation](https://bids-specification.readthedocs.io/en/stable/introduction.html)
+See also [BIDS specification](https://bids-specification.readthedocs.io/en/stable/introduction.html)
 
 -   Other programs that can be used to convert dicoms to BIDS
 

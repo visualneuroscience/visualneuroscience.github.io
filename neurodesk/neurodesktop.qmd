@@ -47,7 +47,7 @@ Resource limits depend on your role:
 
 4.  Fill out the following fields
 
-    - Username: first part of your univesity email account before "\@", e.g. jane.doe if your email address is jane.doe\@edu.uni-graz.at
+    - Username: first part of your university email account before "\@", e.g. jane.doe if your email address is jane.doe\@edu.uni-graz.at
 
     - Email: your university student or employee email address (if you are a course participant: university student email address)
 
@@ -81,7 +81,7 @@ Once your account has been authorized
 
 7.  If you close this window and reopen it later, all your work will be saved as you left it (unless the server has been restarted in the meantime, which happens every Tuesday)
 
-You can use <https://pslg-nv1.uni-graz.at/hub/home> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -\> Hub Control Panel from the menue.
+You can use <https://pslg-nv1.uni-graz.at/hub/home> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -\> Hub Control Panel from the menu.
 
 ![](images/clipboard-2628836406.png)
 
@@ -155,7 +155,7 @@ FitLins(not a part of neurodesktop basic set of tools) can be used with Singular
 
   ![](images/clipboard-2118237028.png)
 
-- Weasis will appear in the application menue under "Graphics" section
+- Weasis will appear in the application menu under "Graphics" section
 
 ## Resource (esp. RAM) usage
 
@@ -184,9 +184,9 @@ When you want to use python scrips or notebooks, you´ll probably set them up in
 
 - The ⏵ sign: run the current cell (Alternative: `Strg` + `Enter`)
 
-- The ⏹ sign: interrups all current processes of the kernel
+- The ⏹ sign: interrupts all current processes of the kernel
 
-- The ⟳ sign: restarts the kernel (*all* variales are lost, everything is cleared from RAM)
+- The ⟳ sign: restarts the kernel (*all* variables are lost, everything is cleared from RAM)
 
 - Ensuring limited strain on RAM for notebooks with high RAM demands: Sometimes you need to run notebooks that take some time and that require much RAM (e.g. analysis/processing with surface images of multiple subjects). First, you should figure out how many subjects are even possible at once (due to limited RAM). If you run a notebook that takes so much time that you potentially can´t look at the data immediately (as it may take an hour an you are not in the office then), it can be useful to add cell at the very end of your notebook with `os._exit(0)` (if you dodn´t use `os` in your notebook, you have to include `import os` before that line as well). Including this line and with using ⏩, your notebook runs through completely and automatically aborts the kernel afterwards. Thus, you free up the required RAM immediately after your notebook finished (obviously, you must make sure that the data you need is saved in the process)
 

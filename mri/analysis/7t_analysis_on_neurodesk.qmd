@@ -124,7 +124,7 @@ For example:
 
 ## Troubleshooting
 
--   The files will need to be *unzipped* first. This is becuase the script uses SPM12 and that this is only able to read files that end in `.nii` and not `.nii.gz`
+-   The files will need to be *unzipped* first. This is because the script uses SPM12 and that this is only able to read files that end in `.nii` and not `.nii.gz`
 
 Run the commands in a new terminal window:
 
