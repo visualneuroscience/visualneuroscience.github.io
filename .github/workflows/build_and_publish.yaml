@@ -18,14 +18,14 @@ jobs:
       contents: read
       pages: write
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.0
 
       - name: Check spelling
-        uses: crate-ci/typos@master
+        uses: crate-ci/typos@v1.47.2
         continue-on-error: true
 
       - name: Check markdown
-        uses: DavidAnson/markdownlint-cli2-action@v23
+        uses: DavidAnson/markdownlint-cli2-action@v23.2.0
         with:
           globs: |
             **/*.qmd
@@ -33,7 +33,7 @@ jobs:
         continue-on-error: true
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@v2.2.0
         with:
           tinytex: false
 
@@ -52,17 +52,17 @@ jobs:
             any::Superpower
 
       - name: Render Quarto project
-        uses: quarto-dev/quarto-actions/render@v2
+        uses: quarto-dev/quarto-actions/render@v2.2.0
 
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: docs/
 
       - name: Upload PR preview artifact
         if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: quarto-preview-pr-${{ github.event.pull_request.number }}
           path: docs/
@@ -81,4 +81,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v5.0.0
