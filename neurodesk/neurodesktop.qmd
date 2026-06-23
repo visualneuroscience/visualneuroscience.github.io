@@ -119,7 +119,7 @@ There are currently two alternatives
 
 To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
 
-```
+```bash
 ml freesurfer/7.4.1
 cd /storage
 freeview
@@ -127,7 +127,7 @@ freeview
 
 To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)
 
-```
+```bash
 export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]
 ```
 

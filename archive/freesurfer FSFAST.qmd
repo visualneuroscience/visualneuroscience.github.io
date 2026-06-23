@@ -119,9 +119,9 @@ And then see an error like so:
 
 `export FS_MCRROOT=/opt/MCR2019b/v97/`
 
-**The command above is important to tell FreeSurfer where the MATLAB runtime environment is**
+### The command above is important to tell FreeSurfer where the MATLAB runtime environment is
 
-**6. Re-run the command again**
+### 6. Re-run the command again
 
 > If you fall into the error as above @fig-error : then run the command using `-mcr 1`
 

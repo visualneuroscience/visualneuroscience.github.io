@@ -53,7 +53,7 @@ Typically we do this on [OSF](https://osf.io/) using a the AsPredicted template.
 
 Example of a rudimentary .tsv file:
 
-```
+```text
 onset   duration    trial_type
 0.5     1.0         Condition A
 2.0     1.0         Condition B
@@ -98,7 +98,7 @@ If a subject has anything that can pause a risk (titanium implants, contraceptiv
 
 There are two forms the participants have to sign before they go into the scanner:
 
-- MRI safety and data protection form of the MRI lab (can be found [here](https://mri-lab.uni-graz.at/de/forscherinnen/downloads/) in your favorite language). This form is the same for all fMRI studies. It stays with RTAs in the MRI lab.
+- MRI safety and data protection form of the MRI lab ([MRI lab downloads](https://mri-lab.uni-graz.at/de/forscherinnen/downloads/), available in multiple languages). This form is the same for all fMRI studies. It stays with RTAs in the MRI lab.
 
 - Informed consent form (can be found among your ethics votum documents). This form is study-specific you will take it with you to the office. If it is electronic, please save it on the network location relevant to your study (e.g. Y-drive).
 

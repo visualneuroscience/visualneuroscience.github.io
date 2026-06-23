@@ -78,7 +78,7 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 ### 5. Information about the renaming and BIDS conventions
 
 > pydicom and dcmunpack don't get everything right 100% of the time and the folders/ names of the niftis might be incorrect. This is important as you might want to rename your dicom files into a new name that fits the BIDS format
-
+>
 > The option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS
 
 ![](./dicom2bids_renameinfo.PNG)
@@ -86,7 +86,7 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 ### 6. Keep/ modify/ delete
 
 > Choose to keep the dicom and the name of the dicom, modify it or delete it (ie don't convert)
-
+>
 > Any action here will apply to the `.nii.gz` and the `.json`
 
 ![](./dicom2bids_keepmodifydelete.PNG)

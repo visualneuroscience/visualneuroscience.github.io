@@ -48,7 +48,7 @@ createBIDS_dataset_description_json.m
 
 The folder structure based on BIDS:
 
-```
+```text
 root_dir
   └─ ‘transriv’
         ├─ participants.xlsx

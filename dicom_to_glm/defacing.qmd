@@ -80,7 +80,7 @@ Finally, it should look like this: ![Pydeface Started](./images/03_Defacing/02_p
 
 An example command would be:
 
-```
+```bash
 pydeface /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --outfile /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --force
 ```
 

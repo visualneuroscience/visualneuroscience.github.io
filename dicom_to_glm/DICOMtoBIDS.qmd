@@ -216,7 +216,7 @@ When both paths are set, you are asked to choose a dicom name (basically the fil
 
 After selecting a subject/dicom name (Press `enter`), the script automatically suggest a BIDS "subject id" and asks if it is correct (*Watch out!* Generally the suggested ID is not [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames)!)![Suggested Subject Name](./images/01_dcm2bids/10_IncorrectSubjName.png)
 
-For your data to be [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) at the end, the "subject id" has to have a structure like this: sub-001, sub-002,... (All necessary information about BIDS can be found [here](https://bids-specification.readthedocs.io/en/stable/introduction.html))
+For your data to be [BIDS-conform](https://bids-specification.readthedocs.io/en/stable/common-principles.html#filenames) at the end, the "subject id" has to have a structure like this: sub-001, sub-002,... (All necessary information about BIDS can be found in the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/introduction.html))
 
 If the suggested name is correct, type in `y` and press `enter`.
 
