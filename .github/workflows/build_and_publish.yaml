@@ -60,6 +60,14 @@ jobs:
         with:
           path: docs/
 
+      - name: Upload PR preview artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: quarto-preview-pr-${{ github.event.pull_request.number }}
+          path: docs/
+          retention-days: 7
+
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
