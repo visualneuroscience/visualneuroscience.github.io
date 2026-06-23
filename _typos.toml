@@ -12,8 +12,6 @@ puls = "puls"
 Puls = "Puls"
 # ttest: identifier in R code (paired.ttest)
 ttest = "ttest"
-# tigger: image filename; renaming would require broader refactor
-tigger = "tigger"
 # Ende, oder: German words in otherwise-English files (link labels, mixed content)
 Ende = "Ende"
 oder = "oder"

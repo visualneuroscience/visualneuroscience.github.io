@@ -113,7 +113,7 @@ editor: visual
 
 <center>
 
-![Back of the trigger box](./tigger_box_back.png){width="75%"}
+![Back of the trigger box](./trigger_box_back.png){width="75%"}
 
 </center>
 
