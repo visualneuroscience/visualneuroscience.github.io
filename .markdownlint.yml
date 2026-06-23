@@ -1,0 +1,28 @@
+default: true
+
+# Too strict for prose
+MD013: false
+
+# Quarto uses inline HTML
+MD033: false
+
+# Files start with YAML frontmatter, not H1
+MD041: false
+
+# Quarto docs vary in heading levels
+MD002: false
+MD001: false
+
+# Quarto number-sections uses multiple H1s
+MD025: false
+
+# Alt text: separate cleanup effort
+MD045: false
+
+# List spacing/indentation and numbering — authors use different styles
+MD029: false
+MD030: false
+MD007: false
+
+# Quarto #sec-... anchors are valid
+MD051: false

@@ -71,7 +71,7 @@ SUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfe
 ## fmriprep command {#sec-fmriprepCommand}
 
 ::: callout-warning
-Before continuing, make sure that you have **your own** FreeSurfer License file!!!! You can request this file in a few minutes on this website: https://surfer.nmr.mgh.harvard.edu/registration.html
+Before continuing, make sure that you have **your own** FreeSurfer License file!!!! You can request this file in a few minutes on this website: <https://surfer.nmr.mgh.harvard.edu/registration.html>
 
 You´ll get a file called `license.txt` containing your information. Store this file somewhere on the server and correctly indicate it with the flag `--fs-licence-file /path/to/your/own/license.txt`
 
@@ -135,7 +135,9 @@ $\to$ If there are any problems, please refer to the dedicated [troubleshooting 
 Congratulations, you successfully preprocessed your data and you are one step closer to analyzing your data!
 
 :::callout-warning
+
 ## IMPORTANT
+
 **ALWAYS** check the output of fMRIPrep to ensure that everything worked properly!!!
 
 The `.html` report that fMRIPrep automatically provides a good overview to detect potential problems (e.g. [bad coregistration](./troubleshooting.qmd#sec-coreg))

@@ -24,6 +24,14 @@ jobs:
         uses: crate-ci/typos@master
         continue-on-error: true
 
+      - name: Check markdown
+        uses: DavidAnson/markdownlint-cli2-action@v23
+        with:
+          globs: |
+            **/*.qmd
+            **/*.md
+        continue-on-error: true
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:

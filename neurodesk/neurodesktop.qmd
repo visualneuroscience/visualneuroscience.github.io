@@ -119,7 +119,7 @@ There are currently two alternatives
 
 To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
 
-```         
+```
 ml freesurfer/7.4.1
 cd /storage
 freeview
@@ -127,7 +127,7 @@ freeview
 
 To set up custom subject directory in a container, use the following (instead of export SUBJECTS_DIR=)
 
-```         
+```
 export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[yourpath]
 ```
 
@@ -192,7 +192,7 @@ When you want to use python scrips or notebooks, you´ll probably set them up in
 
 # Information for lab members with ssh access
 
-## Folder mappings:
+## Folder mappings
 
 (left is server right is neurodesk)\
 `/storage/neurodesk/users/{username}` → `/home/jovyan`\

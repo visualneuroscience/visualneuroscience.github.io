@@ -9,7 +9,7 @@ author: MW
 date: 10/26/2023
 ---
 
-October 2023; additional info and further read: https://www.sciencedirect.com/science/article/pii/S016502701630259X?via%3Dihub
+October 2023; additional info and further read: <https://www.sciencedirect.com/science/article/pii/S016502701630259X?via%3Dihub>
 
 ## *Acquisition of log-files:*
 
