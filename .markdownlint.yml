@@ -26,3 +26,6 @@ MD007: false
 
 # Quarto #sec-... anchors are valid
 MD051: false
+
+# Editors (VS Code, RStudio) auto-add trailing newlines on open/save for .qmd files
+MD047: false

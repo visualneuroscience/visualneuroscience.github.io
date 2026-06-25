@@ -1,0 +1,22 @@
+{
+  "name": "Visual Neuroscience Site",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "quarto.quarto",
+        "davidanson.vscode-markdownlint",
+        "REditorSupport.r",
+        "streetsidesoftware.code-spell-checker",
+        "GitHub.vscode-pull-request-github"
+      ],
+      "settings": {
+        "r.rpath.linux": "/usr/local/bin/R",
+        "r.lsp.enabled": true,
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}

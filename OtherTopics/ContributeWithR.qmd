@@ -52,6 +52,46 @@ git commit -m "yourmessage"
 git push
 ```
 
+# Contributing using Visual Studio Code
+
+You need to have [Docker](https://docs.docker.com/get-started/get-docker/) or [Podman](https://podman.io/docs/installation) installed and the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in VS Code. See the [dev container documentation](https://code.visualstudio.com/docs/devcontainers/containers) for more details.
+
+R, Quarto, and all required extensions are pre-installed inside the container, so you do not need to set up anything else.
+
+1.  Open the repository folder in VS Code.
+2.  When prompted, click "Reopen in Container" (or run the command `Dev Containers: Reopen in Container`).
+3.  Wait for the container to build and start. This may take a few minutes on the first run.
+4.  Edit the local version as you wish.
+5.  To preview your changes locally, run `quarto preview` in the terminal. This opens the site in your browser.
+
+## Linting tools
+
+The container includes two linters you can run from the terminal.
+
+Check for typos:
+
+``` bash
+typos
+```
+
+Fix typos automatically:
+
+``` bash
+typos -w
+```
+
+Check Markdown formatting:
+
+``` bash
+markdownlint-cli2 "**/*.qmd" "**/*.md"
+```
+
+Fix Markdown formatting automatically:
+
+``` bash
+markdownlint-cli2 --fix "**/*.qmd" "**/*.md"
+```
+
 # General Information
 
 ## Recent Changes Section
