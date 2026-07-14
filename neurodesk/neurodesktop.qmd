@@ -147,6 +147,75 @@ Note that fitlins is currently not recommended; we switched to using nilearn to 
 
 FitLins(not a part of neurodesktop basic set of tools) can be used with Singularity.
 
+### Persistent Python environments (pip / venv)
+
+Packages installed directly with `pip install` (outside of a virtual environment) do not survive a server restart. To keep a Python environment and its packages persistent, set it up as a virtual environment inside your home directory.
+
+1.  Create a project folder and a virtual environment inside it, in your home directory so it survives restarts:
+
+    ``` bash
+    mkdir -p ~/myproject
+    python -m venv ~/myproject/venv
+    ```
+
+2.  Activate it:
+
+    ``` bash
+    source ~/myproject/venv/bin/activate
+    ```
+
+3.  Install the packages you need:
+
+    ``` bash
+    pip install numpy pandas matplotlib
+    ```
+
+4.  Register it as a Jupyter kernel so it shows up in the notebook dropdown. This registration persists across restarts, same as the venv itself:
+
+    ``` bash
+    pip install ipykernel
+    python -m ipykernel install --user --name myproject --display-name "Python (myproject)"
+    ```
+
+5.  Save your exact package versions, kept next to `venv/` rather than inside it:
+
+    ``` bash
+    pip freeze > ~/myproject/requirements.txt
+    ```
+
+6.  To recreate this environment from scratch later:
+
+    ``` bash
+    python -m venv ~/myproject/venv
+    source ~/myproject/venv/bin/activate
+    pip install -r ~/myproject/requirements.txt
+    ```
+
+7.  Deactivate the venv when you're done:
+
+    ``` bash
+    deactivate
+    ```
+
+#### If the underlying container image is updated
+
+Two different things can break when the neurodesk image itself is updated:
+
+-   **Python version changed** (e.g. 3.13 → 3.14): the venv's python is a symlink to the old version, which no longer exists. You'll see `bash: .../venv/bin/python3: No such file or directory`.
+-   **Same Python version, but system libraries changed**: packages with compiled code (numpy, scipy, torch, ...) can break, since they're linked against libraries that may no longer match. Signs of this include `ImportError: libfoo.so: cannot open shared object file` or `undefined symbol`, or a kernel that just dies/restarts with no visible error at all.
+
+Fix for either case: delete and recreate the venv, then reinstall your packages:
+
+``` bash
+rm -rf ~/myproject/venv
+python -m venv ~/myproject/venv
+source ~/myproject/venv/bin/activate
+pip install --force-reinstall --no-cache-dir -r ~/myproject/requirements.txt
+python -m ipykernel install --user --name myproject --display-name "Python (myproject)"
+```
+
+If you need exact python version consistency across reboots, consider [uv](https://docs.astral.sh/uv) instead of pip/venv. Install is a one-liner, and it can be used similarly to pip but with more features.
+
 ### DICOM viewer WEASIS
 
 [WEASIS](https://weasis.org/en/getting-started/download-dicom-viewer/) is a powerful free dicom viewer for Linux
