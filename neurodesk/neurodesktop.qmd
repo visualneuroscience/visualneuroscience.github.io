@@ -147,33 +147,25 @@ Note that fitlins is currently not recommended; we switched to using nilearn to 
 
 FitLins(not a part of neurodesktop basic set of tools) can be used with Singularity.
 
-### Persistent Python environments (pip / venv)
+### Persistent Python environments (conda / pip / venv)
 
-Packages installed directly with `pip install` (outside of a virtual environment) do not survive a server restart. To keep a Python environment and its packages persistent, set it up as a virtual environment inside your home directory.
+Packages installed directly with `pip install` (outside of an environment) do not survive a server restart. To keep a Python environment and its packages persistent, set it up inside your home directory.
 
-1.  Create a project folder and a virtual environment inside it, in your home directory so it survives restarts:
+#### Using conda (recommended)
+
+conda already ships with the base neurodesktop image, so no extra install is needed. It also lets you pin an exact Python version, and installs a self-contained copy of the interpreter rather than a symlink to the system one, which makes it more robust across neurodesk image updates (see [pip / venv](#using-pip-venv) below for what that can go wrong).
+
+1.  Create the environment with `--prefix`, so it's created in your home directory rather than conda's default `envs` folder:
 
     ``` bash
-    mkdir -p ~/myproject
-    python -m venv ~/myproject/venv
+    conda create --prefix ~/myproject/env python=3.14.6 numpy pandas matplotlib
+    conda activate ~/myproject/env
     ```
 
-2.  Activate it:
+2.  Register it as a Jupyter kernel:
 
     ``` bash
-    source ~/myproject/venv/bin/activate
-    ```
-
-3.  Install the packages you need:
-
-    ``` bash
-    pip install numpy pandas matplotlib
-    ```
-
-4.  Register it as a Jupyter kernel so it shows up in the notebook dropdown. This registration persists across restarts, same as the venv itself:
-
-    ``` bash
-    pip install ipykernel
+    conda install ipykernel
     python -m ipykernel install --user --name myproject --display-name "Python (myproject)"
     ```
 
@@ -185,34 +177,45 @@ Packages installed directly with `pip install` (outside of a virtual environment
 
     [![](images/kernel-select.png){width="300"}](images/kernel-select.png){target="_blank"}
 
-5.  Save your exact package versions, kept next to `venv/` rather than inside it:
+3.  Save your exact environment spec, kept next to `env/` rather than inside it:
 
     ``` bash
-    pip freeze > ~/myproject/requirements.txt
+    conda env export --prefix ~/myproject/env > ~/myproject/environment.yml
     ```
 
-6.  To recreate this environment from scratch later:
+4.  To recreate this environment from scratch later:
 
     ``` bash
-    python -m venv ~/myproject/venv
-    source ~/myproject/venv/bin/activate
-    pip install -r ~/myproject/requirements.txt
+    conda env create --prefix ~/myproject/env --file ~/myproject/environment.yml
+    conda activate ~/myproject/env
     ```
 
-7.  Deactivate the venv when you're done:
+5.  Deactivate it when you're done:
 
     ``` bash
-    deactivate
+    conda deactivate
     ```
 
-#### If the underlying container image is updated
+#### Using pip / venv {#using-pip-venv}
 
-Two different things can break when the neurodesk image itself is updated:
+A plain venv works too and needs nothing beyond what's already installed, but it has some downsides compared to conda:
 
-- **Python version changed** (e.g. 3.13 → 3.14): the venv's python is a symlink to the old version, which no longer exists. You'll see `bash: .../venv/bin/python3: No such file or directory`.
-- **Same Python version, but system libraries changed**: packages with compiled code (numpy, scipy, torch, ...) can break, since they're linked against libraries that may no longer match. Signs of this include `ImportError: libfoo.so: cannot open shared object file` or `undefined symbol`, or a kernel that just dies/restarts with no visible error at all.
+- No way to pin a specific Python version, you always get whatever interpreter is already on the system.
+- The venv's python is typically just a symlink to the system interpreter, not a self-contained copy. If the underlying neurodesk image is ever updated with a new Python version, that symlink breaks (`bash: .../venv/bin/python3: No such file or directory`) and the venv has to be recreated.
+- Compiled packages (numpy, scipy, torch, ...) can also break silently if system libraries change, even without a Python version change. Signs of this include `ImportError: libfoo.so: cannot open shared object file`, `undefined symbol`, or a kernel that just dies/restarts with no visible error.
 
-Fix for either case: delete and recreate the venv, then reinstall your packages:
+``` bash
+mkdir -p ~/myproject
+python -m venv ~/myproject/venv
+source ~/myproject/venv/bin/activate
+pip install numpy pandas matplotlib
+pip install ipykernel
+python -m ipykernel install --user --name myproject --display-name "Python (myproject)"
+pip freeze > ~/myproject/requirements.txt
+deactivate
+```
+
+If it breaks after an image update (or to recreate it from scratch elsewhere), delete and rebuild it from `requirements.txt`:
 
 ``` bash
 rm -rf ~/myproject/venv
@@ -221,8 +224,6 @@ source ~/myproject/venv/bin/activate
 pip install --force-reinstall --no-cache-dir -r ~/myproject/requirements.txt
 python -m ipykernel install --user --name myproject --display-name "Python (myproject)"
 ```
-
-If you need exact python version consistency across reboots, consider [uv](https://docs.astral.sh/uv) instead of pip/venv. Install is a one-liner, and it can be used similarly to pip but with more features.
 
 ### DICOM viewer WEASIS
 
