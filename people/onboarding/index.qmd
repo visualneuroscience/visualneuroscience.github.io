@@ -1,0 +1,46 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: Joining the lab
+description: "Useful information to start you off in the lab"
+image: /images/pr.png
+categories: [Lab]
+author: NZ
+date: 08/05/2026
+---
+
+# Welcome to the lab! 👋
+
+Here are some things to do:
+
+- [ ] 🗝️Get an office key from the secretary's office
+
+- [ ] 🖥️Have someone show you your desk
+
+- [ ] 🦺Do the safety stuff
+
+  - If you are a student/intern: with a PTA or PI ([safety briefing form](https://sharepoint.uni-graz.at/sites/602/_layouts/15/WopiFrame.aspx?sourcedoc=%7BEC8D17C7-17DF-4538-A235-C15504B41B1B%7D&file=Unterweisungen_Untersuchungsraum.pdf&action=default))
+
+  - If you are an employee (student research assistant, PhD student, postdoc), do the safety courses in UGOnline account on moodle.
+
+- [ ] 👁️‍🗨️Join our lab's slack (ask someone to add you if you did not receive an invitation yet)
+
+  - Do not feel obliged to keep slack on all the time and silence your notifications for times when you don't want to be disturbed. Everyone in the lab has the right to have their own working hours and nobody expects anyone else to have the same ones.
+
+- [ ] 📅Make sure you know the date and time of the lab meetings. We try our best to enter the dates in our lab calendar, which you can also subscribe to: <https://calendar.online/cadcb4379c842ce87f53>
+
+  - If you are a student/intern, it is not strictly necessary, but highly advisable to attend them.
+
+  - If you are an employee, this is mandatory and part of your working hours.
+
+- [ ] ⏲️Track your working time
+
+  - If you are a student/intern, create a spreadsheet in any format where you note the dates and times you worked on the project. This is not meant to control you, but rather to make sure we do not overload you with work.
+
+    - For mandatory internship the typical duration is 120 hours. You can distribute them flexibly over time depending on project demands. Inform us when you reach your last 20 hours, so you can spend some time preparing your final presentation and receiving a proper farewell.
+
+    - Master's thesis is calculated according to ECTS. For a Master's thesis in psychology, which corresponds to [28 ECTS](https://static.uni-graz.at/fileadmin/psychologie/CuKo/formulare/Mastercurriculum_Psychologie_2018-12-12.pdf) , the calculation is as follows: $$ 28 * 25 = 700 hours $$, corresponding to 87.5 full 8-hour work days, 17.5 work weeks, and roughly 4 months. Keep in mind that you should dedicate the last 1/3-1/4 of this time for to writing.
+
+  - If you are an employee, create and regularly fill out your official time s heets, aka "Gleitzeitdatei" (details should come to you from official sources via Email). Return the sheets once per month to the Secretary's office. You may also want to check out [these internal pages](https://sharepoint.uni-graz.at/sites/602/MitarbeiterInnenInformationen/Beginn%20des%20Dienstverh%C3%A4ltnisses.aspx).
+
+- [ ] 📸If you would like to be listed on our lab's [official website](https://neurovision.uni-graz.at/en/contact-team/), please provide a square photograph (at least 700x700 pixels) of yourself (currently to LW)
