@@ -3,7 +3,7 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Joining the lab
 description: "Useful information to start you off in the lab"
-image: /images/pr.png
+image: https://svgsilh.com/svg/1502369.svg
 categories: [Lab]
 author: NZ
 date: 08/05/2026
@@ -27,7 +27,7 @@ Here are some things to do:
 
   - Do not feel obliged to keep slack on all the time and silence your notifications for times when you don't want to be disturbed. Everyone in the lab has the right to have their own working hours and nobody expects anyone else to have the same ones.
 
-- [ ] 📅Make sure you know the date and time of the lab meetings. We try our best to enter the dates in our lab calendar, which you can also subscribe to: <https://calendar.online/cadcb4379c842ce87f53>
+- [ ] 📅Make sure you know the date and time of the [lab meeting](../../labmeeting/index.qmd). We try our best to enter the dates in our lab calendar, which you can also subscribe to: <https://calendar.online/cadcb4379c842ce87f53>
 
   - If you are a student/intern, it is not strictly necessary, but highly advisable to attend them.
 
@@ -42,5 +42,7 @@ Here are some things to do:
     - Master's thesis is calculated according to ECTS. For a Master's thesis in psychology, which corresponds to [28 ECTS](https://static.uni-graz.at/fileadmin/psychologie/CuKo/formulare/Mastercurriculum_Psychologie_2018-12-12.pdf) , the calculation is as follows: $$ 28 * 25 = 700 hours $$, corresponding to 87.5 full 8-hour work days, 17.5 work weeks, and roughly 4 months. Keep in mind that you should dedicate the last 1/3-1/4 of this time for to writing.
 
   - If you are an employee, create and regularly fill out your official time s heets, aka "Gleitzeitdatei" (details should come to you from official sources via Email). Return the sheets once per month to the Secretary's office. You may also want to check out [these internal pages](https://sharepoint.uni-graz.at/sites/602/MitarbeiterInnenInformationen/Beginn%20des%20Dienstverh%C3%A4ltnisses.aspx).
+
+  - If you are an employee, it is **very** **important** that you regularly use your vacation time. No special permissions are needed from the PI, just apply for your vacation days through UGOnline, and Cc an email to the PI and the secretary's office.
 
 - [ ] 📸If you would like to be listed on our lab's [official website](https://neurovision.uni-graz.at/en/contact-team/), please provide a square photograph (at least 700x700 pixels) of yourself (currently to LW)
