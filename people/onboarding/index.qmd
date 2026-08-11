@@ -17,6 +17,9 @@ Here are some things to do:
 
 - [ ] 🖥️Have someone show you your desk
 
+- You may have to wait 24 hours for your *new* uni Graz IT account to be synchronised before you can log in
+    - (this only applies if you need to have a new account created)
+
 - [ ] 🦺Do the safety stuff
 
   - If you are a student/intern: with a PTA or PI ([safety briefing form](https://sharepoint.uni-graz.at/sites/602/_layouts/15/WopiFrame.aspx?sourcedoc=%7BEC8D17C7-17DF-4538-A235-C15504B41B1B%7D&file=Unterweisungen_Untersuchungsraum.pdf&action=default))
