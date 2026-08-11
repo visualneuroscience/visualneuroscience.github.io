@@ -10,13 +10,17 @@ number-sections: true
 date: 01/04/2025
 ---
 
-# General information
+# Current information
 
 We meet every week in the corner office". You can see the schedule [on the calendar](https://calendar.online/cadcb4379c842ce87f53).
 
-In lab meetings, we discuss organisatory issues and everyone can bring up potential topics or problems to discuss. Additionally, we do presentations of our work, discuss papers, etc. Currently, the presentations are informal progress reports, one per meeting. The order is alphabetical according to first name.
+In lab meetings, we discuss organisatory issues and everyone can bring up potential topics or problems to discuss.
 
-# Reading list
+Additionally, we do presentations of our work, discuss papers, etc. Currently, the presentations are informal progress reports, one per meeting. The order is alphabetical according to first name.
+
+Please upload your progress report to this online shared folder: <https://cloud.uni-graz.at/index.php/f/298111677>
+
+# Past: journal club reading list
 
 Reading list for a potential/future journal club (will be updated as I come across new papers that may be useful; suggestions are welcome!)
 
