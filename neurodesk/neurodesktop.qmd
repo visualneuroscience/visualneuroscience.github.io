@@ -276,7 +276,7 @@ b)  at the sidebar, go to `Code Completion`. Depending what you are used to when
 
 ### Running jupyter notebooks inside Neurodesktop
 
-Notebook code that takes a long time to run can be run inside the NeurodeskTOP graphical interface. This time you can start the code and check on its execution status later, even from a different computer.
+Notebook code that takes a long time to run can be run inside the NeurodeskTOP graphical interface. This way you can start the code and check on its execution status hours (or days) later, even from a different computer.
 
 - Start Neurdesktop ![](images/clipboard-2762734474.png)
 
