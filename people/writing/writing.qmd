@@ -10,12 +10,12 @@ date: 09/18/2024
 
 # Graphs
 
--   Software for making artwork for figures: PowerPoint (simple), Inkscape (advanced functionality, especially relevant for article manuscripts)
--   Graphs: R and python packages (especially seaborn)
--   Pasting graphs into the text
-    -   as graphics (bitmap, png, jpeg, eps), not as an Microsoft graphical object
-    -   with "In line with text" option (to prevent figures/graphs from moving around when text is being edited)
-    -   keep the original for high-resolution export
+- Software for making artwork for figures: PowerPoint (simple), Inkscape (advanced functionality, especially relevant for article manuscripts)
+- Graphs: R and python packages (especially seaborn)
+- Pasting graphs into the text
+  - as graphics (bitmap, png, jpeg, eps), not as an Microsoft graphical object
+  - with "In line with text" option (to prevent figures/graphs from moving around when text is being edited)
+  - keep the original for high-resolution export
 
 # Text
 
@@ -27,79 +27,87 @@ Microsoft word or similar. Please do not use latex or quarto pdf rendering. Thes
 
 Introduction is structured as an ice cream cone: \<3 It goes form more general to more specific. The cone should be "pointing" exactly at your research question. Typically the introduction covers the following topics (in this order):
 
--   General relevance of the topic
+- General relevance of the topic
 
--   Previous research research on the topic and its findings
+- Previous research research on the topic and its findings
 
--   Gaps in knowledge, methodological problems or any reasons to study this topic further
+- Gaps in knowledge, methodological problems or any reasons to study this topic further
 
--   Your specific research question/approach
+- Your specific research question/approach
+
+#️⃣ Word count for the introduction is typically 500-1500 words (JN is special as it sets 500 as a maximum).
 
 ## Discussion
 
 Discussion has the following sections.
 
--   It starts with a single-paragraph brief summary of the main (not all!) results without interpretation.
+- It starts with a single-paragraph brief summary of the main (not all!) results without interpretation.
 
--   The main part consists of the discussion of individual results, starting from more important and going to less important. For each result, one can compare the findings with the previous studies and speculate on the reasons if the results diverge. One can also speculate on the reasons for particularly interesting/unexpected results
+- The main part consists of the discussion of individual results, starting from more important and going to less important. For each result, one can compare the findings with the previous studies and speculate on the reasons if the results diverge. One can also speculate on the reasons for particularly interesting/unexpected results
 
--   An outlook for future studies is not always feasible as a separate section. The outlook on what future studies should study or improve can be provided separately for each aspect of the results that is being discussed.
+- An outlook for future studies is not always feasible as a separate section. The outlook on what future studies should study or improve can be provided separately for each aspect of the results that is being discussed.
 
--   A conclusion at the end should again briefly state the results and main implications.
+- A conclusion at the end should again briefly state the results and main implications.
+
+#️⃣ Word count for the discussion: Keep the first version at roughly 1500 words. Note that the text will become longer with time due to reviewer's comments, so it is o.k. to keep the first version concise.
 
 ## General notes on text
 
--   Throughout the text: use "working" headings for each paragraph that will be deleted later. They are useful for structuring the thoughts and the text. The heading should answer the question "what is this paragraph about?"
+- Throughout the text: use "working" headings for each paragraph that will be deleted later. They are useful for structuring the thoughts and the text. The heading should answer the question "what is this paragraph about?"
 
--   Text structure resembles a computer program
+- Text structure resembles a computer program
 
-    -   There are specific building blocks that repeat. Within the paragraph, it may be "first, second, third". Across the paragraphs it may be "The first/second/third phase of the experiment consisted of... ".
+  - There are specific building blocks that repeat. Within the paragraph, it may be "first, second, third". Across the paragraphs it may be "The first/second/third phase of the experiment consisted of... ".
 
-    -   Listings of different things should have identical and parallel grammatical structure.
+  - Listings of different things should have identical and parallel grammatical structure.
 
 <!-- markdownlint-disable MD060 -->
-        | Original | Improved |
-        |------------------------------------|------------------------------------|
-        | *"The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape.  The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape"* | *"**Brain activity at the location of the illusory surface was increased** when the inducers formed an illusory shape **compared to when the inducers did not form an illusory shape.Brain activity at the location of** the inducers forming an illusory shape was inhibited **compared to when the inducers did not form an illusory shape**. Finally, **brain activity at the location of the background was not modulated** by the presence of an illusory shape".* |
+
+```         
+    | Original | Improved |
+    |------------------------------------|------------------------------------|
+    | *"The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape.  The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape"* | *"**Brain activity at the location of the illusory surface was increased** when the inducers formed an illusory shape **compared to when the inducers did not form an illusory shape.Brain activity at the location of** the inducers forming an illusory shape was inhibited **compared to when the inducers did not form an illusory shape**. Finally, **brain activity at the location of the background was not modulated** by the presence of an illusory shape".* |
+```
+
 <!-- markdownlint-enable MD060 -->
 
 # Formatting checklist
 
--   [ ] Use Styles of your word processor, especially for headings
+- [ ] Use Styles of your word processor, especially for headings
 
-    -   Useful for navigation
+  - Useful for navigation
 
-    -   Simplifies formatting
+  - Simplifies formatting
 
--   [ ] Add page numbers!!!
+- [ ] Add page numbers!!!
 
--   [ ] Make sure graphics are pasted "In line with text" to make sure they do not jump around when text is being edited.
+- [ ] Make sure graphics are pasted "In line with text" to make sure they do not jump around when text is being edited.
 
--   [ ] For article manuscripts: also add line numbers (if the journal submission system does not add them automatically when you upload a PDF)
+- [ ] For article manuscripts: also add line numbers (if the journal submission system does not add them automatically when you upload a PDF)
 
--   [ ] Use a reference manager software. Currently Zotero is everyone's favourite. It has the "groups" function where you can add collaborators: <https://www.zotero.org/groups/>.
+- [ ] Use a reference manager software. Currently Zotero is everyone's favourite. It has the "groups" function where you can add collaborators: <https://www.zotero.org/groups/>.
 
 # Manuscript life cycle (first author perspective)
 
--   Create the initial draft which you and your PI are happy with. Decide on a target journal and the list of potential reviewers.
+- Create the initial draft which you and your PI are happy with. Decide on a target journal and the list of potential reviewers.
 
-    -   At this stage the manuscript undergoes several rounds of going back and froth between you and your PI. This is normal.
+  - At this stage the manuscript undergoes several rounds of going back and froth between you and your PI. This is normal.
 
--   Once both of you are happy with the initial draft, send this draft to the other co-authors and wait for their feedback.
+- Once both of you are happy with the initial draft, send this draft to the other co-authors and wait for their feedback.
 
--   Create the final version of the manuscript for submission which incorporates co-authors feedback (potentially also discussing with the PI).
+- Create the final version of the manuscript for submission which incorporates co-authors feedback (potentially also discussing with the PI).
 
--   Submit the manuscript. Important: make note of the reviewers you indicated during the submission.
+- Submit the manuscript. Important: make note of the reviewers you indicated during the submission.
 
--   If agreed with the PI, publish the submitted version on bioRxives or similar preprint server. Send the preprint link to the co-authors. If not publishing a preprint, send a submitted copy to the co-authors for the record, notifying them about the submission.
+- If agreed with the PI, publish the submitted version on bioRxives or similar preprint server. Send the preprint link to the co-authors. If not publishing a preprint, send a submitted copy to the co-authors for the record, notifying them about the submission.
 
--   Once you receive the reviews, forward them to the co-authors (even if they received a copy).
+- Once you receive the reviews, forward them to the co-authors (even if they received a copy).
 
--   Work on the revision with the PI.
+- Work on the revision with the PI.
 
--   Once both of you are happy with the revised manuscript, supplementary material and the Response letter, send all documents to the co-authors for reviewing.
+- Once both of you are happy with the revised manuscript, supplementary material and the Response letter, send all documents to the co-authors for reviewing.
 
--   Once you heard back from the co-authors, incorporate their changes (potentially also discussing with the PI) and submit the revision.
+- Once you heard back from the co-authors, incorporate their changes (potentially also discussing with the PI) and submit the revision.
 
 # Reading recommendation
 
