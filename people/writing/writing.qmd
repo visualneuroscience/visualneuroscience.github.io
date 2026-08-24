@@ -55,21 +55,19 @@ Discussion has the following sections.
 
 - Throughout the text: use "working" headings for each paragraph that will be deleted later. They are useful for structuring the thoughts and the text. The heading should answer the question "what is this paragraph about?"
 
+- Each paragraph has an introductory sentence, some statements inside, and a concluding sentence (see example below).
+
+  - *Our conscious experience of the visual input is rich and complex. Viewing even a simple object, such as an apple, evokes a myriad of impressions: outline, color, texture, and 3D shape. However, common research practices tend to reduce the complexity of subjective experience to predefined categories. For example, in a near-threshold detection task, observers are asked whether they perceived a stimulus presented briefly, with a yes/no response. Similarly, when presenting an ambiguous stimulus such as the Necker cube or the Rubin’s vase illusion, the task is to report perception by choosing one of the two possible interpretations. Such simplifications are hardly compatible with complex and dynamic nature of our perception. (Yilmaz et al., 2025)*
+
 - Text structure resembles a computer program
 
   - There are specific building blocks that repeat. Within the paragraph, it may be "first, second, third". Across the paragraphs it may be "The first/second/third phase of the experiment consisted of... ".
 
   - Listings of different things should have identical and parallel grammatical structure.
 
-<!-- markdownlint-disable MD060 -->
-
-```         
-    | Original | Improved |
-    |------------------------------------|------------------------------------|
-    | *"The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape.  The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape"* | *"**Brain activity at the location of the illusory surface was increased** when the inducers formed an illusory shape **compared to when the inducers did not form an illusory shape.Brain activity at the location of** the inducers forming an illusory shape was inhibited **compared to when the inducers did not form an illusory shape**. Finally, **brain activity at the location of the background was not modulated** by the presence of an illusory shape".* |
-```
-
-<!-- markdownlint-enable MD060 -->
+| Original | Improved |
+|------------------------------------|------------------------------------|
+| *"The location of the illusory surface was increased when the inducers formed an illusory shape, compared to when the inducers did not form an illusory shape. The brain activity at the location of inducers partaking in the illusory shape perception was inhibited compared to the same inducers not forming the illusory shape. The background region was not modulated by the presence of the illusory shape."* | *"**Brain activity at the location of the illusory surface was increased** when the inducers formed an illusory shape **compared to when the inducers did not form an illusory shape.** Brain activity at the location of the inducers forming an illusory shape was inhibited **compared to when the inducers did not form an illusory shape**. Finally, **brain activity at the location of the background was not modulated** by the presence of an illusory shape."* |
 
 # Formatting checklist
 
