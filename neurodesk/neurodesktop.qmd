@@ -117,11 +117,11 @@ There are currently two alternatives
 
 ### Using FreeSurfer
 
-To force freesurfer/freeview to see the /storage folder, source freesurfer from the terminal as follows
+To use mounted folders inside of freesurfer/freeview (/storage and/or /shared), source freesurfer from the terminal as follows
 
 ``` bash
-ml freesurfer/7.4.1
-cd /storage
+ml freesurfer
+export APPTAINER_BINDPATH="/shared:/shared,/storage:/storage"
 freeview
 ```
 
