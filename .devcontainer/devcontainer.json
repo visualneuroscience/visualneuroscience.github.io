@@ -3,6 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "postCreateCommand": "pip install -r brain-atlas-viewer/requirements.txt",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -10,9 +11,11 @@
         "davidanson.vscode-markdownlint",
         "REditorSupport.r",
         "streetsidesoftware.code-spell-checker",
-        "GitHub.vscode-pull-request-github"
+        "GitHub.vscode-pull-request-github",
+        "ms-python.python"
       ],
       "settings": {
+        "python.defaultInterpreterPath": "/opt/venv/bin/python",
         "r.rpath.linux": "/usr/local/bin/R",
         "r.lsp.enabled": true,
         "editor.formatOnSave": true
