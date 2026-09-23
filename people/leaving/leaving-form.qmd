@@ -18,6 +18,9 @@
 #   full          true = spans the full width instead of half (optional)
 
 title: "Leaving Lab Form"
+description: "Document where your project data, scripts and results are stored before you leave"
+categories: [Lab]
+date: 06/22/2026
 params:
   lab_name: "Visual Neuroscience Lab"
   recipient_email: "natalia.zaretskaya@uni-graz.at"
@@ -98,7 +101,7 @@ params:
 # ================================================================
 ---
 
-Fill in all fields for each project, then click **Prepare submission** to download your form or send it directly via email.
+Fields marked <span class="text-danger">*</span> are required. For each project, fill in the locations that apply, then click **Prepare submission**. Your entries are saved in this browser until you click **Start over**.
 
 ```{r}
 #| echo: false
@@ -113,13 +116,16 @@ cat(paste0('<script>\nconst CONFIG = ', jsonlite::toJSON(params, auto_unbox = TR
   <div class="card shadow-sm" style="border-left: 4px solid #2c6fad">
     <div class="card-body">
       <h5 class="card-title mb-2">Your form is ready to send</h5>
-      <p class="mb-3" style="font-size:.9rem">
-        Send your submission to <span id="lf-recipient"></span>: download and attach the <code>.md</code> file, or use <strong>Open email client</strong> to send the content directly as email text.
-      </p>
-      <div class="d-flex gap-2 flex-wrap">
-        <button class="lf-btn lf-btn-primary" onclick="lfDownload()">Download .md</button>
-        <button class="lf-btn lf-btn-outline" onclick="lfEmail()">Open email client</button>
+      <div class="d-flex gap-2 flex-wrap align-items-center mb-3">
+        <button class="lf-btn lf-btn-primary" onclick="lfDownloadAndEmail()">Download and email</button>
+        <button class="lf-btn lf-btn-outline" onclick="lfDownload()">Download file</button>
       </div>
+      <p class="mb-2" style="font-size:.9rem">
+        <strong>Download and email</strong> saves your form as a file and opens a new email. Attach the file from your Downloads folder and send it.
+      </p>
+      <p class="mb-0 text-muted" style="font-size:.85rem">
+        No email opened, or you use webmail? Click <strong>Download file</strong> and send the file to <span id="lf-recipient"></span> yourself.
+      </p>
       <textarea id="lf-preview" style="display:none" readonly></textarea>
     </div>
   </div>
@@ -280,6 +286,7 @@ function lfRenumber() {
       el.name = el.name.replace(/^projects\[\d+\]/, `projects[${i}]`);
     });
   });
+  lfSaveDraft();
 }
 
 function lfBuildMarkdown(form) {
@@ -311,18 +318,63 @@ function lfBuildMarkdown(form) {
   return md;
 }
 
+// e.g. leaving-form_Ada-Lovelace_2026-09-23.md
+function lfFileName() {
+  const name = (document.querySelector('[name="submitter[name]"]')?.value || '')
+    .trim().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-|-$/g, '');
+  const d = new Date();
+  const date = [d.getFullYear(), d.getMonth() + 1, d.getDate()].map(n => String(n).padStart(2, '0')).join('-');
+  return `leaving-form${name ? '_' + name : ''}_${date}.md`;
+}
+
 function lfDownload() {
   const url = URL.createObjectURL(new Blob([document.getElementById('lf-preview').value], {type: 'text/markdown'}));
-  lfClickAnchor(url, 'leaving-lab-form.md');
+  lfClickAnchor(url, lfFileName());
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function lfEmail() {
-  lfClickAnchor(
+function lfDownloadAndEmail() {
+  lfDownload();
+  setTimeout(() => lfClickAnchor(
     `mailto:${CONFIG.recipient_email}`
       + `?subject=${encodeURIComponent('[' + CONFIG.lab_name + '] Leaving submission')}`
-      + `&body=${encodeURIComponent(document.getElementById('lf-preview').value)}`
-  );
+      + `&body=${encodeURIComponent('Please find my leaving form attached.\n')}`
+  ), 300);
+}
+
+// Draft kept in this browser so a reload does not lose the entries.
+const LF_DRAFT_KEY = 'leaving-form-draft';
+
+function lfCollect(form) {
+  const draft = {submitter: {}, checklist: {}, projects: []};
+  CONFIG.submitter_fields.forEach(sf => {
+    draft.submitter[sf.key] = form.querySelector(`[name="submitter[${sf.key}]"]`)?.value || '';
+  });
+  CONFIG.checklist.forEach(item => {
+    if (!item.title) draft.checklist[item.key] = !!form.querySelector(`#lf_chk_${item.key}`)?.checked;
+  });
+  form.querySelectorAll('.lf-project').forEach(block => {
+    const values = {};
+    block.querySelectorAll('[name]').forEach(el => {
+      const m = el.name.match(/^projects\[\d+\]\[(.+)\]$/);
+      if (m) values[m[1]] = el.value;
+    });
+    draft.projects.push(values);
+  });
+  return draft;
+}
+
+function lfSaveDraft() {
+  try { localStorage.setItem(LF_DRAFT_KEY, JSON.stringify(lfCollect(document.getElementById('lf-form')))); } catch (e) {}
+}
+
+function lfLoadDraft() {
+  try { return JSON.parse(localStorage.getItem(LF_DRAFT_KEY)) || null; } catch (e) { return null; }
+}
+
+function lfStartOver() {
+  try { localStorage.removeItem(LF_DRAFT_KEY); } catch (e) {}
+  location.reload();
 }
 
 function lfHandleSubmit(e) {
@@ -364,13 +416,30 @@ document.addEventListener('DOMContentLoaded', () => {
     + lfCard('About You', submitterHtml)
     + lfCard('Data Checklist', checklistHtml)
     + lfCard('Projects', '<div id="lf-projects-container"></div>'
-        + '<button type="button" class="lf-add-btn" onclick="lfAddProject()">+ Add another project</button>')
-    + '<div class="text-end mt-3"><button type="submit" class="lf-btn lf-btn-primary" style="font-size:1rem;padding:.55rem 2rem">Prepare submission &rarr;</button></div>'
+        + '<button type="button" class="lf-add-btn" onclick="lfAddProject(); lfSaveDraft()">+ Add another project</button>')
+    + '<div class="d-flex justify-content-between align-items-center mt-3">'
+    + '<button type="button" class="btn btn-link text-secondary p-0" onclick="lfStartOver()">Start over</button>'
+    + '<button type="submit" class="lf-btn lf-btn-primary" style="font-size:1rem;padding:.55rem 2rem">Prepare submission &rarr;</button></div>'
     + '</form>';
 
+  const form = document.getElementById('lf-form');
+  const draft = lfLoadDraft();
   lfContainerEl = document.getElementById('lf-projects-container');
-  lfAddProject();
-  document.getElementById('lf-form').addEventListener('submit', lfHandleSubmit);
+  if (draft?.projects?.length) draft.projects.forEach(p => lfAddProject(p));
+  else lfAddProject();
+  if (draft) {
+    CONFIG.submitter_fields.forEach(sf => {
+      const el = form.querySelector(`[name="submitter[${sf.key}]"]`);
+      if (el && draft.submitter?.[sf.key]) el.value = draft.submitter[sf.key];
+    });
+    CONFIG.checklist.forEach(item => {
+      const el = !item.title && form.querySelector(`#lf_chk_${item.key}`);
+      if (el) el.checked = !!draft.checklist?.[item.key];
+    });
+  }
+  form.addEventListener('input', lfSaveDraft);
+  form.addEventListener('change', lfSaveDraft);
+  form.addEventListener('submit', lfHandleSubmit);
 
   const recipientEl = document.getElementById('lf-recipient');
   if (recipientEl) {
