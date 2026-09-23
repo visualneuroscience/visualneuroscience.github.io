@@ -116,7 +116,7 @@ There are two forms the participants have to sign before they go into the scanne
 
 - Inspect the anatomical scan; if you suspect anatomical irregularity, inform RT immediately to handle potential incidental findings
 
-- If the scan looks o.k. provide subjects with a NIFTI of their brain (if they requested it). You can point them to the web-based version of freeview for viewing it [FreeBrowse](https://freesurfer.github.io/freebrowse/). You can also point them to our recommended procedure for [3D printing](mri/3d-prints.qmd).
+- If the scan looks o.k. provide subjects with a NIFTI of their brain (if they requested it). You can point them to the web-based version of freeview for viewing it [FreeBrowse](https://freesurfer.github.io/freebrowse/). You can also point them to our recommended procedure for [3D printing](../3D-prints/3d-prints.qmd).
 
 ## General todo
 
