@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>__TITLE__</title>
+<style>
+__CSS__
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="brand">
+      <h1>__TITLE__</h1>
+    </div>
+
+    <div class="layout-buttons" role="group" aria-label="Layout">
+      <button data-layout="2" class="active" title="Three slices and a 3D view">2&times;2</button>
+      <button data-layout="3" title="Three slices in a row">1&times;3</button>
+      <button data-layout="ax" title="Only the axial slice">Axial</button>
+      <button data-layout="cor" title="Only the coronal slice">Coronal</button>
+      <button data-layout="sag" title="Only the sagittal slice">Sagittal</button>
+    </div>
+
+    <button id="btnPanel" class="panel-toggle" aria-controls="sidePanel" aria-expanded="true" title="Show or hide settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+      <span>Settings</span>
+    </button>
+  </header>
+
+  <main>
+    <div id="canvasWrap">
+      <canvas id="gl"></canvas>
+
+      <div id="renderCaption" hidden>3D overview</div>
+
+      <div id="infoCard">
+        <div class="info-head">
+          <div class="mode-switch" role="radiogroup" aria-label="Show labels at">
+            <button type="button" data-mode="mouse" role="radio" aria-checked="true" class="active" title="Show what is under the mouse">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 8-6 1.5L10 19z" /></svg>
+              Mouse
+            </button>
+            <button type="button" data-mode="crosshair" role="radio" aria-checked="false" title="Show what is at the red cross">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v7M12 14v7M3 12h7M14 12h7" /></svg>
+              Crosshair
+            </button>
+          </div>
+          <button type="button" id="btnInfoHide" class="icon-btn" title="Hide info">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+        </div>
+        <div id="infoCoords" class="mono"></div>
+        <div id="infoRows"></div>
+        <label class="chk info-names"><input type="checkbox" id="chkReadable" /> Readable names</label>
+      </div>
+      <button type="button" id="btnInfoShow" class="info-show" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6" /></svg>
+        Show info
+      </button>
+
+      <div id="overlay">
+        <div class="spinner"></div>
+        <p id="overlayMsg">Loading&hellip;</p>
+      </div>
+    </div>
+
+    <aside id="sidePanel">
+      <div class="panel-inner">
+
+        <section id="displaySection">
+          <h2>Display</h2>
+          <div class="field">
+            <label for="selQuality">Quality</label>
+            <select id="selQuality">
+              <option value="fast">Fast</option>
+              <option value="normal" selected>Normal</option>
+              <option value="high">Sharp</option>
+            </select>
+          </div>
+          <label class="chk block"><input type="checkbox" id="chkAdaptive" checked /> Lower quality while dragging</label>
+        </section>
+
+        <section id="layersSection">
+          <h2>Layers</h2>
+          <div id="layerList"></div>
+        </section>
+
+        <section id="labelSection" hidden>
+          <h2 id="labelHeading">Labels</h2>
+
+          <div class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></svg>
+            <input type="search" id="labelSearch" placeholder="Search by name or number" autocomplete="off" />
+          </div>
+
+          <div class="checkrow">
+            <label class="chk"><input type="checkbox" id="chkAll" /> All</label>
+            <label class="chk"><input type="checkbox" id="chkExisting" checked /> Only labels in this layer</label>
+          </div>
+
+          <div id="labelListWrap">
+            <div id="labelList"></div>
+          </div>
+          <div id="labelCount" class="dim tiny"></div>
+        </section>
+
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <span class="hints">
+      <span><kbd>Click</kbd> move the red cross</span>
+      <span><kbd>Scroll</kbd> go through slices</span>
+      <span><kbd>Drag</kbd> turn the 3D view</span>
+    </span>
+    <span id="status"></span>
+    <button type="button" id="btnLicenses" class="footer-link">Licences</button>
+  </footer>
+</div>
+
+<dialog id="licenseDialog" aria-labelledby="licenseTitle">
+  <div class="dialog-head">
+    <h2 id="licenseTitle">Licences</h2>
+    <button type="button" id="btnLicensesClose" class="icon-btn" title="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+  </div>
+  <p class="dialog-intro">This viewer is built with <a href="https://github.com/niivue/niivue" target="_blank" rel="noopener">NiiVue</a> (BSD 2-Clause) and the open-source libraries it includes. Their licences are reproduced below.</p>
+  <pre id="licenseText">__LICENSES__</pre>
+</dialog>
+
+<script>
+/*! NiiVue | BSD-2-Clause | Copyright (c) 2021, Niivue | full licence texts in #licenseDialog */
+__NIIVUE_JS__
+</script>
+<script>
+__APP_JS__
+</script>
+</body>
+</html>

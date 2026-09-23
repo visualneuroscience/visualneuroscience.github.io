@@ -18,3 +18,12 @@ site_libs/
 **/*_files/
 *.html
 _freeze/
+
+# Python
+.venv
+__pycache__/
+
+# Brain Atlas Viewer build output; src/index.html is source despite *.html above
+brain-atlas-viewer/dist/
+brain-atlas-viewer/.build/
+!brain-atlas-viewer/src/index.html

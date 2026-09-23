@@ -1,0 +1,16 @@
+{
+  "title": "Brain Atlas Viewer",
+  "lookup_table": "data/lut.txt",
+  "volumes": [
+    { "file": "data/bf_corrected.mgz" },
+    { "file": "data/seg.left.nii.gz", "role": "segmentation", "opacity": 0.0 },
+    { "file": "data/seg.right.nii.gz", "role": "segmentation", "opacity": 0.0 }
+  ],
+  "layout": 2,
+  "display": {
+    "quality": "normal",
+    "adaptive_drag": false,
+    "show_existing_labels_only": true,
+    "readable_names": true
+  }
+}

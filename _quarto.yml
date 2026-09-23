@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - brain-atlas-viewer/dist/viewer.html
 
 website:
   title: "Visual Neuroscience Lab"
@@ -62,6 +64,7 @@ website:
           - mri/mri-lab-setup-2023/index.qmd
           - mri/mri-lab-setup-2024/index.qmd
           - mri/physiology/index.qmd
+          - mri/brain-atlas-viewer/index.qmd
       - section: "Behavioral"
         href: behavioral.qmd
         contents:

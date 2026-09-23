@@ -51,6 +51,26 @@ jobs:
             any::WebPower
             any::Superpower
 
+      # built viewer is cached and only rebuilt when its sources change.
+      - name: Restore Brain Atlas Viewer
+        id: viewer-cache
+        uses: actions/cache@v6.1.0
+        with:
+          path: brain-atlas-viewer/dist/viewer.html
+          key: brain-atlas-viewer-${{ hashFiles('brain-atlas-viewer/**', '!brain-atlas-viewer/README.md') }}
+
+      - name: Set up Python
+        if: steps.viewer-cache.outputs.cache-hit != 'true'
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.14"
+
+      - name: Build Brain Atlas Viewer
+        if: steps.viewer-cache.outputs.cache-hit != 'true'
+        run: |
+          pip install -r brain-atlas-viewer/requirements.txt
+          python3 brain-atlas-viewer/build.py
+
       - name: Render Quarto project
         uses: quarto-dev/quarto-actions/render@v2.2.0
 
