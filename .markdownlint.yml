@@ -29,3 +29,7 @@ MD051: false
 
 # Editors (VS Code, RStudio) auto-add trailing newlines on open/save for .qmd files
 MD047: false
+
+# Tables: one space around pipes
+MD060:
+  style: compact
