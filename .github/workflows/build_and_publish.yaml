@@ -12,17 +12,39 @@ concurrency:
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Check spelling
+        uses: crate-ci/typos@v1.50.2
+
+      - name: Check markdown
+        if: ${{ !cancelled() }}
+        uses: DavidAnson/markdownlint-cli2-action@v24.2.0
+        with:
+          globs: |
+            **/*.qmd
+            **/*.md
+
+      - name: Check pages are listed and have a complete header
+        if: ${{ !cancelled() }}
+        run: bash .github/scripts/check-pages.sh
+
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pages: write
     steps:
-      - uses: actions/checkout@v7.0.0
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
 
-      # changes made before the cutoff (e.g. the 2026 site reorganization) are ignored.
+      # changes made before the cutoff are ignored.
       - name: Restore page dates from git history
         env:
           CUTOFF: "2026-09-25T00:00:00Z"
@@ -33,18 +55,6 @@ jobs:
             [ -z "$d" ] && d=$(git log -1 --format=%cI -- "$f")
             touch -d "$d" "$f"
           done
-
-      - name: Check spelling
-        uses: crate-ci/typos@v1.47.2
-        continue-on-error: true
-
-      - name: Check markdown
-        uses: DavidAnson/markdownlint-cli2-action@v23.2.0
-        with:
-          globs: |
-            **/*.qmd
-            **/*.md
-        continue-on-error: true
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2.2.0
@@ -115,4 +125,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5.0.0
+        uses: actions/deploy-pages@v5.0.1
