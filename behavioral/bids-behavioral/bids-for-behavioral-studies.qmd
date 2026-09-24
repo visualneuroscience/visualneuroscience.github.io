@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: BIDS for behavioral studies
+aliases:
+  - "/behavioral/2024-05-23/index.html"
 description: "How to store your data in bids structure if you are using psychtoolbox"
+image: ../../images/thumbnails/bids-for-behavioral-studies.svg
 categories: [BIDS, Behavioral]
 author: CY
-date: 05/23/2024
+date: 2024-05-23
 ---
 
 ## Resources
@@ -40,11 +43,11 @@ createBIDS_dataset_description_json.m
 
 -   Go to the root_dir or use the full path of root_dir as input to the functions
 
--   Preprocess data from a subject:
+-   Preprocess data from a subject with [`createBIDS_beh_after_preprocessing.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/behavioral/bids-behavioral/createBIDS_beh_after_preprocessing.m) (it needs [`getBIDSdirectory.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/behavioral/bids-behavioral/getBIDSdirectory.m) on the MATLAB path):
 
 `createBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)`
 
--   Create dataset files by running `transriv_finalizeBIDS.m` (when data collection is finished)
+-   Create dataset files by running [`transriv_finalizeBIDS.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/behavioral/bids-behavioral/transriv_finalizeBIDS.m) (when data collection is finished)
 
 The folder structure based on BIDS:
 

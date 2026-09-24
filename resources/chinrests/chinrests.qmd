@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Custom-built chin rests
+aliases:
+  - "/behavioral/chinrests/chinrests.html"
 description: "Information about producing a chinrest for behavioral experiments"
+image: images/3d-printed-chinrest.png
 author: NZ
 categories: [3D-Print]
-date: 08/26/2024
+date: 2024-08-26
 ---
 
 If you need a solid chinrest for your behavioral, EEG or brain stimulation experiment, we can create one ourselves using 3D printing, some standard parts and this tutorial
@@ -16,4 +19,4 @@ with some adaptations/improvements. If you need a chinrest, talk to Lukas. Note 
 
 The result will look something like this:
 
-![](images/clipboard-4158281035.png){width="285"}
+![](images/3d-printed-chinrest.png){width="285"}

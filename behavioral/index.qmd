@@ -1,0 +1,21 @@
+---
+title: "Behavioral"
+description: "Collecting behavioral data."
+aliases:
+  - "/behavioral.html"
+listing:
+  id: behavioral
+  contents:
+    - vision-tests/vision-tests.qmd
+    - bids-behavioral/bids-for-behavioral-studies.qmd
+  type: grid
+  grid-columns: 3
+  image-height: 150px
+  image-placeholder: ../images/card-placeholder.svg
+  fields: [image, date, title, description, author, categories]
+  sort: false
+toc: false
+---
+
+::: {#behavioral}
+:::
