@@ -97,10 +97,6 @@ markdownlint-cli2 --fix "**/*.qmd" "**/*.md"
 
 # General Information
 
-## Recent Changes section
-
-The home page has a ["Recent Changes"](../../index.qmd) list. It is sorted by the `date` field in each page's metadata, so always set a `date` in the format `YYYY-MM-DD` (for example `date: 2026-09-23`). When you make *meaningful and important* changes to an existing page, update its `date` too. Otherwise, the change will not show up in the list.
-
 ## Adding new content
 
 The website is organized into sections. Each section is a directory with an `index.qmd` landing page:

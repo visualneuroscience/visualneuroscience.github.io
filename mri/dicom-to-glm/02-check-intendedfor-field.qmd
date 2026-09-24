@@ -22,7 +22,10 @@ Depending on the version of [fMRIprep](06-fmriprep.qmd) you plan to use for prep
 
 In general, there are two naming conventions that might be used in the IntendedFor field:
 
-````text
+::: {.panel-tabset group="fmriprep-version"}
+
+## fMRIprep 24.0.0 or newer {.unnumbered}
+
 BIDS URI specification (= absolute path) necessary for fmriprep 24.0.0 or newer:
 
 ``` json
@@ -33,6 +36,8 @@ BIDS URI specification (= absolute path) necessary for fmriprep 24.0.0 or newer:
     ]
 ```
 
+## Older than 24.0.0 {.unnumbered}
+
 Older fmap specification (= relative path) necessary for fmriprep older than 24.0.0:
 
 ``` json
@@ -42,7 +47,8 @@ Older fmap specification (= relative path) necessary for fmriprep older than 24.
     etc
     ]
 ```
-````
+
+:::
 
 ::: callout-hint
 Due to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap's "IntendedFor" field before [running fMRIprep](06-fmriprep.qmd). If distortion correction is not applied, the IntendedFor field of the fmap´s `.json` file is generally the first approach to solve the problem!

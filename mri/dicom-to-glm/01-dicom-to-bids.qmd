@@ -58,7 +58,7 @@ Quick explanations:
 After running the second to last line (starting with `bidsmapper`) you might have to do additional steps described below!!!
 :::
 
-``` bash
+``` {.bash filename="dcm2bids_coiner.sh"}
 #!/bin/bash
 
 # you can copypaste the following commands into the terminal window that is opened by BIDSCOINER
@@ -274,7 +274,17 @@ This is how your bids-directory (which was initially created as an empty directo
 
 When you enter the `sub-999` directory, you´ll find the sub-directory `ses-1` (or whatever session you specified during the [preparation](#sec-preparation)). Inside, all sub-directories [that you selected/edited to assign the files to](#sec-directory) are listed:![Sub-Directories in ses-1](./images/01-dicom-to-bids/21-bids-ses1.png)
 
-Each of these sub-directories contains all the files that you assigned, including the `.nii.gz` and a `.json` file![Content of the func directory](./images/01-dicom-to-bids/22-bids-funcs.png)![Content of the fmap directory](./images/01-dicom-to-bids/23-bids-fmap.png)![Content of the anat directory](./images/01-dicom-to-bids/24-bids-anat.png)![Content of the extra directory](./images/01-dicom-to-bids/25-bids-extra.png)
+Each of these sub-directories contains all the files that you assigned, including the `.nii.gz` and a `.json` file
+
+::: {layout-ncol=2}
+![Content of the func directory](./images/01-dicom-to-bids/22-bids-funcs.png)
+
+![Content of the fmap directory](./images/01-dicom-to-bids/23-bids-fmap.png)
+
+![Content of the anat directory](./images/01-dicom-to-bids/24-bids-anat.png)
+
+![Content of the extra directory](./images/01-dicom-to-bids/25-bids-extra.png)
+:::
 
 # Congratuliations, you did it
 

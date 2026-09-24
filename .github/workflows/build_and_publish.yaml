@@ -19,6 +19,20 @@ jobs:
       pages: write
     steps:
       - uses: actions/checkout@v7.0.0
+        with:
+          fetch-depth: 0
+
+      # changes made before the cutoff (e.g. the 2026 site reorganization) are ignored.
+      - name: Restore page dates from git history
+        env:
+          CUTOFF: "2026-09-25T00:00:00Z"
+        run: |
+          git ls-files -z '*.qmd' | while IFS= read -r -d '' f; do
+            d=$(git log -1 --since="$CUTOFF" --format=%cI -- "$f")
+            [ -z "$d" ] && d=$(awk '/^---$/ {n++; next} n == 1 && sub(/^date: */, "") {print; exit}' "$f")
+            [ -z "$d" ] && d=$(git log -1 --format=%cI -- "$f")
+            touch -d "$d" "$f"
+          done
 
       - name: Check spelling
         uses: crate-ci/typos@v1.47.2

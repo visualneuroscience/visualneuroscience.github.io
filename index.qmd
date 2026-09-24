@@ -5,6 +5,7 @@ page-layout: full
 sidebar: false
 toc: false
 title-block-banner: false
+title-block-style: none
 listing:
   id: recent
   contents:
@@ -19,11 +20,11 @@ listing:
     - "!resources/index.qmd"
     - "!internship/index.qmd"
   type: default
-  fields: [image, date, title, description, categories]
+  fields: [image, file-modified, title, description, categories]
   image-height: 110px
   image-placeholder: images/card-placeholder.svg
-  max-items: 6
-  sort: "date desc"
+  max-items: 10
+  sort: "file-modified desc"
 ---
 
 ```{=html}
@@ -36,7 +37,7 @@ listing:
     <div class="hero-links">
       <a class="btn btn-primary" href="https://github.com/visualneuroscience">GitHub</a>
       <a class="btn btn-outline-secondary" href="https://neurovision.uni-graz.at">Uni Graz</a>
-      <a class="btn btn-outline-secondary" href="https://calendar.online/cadcb4379c842ce87f53">lab calendar</a>
+      <a class="btn btn-outline-secondary" href="https://calendar.online/cadcb4379c842ce87f53">Lab calendar</a>
     </div>
   </div>
   <figure class="hero-figure">
