@@ -1,0 +1,27 @@
+---
+title: "Archive"
+description: "Older pages, kept for reference."
+aliases:
+  - "/archive.html"
+listing:
+  id: archive
+  contents:
+    - dicom-to-bids/dicom-to-bids.qmd
+    - freesurfer-fsfast/freesurfer-fsfast.qmd
+    - mri-lab-setup-2023/mri-lab-setup-2023.qmd
+    - server-access/server-access.qmd
+  type: grid
+  grid-columns: 3
+  image-height: 150px
+  image-placeholder: ../images/card-placeholder.svg
+  fields: [image, date, title, description, author, categories]
+  sort: "date desc"
+toc: false
+---
+
+::: {.callout-warning}
+These pages are outdated. Use them only for reference; the current guides are in the other sections.
+:::
+
+::: {#archive}
+:::

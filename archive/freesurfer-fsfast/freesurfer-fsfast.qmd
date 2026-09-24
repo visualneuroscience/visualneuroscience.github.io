@@ -2,18 +2,22 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: FreeSurfer FSFAST 
+aliases:
+  - "/archive/freesurfer FSFAST.html"
+  - "/mri/analysis/freesurfer FSFAST.html"
 description: "Information about running an FSFAST analysis on Neurodesk"
 author: AC
-image: ./neurodesk.png
-categories: [MRI, Analysis, Neurodesk]
-engine: knitr
-date: 01/16/2025
+image: ./images/neurodesk.png
+categories: [MRI, Analysis, Archived]
+date: 2025-01-16
 ---
 
-```{css}
-/*| echo: false */
-figcaption{
-   text-align: center !important;
+```{=html}
+<style>
+figcaption {
+  text-align: center !important;
+}
+</style>
 ```
 
 ::: callout-note
@@ -38,11 +42,11 @@ Link to [FreeSurfers FSFAST tutorial](https://surfer.nmr.mgh.harvard.edu/fswiki/
 
 -   Simply put for us this means that we use 1 piece of software that is contained inside its own environment
 
-![Example of what containers mean](./neurodesk_eg.png){fig-align="center"}
+![Example of what containers mean](./images/neurodesk-example.png){fig-align="center"}
 
--   So for the example above if you were inside of the [FreeSurfer]{style="background-color: #ffc9c9;"} container the only available software to you would be FreeSurfer
+-   So for the example above if you were inside of the [FreeSurfer]{style="background-color: #ffc9c9; color: #1a1a1a;"} container the only available software to you would be FreeSurfer
 
--   [MATLAB]{style="background-color: #ffec99;"}, [fMRIprep]{style="background-color: #b2f2bb;"} and [SPM]{style="background-color: #d0bfff;"} would not be available to you
+-   [MATLAB]{style="background-color: #ffec99; color: #1a1a1a;"}, [fMRIprep]{style="background-color: #b2f2bb; color: #1a1a1a;"} and [SPM]{style="background-color: #d0bfff; color: #1a1a1a;"} would not be available to you
 
 ::: callout-note
 
@@ -61,7 +65,7 @@ However, FreeSurfer uses something called a **MATLAB runtime environment**
 
 -   Sometimes when running FreeSurfer commands on neurodesk you might run into an error like so:
 
-![](./freesurfer_matlab_error.PNG){fig-align="center"}
+![](./images/freesurfer-matlab-error.png){fig-align="center"}
 
 -   What this means is the following:
 
@@ -75,7 +79,7 @@ However, FreeSurfer uses something called a **MATLAB runtime environment**
 
 **1. Start a FreeSurfer container:**
 
-![](./start_freesurfer.PNG){fig-align="center"}
+![](./images/start-freesurfer.png){fig-align="center"}
 
 **2. Set up your environment variables:**
 
@@ -113,7 +117,7 @@ If you run a command for example:
 
 And then see an error like so:
 
-![](./freesurfer_matlab_error.PNG){#fig-error}
+![](./images/freesurfer-matlab-error.png){#fig-error}
 
 -   This means that FreeSurfer doesn't know where the MATLAB runtime environment is therefore run the following:
 
