@@ -3,10 +3,10 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Control Masks
 description: "Approach to generate dilated and shifted control masks"
-image: ./images/controlRegions.png
+image: ./images/control-regions.png
 categories: [MRI]
 author: MG
-date: 12/16/2025
+date: 2025-12-16
 ---
 
 In a previous project, we needed to provide evidence for the spacial specificity of the response captured in a (Claustrum) mask.

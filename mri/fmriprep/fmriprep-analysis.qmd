@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: fMRIprep analysis
+aliases:
+  - "/mri/analysis/fmriprep.html"
 description: "Information about using fMRIprep to preprocess fMRI data"
-image: ./fMRIprep_pr.gif
-categories: [MRI, Analysis, Neurodesk, fmriPrep]
+image: ./images/fmriprep-preview.gif
+categories: [MRI, Analysis, Neurodesk, fMRIPrep]
 author: AC
-date: 07/08/2024
+date: 2024-07-08
 ---
 
 Link to [fMRIprep documentation](https://fmriprep.org/en/stable/)
@@ -19,7 +21,7 @@ Link to [fMRIprep github](https://github.com/nipreps/fmriprep) (Useful informati
 
 -   Where possible fMRIprep should be used in preprocessing to limit the variability involved in preprocessing data
 
--   fMRIprep follows the BIDS format, see [how to validate BIDS](https://visualneuroscience.github.io/mri/analysis/bids.html)
+-   fMRIprep follows the BIDS format, see [how to validate BIDS](../bids-and-osf/bids-and-osf.qmd)
 
 ### Permissions
 
@@ -165,7 +167,7 @@ docker run -u $(id -u):$(id -g) --rm -it \
 
 <center>
 
-![An example of poor distortion correction](./poor_DC.png){width="60%"}
+![An example of poor distortion correction](./images/poor-dc.png){width="60%"}
 
 </center>
 

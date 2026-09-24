@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "Calculating oriented bounding box"
+aliases:
+  - "/mri/oriented-bounding-box/calculating_oriented_bounding_box.html"
 description: "How to use 3D Slicer to calculate oriented bounding box"
-image: ./images/3d_slicer.PNG
+image: ./images/3d-slicer.png
 categories: [MRI, Analysis, Neurodesk]
 author: AC
-date: 08/13/2025
+date: 2025-08-13
 ---
 
 
@@ -20,7 +22,7 @@ date: 08/13/2025
 
 <center>
 
-![Click "Add Data"](./images/importing_data1.PNG)
+![Click "Add Data"](./images/importing-data1.png)
 
 <center>
 
@@ -32,7 +34,7 @@ date: 08/13/2025
 
 <center>
 
-![](./images/import_as_segmentation.PNG)
+![](./images/import-as-segmentation.png)
 
 </center>
 
@@ -44,7 +46,7 @@ date: 08/13/2025
 
 <center>
 
-![](./images/segment_stats_menu.PNG)
+![](./images/segment-stats-menu.png)
 
 </center>
 
@@ -57,7 +59,7 @@ date: 08/13/2025
 
 <center>
 
-![](./images/Statistics_table.PNG)
+![](./images/statistics-table.png)
 
 </center>
 
@@ -71,7 +73,7 @@ Oriented bounding box provide a nice visualization to accompany the statistics. 
 
 <center>
 
-![](./images/python_shell.PNG)
+![](./images/python-shell.png)
 
 </center>
 
@@ -141,7 +143,7 @@ for segmentId in stats["SegmentIDs"]:
 
 - Select the view (red, green, yellow) and save it.
 
-![](./images/make_screenshots.PNG)
+![](./images/make-screenshots.png)
 
 &nbsp;
 
@@ -158,11 +160,11 @@ for segmentId in stats["SegmentIDs"]:
     4. Screenshots
     5. A `.mrml` file
 
-![In the data tab you should see Table, oriented bounding box markup and screenshots (axial, coronal, sagittal)](./images/list_of_data.PNG)
+![In the data tab you should see Table, oriented bounding box markup and screenshots (axial, coronal, sagittal)](./images/list-of-data.png)
 
 &nbsp;
 
-![Choose directory where to save data and click check box on what to save](./images/save_data.PNG)
+![Choose directory where to save data and click check box on what to save](./images/save-data.png)
 
 &nbsp;
 

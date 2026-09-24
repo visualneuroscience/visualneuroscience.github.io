@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: MRI BIDS and OSF
+aliases:
+  - "/mri/analysis/bids.html"
 description: Information about BIDS and OSF
+image: ../../images/thumbnails/bids-and-osf.svg
 categories: [BIDS, OSF]
 author: AA
-date: 05/23/2024
+date: 2024-05-23
 ---
 
 # BIDS
