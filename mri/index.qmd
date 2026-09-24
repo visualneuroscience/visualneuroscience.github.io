@@ -1,0 +1,71 @@
+---
+title: "MRI"
+description: "Running MRI studies and analysing MRI data."
+aliases:
+  - "/mri.html"
+listing:
+  - id: studies
+    contents:
+      - mri-studies-general/mri-studies-general.qmd
+      - mri-lab-setup/mri-lab-setup.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+  - id: pipeline
+    contents:
+      - dicom-to-glm/00-overview.qmd
+      - dicom-to-glm/01-dicom-to-bids.qmd
+      - dicom-to-glm/02-check-intendedfor-field.qmd
+      - dicom-to-glm/03-t1w-for-participants.qmd
+      - dicom-to-glm/04-defacing.qmd
+      - dicom-to-glm/05-remove-noise-scan.qmd
+      - dicom-to-glm/06-fmriprep.qmd
+      - dicom-to-glm/07-retinotopic-mapping.qmd
+      - dicom-to-glm/08-first-level-glm.qmd
+      - dicom-to-glm/09-roi-analysis.qmd
+      - dicom-to-glm/troubleshooting.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+  - id: tools
+    contents:
+      - 7t-anatomical/7t-anatomical-analysis.qmd
+      - fmriprep/fmriprep-analysis.qmd
+      - bids-and-osf/bids-and-osf.qmd
+      - mni-space/mni-space.qmd
+      - control-masks/control-masks.qmd
+      - oriented-bounding-box/oriented-bounding-box.qmd
+      - physiology/physiological-noise-correction.qmd
+      - brain-atlas-viewer/brain-atlas-viewer.qmd
+      - 3d-printing/3d-printing-a-brain.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+toc: false
+---
+
+## Running MRI studies
+
+::: {#studies}
+:::
+
+## DICOM to GLM pipeline
+
+Work through the steps in order. Start with the [overview](dicom-to-glm/00-overview.qmd), and check [troubleshooting](dicom-to-glm/troubleshooting.qmd) when something goes wrong.
+
+::: {#pipeline}
+:::
+
+## Tools
+
+::: {#tools}
+:::

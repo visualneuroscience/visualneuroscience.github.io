@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: 3D printing a brain
+aliases:
+  - "/mri/3D-prints/3d-prints.html"
 description: "current procedure for 3d printing brains"
-image: ./images/clipboard-3427974075.png
+image: ./images/3d-printed-brain.png
 categories: [MRI, 3D-Print]
 author: NZ
-date: 10/10/2024
+date: 2024-10-10
 ---
 
 There are many guidelines and tutorials on how to 3D print a brain. The currently recommended procedure is to use this docker image:
@@ -15,4 +17,4 @@ There are many guidelines and tutorials on how to 3D print a brain. The currentl
 
 The advantage is that the brain is printed with the cerebellum, and the number of things you manually need to do is minimal.
 
-![](./images/clipboard-3427974075.png)
+![](./images/3d-printed-brain.png)

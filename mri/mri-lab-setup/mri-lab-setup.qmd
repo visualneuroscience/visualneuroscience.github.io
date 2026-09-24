@@ -1,8 +1,12 @@
 ---
-title: "Update to the MRI lab setup "
+title: "MRI lab setup (2024)"
+aliases:
+  - "/mri/mri-lab-setup-2024/index.html"
+description: "How to set up and run experiments in the MRI lab: peripherals, displays, KVM switch, trigger box, PsychoPy and Psychtoolbox"
+image: images/trigger-box-front.png
 author: "AC"
 categories: [MRI, NNL-Goggles]
-date: 10/07/2024
+date: 2024-10-07
 format: html
 editor: visual
 ---
@@ -45,7 +49,7 @@ editor: visual
 
 <center>
 
-![Goggles HDMI inputs](./goggle_box.png){width="75%"}
+![Goggles HDMI inputs](./images/goggle-box.png){width="75%"}
 
 </center>
 
@@ -55,9 +59,9 @@ editor: visual
 
 <center>
 
-![Goggles plug unplugged](./goggle_unplug.jpg){width="30%"}
+![Goggles plug unplugged](./images/goggle-unplug.jpg){width="30%"}
 
-![Goggles plug plugged in](./goggle_plug.jpg){width="30%"}
+![Goggles plug plugged in](./images/goggle-plug.jpg){width="30%"}
 
 </center>
 
@@ -67,7 +71,7 @@ editor: visual
 
 <center>
 
-![The light on the eyetracker should be illuminated red](./eyetracker_box.jpg){width="30%"}
+![The light on the eyetracker should be illuminated red](./images/eyetracker-box.jpg){width="30%"}
 
 </center>
 
@@ -83,7 +87,7 @@ editor: visual
 
 <center>
 
-![PopOS example settings window, always make sure to close this window and not apply new display settings](./pop_os_eg.png)
+![PopOS example settings window, always make sure to close this window and not apply new display settings](./images/pop-os-example.png)
 
 </center>
 
@@ -95,7 +99,7 @@ editor: visual
 
 <center>
 
-![KVM switcher, button 1 = eyetracker pc, 2 = stimulus pc](./KVM_switch.png)
+![KVM switcher, button 1 = eyetracker pc, 2 = stimulus pc](./images/kvm-switch.png)
 
 </center>
 
@@ -103,7 +107,7 @@ editor: visual
 
 -   If the trigger box is not powered, plug it in
 
-    ![](images/clipboard-1147648555.png){width="75%"}
+    ![](images/trigger-box-power-supply.png){width="75%"}
 
 -   Sometimes the cable for the trigger box is unplugged/ or the cable that is plugged in is not attached to a PC
 
@@ -113,7 +117,7 @@ editor: visual
 
 <center>
 
-![Back of the trigger box](./trigger_box_back.png){width="75%"}
+![Back of the trigger box](./images/trigger-box-back.png){width="75%"}
 
 </center>
 
@@ -123,7 +127,7 @@ editor: visual
 
 <center>
 
-![Trigger box front](./trigger_box_front.png)
+![Trigger box front](./images/trigger-box-front.png)
 
 </center>
 
@@ -135,25 +139,25 @@ editor: visual
 
     The trigger box settings for the normal button box which we typically use should look as in the picture below
 
-    ![](images/F841BB68-DDFC-4E3E-B6A6-E24FBB87B94C.JPG){width="75%"}
+    ![](images/trigger-box-settings.jpg){width="75%"}
 
     If not, press the round button and select the following settings:
 
 -   Manual config
 
-    ![](images/9B0EEF03-CD1B-48AB-9D45-F936D7CE2390.JPG){width="75%"}
+    ![](images/trigger-box-manual-config.jpg){width="75%"}
 
 -   HHSC-2x4-L
 
-    ![](images/C3F33E12-B1C5-45F1-A490-649C0B1B1335.JPG){width="75%"}
+    ![](images/trigger-box-hhsc-2x4-l.jpg){width="75%"}
 
 -   USB
 
-    ![](images/A0755E6A-EB4A-47DB-9170-37CF7A50620A.JPG){width="75%"}
+    ![](images/trigger-box-usb.jpg){width="75%"}
 
 -   HID KEY 12345
 
-    ![](images/86067ABB-CD86-4B15-A49B-128F5A51069D-01.JPG){width="75%"}
+    ![](images/trigger-box-hid-key-12345.jpg){width="75%"}
 
     Press some buttons in the scanner to make sure the trigger box works. If not, unplug it and plug it in again.
 
@@ -183,7 +187,7 @@ Alternatively start psychopy with the `-c` flag
 
 ### Psychtoolbox
 
-Differently from PsychoPy, PsychToolbox under Linux handles multiple keyboards independently. It is therefore important that your PsychToolbox script reads scanner trigger (Key '5%') and button box input from the correct keyboard (Trigger Box). To check the Keyboard ID of the Trigger Box and its name, run "[response_box_check.m](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/mri/mri-lab-setup-2024/response_box_check.m)" prior to putting the subject into the scanner. Currently, the keyboard name is 'Current Designs, Inc. 932' , but the Keyboard ID can vary depending on other devices that are plugged in.
+Differently from PsychoPy, PsychToolbox under Linux handles multiple keyboards independently. It is therefore important that your PsychToolbox script reads scanner trigger (Key '5%') and button box input from the correct keyboard (Trigger Box). To check the Keyboard ID of the Trigger Box and its name, run "[response_box_check.m](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/mri/mri-lab-setup/response_box_check.m)" prior to putting the subject into the scanner. Currently, the keyboard name is 'Current Designs, Inc. 932' , but the Keyboard ID can vary depending on other devices that are plugged in.
 
 Here are the steps:
 

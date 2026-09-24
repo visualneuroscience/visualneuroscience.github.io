@@ -7,11 +7,11 @@ number-sections: true
 image: ./images/scanner-with-monitor.jpg
 categories: [MRI]
 author: MG, NZ
-date: 05/21/2026
+date: 2026-05-21
 bibliography: references.bib
 ---
 
-This page is a constant work-in-progress file. The goal is to gather and provide necessary/useful/helpful information regarding (f)MRI studies. It can serve as a helpful guide when starting to plan an experiment and while doing it. If you already acquired your data, you can refer to [this page](../../dicom_to_glm/Overview_fromDICOMtoGLM.qmd) for information about the processing and analysis of your data.
+This page is a constant work-in-progress file. The goal is to gather and provide necessary/useful/helpful information regarding (f)MRI studies. It can serve as a helpful guide when starting to plan an experiment and while doing it. If you already acquired your data, you can refer to [this page](../dicom-to-glm/00-overview.qmd) for information about the processing and analysis of your data.
 
 If you realize something that is missing, please let us know, so we can add it here!
 
@@ -47,7 +47,7 @@ Typically we do this on [OSF](https://osf.io/) using a the AsPredicted template.
 
 - to save time later, keep in mind that you often need `*_events.tsv` files for your analysis! [see here](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/task-events.html)
 
-- In our fMRI sttudies, the bare minimum generally is that these files should include is the `Onset`, `duration` and `trial_type` (e.g. the condition that was shown). This is later used to build your contrasts, e.g. in the [first level GLM](../../dicom_to_glm/first_level_glm_nilearn.qmd)
+- In our fMRI sttudies, the bare minimum generally is that these files should include is the `Onset`, `duration` and `trial_type` (e.g. the condition that was shown). This is later used to build your contrasts, e.g. in the [first level GLM](../dicom-to-glm/08-first-level-glm.qmd)
 
 - `*_events.tsv` files have to be named exactly like the functional run they are referring to (except the ending). E.g. for the functional scan `sub-140001_ses-1_task-loc_run-01_bold.nii.gz`, the corresponding file has to be named `sub-140001_ses-1_task-loc_run-01_events.tsv`
 
@@ -116,10 +116,10 @@ There are two forms the participants have to sign before they go into the scanne
 
 - Inspect the anatomical scan; if you suspect anatomical irregularity, inform RT immediately to handle potential incidental findings
 
-- If the scan looks o.k. provide subjects with a NIFTI of their brain (if they requested it). You can point them to the web-based version of freeview for viewing it [FreeBrowse](https://freesurfer.github.io/freebrowse/). You can also point them to our recommended procedure for [3D printing](../3D-prints/3d-prints.qmd).
+- If the scan looks o.k. provide subjects with a NIFTI of their brain (if they requested it). You can point them to the web-based version of freeview for viewing it [FreeBrowse](https://freesurfer.github.io/freebrowse/). You can also point them to our recommended procedure for [3D printing](../3d-printing/3d-printing-a-brain.qmd).
 
 ## General todo
 
 - When a study starts, you should save the sequence that is used for data acquisition. This can be useful for your thesis/paper, or for other studies in the future. Just ask the RTs to save the sequence as a PDF. If you have access, save this PDF to `storage/nv_shared/Neurovision_Protocols` (if you don´t have access, send it to NZ)
 
-- If you compensate participants, carefully read the [corresponding entry](../../people/compensation/compensation.qmd)
+- If you compensate participants, carefully read the [corresponding entry](../../resources/participant-compensation/participant-compensation.qmd)

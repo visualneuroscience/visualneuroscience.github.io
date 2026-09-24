@@ -2,18 +2,21 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: 7T anatomical analysis on neurodesk
+aliases:
+  - "/mri/analysis/7t_analysis_on_neurodesk.html"
 description: "How to run 7 Tesla anatomy analysis on neurodesk"
-image: ./presurfer_result.gif
+image: ./images/presurfer-result.gif
 author: AC
 categories: [MRI, 7T, Analysis, Neurodesk]
-engine: knitr
-date: 01/27/2025
+date: 2025-01-27
 ---
 
-```{css}
-/*| echo: false */
-figcaption{
-   text-align: center !important;
+```{=html}
+<style>
+figcaption {
+  text-align: center !important;
+}
+</style>
 ```
 
 ## Basics
@@ -40,7 +43,7 @@ This means that we first need to get rid of this noise before using recon-all (r
 
 ## Neurodesk and containers
 
-Containers are explained in more detail in the [FreeSurfer FSFAST](https://visualneuroscience.github.io/mri/analysis/freesurfer%20FSFAST.html) page.
+Containers are explained in more detail in the [FreeSurfer FSFAST](../../archive/freesurfer-fsfast/freesurfer-fsfast.qmd) page.
 
 -   Put simply, currently on neurodesk we cannot load 2 or 3 pieces of software at once and this means that the anatomical analysis of 7T data is a bit tricky.
 
@@ -54,7 +57,7 @@ Containers are explained in more detail in the [FreeSurfer FSFAST](https://visua
 
 ### 0. Open a terminal
 
-![Opening a terminal on neurodesk](./open_terminal.gif)
+![Opening a terminal on neurodesk](./images/open-terminal.gif)
 
 ### 1. Start the container
 
@@ -68,7 +71,7 @@ For example:
 
 -   Here my anatomical data *folder* is stored in `/home/jovyan/7t_auditory/bids/sub-a001/ses-1`
 
-![Locating where the data is stored](./finding_anat_7t_data.gif)
+![Locating where the data is stored](./images/finding-anat-7t-data.gif)
 
 -   This means that I want to *mount* this folder to the container so my command will be like so:
 
@@ -82,7 +85,7 @@ For example:
 
 -   To know if you are in the container or not you will see the following:
 
-![Inside the container](./inside_a_container.png)
+![Inside the container](./images/inside-a-container.png)
 
 -   This means that we are in our own environment and that we can run the command necessary to start the anatomical preprocessing
 

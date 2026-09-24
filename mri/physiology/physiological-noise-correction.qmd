@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Physiological noise correction
+aliases:
+  - "/mri/physiology/index.html"
 description: "Creating physiology regressors using the PhysIO toolbox"
-image: Picture4.jpg
+image: images/physio-processing-steps.jpg
 categories: [MRI, Physiology]
 author: MW
-date: 10/26/2023
+date: 2023-10-26
 ---
 
 October 2023; additional info and further read: <https://www.sciencedirect.com/science/article/pii/S016502701630259X?via%3Dihub>
@@ -32,7 +34,7 @@ October 2023; additional info and further read: <https://www.sciencedirect.com/s
 
 **Figure 1.** Puls and resp-file.
 
-![](./Picture1.jpg)
+![](./images/puls-and-resp-files.jpg)
 
 -   Script: `/storage/nv_shared/PhysIO_excitex/PhysIO_get_regressors.m`
 
@@ -66,12 +68,12 @@ October 2023; additional info and further read: <https://www.sciencedirect.com/s
 
 **Figure 2.** Artifacts in raw respiratory signal due to issues during recording with the breathing belt.
 
-![](./Picture2.jpg)
+![](./images/respiratory-signal-artifacts.jpg)
 
 **Figure 3.** Final output (RETROICOR regressors)
 
-![](./Picture3.png)
+![](./images/retroicor-regressors.png)
 
 **Figure 4.** Steps from raw data to the final regressors.
 
-![](./Picture4.jpg)
+![](./images/physio-processing-steps.jpg)
