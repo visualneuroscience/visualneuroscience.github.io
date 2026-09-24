@@ -24,6 +24,6 @@ _freeze/
 __pycache__/
 
 # Brain Atlas Viewer build output; src/index.html is source despite *.html above
-brain-atlas-viewer/dist/
-brain-atlas-viewer/.build/
-!brain-atlas-viewer/src/index.html
+mri/brain-atlas-viewer/viewer/dist/
+mri/brain-atlas-viewer/viewer/.build/
+!mri/brain-atlas-viewer/viewer/src/index.html

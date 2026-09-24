@@ -2,8 +2,8 @@
 extend-exclude = [
     "internship/claustrum_segmentation.txt",
     "internship/pflichtpraktikum.qmd",
-    "brain-atlas-viewer/vendor/",
-    "brain-atlas-viewer/data/",
+    "mri/brain-atlas-viewer/viewer/vendor/",
+    "mri/brain-atlas-viewer/viewer/data/",
 ]
 
 [default.extend-words]

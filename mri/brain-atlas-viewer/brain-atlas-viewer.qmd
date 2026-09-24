@@ -1,14 +1,17 @@
 ---
 title: Brain Atlas Viewer
+aliases:
+  - "/mri/brain-atlas-viewer/index.html"
 description: "Interactive 3D viewer of the left and right hemisphere segmentation"
 image: ./images/viewer.png
+author: LW
 categories: [MRI]
-date: 09/23/2026
+date: 2026-09-23
 ---
 
 Explore the left and right hemisphere segmentation on the scan, slice by slice and in 3D, and see which structure is at any point.
 
-[Open the viewer ↗](../../brain-atlas-viewer/dist/viewer.html){.btn .btn-primary target="_blank"}
+[Open the viewer ↗](viewer/dist/viewer.html){.btn .btn-primary target="_blank"}
 
 ![The viewer in the 2×2 layout with labels shown](images/viewer.png)
 
