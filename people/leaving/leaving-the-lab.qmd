@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Things to do if you are leaving the lab
+aliases:
+  - "/people/leaving/index.html"
 description: "Listing of relevant steps and things to remember when leaving the lab"
-image: images/clipboard-4025791976.png
+image: images/signed-coffee-machine.png
 categories: [Lab]
 author: NZ, MG
-date: 12/15/2025
+date: 2025-12-15
 ---
 
 # Things to do if you are leaving the lab
@@ -60,4 +62,4 @@ Subsequently, you should see your request in the list. After evaluation by the d
 
 Once you managed all of the above, you are a hero! Feel free to take a marker and leave a sign on the coffee machine.
 
-![](images/clipboard-4025791976.png)
+![](images/signed-coffee-machine.png)

@@ -2,11 +2,14 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "Contribute to the website"
+aliases:
+  - "/OtherTopics/ContributeWithR.html"
 description: "Information about how to contribute and edit the website"
+image: images/rstudio-render-website.png
 author: NZ, MG
 number-sections: true
 categories: [Website]
-date: 04/14/2025
+date: 2026-09-23
 ---
 
 # Contributing using RStudio
@@ -20,7 +23,7 @@ This has an advantage that you can edit .qmd files in visual mode and paste scre
 1.  Go to File -\> New Project
 2.  Select "Version control"
 
-![](images/clipboard-631192025.png)
+![](images/rstudio-new-project-version-control.png)
 
 3.  Paste the git repo http path:
 
@@ -32,11 +35,11 @@ This has an advantage that you can edit .qmd files in visual mode and paste scre
 
 5.  To preview your changes locally, go to "Build" tab and press "Render Website". This opens the site in your browser.
 
-    ![](images/clipboard-884733564.png)
+    ![](images/rstudio-render-website.png)
 
 6.  If you are happy switch to the "Git" tab, select either all or some files, stage and commit. After this, press "Push" to send the new content to github repo
 
-    ![](images/clipboard-974248695.png)
+    ![](images/rstudio-git-commit-push.png)
 
 7.  Every time you start editing the R project, first press "Pull" to make sure your local version contains all the most recent changes, which may have been made by others.
 
@@ -94,18 +97,43 @@ markdownlint-cli2 --fix "**/*.qmd" "**/*.md"
 
 # General Information
 
-## Recent Changes Section
+## Recent Changes section
 
-At the starting page of the website, there is a ["Recent Changes"](../index.qmd) section at the bottom. For making this section useful, it is important to add the `date` option in the meta-data of a page (format: MM-DD-YYYY)! Additionally, when you make *meaningful and important* changes to an existing page, you also need to change the data in the meta-data of the respective page! Otherwise, the change will not be shown at the "Recent Changes" section!
+The home page has a ["Recent Changes"](../../index.qmd) list. It is sorted by the `date` field in each page's metadata, so always set a `date` in the format `YYYY-MM-DD` (for example `date: 2026-09-23`). When you make *meaningful and important* changes to an existing page, update its `date` too. Otherwise, the change will not show up in the list.
 
 ## Adding new content
 
-After getting access, you´ll see the directory structure of the website.
+The website is organized into sections. Each section is a directory with an `index.qmd` landing page:
 
-At the top of the hierarchy, you see the directories representing the "major topics" of the website (Labmeeting, People, Archive,...). If you want to add a page that is related to an existing topic, make sure to add it in the respective directory. If you´ll add something "new and unrelated to the rest", you can add a new directory (+ corresponding `.qmd` file).
+| Directory | Section | Content |
+| --- | --- | --- |
+| `people/` | People | Joining and leaving the lab, lab meeting, coffee, writing and presenting, funding |
+| `mri/` | MRI | Running MRI studies, the DICOM to GLM pipeline (`mri/dicom-to-glm/`), tools |
+| `behavioral/` | Behavioral | Vision tests, BIDS for behavioral data |
+| `resources/` | Resources | Neurodesktop, power analysis, participant compensation, gamma correction, chin rests, this guide |
+| `internship/` | Internships | Internship checklist, Pflichtpraktikum, project list |
+| `archive/` | Archive | Outdated pages that are kept for reference |
 
-## "Making changes visible"
+To add a page, create a new directory inside the matching section: `<section>/<topic>/`. Put your `.qmd` file in it, and put its images in `<section>/<topic>/images/`. Start the file with metadata like this:
 
-After adding new content, you might have to take an additional step to actually make it visible on the website! If you created a new directory, you also have to add it in the `_quarto.yml` file! Here you have the option to add it to the menu bar at the top and/or on the side.
+``` yaml
+---
+title: "<Page title>"
+description: "<One sentence that says what this page is about>"
+author: <your initials>
+categories: [<Category>]
+date: <YYYY-MM-DD>
+image: images/<preview>.png   # optional, shown on the section's cards
+---
+```
 
-If you added a new page within an existing directory, it should be visible automatically.
+### Naming files
+
+Use short, descriptive, lowercase names with hyphens for pages, folders and images, for example `mri/dicom-to-glm/04-defacing.qmd` or `images/trigger-box-settings.jpg`.
+
+## Making changes visible
+
+A new page appears on the website only after you add it in two places:
+
+1. **The sidebar:** in `_quarto.yml`, add the path of your page under the sidebar of its section (for example below `id: mri`), in the subsection where it belongs.
+2. **The section cards:** in the section's `index.qmd` (for example `mri/index.qmd`), add the path of your page to the `contents` of the matching listing.

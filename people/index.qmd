@@ -1,0 +1,39 @@
+---
+title: "People"
+description: "Joining and leaving the lab and lab life."
+aliases:
+  - "/people.html"
+listing:
+  - id: joining-leaving
+    contents:
+      - onboarding/joining-the-lab.qmd
+      - leaving/leaving-the-lab.qmd
+      - leaving/leaving-form.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+  - id: lab-life
+    contents:
+      - lab-meeting/lab-meeting.qmd
+      - coffee/coffee.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+toc: false
+---
+
+## Joining & leaving
+
+::: {#joining-leaving}
+:::
+
+## Lab life
+
+::: {#lab-life}
+:::

@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Joining the lab
+aliases:
+  - "/people/onboarding/index.html"
 description: "Useful information to start you off in the lab"
-image: https://svgsilh.com/svg/1502369.svg
+image: ../../images/thumbnails/joining-the-lab.svg
 categories: [Lab]
 author: NZ
-date: 08/05/2026
+date: 2026-08-05
 ---
 
 # Welcome to the lab! 👋
@@ -30,7 +32,7 @@ Here are some things to do:
 
   - Do not feel obliged to keep slack on all the time and silence your notifications for times when you don't want to be disturbed. Everyone in the lab has the right to have their own working hours and nobody expects anyone else to have the same ones.
 
-- [ ] 📅Make sure you know the date and time of the [lab meeting](../../labmeeting/index.qmd). We try our best to enter the dates in our lab calendar, which you can also subscribe to: <https://calendar.online/cadcb4379c842ce87f53>
+- [ ] 📅Make sure you know the date and time of the [lab meeting](../lab-meeting/lab-meeting.qmd). We try our best to enter the dates in our lab calendar, which you can also subscribe to: <https://calendar.online/cadcb4379c842ce87f53>
 
   - If you are a student/intern, it is not strictly necessary, but highly advisable to attend them.
 

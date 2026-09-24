@@ -2,12 +2,15 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "Labmeeting"
+aliases:
+  - "/labmeeting/index.html"
+  - "/labmeeting.html"
 description: "Information about our lab meeting"
-image: https://svgsilh.com/svg/150613.svg
+image: ../../images/thumbnails/lab-meeting.svg
 author: NZ, MG
 categories: [Lab]
 number-sections: true
-date: 01/04/2025
+date: 2025-01-04
 ---
 
 # Current information

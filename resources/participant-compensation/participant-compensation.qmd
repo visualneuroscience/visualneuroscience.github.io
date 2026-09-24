@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Participant compensation
+aliases:
+  - "/people/compensation/compensation.html"
 description: "How to provide your participants with money or course credit for experiment participation"
-image: images/clipboard-516230918.png
+image: images/participation-confirmation-form.png
 categories: [Compensation]
 author: NZ
-date: 09/23/2024
+date: 2024-09-23
 ---
 
 Participants can always be compensated with course credit (=Versuchsscheine) if they are psychology students. They can choose between course credit or money only if the project is funded through a grant (please discuss with Natalia in due time if this is the case).
@@ -18,7 +20,7 @@ Participants can always be compensated with course credit (=Versuchsscheine) if 
 3.  Put a round stamp on each form. Round stamps are available at the secretary's office or in the Testothek (Universitätsplatz 2, top floor)
 4.  Once a subject finished the experiment, fill out the rest of the data, put a date, sign, and give it to the subject.
 
-![](images/clipboard-516230918.png)
+![](images/participation-confirmation-form.png)
 
 # Reimbursement
 
@@ -31,7 +33,7 @@ Reimbursement is done via the bank transfer by the University to participants' b
 When you reimburse participants with money and get their information (see below), make sure that participants don´t see the information of others!! In excel this can be achieved by hiding the rows. Additionally, you should save the file where you gather the information on a university server/cloud (e.g. your nextcloud)
 :::
 
-1.  Download the example [excel sheet](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/people/compensation/files/AWE_Form_example.xlsx)
+1.  Download the example [excel sheet](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/resources/participant-compensation/files/AWE_Form_example.xlsx)
 2.  Fill out one row per participant, entering information into EVERY field that is nonempty in the excel sheet (you can create your own dedicated template):
     -   Betrag: amount in euro
     -   Text (study name): The study name can not exceed a certain number of symbols, so please keep it short (fMRI studies can use their MRI lab abbreviations: pacmond, clav, deka, etc.)
@@ -51,8 +53,8 @@ When you reimburse participants with money and get their information (see below)
 
 # Brain scans
 
-If you did an MRI experiment you can provide your participants with a nifti file of their anatomical scan (prior to [defacing](https://visualneuroscience.github.io/dicom_to_glm/defacing.html)). Please send the scans via the university email/ official university sharing tools to comply with data protection policies.
+If you did an MRI experiment you can provide your participants with a nifti file of their anatomical scan (prior to [defacing](../../mri/dicom-to-glm/04-defacing.qmd)). Please send the scans via the university email/ official university sharing tools to comply with data protection policies.
 
 For viewing the scans, participants can use the browser-based nifti viewer [FreeBrowse](https://freesurfer.github.io/freebrowse/).
 
-If the subject is technically savvy you can also share the instructions for creating surface models for 3D printing (see [3D printing a brain – Visual Neuroscience Lab](https://visualneuroscience.github.io/mri/3D-prints/3d-prints.html)).
+If the subject is technically savvy you can also share the instructions for creating surface models for 3D printing (see [3D printing a brain – Visual Neuroscience Lab](../../mri/3d-printing/3d-printing-a-brain.qmd)).
