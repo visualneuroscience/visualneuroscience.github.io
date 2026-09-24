@@ -2,10 +2,15 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "00 - Overview"
+aliases:
+  - "/dicom_to_glm/Overview_fromDICOMtoGLM.html"
+  - "/dicom_to_glm.html"
 description: "Overview about how to get from DICOM files from the Scanner to your GLM Analysis"
+image: ../../images/thumbnails/00-overview.svg
+categories: [MRI, DICOM, BIDS, Preprocessing, Analysis]
 number-sections: true
 author: MG
-date: 07/28/2025
+date: 2025-07-28
 ---
 
 # General
@@ -19,7 +24,7 @@ There are two ways how you get your data:
 1)  Regular scanning time:
 
     -   you get the data as nifti files
-    -   a few days later via `mri_dropoff` in the `J` drive ([Subpage for accessing other networks](../neurodesk/neurodesktop.qmd#sec-mountNetwork))
+    -   a few days later via `mri_dropoff` in the `J` drive ([Subpage for accessing other networks](../../resources/neurodesktop/neurodesktop.qmd#sec-mountNetwork))
     -   [nifti conversion](#sec-convert) and [defacing](#sec-deface) generally are already done for you then (but check defacing anyway, sometimes this doesn´t work!)
 
 2)  Scanning with Natalia or piloting with Thomas
@@ -46,7 +51,7 @@ $\to$ before we can continue, we need to convert `DICOM`- to `.nii.gz` files
 ***Load the DICOM files to the server and delete them from any external/local device (USB-Stick, local storage of your computer, etc.) as soon as possible!!!***
 :::
 
-# [DICOM to nifti](DICOMtoBIDS.qmd) {#sec-convert}
+# [DICOM to nifti](01-dicom-to-bids.qmd) {#sec-convert}
 
 There are multiple options to convert DICOM to `.nii.gz` files:
 
@@ -62,63 +67,63 @@ There are multiple options to convert DICOM to `.nii.gz` files:
 
     # convert to bids
     # edit following the instructions on
-    # https://visualneuroscience.github.io/dicom_to_glm/DICOMtoBIDS.html#sec-bidscoiner
+    # https://visualneuroscience.github.io/mri/dicom-to-glm/01-dicom-to-bids.html#sec-bidscoiner
     bidsmapper [YOUR_SORTED_DICOM_DIR] [YOUR_BIDS_DIR]
 
     # convert
     bidscoiner [YOUR_SORTED_DICOM_DIR] [YOUR_BIDS_DIR] 
     ```
 
-2)  Older approach: using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/website/dcm2bids_adam.sh`). All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-script)
+2)  Older approach: using a script from Adam that can be [found here](https://github.com/adam-coates/dicom2bids) (or here: `/shared/website/dcm2bids_adam.sh`). All steps are also described in a [separate page](01-dicom-to-bids.qmd#sec-script)
 
-3)  Older bidscoin approach: use the [BIDScoin workflow](https://bidscoin.readthedocs.io/en/latest/workflow.html) implemented in `/shared/website/dcm2bids_coiner.sh`. All steps are also described in a [separate page](DICOMtoBIDS.qmd#sec-bidscoiner)
+3)  Older bidscoin approach: use the [BIDScoin workflow](https://bidscoin.readthedocs.io/en/latest/workflow.html) implemented in `/shared/website/dcm2bids_coiner.sh`. All steps are also described in a [separate page](01-dicom-to-bids.qmd#sec-bidscoiner)
 
 all approaches should result in `.nii.gz` files in [BIDS](https://bids-specification.readthedocs.io/en/stable/introduction.html) format
 
-# [Check the "IntendedFor" entry of the fmap's JSON file](check_IntendedFor_field.qmd)
+# [Check the "IntendedFor" entry of the fmap's JSON file](02-check-intendedfor-field.qmd)
 
--   "tells" [fmriPrep](run_fmriprep.qmd) where to apply distortion correction
+-   "tells" [fmriPrep](06-fmriprep.qmd) where to apply distortion correction
 
 -   ***depending on the fMRIprep version you plan to use, the field has to look slightly different!***
 
 -   to avoid unnecessary problems and delays, it doesn´t harm to always check this field before running fMRIprep!
 
-# [Distribute the T1w files to participants?](ProvidingParticipantsWithTheirT1wFile.qmd)
+# [Distribute the T1w files to participants?](03-t1w-for-participants.qmd)
 
 -   if you promised participants that they will get their T1w images, you should make sure that they really get them
--   this should be done before [defacing](defacing.qmd)
+-   this should be done before [defacing](04-defacing.qmd)
 -   You should delete the "non-defaced" files either after you distributed them to the respective participants, or after your study ended
 
-# [Defacing your data](defacing.qmd) {#sec-deface}
+# [Defacing your data](04-defacing.qmd) {#sec-deface}
 
 -   defaced data is necessary to safely run fMRIprep
 -   Save faced T1w-files to give to your participants (if you got the data during regular scanning times, there should be a `faced` directory, but you should still make sure, that you have the faced T1w files if you need them for your participants!)
 -   NEVER share data (e.g. on [open Neuro](https://openneuro.org/)) that was not defaced before!
 -   Defacing is done with `pydeface` (Docker; Version 2.0.2)
 
-# ([Remove denoising scan from your data](RemoveNoiseScan.qmd))
+# ([Remove denoising scan from your data](05-remove-noise-scan.qmd))
 
 -   if a denoising sequence was used, but you don´t use denoising data, you might have to remove the last volume of each scan before continuing
 
-# [fmriprep](run_fmriprep.qmd)
+# [fmriprep](06-fmriprep.qmd)
 
 -   one of many [BIDS-Apps](https://bids.neuroimaging.io//tools/bids-apps.html) (that require [a BIDS-valid Dataset](https://bids-standard.github.io/bids-validator/))
 -   combines various anatomical and functional preprocessing steps within one tool
 -   necessary, time intense process
 
-# [Probabilistic Retinotopic Mapping](retinotopic_mapping.qmd)
+# [Probabilistic Retinotopic Mapping](07-retinotopic-mapping.qmd)
 
 -   might be necessary to specifically test potential effects in specific visual areas (e.g. V1, V2, etc.)
 -   provides retinotopy information (visual areas, eccentricity, etc.) even in the absence of dedicated retinotopy runs
 
-# [first-level Analysis](first_level_glm_nilearn.qmd)
+# [first-level Analysis](08-first-level-glm.qmd)
 
 -   in the first level GLM you process the data of individual subjects
 -   for each subject, you define/estimate a model that can explain your data
 -   you define meaningful contrasts (e.g. your experimental conditions)
 -   you account for potential confounds
 
-# [Group-Level ROI Analysis](roi_analysis.qmd)
+# [Group-Level ROI Analysis](09-roi-analysis.qmd)
 
 -   in the group-level ROI analysis, you extract relevevant (for your research questions/hypothesis) information from your first level GLM
 -   you should save this information in a format that allows you to later run your statistical analysis (e.g. as a `.csv` file)

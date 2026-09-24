@@ -2,15 +2,18 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "09 - ROI Analysis"
+aliases:
+  - "/dicom_to_glm/roi_analysis.html"
 description: "Example of ROI Analysis"
+image: ../../images/thumbnails/09-roi-analysis.svg
 number-sections: true
-#image: ./images/04_fmriprep/00_OpenFmriprep.png
-categories: [MRI, Analysis, fmriPrep, Neurodesk, nilearn]
+#image: ./images/06-fmriprep/00-open-fmriprep.png
+categories: [MRI, Analysis, fMRIPrep, Neurodesk, nilearn]
 author: MG
-date: 12/16/2025
+date: 2025-12-16
 ---
 
-Similar to the [first level GLM](./first_level_glm_nilearn.qmd), an example is provided and described as a starting point to adapt your own work.
+Similar to the [first level GLM](./08-first-level-glm.qmd), an example is provided and described as a starting point to adapt your own work.
 
 In the ROI (= Regions of Interest) analysis you want to extract the relevant information from your data. In this case, the goal was to extract mean values for a specific contrast in different regions of interest. This step is where you get the "actual" values for your statistical analysis. In a ROI analysis, the regions are defined as masks that are applied to your functional data, resulting in contrast estimates specific to this region(s).
 
@@ -21,11 +24,11 @@ You can find an example notebook to adapt on the server (`/shared/website/ROI_an
 2.  Define important variables and constants:
 
     -   subjects and data directory
-    -   subregions: contrasts from the [first level GLM](./first_level_glm_nilearn.qmd) data of the functional localizer.
-    -   contrast_names: contrasts from the [first level GLM](./first_level_glm_nilearn.qmd) data of the main experiment
+    -   subregions: contrasts from the [first level GLM](./08-first-level-glm.qmd) data of the functional localizer.
+    -   contrast_names: contrasts from the [first level GLM](./08-first-level-glm.qmd) data of the main experiment
     -   tasks (optional): you don´t need to include this, but you might need to change subsequent code then
 
-3.  Define an initial mask based on the [retinotopy data](./retinotopic_mapping.qmd) (for every subject individually):
+3.  Define an initial mask based on the [retinotopy data](./07-retinotopic-mapping.qmd) (for every subject individually):
 
     a)  get and load the data with the information about the specific regions (= `*_varea.mgz`) and about the eccentricity (= `*_eccen.mgz`)
     b)  define a mask (for each hemisphere) that is "True" (=boolean value) for all vertices of the surface, where the `*_varea.mgz` file is 1 ($\to$ meaning that this vertex corresponds to V1), and "False" for all other vertices

@@ -2,12 +2,14 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "06 - fMRIprep"
+aliases:
+  - "/dicom_to_glm/run_fmriprep.html"
 description: "Step by step description of how to run fMRIprep"
 number-sections: true
-image: ./images/04_fmriprep/00_OpenFmriprep.png
-categories: [MRI, Analysis, fMRIprep, Neurodesk]
+image: ./images/06-fmriprep/00-open-fmriprep.png
+categories: [MRI, Analysis, fMRIPrep, Neurodesk]
 author: MG
-date: 03/08/2025
+date: 2025-03-08
 ---
 
 fMRIprep is a helpful and standardized preprocessing pipeline for BIDS-valid datasets. By combining various neuroimaging software packages (FSL, ANTs, FreeSurfer,...) it allows us to run various preprocessing steps automatically:
@@ -32,21 +34,21 @@ fMRIprep is a helpful and standardized preprocessing pipeline for BIDS-valid dat
 
 Before you start fMRIprep, you have to make sure, that you:
 
-1.  [have nifti files in BIDS format](DICOMtoBIDS.qmd)
+1.  [have nifti files in BIDS format](01-dicom-to-bids.qmd)
 
-2.  [defaced your anatomical scans](defacing.qmd)
+2.  [defaced your anatomical scans](04-defacing.qmd)
 
-3.  [Optional: removed the noise scans from your functional data](RemoveNoiseScan.qmd)
+3.  [Optional: removed the noise scans from your functional data](05-remove-noise-scan.qmd)
 
-4.  [Check the IntendedFor field of the fmaps JSON file](check_IntendedFor_field.qmd)
+4.  [Check the IntendedFor field of the fmaps JSON file](02-check-intendedfor-field.qmd)
 
 # Running fMRIprep step by step
 
 ## Starting fMRIprep {#sec-fmriprepStart}
 
-To start fMRIprep, click on the bird symbol at the bottom left on neurodesk and navigate to `Neurodesk > All Applications`, and find `fmriprep`. Select the version that you want to use ![Starting fMRIprep](./images/04_fmriprep/00_OpenFmriprep.png)
+To start fMRIprep, click on the bird symbol at the bottom left on neurodesk and navigate to `Neurodesk > All Applications`, and find `fmriprep`. Select the version that you want to use ![Starting fMRIprep](./images/06-fmriprep/00-open-fmriprep.png)
 
-After selecting your version, a new terminal opens and loads the chosen fMRIprep version. This can take a few moments, be patient! When everything is ready, the bottom line should state `fmriprep-"Version"` (with "Version" being whatever version you selected, for example `fmriprep-24.1.1`) ![fMRIprep is ready](./images/04_fmriprep/01_fmriprepReady.png)
+After selecting your version, a new terminal opens and loads the chosen fMRIprep version. This can take a few moments, be patient! When everything is ready, the bottom line should state `fmriprep-"Version"` (with "Version" being whatever version you selected, for example `fmriprep-24.1.1`) ![fMRIprep is ready](./images/06-fmriprep/01-fmriprep-ready.png)
 
 ## Setting up necessary directories and defining "SUBJECTS_DIR" {#sec-fmriprepSetup}
 
@@ -56,7 +58,7 @@ First, you need to create some new directories that are necessary for fMRIprep t
 mkdir -p /home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/
 ```
 
-By confirming your command with Enter, you´ll find the new directory structure within you derivatives directory![New Directories](./images/04_fmriprep/02_newDirectories.png)
+By confirming your command with Enter, you´ll find the new directory structure within you derivatives directory![New Directories](./images/06-fmriprep/02-new-directories.png)
 
 Then, we need to specify where fMRIprep should store the resulting files (again, adapt the path(s) if necessary):
 
@@ -64,7 +66,7 @@ Then, we need to specify where fMRIprep should store the resulting files (again,
 SUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/
 ```
 
-![Set SUBJECTS_DIR](./images/04_fmriprep/03_setSUBJECTS_DIR.png)
+![Set SUBJECTS_DIR](./images/06-fmriprep/03-set-subjects-dir.png)
 
 **Hint:** you can copy/paste both commands from above and execute them by pressing enter simultaneously, it doesn´t matter
 
@@ -143,12 +145,12 @@ Congratulations, you successfully preprocessed your data and you are one step cl
 The `.html` report that fMRIPrep automatically provides a good overview to detect potential problems (e.g. [bad coregistration](./troubleshooting.qmd#sec-coreg))
 :::
 
-To continue in your journey to your Analysis, please return to the [Overview-Page](Overview_fromDICOMtoGLM.qmd) to check what to do next.
+To continue in your journey to your Analysis, please return to the [Overview-Page](00-overview.qmd) to check what to do next.
 
 Alternatively, here is a list of potential next steps to continue with
 
-1.  [Retinotopic Mapping](retinotopic_mapping.qmd)
+1.  [Retinotopic Mapping](07-retinotopic-mapping.qmd)
 
-2.  [first-level GLM](first_level_glm_nilearn.qmd)
+2.  [first-level GLM](08-first-level-glm.qmd)
 
-3.  [ROI analysis](roi_analysis.qmd)
+3.  [ROI analysis](09-roi-analysis.qmd)
