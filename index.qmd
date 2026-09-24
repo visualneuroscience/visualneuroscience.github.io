@@ -1,50 +1,95 @@
 ---
-title: "Visual Neuroscience lab"
-image: ./images/pr.png
-about: 
-  template: jolla
-  image-width: 14em
-  image-shape: rectangle
-  links:
-    - icon: github 
-      text: GitHub
-      href: https://github.com/visualneuroscience
-    - icon: globe
-      text: Uni Graz
-      href: https://neurovision.uni-graz.at
-    - icon: calendar
-      text: lab calendar
-      href: https://calendar.online/cadcb4379c842ce87f53
-listing:
-  - id: recent-posts
-    contents:
-      - OtherTopics
-      - people
-      - neurodesk
-      - mri
-      - labmeeting
-      - dicom_to_glm
-      - behavioral
-    type: grid
-    max-items: 5
-    sort:
-      - "date desc"
+pagetitle: "Visual Neuroscience lab"
+description: "Internal documentation and how-to guides of the Visual Neuroscience Lab, University of Graz"
+page-layout: full
+sidebar: false
 toc: false
+title-block-banner: false
+listing:
+  id: recent
+  contents:
+    - "people/**/*.qmd"
+    - "mri/**/*.qmd"
+    - "behavioral/**/*.qmd"
+    - "resources/**/*.qmd"
+    - "internship/**/*.qmd"
+    - "!people/index.qmd"
+    - "!mri/index.qmd"
+    - "!behavioral/index.qmd"
+    - "!resources/index.qmd"
+    - "!internship/index.qmd"
+  type: default
+  fields: [image, date, title, description, categories]
+  image-height: 110px
+  image-placeholder: images/card-placeholder.svg
+  max-items: 6
+  sort: "date desc"
 ---
 
-### About
+```{=html}
+<section class="hero">
+  <div>
+    <div class="hero-title" role="heading" aria-level="1">Visual Neuroscience lab</div>
+    <h3 class="hero-about">About</h3>
+    <p class="hero-lead">We investigate how subjective experience arises from sensory input and how this is represented in the brain.</p>
+    <p class="hero-meta">PI: Natalia Zaretskaya</p>
+    <div class="hero-links">
+      <a class="btn btn-primary" href="https://github.com/visualneuroscience">GitHub</a>
+      <a class="btn btn-outline-secondary" href="https://neurovision.uni-graz.at">Uni Graz</a>
+      <a class="btn btn-outline-secondary" href="https://calendar.online/cadcb4379c842ce87f53">lab calendar</a>
+    </div>
+  </div>
+  <figure class="hero-figure">
+    <img src="images/lab-logo.png" alt="Visual Neuroscience Lab logo: an eye with a brain as the iris">
+  </figure>
+</section>
 
-<p class="topbr">
+<h2 class="home-section-title"><span class="home-section-number">A</span>Start here</h2>
+<div class="index-grid">
+  <a class="index-row" href="people/onboarding/joining-the-lab.qmd">
+    <span class="index-number">01</span><span class="index-title">New to the lab?</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Your first-week checklist: keys, safety, Slack, lab meeting, time tracking.</span>
+  </a>
+  <a class="index-row" href="resources/neurodesktop/neurodesktop.qmd">
+    <span class="index-number">02</span><span class="index-title">Server access</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Get an account and work on Neurodesk.</span>
+  </a>
+  <a class="index-row" href="mri/mri-studies-general/mri-studies-general.qmd">
+    <span class="index-number">03</span><span class="index-title">Running a study</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Planning, ethics, preregistration, recruiting and running sessions.</span>
+  </a>
+</div>
 
-We investigate how subjective experience arises from sensory input and how this is represented in the brain.
+<h2 class="home-section-title"><span class="home-section-number">B</span>Browse by topic</h2>
+<div class="index-grid">
+  <a class="index-row" href="people/index.qmd">
+    <span class="index-number">01</span><span class="index-title">People</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Joining and leaving the lab, lab meeting, coffee, writing, talks, funding.</span>
+  </a>
+  <a class="index-row" href="mri/index.qmd">
+    <span class="index-number">02</span><span class="index-title">MRI</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Running MRI studies, the DICOM to GLM pipeline and tools.</span>
+  </a>
+  <a class="index-row" href="behavioral/index.qmd">
+    <span class="index-number">03</span><span class="index-title">Behavioral</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Vision tests, BIDS for behavioral data.</span>
+  </a>
+  <a class="index-row" href="resources/index.qmd">
+    <span class="index-number">04</span><span class="index-title">Resources</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Neurodesktop, power analysis, participant compensation, gamma correction, chin rests, this website.</span>
+  </a>
+  <a class="index-row" href="internship/index.qmd">
+    <span class="index-number">05</span><span class="index-title">Internships</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Checklist, compulsory internship (Pflichtpraktikum), past projects.</span>
+  </a>
+  <a class="index-row" href="archive/index.qmd">
+    <span class="index-number">06</span><span class="index-title">Archive</span><span class="index-arrow">&rarr;</span>
+    <span class="index-text">Older guides and setups, kept for reference.</span>
+  </a>
+</div>
 
-PI: Natalia Zaretskaya
+<h2 class="home-section-title"><span class="home-section-number">C</span>Recent Changes</h2>
+```
 
-</p>
-
-------------------------------------------------------------------------
-
-### Recent Changes
-
-::: {#recent-posts}
+::: {#recent}
 :::
