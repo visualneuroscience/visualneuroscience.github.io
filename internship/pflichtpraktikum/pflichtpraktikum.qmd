@@ -3,9 +3,12 @@ fontsize: 12pt
 geometry: margin=3cm
 title: Pflichtpraktikum
 description: "Information for compulsory internship for bachelor students"
+aliases:
+  - "/internship/pflichtpraktikum.html"
+image: ../../images/thumbnails/pflichtpraktikum.svg
 author: HM, MG
 categories: [Internship, Lab]
-date: 07/02/2025
+date: 2025-07-02
 ---
 
 Um das Pflichtpraktikum im Rahmen des Bachelor- oder Masterstudiums in unserer Arbeitsgruppe absolvieren zu können, muss der gleiche Prozess wie für jede andere Praktikumsstelle für das Pflichtpraktium durchlaufen werden. Die relevanten Informationen hierzu sind auf der [Institutsseite](https://psychologiestudium.uni-graz.at/de/pflichtpraxis/) und im entsprechenden Moodle-Kurs zu finden.

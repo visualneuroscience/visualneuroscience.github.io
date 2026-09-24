@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Internship Checklist
+aliases:
+  - "/internship/checklist.html"
 description: "Information for starting as an intern"
+image: ../../images/thumbnails/internship-checklist.svg
 author: NZ
 categories: [Internship, Lab]
-date: 05/08/2025
+date: 2025-05-08
 ---
 
 Interns are an integral part of our team and are treated as equal colleagues. However, there are specific rules related to internships that all of us must abide by. Below you will find an internship checklist, which should help you navigate the process.
@@ -18,11 +21,11 @@ Interns are an integral part of our team and are treated as equal colleagues. Ho
 
 - [ ] Do the necessary paperwork and make sure you got an o.k. from the secretary's office, the HR department of the university or the international office (for international students).
 
-  - If you are a bachelor student doing a "Pflichtpraktikum" at the University of Graz, you can find the relevant information in the [Pflichtpraktikum Section](pflichtpraktikum.qmd).
+  - If you are a bachelor student doing a "Pflichtpraktikum" at the University of Graz, you can find the relevant information in the [Pflichtpraktikum Section](../pflichtpraktikum/pflichtpraktikum.qmd).
 
 ## On the first day
 
-Check out this comprehensive [TODO list](../people/onboarding/index.qmd).
+Check out this comprehensive [TODO list](../../people/onboarding/joining-the-lab.qmd).
 
 ## During the internship
 
@@ -31,7 +34,7 @@ Check out this comprehensive [TODO list](../people/onboarding/index.qmd).
 
 ## Before leaving
 
-- [ ] Make sure you check out the [leaving](../people/leaving/index.qmd) section. It is made primarily for doctoral/master students, but some things in there will apply to you as well.
+- [ ] Make sure you check out the [leaving](../../people/leaving/leaving-the-lab.qmd) section. It is made primarily for doctoral/master students, but some things in there will apply to you as well.
 
 - [ ] Provide a short summary of what you did and what you found out that can be uploaded to the website
 

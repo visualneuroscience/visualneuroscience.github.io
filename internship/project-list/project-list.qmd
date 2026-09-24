@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Internship project list
+aliases:
+  - "/internship/project_list.html"
 description: "This is a list of all completed internship projects with links to the corresponding presentations/reports/materials"
+image: ../../images/thumbnails/project-list.svg
 author: NZ, MG
 categories: [Internship, Lab]
-date: 08/04/2025
+date: 2025-08-04
 ---
 
 | Year/Month | Title |

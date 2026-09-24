@@ -1,7 +1,7 @@
 [files]
 extend-exclude = [
-    "internship/claustrum_segmentation.txt",
-    "internship/pflichtpraktikum.qmd",
+    "internship/claustrum-segmentation/claustrum-segmentation.txt",
+    "internship/pflichtpraktikum/pflichtpraktikum.qmd",
     "mri/brain-atlas-viewer/viewer/vendor/",
     "mri/brain-atlas-viewer/viewer/data/",
 ]
