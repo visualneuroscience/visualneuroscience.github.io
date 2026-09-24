@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Advice on preparing and giving scientific talks
+aliases:
+  - "/people/talks/talks.html"
+categories: [Presenting]
 description: "Practical recommendations for preparing and delivering sicentific talks"
-image: images/classroom-1297780_1280.png
+image: images/classroom.png
 author: NZ
-date: 05/25/2025
+date: 2025-05-25
 ---
 
 ## Structure

@@ -1,0 +1,51 @@
+---
+title: "Resources"
+description: "Computing, methods and this website."
+aliases:
+  - "/other_topics.html"
+listing:
+  - id: computing
+    contents:
+      - neurodesktop/neurodesktop.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+  - id: methods
+    contents:
+      - power-analysis/power-analysis.qmd
+      - participant-compensation/participant-compensation.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+  - id: website
+    contents:
+      - contributing/contributing.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+toc: false
+---
+
+## Computing
+
+::: {#computing}
+:::
+
+## Methods
+
+::: {#methods}
+:::
+
+## This website
+
+::: {#website}
+:::

@@ -2,12 +2,15 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "Calculating a priori sample size using G Power"
+aliases:
+  - "/OtherTopics/CalculatingAPrioriPower.html"
 description: "Information and descriptions of how to calculate a priori sample size using G Power"
+image: images/gpower-example.png
 author: CY
 number-sections: true
 categories: [Power, Analysis]
 editor: visual
-date: 03/21/2025
+date: 2025-03-21
 ---
 
 # Power analysis
@@ -102,7 +105,7 @@ In such a case, we need using a repeated measures ANOVA (or 2-way mixed ANOVA or
 
 6.  Review Results
 
-<center>![](./gpower_example.png)</center>
+<center>![](./images/gpower-example.png)</center>
 
 Please note that this approach is an approximation, as it does not fully represent the complexity of a mixed-design ANOVA. It essentially treats the between-subjects factor as another within-subjects level, which may not be totally accurate but can give you a ballpark figure for your sample size. If possible, consult with a statistician to ensure that the calculation is correctly tailored to your study's specific needs and to take into account other complexities that G\*Power may not directly address for mixed designs.
 
@@ -110,7 +113,7 @@ See another example on [YouTube](https://www.youtube.com/watch?v=NRha9ZEYfI0)
 
 # Power analysis by R packages
 
-If you want to use R to calculate your power level or required sample size, you can use one of the available packages depending on your needs.You can use the ready-to-use function with default parameters: [Script is here.](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/OtherTopics/power_analysis.R)
+If you want to use R to calculate your power level or required sample size, you can use one of the available packages depending on your needs.You can use the ready-to-use function with default parameters: [Script is here.](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/power-analysis/power_analysis.R)
 
 ```{r}
 #| eval: false
