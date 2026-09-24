@@ -1,0 +1,22 @@
+---
+title: "Internships"
+description: "Everything about internships in the lab."
+aliases:
+  - "/internship.html"
+listing:
+  id: internship
+  contents:
+    - internship-checklist/internship-checklist.qmd
+    - pflichtpraktikum/pflichtpraktikum.qmd
+    - project-list/project-list.qmd
+  type: grid
+  grid-columns: 3
+  image-height: 150px
+  image-placeholder: ../images/card-placeholder.svg
+  fields: [image, date, title, description, author, categories]
+  sort: false
+toc: false
+---
+
+::: {#internship}
+:::
