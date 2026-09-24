@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "04 - Defacing"
 aliases:
   - "/dicom_to_glm/defacing.html"

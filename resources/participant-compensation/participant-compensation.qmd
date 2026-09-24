@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Participant compensation
 aliases:
   - "/people/compensation/compensation.html"

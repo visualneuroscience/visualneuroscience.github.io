@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Custom-built chin rests
 aliases:
   - "/behavioral/chinrests/chinrests.html"

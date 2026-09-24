@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Things to do if you are leaving the lab
 aliases:
   - "/people/leaving/index.html"

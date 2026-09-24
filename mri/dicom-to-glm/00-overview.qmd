@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "00 - Overview"
 aliases:
   - "/dicom_to_glm/Overview_fromDICOMtoGLM.html"

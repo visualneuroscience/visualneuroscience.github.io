@@ -4,7 +4,6 @@ description: "Internal documentation and how-to guides of the Visual Neuroscienc
 page-layout: full
 sidebar: false
 toc: false
-title-block-banner: false
 title-block-style: none
 listing:
   id: recent

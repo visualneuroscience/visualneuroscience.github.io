@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Control Masks
 description: "Approach to generate dilated and shifted control masks"
 image: ./images/control-regions.png

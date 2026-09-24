@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Neurodesktop access
 aliases:
   - "/neurodesk/neurodesktop.html"

@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "Troubleshooting"
 aliases:
   - "/dicom_to_glm/troubleshooting.html"

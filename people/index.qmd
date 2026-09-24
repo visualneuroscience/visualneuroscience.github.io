@@ -10,8 +10,6 @@ listing:
       - leaving/leaving-the-lab.qmd
       - leaving/leaving-form.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -20,8 +18,6 @@ listing:
       - lab-meeting/lab-meeting.qmd
       - coffee/coffee.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -32,8 +28,6 @@ listing:
       - talks/giving-scientific-talks.qmd
       - authorship-calculator/authorship-calculator.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -42,8 +36,6 @@ listing:
       - funding/research-funding.qmd
       - stipends/stipends-and-prizes.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false

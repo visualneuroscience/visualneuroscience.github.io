@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: MRI BIDS and OSF
 aliases:
   - "/mri/analysis/bids.html"

@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: 7T anatomical analysis on neurodesk
 aliases:
   - "/mri/analysis/7t_analysis_on_neurodesk.html"

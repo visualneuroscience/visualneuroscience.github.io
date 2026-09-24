@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Physiological noise correction
 aliases:
   - "/mri/physiology/index.html"

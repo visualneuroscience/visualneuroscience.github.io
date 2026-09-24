@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Pflichtpraktikum
 description: "Information for compulsory internship for bachelor students"
 aliases:

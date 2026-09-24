@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: BIDS for behavioral studies
 aliases:
   - "/behavioral/2024-05-23/index.html"

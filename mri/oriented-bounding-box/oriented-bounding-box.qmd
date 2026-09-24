@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "Calculating oriented bounding box"
 aliases:
   - "/mri/oriented-bounding-box/calculating_oriented_bounding_box.html"

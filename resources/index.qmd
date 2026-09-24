@@ -8,8 +8,6 @@ listing:
     contents:
       - neurodesktop/neurodesktop.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -18,8 +16,6 @@ listing:
       - power-analysis/power-analysis.qmd
       - participant-compensation/participant-compensation.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -28,8 +24,6 @@ listing:
       - gamma-correction/gamma-correction.qmd
       - chinrests/chinrests.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -37,8 +31,6 @@ listing:
     contents:
       - contributing/contributing.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false

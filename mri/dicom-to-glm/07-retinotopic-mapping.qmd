@@ -1,12 +1,9 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: 07 - Probabilistic Retinotopic Mapping
 aliases:
   - "/dicom_to_glm/retinotopic_mapping.html"
 description: "Procedure to apply the probabilistic retinotopic mapping using the Benson Atlas"
 image: ../../images/thumbnails/07-retinotopic-mapping.svg
-#image: ../3d-printing/images/3d-printed-brain.png
 categories: [MRI, Retinotopy]
 author: MG
 date: 2025-05-05

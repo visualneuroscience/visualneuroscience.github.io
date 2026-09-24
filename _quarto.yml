@@ -20,7 +20,7 @@ website:
     location: navbar
     type: overlay
 
-  # Top navigation: one entry per section (each section is a folder with an index.qmd)
+  # Top navigation
   navbar:
     logo:
       light:
@@ -45,12 +45,11 @@ website:
         text: Archive
 
   # One sidebar per section. To add a page, list it in the matching sidebar
-  # below and in the listing of that section's index.qmd.
   sidebar:
     - id: people
       title: "People"
       style: docked
-      collapse-level: 2
+      collapse-level: 1
       contents:
         - text: "Overview"
           href: people/index.qmd
@@ -174,6 +173,7 @@ format:
       light: theme/theme.scss
       dark: [theme/theme.scss, theme/theme-dark.scss]
     respect-user-color-scheme: true
+    fontsize: 12pt
     toc: true
     toc-title: "On this page"
     toc-depth: 3

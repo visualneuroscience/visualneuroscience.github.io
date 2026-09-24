@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "06 - fMRIprep"
 aliases:
   - "/dicom_to_glm/run_fmriprep.html"
@@ -62,7 +60,7 @@ By confirming your command with Enter, you´ll find the new directory structure 
 
 Then, we need to specify where fMRIprep should store the resulting files (again, adapt the path(s) if necessary):
 
-``` {.bash .copy-code}
+``` bash
 SUBJECTS_DIR=/home/jovyan/website/bids/derivatives/fmriprep/sourcedata/freesurfer/
 ```
 
@@ -83,7 +81,7 @@ You´ll get a file called `license.txt` containing your information. Store this 
 
 With the setup done, you can now run the command (for more information about the commands/flags, please refer to the [fMRIprep documentation](https://fmriprep.org/en/stable/usage.html):
 
-``` {.bash .copy-code}
+``` bash
 fmriprep /home/jovyan/website/bids \
   /home/jovyan/website/bids/derivatives/fmriprep participant \
   --bold2t1w-init header --force-bbr \
@@ -119,7 +117,7 @@ You can see an example script to achieve this below (which is also available at 
 
 3.  Adapt the path to your data (and the building of the corresponding necessary directories)
 
-``` {.bash .copy-code filename="run_fmriprep.sh"}
+``` {.bash filename="run_fmriprep.sh"}
 participant_labels=(01 02 03 04 05)
 
 ml fmriprep/23.0.0

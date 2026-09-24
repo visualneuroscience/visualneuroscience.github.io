@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: MNI space
 description: "information about various MNI spaces and templates"
 image: ./images/mni-template.png

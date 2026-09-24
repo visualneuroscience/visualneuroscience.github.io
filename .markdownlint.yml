@@ -10,7 +10,6 @@ MD033: false
 MD041: false
 
 # Quarto docs vary in heading levels
-MD002: false
 MD001: false
 
 # Quarto number-sections uses multiple H1s
