@@ -2,4 +2,4 @@
 
 Documentation site for the [Visual Neuroscience Lab](https://visualneuroscience.github.io).
 
-To contribute, see [OtherTopics/ContributeWithR.qmd](https://visualneuroscience.github.io/OtherTopics/ContributeWithR.html).
+To contribute, see [Contributing to the website](https://visualneuroscience.github.io/resources/contributing/contributing.html).

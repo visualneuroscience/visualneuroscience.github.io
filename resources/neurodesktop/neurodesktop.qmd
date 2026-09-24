@@ -2,12 +2,15 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Neurodesktop access
+aliases:
+  - "/neurodesk/neurodesktop.html"
+  - "/neurodesk.html"
 description: "How to use Neurodesk and Neurodesktop on the server"
 number-sections: true
-image: images/clipboard-3609792068.png
+image: images/neurodesktop-desktop.png
 categories: [Neurodesk]
 author: NZ, MG
-date: 07/28/2025
+date: 2025-07-28
 ---
 
 # General information
@@ -43,7 +46,7 @@ Resource limits depend on your role:
 
 3.  Select "sign up"
 
-    ![](images/clipboard-777788509.png)
+    ![](images/jupyterhub-login.png)
 
 4.  Fill out the following fields
 
@@ -53,7 +56,7 @@ Resource limits depend on your role:
 
     - Password of your choice
 
-    ![](images/clipboard-3276311981.png)
+    ![](images/jupyterhub-sign-up-form.png)
 
 5.  After you sign up, your account needs to be authorized by the technical staff. This may take a few days. If there is no progress, please check back with us.
 
@@ -73,17 +76,17 @@ Once your account has been authorized
 
 5.  If you would like to use graphical interface, you can start the neuroDESKTOP by clicking on the icon.
 
-    ![](images/clipboard-3175354375.png){width="406"}
+    ![](images/jupyterlab-launcher.png){width="406"}
 
 6.  You should see the desktop with all the apps:
 
-    ![](images/clipboard-3609792068.png){width="400"}
+    ![](images/neurodesktop-desktop.png){width="400"}
 
 7.  If you close this window and reopen it later, all your work will be saved as you left it (unless the server has been restarted in the meantime, which happens every Tuesday)
 
 You can use <https://pslg-nv1.uni-graz.at/hub/home> to control your container (start/stop) or change your password. You can also reach the hub home by choosing File -\> Hub Control Panel from the menu.
 
-![](images/clipboard-2628836406.png)
+![](images/jupyterhub-home.png)
 
 ## First usage
 
@@ -107,11 +110,11 @@ There are currently two alternatives
 
 1.  You can transfer the data via nextcloud client, which is included in neurodsktop
 
-    ![](images/clipboard-3813941447.png){width="400"}
+    ![](images/nextcloud-client.png){width="400"}
 
 2.  "file upload" button at the top of the jupyter lab menu (up-pointing arrow) or download by right-clicking on the relevant files. This option does not currently support multiple files, so if you want to transfer many files at once this way, it is advisable to zip them.
 
-    ![](images/clipboard-1030227267.png)
+    ![](images/jupyterlab-file-upload.png)
 
 ## Software
 
@@ -143,7 +146,7 @@ and then run it as above:
 
 #### Using fitlins
 
-Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the ["DICOM to GLM"](../dicom_to_glm.qmd) pipeline for details
+Note that fitlins is currently not recommended; we switched to using nilearn to fit the GLM. See the ["DICOM to GLM"](../../mri/dicom-to-glm/00-overview.qmd) pipeline for details
 
 FitLins(not a part of neurodesktop basic set of tools) can be used with Singularity.
 
@@ -231,7 +234,7 @@ python -m ipykernel install --user --name myproject --display-name "Python (mypr
 
 - choose "neurodesktop-custom" when starting your jupyter server
 
-  ![](images/clipboard-2118237028.png)
+  ![](images/jupyterhub-server-options.png)
 
 - Weasis will appear in the application menu under "Graphics" section
 
@@ -241,11 +244,11 @@ Please keep an eye on your resource usage, especially RAM. If too much RAM is us
 
 The overall resource usage on the server (all users) is displayed in the bottom left of the neurodesktop interface as blue and red bars:
 
-![Example of about 50% RAM usage](images/clipboard-211162115.png)
+![Example of about 50% RAM usage](images/server-resource-bars.png)
 
 If you want to check how much resources is used by you, open the terminal and type "htop" (you can use F6 to sort processes by "percentage memory"):
 
-![Example of "normal" memory usage for running fMRIprep.](images/clipboard-170336543.png)
+![Example of "normal" memory usage for running fMRIprep.](images/htop-memory-usage.png)
 
 ## Using notebooks and scripts in JupyterLab
 
@@ -278,7 +281,7 @@ b)  at the sidebar, go to `Code Completion`. Depending what you are used to when
 
 Notebook code that takes a long time to run can be run inside the NeurodeskTOP graphical interface. This way you can start the code and check on its execution status hours (or days) later, even from a different computer.
 
-- Start Neurdesktop ![](images/clipboard-2762734474.png)
+- Start Neurdesktop ![](images/neurodesktop-rdp-vnc-launchers.png)
 
 - Open LXTerminal
 
@@ -286,7 +289,7 @@ Notebook code that takes a long time to run can be run inside the NeurodeskTOP g
 
 - Open a browser and copypaste one of the URLs offered to you in the terminal output:
 
-  ![](images/clipboard-1452962927.png)
+  ![](images/jupyter-server-urls.png)
 
 # Information for lab members with ssh access
 

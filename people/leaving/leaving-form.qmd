@@ -18,9 +18,13 @@
 #   full          true = spans the full width instead of half (optional)
 
 title: "Leaving Lab Form"
+aliases:
+  - "/people/leaving/leaving-form.html"
 description: "Document where your project data, scripts and results are stored before you leave"
+image: ../../images/thumbnails/leaving-form.svg
+author: LW
 categories: [Lab]
-date: 06/22/2026
+date: 2026-06-22
 params:
   lab_name: "Visual Neuroscience Lab"
   recipient_email: "natalia.zaretskaya@uni-graz.at"
@@ -136,11 +140,11 @@ cat(paste0('<script>\nconst CONFIG = ', jsonlite::toJSON(params, auto_unbox = TR
 <style>
 /* Project blocks and group labels — everything else is Bootstrap */
 .lf-project {
-  border: 2px solid #dee2e6;
+  border: 2px solid var(--bs-border-color);
   border-radius: .5rem;
   padding: 1rem 1.2rem;
   margin-bottom: 1rem;
-  background: #f8f9fa;
+  background: var(--bs-tertiary-bg);
   position: relative;
 }
 .lf-project h3 {
@@ -158,7 +162,7 @@ cat(paste0('<script>\nconst CONFIG = ', jsonlite::toJSON(params, auto_unbox = TR
   color: #2c6fad;
   margin: 1.1rem 0 .4rem;
   padding-bottom: .25rem;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--bs-border-color);
 }
 .lf-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem .75rem; }
 .lf-two-col .lf-full { grid-column: 1/-1; }
@@ -166,7 +170,7 @@ cat(paste0('<script>\nconst CONFIG = ', jsonlite::toJSON(params, auto_unbox = TR
 .lf-add-btn {
   width: 100%; padding: .6rem;
   border: 2px dashed #adb5bd; border-radius: .4rem;
-  background: none; color: #6c757d; cursor: pointer; font-size: .88rem;
+  background: none; color: var(--bs-secondary-color); cursor: pointer; font-size: .88rem;
   margin-top: .25rem;
 }
 .lf-add-btn:hover { border-color: #2c6fad; color: #2c6fad; }
@@ -209,6 +213,17 @@ cat(paste0('<script>\nconst CONFIG = ', jsonlite::toJSON(params, auto_unbox = TR
 #lf-root .form-check-input:not(:checked) {
   background-color: #eef1f5;
 }
+/* Dark mode: keep inputs readable on dark surfaces */
+body.quarto-dark #lf-root .card .form-control,
+body.quarto-dark #lf-root .card .form-control:focus,
+body.quarto-dark .lf-project .form-control-sm,
+body.quarto-dark #lf-root .form-check-input:not(:checked) {
+  background-color: var(--bs-body-bg);
+  border-color: #4b5a70;
+  color: var(--bs-body-color);
+}
+body.quarto-dark .lf-group-label,
+body.quarto-dark .lf-btn-outline { color: #7fb0e0; }
 </style>
 ```
 
