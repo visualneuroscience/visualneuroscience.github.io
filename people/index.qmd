@@ -1,6 +1,6 @@
 ---
 title: "People"
-description: "Joining and leaving the lab and lab life."
+description: "Joining and leaving the lab, lab life, writing and funding."
 aliases:
   - "/people.html"
 listing:
@@ -25,6 +25,28 @@ listing:
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
+  - id: writing
+    contents:
+      - writing/writing.qmd
+      - writing/free-fonts.qmd
+      - talks/giving-scientific-talks.qmd
+      - authorship-calculator/authorship-calculator.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+  - id: funding
+    contents:
+      - funding/research-funding.qmd
+      - stipends/stipends-and-prizes.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
 toc: false
 ---
 
@@ -36,4 +58,14 @@ toc: false
 ## Lab life
 
 ::: {#lab-life}
+:::
+
+## Writing & presenting
+
+::: {#writing}
+:::
+
+## Funding
+
+::: {#funding}
 :::

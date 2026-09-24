@@ -2,8 +2,11 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Free to use Fonts
+aliases:
+  - "/people/writing/free-fonts.html"
+categories: [Writing]
 description: "A list of free to use fonts that are compatible with all operating systems"
-image: "./images/font_pr.png"
+image: "./images/free-fonts-preview.png"
 author: AC
 date: 2026-05-29
 ---

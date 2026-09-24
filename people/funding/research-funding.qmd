@@ -2,16 +2,18 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Research funding opportunities
+aliases:
+  - "/people/funding/funding.html"
 description: "Overview of programs to fund your research projects from PhD onwards"
-image: overview.png
+image: images/funding-overview.png
 categories: [Funding]
 author: CY, MG
-date: 07/28/2025
+date: 2025-07-28
 ---
 
 # Overview
 
-![](./overview.png)
+![](./images/funding-overview.png)
 
 # List
 

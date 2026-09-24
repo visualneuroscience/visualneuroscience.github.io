@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Scientific writing in practice
+aliases:
+  - "/people/writing/writing.html"
+categories: [Writing]
 description: "Practical recommendations for preparing scientific manuscripts, thesis papers, reports, etc."
-image: images/clipboard-2500482646.png
+image: images/manuscript-template.png
 author: NZ
-date: 09/18/2024
+date: 2024-09-18
 ---
 
 # Graphs

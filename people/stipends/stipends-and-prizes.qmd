@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Stipends and prizes for master and PhD students
+aliases:
+  - "/people/stipends/index.html"
 description: "This is a list of resources with stipends and prizes you can apply for"
+image: ../../images/thumbnails/stipends-and-prizes.svg
 categories: [Funding]
 author: NZ
-date: 08/26/2024
+date: 2024-08-26
 ---
 
 # Master

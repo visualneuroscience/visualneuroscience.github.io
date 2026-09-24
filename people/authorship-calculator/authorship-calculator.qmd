@@ -2,9 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "Calculating authorship"
+aliases:
+  - "/OtherTopics/AuthorshipCalculator/calculator.html"
+categories: [Writing, Authorship]
 description: "Calculating authorship of a manuscript according to the Elsevier CRediT author statement"
+image: ../../images/thumbnails/authorship-calculator.svg
 author: AC, NZ
-date: 04/15/2026
+date: 2026-04-15
 bibliography: references.bib
 ---
 
@@ -18,12 +22,11 @@ See also: @mcnutt2018a
 <title>CRediT Authorship Calculator</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
-  body { font-family: Arial; margin: 20px; }
   table { border-collapse: collapse; }
   th, td { border: 1px solid #ccc; padding: 5px; text-align: center; }
   input { width: 60px; }
-  .valid { background: #c8f7c5; }
-  .invalid { background: #f7c5c5; }
+  .valid { background: #c8f7c5; color: #1a1a1a; }
+  .invalid { background: #f7c5c5; color: #1a1a1a; }
 
   /* smaller chart layout */
   .chart-wrap {
