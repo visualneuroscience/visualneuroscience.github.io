@@ -47,7 +47,7 @@ jobs:
       # changes made before the cutoff are ignored.
       - name: Restore page dates from git history
         env:
-          CUTOFF: "2026-09-25T00:00:00Z"
+          CUTOFF: "2026-10-01T00:00:00Z"
         run: |
           git ls-files -z '*.qmd' | while IFS= read -r -d '' f; do
             d=$(git log -1 --since="$CUTOFF" --format=%cI -- "$f")

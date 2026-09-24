@@ -10,7 +10,7 @@ listing:
       - mri-lab-setup/mri-lab-setup.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: pipeline
     contents:
@@ -27,7 +27,7 @@ listing:
       - dicom-to-glm/troubleshooting.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: tools
     contents:
@@ -42,9 +42,10 @@ listing:
       - 3d-printing/3d-printing-a-brain.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
-    sort: false
+    fields: [image, file-modified, title, description, author, categories]
+    sort: "file-modified desc"
 toc: false
+date-modified: ""
 ---
 
 ## Running MRI studies
