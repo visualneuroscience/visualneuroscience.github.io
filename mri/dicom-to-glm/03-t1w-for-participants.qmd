@@ -2,12 +2,14 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "03 - T1w for PBn"
+aliases:
+  - "/dicom_to_glm/ProvidingParticipantsWithTheirT1wFile.html"
 description: "Information about how to provide participants with their T1w image"
 number-sections: true
-image: ./images/anat.png
+image: ./images/anatomical-scan.png
 categories: [MRI]
 author: MG
-date: 04/15/2025
+date: 2025-04-15
 ---
 
 It can be a good incentive to promote your study if you offer participants to give them their T1w files (since everyone knows how cool brain images are!)
@@ -16,22 +18,22 @@ It can be a good incentive to promote your study if you offer participants to gi
 
 There are only some things to remember:
 
-1.  Participants always get the "faced" T1w scan (image including facial identifiers). If you get the data from the MRI lab directly, there should be a `faced` directory with the T1w-files that you can give to the participant. If you started with raw DICOM files, make sure to send the T1w file before [defacing](defacing.qmd) or save defaced images separately!
+1.  Participants always get the "faced" T1w scan (image including facial identifiers). If you get the data from the MRI lab directly, there should be a `faced` directory with the T1w-files that you can give to the participant. If you started with raw DICOM files, make sure to send the T1w file before [defacing](04-defacing.qmd) or save defaced images separately!
 
 2.  If you provide participants with their T1w scans, it might be a good idea to provide them with the software on how to look at their data! For example, you could point them to MRIcroGL as a free tool that they can install themselves to look at their data: [Link to MRIcroGL Download](https://www.nitrc.org/projects/mricrogl/) (there is also a ready-to-distribute PDF: `/shared/website/How_to_look_at_your_brain.pdf`)
 
-3.  **We do not keep the "faced" T1w scans of participants**! Thus, delete the non-defaced T1w scan of a participant either immediately after [defacing](defacing.qmd), or at the latest after your study finished!
+3.  **We do not keep the "faced" T1w scans of participants**! Thus, delete the non-defaced T1w scan of a participant either immediately after [defacing](04-defacing.qmd), or at the latest after your study finished!
 
 # The next Steps
 
-To continue in your journey to your Analysis, please return to the [Overview-Page](Overview_fromDICOMtoGLM.qmd) to check what to do next.
+To continue in your journey to your Analysis, please return to the [Overview-Page](00-overview.qmd) to check what to do next.
 
 Alternatively, here is a list of potential next steps to continue with
 
-1.  [Defacing](defacing.qmd)
+1.  [Defacing](04-defacing.qmd)
 
-2.  [Check JSON file of the fmap](check_IntendedFor_field.qmd)
+2.  [Check JSON file of the fmap](02-check-intendedfor-field.qmd)
 
-3.  [Remove noise scans](RemoveNoiseScan.qmd)
+3.  [Remove noise scans](05-remove-noise-scan.qmd)
 
-4.  [fmriprep](run_fmriprep.qmd)
+4.  [fmriprep](06-fmriprep.qmd)

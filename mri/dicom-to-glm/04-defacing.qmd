@@ -2,30 +2,32 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "04 - Defacing"
+aliases:
+  - "/dicom_to_glm/defacing.html"
 description: "Step by step description of how to deface your data"
 number-sections: true
-image: ./images/03_Defacing/01_open_Pydeface.png
+image: ./images/04-defacing/01-open-pydeface.png
 categories: [MRI, Preprocessing, Neurodesk]
 author: MG
-date: 04/13/2025
+date: 2025-04-13
 ---
 
 ::: callout-warning
 
 ## Ensure Defacing
 
-Defacing your T1w scans is an important preprocessing step *that has to be done before* [running fmriprep](run_fmriprep.qmd) as you´ll probably run into errors otherwise!
+Defacing your T1w scans is an important preprocessing step *that has to be done before* [running fmriprep](06-fmriprep.qmd) as you´ll probably run into errors otherwise!
 
 BUT: don´t run the defacing by default! You should always check first if the T1w-file is already defaced. Running the defacing algorithm multiple times(even though not necessary) can potentially harm the quality of your data!
 :::
 
 # General Information
 
-When we acquired data "ourselves", we definitely have to deface the T1w-scan ([after converting the DICOMs to niftis](DICOMtoBIDS.qmd)) before we can continue!
+When we acquired data "ourselves", we definitely have to deface the T1w-scan ([after converting the DICOMs to niftis](01-dicom-to-bids.qmd)) before we can continue!
 
 When acquiring data during regular scanner times, we already get `.nifti` files. There should be a directory `rawdata`, which contains the data in BIDS-Format. Additionally there is a directory `faced`.
 
-In theory, the directory `faced` should contain the original T1w-niftis that you can [send to the participant](ProvidingParticipantsWithTheirT1wFile.qmd) and the T1w-niftis within `rawdata` should already be defaced (and thus be ready to further work with them, e.g. [fmriprep](run_fmriprep.qmd)).
+In theory, the directory `faced` should contain the original T1w-niftis that you can [send to the participant](03-t1w-for-participants.qmd) and the T1w-niftis within `rawdata` should already be defaced (and thus be ready to further work with them, e.g. [fmriprep](06-fmriprep.qmd)).
 
 However, sometimes the automatic defacing at the MRI-Lab does not work as intended, potentially resulting in "non-defaced" T1w-niftis in the `rawdata` directory! Thus, you should *always* check the T1w-nifti in `rawdata` to ensure that it is defaced and avoid potential subsequent problems.
 
@@ -37,7 +39,7 @@ Alternatively you can also run `python /shared/website/showT1.py` in the termina
 
 ## Don´t forget your participants
 
-If you [promised participants that they´ll get their T1w scan](ProvidingParticipantsWithTheirT1wFile.qmd): When the data was acquired outside the regular scanning times (i.e. we start with the DICOMs), make sure to save the T1w-nifti once separately before defacing!
+If you [promised participants that they´ll get their T1w scan](03-t1w-for-participants.qmd): When the data was acquired outside the regular scanning times (i.e. we start with the DICOMs), make sure to save the T1w-nifti once separately before defacing!
 :::
 
 # Defacing your T1w-Scan
@@ -50,19 +52,19 @@ To deface a T1w image, you first have to open `pydeface`:
 
 2.  Scroll down until you find `pydeface`
 
-3.  Click on `pydeface 2.0.2` ![Pydeface 2.0.2](./images/03_Defacing/01_open_Pydeface.png)
+3.  Click on `pydeface 2.0.2` ![Pydeface 2.0.2](./images/04-defacing/01-open-pydeface.png)
 
 It may take some time until everything is loaded - be patient!
 
-Finally, it should look like this: ![Pydeface Started](./images/03_Defacing/02_pydeface_opened.png)
+Finally, it should look like this: ![Pydeface Started](./images/04-defacing/02-pydeface-opened.png)
 
 ## Get the path to your original T1w scan
 
-1.  Navigate to the anatomical scan of the participant within your [BIDS](DICOMtoBIDS.qmd) directory
+1.  Navigate to the anatomical scan of the participant within your [BIDS](01-dicom-to-bids.qmd) directory
 
 2.  Right-click on the anatomical `.nifti` file
 
-3.  Select `Copy Path(s)` ![Get Path(s) of anat-scan](./images/03_Defacing/03_Path_to_T1w.png)
+3.  Select `Copy Path(s)` ![Get Path(s) of anat-scan](./images/04-defacing/03-path-to-t1w.png)
 
 ## The pydeface command
 
@@ -84,24 +86,24 @@ An example command would be:
 pydeface /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --outfile /home/jovyan/Website/bids/sub-999/ses-1/anat/sub-999_ses-1_T1w.nii.gz --force
 ```
 
-and it should look like this: ![Pydeface Command](./images/03_Defacing/04_pydeface_command.png)
+and it should look like this: ![Pydeface Command](./images/04-defacing/04-pydeface-command.png)
 
 Press enter to start the process. Again, it might take a few moments until pydeface finishes, be patient!
 
-At the end, it should look like this: ![Pydeface Finished](./images/03_Defacing/05_defacing_finished.png)
+At the end, it should look like this: ![Pydeface Finished](./images/04-defacing/05-defacing-finished.png)
 
 ## The next steps
 
 Congratulations, you successfully defaced a T1w-scan and you are one step closer to analyzing your data!
 
-To continue in your journey to your Analysis, please return to the [Overview-Page](Overview_fromDICOMtoGLM.qmd) to check what to do next.
+To continue in your journey to your Analysis, please return to the [Overview-Page](00-overview.qmd) to check what to do next.
 
 Alternatively, here is a list of potential next steps to continue with
 
-1.  [Provide Participants their T1w file](ProvidingParticipantsWithTheirT1wFile.qmd)
+1.  [Provide Participants their T1w file](03-t1w-for-participants.qmd)
 
-2.  [Remove Noise Scans from your data?](RemoveNoiseScan.qmd)
+2.  [Remove Noise Scans from your data?](05-remove-noise-scan.qmd)
 
-3.  [Check the IntendedFor field of the fmap](check_IntendedFor_field.qmd)
+3.  [Check the IntendedFor field of the fmap](02-check-intendedfor-field.qmd)
 
-4.  [run fmriprep](run_fmriprep.qmd)
+4.  [run fmriprep](06-fmriprep.qmd)

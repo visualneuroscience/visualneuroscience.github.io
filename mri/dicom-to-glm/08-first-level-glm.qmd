@@ -2,17 +2,20 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: "08 - first level GLM"
+aliases:
+  - "/dicom_to_glm/first_level_glm_nilearn.html"
 description: "Several approaches to run a first level GLM using nilearn"
+image: ../../images/thumbnails/08-first-level-glm.svg
 number-sections: true
-#image: ./images/04_fmriprep/00_OpenFmriprep.png
-categories: [MRI, Analysis, fmriPrep, Neurodesk, nilearn]
+#image: ./images/06-fmriprep/00-open-fmriprep.png
+categories: [MRI, Analysis, fMRIPrep, Neurodesk, nilearn]
 author: MG
-date: 15/12/2025
+date: 2025-12-15
 ---
 
-After [preprocessing](./run_fmriprep.qmd) your data, it´s time to do your first level GLM (= general linear model).
+After [preprocessing](./06-fmriprep.qmd) your data, it´s time to do your first level GLM (= general linear model).
 
-In this step, you will fit a model to your data (for each subject individually) and compute your contrasts. The output will be used later in the analysis (e.g. [group-level ROI analysis](roi_analysis.qmd)), where you extract relevant (for your research question/hypothesis) values.
+In this step, you will fit a model to your data (for each subject individually) and compute your contrasts. The output will be used later in the analysis (e.g. [group-level ROI analysis](09-roi-analysis.qmd)), where you extract relevant (for your research question/hypothesis) values.
 
 # Surface-based
 
@@ -53,7 +56,7 @@ Short explanation of the process:
 
 9.  Optional: Saves activation maps (should run without any changes)
 
-10. Save your results (should run without any changes). These are the files with which you later work in the [ROI analysis](roi_analysis.qmd)
+10. Save your results (should run without any changes). These are the files with which you later work in the [ROI analysis](09-roi-analysis.qmd)
 
 ::: callout-info
 The notebook `/shared/website/GLM_surface_Loc.ipynb` was used for the GLM of the localizer data. The structure and logic is the same as for the main experiment
