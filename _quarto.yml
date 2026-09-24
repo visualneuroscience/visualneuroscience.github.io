@@ -15,6 +15,7 @@ website:
   back-to-top-navigation: true
   page-navigation: true
   reader-mode: true
+  open-graph: true
   search:
     location: navbar
     type: overlay
@@ -178,6 +179,9 @@ format:
     toc-depth: 3
     title-block-banner: true
     date-format: "D MMM YYYY"
+    date-modified: last-modified
+    reference-location: margin
+    citation-location: margin
     code-copy: true
     smooth-scroll: true
     lightbox: auto

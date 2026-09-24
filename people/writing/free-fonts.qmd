@@ -33,7 +33,7 @@ Below are some websites, that you can use to download free to use fonts.
 
 [Open foundry](https://open-foundry.com/about)
 
-::: {.panel-tabset}
+::: {.panel-tabset group="os"}
 
 ### Windows
 

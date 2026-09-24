@@ -57,13 +57,11 @@ editor: visual
 
 2.  The goggles can now be plugged in
 
-<center>
+::: {layout-ncol=2}
+![Goggles plug unplugged](./images/goggle-unplug.jpg)
 
-![Goggles plug unplugged](./images/goggle-unplug.jpg){width="30%"}
-
-![Goggles plug plugged in](./images/goggle-plug.jpg){width="30%"}
-
-</center>
+![Goggles plug plugged in](./images/goggle-plug.jpg)
+:::
 
 3.  The goggles need to be additionally turned on inside the scanner room (double check with technician that this is the case)
 

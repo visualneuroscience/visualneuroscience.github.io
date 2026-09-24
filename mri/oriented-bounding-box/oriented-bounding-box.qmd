@@ -160,11 +160,11 @@ for segmentId in stats["SegmentIDs"]:
     4. Screenshots
     5. A `.mrml` file
 
+::: {layout-ncol=2}
 ![In the data tab you should see Table, oriented bounding box markup and screenshots (axial, coronal, sagittal)](./images/list-of-data.png)
 
-&nbsp;
-
 ![Choose directory where to save data and click check box on what to save](./images/save-data.png)
+:::
 
 &nbsp;
 
