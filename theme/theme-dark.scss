@@ -1,0 +1,39 @@
+/*-- scss:defaults --*/
+
+// Dark mode: color overrides only. Layout and component rules live in theme.scss.
+// "Ink" becomes the light foreground and "paper" the dark background.
+
+$paper: #131417;
+$paper-deep: #1c1d21;
+$ink: #ece8df;
+$ink-soft: #c9c4b8;
+$graphite: #9a9890;
+$rule: #34353a;
+$signal: #ff5a3c;
+$grid-line: rgba(236, 232, 223, 0.045);
+$invert-bg: #ece8df;
+$invert-fg: #131417;
+$figure-bg: #ffffff;
+
+$primary: $signal;
+$secondary: $graphite;
+$dark: $ink;
+$body-bg: $paper;
+$body-color: $ink;
+$text-muted: $graphite;
+$link-color: $signal;
+$border-color: $rule;
+
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+$navbar-hl: $signal;
+$sidebar-bg: $paper;
+$sidebar-fg: $ink-soft;
+$footer-bg: #0b0c0e;
+$footer-fg: $ink;
+$toc-color: $signal;
+
+$code-color: $ink;
+$code-bg: $paper-deep;
+$code-block-bg: $paper-deep;
+$code-block-border-left: $ink;
