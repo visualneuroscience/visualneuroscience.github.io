@@ -9,7 +9,7 @@ listing:
       - neurodesktop/neurodesktop.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: methods
     contents:
@@ -17,7 +17,7 @@ listing:
       - participant-compensation/participant-compensation.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: equipment
     contents:
@@ -25,16 +25,17 @@ listing:
       - chinrests/chinrests.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: website
     contents:
       - contributing/contributing.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
 toc: false
+date-modified: ""
 ---
 
 ## Computing

@@ -15,6 +15,7 @@ listing:
   fields: [image, date, title, description, author, categories]
   sort: "date desc"
 toc: false
+date-modified: ""
 ---
 
 ::: {.callout-warning}

@@ -10,9 +10,10 @@ listing:
     - bids-behavioral/bids-for-behavioral-studies.qmd
   type: grid
   image-placeholder: ../images/card-placeholder.svg
-  fields: [image, date, title, description, author, categories]
+  fields: [image, file-modified, title, description, author, categories]
   sort: false
 toc: false
+date-modified: ""
 ---
 
 ::: {#behavioral}

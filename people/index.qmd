@@ -11,7 +11,7 @@ listing:
       - leaving/leaving-form.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: lab-life
     contents:
@@ -19,7 +19,7 @@ listing:
       - coffee/coffee.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: writing
     contents:
@@ -29,7 +29,7 @@ listing:
       - authorship-calculator/authorship-calculator.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
   - id: funding
     contents:
@@ -37,9 +37,10 @@ listing:
       - stipends/stipends-and-prizes.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
-    fields: [image, date, title, description, author, categories]
+    fields: [image, file-modified, title, description, author, categories]
     sort: false
 toc: false
+date-modified: ""
 ---
 
 ## Joining & leaving
