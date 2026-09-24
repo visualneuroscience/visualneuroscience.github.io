@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#17181b" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="160" fill="#efebe2"/>
+  <rect width="480" height="160" fill="url(#grid)"/>
+  <circle cx="240" cy="80" r="50" fill="none" stroke="#17181b" stroke-opacity="0.15" stroke-width="1.5"/>
+  <circle cx="240" cy="80" r="70" fill="none" stroke="#17181b" stroke-opacity="0.08" stroke-width="1.5"/>
+  <svg x="206" y="46" width="68" height="68" viewBox="0 -960 960 960">
+    <path fill="#d9230f" d="M600.5-379.5Q650-429 650-500t-49.5-120.5Q551-670 480-670t-120.5 49.5Q310-571 310-500t49.5 120.5Q409-330 480-330t120.5-49.5Zm-200-41Q368-453 368-500t32.5-79.5Q433-612 480-612t79.5 32.5Q592-547 592-500t-32.5 79.5Q527-388 480-388t-79.5-32.5ZM216-283Q98-366 40-500q58-134 176-217t264-83q146 0 264 83t176 217q-58 134-176 217t-264 83q-146 0-264-83Zm264-217Zm222.5 174.5Q804-391 857-500q-53-109-154.5-174.5T480-740q-121 0-222.5 65.5T102-500q54 109 155.5 174.5T480-260q121 0 222.5-65.5Z"/>
+  </svg>
+</svg>

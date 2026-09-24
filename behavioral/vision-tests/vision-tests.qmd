@@ -2,10 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Vision tests
+aliases:
+  - "/behavioral/2024-05-22/index.html"
 description: "How to conduct vision tests"
+image: ../../images/thumbnails/vision-tests.svg
 author: CY
 categories: [Vision-Prescreening]
-date: 05/22/2024
+date: 2024-05-22
 ---
 
 # Prescreening tests

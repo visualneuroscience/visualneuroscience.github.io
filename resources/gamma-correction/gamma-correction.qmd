@@ -2,11 +2,14 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Gamma correction
+aliases:
+  - "/OtherTopics/displays/displays.html"
 description: "How to measure monitor gamma and apply it in visual experiments"
-image: images/clipboard-1520472544.png
+image: images/light-meter-on-screen.png
+categories: [Behavioral, Displays]
 author: NZ
 number-sections: true
-date: 08/26/2024
+date: 2024-08-26
 ---
 
 # Background
@@ -19,7 +22,7 @@ In visual psychophysics, we want to have a linear mapping between the input and 
 
 -   Light meter device, like PCA-L335 (can be found in PTA's office). There are other similar devices available[^1].
 
-    ![](images/clipboard-3209665526.png)
+    ![](images/pce-l335-light-meter.png)
 
 -   A computer with two independent screens, one output screen and one experimenter screen (can be a laptop with an external screen) running psychtoolbox. For this procedure it does not have to be a linux computer, since timing is not important.
 
@@ -29,25 +32,25 @@ In visual psychophysics, we want to have a linear mapping between the input and 
 
 For luminance measurement on a certain screen (output screen), two monitors and a spectrophotometer are required. The Psychtoolbox script is run on the primary display monitor, while the luminance of the output secondary screen is being measured. For the measurement, you need to stabilize the photometer on chinrest or anywhere in front of the output screen. In the worst case, a second person can hold the photometer at a constant distance.
 
-![](images/clipboard-1520472544.png){width="260"}
+![](images/light-meter-on-screen.png){width="260"}
 
 With the saveReadings.m script, 17 different levels of brightness for each of the three colors (R, G, B) and for all three colors together (grey), respectively, are displayed on the output screen. The light measures shown on the lux meter can be typed into the command window.
 
-![](images/clipboard-2623240969.png){width="245"}
+![](images/light-meter-reading.png){width="245"}
 
 However, it is better to note them on paper or - even better - in a spreadsheet of another computer. This is because in case you mistype something in the script, you will have to redo everything from the beginning, which can be annoying.
 
-![](images/clipboard-3848956039.png){width="246"}
+![](images/luminance-readings-notes.png){width="246"}
 
 When the script is run without an error, it automatically saves the 17 values into a mat-file (but it is better to note them on paper as well, as mentioned above). Importantly, if you care about the absolute lux values, the room in which brightness is measured has to be as dark as possible. Thus, the primary display monitor ideally should be covered with dark tissue during the procedure if it is not isolated.
 
 # Operation
 
--   open `saveReadings.m` and edit the general info. If you want to customize the measurement, you may change the parameters as well.
+-   open [`saveReadings.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/gamma-correction/saveReadings.m) and edit the general info. If you want to customize the measurement, you may change the parameters as well.
 
--   run `saveReadings.m` (alternatively, you may call directly the function `vals = saveMonitorPhotometerReadings(17, 'red')`)
+-   run `saveReadings.m` (alternatively, you may call [`saveMonitorPhotometerReadings.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/gamma-correction/saveMonitorPhotometerReadings.m) directly: `vals = saveMonitorPhotometerReadings(17, 'red')`)
 
--   then, call the function to create gamma tables
+-   then, call [`createGammaFromSavedReadings.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/gamma-correction/createGammaFromSavedReadings.m) to create gamma tables
 
     `[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)`
 
@@ -55,11 +58,11 @@ When the script is run without an error, it automatically saves the 17 values in
 
 Two gamma tables and two spline tables will be saved: one with RGB and one with gray. You need to decide which one is used (default for experiments: rgb_gamma). If you want to make further customization please dig into the scripts.
 
-[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/OtherTopics/displays)
+[Link to our GitHub repo containing relevant scripts](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/resources/gamma-correction)
 
-[Link to saved values and Gamma lookup tables for VPixx/3D](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/OtherTopics/displays/luxMeasNewVPixx/)
+[Link to saved values and Gamma lookup tables for VPixx/3D](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/resources/gamma-correction/luxMeasNewVPixx/)
 
-[Link to saved values and Gamma lookup tables for MRI display devices](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/OtherTopics/displays/luxMeasMRI/)
+[Link to saved values and Gamma lookup tables for MRI display devices](https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/resources/gamma-correction/luxMeasMRI/)
 
 # Usage
 

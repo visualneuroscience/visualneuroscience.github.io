@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-description: "Computing, methods and this website."
+description: "Computing, methods, equipment and this website."
 aliases:
   - "/other_topics.html"
 listing:
@@ -17,6 +17,16 @@ listing:
     contents:
       - power-analysis/power-analysis.qmd
       - participant-compensation/participant-compensation.qmd
+    type: grid
+    grid-columns: 3
+    image-height: 150px
+    image-placeholder: ../images/card-placeholder.svg
+    fields: [image, date, title, description, author, categories]
+    sort: false
+  - id: equipment
+    contents:
+      - gamma-correction/gamma-correction.qmd
+      - chinrests/chinrests.qmd
     type: grid
     grid-columns: 3
     image-height: 150px
@@ -43,6 +53,11 @@ toc: false
 ## Methods
 
 ::: {#methods}
+:::
+
+## Equipment
+
+::: {#equipment}
 :::
 
 ## This website

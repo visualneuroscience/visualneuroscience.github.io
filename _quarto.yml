@@ -71,7 +71,7 @@ website:
         contents:
           - behavioral/2024-05-22/index.qmd
           - behavioral/2024-05-23/index.qmd
-          - behavioral/chinrests/chinrests.qmd
+          - resources/chinrests/chinrests.qmd
       - section: "People"
         href: people.qmd
         contents: 
