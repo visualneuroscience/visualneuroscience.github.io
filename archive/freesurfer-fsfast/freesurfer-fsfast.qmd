@@ -21,7 +21,7 @@ figcaption {
 ```
 
 ::: callout-note
-The FSFAST glm can be run instead of using [fitlins](link%20to%20fitlins)
+The FSFAST glm can be run instead of using [fitlins](https://fitlins.readthedocs.io/)
 
 Link to [FreeSurfers FSFAST tutorial](https://surfer.nmr.mgh.harvard.edu/fswiki/FsFastTutorialV5.1/FsFastFirstLevel)
 :::
