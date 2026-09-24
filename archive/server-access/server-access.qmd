@@ -1,0 +1,24 @@
+---
+fontsize: 12pt
+geometry: margin=3cm
+title: "Older ways to access the server"
+aliases:
+  - "/OtherTopics/LabMembersOnly/LabMembersOnly.html"
+categories: [Server, Archived]
+description: "Outdated ways to access the lab server, replaced by Neurodesktop"
+image: images/x2go-session.png
+author: NZ
+number-sections: true
+editor: visual
+date: 2025-01-24
+---
+
+## X2go
+
+We have activated server access via [neurodesktop](https://www.neurodesk.org) for students and lab members. This is now the default way to access the server. Please see the [dedicated page](../../resources/neurodesktop/neurodesktop.qmd).
+
+This page describes access via x2go, which was in place until 2024
+
+![](images/x2go-session.png)
+
+<https://cloud.uni-graz.at/index.php/f/220686861>

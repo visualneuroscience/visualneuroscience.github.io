@@ -2,11 +2,13 @@
 fontsize: 12pt
 geometry: margin=3cm
 title: Dicom to Bids conversion
+aliases:
+  - "/archive/dicom_to_bids.html"
 description: "how to convert from dicom's to bids"
-image: ./dicom2bids_start.PNG
-categories: [MRI, BIDS, DICOM, archived]
+image: ./images/dicom2bids-start.png
+categories: [MRI, BIDS, DICOM, Archived]
 author: AC
-date: 08/12/2024
+date: 2024-08-12
 ---
 
 # Documentation
@@ -55,15 +57,15 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 ### 1. Choose the name of the dicom folder in which to convert
 
-![](./dicom2bids_start.PNG)
+![](./images/dicom2bids-start.png)
 
 ### 2. Optional: If there are subdirectories in the dicom folder (e.g. ses-1 or ses-2) pick one
 
-![](./dicom2bids_subdirs.PNG)
+![](./images/dicom2bids-subdirs.png)
 
 ### 3. Get the name of BIDS subject
 
-![](./dicom2bids_bidsname.PNG)
+![](./images/dicom2bids-bidsname.png)
 
 -   What is often the case for us is that the dicoms folder for each participant is named differently to how we want out subject/ BIDS name to be.
 
@@ -73,7 +75,7 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 
 -   Here the script roughly unpacks all the dicoms ready for the step which renames files and folders and puts the niftis in these new folders
 
-![](./dicom2bids_dicomsearch_pybids.PNG)
+![](./images/dicom2bids-dicomsearch-pybids.png)
 
 ### 5. Information about the renaming and BIDS conventions
 
@@ -81,7 +83,7 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 >
 > The option to delete dicoms is also important, the anat-scout is not crucial for an analysis so theres no need to try to convert it to BIDS
 
-![](./dicom2bids_renameinfo.PNG)
+![](./images/dicom2bids-renameinfo.png)
 
 ### 6. Keep/ modify/ delete
 
@@ -89,25 +91,25 @@ Going from DICOMS to NIFTI + BIDS JSON sidecar:
 >
 > Any action here will apply to the `.nii.gz` and the `.json`
 
-![](./dicom2bids_keepmodifydelete.PNG)
+![](./images/dicom2bids-keepmodifydelete.png)
 
 -   If you want to modify the name of the BIDS file then choose modify and rename according to the BIDS naming convention
 
-![](./dicom2bids_modify.PNG)
+![](./images/dicom2bids-modify.png)
 
 ------------------------------------------------------------------------
 
 -   If you want to keep or modify the folder the BIDS file belong to then select either keep or modify
 
-![](./dicom2bids_foldername_keeprename.PNG)
+![](./images/dicom2bids-foldername-keeprename.png)
 
 -   Here I want to keep the folder `func` because it is correct
 
-![](./dicom2bids_foldername_rename.PNG)
+![](./images/dicom2bids-foldername-rename.png)
 
 -   Here I want to choose the folder `extra` (this is not a BIDS folder but I want to convert the dicom to a nifti, I'd remove this before fMRIprep)
 
-![](./dicom2bids_foldername_renameanat.PNG)
+![](./images/dicom2bids-foldername-renameanat.png)
 
 -   Often times the anat folder name is wrong. Here the name should just be `anat`
 
