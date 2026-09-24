@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - brain-atlas-viewer/dist/viewer.html
+    - images/card-placeholder.svg
 
 website:
   title: "Visual Neuroscience Lab"
@@ -105,10 +106,21 @@ website:
         href: https://github.com/visualneuroscience
 format:
   html:
-    page-layout: full
     theme:
-      light: main_theme.scss
-    css: style.css
+      light: theme/theme.scss
+      dark: [theme/theme.scss, theme/theme-dark.scss]
+    respect-user-color-scheme: true
     toc: true
+    toc-title: "On this page"
+    toc-depth: 3
+    title-block-banner: true
+    date-format: "D MMM YYYY"
+    code-copy: true
+    smooth-scroll: true
+    lightbox: auto
+    grid:
+      sidebar-width: 270px
+      body-width: 880px
+      margin-width: 250px
 
 editor: visual

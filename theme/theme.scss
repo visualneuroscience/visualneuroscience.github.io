@@ -1,0 +1,685 @@
+/*-- scss:defaults --*/
+
+// "Lab notebook" theme: warm paper, ink hairlines, square corners, one signal red.
+// Dark mode layers theme-dark.scss on top, which only overrides color variables,
+// so every rule below must use variables instead of literal colors.
+
+// Palette
+$paper: #f7f5f0 !default;
+$paper-deep: #efebe2 !default;
+$ink: #17181b !default;
+$ink-soft: #3d3f45 !default;
+$graphite: #6b6d73 !default;
+$rule: #d8d2c4 !default;
+$signal: #d9230f !default;
+$grid-line: rgba(23, 24, 27, 0.05) !default;
+$invert-bg: #17181b !default;
+$invert-fg: #f7f5f0 !default;
+$figure-bg: #ffffff !default;
+
+$primary: $signal !default;
+$secondary: $graphite !default;
+$dark: $ink !default;
+$body-bg: $paper !default;
+$body-color: $ink !default;
+$text-muted: $graphite !default;
+$link-color: $signal !default;
+$link-decoration: none !default;
+$border-color: $rule !default;
+
+// Typography
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !default;
+$font-family-monospace: "JetBrains Mono", SFMono-Regular, Menlo, Consolas, monospace !default;
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$headings-font-family: $font-family-serif !default;
+$headings-font-weight: 600 !default;
+$line-height-base: 1.7 !default;
+
+// Shape: square everything, no shadows
+$border-radius: 0 !default;
+$border-radius-sm: 0 !default;
+$border-radius-lg: 0 !default;
+$border-radius-xl: 0 !default;
+$border-radius-pill: 0 !default;
+$enable-shadows: false !default;
+$enable-rounded: false !default;
+
+// Quarto chrome
+$navbar-bg: $paper !default;
+$navbar-fg: $ink !default;
+$navbar-hl: $signal !default;
+$sidebar-bg: $paper !default;
+$sidebar-fg: $ink-soft !default;
+$footer-bg: $invert-bg !default;
+$footer-fg: $invert-fg !default;
+$toc-color: $signal !default;
+
+$code-color: $ink !default;
+$code-bg: $paper-deep !default;
+$code-block-bg: $paper-deep !default;
+$code-block-border-left: $ink !default;
+
+/*-- scss:rules --*/
+
+// Self-hosted fonts (no third-party font requests). Paths are relative to the
+// project root: Quarto copies them next to the compiled CSS in site_libs/.
+@font-face { font-display: swap; font-family: "Open Sans"; font-style: normal; font-weight: 400; src: url("theme/fonts/open-sans-v44-latin-regular.woff2") format("woff2"); }
+@font-face { font-display: swap; font-family: "Open Sans"; font-style: italic; font-weight: 400; src: url("theme/fonts/open-sans-v44-latin-italic.woff2") format("woff2"); }
+@font-face { font-display: swap; font-family: "Open Sans"; font-style: normal; font-weight: 700; src: url("theme/fonts/open-sans-v44-latin-700.woff2") format("woff2"); }
+@font-face { font-display: swap; font-family: "Source Serif 4"; font-style: normal; font-weight: 600; src: url("theme/fonts/source-serif-4-latin-600.woff2") format("woff2"); }
+@font-face { font-display: swap; font-family: "Source Serif 4"; font-style: italic; font-weight: 400; src: url("theme/fonts/source-serif-4-latin-italic.woff2") format("woff2"); }
+@font-face { font-display: swap; font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; src: url("theme/fonts/jetbrains-mono-latin-500.woff2") format("woff2"); }
+
+// Shared "label" voice: small monospace caps used for all metadata
+@mixin label {
+  font-family: $font-family-monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+// Faint graph-paper grid
+@mixin graph-paper {
+  background-color: $paper;
+  background-image:
+    linear-gradient($grid-line 1px, transparent 1px),
+    linear-gradient(90deg, $grid-line 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+// Typography
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  letter-spacing: -0.01em;
+}
+
+main h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $ink;
+}
+
+main h3 {
+  margin-top: 1.75rem;
+}
+
+.header-section-number {
+  font-family: $font-family-monospace;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: $signal;
+  vertical-align: 0.12em;
+  margin-right: 0.35em;
+}
+
+#TOC .header-section-number {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+main p a,
+main li a {
+  text-decoration: underline;
+  text-decoration-color: rgba($signal, 0.35);
+
+  &:hover {
+    text-decoration-color: $signal;
+  }
+}
+
+::selection {
+  background: $signal;
+  color: $invert-fg;
+}
+
+// Navbar: paper strip, red top rule, mono links
+
+#quarto-header {
+  border-top: 4px solid $signal;
+}
+
+#quarto-header .navbar {
+  border-bottom: 1px solid $ink;
+  box-shadow: none;
+
+  .navbar-title {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .navbar-logo {
+    height: 28px;
+    max-height: 28px;
+    width: auto;
+  }
+
+  .nav-link {
+    @include label;
+    font-size: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .nav-link:hover {
+    color: $signal;
+  }
+
+  .nav-link.active {
+    color: $signal;
+    box-shadow: inset 0 -2px 0 $signal;
+  }
+}
+
+// Sidebar: mono section labels, red rule for the active page
+
+#quarto-sidebar {
+  border-right: 1px solid $rule;
+
+  .sidebar-item-section > .sidebar-item-container .sidebar-item-text {
+    @include label;
+    color: $text-muted;
+  }
+
+  .sidebar-link {
+    border-left: 2px solid transparent;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-link:hover {
+    color: $signal;
+  }
+
+  .sidebar-link.active {
+    border-left-color: $signal;
+    color: $ink;
+    font-weight: 700;
+  }
+}
+
+// TOC
+
+#toc-title {
+  @include label;
+}
+
+#TOC a.nav-link.active {
+  color: $signal;
+}
+
+// Title banner: graph paper with an ink rule
+
+.quarto-title-banner {
+  @include graph-paper;
+  border-bottom: 1px solid $ink;
+  color: $body-color;
+  padding: 2.5rem 0 2rem;
+
+  .title {
+    color: $ink;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+  }
+
+  .description,
+  .subtitle {
+    color: $ink-soft;
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  .quarto-title-breadcrumbs .breadcrumb {
+    @include label;
+    border: none;
+    padding: 0;
+    background: none;
+
+    a { color: $text-muted; }
+  }
+}
+
+.quarto-title-meta-heading {
+  @include label;
+  color: $text-muted;
+}
+
+.quarto-title-meta-contents {
+  font-family: $font-family-monospace;
+  font-size: 0.85rem;
+}
+
+// Categories: mono tags
+
+.quarto-category,
+.listing-category {
+  @include label;
+  background: none;
+  border: 1px solid $ink;
+  color: $ink;
+  opacity: 1;
+  padding: 0.1em 0.5em;
+  font-size: 0.65rem;
+}
+
+// Content
+
+main figure img,
+main p > img,
+main .lightbox img {
+  border: 1px solid $rule;
+}
+
+.figure-caption,
+figcaption {
+  font-family: $font-family-monospace;
+  font-size: 0.75rem;
+  color: $text-muted;
+}
+
+div.sourceCode,
+pre {
+  border: 1px solid $rule;
+}
+
+.callout {
+  border-width: 1px !important;
+  border-left-width: 3px !important;
+
+  .callout-title-container {
+    @include label;
+  }
+}
+
+table.table {
+  font-size: 0.92rem;
+
+  thead th {
+    @include label;
+    border-bottom: 1px solid $ink;
+  }
+}
+
+.btn {
+  @include label;
+  padding: 0.6rem 1rem;
+}
+
+.btn-primary {
+  background: $ink;
+  border-color: $ink;
+  color: $invert-fg;
+
+  &:hover, &:focus {
+    background: $signal;
+    border-color: $signal;
+    color: $invert-fg;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: $ink;
+  color: $ink;
+
+  &:hover, &:focus {
+    background: $ink;
+    border-color: $ink;
+    color: $body-bg;
+  }
+}
+
+// Listing grid: one figure panel with shared hairlines and numbered panels
+
+.quarto-listing-container-grid .list.grid {
+  gap: 0;
+  border-top: 1px solid $ink;
+  border-left: 1px solid $ink;
+  counter-reset: panel;
+
+  > div {
+    counter-increment: panel;
+  }
+}
+
+.quarto-grid-item.card {
+  background: $body-bg;
+  border: none;
+  border-right: 1px solid $ink;
+  border-bottom: 1px solid $ink;
+  transition: background-color 0.15s ease;
+
+  &::before {
+    content: counter(panel, decimal-leading-zero);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include label;
+    background: $ink;
+    color: $body-bg;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .card-img-top {
+    flex-shrink: 0;
+    border-bottom: 1px solid $ink;
+    overflow: hidden;
+    background: $figure-bg;
+    margin-bottom: 0;
+  }
+
+  .card-img-top img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .card-title {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  .card-text {
+    color: $text-muted;
+    font-size: 0.88rem;
+  }
+
+  .card-other-values,
+  .listing-date {
+    @include label;
+    color: $text-muted;
+  }
+
+  &:hover {
+    background: $paper-deep;
+
+    .card-img-top img {
+      transform: scale(1.03);
+    }
+
+    .card-title {
+      color: $signal;
+    }
+  }
+}
+
+.quarto-listing a:hover {
+  text-decoration: none;
+}
+
+// The pipeline pages carry their own step numbers in the title
+#listing-pipeline .quarto-grid-item.card::before {
+  display: none;
+}
+
+// Default listing (recently updated): a ruled index
+
+.list.quarto-listing-default {
+  border-top: 1px solid $ink;
+}
+
+.quarto-listing-default .quarto-post {
+  display: grid;
+  grid-template-columns: 11rem 7.5rem minmax(0, 1fr);
+  grid-template-areas: "thumb meta body";
+  gap: 1.25rem;
+  align-items: start;
+  border-bottom: 1px solid $rule;
+  padding: 1rem 0;
+  margin-bottom: 0;
+
+  .metadata {
+    grid-area: meta;
+    padding-top: 0.3rem;
+  }
+
+  .body {
+    grid-area: body;
+  }
+
+  .thumbnail {
+    grid-area: thumb;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid $rule;
+    background: $figure-bg;
+
+    a, p { display: block; margin: 0; padding: 0; line-height: 0; }
+  }
+
+  .thumbnail img,
+  .thumbnail .listing-item-img-placeholder {
+    display: block;
+    width: 100%;
+    height: 110px;
+    margin: 0;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .thumbnail img {
+    transform: scale(1.03);
+  }
+
+  .listing-date {
+    @include label;
+    color: $text-muted;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listing-title {
+    font-family: $font-family-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .listing-categories {
+    order: 3;
+    margin-top: 0.4rem;
+  }
+
+  .listing-description {
+    color: $text-muted;
+    font-size: 0.92rem;
+
+    p { margin-bottom: 0; }
+  }
+
+  &:hover .listing-title a {
+    color: $signal;
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    grid-template-areas: "thumb meta" "thumb body";
+    gap: 0.4rem 0.9rem;
+
+    .thumbnail img,
+    .thumbnail .listing-item-img-placeholder {
+      height: 72px;
+    }
+  }
+}
+
+// Home page
+
+.hero {
+  @include graph-paper;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  margin: 1.5rem 0 1rem;
+  padding: 3rem;
+  border: 1px solid $ink;
+
+  .hero-about {
+    @include label;
+    color: $signal;
+    margin: 0 0 0.6rem;
+  }
+
+  .hero-title {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    line-height: 1.02;
+    margin: 0 0 1.25rem;
+    border: none;
+    padding: 0;
+  }
+
+  .hero-lead {
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: $ink-soft;
+    max-width: 34rem;
+  }
+
+  .hero-meta {
+    color: $text-muted;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+    .btn {
+      text-transform: none;
+      letter-spacing: 0.02em;
+      font-size: 0.8rem;
+    }
+  }
+
+  .hero-figure {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid $ink;
+    background: $figure-bg;
+  }
+
+  .hero-figure img {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+
+  @media (max-width: 767.98px) {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+}
+
+.home-section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 1.6rem;
+  margin: 3rem 0 1rem;
+  padding: 0;
+  border: none;
+
+  .home-section-number {
+    @include label;
+    color: $signal;
+  }
+}
+
+// Numbered index rows that invert on hover
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid $ink;
+  border-left: 1px solid $ink;
+
+  @media (max-width: 991.98px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+a.index-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 0.25rem 1rem;
+  padding: 1.25rem 1.25rem 1.4rem;
+  border-right: 1px solid $ink;
+  border-bottom: 1px solid $ink;
+  color: $ink;
+  background: $body-bg;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  .index-number {
+    @include label;
+    color: $signal;
+    padding-top: 0.4rem;
+  }
+
+  .index-title {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.25;
+  }
+
+  .index-arrow {
+    font-family: $font-family-monospace;
+    font-size: 1.1rem;
+    transition: transform 0.15s ease;
+  }
+
+  .index-text {
+    grid-column: 2 / 4;
+    color: $text-muted;
+    font-size: 0.9rem;
+  }
+
+  &:hover {
+    background: $invert-bg;
+    color: $invert-fg;
+    text-decoration: none;
+
+    .index-text { color: rgba($invert-fg, 0.75); }
+    .index-arrow { transform: translateX(4px); color: $signal; }
+  }
+}
+
+// Footer: solid ink band
+
+.nav-footer {
+  border-top: 4px solid $signal;
+  font-family: $font-family-monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+
+  a, .nav-link { color: $footer-fg; }
+  a:hover { color: $signal; }
+}
