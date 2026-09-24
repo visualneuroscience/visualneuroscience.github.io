@@ -3,7 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "pip install -r brain-atlas-viewer/requirements.txt",
+  "postCreateCommand": "pip install -r mri/brain-atlas-viewer/viewer/requirements.txt",
   "customizations": {
     "vscode": {
       "extensions": [

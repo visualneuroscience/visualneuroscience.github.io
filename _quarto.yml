@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources:
-    - brain-atlas-viewer/dist/viewer.html
+    - mri/brain-atlas-viewer/viewer/dist/viewer.html
     - images/card-placeholder.svg
 
 website:
