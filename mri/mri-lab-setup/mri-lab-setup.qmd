@@ -7,8 +7,6 @@ image: images/trigger-box-front.png
 author: "AC"
 categories: [MRI, NNL-Goggles]
 date: 2024-10-07
-format: html
-editor: visual
 ---
 
 -   The MRI lab has had some upgrades in 2024 including:

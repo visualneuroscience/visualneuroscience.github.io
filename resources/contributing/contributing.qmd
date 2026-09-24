@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "Contribute to the website"
 aliases:
   - "/OtherTopics/ContributeWithR.html"

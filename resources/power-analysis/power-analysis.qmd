@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "Calculating a priori sample size using G Power"
 aliases:
   - "/OtherTopics/CalculatingAPrioriPower.html"
@@ -9,7 +7,6 @@ image: images/gpower-example.png
 author: CY
 number-sections: true
 categories: [Power, Analysis]
-editor: visual
 date: 2025-03-21
 ---
 

@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "Calculating authorship"
 aliases:
   - "/OtherTopics/AuthorshipCalculator/calculator.html"

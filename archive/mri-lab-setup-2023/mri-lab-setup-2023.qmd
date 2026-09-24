@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: MRI lab setup (2023, outdated)
 aliases:
   - "/mri/mri-lab-setup-2023/index.html"

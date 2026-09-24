@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "05 - Removing Noise Scan"
 aliases:
   - "/dicom_to_glm/RemoveNoiseScan.html"

@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Free to use Fonts
 aliases:
   - "/people/writing/free-fonts.html"

@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Internship project list
 aliases:
   - "/internship/project_list.html"

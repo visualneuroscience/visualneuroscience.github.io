@@ -9,8 +9,6 @@ listing:
       - mri-studies-general/mri-studies-general.qmd
       - mri-lab-setup/mri-lab-setup.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -28,8 +26,6 @@ listing:
       - dicom-to-glm/09-roi-analysis.qmd
       - dicom-to-glm/troubleshooting.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false
@@ -45,8 +41,6 @@ listing:
       - brain-atlas-viewer/brain-atlas-viewer.qmd
       - 3d-printing/3d-printing-a-brain.qmd
     type: grid
-    grid-columns: 3
-    image-height: 150px
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, date, title, description, author, categories]
     sort: false

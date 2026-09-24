@@ -11,8 +11,6 @@ listing:
     - mri-lab-setup-2023/mri-lab-setup-2023.qmd
     - server-access/server-access.qmd
   type: grid
-  grid-columns: 3
-  image-height: 150px
   image-placeholder: ../images/card-placeholder.svg
   fields: [image, date, title, description, author, categories]
   sort: "date desc"

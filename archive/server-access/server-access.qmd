@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "Older ways to access the server"
 aliases:
   - "/OtherTopics/LabMembersOnly/LabMembersOnly.html"
@@ -9,7 +7,6 @@ description: "Outdated ways to access the lab server, replaced by Neurodesktop"
 image: images/x2go-session.png
 author: NZ
 number-sections: true
-editor: visual
 date: 2025-01-24
 ---
 

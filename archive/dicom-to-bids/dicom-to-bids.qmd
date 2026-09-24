@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Dicom to Bids conversion
 aliases:
   - "/archive/dicom_to_bids.html"

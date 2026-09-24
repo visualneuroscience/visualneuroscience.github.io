@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Advice on preparing and giving scientific talks
 aliases:
   - "/people/talks/talks.html"

@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Vision tests
 aliases:
   - "/behavioral/2024-05-22/index.html"

@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: Research funding opportunities
 aliases:
   - "/people/funding/funding.html"

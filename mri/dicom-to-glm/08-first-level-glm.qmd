@@ -1,13 +1,10 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "08 - first level GLM"
 aliases:
   - "/dicom_to_glm/first_level_glm_nilearn.html"
 description: "Several approaches to run a first level GLM using nilearn"
 image: ../../images/thumbnails/08-first-level-glm.svg
 number-sections: true
-#image: ./images/06-fmriprep/00-open-fmriprep.png
 categories: [MRI, Analysis, fMRIPrep, Neurodesk, nilearn]
 author: MG
 date: 2025-12-15

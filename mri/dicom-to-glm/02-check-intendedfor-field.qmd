@@ -1,6 +1,4 @@
 ---
-fontsize: 12pt
-geometry: margin=3cm
 title: "02 - Check IntendedFor field of the fmap's JSON"
 aliases:
   - "/dicom_to_glm/check_IntendedFor_field.html"
