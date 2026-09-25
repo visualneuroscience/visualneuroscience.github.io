@@ -180,9 +180,11 @@ format:
     title-block-banner: true
     date-format: "D MMM YYYY"
     date-modified: last-modified
-    reference-location: margin
     citation-location: margin
     code-copy: true
+    code-overflow: wrap
+    highlight-style: a11y
+    include-after-body: theme/code-download.html
     smooth-scroll: true
     lightbox: auto
     grid:

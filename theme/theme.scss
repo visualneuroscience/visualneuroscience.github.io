@@ -22,6 +22,9 @@ $secondary: $graphite !default;
 $dark: $ink !default;
 $body-bg: $paper !default;
 $body-color: $ink !default;
+$body-emphasis-color: $ink !default;
+$body-secondary-bg: $paper-deep !default;
+$body-tertiary-bg: $paper-deep !default;
 $text-muted: $graphite !default;
 $link-color: $signal !default;
 $link-decoration: none !default;
@@ -55,9 +58,19 @@ $footer-fg: $invert-fg !default;
 $toc-color: $signal !default;
 
 $code-color: $ink !default;
+$pre-color: $ink !default;
 $code-bg: $paper-deep !default;
 $code-block-bg: $paper-deep !default;
 $code-block-border-left: $ink !default;
+
+// Bootstrap defaults that otherwise use fixed greys or black
+$toc-inactive-border: $rule !default;
+$blockquote-border-color: $rule !default;
+$btn-close-color: $ink !default;
+$nav-tabs-link-hover-border-color: $rule $rule $rule !default;
+
+// Colour scheme switch icon (bootstrap-icons): moon in light mode, sun in dark mode
+$scheme-toggle-icon: "\f497" !default;
 
 /*-- scss:rules --*/
 
@@ -179,6 +192,36 @@ main li a {
   }
 }
 
+// Colour scheme switch: a square sun/moon button instead of Quarto's toggle icon
+
+.quarto-color-scheme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.35rem;
+  border: 1px solid $ink;
+  color: $ink;
+  transition: border-color 0.15s ease, color 0.15s ease;
+
+  .bi::before {
+    background-image: none !important;
+    content: $scheme-toggle-icon;
+    font-family: "bootstrap-icons";
+    font-size: 1rem;
+    line-height: 1;
+    width: auto;
+    height: auto;
+  }
+
+  // icon colour on hover comes from Quarto's navbar tool rule ($navbar-hl)
+  &:hover,
+  &:focus-visible {
+    border-color: $signal;
+  }
+}
+
 // Sidebar: mono section labels, red rule for the active page
 
 #quarto-sidebar {
@@ -289,6 +332,17 @@ figcaption {
 div.sourceCode,
 pre {
   border: 1px solid $rule;
+}
+
+// Filename above a code block, turned into a download link by code-download.html
+.code-with-filename-file .code-download {
+  color: $ink;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: $signal;
+  }
 }
 
 .callout {

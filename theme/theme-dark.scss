@@ -20,8 +20,13 @@ $secondary: $graphite;
 $dark: $ink;
 $body-bg: $paper;
 $body-color: $ink;
+$body-emphasis-color: $ink;
+$body-secondary-bg: $paper-deep;
+$body-tertiary-bg: $paper-deep;
 $text-muted: $graphite;
 $link-color: $signal;
+$link-hover-color: lighten($signal, 10%);
+$mark-bg: rgba($signal, 0.35);
 $border-color: $rule;
 
 $navbar-bg: $paper;
@@ -34,6 +39,14 @@ $footer-fg: $ink;
 $toc-color: $signal;
 
 $code-color: $ink;
+$pre-color: $ink;
 $code-bg: $paper-deep;
 $code-block-bg: $paper-deep;
 $code-block-border-left: $ink;
+
+$toc-inactive-border: $rule;
+$blockquote-border-color: $rule;
+$btn-close-color: $ink;
+$nav-tabs-link-hover-border-color: $rule $rule $rule;
+
+$scheme-toggle-icon: "\f5a2";

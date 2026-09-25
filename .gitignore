@@ -27,3 +27,6 @@ __pycache__/
 mri/brain-atlas-viewer/viewer/dist/
 mri/brain-atlas-viewer/viewer/.build/
 !mri/brain-atlas-viewer/viewer/src/index.html
+
+# Site script included via _quarto.yml despite *.html above
+!theme/code-download.html

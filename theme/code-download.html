@@ -1,0 +1,31 @@
+<script>
+// Turn the filename above a code block (```{.bash filename="x.sh"}) into a
+// download link that saves the code shown in the block.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".code-with-filename").forEach((block) => {
+    const label = block.querySelector(".code-with-filename-file strong");
+    const code = block.querySelector("div.sourceCode code");
+    if (!label || !code) return;
+    const name = label.textContent.trim();
+    const link = document.createElement("a");
+    link.className = "code-download";
+    link.download = name;
+    link.href = "#";
+    link.title = "Download " + name;
+    link.innerHTML = '<i class="bi bi-download" aria-hidden="true"></i> ';
+    link.append(name);
+    link.addEventListener("click", () => {
+      const text = code.textContent.replace(/\n?$/, "\n");
+      link.href = URL.createObjectURL(new Blob([text], { type: "text/plain" }));
+      setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+    });
+    label.replaceWith(link);
+  });
+
+  // Code links in the page margin that point to a file on this site download it.
+  document.querySelectorAll(".quarto-code-links a").forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    if (!/^[a-z]+:|^\/\/|^#/i.test(href)) link.download = href.split("/").pop();
+  });
+});
+</script>
