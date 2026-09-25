@@ -44,11 +44,11 @@ When the script is run without an error, it automatically saves the 17 values in
 
 # Operation
 
--   open [`saveReadings.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/gamma-correction/saveReadings.m) and edit the general info. If you want to customize the measurement, you may change the parameters as well.
+-   open [`saveReadings.m`](saveReadings.m){download="saveReadings.m"} and edit the general info. If you want to customize the measurement, you may change the parameters as well.
 
--   run `saveReadings.m` (alternatively, you may call [`saveMonitorPhotometerReadings.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/gamma-correction/saveMonitorPhotometerReadings.m) directly: `vals = saveMonitorPhotometerReadings(17, 'red')`)
+-   run `saveReadings.m` (alternatively, you may call [`saveMonitorPhotometerReadings.m`](saveMonitorPhotometerReadings.m){download="saveMonitorPhotometerReadings.m"} directly: `vals = saveMonitorPhotometerReadings(17, 'red')`)
 
--   then, call [`createGammaFromSavedReadings.m`](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/gamma-correction/createGammaFromSavedReadings.m) to create gamma tables
+-   then, call [`createGammaFromSavedReadings.m`](createGammaFromSavedReadings.m){download="createGammaFromSavedReadings.m"} to create gamma tables
 
     `[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)`
 

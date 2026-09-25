@@ -110,7 +110,7 @@ See another example on [YouTube](https://www.youtube.com/watch?v=NRha9ZEYfI0)
 
 # Power analysis by R packages
 
-If you want to use R to calculate your power level or required sample size, you can use one of the available packages depending on your needs.You can use the ready-to-use function with default parameters: [Script is here.](https://github.com/visualneuroscience/visualneuroscience.github.io/blob/main/resources/power-analysis/power_analysis.R)
+If you want to use R to calculate your power level or required sample size, you can use one of the available packages depending on your needs.You can use the ready-to-use function with default parameters: [Script is here.](power_analysis.R){download="power_analysis.R"}
 
 ```{r}
 #| eval: false
