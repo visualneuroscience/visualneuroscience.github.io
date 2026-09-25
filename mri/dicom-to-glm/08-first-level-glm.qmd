@@ -55,7 +55,7 @@ Short explanation of the process:
 
 10. Save your results (should run without any changes). These are the files with which you later work in the [ROI analysis](09-roi-analysis.qmd)
 
-::: callout-info
+::: callout-note
 The notebook `/shared/website/GLM_surface_Loc.ipynb` was used for the GLM of the localizer data. The structure and logic is the same as for the main experiment
 :::
 

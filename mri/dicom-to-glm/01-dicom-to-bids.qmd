@@ -52,7 +52,7 @@ Quick explanations:
 2) `sortedFolder` = *initially empty folder* where the sorted DICOMs will be stored in
 3) `./dicomsort` the directory containing the scripts `dicomsort.py` & `DICOMsort.sh`
 
-:::callout-hint
+::: callout-tip
 After running the second to last line (starting with `bidsmapper`) you might have to do additional steps described below!!!
 :::
 

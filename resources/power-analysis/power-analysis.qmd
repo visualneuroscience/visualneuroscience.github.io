@@ -8,6 +8,10 @@ author: CY
 number-sections: true
 categories: [Power, Analysis]
 date: 2025-03-21
+code-links:
+  - text: "power_analysis.R"
+    icon: download
+    href: power_analysis.R
 ---
 
 # Power analysis

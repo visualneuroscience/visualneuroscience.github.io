@@ -25,6 +25,8 @@ The script to run the probabilistic retinotopic mapping can be found on the serv
 
 Alternatively, you can copy/paste the code (after adapting it for your data! See below):
 
+::: {.callout-note collapse="true" appearance="simple" title="Show script"}
+
 ``` {.bash filename="occatlas.sh"}
 #!/usr/bin/env bash
 
@@ -113,6 +115,8 @@ fi
 
 # the rest should probably be done in python, thresholding values on the fly
 ```
+
+:::
 
 # Necessary adaptiation steps
 

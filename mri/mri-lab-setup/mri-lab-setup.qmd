@@ -7,6 +7,10 @@ image: images/trigger-box-front.png
 author: "AC"
 categories: [MRI, NNL-Goggles]
 date: 2024-10-07
+code-links:
+  - text: "response_box_check.m"
+    icon: download
+    href: response_box_check.m
 ---
 
 -   The MRI lab has had some upgrades in 2024 including:
@@ -159,7 +163,9 @@ date: 2024-10-07
 
 ### Experimental Protocol
 
-<font size="+2">Before entering the scanner room always make sure you are MR safe and sign the respective forms</font>
+::: callout-important
+Before entering the scanner room always make sure you are MR safe and sign the respective forms
+:::
 
 -   Ask the participant to sign the forms while doing so ensure that the button box inside the scanner works and double check the view on the goggles that everything looks okay
 

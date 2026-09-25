@@ -136,11 +136,15 @@ export SINGULARITYENV_SUBJECTS_DIR=[yourpath] export APPTAINERENV_SUBJECTS_DIR=[
 
 If you would like to use some other software package that is not directly available through neruodesk, but is distributed as docker; you can use it by building a singularity image in the shared folder (so that it is available for everyone), e.g.:
 
-`singularity build /shared/singularity/deepprep/deepprep-25.1.0.simg docker://pbfslab/deepprep:25.1.0`
+```bash
+singularity build /shared/singularity/deepprep/deepprep-25.1.0.simg docker://pbfslab/deepprep:25.1.0
+```
 
 and then run it as above:
 
-`singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg`
+```bash
+singularity run --cleanenv /shared/singularity/deepprep/deepprep-25.1.0.simg
+```
 
 #### Using fitlins
 
@@ -307,7 +311,9 @@ Only `/home/jovyan`, `/shared/*`, and `/storage` are persistent in the container
 
 You can create symbolic links in your home directory:
 
-`ln -s /storage/ /home/jovyan/storage`
+```bash
+ln -s /storage/ /home/jovyan/storage
+```
 
 ## Mount network shares {#sec-mountNetwork}
 

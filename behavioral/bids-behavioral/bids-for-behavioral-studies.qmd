@@ -7,6 +7,10 @@ image: ../../images/thumbnails/bids-for-behavioral-studies.svg
 categories: [BIDS, Behavioral]
 author: CY
 date: 2024-05-23
+code-links:
+  - text: "Scripts on GitHub"
+    icon: github
+    href: https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/behavioral/bids-behavioral
 ---
 
 ## Resources
@@ -43,7 +47,9 @@ createBIDS_dataset_description_json.m
 
 -   Preprocess data from a subject with [`createBIDS_beh_after_preprocessing.m`](createBIDS_beh_after_preprocessing.m){download="createBIDS_beh_after_preprocessing.m"} (it needs [`getBIDSdirectory.m`](getBIDSdirectory.m){download="getBIDSdirectory.m"} on the MATLAB path):
 
-`createBIDS_beh_after_preprocessing(root_dir, ‘transriv’, ‘S001’, ‘Rivalry’, ‘GG’)`
+```matlab
+createBIDS_beh_after_preprocessing(root_dir, 'transriv', 'S001', 'Rivalry', 'GG')
+```
 
 -   Create dataset files by running [`transriv_finalizeBIDS.m`](transriv_finalizeBIDS.m){download="transriv_finalizeBIDS.m"} (when data collection is finished)
 
@@ -51,7 +57,7 @@ The folder structure based on BIDS:
 
 ```text
 root_dir
-  └─ ‘transriv’
+  └─ transriv
         ├─ participants.xlsx
         ├─ participants.tsv
         ├─ participants.json

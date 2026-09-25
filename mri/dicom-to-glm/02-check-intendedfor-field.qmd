@@ -48,7 +48,7 @@ Older fmap specification (= relative path) necessary for fmriprep older than 24.
 
 :::
 
-::: callout-hint
+::: callout-tip
 Due to these differences and potential resulting problems (e.g. no distortion correction is applied), you should always check the content of the fmap's "IntendedFor" field before [running fMRIprep](06-fmriprep.qmd). If distortion correction is not applied, the IntendedFor field of the fmap´s `.json` file is generally the first approach to solve the problem!
 :::
 

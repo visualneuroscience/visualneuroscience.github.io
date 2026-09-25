@@ -8,6 +8,10 @@ categories: [Behavioral, Displays]
 author: NZ
 number-sections: true
 date: 2024-08-26
+code-links:
+  - text: "Scripts on GitHub"
+    icon: github
+    href: https://github.com/visualneuroscience/visualneuroscience.github.io/tree/main/resources/gamma-correction
 ---
 
 # Background
@@ -50,7 +54,9 @@ When the script is run without an error, it automatically saves the 17 values in
 
 -   then, call [`createGammaFromSavedReadings.m`](createGammaFromSavedReadings.m){download="createGammaFromSavedReadings.m"} to create gamma tables
 
-    `[displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)`
+    ```matlab
+    [displayBaseline, displayRange, displayGamma, maxLevel] = createGammaFromSavedReadings(labName, screenName, 'plot', 0)
+    ```
 
     The script will fit a gamma curve to the brightness readings you recorded.
 

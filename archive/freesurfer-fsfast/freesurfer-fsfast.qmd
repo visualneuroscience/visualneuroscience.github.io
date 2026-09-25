@@ -87,13 +87,17 @@ However, FreeSurfer uses something called a **MATLAB runtime environment**
 
 For example:
 
-`export SUBJECTS_DIR=$TUTORIAL_DATA/buckner_data/tutorial_subjs`
+```bash
+export SUBJECTS_DIR=$TUTORIAL_DATA/buckner_data/tutorial_subjs
+```
 
 **3. Change directory to where your data is:**
 
 For example:
 
-`cd data`
+```bash
+cd data
+```
 
 **4. Try and run the command first:**
 
@@ -111,7 +115,9 @@ For example:
 
 If you run a command for example:
 
-`mkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1`
+```bash
+mkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1
+```
 
 And then see an error like so:
 
@@ -119,7 +125,9 @@ And then see an error like so:
 
 -   This means that FreeSurfer doesn't know where the MATLAB runtime environment is therefore run the following:
 
-`export FS_MCRROOT=/opt/MCR2019b/v97/`
+```bash
+export FS_MCRROOT=/opt/MCR2019b/v97/
+```
 
 ### The command above is important to tell FreeSurfer where the MATLAB runtime environment is
 
@@ -129,4 +137,6 @@ And then see an error like so:
 
 For example:
 
-`mkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1 -mcr 1`
+```bash
+mkcontrast-sess -analysis auditory_v_baseline.sm0   -contrast a_vs_base -a 2 -c 1 -mcr 1
+```

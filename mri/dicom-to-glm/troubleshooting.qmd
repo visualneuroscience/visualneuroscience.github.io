@@ -16,10 +16,10 @@ This page is dedicated for Troubleshooting. Known errors and problems will be li
 
 If you encounter an error
 
--   Check the error message, maybe copy/paste it to Google/an AI to get a first idea of what is wrong
--   Check if all necessary resources are sourced (e.g. did you include `ml freesurfer` before [opening a volume to check for noise scans](05-remove-noise-scan.qmd#sec-OpenFreeview))
--   Check if your working directory is set correctly, if not, correct that with `cd /desired/path/` (e.g. [when you try to remove the noise scans](05-remove-noise-scan.qmd#sec-RemoveDenoising))
--   Check if the paths in your command are correct. In some scripts you define you path in a variable, like `$SUBJECTS_DIR` or `$niidir`. If you want to only run a specific line of code separately, you might have to write out the complete path
+- Check the error message, maybe copy/paste it to Google/an AI to get a first idea of what is wrong
+- Check if all necessary resources are sourced (e.g. did you include `ml freesurfer` before [opening a volume to check for noise scans](05-remove-noise-scan.qmd#sec-OpenFreeview))
+- Check if your working directory is set correctly, if not, correct that with `cd /desired/path/` (e.g. [when you try to remove the noise scans](05-remove-noise-scan.qmd#sec-RemoveDenoising))
+- Check if the paths in your command are correct. In some scripts you define you path in a variable, like `$SUBJECTS_DIR` or `$niidir`. If you want to only run a specific line of code separately, you might have to write out the complete path
 
 # [fMRIprep](06-fmriprep.qmd) {#sec-TroublesFmriprep}
 
@@ -41,9 +41,9 @@ If the distortion correction failed silently (thus, without an explicit error th
 
 ### Solution
 
--   you might be using a wrong BIDS specification in the fmap's `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri), or the [corresponding wiki entry](02-check-intendedfor-field.qmd).
+- you might be using a wrong BIDS specification in the fmap's `json` file. See [Information about BIDS uri](https://bids-specification.readthedocs.io/en/stable/common-principles.html#bids-uri), or the [corresponding wiki entry](02-check-intendedfor-field.qmd).
 
--   If the content of the fmap's .json file uses a different naming convention than necessary for your version of [fMRIprep](06-fmriprep.qmd), no distortion correction is applied
+- If the content of the fmap's .json file uses a different naming convention than necessary for your version of [fMRIprep](06-fmriprep.qmd), no distortion correction is applied
 
 $\to$ Follow [this wiki entry](02-check-intendedfor-field.qmd) to check and update the entries of the fmap's .json file
 
@@ -90,7 +90,7 @@ $\to$ In the directory that has the prerun `recon-all` there is a folder `script
 $\to$ the solution is (if your structural and functional scans are from the same session) to add the following flag:
 
 ```bash
-`--bold2t1w-init header`
+--bold2t1w-init header
 ```
 
 ## Bad Coregistration {#sec-coreg}
