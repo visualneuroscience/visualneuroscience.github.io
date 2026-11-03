@@ -23,6 +23,7 @@ listing:
     contents:
       - gamma-correction/gamma-correction.qmd
       - chinrests/chinrests.qmd
+      - printed-brains/printed-brains.qmd
     type: grid
     image-placeholder: ../images/card-placeholder.svg
     fields: [image, file-modified, title, description, author, categories]

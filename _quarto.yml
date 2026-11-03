@@ -131,6 +131,7 @@ website:
           contents:
             - resources/gamma-correction/gamma-correction.qmd
             - resources/chinrests/chinrests.qmd
+            - resources/printed-brains/printed-brains.qmd
         - section: "This website"
           contents:
             - resources/contributing/contributing.qmd

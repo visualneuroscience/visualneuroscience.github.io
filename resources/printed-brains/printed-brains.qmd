@@ -1,0 +1,19 @@
+---
+title: 3D printed brains
+description: "STL-Files and sources"
+image: ../../images/thumbnails/printed-brains.svg
+categories: [3D-Print]
+author: LW
+date: 2026-11-03
+---
+
+STL files of brain models we have printed.
+
+| Preview | Brain | Download | Source |
+| --- | --- | --- | --- |
+| ![Mouse brain](images/Mouse_Brain.png){width=200} | Mouse | [STL (42 MB)](files/Mouse_Brain.stl){download="Mouse_Brain.stl"} | [Thingiverse](https://www.thingiverse.com/thing:3079327) |
+| ![Cat brain](images/cat-fixed.png){width=200} | Cat | [STL (1.9 MB)](files/cat-fixed.stl){download="cat-fixed.stl"} | |
+| ![Cheetah brain](images/cheetah.png){width=200} | Cheetah | [STL (1.3 MB)](files/cheetah.stl){download="cheetah.stl"} | |
+| ![Ferret brain](images/furet.png){width=200} | Ferret | [STL (1.0 MB)](files/furet.stl){download="furet.stl"} | |
+| ![Nile crocodile brain](images/nile-crocodile.png){width=200} | Nile crocodile | [STL (0.5 MB)](files/nile-crocodile.stl){download="nile-crocodile.stl"} | |
+| ![Orangutan brain](images/orangutan.png){width=200} | Orangutan | [STL (5.0 MB)](files/orangutan.stl){download="orangutan.stl"} | |
