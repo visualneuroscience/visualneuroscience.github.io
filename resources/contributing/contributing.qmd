@@ -29,17 +29,25 @@ This has an advantage that you can edit .qmd files in visual mode and paste scre
     https://github.com/visualneuroscience/visualneuroscience.github.io.git
     ```
 
-4.  Edit the local version as you wish
+4.  Install the R packages the website needs (only once). Some pages run R code when the website is rendered, so rendering fails without them. Paste this into the R console:
 
-5.  To preview your changes locally, go to "Build" tab and press "Render Website". This opens the site in your browser.
+    ```r
+    install.packages(c("knitr", "rmarkdown", "jsonlite", "pwr", "WebPower", "Superpower"))
+    ```
+
+    If a page you add uses another R package, add it to this list, to `.devcontainer/Dockerfile` and to `.github/workflows/build_and_publish.yaml`.
+
+5.  Edit the local version as you wish
+
+6.  To preview your changes locally, go to "Build" tab and press "Render Website". This opens the site in your browser.
 
     ![](images/rstudio-render-website.png)
 
-6.  If you are happy switch to the "Git" tab, select either all or some files, stage and commit. After this, press "Push" to send the new content to github repo
+7.  If you are happy switch to the "Git" tab, select either all or some files, stage and commit. After this, press "Push" to send the new content to github repo
 
     ![](images/rstudio-git-commit-push.png)
 
-7.  Every time you start editing the R project, first press "Pull" to make sure your local version contains all the most recent changes, which may have been made by others.
+8.  Every time you start editing the R project, first press "Pull" to make sure your local version contains all the most recent changes, which may have been made by others.
 
 ## Note on Windows
 
@@ -119,6 +127,21 @@ categories: [<Category>]
 date: <YYYY-MM-DD>
 image: images/<preview>.png   # optional, shown on the section's cards
 ---
+```
+
+### Card thumbnails from icons
+
+If your page has no good screenshot for its card, you can create a thumbnail in the website's style from an icon. Pick an icon from [Material Symbols](https://fonts.google.com/icons) or [Material Design Icons](https://pictogrammers.com/library/mdi/) and run this in the terminal (in RStudio: *Tools → Terminal*) from the website folder:
+
+``` bash
+images/thumbnails/make-thumbnail.sh mdi:<icon-name>   # Material Design Icons
+images/thumbnails/make-thumbnail.sh ms:<icon_name>    # Material Symbols
+```
+
+For example, `images/thumbnails/make-thumbnail.sh mdi:printer-3d` creates `images/thumbnails/printer-3d.svg`. Existing files are never overwritten. Then use it in your page's metadata:
+
+``` yaml
+image: ../../images/thumbnails/<icon-name>.svg
 ```
 
 ### Naming files
