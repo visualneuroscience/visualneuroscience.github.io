@@ -114,6 +114,7 @@ website:
           href: behavioral/index.qmd
         - behavioral/vision-tests/vision-tests.qmd
         - behavioral/bids-behavioral/bids-for-behavioral-studies.qmd
+        - behavioral/perception-lab/perception-lab.qmd
 
     - id: resources
       title: "Resources"
