@@ -8,6 +8,7 @@ listing:
   contents:
     - vision-tests/vision-tests.qmd
     - bids-behavioral/bids-for-behavioral-studies.qmd
+    - perception-lab/perception-lab.qmd
   type: grid
   image-placeholder: ../images/card-placeholder.svg
   fields: [image, file-modified, title, description, author, categories]
