@@ -27,11 +27,13 @@ date: 2026-11-16
 
 - Log in as allg_user (password under the monitor)
 
-- Set the relevant XOrg configuration
+- Set the relevant XOrg configuration by running the **Change xorgconf** script on the desktop:
 
-  - For PsychoPy:
+  ![](images/clipboard-2852144591.png)
 
-  - For PsychToolbox: the subject monitor is black if you are not running an experiment. This is normal\
+  - For PsychoPy: the left screen (subject monitor) should show half of the desktop
+
+  - For PsychToolbox: the left screen (subject monitor) is black if you are not running an experiment. This is normal\
 
 # During the experiment
 
